@@ -2,6 +2,7 @@
 title: "Answering questions with data: Lab Manual"
 author: 
 - "Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga"
+- "Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle and Sherry Neville-MacLean"
 date: "2018: Last Compiled `r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 

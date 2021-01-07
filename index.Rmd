@@ -305,6 +305,7 @@ The link to the video is [https://www.youtube.com/watch?v=WsbnV0t7FE4](https://w
 ## Excel 
 
 ## SPSS
+We will be using SPSS version 27. It can be downloaded here: https://stfx.teamdynamix.com/TDClient/1764/Portal/KB/ArticleDet?ID=44882
 
 ## JAMOVI
 

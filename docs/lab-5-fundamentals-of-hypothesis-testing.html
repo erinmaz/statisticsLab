@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Lab 5: Fundamentals of Hypothesis Testing | Answering questions with data: Lab Manual</title>
-  <meta name="description" content="A lab manual for Psyc 3400">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="A lab manual for Psyc 3400" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Lab 5: Fundamentals of Hypothesis Testing | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -22,17 +21,18 @@
   <meta name="twitter:description" content="A lab manual for Psyc 3400" />
   
 
-<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga">
+<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga" />
+<meta name="author" content="Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle and Sherry Neville-MacLean" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lab-4-normal-distribution-central-limit-theorem.html">
-<link rel="next" href="lab-6-t-test-one-sample-paired-sample.html">
+<link rel="prev" href="lab-4-normal-distribution-central-limit-theorem.html"/>
+<link rel="next" href="lab-6-t-test-one-sample-paired-sample.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +40,7 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -47,6 +48,10 @@
 
 
 
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -64,67 +69,41 @@ mattcrump=1;
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
@@ -361,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.7" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9 Repeated Measures ANOVA</a><ul>
-<li class="chapter" data-level="9.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>9.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a><ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>9.1</b> Betcha can't type JHDBZKCO very fast on your first try</a><ul>
 <li class="chapter" data-level="9.1.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
 <li class="chapter" data-level="9.1.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
 </ul></li>
@@ -473,10 +452,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script>
 $("#coverpic").hide();
 </script>
-<p><span class="newthought">
-The null hypothesis is never proved or established, but is possibly disproved, in the course of experimentation. Every experiment may be said to exist only to give the facts a chance of disproving the null hypothesis.
-—R. A. Fisher
-</span></p>
+<p><span class="newthought"> The null hypothesis is never proved or established, but is possibly disproved, in the course of experimentation. Every experiment may be said to exist only to give the facts a chance of disproving the null hypothesis. ---R. A. Fisher </span></p>
 <div id="r-5" class="section level2">
 <h2><span class="header-section-number">5.1</span> R</h2>
 <p>From here on, we will be focusing on making sense of data from experiments. In all of this, we use experiments to ask a question about whether one thing causes change (influences) another thing. Then, we look at the data to help us answer that question. In general, we expect to find a difference in our measurement between the conditions of the experimental manipulation. We expect to find a difference when the manipulation works, and causes change in our measure. We expect not to find a difference when the manipulation does not work, and does not cause change.</p>
@@ -490,7 +466,7 @@ The null hypothesis is never proved or established, but is possibly disproved, i
 <p>The big idea behind the Crump test is this. You find out what kind of differences between two conditions can be found by chance alone. This shows you what chance can do. Then, you compare what you actually found in one experiment, with the chance distribution, and make an inference about whether or not chance could have produced the difference.</p>
 <div id="make-assumptions-about-the-distribution-for-your-measurement" class="section level4">
 <h4><span class="header-section-number">5.1.1.1</span> Make assumptions about the distribution for your measurement</h4>
-<p>The first step in conducting the Crump test is to make a guess at the distribution behind your measurement. We will see in the next part how to do this from real data. For now, we just pick a distribution. For example, let’s say we are measuring something that comes from a normal distribution with mean = 75 and standard deviation = 5. Perhaps, this is a distribution for how people perform on a particular test. The mean on the test is 75%, with a standard deviation of 5%. We know from last lab that 3 standard deviations away from the mean is pretty unlikely with this distribution. So, for example, most people never score above 90% (5*3=15, 75+15 = 90) on this test.</p>
+<p>The first step in conducting the Crump test is to make a guess at the distribution behind your measurement. We will see in the next part how to do this from real data. For now, we just pick a distribution. For example, let's say we are measuring something that comes from a normal distribution with mean = 75 and standard deviation = 5. Perhaps, this is a distribution for how people perform on a particular test. The mean on the test is 75%, with a standard deviation of 5%. We know from last lab that 3 standard deviations away from the mean is pretty unlikely with this distribution. So, for example, most people never score above 90% (5*3=15, 75+15 = 90) on this test.</p>
 <p>In this example situation, we might imagine an experiment that was conducted to determine whether manipulation A improves test performance, compared to a control condition where no manipulation took place. Using the Crump test, we can simulate differences that can occur by chance. We are formally simulating the differences that could be obtained between two control conditions, where no manipulation took place.</p>
 <p>To, restate our assumptions, we assume a single score for each subject is sampled from:</p>
 <p><code>rnorm(n, mean=75, sd=5)</code></p>
@@ -510,13 +486,13 @@ The null hypothesis is never proved or established, but is possibly disproved, i
 <li>Save the differences score in a variable</li>
 <li>Repeat as many times as we want</li>
 </ol>
-<p>If we repeat the simulation 100 times, we will see the differences that can be produced by chance, when given the opportunity 100 times. For example, in a simulation like this, the biggest difference (the maximum value) only happens once. We can find that difference, and then roughly conclude that a difference of that big happens 1 out of 100 times just by chance. That’s not a lot.</p>
+<p>If we repeat the simulation 100 times, we will see the differences that can be produced by chance, when given the opportunity 100 times. For example, in a simulation like this, the biggest difference (the maximum value) only happens once. We can find that difference, and then roughly conclude that a difference of that big happens 1 out of 100 times just by chance. That's not a lot.</p>
 <p>If we want to be more restrictive, we can make the simulation go to 1,000, or 10,000, or greater. Each time the maximum value will tell us what is the biggest thing chance did 1 out of 1000 times, or 1 out of 10,000 times.</p>
-<p>The textbook uses 10,000 times. Let’s use 100 times here to keep things simple.</p>
+<p>The textbook uses 10,000 times. Let's use 100 times here to keep things simple.</p>
 </div>
 <div id="run-the-simluation" class="section level4">
 <h4><span class="header-section-number">5.1.1.4</span> Run the simluation</h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 
 <span class="co"># set paramaters of simulation</span>
 
@@ -543,22 +519,22 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <span class="st">  </span><span class="kw">theme_classic</span>()<span class="op">+</span>
 <span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram of mean differences between two samples (n=20) </span><span class="ch">\n</span>
 <span class="st">          both drawn from the same normal distribution (u=75, sd=5&quot;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
 </div>
 <div id="find-the-range" class="section level4">
 <h4><span class="header-section-number">5.1.1.5</span> find the range</h4>
 <p>We can see that chance produces some differences that are non-zero. The histogram shows all the mean differences that were produced by chance. Most of the differences are between -2 and +2, but some of them are bit more negative, or a bit more positive. If we want to know what chance <strong>did</strong> do in this one simulation with 100 runs, then we need to find the range, the minimum and maximum value. This will tell us the most negative mean difference that chance did produce, and the most positive mean difference that chance did produce. Then, we will also know that chance <strong>did not</strong> produce any larger negative, or larger positive differences, in this simulation.</p>
 <p>We use the <code>min()</code> and <code>max()</code> functions to get the minimum and maximum value.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] -4.145403</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] 4.260606</code></pre>
 <p>We now know, that biggest negative difference was -4.145, and the biggest positive difference was 4.261. We also know that any mean difference inside the range <strong>was produced by chance</strong> in our simulation, and any mean difference outside the range <strong>was not produced by chance</strong> in our simulation</p>
 </div>
 <div id="make-inferences" class="section level4">
 <h4><span class="header-section-number">5.1.1.6</span> Make inferences</h4>
-<p>This part requires you to think about the answers. Let’s go through some scenario’s.</p>
+<p>This part requires you to think about the answers. Let's go through some scenario's.</p>
 <ol style="list-style-type: decimal">
 <li><p>You sample 20 numbers from a normal distribution with mean = 75, and standard deviation =5. The mean of your sample is 76. Then, you take another sample of the same size, from the same distribution, and the mean of your second sample is 78. The mean difference is +1 (or -1, depending on how you take the difference)</p>
 <ol style="list-style-type: lower-alpha">
@@ -570,32 +546,32 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <li><strong>Question</strong>: According to the histogram did a mean difference of 6 or -6 occur by chance?</li>
 <li><strong>Answer</strong>: No, it is outside the range</li>
 </ol></li>
-<li><p>You run an experiment. Group A receives additional instruction that should make them do better on a test. Group B takes the test, but without the instruction. There are 20 people in each group. You have a pretty good idea that group B’s test scores will be coming from a normal distribution with mean = 75, and standard deviation = 5. You know this because you have given the test many times, and this is what the distribution usually looks like. You are making an educated guess. You find that the mean test performance for Group A (with additional instruction) was 76%, and the mean test performance for Group B (no additional instruction) was 75%. The mean difference has an absolute value of +1.</p>
+<li><p>You run an experiment. Group A receives additional instruction that should make them do better on a test. Group B takes the test, but without the instruction. There are 20 people in each group. You have a pretty good idea that group B's test scores will be coming from a normal distribution with mean = 75, and standard deviation = 5. You know this because you have given the test many times, and this is what the distribution usually looks like. You are making an educated guess. You find that the mean test performance for Group A (with additional instruction) was 76%, and the mean test performance for Group B (no additional instruction) was 75%. The mean difference has an absolute value of +1.</p>
 <ol style="list-style-type: lower-alpha">
 <li><strong>Question #1</strong>: According to the histogram, could chance alone have produced a mean absolute difference of +1?</li>
 <li><strong>Answer</strong>: Yes, it is inside the range</li>
 <li><strong>Question #2</strong>: It looks like Group A did better on the test (on average), by 1%, compared to the control group B. Are you willing to believe that your additional instruction <strong>caused the increase in test performance</strong>?</li>
-<li><strong>Answer</strong>: The answer is up to you. There is no correct answer. It could easily be the case that your additional instruction did not do anything at all, and that the difference in mean test performance was produced by chance. My inference is that I do not know if my instruction did anything, I can’t tell it’s potential influence from chance.</li>
+<li><strong>Answer</strong>: The answer is up to you. There is no correct answer. It could easily be the case that your additional instruction did not do anything at all, and that the difference in mean test performance was produced by chance. My inference is that I do not know if my instruction did anything, I can't tell it's potential influence from chance.</li>
 </ol></li>
 <li><p>Same as 3, except the group mean for A (receiving instruction) is 90%. The group mean for B (no instruction control) is 75%. The absolute mean difference is 15%.</p>
 <ol style="list-style-type: lower-alpha">
 <li><strong>Question #1</strong>: According to the histogram, could chance alone have produced a mean absolute difference of +15?</li>
 <li><strong>Answer</strong>: No, it is well outside the range</li>
 <li><strong>Question #2</strong>: It looks like Group A did better on the test (on average), by 15%, compared to the control group B. Are you willing to believe that your additional instruction <strong>caused the increase in test performance</strong>?</li>
-<li><strong>Answer</strong>: The answer is up to you. There is no correct answer. You know from the simulation that chance never produced a difference this big, and that producing a difference this big by chance would be like winning the lottery (almost never happens to you). My inference is that I believe chance did not produce the difference, I’m willing to believe that my instructional did cause the difference.</li>
+<li><strong>Answer</strong>: The answer is up to you. There is no correct answer. You know from the simulation that chance never produced a difference this big, and that producing a difference this big by chance would be like winning the lottery (almost never happens to you). My inference is that I believe chance did not produce the difference, I'm willing to believe that my instructional did cause the difference.</li>
 </ol></li>
 </ol>
 </div>
 <div id="planning-your-experiment" class="section level4">
 <h4><span class="header-section-number">5.1.1.7</span> Planning your experiment</h4>
-<p>We’ve been talking about a hypothetical experiment where an instructor tests whether group A does better (when receiving additional instruction) on a test, compared to a group that does receives no additional instruction and just takes the test.</p>
+<p>We've been talking about a hypothetical experiment where an instructor tests whether group A does better (when receiving additional instruction) on a test, compared to a group that does receives no additional instruction and just takes the test.</p>
 <p>If this hypothetical instructor wanted to make an experiment, they would get to choose things like how many subjects they will put in each condition. How many subjects should they plan to get?</p>
 <p><strong>The number of subjects they plan to get will change what chance can do, and will change the sensitivity of their experiment to detect differences of various sizes, that are not due to chance</strong>.</p>
 <p>We can use the simulation process to make informed decisions about how many subjects to recruit for an experiment. This is called <strong>sample-size planning</strong>. There are two goals here. The instructor might have a first goal in mind. They may be only interested in adopting a new method for instruction, if it actually improves test performance beyond more than 1% (compared to control). Differences of less than 1% are just not worth it for the instructor. They want bigger differences, they want to help their students improve more than 1%.</p>
-<p>One problem for the instructor, is that they just don’t know in advance how good their new teaching materials will be. Some of them will be good and produce bigger differences, and some of them won’t. The size of the difference from the manipulation can be unknown. However, this doesn’t really matter for planning the experiment. The instructor wants to know that they can <strong>find</strong> or detect any real difference (not due to chance) that is say 2% or bigger. We can use the simulation to figure out roughly (or more exactly, depending on how much we work at it) how many subjects are needed to detect difference of at least 2%.</p>
+<p>One problem for the instructor, is that they just don't know in advance how good their new teaching materials will be. Some of them will be good and produce bigger differences, and some of them won't. The size of the difference from the manipulation can be unknown. However, this doesn't really matter for planning the experiment. The instructor wants to know that they can <strong>find</strong> or detect any real difference (not due to chance) that is say 2% or bigger. We can use the simulation to figure out roughly (or more exactly, depending on how much we work at it) how many subjects are needed to detect difference of at least 2%.</p>
 <p>Notice, from our prior simulation, chance does produce differences of 2% some of the time (given 100 runs). The task now is to re-run the simulation, but use different numbers of subjects to figure out how many subjects are needed to always detect differences of 2%. To be simple about this, we are interested in producing a distribution of mean differences that never produces a mean difference of -2% to + 2% (not once out of 100 times). You can re-run this code, and change N until the min and max are always smaller than -2 to +2.</p>
 <p>The code starts out exactly as it was before. You should change the number for <code>sample_n</code>. As you make the number bigger, the range (min and max) of the mean differences by chance will get smaller and smaller. Eventually it will be smaller than -2 to +2. When you get it this small, then the N that you used is your answer. Use that many subjects. If you run your experiment with that many subjects, <strong>AND</strong> you find a difference or 2 or greater, then you know that chance does not do this even 1 times out of 100.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 
 <span class="co"># set paramaters of simulation</span>
 
@@ -622,11 +598,11 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <span class="st">  </span><span class="kw">theme_classic</span>()<span class="op">+</span>
 <span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram of mean differences between two samples (n=20) </span><span class="ch">\n</span>
 <span class="st">          both drawn from the same normal distribution (u=75, sd=5&quot;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] -4.571732</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] 4.571482</code></pre>
 </div>
 </div>
@@ -635,7 +611,7 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <p>In this example we look at how you can run a Crump test to evaluate the results in a published paper. The goal of this is to build up your intuitions about whether or not an observed difference could have been caused by chance. We take many liberties, and this is not an exact test of anything. However, we will see how a series of rough, and reasonable assumptions can be made to simulate the results of published experiments, even when exact information is not provided in the paper.</p>
 <div id="test-enhanced-learning" class="section level4">
 <h4><span class="header-section-number">5.1.2.1</span> Test-enhanced learning</h4>
-<p>We have already been using an educational example. We’ve been talking about a manipulation that might be employed to help students learn something better than they otherwise would without the manipulation.</p>
+<p>We have already been using an educational example. We've been talking about a manipulation that might be employed to help students learn something better than they otherwise would without the manipulation.</p>
 <p>Research in Cognitive Psychology has discovered clear evidence of some teaching practices that really work to enhance memory and comprehension. One of these practices is called test-enhanced learning. Students who study material, and take a quick test (quiz) while they study, do better at remembering the material compared to students who just studied the whole time and did not take a quiz (why do you think we have so many quizzes, in the textbook and for this class? This is why. Prior research shows this will improve your memory for the content, so we are asking you to take the quizzes so that it helps you learn!).</p>
 <p>Here is a link to a <a href="https://www.jstor.org/stable/pdf/40064526.pdf?casa_token=jMQnevvTRoIAAAAA:J96DQ0EHWCDKvjV3D-OdQ7TFnJ_DTZEz_G6zG1YMstqGu7fuzjzM0V4PiNREvB1sfLxTXn68FpHhoIUFpOx9p5fjsB7hcqQTUCQix9jxdj_hx-zqoZ8">paper demonstrating the test-enhanced learning effect</a>.</p>
 <p>The citation is: Roediger III, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological science, 17(3), 249-255.</p>
@@ -643,7 +619,7 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <div id="brief-summary" class="section level4">
 <h4><span class="header-section-number">5.1.2.2</span> Brief summary</h4>
 <p>The subjects learned about some things in two conditions. In one condition (study-study) they studied some things, then studied them again. In the other condition (study-test) they studied some things, then took a quiz about the things rather then studying them one more time.</p>
-<p>Everyone received follow up tests to see what they learned and remembered. They came back one week later and took the test. The researchers measured the mean proportion of things remembered in both conditions. They found the study-test condition had a higher mean proportion of remembered idea units than the study-study condition. So, the difference between the mean proportions suggest that taking a quick test after studying was beneficial for remembering the content. The researchers also conducted statistical tests, and they concluded the difference they found was not likely due to chance. Let’s apply the Crump test to their findings, and see if we come to the same conclusion about the role of chance.</p>
+<p>Everyone received follow up tests to see what they learned and remembered. They came back one week later and took the test. The researchers measured the mean proportion of things remembered in both conditions. They found the study-test condition had a higher mean proportion of remembered idea units than the study-study condition. So, the difference between the mean proportions suggest that taking a quick test after studying was beneficial for remembering the content. The researchers also conducted statistical tests, and they concluded the difference they found was not likely due to chance. Let's apply the Crump test to their findings, and see if we come to the same conclusion about the role of chance.</p>
 </div>
 <div id="estimate-the-paramaters-of-the-distribution" class="section level4">
 <h4><span class="header-section-number">5.1.2.3</span> Estimate the paramaters of the distribution</h4>
@@ -656,18 +632,18 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <p><strong>N</strong></p>
 <p>The paper says there were 120 subjects in total, and that different groups of subjects were measured in the three different delay conditions (5 minutes, 2 Days and 1 week). We will assume there were an equal number of subjects in each group. There were 3 groups, 120/3 = 40, so we assume there were 40 subjects in the 1 week delay group</p>
 <p><strong>Estimating Standard Deviation</strong></p>
-<p>The paper doesn’t directly report the standard deviation for the measurement of proportion idea units. But, we can guesstimate it visually. Look at the little bars with a line on them coming out of each bar. These are called error bars, and they represent the standard error of the mean.</p>
+<p>The paper doesn't directly report the standard deviation for the measurement of proportion idea units. But, we can guesstimate it visually. Look at the little bars with a line on them coming out of each bar. These are called error bars, and they represent the standard error of the mean.</p>
 <p>These look like they are about .033 in length. We know the standard error of the mean (SEM) is the standard deviation divided by the sqare root of N. So, we can infer that the standard deviation is <span class="math inline">\(.033 * \sqrt{40} = .21\)</span>.</p>
-<p>The paper also reports cohen’s D, which is a measure of effect size using the mean difference divided the standard deviation. Cohen’s D was .83, so the standard deviation must have been <span class="math inline">\(.14/.83 = .168\)</span>, which is pretty close to our guesstimate of .21.</p>
+<p>The paper also reports cohen's D, which is a measure of effect size using the mean difference divided the standard deviation. Cohen's D was .83, so the standard deviation must have been <span class="math inline">\(.14/.83 = .168\)</span>, which is pretty close to our guesstimate of .21.</p>
 </div>
 <div id="findings-from-the-original-study" class="section level4">
 <h4><span class="header-section-number">5.1.2.4</span> Findings from the original study</h4>
-<p>One week after the initial learning conditions, subjects came back and took a retention test to see how much they learned. The mean proportion “idea units” recalled was:</p>
+<p>One week after the initial learning conditions, subjects came back and took a retention test to see how much they learned. The mean proportion &quot;idea units&quot; recalled was:</p>
 <ol style="list-style-type: decimal">
 <li>study-study : 42% or .42</li>
 <li>study-test : 56% or .56</li>
 </ol>
-<p>The mean difference was .56-.42 = .14 or a whopping 14% improvements. That’s actually pretty big.</p>
+<p>The mean difference was .56-.42 = .14 or a whopping 14% improvements. That's actually pretty big.</p>
 <p>What we want to know is whether chance could produce a difference of 14%, or .14, just by itself.</p>
 </div>
 <div id="run-the-simulation" class="section level4">
@@ -679,12 +655,12 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <li>The mean of our distribution is .49</li>
 <li>The standard deviation of the distribution is .168</li>
 </ol>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set paramaters of simulation</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set paramaters of simulation</span>
 
 sims_to_run &lt;-<span class="st"> </span><span class="dv">100</span>
 sample_n   &lt;-<span class="st"> </span><span class="dv">40</span>
-dist_mean  &lt;-<span class="st"> </span><span class="fl">.49</span>
-dist_sd    &lt;-<span class="st"> </span><span class="fl">.168</span>
+dist_mean  &lt;-<span class="st"> </span>.<span class="dv">49</span>
+dist_sd    &lt;-<span class="st"> </span>.<span class="dv">168</span>
 
 <span class="co"># run simulation</span>
 
@@ -703,11 +679,11 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">20</span>, <span class="dt">color=</span><span class="st">&quot;white&quot;</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_classic</span>()<span class="op">+</span>
 <span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram of mean differences in proportion remembered&quot;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] -0.08935782</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(mean_differences)</code></pre></div>
 <pre><code>## [1] 0.07754367</code></pre>
 <p>According to the simulation, the biggest negative difference was -0.089, and the biggest positive difference was 0.078. We also know that any mean difference inside the range <strong>was produced by chance</strong> in our simulation, and any mean difference outside the range <strong>was not produced by chance</strong> in our simulation.</p>
 <p>A difference of .14 or 14% was never produced by chance, it was completely outside the range. Based on this analysis we can be fairly confident that the test-enhanced learning effect was not a fluke, it was not produced by chance. We have evidence to support the claim that testing enhances learning, and because of this we test you while you are learning to enhance your learning while you learn.</p>
@@ -716,7 +692,7 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <div id="the-randomization-test" class="section level3">
 <h3><span class="header-section-number">5.1.3</span> The Randomization Test</h3>
 <p>Unlike the Crump test, which was made to help you understand some basic ideas about how chance can do things, the Randomization test is a well-known, very real, statistical test for making inferences about what chance can do. You will see that it is very similar to the Crump test in many respects. In fact, we might say that the Crump test is really just a randomization test.</p>
-<p>You read about the randomization test in the textbook. We won’t repeat much about that here, but we will show you how to do one in R.</p>
+<p>You read about the randomization test in the textbook. We won't repeat much about that here, but we will show you how to do one in R.</p>
 <p>To briefly remind you, in a randomization test we first obtain some data from an experiment. So we have a sample of numbers for group A, and Group B. We calculate the means for both groups (or other statistic we want to know about), and then see if they are different. We want to know if the difference we found could be produced by chance, so we conduct the randomization test on using the sample data that we have.</p>
 <p>The major difference between the Crump test and the Randomization test, is that we make no assumption about the distribution that the sample data came from. We just randomize the sample data. We do:</p>
 <ol style="list-style-type: decimal">
@@ -727,7 +703,7 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <div id="run-the-randomization-test" class="section level4">
 <h4><span class="header-section-number">5.1.3.1</span> Run the randomization test</h4>
 <p>Note, this time when we calculate the mean differences for each new group, we will take the absolute value of the mean difference.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get sample numbers from one experiment</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get sample numbers from one experiment</span>
 Group_A &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">10</span>)
 Group_B &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">10</span>)
 
@@ -747,13 +723,13 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">20</span>, <span class="dt">color=</span><span class="st">&quot;white&quot;</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_classic</span>()<span class="op">+</span>
 <span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram of mean differences&quot;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;mean difference&quot;</span>)</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
-<p>The histogram shows us the kinds of absolute mean difference that happen by chance alone. So, in this data, a mean difference of 10 hardly wouldn’t happen very often. A difference between 0 and 2.5 happens fairly often by chance.</p>
+<p>The histogram shows us the kinds of absolute mean difference that happen by chance alone. So, in this data, a mean difference of 10 hardly wouldn't happen very often. A difference between 0 and 2.5 happens fairly often by chance.</p>
 </div>
 <div id="decision-criteria" class="section level4">
 <h4><span class="header-section-number">5.1.3.2</span> Decision criteria</h4>
-<p>When you are determining whether or not chance could have produced a difference in your data, you might want to consider how stringent you want to be about accepting the possibility that chance did something. For example chance could produce a difference of 0 or greater 100% of the time. Or, it produces a difference of 10 or greater, a very small (less than .00001% of the time). How big does the difference need to be, before you will consider the possibility that chance probably didn’t cause the difference.</p>
+<p>When you are determining whether or not chance could have produced a difference in your data, you might want to consider how stringent you want to be about accepting the possibility that chance did something. For example chance could produce a difference of 0 or greater 100% of the time. Or, it produces a difference of 10 or greater, a very small (less than .00001% of the time). How big does the difference need to be, before you will consider the possibility that chance probably didn't cause the difference.</p>
 <p><strong>Alpha</strong>. Researchers often set what is called an <strong>alpha</strong> criteria. This draws a line in the histogram, and says I will be comfortable assuming that chance did not produce my differences, when chance produces difference less than X percent of the time. This X percent, is the alpha value. For example, it is often set to 5%, or <strong>p &lt;= .05</strong>.</p>
 <p>Where is 5% of the time on our histogram? What mean difference or greater happens less than or equal to 5% of the time.</p>
 </div>
@@ -765,18 +741,18 @@ plot_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <li>The number in position 950 is the alpha location. All of the numbers from position 0 to 950, reflect 95% of the numbers. What is left over is 5% of the numbers.</li>
 <li>Find the alpha cut-off, and plot it on the histogram</li>
 </ol>
-<pre class="sourceCode r"><code class="sourceCode r">ordered_differences &lt;-<span class="st"> </span><span class="kw">sort</span>(mean_differences) <span class="co"># sort</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ordered_differences &lt;-<span class="st"> </span><span class="kw">sort</span>(mean_differences) <span class="co"># sort</span>
 alpha_cutoff &lt;-<span class="st"> </span>ordered_differences[<span class="dv">950</span>] <span class="co"># pick 950th number</span>
-alpha_cutoff</code></pre>
+alpha_cutoff</code></pre></div>
 <pre><code>## [1] 5.902222</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># add to histogram using vline</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># add to histogram using vline</span>
 
 <span class="kw">ggplot</span>(plot_df,<span class="kw">aes</span>(<span class="dt">x=</span>mean_differences))<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">20</span>, <span class="dt">color=</span><span class="st">&quot;white&quot;</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span>alpha_cutoff)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_classic</span>()<span class="op">+</span>
 <span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram of mean differences&quot;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;absolute mean difference&quot;</span>)</code></pre>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;absolute mean difference&quot;</span>)</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
 <p>OK, so our alpha criterion or cutoff is located at 5.9 on the x-axis. This shows us that mean differences of 5.9 or larger happen only 5% of the time by chance.</p>
 <p>You could use this information to make an inference about whether or not chance produced the difference in your experiments</p>
@@ -784,7 +760,7 @@ alpha_cutoff</code></pre>
 <li><p>When the mean difference is 5.9 or larger, you might conclude that chance did not produce the difference</p></li>
 <li><p>When the mean difference is less than 5.9, you might conclude that chance could have produced the mean difference.</p></li>
 </ol>
-<p>It’s up to you to set your alpha criterion. In practice it is often set at p=.05. But, you could be more conservative and set it to p=.01. Or more liberal and set it to p=.1. It’s up to you.</p>
+<p>It's up to you to set your alpha criterion. In practice it is often set at p=.05. But, you could be more conservative and set it to p=.01. Or more liberal and set it to p=.1. It's up to you.</p>
 </div>
 </div>
 <div id="generalization-exercise-4" class="section level3">
@@ -836,28 +812,28 @@ alpha_cutoff</code></pre>
 <div id="experiment-background" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Experiment Background</h3>
 <hr />
-<p>This is a fictitious experiment based on the infamous Coke vs. Pepsi Taste Test Challenge. 20 blindfolded participants were presented with two cups of soda (Coke and Pepsi). Presentation sequence was randomly determined, and participants were required to rate the taste of the soda on a scale from 1-5.</p>
+<p>This is a fictitious experiment based on the infamous Coke vs. Pepsi Taste Test Challenge. 20 blindfolded participants were presented with two cups of soda (Coke and Pepsi). Presentation sequence was randomly determined, and participants were required to rate the taste of the soda on a scale from 1-5.</p>
 </div>
 <div id="calculate-difference-scores-between-pairs-of-measures" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Calculate difference scores between pairs of measures</h3>
 <hr />
-<p>First, let’s open the relevant data file; <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/PepsiCoke.sav">Here</a> is the link; it is called PepsiCoke.sav. Open this file in SPSS. Your data should look like this:</p>
+<p>First, let's open the relevant data file; <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/PepsiCoke.sav">Here</a> is the link; it is called PepsiCoke.sav. Open this file in SPSS. Your data should look like this:</p>
 <p><img src="img/5.4.11.png" width="560" /></p>
-<p>First, let’s calculate, for each participant, the difference between the rating they gave for Coke vs. Pepsi. We will use SPSS to create a new variable (in a new column) containing only difference scores.</p>
-<p>To begin, go to <span style="color:blue">Transform</span>, then <span style="color:blue">Compute Variable…</span></p>
+<p>First, let's calculate, for each participant, the difference between the rating they gave for Coke vs. Pepsi. We will use SPSS to create a new variable (in a new column) containing only difference scores.</p>
+<p>To begin, go to <span style="color:blue">Transform</span>, then <span style="color:blue">Compute Variable...</span></p>
 <p><img src="img/5.4.12.png" width="545" /></p>
-<p>A calculation window will open. First, give your new variable a name in the field “Target Variable”. I am going to call it <code>Difference</code>. Then, in the field labeled “Numeric Expression”, we must convey that we want SPSS to take the <code>Pepsi</code> score minus the <code>Coke</code> score (the order in which you do this really doesn’t matter, as long as you know the order you used). Take your <code>Pepsi</code> variable from the list on the left and move it into the “Numeric Expression” field using the arrow. Then, type (or you can use the keypad in the window to insert) a minus sign, followed by moving the <code>Coke</code> variable into the field. The result in this field should look like “Pepsi - Coke”.</p>
+<p>A calculation window will open. First, give your new variable a name in the field &quot;Target Variable&quot;. I am going to call it <code>Difference</code>. Then, in the field labeled &quot;Numeric Expression&quot;, we must convey that we want SPSS to take the <code>Pepsi</code> score minus the <code>Coke</code> score (the order in which you do this really doesn't matter, as long as you know the order you used). Take your <code>Pepsi</code> variable from the list on the left and move it into the &quot;Numeric Expression&quot; field using the arrow. Then, type (or you can use the keypad in the window to insert) a minus sign, followed by moving the <code>Coke</code> variable into the field. The result in this field should look like &quot;Pepsi - Coke&quot;.</p>
 <p><img src="img/5.4.13.png" width="546" /></p>
-<p>Click <span style="color:blue">OK</span>. An SPSS output window will pop up to confirm that you have created a new variable, but you can ignore or x it out. Go back to the data spreadsheet and you will find there is a new variable, labeled <code>Difference</code> that contains the difference scores for each person. Pay attention to the sign on each difference score. Since we used the calculation “Pepsi - Coke”", anyone who has a positive difference score preferred the Pepsi better, while anyone with a negative difference score preferred the Coke.</p>
+<p>Click <span style="color:blue">OK</span>. An SPSS output window will pop up to confirm that you have created a new variable, but you can ignore or x it out. Go back to the data spreadsheet and you will find there is a new variable, labeled <code>Difference</code> that contains the difference scores for each person. Pay attention to the sign on each difference score. Since we used the calculation &quot;Pepsi - Coke&quot;&quot;, anyone who has a positive difference score preferred the Pepsi better, while anyone with a negative difference score preferred the Coke.</p>
 <p><img src="img/5.4.14.png" width="560" /></p>
 </div>
 <div id="conduct-a-sign-test" class="section level3">
 <h3><span class="header-section-number">5.3.3</span> Conduct a sign test</h3>
 <hr />
 <p>Our goal here is not simply to calculate difference scores. We really want to know if there were more instances of preference for one soda over the other. Since the sign tells us who liked Pepsi better or who liked Coke better, comparing the number of pluses to minuses will tell us which soda wins out (and is also the reason this test is called a Sign test).</p>
-<p>To conduct the sign test, go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Nonparanetric tests</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">2 Related Samples…</span></p>
+<p>To conduct the sign test, go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Nonparanetric tests</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">2 Related Samples...</span></p>
 <p><img src="img/5.4.15.png" width="580" /></p>
-<p>In the window that appears, move <code>Pepsi</code> and <code>Coke</code> from the list on the left to the field labeled “Test Pairs”. Make sure that you uncheck “Wilcoxon” (which is set as the default Test Type), and instead choose <span style="color:blue">Sign Test</span>.</p>
+<p>In the window that appears, move <code>Pepsi</code> and <code>Coke</code> from the list on the left to the field labeled &quot;Test Pairs&quot;. Make sure that you uncheck &quot;Wilcoxon&quot; (which is set as the default Test Type), and instead choose <span style="color:blue">Sign Test</span>.</p>
 <p><img src="img/5.4.16.png" width="546" /></p>
 <p>Then click <span style="color:blue">OK</span>. SPSS will produce two output tables:</p>
 <p><img src="img/5.4.17.png" width="155" /></p>
@@ -868,15 +844,15 @@ alpha_cutoff</code></pre>
 <li>Ties refers to an instance when <code>Pepsi</code> and <code>Coke</code> are given the same rating. We did not have any of these in our data.</li>
 </ol>
 <p>Nota bene: Do not get confused by this table. The reason it says Coke - Pepsi on the left-hand side is because SPSS automatically arranges the variable names alphabetically to label the table. This does not matter for or affect our calculations.</p>
-<p>So, looking at this table, it’s clear that more people preferred Coke (there are 16 positive differences), and much fewer people preferred Pepsi (there are only 4 negative differences). The question is, is this difference (16 vs. 4) large enough to be statistically significant. The table labeled “Test Statistics” answers this question.</p>
+<p>So, looking at this table, it's clear that more people preferred Coke (there are 16 positive differences), and much fewer people preferred Pepsi (there are only 4 negative differences). The question is, is this difference (16 vs. 4) large enough to be statistically significant. The table labeled &quot;Test Statistics&quot; answers this question.</p>
 <p>The binomial distribution is used to obtain a p-value (referred to in SPSS output as Sig.) for this exact outcome. The p-value listed in the table is .012. Since this number is less than the commonly used alpha level (.05), we can say that this difference is indeed significant. People significantly prefer Coke over Pepsi in the Taste Test Challenge.</p>
 <p>(Neither this lab manual nor any of its authors are affiliated with, funded, or in any way associated with the Coca Cola Company)</p>
 </div>
 <div id="entering-data-for-sign-test-problems" class="section level3">
 <h3><span class="header-section-number">5.3.4</span> Entering data for sign test problems</h3>
 <hr />
-<p>What if you aren’t given a set of paired scores? What if your professor asks you to perform a sign test on a single outcome statement? For example: Test the hypothesis that a coin is weighted if, out of 15 flips of the coin, it lands on tails 13 times.</p>
-<p>Notice that in this problem, there are no pairs of scores. We’re essentially only given the number of signs: out of 15 flips, the coin landed on tails 13 times (you can think of this as 13 pluses) and on heads obviously twice (you can think of this as 2 minuses).</p>
+<p>What if you aren't given a set of paired scores? What if your professor asks you to perform a sign test on a single outcome statement? For example: Test the hypothesis that a coin is weighted if, out of 15 flips of the coin, it lands on tails 13 times.</p>
+<p>Notice that in this problem, there are no pairs of scores. We're essentially only given the number of signs: out of 15 flips, the coin landed on tails 13 times (you can think of this as 13 pluses) and on heads obviously twice (you can think of this as 2 minuses).</p>
 <p>Since SPSS needs paired input to conduct the sign test, you can simply create two columns: one for <code>Tails</code>, and the other for <code>Heads</code>. Since you know that 13 of the flips were tails, treat each row as a flip. For 13 of the rows, place a 0 in the <code>Heads</code> column and a 1 in the <code>Tails</code> column. For the remaining two rows, place a 1 in the <code>Heads</code> column and a 0 in the <code>Tails</code> column. Your data should look like this:</p>
 <p><img src="img/5.4.18.png" width="560" /></p>
 <p>From here, you can conduct a sign test as described above.</p>
@@ -908,11 +884,13 @@ alpha_cutoff</code></pre>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -920,12 +898,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -937,6 +914,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -953,10 +934,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

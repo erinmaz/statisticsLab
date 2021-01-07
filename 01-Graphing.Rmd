@@ -664,7 +664,7 @@ knitr::include_graphics('img/1.4.12.png')
 
 ---
 
-Now that we have some data entered, we might want to name our variable so that it's evident our measurements represent heights. In order o view or modify variable names and other properties, look to the bottom of your SPSS window and switch over to the "Data View" tab. Once you do this, your window will appear as follows:
+Now that we have some data entered, we might want to name our variable so that it's evident our measurements represent heights. In order to view or modify variable names and other properties, look to the bottom of your SPSS window and switch over to the "Data View" tab. Once you do this, your window will appear as follows:
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -679,7 +679,7 @@ Here, you can edit the name of your variables, and specify their properties. Var
 + Decimals: This refers to how many decimal places will be visible by default.
 + Label: This is a description of the variable. Any information too long to be included in the variable name goes here.
 + Values: For nominal scale data, let's say 1 represents male and 2 represents female, this is where you include the values and their corresponding labels. 
-+ Measure: This variable property allows you to specify the nature of your data. Depending on the kind of scale you are using, you will choose a different measure type. Nominal and ordinal are chosen for nominal and ordinal scales, respectively. "Scale" is used when your data is measured on a ratio or interval scale. (Nota bene: this "Measure" designation is only a marker; it does not affect the calculations as in the "Type" parameter. Even if you choose the wrong icon/label for "Measure", SPSS will still produce the correct output)
++ Measure: This variable property allows you to specify the nature of your data. Depending on the kind of scale you are using, you will choose a different measure type. Nominal and ordinal are chosen for nominal and ordinal scales, respectively. "Scale" is used when your data is measured on a ratio or interval scale. 
 
 ### Opening a data file and producing different types of graphs
 

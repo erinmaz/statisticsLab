@@ -718,7 +718,7 @@ The following window will ask which variable you'd like to plot. Select `borough
 knitr::include_graphics('img/1.4.16.png')
 ```
 
-SPSS will produce a new output window which will contain the bar graph you have generated. Notice which borough receives the most film permits. Are you surprised?
+SPSS will produce a new output window which will contain the bar graph you have generated. Notice which borough receives the most film permits. Are you surprised? Note: your graph might be a different colour.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.17.png')
@@ -743,7 +743,7 @@ The window that appears contains every variable in your spreadsheet listed on th
 knitr::include_graphics('img/1.4.19.png')
 ```
 
-SPSS will produce an output window containing the distribution of life expectancy for the year 2017.
+SPSS will produce an output window containing the distribution of life expectancy for the year 2017. Note: You may get different axis intervals/labels than what is shown here.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.20.png')

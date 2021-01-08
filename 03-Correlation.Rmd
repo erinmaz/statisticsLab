@@ -15,7 +15,7 @@ In this lab you will learn how to compute correlations between two variables in 
 
 ## General Goals
 
-1. Compute Pearson's r between two variables using software
+1. Compute Pearson's *r* between two variables using software
 2. Discuss the possible meaning of correlations that you observe
 
 ### Important Info
@@ -24,11 +24,11 @@ We use data from the [World Happiness Report](http://worldhappiness.report). A .
 
 ## R
 
-In this lab we use explore to explore correlations between any two variables, and also show how to do a regression line. There will be three main parts. Getting R to compute the correlation, and looking at the data using scatter plots. We'll look at some correlations from the World Happiness Report. Then you'll look at correlations using data we collect from ourselves. It will be fun.
+In this lab we use explore to explore correlations between any two variables, and also show how to do a regression line. There will be three main parts. Getting *r* to compute the correlation, and looking at the data using scatter plots. We'll look at some correlations from the World Happiness Report. Then you'll look at correlations using data we collect from ourselves. It will be fun.
 
 ### cor for correlation
 
-R has the `cor` function for computing Pearson's r between any two variables. In fact this same function computes other versions of correlation, but we'll skip those here. To use the function you just need two variables with numbers in them like this:
+R has the `cor` function for computing Pearson's *r* between any two variables. In fact this same function computes other versions of correlation, but we'll skip those here. To use the function you just need two variables with numbers in them like this:
 
 ```{r}
 x  <- c(1,3,2,5,4,6,5,8,9)
@@ -99,7 +99,7 @@ ggplot(all_df, aes(x=x,y=y))+
 
 ```
 
-You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn't be. You can keep re-doing this graph, by re-knitting your R Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.
+You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn't be. You can keep re-doing this graph, by re-knitting your *r* Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.
 
 The point is, now you know you can find correlations by chance. So, in the next section, you should always wonder if the correlations you find reflect meaningful association between the x and y variable, or could have just occurred by chance.
 
@@ -134,7 +134,7 @@ You should be able to see that there is data for many different countries, acros
 
 #### My Question #1
  
-For the year 2017 only, does a countries measure for "freedom to make life choices" correlate with that countries measure for " Confidence in national government"?
+For the year 2017 only, does a country's measure for "Freedom to make life choices" correlate with that countries measure for " Confidence in national government"?
 
 Let's find out. We calculate the correlation, and then we make the scatter plot.
 
@@ -282,11 +282,11 @@ max(saved_value)
 
 Answer the following questions with complete sentences. When you have finished everything. Knit the document and hand in your stuff (you can submit your .RMD file to blackboard if it does not knit.)
 
-1. Imagine a researcher found a positive correlation between two variables, and reported that the r value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
+1. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
 
-2. Explain the difference between a correlation of r = .3 and r = .7. What does a larger value of r represent?
+2. Explain the difference between a correlation of *r* = .3 and *r* = .7. What does a larger value of *r* represent?
 
-3. Explain the difference between a correlation of r = .5, and r = -.5.
+3. Explain the difference between a correlation of *r* = .5, and *r* = -.5.
 
 ## Excel
 
@@ -295,10 +295,10 @@ How to do it in Excel
 ## SPSS
 
 
-In this lab, we will use SPSS to calculate the correlation coefficient. We will focus on the most-commonly used Pearson's coefficient, r. We will learn how to:
+In this lab, we will use SPSS to calculate the correlation coefficient. We will focus on the most-commonly used Pearson's coefficient, *r*. We will learn how to:
 
-1. Calculate the Pearson's r correlation coefficient for bivariate data
-2. Produce a correlation matrix, reporting Pearson's r for more than two variables at a time
+1. Calculate the Pearson's *r* correlation coefficient for bivariate data
+2. Produce a correlation matrix, reporting Pearson's *r* for more than two variables at a time
 3. Produce a scatterplot
 4. Split a data file for further analysis
 
@@ -328,7 +328,7 @@ knitr::include_graphics('img/3.4.13.png')
 
 Now, click <span style="color:blue">OK</span>. 
 
-SPSS will produce an output table containing the correlation coefficient requested. Notice that the table is redundant; it gives us the correlation between x and y, the correlation between y and x, the correlation between x and itself, and the correlation between y and itself. Any variable correlated with itself will result in an r of 1. The Pearson r correlation between variables x and y is .765.
+SPSS will produce an output table containing the correlation coefficient requested. Notice that the table is redundant; it gives us the correlation between x and y, the correlation between y and x, the correlation between x and itself, and the correlation between y and itself. Any variable correlated with itself will result in an *r* of 1. The Pearson *r* correlation between variables x and y is .765.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.14.png')
@@ -379,7 +379,7 @@ According to this output:
 
 To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let's use data from The World Happiness Report, a questionnaire about happiness. [Here](https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/WHR2018.sav) is a link to the file named WHR2018.sav.
 
-Using this data, let's answer the following question: does a country's measure for `freedom to make life choices` correlate with that country's measure for `Confidence in national government`?
+Using this data, let's answer the following question: does a country's measure for `Freedom to make life choices` correlate with that country's measure for `Confidence in national government`?
 
 Let's find the correlation coefficient between these variables first. Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:
 
@@ -410,7 +410,7 @@ In the next window, choose <span style="color:blue">Simple</span>, then <span st
 knitr::include_graphics('img/3.4.23.png')
 ```
 
-Next, move your two variables (`freedom to make life choices` and `confidence in national government`) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now.
+Next, move your two variables (`Freedom to make life choices` and `Confidence in national government`) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.24.png')
@@ -452,9 +452,9 @@ This scatterplot is very important. The distance between the line and the data p
 
 ---
 
-What if we asked the question: for the year 2017 only, does a countries measure for `freedom to make life choices` correlate with that countries measure for `Confidence in national government`?
+What if we asked the question: for the year 2017 only, does a countries measure for `Freedom to make life choices` correlate with that countries measure for `Confidence in national government`?
 
-Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we're going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson r for only 2017, and another for only 2016, and so on. 
+Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we're going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson *r* for only 2017, and another for only 2016, and so on. 
 
 In order to split the data, we go to the top menu and choose <span style="color:blue">Data</span>, then <span style="color:blue">Split file...</span>
 
@@ -468,7 +468,7 @@ In the next window, you must select <span style="color:blue">Organize output by 
 knitr::include_graphics('img/3.4.31.png')
 ```
 
-Click <span style="color:blue">OK</span>. Notice that this will cause the output window to produce some next indicating that you have split your file. You can ignore this and go back to your data window.
+Click <span style="color:blue">OK</span>. Notice that this will cause the output window to produce some text indicating that you have split your file. You can ignore this and go back to your data window.
 
 From here, any analysis you choose to do will be done separately for each year's worth of data. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:
 
@@ -482,13 +482,13 @@ In the next window, select the variables to be used (they will be the same as in
 knitr::include_graphics('img/3.4.33.png')
 ```
 
-Click <span style="color:blue">OK</span>. Notice that in the output window you will see a bunch of correlation tables (13 of them to be exact); one for each year. Scroll down and find the table with the heading "year = 2017". That's the table we need in order to answer our question:
+Click <span style="color:blue">OK</span>. Notice that in the output window you will see a bunch of correlation tables (13 of them to be exact), one for each year. Scroll down and find the table with the heading "year = 2017". That's the table we need in order to answer our question:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.34.png')
 ```
 
-This table indicates that, if we only look at the year 2017, the correlation coefficient between `freedom to make life choices` and `confidence in national government` is .442.
+This table indicates that, if we only look at the year 2017, the correlation coefficient between `Freedom to make life choices` and `Confidence in national government` is .442.
 
 It is VERY important to remember that once you have split a file, every analysis that follows the split will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must UNSPLIT your data file (or undo the split). To do this, go to <span style="color:blue">Data</span>, then <span style="color:blue">Split file...</span>
 

@@ -120,7 +120,7 @@
 \title{Answering questions with data: Lab Manual}
 \author{Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga \and Adapted for PSYC 292, St.~Francis Xavier University, by Erin L.
 Mazerolle and Sherry Neville-MacLean}
-\date{2018: Last Compiled 2021-01-07}
+\date{2018: Last Compiled 2021-01-08}
 
 \begin{document}
 \maketitle
@@ -132,7 +132,7 @@ Mazerolle and Sherry Neville-MacLean}
 \chapter*{Preface}\label{preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-07
+First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-08
 
 This is the companion lab to our free introductory statistics for
 undergraduates in psychology textbook,
@@ -1907,7 +1907,7 @@ Axis''. Then click {OK}.
 
 SPSS will produce a new output window which will contain the bar graph
 you have generated. Notice which borough receives the most film permits.
-Are you surprised?
+Are you surprised? Note: your graph might be a different colour.
 
 \includegraphics{img/1.4.17.png}
 
@@ -1946,7 +1946,8 @@ the field labeled ``Variable:'', then click {OK}.
 \includegraphics{img/1.4.19.png}
 
 SPSS will produce an output window containing the distribution of life
-expectancy for the year 2017.
+expectancy for the year 2017. Note: You may get different axis
+intervals/labels than what is shown here.
 
 \includegraphics{img/1.4.20.png}
 
@@ -2896,9 +2897,8 @@ of our scale. Lets change the major increment to 5:
 
 \includegraphics{img/2.4.27.png}
 
-Click {Apply}. Then {Close}. Now, close your Chart Editor window by
-simply {x}-ing it out. The SPSS output window will now contain your
-edited graph:
+Click {Apply}. Then {Close}. Click the x to close the Chart Editor
+window. The SPSS output window will now contain your edited graph:
 
 \includegraphics{img/2.4.28.png}
 
@@ -2912,11 +2912,13 @@ edited graph:
   Using the life expectancy data set, produce a table of output showing
   the descriptive statistics (measures of central tendency and
   variability) for both years 1800 and 1934 (during the Great
-  Depression).
+  Depression). Note: We are looking for a single table that contains the
+  descriptives for both years.
 \item
   Plot histograms of life expectancy for both years. How are these
-  distributions different? (Hint: Plot these on the same axes so that
-  they are comparable).
+  distributions different? Note: We are looking for two histograms, one
+  for each year. (Hint: Plot these on the same axes so that they are
+  comparable).
 \end{enumerate}
 
 \section{JAMOVI}\label{jamovi-2}
@@ -2953,7 +2955,7 @@ correlations that you observe.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Compute Pearson's r between two variables using software
+  Compute Pearson's \emph{r} between two variables using software
 \item
   Discuss the possible meaning of correlations that you observe
 \end{enumerate}
@@ -2967,15 +2969,15 @@ Report}. A .csv of the data can be found here: WHR2018.csv
 
 In this lab we use explore to explore correlations between any two
 variables, and also show how to do a regression line. There will be
-three main parts. Getting R to compute the correlation, and looking at
-the data using scatter plots. We'll look at some correlations from the
-World Happiness Report. Then you'll look at correlations using data we
-collect from ourselves. It will be fun.
+three main parts. Getting \emph{r} to compute the correlation, and
+looking at the data using scatter plots. We'll look at some correlations
+from the World Happiness Report. Then you'll look at correlations using
+data we collect from ourselves. It will be fun.
 
 \subsection{cor for correlation}\label{cor-for-correlation}
 
-R has the \texttt{cor} function for computing Pearson's r between any
-two variables. In fact this same function computes other versions of
+R has the \texttt{cor} function for computing Pearson's \emph{r} between
+any two variables. In fact this same function computes other versions of
 correlation, but we'll skip those here. To use the function you just
 need two variables with numbers in them like this:
 
@@ -3096,10 +3098,10 @@ scatter plot, so you can ``see the correlations''.
 
 You can see that the slope of the blue line is not always flat.
 Sometimes it looks like there is a correlation, when we know there
-shouldn't be. You can keep re-doing this graph, by re-knitting your R
-Markdown document, or by pressing the little green play button. This is
-basically you simulating the outcomes as many times as you press the
-button.
+shouldn't be. You can keep re-doing this graph, by re-knitting your
+\emph{r} Markdown document, or by pressing the little green play button.
+This is basically you simulating the outcomes as many times as you press
+the button.
 
 The point is, now you know you can find correlations by chance. So, in
 the next section, you should always wonder if the correlations you find
@@ -3153,7 +3155,7 @@ get to ask and answer your own questions.
 
 \subsubsection{My Question \#1}\label{my-question-1}
 
-For the year 2017 only, does a countries measure for ``freedom to make
+For the year 2017 only, does a country's measure for ``Freedom to make
 life choices'' correlate with that countries measure for " Confidence in
 national government``?
 
@@ -3426,15 +3428,16 @@ submit your .RMD file to blackboard if it does not knit.)
 \def\labelenumi{\arabic{enumi}.}
 \item
   Imagine a researcher found a positive correlation between two
-  variables, and reported that the r value was +.3. One possibility is
-  that there is a true correlation between these two variables. Discuss
-  one alternative possibility that would also explain the observation of
-  +.3 value between the variables.
+  variables, and reported that the \emph{r} value was +.3. One
+  possibility is that there is a true correlation between these two
+  variables. Discuss one alternative possibility that would also explain
+  the observation of +.3 value between the variables.
 \item
-  Explain the difference between a correlation of r = .3 and r = .7.
-  What does a larger value of r represent?
+  Explain the difference between a correlation of \emph{r} = .3 and
+  \emph{r} = .7. What does a larger value of \emph{r} represent?
 \item
-  Explain the difference between a correlation of r = .5, and r = -.5.
+  Explain the difference between a correlation of \emph{r} = .5, and
+  \emph{r} = -.5.
 \end{enumerate}
 
 \section{Excel}\label{excel-3}
@@ -3444,17 +3447,18 @@ How to do it in Excel
 \section{SPSS}\label{spss-3}
 
 In this lab, we will use SPSS to calculate the correlation coefficient.
-We will focus on the most-commonly used Pearson's coefficient, r. We
-will learn how to:
+We will focus on the most-commonly used Pearson's coefficient, \emph{r}.
+We will learn how to:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Calculate the Pearson's r correlation coefficient for bivariate data
+  Calculate the Pearson's \emph{r} correlation coefficient for bivariate
+  data
 \item
-  Produce a correlation matrix, reporting Pearson's r for more than two
-  variables at a time
+  Produce a correlation matrix, reporting Pearson's \emph{r} for more
+  than two variables at a time
 \item
   Produce a scatterplot
 \item
@@ -3500,8 +3504,9 @@ SPSS will produce an output table containing the correlation coefficient
 requested. Notice that the table is redundant; it gives us the
 correlation between x and y, the correlation between y and x, the
 correlation between x and itself, and the correlation between y and
-itself. Any variable correlated with itself will result in an r of 1.
-The Pearson r correlation between variables x and y is .765.
+itself. Any variable correlated with itself will result in an \emph{r}
+of 1. The Pearson \emph{r} correlation between variables x and y is
+.765.
 
 \includegraphics{img/3.4.14.png}
 
@@ -3565,7 +3570,7 @@ World Happiness Report, a questionnaire about happiness.
 is a link to the file named WHR2018.sav.
 
 Using this data, let's answer the following question: does a country's
-measure for \texttt{freedom\ to\ make\ life\ choices} correlate with
+measure for \texttt{Freedom\ to\ make\ life\ choices} correlate with
 that country's measure for
 \texttt{Confidence\ in\ national\ government}?
 
@@ -3596,8 +3601,8 @@ then {Legacy Dialogs}, then {Scatter\ldots{}}
 In the next window, choose {Simple}, then {Define}:
 \includegraphics{img/3.4.23.png}
 
-Next, move your two variables (\texttt{freedom\ to\ make\ life\ choices}
-and \texttt{confidence\ in\ national\ government}) into the x-axis and
+Next, move your two variables (\texttt{Freedom\ to\ make\ life\ choices}
+and \texttt{Confidence\ in\ national\ government}) into the x-axis and
 y-axis fields. Again, it does not matter which variable goes where, for
 now.
 
@@ -3644,7 +3649,7 @@ the correlation is weaker.
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 What if we asked the question: for the year 2017 only, does a countries
-measure for \texttt{freedom\ to\ make\ life\ choices} correlate with
+measure for \texttt{Freedom\ to\ make\ life\ choices} correlate with
 that countries measure for
 \texttt{Confidence\ in\ national\ government}?
 
@@ -3654,8 +3659,8 @@ case where the year is 2017. To acheive this, we're going to utilize a
 function called splitting. Splitting takes the file as a whole, and sets
 it up so that every analysis is done on some subset of the data. For
 example, if we split our data by year and calculate a correlation
-coefficient, SPSS will find Pearson r for only 2017, and another for
-only 2016, and so on.
+coefficient, SPSS will find Pearson \emph{r} for only 2017, and another
+for only 2016, and so on.
 
 In order to split the data, we go to the top menu and choose {Data},
 then {Split file\ldots{}}
@@ -3669,7 +3674,7 @@ specify which variable will be used to split the data. Select
 \includegraphics{img/3.4.31.png}
 
 Click {OK}. Notice that this will cause the output window to produce
-some next indicating that you have split your file. You can ignore this
+some text indicating that you have split your file. You can ignore this
 and go back to your data window.
 
 From here, any analysis you choose to do will be done separately for
@@ -3684,7 +3689,7 @@ same as in the last example).
 \includegraphics{img/3.4.33.png}
 
 Click {OK}. Notice that in the output window you will see a bunch of
-correlation tables (13 of them to be exact); one for each year. Scroll
+correlation tables (13 of them to be exact), one for each year. Scroll
 down and find the table with the heading ``year = 2017''. That's the
 table we need in order to answer our question:
 
@@ -3692,8 +3697,8 @@ table we need in order to answer our question:
 
 This table indicates that, if we only look at the year 2017, the
 correlation coefficient between
-\texttt{freedom\ to\ make\ life\ choices} and
-\texttt{confidence\ in\ national\ government} is .442.
+\texttt{Freedom\ to\ make\ life\ choices} and
+\texttt{Confidence\ in\ national\ government} is .442.
 
 It is VERY important to remember that once you have split a file, every
 analysis that follows the split will be done on the split variable. If

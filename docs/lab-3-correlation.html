@@ -458,7 +458,7 @@ $("#coverpic").hide();
 <div id="general-goals-2" class="section level2">
 <h2><span class="header-section-number">3.1</span> General Goals</h2>
 <ol style="list-style-type: decimal">
-<li>Compute Pearson's r between two variables using software</li>
+<li>Compute Pearson's <em>r</em> between two variables using software</li>
 <li>Discuss the possible meaning of correlations that you observe</li>
 </ol>
 <div id="important-info-2" class="section level3">
@@ -468,10 +468,10 @@ $("#coverpic").hide();
 </div>
 <div id="r-3" class="section level2">
 <h2><span class="header-section-number">3.2</span> R</h2>
-<p>In this lab we use explore to explore correlations between any two variables, and also show how to do a regression line. There will be three main parts. Getting R to compute the correlation, and looking at the data using scatter plots. We'll look at some correlations from the World Happiness Report. Then you'll look at correlations using data we collect from ourselves. It will be fun.</p>
+<p>In this lab we use explore to explore correlations between any two variables, and also show how to do a regression line. There will be three main parts. Getting <em>r</em> to compute the correlation, and looking at the data using scatter plots. We'll look at some correlations from the World Happiness Report. Then you'll look at correlations using data we collect from ourselves. It will be fun.</p>
 <div id="cor-for-correlation" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> cor for correlation</h3>
-<p>R has the <code>cor</code> function for computing Pearson's r between any two variables. In fact this same function computes other versions of correlation, but we'll skip those here. To use the function you just need two variables with numbers in them like this:</p>
+<p>R has the <code>cor</code> function for computing Pearson's <em>r</em> between any two variables. In fact this same function computes other versions of correlation, but we'll skip those here. To use the function you just need two variables with numbers in them like this:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>)
 y  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">13</span>)
 <span class="kw">cor</span>(x,y)</code></pre></div>
@@ -527,7 +527,7 @@ all_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(conditio
 <span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>conditions)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_classic</span>()</code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
-<p>You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn't be. You can keep re-doing this graph, by re-knitting your R Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.</p>
+<p>You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn't be. You can keep re-doing this graph, by re-knitting your <em>r</em> Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.</p>
 <p>The point is, now you know you can find correlations by chance. So, in the next section, you should always wonder if the correlations you find reflect meaningful association between the x and y variable, or could have just occurred by chance.</p>
 </div>
 </div>
@@ -551,7 +551,7 @@ whr_data &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class
 </div>
 <div id="my-question-1" class="section level4">
 <h4><span class="header-section-number">3.2.2.3</span> My Question #1</h4>
-<p>For the year 2017 only, does a countries measure for &quot;freedom to make life choices&quot; correlate with that countries measure for &quot; Confidence in national government&quot;?</p>
+<p>For the year 2017 only, does a country's measure for &quot;Freedom to make life choices&quot; correlate with that countries measure for &quot; Confidence in national government&quot;?</p>
 <p>Let's find out. We calculate the correlation, and then we make the scatter plot.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(whr_data<span class="op">$</span><span class="st">`</span><span class="dt">Freedom to make life choices</span><span class="st">`</span>,
     whr_data<span class="op">$</span><span class="st">`</span><span class="dt">Confidence in national government</span><span class="st">`</span>)</code></pre></div>
@@ -662,9 +662,9 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 <h3><span class="header-section-number">3.2.4</span> Writing assignment</h3>
 <p>Answer the following questions with complete sentences. When you have finished everything. Knit the document and hand in your stuff (you can submit your .RMD file to blackboard if it does not knit.)</p>
 <ol style="list-style-type: decimal">
-<li><p>Imagine a researcher found a positive correlation between two variables, and reported that the r value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.</p></li>
-<li><p>Explain the difference between a correlation of r = .3 and r = .7. What does a larger value of r represent?</p></li>
-<li><p>Explain the difference between a correlation of r = .5, and r = -.5.</p></li>
+<li><p>Imagine a researcher found a positive correlation between two variables, and reported that the <em>r</em> value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .3 and <em>r</em> = .7. What does a larger value of <em>r</em> represent?</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .5, and <em>r</em> = -.5.</p></li>
 </ol>
 </div>
 </div>
@@ -674,10 +674,10 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 </div>
 <div id="spss-3" class="section level2">
 <h2><span class="header-section-number">3.4</span> SPSS</h2>
-<p>In this lab, we will use SPSS to calculate the correlation coefficient. We will focus on the most-commonly used Pearson's coefficient, r. We will learn how to:</p>
+<p>In this lab, we will use SPSS to calculate the correlation coefficient. We will focus on the most-commonly used Pearson's coefficient, <em>r</em>. We will learn how to:</p>
 <ol style="list-style-type: decimal">
-<li>Calculate the Pearson's r correlation coefficient for bivariate data</li>
-<li>Produce a correlation matrix, reporting Pearson's r for more than two variables at a time</li>
+<li>Calculate the Pearson's <em>r</em> correlation coefficient for bivariate data</li>
+<li>Produce a correlation matrix, reporting Pearson's <em>r</em> for more than two variables at a time</li>
 <li>Produce a scatterplot</li>
 <li>Split a data file for further analysis</li>
 </ol>
@@ -692,7 +692,7 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 <p>The next window will ask you to select variables to correlate. Since we have two (<code>x</code> and <code>y</code>) move them both from the left-hand field to the right-hand field using the arrow. Notice that in this window, <span style="color:blue">Pearson</span> is selected. This is the default setting (and the one we want), but notice there are other ways to calculate the correlation between variables. We will stick with Pearson's correlation coefficient for this course.</p>
 <p><img src="img/3.4.13.png" width="554" /></p>
 <p>Now, click <span style="color:blue">OK</span>.</p>
-<p>SPSS will produce an output table containing the correlation coefficient requested. Notice that the table is redundant; it gives us the correlation between x and y, the correlation between y and x, the correlation between x and itself, and the correlation between y and itself. Any variable correlated with itself will result in an r of 1. The Pearson r correlation between variables x and y is .765.</p>
+<p>SPSS will produce an output table containing the correlation coefficient requested. Notice that the table is redundant; it gives us the correlation between x and y, the correlation between y and x, the correlation between x and itself, and the correlation between y and itself. Any variable correlated with itself will result in an <em>r</em> of 1. The Pearson <em>r</em> correlation between variables x and y is .765.</p>
 <p><img src="img/3.4.14.png" width="161" /></p>
 </div>
 <div id="correlation-matrix" class="section level3">
@@ -717,7 +717,7 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 <h3><span class="header-section-number">3.4.3</span> Correlation and Scatterplots</h3>
 <hr />
 <p>To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let's use data from The World Happiness Report, a questionnaire about happiness. <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/WHR2018.sav">Here</a> is a link to the file named WHR2018.sav.</p>
-<p>Using this data, let's answer the following question: does a country's measure for <code>freedom to make life choices</code> correlate with that country's measure for <code>Confidence in national government</code>?</p>
+<p>Using this data, let's answer the following question: does a country's measure for <code>Freedom to make life choices</code> correlate with that country's measure for <code>Confidence in national government</code>?</p>
 <p>Let's find the correlation coefficient between these variables first. Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
 <p><img src="img/3.4.19.png" width="507" /></p>
 <p>Next, a window will appear asking for the variables to be correlated. Go through the list on the left and find <code>Freedom to make life choices</code> as well as <code>Confidence in national government</code>. Move both of these variables to the field on the right using the arrow.</p>
@@ -726,7 +726,7 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 <p>Based on this output, the correlation between <code>Freedom to make life choices</code> and <code>Confidence in national government</code> is .408.</p>
 <p>Let's continue to create the scatterplot for this data. Go to <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">Scatter...</span> <img src="img/3.4.22.png" width="561" /></p>
 <p>In the next window, choose <span style="color:blue">Simple</span>, then <span style="color:blue">Define</span>: <img src="img/3.4.23.png" width="552" /></p>
-<p>Next, move your two variables (<code>freedom to make life choices</code> and <code>confidence in national government</code>) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now.</p>
+<p>Next, move your two variables (<code>Freedom to make life choices</code> and <code>Confidence in national government</code>) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now.</p>
 <p><img src="img/3.4.24.png" width="552" /></p>
 <p>Click <span style="color:blue">OK</span>. SPSS will produce a scatterplot of your data, as follows:</p>
 <p><img src="img/3.4.25.png" width="331" /></p>
@@ -743,20 +743,20 @@ y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dt">n
 <div id="splitting-a-file" class="section level3">
 <h3><span class="header-section-number">3.4.4</span> Splitting a File</h3>
 <hr />
-<p>What if we asked the question: for the year 2017 only, does a countries measure for <code>freedom to make life choices</code> correlate with that countries measure for <code>Confidence in national government</code>?</p>
-<p>Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we're going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson r for only 2017, and another for only 2016, and so on.</p>
+<p>What if we asked the question: for the year 2017 only, does a countries measure for <code>Freedom to make life choices</code> correlate with that countries measure for <code>Confidence in national government</code>?</p>
+<p>Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we're going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson <em>r</em> for only 2017, and another for only 2016, and so on.</p>
 <p>In order to split the data, we go to the top menu and choose <span style="color:blue">Data</span>, then <span style="color:blue">Split file...</span></p>
 <p><img src="img/3.4.30.png" width="422" /></p>
 <p>In the next window, you must select <span style="color:blue">Organize output by groups</span> and then specify which variable will be used to split the data. Select <code>year</code> and move it to the right-hand field using the arrow.</p>
 <p><img src="img/3.4.31.png" width="552" /></p>
-<p>Click <span style="color:blue">OK</span>. Notice that this will cause the output window to produce some next indicating that you have split your file. You can ignore this and go back to your data window.</p>
+<p>Click <span style="color:blue">OK</span>. Notice that this will cause the output window to produce some text indicating that you have split your file. You can ignore this and go back to your data window.</p>
 <p>From here, any analysis you choose to do will be done separately for each year's worth of data. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
 <p><img src="img/3.4.32.png" width="422" /></p>
 <p>In the next window, select the variables to be used (they will be the same as in the last example).</p>
 <p><img src="img/3.4.33.png" width="632" /></p>
-<p>Click <span style="color:blue">OK</span>. Notice that in the output window you will see a bunch of correlation tables (13 of them to be exact); one for each year. Scroll down and find the table with the heading &quot;year = 2017&quot;. That's the table we need in order to answer our question:</p>
+<p>Click <span style="color:blue">OK</span>. Notice that in the output window you will see a bunch of correlation tables (13 of them to be exact), one for each year. Scroll down and find the table with the heading &quot;year = 2017&quot;. That's the table we need in order to answer our question:</p>
 <p><img src="img/3.4.34.png" width="251" /></p>
-<p>This table indicates that, if we only look at the year 2017, the correlation coefficient between <code>freedom to make life choices</code> and <code>confidence in national government</code> is .442.</p>
+<p>This table indicates that, if we only look at the year 2017, the correlation coefficient between <code>Freedom to make life choices</code> and <code>Confidence in national government</code> is .442.</p>
 <p>It is VERY important to remember that once you have split a file, every analysis that follows the split will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must UNSPLIT your data file (or undo the split). To do this, go to <span style="color:blue">Data</span>, then <span style="color:blue">Split file...</span></p>
 <p><img src="img/3.4.35.png" width="421" /></p>
 <p>Then make sure to select <span style="color:blue">Analyze all cases, do not create groups</span> and click <span style="color:blue">OK</span>.</p>

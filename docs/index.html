@@ -68,6 +68,43 @@ mattcrump=1;
 </script>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -414,11 +451,11 @@ mattcrump=1;
 <h1 class="title">Answering questions with data: Lab Manual</h1>
 <p class="author"><em>Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga</em></p>
 <p class="author"><em>Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle and Sherry Neville-MacLean</em></p>
-<p class="date"><em>2018: Last Compiled 2021-01-07</em></p>
+<p class="date"><em>2018: Last Compiled 2021-01-08</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
-<p>First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-07</p>
+<p>First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-08</p>
 <p>This is the companion lab to our free introductory statistics for undergraduates in psychology textbook, <a href="https://crumplab.github.io/statistics/">Answering questions with data</a>.</p>
 <p>This lab manual involves step by-step tutorials to solve data-analysis problems in software. We use open-data sets that are usually paired with a primary research article.</p>
 <p>Each lab has a separate guide for solving the problems in R &amp; R-studio, Excel, SPSS, and JAMOVI.</p>
@@ -517,6 +554,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

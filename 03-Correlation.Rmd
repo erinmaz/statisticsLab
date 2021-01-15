@@ -134,7 +134,7 @@ You should be able to see that there is data for many different countries, acros
 
 #### My Question #1
  
-For the year 2017 only, does a country's measure for "Freedom to make life choices" correlate with that countries measure for " Confidence in national government"?
+For the year 2017 only, does a country's measure for "Freedom to make life choices" correlate with that country's measure for " Confidence in national government"?
 
 Let's find out. We calculate the correlation, and then we make the scatter plot.
 
@@ -169,7 +169,7 @@ cor(smaller_df$`Freedom to make life choices`,
 
 Now we see the correlation is .408. 
 
-Although the scatter plot shows the dots are everywhere, it generally shows that as Freedom to make life choices increases in a country, that countries confidence in their national government also increase. This is a positive correlation. Let's do this again and add the best fit line, so the trend is more clear, we use `geom_smooth(method=lm, se=FALSE)`. I also change the `alpha` value of the dots so they blend it bit, and you can see more of them.
+Although the scatter plot shows the dots are everywhere, it generally shows that as Freedom to make life choices increases in a country, that country's confidence in their national government also increase. This is a positive correlation. Let's do this again and add the best fit line, so the trend is more clear, we use `geom_smooth(method=lm, se=FALSE)`. I also change the `alpha` value of the dots so they blend it bit, and you can see more of them.
 
 ```{r}
 
@@ -452,7 +452,7 @@ This scatterplot is very important. The distance between the line and the data p
 
 ---
 
-What if we asked the question: for the year 2017 only, does a countries measure for `Freedom to make life choices` correlate with that countries measure for `Confidence in national government`?
+What if we asked the question: for the year 2017 only, does a country's measure for `Freedom to make life choices` correlate with that country's measure for `Confidence in national government`?
 
 Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we're going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson *r* for only 2017, and another for only 2016, and so on. 
 

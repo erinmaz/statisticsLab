@@ -317,9 +317,49 @@ Throughout the lab manual, you will encounter visuals of screens in SPSS. If an 
 
 #### Hidden Toolbars
 If the toolbar is hidden when you enter SPSS, you can select View, Toolbars, and Data Editor to access the images used for shortcuts.
+```{r , fig.cap="View without Shortcuts", echo=FALSE,dev='png'}
+knitr::include_graphics('img/0.1.png')
+```
+```{r , fig.cap="View with Shortcuts", echo=FALSE,dev='png'}
+knitr::include_graphics('img/0.1.png')
+```
+
 
 ####Adjusting the Font Size
-The default font size in SPSS files is small for many readers. If you would like to increase the size of the font in the data file, please click View and Fonts to adjust the font for your preferences. Increasing the size of the font in the output file seems a bit more complicated. You can increase the size of the font in the output pane easily byut clicking View and Outline Size; however, the font within the main section of the file is not so easily changed. To increase the size of the tables generated, please click Edit and Options and select the Pivot Tables tab. Within the pop-up window (shown below), change from System Default to Large Font (click to highlight this option) and click OK.
+The default font size in SPSS files is small for many readers. If you would like to increase the size of the font in the data file, please click View and Fonts to adjust the font for your preferences. Increasing the size of the font in the output file seems a bit more complicated. You can increase the size of the font in the output pane easily by clicking View and Outline Size; however, the font within the main section of the file is not so easily changed. To increase the size of the tables generated, please click Edit and Options and select the Pivot Tables tab. Within the pop-up window (shown below), change from System Default to Large Font (click to highlight this option) and click OK.
+
+### Opening SPSS and the SPSS layout
+Your lab instructor will take you through the process of opening the SPSS program. You may double-click on its icon located on the desktop of your lab computer, or you may find it using the Start menu. Once the program loads,  you will be prompted with a pop-up window that asks you which file you would like to open. For now, we will be examining the basic layout of SPSS without a data set, so you can click <span style="color:blue">Cancel</span>. 
+
+Once you do, the main SPSS spreadsheet should open. It will look like this, a basic spreadsheet:
+
+```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.4.11.png')
+```
+Notice at the bottom of your window there are two tabs; "Data View" and "Variable View". In data view, we enter data into our spreadsheet. You will notice that rows are numbered on the left-hand side of the spreadsheet, while columns are labeled "var". This is an indication of the general structure of SPSS: Variables are contained in the columns, and rows indicate individual observations.  For example, if you obtained the heights (in inches) of 5 people {x= 64, 70, 63, 62, 65} and wanted to enter their data into SPSS, each person's height would be entered in a new row, not across the columns, as seen below:
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.4.12.png')
+```
+
+#### Reviewing variable properties and the Variable View tab
+Now that we have some data entered, we might want to name our variable so that it's evident our measurements represent heights. In order to view or modify variable names and other properties, look to the bottom of your SPSS window and switch over to the "Data View" tab. Once you do this, your window will appear as follows:
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.4.13.png')
+```
+
+Here, you can edit the name of your variables, and specify their properties. Variable names can be anything you like, with the restriction that you cannot use numbers or spaces. Next, notice several other important properties of variables you may at some point need to set or modify:
+
++ Name: the name of your variable that will appear as a colum header in Data View. No spaces or numerals.
++ Type: Your data will most often be Numeric, but sometimes, as in data representing currency or data in scientific notation, you may change the data type appropriately. If your data is simply a label, word, or response (such as an open-ended response to a survey question), choose "String": this tells SPSS not to treat this variable as a number. (Nota bene: if you select the wrong type of variable, SPSS may not be able to process your requested calculations, so always remember to check this parameter!)
++ Width: This refers to how many digits will be visible by default.
++ Decimals: This refers to how many decimal places will be visible by default.
++ Label: This is a description of the variable. Any information too long to be included in the variable name goes here.
++ Values: For nominal scale data, let's say 1 represents male and 2 represents female, this is where you include the values and their corresponding labels. 
++ Measure: This variable property allows you to specify the nature of your data. Depending on the kind of scale you are using, you will choose a different measure type. Nominal and ordinal are chosen for nominal and ordinal scales, respectively. "Scale" is used when your data is measured on a ratio or interval scale.
 
 ### Practice Problems 
 

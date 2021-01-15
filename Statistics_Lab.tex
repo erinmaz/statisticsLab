@@ -120,7 +120,7 @@
 \title{Answering questions with data: Lab Manual}
 \author{Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga \and Adapted for PSYC 292, St.~Francis Xavier University, by Erin L.
 Mazerolle and Sherry Neville-MacLean}
-\date{2018: Last Compiled 2021-01-08}
+\date{2018: Last Compiled 2021-01-15}
 
 \begin{document}
 \maketitle
@@ -132,7 +132,7 @@ Mazerolle and Sherry Neville-MacLean}
 \chapter*{Preface}\label{preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-08
+First Draft (version 0.9 = August 15th, 2018) Last Compiled: 2021-01-15
 
 This is the companion lab to our free introductory statistics for
 undergraduates in psychology textbook,
@@ -684,8 +684,72 @@ here:
 
 \section{SPSS}\label{spss}
 
-We will be using SPSS version 27. It can be downloaded here:
+In this course, we will be using SPSS to help us with the analyses about
+which we are learning in classes. Throughout each lab, we will show you
+how to use SPSS to solve specific problems, and then you will use the
+examples to solve in-lab assignments, homework, and the analysis for
+your team project.
+
+\subsection{Installing SPSS}\label{installing-spss}
+
+We will be using SPSS version 27. The file to download and installation
+instructions can be found here:
 \url{https://stfx.teamdynamix.com/TDClient/1764/Portal/KB/ArticleDet?ID=44882}
+
+\subsection{Notes and Tips}\label{notes-and-tips}
+
+\subsubsection{Discrepancies in Visuals}\label{discrepancies-in-visuals}
+
+Throughout the lab manual, you will encounter visuals of screens in
+SPSS. If an image looks slightly different from what you observe on your
+screen, the discrepancy may be due to a difference in version (27 vs
+older versions) or operating system (Mac vs PC). Most images are not
+from version 27 -- which was made available to us in January of 2021.
+From time to time, you may notice that the layout of a pop-up window or
+the set of commands for an analysis differs for you. A difference in
+layout is likely due to the difference in our operating systems. The
+difference in the set of commands may be slight and based on our
+operating systems, or it may be just a matter of there being more than
+one correct way to accomplish the same task. If you encounter a
+difference, let us know so that we can share it with other students and
+update this manual.
+
+\subsubsection{Hidden Toolbars}\label{hidden-toolbars}
+
+If the toolbar is hidden when you enter SPSS, you can select View,
+Toolbars, and Data Editor to access the images used for shortcuts.
+
+\subsubsection{Adjusting the Font Size}\label{adjusting-the-font-size}
+
+The default font size in SPSS files is small for many readers. If you
+would like to increase the size of the font in the data file, please
+click View and Fonts to adjust the font for your preferences. Increasing
+the size of the font in the output file seems a bit more complicated.
+You can increase the size of the font in the output pane easily byut
+clicking View and Outline Size; however, the font within the main
+section of the file is not so easily changed. To increase the size of
+the tables generated, please click Edit and Options and select the Pivot
+Tables tab. Within the pop-up window (shown below), change from System
+Default to Large Font (click to highlight this option) and click OK.
+
+\subsection{Practice Problems}\label{practice-problems}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A data file has been provided for you in Moodle. Open that file and
+  answer the questions in the Moodle quiz entitled ``Reading an SPSS
+  Data File.''
+\item
+  In your assigned breakout room, collect information to use in a data
+  file. For each member of your group, collect preferred name, year of
+  study (1, 2, 3, etc.), and type of personal device used (Mac, PC,
+  Chromebook, etc.). Remember to check the settings of the variables in
+  Variable View. You should each create an SPSS data file with the
+  collected information, and upload that file in Moodle under the ``SPSS
+  Basics -- Data File Submission'' link.
+\end{enumerate}
 
 \section{JAMOVI}\label{jamovi}
 
@@ -1990,7 +2054,7 @@ individuals earn, on average?
 
 \includegraphics{img/1.4.24.png}
 
-\subsection{Practice Problems}\label{practice-problems}
+\subsection{Practice Problems}\label{practice-problems-1}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -2902,7 +2966,7 @@ window. The SPSS output window will now contain your edited graph:
 
 \includegraphics{img/2.4.28.png}
 
-\subsection{Practice Problems}\label{practice-problems-1}
+\subsection{Practice Problems}\label{practice-problems-2}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -2917,8 +2981,8 @@ window. The SPSS output window will now contain your edited graph:
 \item
   Plot histograms of life expectancy for both years. How are these
   distributions different? Note: We are looking for two histograms, one
-  for each year. (Hint: Plot these on the same axes so that they are
-  comparable).
+  for each year. (Hint: Make sure the axes and bins of both graphs are
+  the same, so the histograms are comparable).
 \end{enumerate}
 
 \section{JAMOVI}\label{jamovi-2}
@@ -3156,7 +3220,7 @@ get to ask and answer your own questions.
 \subsubsection{My Question \#1}\label{my-question-1}
 
 For the year 2017 only, does a country's measure for ``Freedom to make
-life choices'' correlate with that countries measure for " Confidence in
+life choices'' correlate with that country's measure for " Confidence in
 national government``?
 
 Let's find out. We calculate the correlation, and then we make the
@@ -3217,7 +3281,7 @@ Now we see the correlation is .408.
 
 Although the scatter plot shows the dots are everywhere, it generally
 shows that as Freedom to make life choices increases in a country, that
-countries confidence in their national government also increase. This is
+country's confidence in their national government also increase. This is
 a positive correlation. Let's do this again and add the best fit line,
 so the trend is more clear, we use
 \texttt{geom\_smooth(method=lm,\ se=FALSE)}. I also change the
@@ -3648,9 +3712,9 @@ the correlation is weaker.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-What if we asked the question: for the year 2017 only, does a countries
+What if we asked the question: for the year 2017 only, does a country's
 measure for \texttt{Freedom\ to\ make\ life\ choices} correlate with
-that countries measure for
+that country's measure for
 \texttt{Confidence\ in\ national\ government}?
 
 Notice that this question is asking us to find the correlation between
@@ -3713,7 +3777,7 @@ click {OK}.
 
 \includegraphics{img/3.4.36.png}
 
-\subsection{Practice Problems}\label{practice-problems-2}
+\subsection{Practice Problems}\label{practice-problems-3}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -4775,7 +4839,7 @@ to using rounded figures):
 You can use this Compute Variable window to calculate z-scores or make
 any calculations using existing variables.
 
-\subsection{Practice Problems}\label{practice-problems-3}
+\subsection{Practice Problems}\label{practice-problems-4}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -5867,7 +5931,7 @@ column. Your data should look like this:
 
 From here, you can conduct a sign test as described above.
 
-\subsection{Practice Problems}\label{practice-problems-4}
+\subsection{Practice Problems}\label{practice-problems-5}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -7207,7 +7271,7 @@ earlier-occuring one. If your variables were ordered differently, you
 would obtain a positive t-statistic as well. In other words, the sign
 does not matter; it results from the order of the variables.
 
-\subsection{Practice Problems}\label{practice-problems-5}
+\subsection{Practice Problems}\label{practice-problems-6}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -7912,7 +7976,7 @@ transcript conditions.
 
 \includegraphics{img/7.4.22.png}
 
-\subsection{Practice Problems}\label{practice-problems-6}
+\subsection{Practice Problems}\label{practice-problems-7}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -9297,7 +9361,7 @@ that the only differences are between:
 These are the same pairwise differences we noted using the multiple
 comparisons table.
 
-\subsection{Practice Problems}\label{practice-problems-7}
+\subsection{Practice Problems}\label{practice-problems-8}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -10332,7 +10396,7 @@ p\textless{}.05.
 
 You can use this same method for the remaining comparisons.
 
-\subsection{Practice Problems}\label{practice-problems-8}
+\subsection{Practice Problems}\label{practice-problems-9}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -11546,7 +11610,7 @@ sitting only, congruent and incongruent RTs are significantly different
 are not significantly different (p=NS). 4. For incongruent words only,
 standing and sitting are significantly different (p\textless{}.05).
 
-\subsection{Practice Problems}\label{practice-problems-9}
+\subsection{Practice Problems}\label{practice-problems-10}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -12106,7 +12170,7 @@ According to the table, we can see that:
   different from those in the no photo condition (p\textless{}.05).
 \end{enumerate}
 
-\subsection{Practice Problems}\label{practice-problems-10}
+\subsection{Practice Problems}\label{practice-problems-11}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 

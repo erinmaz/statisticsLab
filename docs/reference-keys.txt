@@ -1,4 +1,4 @@
-fig:unnamed-chunk-9
+fig:2rstudiod
 important-notes
 attributions
 cc-by-sa-4.0-license
@@ -26,6 +26,12 @@ screencast-tutorial
 r-studio-cloud
 excel
 spss
+installing-spss
+notes-and-tips
+discrepancies-in-visuals
+hidden-toolbars
+adjusting-the-font-size
+practice-problems
 jamovi
 lab-1-graphing-data
 general-goals
@@ -70,7 +76,7 @@ opening-a-data-file-and-producing-different-types-of-graphs
 bar-graphs
 histograms
 scatterplots
-practice-problems
+practice-problems-1
 jamovi-1
 lab-2-descriptive-statistics
 general-goals-1
@@ -101,7 +107,7 @@ spss-2
 calculating-descriptive-statistics
 descriptive-statistics-and-histograms
 editing-graphs
-practice-problems-1
+practice-problems-2
 jamovi-2
 lab-3-correlation
 general-goals-2
@@ -125,7 +131,7 @@ correlation-coefficient-for-bivariate-data-two-variables
 correlation-matrix
 correlation-and-scatterplots
 splitting-a-file
-practice-problems-2
+practice-problems-3
 jamovi-3
 lab-4-normal-distribution-central-limit-theorem
 general-goals-3
@@ -156,7 +162,7 @@ excel-4
 spss-4
 saving-data-as-standardized-values.
 computing-variables
-practice-problems-3
+practice-problems-4
 jamovi-4
 lab-5-fundamentals-of-hypothesis-testing
 r-5
@@ -186,7 +192,7 @@ experiment-background
 calculate-difference-scores-between-pairs-of-measures
 conduct-a-sign-test
 entering-data-for-sign-test-problems
-practice-problems-4
+practice-problems-5
 jamovi-5
 lab-6-t-test-one-sample-paired-sample
 does-music-convey-social-information-to-infants
@@ -224,7 +230,7 @@ performing-a-one-sample-t-test
 performing-a-paired-samples-t-test
 graphing-your-results
 the-relationship-between-the-one-sample-and-the-paired-samples-t-test
-practice-problems-5
+practice-problems-6
 jamovi-6
 lab-7-t-test-independent-sample
 do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say
@@ -248,7 +254,7 @@ spss-7
 experiment-background-2
 performing-an-independent-samples-t-test
 graphing-your-data
-practice-problems-6
+practice-problems-7
 jamovi-7
 lab-8-one-way-anova
 how-to-not-think-about-bad-memories-by-playing-tetris
@@ -284,7 +290,7 @@ planned-comparisons-t-tests
 unplanned-comparisons-post-hoc-tests
 multiple-comparisons
 homogeneous-subsets
-practice-problems-7
+practice-problems-8
 jamovi-8
 lab-9-repeated-measures-anova
 betcha-cant-type-jhdbzkco-very-fast-on-your-first-try
@@ -316,7 +322,7 @@ experiment-background-4
 produce-a-frequency-histogram-and-remove-outliers
 conduct-and-graph-one-factor-repeated-measures-anova
 conduct-planned-comparisons-using-a-paired-samples-t-test
-practice-problems-8
+practice-problems-9
 jamovi-9
 lab-10-factorial-anova
 does-standing-up-make-you-focus-more
@@ -350,7 +356,7 @@ conduct-a-between-subjects-two-factor-analysis-of-variance-anova
 calculate-simple-effects
 conduct-a-repeated-measures-two-factor-analysis-of-variance-anova
 calculate-simple-effects-1
-practice-problems-9
+practice-problems-10
 jamovi-10
 lab-11-mixed-factorial-anova
 do-you-remember-things-better-when-you-take-pictures-of-them
@@ -375,5 +381,5 @@ spss-11
 experiment-background-6
 conduct-a-mixed-factorial-analysis-of-variance-anova
 calculate-simple-effects-2
-practice-problems-10
+practice-problems-11
 jamovi-11

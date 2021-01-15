@@ -305,7 +305,30 @@ The link to the video is [https://www.youtube.com/watch?v=WsbnV0t7FE4](https://w
 ## Excel 
 
 ## SPSS
-We will be using SPSS version 27. It can be downloaded here: https://stfx.teamdynamix.com/TDClient/1764/Portal/KB/ArticleDet?ID=44882
+In this course, we will be using SPSS to help us with the analyses about which we are learning in classes. Throughout each lab, we will show you how to use SPSS to solve specific problems, and then you will use the examples to solve in-lab assignments, homework, and the analysis for your team project.
+
+### Installing SPSS
+We will be using SPSS version 27. The file to download and installation instructions can be found here: https://stfx.teamdynamix.com/TDClient/1764/Portal/KB/ArticleDet?ID=44882
+
+### Notes and Tips
+
+#### Discrepancies in Visuals
+Throughout the lab manual, you will encounter visuals of screens in SPSS. If an image looks slightly different from what you observe on your screen, the discrepancy may be due to a difference in version (27 vs older versions) or operating system (Mac vs PC). Most images are not from version 27 – which was made available to us in January of 2021. From time to time, you may notice that the layout of a pop-up window or the set of commands for an analysis differs for you. A difference in layout is likely due to the difference in our operating systems. The difference in the set of commands may be slight and based on our operating systems, or it may be just a matter of there being more than one correct way to accomplish the same task. If you encounter a difference, let us know so that we can share it with other students and update this manual. 
+
+#### Hidden Toolbars
+If the toolbar is hidden when you enter SPSS, you can select View, Toolbars, and Data Editor to access the images used for shortcuts.
+
+####Adjusting the Font Size
+The default font size in SPSS files is small for many readers. If you would like to increase the size of the font in the data file, please click View and Fonts to adjust the font for your preferences. Increasing the size of the font in the output file seems a bit more complicated. You can increase the size of the font in the output pane easily byut clicking View and Outline Size; however, the font within the main section of the file is not so easily changed. To increase the size of the tables generated, please click Edit and Options and select the Pivot Tables tab. Within the pop-up window (shown below), change from System Default to Large Font (click to highlight this option) and click OK.
+
+### Practice Problems 
+
+___
+
+
+1. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
+
+2. In your assigned breakout room, collect information to use in a data file. For each member of your group, collect preferred name, year of study (1, 2, 3, etc.), and type of personal device used (Mac, PC, Chromebook, etc.). Remember to check the settings of the variables in Variable View. You should each create an SPSS data file with the collected information, and upload that file in Moodle under the “SPSS Basics – Data File Submission” link.
 
 ## JAMOVI
 

@@ -321,7 +321,7 @@ If the toolbar is hidden when you enter SPSS, you can select View, Toolbars, and
 knitr::include_graphics('img/0.1.png')
 ```
 ```{r , fig.cap="View with Shortcuts", echo=FALSE,dev='png'}
-knitr::include_graphics('img/0.1.png')
+knitr::include_graphics('img/0.2.png')
 ```
 
 

@@ -366,9 +366,10 @@ Here, you can edit the name of your variables, and specify their properties. Var
 ___
 
 
-1. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
+1. In your assigned breakout room, collect information to use in a data file. For each member of your group, collect preferred name, year of study (1, 2, 3, etc.), and type of personal device used (Mac, PC, Chromebook, etc.). Remember to check the settings of the variables in Variable View. You should each create an SPSS data file with the collected information, and upload that file in Moodle under the “SPSS Basics – Data File Submission” link.
 
-2. In your assigned breakout room, collect information to use in a data file. For each member of your group, collect preferred name, year of study (1, 2, 3, etc.), and type of personal device used (Mac, PC, Chromebook, etc.). Remember to check the settings of the variables in Variable View. You should each create an SPSS data file with the collected information, and upload that file in Moodle under the “SPSS Basics – Data File Submission” link.
+2. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
+
 
 ## JAMOVI
 

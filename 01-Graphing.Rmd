@@ -718,7 +718,7 @@ The following window will ask which variable you'd like to plot. Select `borough
 knitr::include_graphics('img/1.4.16.png')
 ```
 
-SPSS will produce a new output window which will contain the bar graph you have generated. Notice which borough receives the most film permits. Are you surprised? Note: your graph might be a different colour.
+SPSS will produce a new output window which will contain the bar graph you have generated. Notice which borough receives the most film permits. Note: your graph might be a different colour.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.17.png')
@@ -789,7 +789,7 @@ ___
 
 1. Create a histogram for life expectancy in the year 1800. Describe the distribution. How does it differ from the one we plotted for 2017?
 
-2. Plot the life expectancy of each country in 1800 vs. that of 2018. What does this graph show you? What are your conclusions regarding the development of nations?
+2. Create a scatterplot of life expectancy of each country in 1800 vs. that of 2018. What does this graph show you? What are your conclusions regarding the development of nations?
 
 
 ## JAMOVI

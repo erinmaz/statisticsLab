@@ -1,4 +1,4 @@
-fig:2rstudiod
+fig:unnamed-chunk-9
 important-notes
 attributions
 cc-by-sa-4.0-license
@@ -30,7 +30,8 @@ installing-spss
 notes-and-tips
 discrepancies-in-visuals
 hidden-toolbars
-adjusting-the-font-size
+opening-spss-and-the-spss-layout
+reviewing-variable-properties-and-the-variable-view-tab
 practice-problems
 jamovi
 lab-1-graphing-data
@@ -70,8 +71,8 @@ generalization-exercise
 writing-assignment
 excel-1
 spss-1
-opening-spss-and-the-spss-layout
-reviewing-variable-properties-and-the-variable-view-tab
+opening-spss-and-the-spss-layout-1
+reviewing-variable-properties-and-the-variable-view-tab-1
 opening-a-data-file-and-producing-different-types-of-graphs
 bar-graphs
 histograms
@@ -383,8 +384,3 @@ conduct-a-mixed-factorial-analysis-of-variance-anova
 calculate-simple-effects-2
 practice-problems-11
 jamovi-11
-fig:unnamed-chunk-2
-fig:unnamed-chunk-3
-fig:unnamed-chunk-4
-opening-spss-and-the-spss-layout-1
-reviewing-variable-properties-and-the-variable-view-tab-1

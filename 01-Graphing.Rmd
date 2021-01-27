@@ -782,15 +782,14 @@ knitr::include_graphics('img/1.4.24.png')
 
 
 
-### Practice Problems
-
+### Homework
 ___
 
+Create the following three graphs in a single SPSS output file (*.spv). Upload this file to Moodle and use the graphs to answer the questions in the homework "quiz" on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
-1. Create a histogram for life expectancy in the year 1800. Describe the distribution. How does it differ from the one we plotted for 2017?
-
-2. Create a scatterplot of life expectancy of each country in 1800 vs. that of 2018. What does this graph show you? What are your conclusions regarding the development of nations?
-
+1. Create a histogram for life expectancy in the year 1800.
+2. If you haven't already, create a histogram for life expectancy in the year 2017.
+3. Create a scatterplot of life expectancy of each country in 1800 vs. that of 2018. 
 
 ## JAMOVI
 

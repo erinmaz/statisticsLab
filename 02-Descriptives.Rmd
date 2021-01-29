@@ -326,7 +326,7 @@ In this lab, we will use SPSS to calculate a variety of descriptive statistics. 
 
 1. Calculate descriptive statistics
 2. Graph data using a histogram
-3. Editing graphs
+3. Edit graphs
 
 Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
 
@@ -353,7 +353,7 @@ A new window will ask you to specify for which variables you want descriptives s
 knitr::include_graphics('img/2.4.13.png')
 ```
 
-Now, click the <span style="color:blue">Statistics</span> button. This will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will choose <span style="color:blue">mean, median mode, range, standard deviation, and variance</span>. 
+Now, click the <span style="color:blue">Statistics</span> button. This will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will choose <span style="color:blue">mean, median, mode, range, standard deviation, and variance</span>. SPSS will not create a table with the inter-quartile range (IQR); however, we will select <span style="color:blue">quartiles</blue> which will allow us to calculate IQR ourselves (recall that IQR = Q3 - Q1).
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.14.png')
@@ -371,9 +371,9 @@ knitr::include_graphics('img/2.4.15.png')
 ---
 
 
-Now let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution to relate back to the descriptive statistics. [Here](https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/life_expectancy.sav) is a link to the life expectancy dataset we used for our graphing tutorial. It is named life_expectancy.sav. 
+Now let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the life_expectancy.sav you downloaded from Section 0.2.3 (the same file we used for our lab session on graphing last week). 
 
-Suppose we wanted to know about life expectancy (around the world) in 2018. This will include calculating descriptive statistics, as well as graphing a histogram to examine the distribution of our data. SPSS often has neat shortcuts to graph data within other menu options. For example, in the process of asking SPSS to produce a table of descriptive statistics, we can also add a histogram to the output without having to go to the Graphs menu. 
+Suppose we wanted to know about life expectancy (around the world) in 2018. This will include calculating descriptive statistics, as well as graphing a histogram to examine the distribution of our data. While the last section of the lab manual showed how to use the <span style="color:blue">Graphs</span> menu to accomplish this task, SPSS often has neat shortcuts to graph data within other menu options. In other words, there is sometimes more than one way to get SPSS to do what we want it to do. For example, in the process of asking SPSS to produce a table of descriptive statistics, we can also add a histogram to the output without having to go to the <span style="color:blue">Graphs</span> menu. 
 
 First, we go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Descriptive Statistics</span>, then <span style="color:blue">Frequencies</span>.
 
@@ -387,7 +387,7 @@ A window will appear asking us to indicate which variable to use. We will scroll
 knitr::include_graphics('img/2.4.17.png')
 ```
 
-As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">(range, standard deviation, variance)</span>. 
+As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">(range, quartiles, standard deviation, variance)</span>. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.18.png')
@@ -449,7 +449,7 @@ Notice that in the default tab, you can change the fill color of components of y
 knitr::include_graphics('img/2.4.26.png')
 ```
 
-Notice in this tab, we can change the minimum, maximum, and increments of our scale. Lets change the major increment to 5:
+Notice in this tab, we can change the minimum, maximum, and increments of our scale. Let's change the major increment to 5:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.27.png')
@@ -464,14 +464,19 @@ knitr::include_graphics('img/2.4.28.png')
 
 
 
-### Practice Problems
+### Homework
 
 ___
 
+1. Create a single SPSS output file (.spv) and upload it to Moodle. The file should contain the following:
 
-1. Using the life expectancy data set, produce a table of output showing the descriptive statistics (measures of central tendency and variability) for both years 1800 and 1934 (during the Great Depression). Note: We are looking for a single table that contains the descriptives for both years. 
+1a. Using the life expectancy data set, produce a table of output showing the descriptive statistics (measures of central tendency and variability - don't forget to include quartiles so you can calculate IQR) for both years 1800 and 1934 (during the Great Depression). Note: We are looking for a single table that contains the descriptives for both years. 
 
-2. Plot histograms of life expectancy for both years. How are these distributions different? Note: We are looking for two histograms, one for each year. (Hint: Make sure the axes and bins of both graphs are the same, so the histograms are comparable).
+1b. Plot histograms of life expectancy for both 1800 and 1934. How are these distributions different? Note: We are looking for two histograms, one for each year. (Hint: Make sure the axes and bins of both graphs are the same, so the histograms are comparable).
+
+2. Download the CCHS Annual 2017 2018 (SPSS sav file) from the "Team Project" section at the bottom of our lab Moodle page. 
+
+3. Use the information on your .spv file and the CCHS .sav file to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
 ## JAMOVI
 

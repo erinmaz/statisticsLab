@@ -385,3 +385,8 @@ calculate-simple-effects-2
 practice-problems-11
 jamovi-11
 homework
+homework-1
+fig:2rstudiod
+fig:unnamed-chunk-2
+fig:unnamed-chunk-3
+fig:unnamed-chunk-4

@@ -456,10 +456,22 @@ knitr::include_graphics('img/2.4.27.png')
 ```
 
 
-Click <span style="color:blue">Apply</span>. Then <span style="color:blue">Close</span>. Click the x to close the Chart Editor window. The SPSS output window will now contain your edited graph:
+Click <span style="color:blue">Apply</span>. 
 
+You may find that changing the major increment causes the bin size to change. To change the bin size, double click on one of the bars to bring the Properties window up. 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.28.png')
+```
+
+The default tab, <span style="color:blue">Binning</span>, will allow you to change the properties of the bins. To match the bin size in the lab manual, select <span style="color:blue">Custom</span> in the X Axis box, about halfway down the Properties window. Then select <span style="color:blue">Number of intervals</span>, input <span style="color:blue">24</span>, and hit <span style="color:blue">Apply</span>.
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.29.png')
+```
+
+Then <span style="color:blue">Close</span>. Click the x to close the Chart Editor window. The SPSS output window will now contain your edited graph:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.30.png')
 ```
 
 

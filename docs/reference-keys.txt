@@ -390,3 +390,7 @@ fig:2rstudiod
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
+axes
+bin-width
+editing-the-axes
+editing-the-bin-width

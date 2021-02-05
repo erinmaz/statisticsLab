@@ -461,7 +461,7 @@ Click <span style="color:blue">Apply</span>.
 
 #### Editing the bin width
 
-Another important aspect of a histogram's appearance is the bin width. To change the bin width, double click on one of the bars to bring the Properties window up. 
+Another important aspect of a histogram's appearance is the bin width. You can change the bin width in the Chart Editor. Double click on one of the bars to bring the Properties window up. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.28.png')

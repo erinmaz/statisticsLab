@@ -1,4 +1,4 @@
-# Lab 2: Descriptive Statistics
+# Lab 2: Descriptive Statistics (and more graphs)
 
 <script>
 $("#coverpic").hide();
@@ -327,6 +327,7 @@ In this lab, we will use SPSS to calculate a variety of descriptive statistics. 
 1. Calculate descriptive statistics
 2. Graph data using a histogram
 3. Edit graphs
+4. Create and interpret a boxplot
 
 Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
 
@@ -479,6 +480,33 @@ Then <span style="color:blue">Close</span>. Click the x to close the Chart Edito
 knitr::include_graphics('img/2.4.30.png')
 ```
 
+### Boxplots
+
+Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles.You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile. The two ends of the box mark the first (or lower) quartile and the third (or upper) quartile. The difference between the first and third quartile is known as the interquartile range (IQR). 
+
+Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
+
+Using the life_expectancy.sav data file, let's create a boxplot to visually inspect the distribution of the data for the variable: `1934 [v136]`. To create the boxplot, let's go to <span style="color:blue">Analyze</span> in the menu toolbar, then <span style="color:blue">Descriptives</span>, then <span style="color:blue">Explore</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.31.png')
+```
+
+If you click on <span style="color:blue">Plots</span>, you will notice that SPSS has, by default, settings that will provide both a Boxplot and a Stem-and-Leaf graph. You can deselect <span style="color:blue">Stem-and-Leaf</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.32.png')
+```
+
+Next, click <span style="color:blue">Continue</span> and <span style="color:blue">OK</span>.  
+ 
+SPSS will produce output containing a boxplot. What do you notice about the relative sizes of the second and third quartiles? Are the whiskers the same size? If not, how might you explain the difference?
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.33.png')
+```
+
+Notice the circles with numbers next to them in the boxplot. These circle represent outliers, and the numbers correspond to the case/participant/subject number that is being recorded. Sometimes, you will see asterisks with numbers next to them in the boxplot. These asterisks represent extreme outliers. You can imagine that the identification of these outliers gives you reason to go investigate your data more closely.
 
 ### Homework
 

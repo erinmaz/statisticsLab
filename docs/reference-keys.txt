@@ -394,3 +394,5 @@ axes
 bin-width
 editing-the-axes
 editing-the-bin-width
+lab-2-descriptive-statistics-and-more-graphs
+boxplots

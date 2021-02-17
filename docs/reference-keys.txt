@@ -408,3 +408,7 @@ spearmans-r-correlation-coefficient
 independent-t-test
 mann-whitney-u-test
 spss-12
+pearson-and-spearman-correlation
+independent-t-test-1
+mann-whitney-u-test-1
+homework-2

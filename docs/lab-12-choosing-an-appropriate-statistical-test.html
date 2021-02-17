@@ -449,7 +449,13 @@ mattcrump=1;
 <li class="chapter" data-level="12.2.3" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#independent-t-test"><i class="fa fa-check"></i><b>12.2.3</b> Independent <em>t</em>-test</a></li>
 <li class="chapter" data-level="12.2.4" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test"><i class="fa fa-check"></i><b>12.2.4</b> Mann-Whitney <em>U</em>-test</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#spss-12"><i class="fa fa-check"></i><b>12.3</b> SPSS</a></li>
+<li class="chapter" data-level="12.3" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#spss-12"><i class="fa fa-check"></i><b>12.3</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation"><i class="fa fa-check"></i><b>12.3.1</b> Pearson and Spearman Correlation</a></li>
+<li class="chapter" data-level="12.3.2" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#independent-t-test-1"><i class="fa fa-check"></i><b>12.3.2</b> Independent <em>t</em>-test</a></li>
+<li class="chapter" data-level="12.3.3" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test-1"><i class="fa fa-check"></i><b>12.3.3</b> Mann-Whitney <em>U</em>-test</a></li>
+<li class="chapter" data-level="12.3.4" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#homework-2"><i class="fa fa-check"></i><b>12.3.4</b> Homework</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -502,13 +508,48 @@ $("#coverpic").hide();
 </div>
 <div id="spss-12" class="section level2" number="12.3">
 <h2><span class="header-section-number">12.3</span> SPSS</h2>
-<p>Both Pearson’s and Spearman’s <em>r</em> can be accessed in SPSS via the <span style="color:blue">Analyze</span> menu. Select <span style="color:blue">Correlate</span>, and then <span style="color:blue">Bivariate…</span><br />
-<strong>FIGURE</strong></p>
-<p>The independent <em>t</em>-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue">Compare Means</span>, and then <span style="color:blue">Independent Samples T Test…</span>
-<strong>FIGURE</strong></p>
-<p>The Mann-Whitney <em>U</em>-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue"> Nonparametric Tests</span>, and then <span style="color:blue">Legacy Dialogs</span>, and then <span style="color:blue">2 Independent Samples …</span>
-<strong>FIGURE</strong></p>
+<div id="pearson-and-spearman-correlation" class="section level3" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> Pearson and Spearman Correlation</h3>
+<p>To demonstrate correlation, we will use the life_expectancy.sav file downloaded from section 0.2.3 of this lab manual.</p>
+<p>Both Pearson’s and Spearman’s <em>r</em> can be accessed in SPSS via the <span style="color:blue">Analyze</span> menu. Select <span style="color:blue">Correlate</span>, and then <span style="color:blue">Bivariate…</span></p>
+<p><img src="img/12.2.1.png" /><!-- --></p>
+<p>Select two variables from the list on the left (in this case, the life expectancy data from the year 1800 and the year 2018) and drag them to the box on the right, or use the arrow in the middle. Under <span style="color:blue">Correlation Cefficients</span>, <span style="color:blue">Pearson</span> will be checked on by default. Check <span style="color:blue">Spearman</span> as well to get both (see red circle in figure below).</p>
+<p><img src="img/12.2.2.png" /><!-- --></p>
+<p>Click <span style="color:blue">OK</span>. In your output window, you will see two output tables. The first displays the results of the Pearson correlations, and the second displays the results of the Spearman correlations. The tables show the correlation between 1800 and 2018, as well as the correlation between 2018 and 1800 - these work out to be the same, of course. The Pearson correlation coefficient is .436 and the Spearman correlation coefficient is .461 - make sure you can find those numbers on the tables below. Why are the correlation coefficients different for Pearson and Spearman?</p>
+<p><img src="img/12.2.3.png" /><!-- --></p>
+<p><img src="img/12.2.4.png" /><!-- --></p>
+</div>
+<div id="independent-t-test-1" class="section level3" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> Independent <em>t</em>-test</h3>
+<p>To demonstrate independent <em>t</em>-tests, we will use the SchroederEpley2015_Study4_data.sav file downloaded from section 0.2.3 of this lab manual.</p>
+<p>Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).</p>
+<p>To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness. These ratings were then averaged to create a single measure of the job candidate’s intellect, with higher scores indicating the recruiters rated the candidates as higher in intellect. The participants also rated their overall impression of the job candidate (a composite of two items measuring positive and negative impressions). Finally, the participants indicated how likely they would be to recommend hiring the job candidate (0 - not at all likely, 10 - extremely likely).</p>
+<p>So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, we can find out.</p>
+<p>Before we run the t-test, let’s introduce a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.</p>
+<p><img src="img/7.4.12.png" /><!-- --></p>
+<p>Press this button and see what happens to your data spreadsheet. Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our t-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.</p>
+<p>The independent <em>t</em>-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue">Compare Means</span>, and then <span style="color:blue">Independent Samples T Test…</span></p>
+<p><img src="img/12.2.5.png" /><!-- --></p>
+<p>The dependent variable is moved by dragging or with the arrow from the list of variables on the left to the <span style="color:blue">Test Variable(s)</span> box on the right. Move <code>meanintellect</code> to the <span style="color:blue">Test Variable(s)</span> box. The <span style="color:blue">Grouping Variable</span> defines the groups. Move <code>CONDITION</code> to the <span style="color:blue">Grouping Variable</span> box. Next, click <span style="color:blue">Define Groups…</span> Place <code>0</code> and <code>1</code> in the fields that ask for Values for Group 1 and Group 2 and click <span style="color:blue">Continue</span>. The dialog box should look like this:</p>
+<p><img src="img/12.2.6.png" /><!-- --></p>
+<p>Then click <span style="color:blue">OK</span>.</p>
+<p>You will get three tables in your output file. Focus on the second one for now. The <em>t</em>-value you are interested in can be found in the red circle below:</p>
+<p><img src="img/12.2.7.png" /><!-- --></p>
+</div>
+<div id="mann-whitney-u-test-1" class="section level3" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> Mann-Whitney <em>U</em>-test</h3>
+<p>We will use the same data and variables from the independent <em>t</em>-test example to try out the Mann-Whitney <em>U</em>-test.</p>
+<p>The Mann-Whitney <em>U</em>-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue"> Nonparametric Tests</span>, and then <span style="color:blue">Legacy Dialogs</span>, and then <span style="color:blue">2 Independent Samples …</span></p>
+<p><img src="img/12.2.8.png" /><!-- -->
+Like we did for the independent <em>t</em>-test, move <code>meanintellect</code> to the <span style="color:blue">Test Variable List</span> box and move <code>CONDITION</code> to the <span style="color:blue">Grouping Variable</span> box. Next, click <span style="color:blue">Define Groups…</span> Place <code>0</code> and <code>1</code> in the fields that ask for Values for Group 1 and Group 2 and click <span style="color:blue">Continue</span>. The dialog box should look like this:</p>
+<p><img src="img/12.2.9.png" /><!-- --></p>
+<p>Note that <span style="color:blue">Mann-Whitney U</span> is checked on by default. Click <span style="color:blue">OK</span>. This time you will get two tables in your output file. Focus on the second one. The <em>U</em> value is highlighted with a red circle in the figure below:</p>
+<p><img src="img/12.2.10.png" /><!-- --></p>
+</div>
+<div id="homework-2" class="section level3" number="12.3.4">
+<h3><span class="header-section-number">12.3.4</span> Homework</h3>
 
+</div>
 </div>
 </div>
             </section>

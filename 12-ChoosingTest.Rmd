@@ -1,0 +1,45 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab 12: Choosing an appropriate statistical test
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<script>
+$("#coverpic").hide();
+</script>
+
+## General Goals
+
+Considering the scale of measurement of your variables and the research question, select the appropriate statistical test from the following options: Pearson's *r* correlation coefficient, Spearman's *r* correlation coefficient, independent *t*-test, and Mann-Whitney *U*-test.
+
+## Summary of the tests
+
+### Pearson's *r* correlation coefficient
+
+Pearson's *r* tests for a linear relation between two variables. The scale of measurement of the variables must be interval or ratio. An example research question that could be addressed with Pearson's *r* is: What is the correlation between height (measured in metres) and weight (measured in kilograms)?
+
+### Spearman's *r* correlation coefficient
+
+Spearman's *r* tests for a linear relation between the ranks of two variables. The scale of measurement of the variables must be ordinal, interval or ratio. Spearman's *r* is a good choice when outliers are present. An example research question that could be addressed with Spearman's *r* is: What is the correlation between height category (very short, short, average, tall, very tall) and weight category (very low, low, average, high, very high)?
+
+### Independent *t*-test
+
+The independent *t*-test determines whether there is a difference between the mean of two groups. The groups must be independent (i.e., made up of different participants) and the dependent variable (the one being compared between the groups) must be measured on an interval or ratio scale. An example research question that could be addressed with an independent *t*-test is: Is there a difference in mean weight between short and tall individuals? 
+
+### Mann-Whitney *U*-test
+
+The Mann-Whitney *U*-test determines whether the distribution is different between two groups. The dependent variable (the one being compared between the groups) must be measured on an ordinal, interval, or ratio scale. In this class, we are going to apply the Mann-Whitney *U*-test to independent groups (i.e., the groups are made up of different participants). An example research question that could be addressed with a Mann-Whitney *U*-test is: Is there a difference in the distribution of weight categories (very low, low, average, high, very high) between short and tall individuals? 
+
+## SPSS
+Both Pearson's and Spearman's *r* can be accessed in SPSS via the <span style="color:blue">Analyze</span> menu. Select <span style="color:blue">Correlate</span>, and then <span style="color:blue">Bivariate...</span>  
+**FIGURE**
+
+The independent *t*-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue">Compare Means</span>, and then <span style="color:blue">Independent Samples T Test...</span>
+**FIGURE**
+
+The Mann-Whitney *U*-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue"> Nonparametric Tests</span>, and then <span style="color:blue">Legacy Dialogs</span>, and then <span style="color:blue">2 Independent Samples ...</span>
+**FIGURE**

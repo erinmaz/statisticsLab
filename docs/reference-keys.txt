@@ -396,3 +396,15 @@ editing-the-axes
 editing-the-bin-width
 lab-2-descriptive-statistics-and-more-graphs
 boxplots
+r-markdown-1
+including-plots
+lab-12-test-new-chapter
+lab-12-choosing-an-appropriate-statistical-test
+general-goals-4
+review-the-tests
+summary-of-the-tests
+pearsons-r-correlation-coefficient
+spearmans-r-correlation-coefficient
+independent-t-test
+mann-whitney-u-test
+spss-12

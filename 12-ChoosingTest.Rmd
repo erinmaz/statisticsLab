@@ -121,4 +121,18 @@ knitr::include_graphics('img/12.2.10.png')
 ```
 
 ### Homework
-Not available until the start of the lab sessions.
+A simplified version of the SchroederEpley2015_Study4_data.sav file, entitled Chap12Homework.sav has been uploaded to Moodle. Download Chap12Homework.sav and use it to address the following research questions. 
+
+Your task is to create and submit **one SPSS output file** (*.spv format) showing that you have run the appropriate statistical analyses for the four questions. The output file should include four analyses and show that you ran the correct analyses on the correct variables.
+
+Remember to check the <span style="color:blue">Measure</span> column in <span style="color:blue">Variable View</span>.
+
+**Research Questions:**
+
+Is the number of words in a candidate’s pitch related to the recruiter’s perception of the candidate’s intellect?
+
+Are recruiters’ hiring rankings of candidates related to their perception of candidates’ intellect?
+
+Is there a difference between recruiters’ perceptions of candidates’ intellect between the audio recording and written transcript conditions?
+
+Is there a difference between recruiters’ hiring rankings of candidates between the audio recording and written transcript conditions?

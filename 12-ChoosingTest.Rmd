@@ -61,6 +61,20 @@ knitr::include_graphics('img/12.2.3.png')
 knitr::include_graphics('img/12.2.4.png')
 ```
 
+#### Interpreting and reporting the results
+
+The first thing to note about the output of both Pearson and Spearman's correlation analysis is that the tables include redundant information. You can see from the first row and first column of the table that the Pearson's correlation between life expectancy in 1800 and 1800 is 1. This is a perfect correlation because you are correlating the variable with itself. You will see that the correlation is equal to 1 along the diagonal of the table as each variable is correlated with itself. You will also see that the first row, second column contains the same information as the second row, first column. This tells you that the correlation between life expectancy in 1800 and 2018 is the same as the correlation between life expectancy in 2018 and 1800. This is always true - the order the variables are input to SPSS never impacts the correlation. If you aren't sure why, go back and look at the equation for *r* we covered in class or in the textbook.  
+
+To determine the output of the correlation between life expectancy in 1800 and 2018 (i.e., the analysis of interest), look to the first row, second column. The correlation coefficient, *r*, is labelled "Pearson's correlation" and has a value of .436. It has two asterisks next to it, which you can see from the note at the bottom of the table means "Correlation is significant at the 0.01 level (2-tailed)." We will get more into what "2-tailed" means in class, but the important thing to note here is that your correlation is statistically significant. "Significant" is a special word in statistics that doesn't mean what it means in normal language. It does not mean important, or interesting, or anything like that. In statistics, "significant" means that you have rejected the null hypothesis. You can think of it like this: it means the data you analyzed "signify" something. 
+In addition to the two asterisks, you can also check whether your correlation is significant by looking at the number labelled "Sig. (2-tailed)." For the correlation between life expectancy in 1800 and 2018, the "Sig. (2-tailed)" row says "<.001." This is also called a *p*-value, which we talked about in class. By convention, when the *p*-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.   
+
+For both Pearson's and Spearman's *r*, you must report the *r*-value and the *p*-value. Both of these can be found in the tables. For example, for Pearson's *r*, you might write the following sentence in your Results section:
+The correlation between life expectancy in 1800 and life expectancy in 2018 was significant (*r* = .44, *p* < .05). 
+For Spearman's *r*, you might write the following sentence in your Results section: 
+The correlation between life expectancy in 1800 and life expectancy in 2018 was significant (*r* = .46, *p* < .05). 
+
+Note that for this class, we are going to round test statistics like *r* to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?
+
 ### Independent *t*-test
 
 To demonstrate independent *t*-tests, we will use the SchroederEpley2015_Study4_data.sav file downloaded from section 0.2.3 of this lab manual.
@@ -71,13 +85,13 @@ To conduct this study, the authors randomly assigned 39 professional recruiters 
 
 So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, we can find out.
 
-Before we run the t-test, let's introduce a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.
+Before we run the *t*-test, let's introduce a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.12.png')
 ```
 
-Press this button and see what happens to your data spreadsheet. Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our t-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.
+Press this button and see what happens to your data spreadsheet. Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our *t*-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.
 
 The independent *t*-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue">Compare Means</span>, and then <span style="color:blue">Independent Samples T Test...</span>
 
@@ -98,6 +112,16 @@ You will get three tables in your output file. Focus on the second one for now. 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/12.2.7.png')
 ```
+
+#### Interpreting and reporting the results
+
+There are two rows in the *t*-test output. We are going to focus on the second row, labelled "Equal variances not assumed" because it is always OK to use this row. Sometimes it is OK to use the top row and sometimes it isn't. We will get into the reasons why when we cover *t*-tests in more detail in class. 
+
+For *t*-tests, we must report the *t* value, degrees of freedom (df), and *p*-value. Degrees of freedom are closely linked to sample size for *t*-tests; we may discuss further in class if time allows. Like for correlation, the *p*-value is labelled "Sig. (2-tailed)." By convention, when the *p*-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.   
+
+For example, you might write the following sentence in your Results section:
+There was not a significant difference in mean intellect between the Audio and Transcript groups [*t*(36.22) = 0.51, *p* > 0.05].
+Note that for this class, we are going to round test statistics like *t* to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?
 
 ### Mann-Whitney *U*-test
 
@@ -120,7 +144,20 @@ Note that <span style="color:blue">Mann-Whitney U</span> is checked on by defaul
 knitr::include_graphics('img/12.2.10.png')
 ```
 
-### Homework
+#### Interpreting and reporting the results
+
+For Mann-Whitney *U*-tests, we must report the *U* value and *p*-value. The *p*-value is labelled as "Asymp. Sig. (2-tailed)." By convention, when the *p*-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.   
+
+For example, you might write the following sentence in your Results section:
+There was not a significant difference in mean intellect between the Audio and Transcript groups (*U* = 171.00, *p* > 0.05).
+Note that for this class, we are going to round test statistics like *U* to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?
+
+
+## Homework (Mar 9 and 10)
+
+To be added
+
+## Homework (Feb 23 and 24) YOU HAVE ALREADY COMPLETED THIS - DO NOT DO IT AGAIN
 A simplified version of the SchroederEpley2015_Study4_data.sav file, entitled Chap12Homework.sav has been uploaded to Moodle. Download Chap12Homework.sav and use it to address the following research questions. 
 
 Your task is to create and submit **one SPSS output file** (*.spv format) showing that you have run the appropriate statistical analyses for the four questions. The output file should include four analyses and show that you ran the correct analyses on the correct variables.
@@ -136,3 +173,4 @@ Are recruiters’ hiring rankings of candidates related to their perception of c
 Is there a difference between recruiters’ perceptions of candidates’ intellect between the audio recording and written transcript conditions?
 
 Is there a difference between recruiters’ hiring rankings of candidates between the audio recording and written transcript conditions?
+

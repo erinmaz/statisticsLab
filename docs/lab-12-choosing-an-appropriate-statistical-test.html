@@ -454,8 +454,9 @@ mattcrump=1;
 <li class="chapter" data-level="12.3.1" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation"><i class="fa fa-check"></i><b>12.3.1</b> Pearson and Spearman Correlation</a></li>
 <li class="chapter" data-level="12.3.2" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#independent-t-test-1"><i class="fa fa-check"></i><b>12.3.2</b> Independent <em>t</em>-test</a></li>
 <li class="chapter" data-level="12.3.3" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test-1"><i class="fa fa-check"></i><b>12.3.3</b> Mann-Whitney <em>U</em>-test</a></li>
-<li class="chapter" data-level="12.3.4" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#homework-2"><i class="fa fa-check"></i><b>12.3.4</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#homework-mar-9-and-10"><i class="fa fa-check"></i><b>12.4</b> Homework (Mar 9 and 10)</a></li>
+<li class="chapter" data-level="12.5" data-path="lab-12-choosing-an-appropriate-statistical-test.html"><a href="lab-12-choosing-an-appropriate-statistical-test.html#homework-feb-23-and-24-you-have-already-completed-this---do-not-do-it-again"><i class="fa fa-check"></i><b>12.5</b> Homework (Feb 23 and 24) YOU HAVE ALREADY COMPLETED THIS - DO NOT DO IT AGAIN</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -518,6 +519,17 @@ $("#coverpic").hide();
 <p>Click <span style="color:blue">OK</span>. In your output window, you will see two output tables. The first displays the results of the Pearson correlations, and the second displays the results of the Spearman correlations. The tables show the correlation between 1800 and 2018, as well as the correlation between 2018 and 1800 - these work out to be the same, of course. The Pearson correlation coefficient is .436 and the Spearman correlation coefficient is .461 - make sure you can find those numbers on the tables below. Why are the correlation coefficients different for Pearson and Spearman?</p>
 <p><img src="img/12.2.3.png" /><!-- --></p>
 <p><img src="img/12.2.4.png" /><!-- --></p>
+<div id="interpreting-and-reporting-the-results" class="section level4" number="12.3.1.1">
+<h4><span class="header-section-number">12.3.1.1</span> Interpreting and reporting the results</h4>
+<p>The first thing to note about the output of both Pearson and Spearman’s correlation analysis is that the tables include redundant information. You can see from the first row and first column of the table that the Pearson’s correlation between life expectancy in 1800 and 1800 is 1. This is a perfect correlation because you are correlating the variable with itself. You will see that the correlation is equal to 1 along the diagonal of the table as each variable is correlated with itself. You will also see that the first row, second column contains the same information as the second row, first column. This tells you that the correlation between life expectancy in 1800 and 2018 is the same as the correlation between life expectancy in 2018 and 1800. This is always true - the order the variables are input to SPSS never impacts the correlation. If you aren’t sure why, go back and look at the equation for <em>r</em> we covered in class or in the textbook.</p>
+<p>To determine the output of the correlation between life expectancy in 1800 and 2018 (i.e., the analysis of interest), look to the first row, second column. The correlation coefficient, <em>r</em>, is labelled “Pearson’s correlation” and has a value of .436. It has two asterisks next to it, which you can see from the note at the bottom of the table means “Correlation is significant at the 0.01 level (2-tailed).” We will get more into what “2-tailed” means in class, but the important thing to note here is that your correlation is statistically significant. “Significant” is a special word in statistics that doesn’t mean what it means in normal language. It does not mean important, or interesting, or anything like that. In statistics, “significant” means that you have rejected the null hypothesis. You can think of it like this: it means the data you analyzed “signify” something.
+In addition to the two asterisks, you can also check whether your correlation is significant by looking at the number labelled “Sig. (2-tailed).” For the correlation between life expectancy in 1800 and 2018, the “Sig. (2-tailed)” row says “&lt;.001.” This is also called a <em>p</em>-value, which we talked about in class. By convention, when the <em>p</em>-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.</p>
+<p>For both Pearson’s and Spearman’s <em>r</em>, you must report the <em>r</em>-value and the <em>p</em>-value. Both of these can be found in the tables. For example, for Pearson’s <em>r</em>, you might write the following sentence in your Results section:
+The correlation between life expectancy in 1800 and life expectancy in 2018 was significant (<em>r</em> = .44, <em>p</em> &lt; .05).
+For Spearman’s <em>r</em>, you might write the following sentence in your Results section:
+The correlation between life expectancy in 1800 and life expectancy in 2018 was significant (<em>r</em> = .46, <em>p</em> &lt; .05).</p>
+<p>Note that for this class, we are going to round test statistics like <em>r</em> to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?</p>
+</div>
 </div>
 <div id="independent-t-test-1" class="section level3" number="12.3.2">
 <h3><span class="header-section-number">12.3.2</span> Independent <em>t</em>-test</h3>
@@ -525,9 +537,9 @@ $("#coverpic").hide();
 <p>Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).</p>
 <p>To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness.</p>
 <p>So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, we can find out.</p>
-<p>Before we run the t-test, let’s introduce a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.</p>
+<p>Before we run the <em>t</em>-test, let’s introduce a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.</p>
 <p><img src="img/7.4.12.png" /><!-- --></p>
-<p>Press this button and see what happens to your data spreadsheet. Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our t-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.</p>
+<p>Press this button and see what happens to your data spreadsheet. Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our <em>t</em>-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.</p>
 <p>The independent <em>t</em>-test can be accessed via the <span style="color:blue">Analyze</span> menu as well. Select <span style="color:blue">Compare Means</span>, and then <span style="color:blue">Independent Samples T Test…</span></p>
 <p><img src="img/12.2.5.png" /><!-- --></p>
 <p>The dependent variable is moved by dragging or with the arrow from the list of variables on the left to the <span style="color:blue">Test Variable(s)</span> box on the right. Move <code>meanintellect</code> to the <span style="color:blue">Test Variable(s)</span> box. The <span style="color:blue">Grouping Variable</span> defines the groups. Move <code>CONDITION</code> to the <span style="color:blue">Grouping Variable</span> box. Next, click <span style="color:blue">Define Groups…</span> Place <code>0</code> and <code>1</code> in the fields that ask for Values for Group 1 and Group 2 and click <span style="color:blue">Continue</span>. The dialog box should look like this:</p>
@@ -535,6 +547,14 @@ $("#coverpic").hide();
 <p>Then click <span style="color:blue">OK</span>.</p>
 <p>You will get three tables in your output file. Focus on the second one for now. The <em>t</em>-value you are interested in can be found in the red circle below:</p>
 <p><img src="img/12.2.7.png" /><!-- --></p>
+<div id="interpreting-and-reporting-the-results-1" class="section level4" number="12.3.2.1">
+<h4><span class="header-section-number">12.3.2.1</span> Interpreting and reporting the results</h4>
+<p>There are two rows in the <em>t</em>-test output. We are going to focus on the second row, labelled “Equal variances not assumed” because it is always OK to use this row. Sometimes it is OK to use the top row and sometimes it isn’t. We will get into the reasons why when we cover <em>t</em>-tests in more detail in class.</p>
+<p>For <em>t</em>-tests, we must report the <em>t</em> value, degrees of freedom (df), and <em>p</em>-value. Degrees of freedom are closely linked to sample size for <em>t</em>-tests; we may discuss further in class if time allows. Like for correlation, the <em>p</em>-value is labelled “Sig. (2-tailed).” By convention, when the <em>p</em>-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.</p>
+<p>For example, you might write the following sentence in your Results section:
+There was not a significant difference in mean intellect between the Audio and Transcript groups [<em>t</em>(36.22) = 0.51, <em>p</em> &gt; 0.05].
+Note that for this class, we are going to round test statistics like <em>t</em> to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?</p>
+</div>
 </div>
 <div id="mann-whitney-u-test-1" class="section level3" number="12.3.3">
 <h3><span class="header-section-number">12.3.3</span> Mann-Whitney <em>U</em>-test</h3>
@@ -545,9 +565,21 @@ Like we did for the independent <em>t</em>-test, move <code>meanintellect</code>
 <p><img src="img/12.2.9.png" /><!-- --></p>
 <p>Note that <span style="color:blue">Mann-Whitney U</span> is checked on by default. Click <span style="color:blue">OK</span>. This time you will get two tables in your output file. Focus on the second one. The <em>U</em> value is highlighted with a red circle in the figure below:</p>
 <p><img src="img/12.2.10.png" /><!-- --></p>
+<div id="interpreting-and-reporting-the-results-2" class="section level4" number="12.3.3.1">
+<h4><span class="header-section-number">12.3.3.1</span> Interpreting and reporting the results</h4>
+<p>For Mann-Whitney <em>U</em>-tests, we must report the <em>U</em> value and <em>p</em>-value. The <em>p</em>-value is labelled as “Asymp. Sig. (2-tailed).” By convention, when the <em>p</em>-value is less than .05, we reject the null hypothesis. In this case, .05 is your alpha or cutoff value. You can set your alpha to whatever you like, but typically we use .05.</p>
+<p>For example, you might write the following sentence in your Results section:
+There was not a significant difference in mean intellect between the Audio and Transcript groups (<em>U</em> = 171.00, <em>p</em> &gt; 0.05).
+Note that for this class, we are going to round test statistics like <em>U</em> to two decimal places. Can you find these numbers in the tables above? Where is the .05 coming from?</p>
 </div>
-<div id="homework-2" class="section level3" number="12.3.4">
-<h3><span class="header-section-number">12.3.4</span> Homework</h3>
+</div>
+</div>
+<div id="homework-mar-9-and-10" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> Homework (Mar 9 and 10)</h2>
+<p>To be added</p>
+</div>
+<div id="homework-feb-23-and-24-you-have-already-completed-this---do-not-do-it-again" class="section level2" number="12.5">
+<h2><span class="header-section-number">12.5</span> Homework (Feb 23 and 24) YOU HAVE ALREADY COMPLETED THIS - DO NOT DO IT AGAIN</h2>
 <p>A simplified version of the SchroederEpley2015_Study4_data.sav file, entitled Chap12Homework.sav has been uploaded to Moodle. Download Chap12Homework.sav and use it to address the following research questions.</p>
 <p>Your task is to create and submit <strong>one SPSS output file</strong> (*.spv format) showing that you have run the appropriate statistical analyses for the four questions. The output file should include four analyses and show that you ran the correct analyses on the correct variables.</p>
 <p>Remember to check the <span style="color:blue">Measure</span> column in <span style="color:blue">Variable View</span>.</p>
@@ -557,7 +589,6 @@ Like we did for the independent <em>t</em>-test, move <code>meanintellect</code>
 <p>Is there a difference between recruiters’ perceptions of candidates’ intellect between the audio recording and written transcript conditions?</p>
 <p>Is there a difference between recruiters’ hiring rankings of candidates between the audio recording and written transcript conditions?</p>
 
-</div>
 </div>
 </div>
             </section>

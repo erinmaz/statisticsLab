@@ -418,3 +418,7 @@ interpreting-and-reporting-the-results-2
 homework-mar-9-and-10
 homework-feb-23-and-24-you-have-already-completed-this
 homework-feb-23-and-24-you-have-already-completed-this---do-not-do-it-again
+using-descriptive-statistics-to-give-context-to-inferential-statistics
+optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test
+optional-performing-a-one-sample-t-test
+lab-homework-6

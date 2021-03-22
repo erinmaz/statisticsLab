@@ -1,13 +1,5 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Lab 12: Choosing an appropriate statistical test
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 <script>
 $("#coverpic").hide();
 </script>

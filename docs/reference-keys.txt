@@ -422,3 +422,9 @@ using-descriptive-statistics-to-give-context-to-inferential-statistics
 optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test
 optional-performing-a-one-sample-t-test
 lab-homework-6
+lab-homework-7
+optional-exercises
+using-a-cut-point-to-define-groups-for-an-independent-t-test
+review-correlation
+example-answers-to-practice-problems
+optional-exercises-good-practice-and-review-for-the-take-home-final-exam

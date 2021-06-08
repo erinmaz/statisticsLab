@@ -451,3 +451,10 @@ experiment-background-7
 conduct-a-mixed-factorial-analysis-of-variance-anova-1
 calculate-simple-effects-3
 jamovi-12
+fig:unnamed-chunk-23
+opening-jamovi-and-reviewing-the-jamovi-layout
+opening-a-data-file-and-producing-different-types-of-graphs-1
+reviewing-variable-properties-and-the-settings-button
+bar-graphs-1
+histograms-1
+thinking-about-data---practice-questions

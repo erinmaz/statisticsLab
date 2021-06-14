@@ -912,13 +912,13 @@ Create the following two graphs in a single jamov file (*.omv). Upload this file
 
 Use the EngageNS data to answer the following questions and to create graphs:
 
-i) Respondents were asked to indicate their main form of transportation to get to their main job.  The variable name is WORK_TRANS.  Responses were given on the following response scale: 1 = walk, 2 = bicycle, 3 = personal car, 4 = public transport, 5 = other. 
+1. Respondents were asked to indicate their main form of transportation to get to their main job.  The variable name is WORK_TRANS.  Responses were given on the following response scale: 1 = walk, 2 = bicycle, 3 = personal car, 4 = public transport, 5 = other. 
 
 a. Create the most appropriate type of graph for this data. 
 
 b. Which form of transportation was used by the most respondents?  The least?
 
-ii) Respondents were asked to rate the overall accessibility of the health care services in the community.  Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
+2. Respondents were asked to rate the overall accessibility of the health care services in the community.  Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
 
 a. Create the most appropriate type of graph for this data. 
 

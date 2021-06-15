@@ -477,3 +477,17 @@ installing-add-on-modules-into-jamovi
 quitting-jamovi
 summary-1
 installing-jamovi
+optional-performing-a-one-sample-t-test-1
+performing-a-paired-samples-t-test-1
+graphing-your-results-1
+optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1
+using-descriptive-statistics-to-give-context-to-inferential-statistics-1
+lab-homework-6-1
+performing-an-independent-samples-t-test-1
+graphing-your-data-1
+optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1
+using-a-cut-point-to-define-groups-for-an-independent-t-test-1
+review-correlation-1
+lab-homework-7-1
+example-answers-to-practice-problems-1
+experiment-background-8

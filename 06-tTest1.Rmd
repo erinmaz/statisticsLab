@@ -666,7 +666,7 @@ These descriptive statistics are useful for contextualizing the inferential stat
 
 Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
 
-There was a significant difference between infants' mean proportion looking time toward the singer between the baseline (M = 0.52; SD = 0.18) and the test phase (M = 0.59; SD = 0.18). This difference was significant according to a paired samples *t*-test, *t*(31) = -2.42, *p* < .05. 
+There was a significant difference between infants' mean proportion looking time toward the singer between the baseline (*M* = 0.52; *SD* = 0.18) and the test phase (*M* = 0.59; *SD* = 0.18). This difference was significant according to a paired samples *t*-test, *t*(31) = -2.42, *p* < .05. 
 
 
 ### Lab Homework #6
@@ -682,7 +682,7 @@ ___
 
 ## JAMOVI
 
-In this lab, we will use JAMOVI to:
+In this lab, we will use jamovi to:
 
 1. Perform a one sample *t*-test
 2. Perform a paired samples *t*-test
@@ -706,13 +706,13 @@ Following this exposure period, the parents and their infants returned to the la
 ---
 
 
-First, let's open the relevant data file. The data file has been simplified and is available on the lab Moodle page under "T-Tests." Click on "Mehr et al. Simplified Data File" to download it, note the filename and where you've downloaded it to, and then open it in JAMOVI. Your data should look like this:
+First, let's open the relevant data file. The data file has been simplified and is available on the lab Moodle page under "T-Tests." Click on "Mehr et al. Simplified Data File" to download it, note the filename and where you've downloaded it to, and then open it in jamovi. Your data should look like this:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.11.png')
 ```
 
-We will use JAMOVI to determine whether the infants looked equally at each of the people in the side-by-side videos at baseline. Let's think about why this is important. The infants in this experiment watched silent video recordings of two women (Baseline). Later, each person in the videos sang a song, one familiar (their parents had sang the song to them many times), and one unfamiliar. Afterwards, the infants watched the silent video of the two singers again (test phase). The critical question was whether the infants would look more to the person who sang the familiar song compared to the person who sang the unfamiliar song.
+We will use jamovi to determine whether the infants looked equally at each of the people in the side-by-side videos at baseline. Let's think about why this is important. The infants in this experiment watched silent video recordings of two women (Baseline). Later, each person in the videos sang a song, one familiar (their parents had sang the song to them many times), and one unfamiliar. Afterwards, the infants watched the silent video of the two singers again (test phase). The critical question was whether the infants would look more to the person who sang the familiar song compared to the person who sang the unfamiliar song.
 
 If the measure of what infants "like" or "prefer" is based on how long they look at a stimulus (in this case, a person in a video), we need to know that at baseline (before either of the people were associated with a song), infants looked equally at each person. If one of the people in the video was more memorable or attractive to the infants, then they would have a preferential bias towards looking at one person over the other. This could mean that the results of the study may have nothing to do with the songs, but rather an inherent bias towards the appearance of one of the people. This is why it is important to ensure that the infants looked at the people equally to start with (at baseline). 
 
@@ -732,7 +732,7 @@ Next, make sure to change the value in the field labeled "Test Value" to the mea
 knitr::include_graphics('img/6.4.15.png')
 ```
 
-Now, click <span style="color:blue">OK</span>. JAMOVI will produce several output tables.
+Now, click <span style="color:blue">OK</span>. jamovi will produce several output tables.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.16.png')
@@ -755,7 +755,7 @@ During the baseline condition, the mean proportion looking time toward the singe
 
 In this example, we will be comparing data from two measurements taken from the same individuals. In the same data file as above, we have two variables named `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. These variables represent the proportion of time spent looking at the familiar song singer at baseline, and then again in the test phase (after the 1-2 week period in which infants have been familiarized with the song). Because each infant was measured once (baseline), and then re-measured again (test), we will use a paired samples *t*-test.
 
-**Important terminology note:** `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer` are represented as two variables in JAMOVI, but they refer to two levels of a single independent variable. You can think of the independent variable as timepoint with two levels: baseline and test.
+**Important terminology note:** `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer` are represented as two variables in jamovi, but they refer to two levels of a single independent variable. You can think of the independent variable as timepoint with two levels: baseline and test.
 
 In order to run the paired-samples *t*-test, go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">Paired-Samples T-test..</span>.
 
@@ -769,7 +769,7 @@ A window will appear with a list of all variables in a field on the left. We mus
 knitr::include_graphics('img/6.4.18.png')
 ```
 
-Click <span style="color:blue">OK</span>, and JAMOVI will produce several output tables. The tables are as follows:
+Click <span style="color:blue">OK</span>, and jamovi will produce several output tables. The tables are as follows:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.19.png')
@@ -839,7 +839,7 @@ From here, you can customize the appearance of the graph. One thing we will do i
 knitr::include_graphics('img/6.4.29.png')
 ```
 
-If you are satisfied with the chart, click OK and it will appear in an JAMOVI output window:
+If you are satisfied with the chart, click OK and it will appear in an jamovi output window:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.30.png')
@@ -852,7 +852,7 @@ knitr::include_graphics('img/6.4.30.png')
 
 This section is dedicated to demonstrating that the one-sample and paired-samples *t*-tests are almost the very same thing. In order to understand this, we must reframe how we think about the paired-samples *t*-test. We typically consider it a comparison between two samples in which observations have been repeated (like in a before-after scenario, for example). We can also think of the paired samples *t*-test as testing the difference scores between two conditions. If the difference between two conditions is 0, then there is no difference, or there is no effect of the independent variable. If the difference is non-zero, then we can say there is a difference. 
 
-Thus, the paired-samples *t*-test is exactly the same as the one-sample *t*-test if we consider it as a comparison of the mean difference score to 0. Let's demonstrate this using JAMOVI. 
+Thus, the paired-samples *t*-test is exactly the same as the one-sample *t*-test if we consider it as a comparison of the mean difference score to 0. Let's demonstrate this using jamovi. 
 
 We'll continue using the same data as above. Specifically, locate the variable named `Difference_in_Proportion_Looking`. This variable contains the difference score between the baseline and test conditions for each infant. We're going to treat this as our one sample (as in the one-sample *t*-test), and we'll be comparing it to a mean of 0. 
 
@@ -868,7 +868,7 @@ A window will appear. Move the variable of interest, `Difference_in_Proportion_L
 knitr::include_graphics('img/6.4.32.png')
 ```
 
-Then click <span style="color:blue">OK</span>. JAMOVI will generate several tables in the output window. They should look like this:
+Then click <span style="color:blue">OK</span>. jamovi will generate several tables in the output window. They should look like this:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.33.png')
@@ -876,13 +876,13 @@ knitr::include_graphics('img/6.4.33.png')
 
 You will see that the *t*-statistic and *p*-value are identical to the ones obtained when we conducted a paired-samples *t*-test. Therefore, a paired-samples *t*-test conducted on two samples is equivalent to a one-sample *t*-test conducted on the difference scores (calculated on the two samples) compared against 0. 
 
-Nota Bene: You will see that in the previous paired-samples *t*-test we obtained a *t*-statistic of -2.42, but here the *t*-statistic is positive. This difference comes from the fact that JAMOVI automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive *t*-statistic as well. In other words, the sign does not matter; it results from the order of the variables. 
+Nota Bene: You will see that in the previous paired-samples *t*-test we obtained a *t*-statistic of -2.42, but here the *t*-statistic is positive. This difference comes from the fact that jamovi automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive *t*-statistic as well. In other words, the sign does not matter; it results from the order of the variables. 
 
 ### Using descriptive statistics to give context to inferential statistics
 
 ---
 
-In Section 2.4.1 of the lab manual, you learned how to request descriptive statistics. If you return to the output generated by JAMOVI when we ran the paired-samples *t*-test, you should notice that the first table depicted in the output provides the mean, the sample size, the standard deviation, and the standard error of the mean for each measurement - Baseline_Proportion_Gaze_to_Singer and Test_Proportion_Gaze_to_Singer. 
+In Section 2.4.1 of the lab manual, you learned how to request descriptive statistics. If you return to the output generated by jamovi when we ran the paired-samples *t*-test, you should notice that the first table depicted in the output provides the mean, the sample size, the standard deviation, and the standard error of the mean for each measurement - Baseline_Proportion_Gaze_to_Singer and Test_Proportion_Gaze_to_Singer. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.34.png')
@@ -892,7 +892,7 @@ These descriptive statistics are useful for contextualizing the inferential stat
 
 Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
 
-There was a significant difference between infants' mean proportion looking time toward the singer between the baseline (M = 0.52; SD = 0.18) and the test phase (M = 0.59; SD = 0.18). This difference was significant according to a paired samples *t*-test, *t*(31) = -2.42, *p* < .05. 
+There was a significant difference between infants' mean proportion looking time toward the singer between the baseline (*M* = 0.52; *SD* = 0.18) and the test phase (*M* = 0.59; *SD* = 0.18). This difference was significant according to a paired samples *t*-test, *t*(31) = -2.42, *p* < .05. 
 
 
 ### Lab Homework #6

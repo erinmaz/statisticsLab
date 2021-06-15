@@ -805,9 +805,9 @@ In this lab, we will get you acquainted with the jamovi software layout and grap
 
 ---
 
-Your lab instructor will take you through the process of downloading, installing, and opening the jamovi program. You may double-click on its icon located on the desktop of your computer, or you may find it using the Start menu. Once the program loads, you will be prompted with a pop-up window that asks you which file you would like to open. For now, we will be examining the basic layout of SPSS without a data set, so you can click <span style="color:blue">Cancel</span>. 
+Your lab instructor will take you through the process of downloading, installing, and opening the jamovi program. You may double-click on its icon located on the desktop of your computer, or you may find it using the Start menu. Once the program loads, you will be prompted with a pop-up window that asks you which file you would like to open. For now, we will be examining the basic layout of jamovi without a data set, so you can click <span style="color:blue">Cancel</span>. 
 
-Once you do, the main SPSS spreadsheet should open. It will look like this, a basic spreadsheet:
+Once you do, the main jamovi spreadsheet should open. It will look like this, a basic spreadsheet:
 
 ```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.11.png')
@@ -824,9 +824,13 @@ knitr::include_graphics('img/1.4.12.png')
 ---
 
 
-Now that we know about the properties of the SPSS spreadsheet window, let's open a data file and learn how to make some sense of it by creating different types of graphs. Use the 'nyc_films.sav' file from the zip file you downloaded in section 0.2.3, which contains information about film permits (requests made by film companies to shoot TV shows and movies on location) filed in New York City.
+Now that we know about the properties of the jamovi spreadsheet window, let's open a data file and learn how to make some sense of it by creating different types of graphs. Open the EngageNS data. Remember that EngageNS surveyed Nova Scotians about various aspects of their quality of life.
+
+The data dictionary can be found here(provide link - NOT SURE IF THIS IS FROM THE WEBSITE OR IF WE MUST PROVIDE FROM SOMETHING LIKE ONEDRIVE). The dictionary lists all the variables that wer included in the ENgageNS survey and shows how they were measured.
 
 Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Switch over to Variable View for details of each variable. 
+
+Take a look at the rows and columns in each file. Each *column* represents a different *variable* that was measured in the EngageNS survey. Each *row* represents the responses of a single *survey respondent*.
 
 
 ### Reviewing variable properties and the Settings button
@@ -856,9 +860,9 @@ Here, you can edit the name of your variables, and specify their properties. Var
 ---
 
 
-Now, back to Data View. We will not be working with every single variable in this spreadsheet, but we'll select a few interesting ones with which to answer questions. Let's start with `PARSPORT`. Suppose we wanted to know which borough receives the most film permits (you can probably guess which one is most popular). Let's use SPSS to produce a graph to answer this question. With your data file open, go up to the top menu and choose <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>. You will see an entire list of possible graphs we can use to plot our data. 
+Now, back to Data View. We will not be working with every single variable in this spreadsheet, but we'll select a few interesting ones with which to answer questions. Let's start with `PARSPORT`. Suppose we wanted to know how many respondents in the EngageNS survey are members of or participants in sports or recreational organizations. Let's use jamovi to produce a graph to answer this question. With your data file open, go up to the top menu and choose <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>. You will see an entire list of possible graphs we can use to plot our data. 
 
-Let's think about the nature of our question: we would like to know how many permits were filed for each borough. Borough is simply a label or a name for a region, and we want to know the frequency of permits for each borough. This is a nominal scale variable and so, we will appropriately choose a BAR graph to plot it. Select <span style="color:blue">Bar...</span>
+Let's think about the nature of our question. We would like to know how many people in the data set indicated that hey participate in sports and/or recreational organizaiton. `PARSPORT` is the name of the variable in jamovi, and it is measured using a Yes/No reponse scale. This is a nominal scale variable and so we will appropriately choose a BAR graph to plot it. Select <span style="color:blue">Bar...</span>
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.14.png')
@@ -868,13 +872,15 @@ The next window will ask you to specify what kind of graph you would like. Selec
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.15.png')
 ```
-The following window will ask which variable you'd like to plot. Select `borough` from the left-hand list and use the arrow to move it into the field labeled "Category Axis". Then click <span style="color:blue">OK</span>. 
+The following window will ask which variable you'd like to plot. Select `PARSPORT` from the left-hand list and use the arrow to move it into the field labeled "Category Axis". Then click <span style="color:blue">OK</span>. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.16.png')
 ```
 
-SPSS will produce a new output window which will contain the bar graph you have generated. Notice which borough receives the most film permits. Note: your graph might be a different colour.
+SPSS will produce a new output window which will contain the bar graph you have generated. Notice how many respondents are involved in sports/recreational organizations and how many are not. Roughly how many people participate in sports/recreational organizations? How many do not?
+
+Your bar graph will have as many bars as there are categories in your nominal variable. For example, if you want ot know how many respondents were from each region of NS, create a bar graph for REGION. The number of regions from which the survey participants come is represented by the number of bars on your graph.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.17.png')
@@ -885,21 +891,23 @@ knitr::include_graphics('img/1.4.17.png')
 ---
 
 
-Now, let's use a different data set to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). In the previous example, boroughs were simply labels or names, so we used a nominal scale and therefore a bar graph. Here, we will deal with life expectancy (measured in years), an interval scale measure. Open life_expectancy.sav (from the zip file you downloaded from 0.2.3). Open this file and examine its rows and columns. Each column represents a year during which life expectancy was measured. Each row represents a different country. 
+Now, let's use a different data set to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). A second difference, and one that is more noticeable, is that, in histograms, the bars touch one another while there are gaps between the bars in bar graphs. This is a visual way to show that these types of graphs represent variables measure on different scales of measurement. Histograms are used to represent variables that are measured on continuous scales (e.g., interval or ratio scales). The bars in a histogram touch indicaing the continuous nature of the measurement scale. In the previous example, respondents indicated simply whether they were or were not participants in sports/recreational organizations. Their responses were either yes or no; therefore, the data is categorical and was measured on a nominal scale. Given that the data is categorical, the gaps between the bars in the bar graph we made earlier represent the non-continuous nature of the data.
 
-Let's first get an idea about life expectancy in general. We want to plot a histogram with life expectancy on the x-axis and frequency on the y-axis. Choose <span style="color:blue">Graphs</span> in the top menu, then <span style="color:blue">Legacy Dialogs</span>. From here, remember we want a histogram, not a bar graph, so let's select <span style="color:blue">Histogram...</span>. 
+Here, we will deal with people's self-reported mental heath. In the EngageNS survey, respondents were asked to rate their own mental health on a 5-point scale, ranging from 1 to 5 where 1 = *poor*, 2 = *fair*, 3 = *good*, 4 = *very good*, and 5 = *excellent*.
+
+Let's plot a histogram for this variable. We want to put our variable of interst - mental health - on the x-axis and frequency for each score on the y-axis.  Choose <span style="color:blue">Graphs</span> in the top menu, then <span style="color:blue">Legacy Dialogs</span>. From here, remember we want a histogram, not a bar graph, so let's select <span style="color:blue">Histogram...</span>. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.18.png')
 ```
 
-The window that appears contains every variable in your spreadsheet listed on the left-hand side. We can choose one variable at a time to plot. Let's scroll all the way down the list and choose `2017 [v219]`. This is the variable containing life expectancies for the year 2017. Using the arrow, move that variable into the field labeled "Variable:", then click <span style="color:blue">OK</span>.
+The window that appears contains every variable in your spreadsheet listed on the left-hand side. We can choose one variable at a time to plot. [Insert reminder about instructions for alphabetizing list or searching variable list in jamovi.] Let's scroll down the list until we find `MNTLHLTH`. This is the variable containing respondents' ratings of their mental health. Using the arrow, move that variable into the field labeled "Variable:", then click <span style="color:blue">OK</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.19.png')
 ```
 
-SPSS will produce an output window containing the distribution of life expectancy for the year 2017. Note: You may get different axis intervals/labels than what is shown here.
+jamovi will produce an output window containing the distribution of scores for respondents' self-reported mental health. Note: You may get different axis intervals/labels than what is shown here.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.20.png')
@@ -910,7 +918,7 @@ knitr::include_graphics('img/1.4.20.png')
 
 ---
 
-Create the following two graphs in a single jamov file (*.omv). Upload this file to Moodle and use the graphs to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
+Create the following two graphs in a single jamovi file (*.omv). Upload this file to Moodle and use the graphs to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
 Use the EngageNS data to answer the following questions and to create graphs:
 

@@ -24,6 +24,8 @@ Our general goals for this first lab are to get your feet wet, so to speak. We'l
 2. Talk a little bit about how the data is structured
 3. Make graphs of the data so we can look at it and make sense of it.
 
+We will use the EngageNS data to accomplish these goals.
+
 ### Important info
 
 1. Data for NYC film permits was obtained from the NYC open data website. The .csv file can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/Film_Permits.csv" download>Film_Permits.csv</a>

@@ -476,3 +476,4 @@ changing-data-from-one-level-to-another
 installing-add-on-modules-into-jamovi
 quitting-jamovi
 summary-1
+installing-jamovi

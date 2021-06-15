@@ -911,43 +911,53 @@ knitr::include_graphics('img/1.4.20.png')
 ---
 
 Create the following two graphs in a single jamov file (*.omv). Upload this file to Moodle and use the graphs to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
+
 Use the EngageNS data to answer the following questions and to create graphs:
-Respondents were asked to indicate their main form of transportation to get to their main job.  The variable name is WORK_TRANS.  Responses were given on the following response scale: 1 = walk, 2 = bicycle, 3 = personal car, 4 = public transport, 5 = other. 
+
+1. Respondents were asked to indicate their main form of transportation to get to their main job.  The variable name is WORK_TRANS.  Responses were given on the following response scale: 1 = walk, 2 = bicycle, 3 = personal car, 4 = public transport, 5 = other. 
+
 a. Create the most appropriate type of graph for this data. 
+
 b. Which form of transportation was used by the most respondents?  The least?
-Respondents were asked to rate the overall accessibility of the health care services in the community.  Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
+
+2. Respondents were asked to rate the overall accessibility of the health care services in the community.  Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
+
 a. Create the most appropriate type of graph for this data. 
+
 b. What do you learn by looking at the graph?  
+
 c. What would you suggest to government officials about access to health care based on this data?  
 
 
 ### Thinking about Data - Practice Questions
 
----  
+ 
+1. Describe what histograms are, how to interpret them, and what they are useful for. You should answer each of these questions:
 
-1.  Describe what histograms are, how to interpret them, and what they are useful for. You should answer each of these questions:
 The answers to each of these questions are worth .25 points each, for a total of 2 points.
-What do the bars on a histogram represent?
-How many bars can a histogram have?
-What do the heights of the bars tell you
-What is on the x-axis and y-axis of a histogram
-What does the tallest bar on a histogram tell you?
-What does the shortest bar on a histogram tell you?
-What are some uses for histograms, why would you want to look at a histogram of some numbers that you collected?
-Imagine you had two histograms, one was very wide and spread out while the other was very narrow with a very tall peak. Which histogram would you expect to contain more consistent numbers (numbers that are close to each other)? Explain why.
+
+- What do the bars on a histogram represent?
+- How many bars can a histogram have?
+- What do the heights of the bars tell you
+- What is on the x-axis and y-axis of a histogram?
+- What does the tallest bar on a histogram tell you?
+- What does the shortest bar on a histogram tell you?
+- What are some uses for histograms, or why would you want to look at a histogram of some numbers that you collected?
+- Imagine you had two histograms, one was very wide and spread out while the other was very narrow with a very tall peak. Which histogram would you expect to contain more consistent numbers (numbers that are close to each other)? Explain why.
 
 Rubric
 General grading.
+
 You will receive 0 points for missing answers (say, if you do not answer question c, then you will receive 0 out .25 points for that question)
+
 You must write in complete sentences. Point form sentences will be given 0 points.
+
 Completely incorrect answers will receive 0 points. For example, if you incorrectly describe what the x and y-axes refer to, then you will receive 0 points for that question.
+
 If your answer is generally correct but very difficult to understand and unclear, you may receive half points for the question.
- 
-2.  Create the appropriate graph for the HB_SUBUSE variable.  In this variable, respondents were asked “In the past week, I engaged in substance use (e.g., recreational drugs).”  Responses were measured on a 7-point scale where 1 = very strongly disagree to 7 = very strongly agree, with 4 = neutral.  What do you learn by looking at the graph? 
+
+2. Create the appropriate graph for the HB_SUBUSE variable.  In this variable, respondents were asked “In the past week, I engaged in substance use (e.g., recreational drugs).”  Responses were measured on a 7-point scale where 1 = very strongly disagree to 7 = very strongly agree, with 4 = neutral.  What do you learn by looking at the graph? 
 
 3. Create the appropriate graph for GAMBLING.  In this variable respondents were asked “In the past year, how often did you engage in gambling (e.g., video lottery; lottery tickets)?  Responses were measured on the following scale: 1 = never, 2 = once in the past year, 3 = at least once every 6 months, 4 = at least once every 3 months, 5 = at least once a month, 6 = at least once a week.  What do you learn by looking at the graph? 
 
 4. Use the data dictionary to find a variable you are interested in.  Create the appropriate graph.  What do you learn by looking at the graph?
-
-
-

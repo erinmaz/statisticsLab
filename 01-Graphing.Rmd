@@ -928,7 +928,7 @@ a. Create the most appropriate type of graph for this data.
 
 b. Which form of transportation was used by the most respondents?  The least?
 
-2. Respondents were asked to rate the overall accessibility of the health care services in the community.  Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
+2. Respondents were asked to rate the overall accessibility of the health care services in the community. The variable name is ACCESS_HLTH. Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.
 
 a. Create the most appropriate type of graph for this data. 
 

@@ -524,6 +524,94 @@ ___
 
 ## JAMOVI
 
-How to do it in JAMOVI
+<div class="marginnote">
+This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#spss-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+</div>
+
+In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will learn to:
+
+1. Calculate descriptive statistics
+2. Edit graphs
+3. Create and interpret a boxplot
+
+Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
+
+Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In Settings, I have also changed the name of this variable to `x` and changed the scale to continuous.):
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.11.png')
+```
+
+### Calculating Descriptive Statistics
+
+---
+
+From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. These commands should feel familiar if you completed the lab on creating graphs (bar graphs and histograms)>:
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.12.png')
+```
+
+As soon as you select the variable of interest, `x`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results panel. By default, jamovi will show you the sample size, number of missing case measurements, mean, median, standard deviation, minimum, and maximum. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.13.png')
+```
+
+Recall from the earlier instructions that we would also like to look at the mode, range, and variance – which are not included by default. To include these descriptives statistics, click the <span style="color:blue">Statistics</span> button. Clicking on this button will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will select those which were missing from the default settings: <span style="color:blue"> mode, range, and variance</span>. Another descriptive statistic of interest may be the interquartile range. Let’s select it, too. Click on <span style="color:blue"> IQR</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.14.png')
+```
+
+
+In the Results panel, you should see the additional descriptive statistics appear as you select them. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.15.png')
+```
+
+### Descriptive Statistics and Histograms
+
+---
+
+Now, let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the [EngageNS data set](To be determined: how to link). 
+
+Suppose we wanted to know about Nova Scotian’s sleep habits. We wonder how much sleep they get each night. This will include calculating descriptive statistics, as well as graphing a histogram to examine the distribution of our data. We will combine the statistical software skills learned earlier in this section with those we learned the last section of the lab manual. 
+Let’s consider the variable of interest. According to the data dictionary, `SLEEP` is the number of hours participants’ reported sleep per day, and it includes both night time and naps. As there are many variables in the data set, I suggest you use to the sliding bar at the bottom of the spreadsheet panel to move about 6/10 of the way to the far right. While `SLEEP` is highlighted, click on the <span style="color:blue">Settings</span> button. Consider including a variable description and ensure that the information jamvoi included for the variable attributes is correct based on your interpretation of this variable. On which scale of measurement is `SLEEP` measured? What type of data is recorded for `SLEEP`?
+After you have considered the variable attributes, click on <span style="color:blue">Descriptives</span> again, or click on the upward facing arrow to close the Settings panel. As you will recall, to get jamovi to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Select `SLEEP` and use the arrow to move it to the “Variable” window at the right. Remember: You may be able to find the variable of interest more quickly if you use the “Search” function by clicking on the magnifying glass and searching with the variable name.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.16.png')
+```
+
+The default settings may not give us all descriptive statistics in which we are interested. Let’s consider the scale of measurement. Which measure(s) of central tendency is(are) appropriate to consider based on this scale of measurement? 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.17.png')
+```
+
+As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">( standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.18.png')
+```
+
+As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel. Now, we can conveniently ask SPSS to insert a histogram. Let's click on the <span style="color:blue">Plots</span> button, and select <span style="color:blue">Histogram</span>:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.19.png')
+```
+
+Below the table of requested descriptive statistics, jamovi will produce a histogram showing the distribution of sleep (in hours). 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.21.png')
+```
+
+Some ideas to think about: What do the mean, median, and mode indicate about the shape of the distribution? Is it confirmed when we look at the histogram? How does the shape of this distribution compare to the symmetrical normal distribution which is superimposed over it? 
+
+
 
 

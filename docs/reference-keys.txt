@@ -491,3 +491,5 @@ review-correlation-1
 lab-homework-7-1
 example-answers-to-practice-problems-1
 experiment-background-8
+calculating-descriptive-statistics-1
+descriptive-statistics-and-histograms-1

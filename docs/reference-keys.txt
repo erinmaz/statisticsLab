@@ -493,3 +493,7 @@ example-answers-to-practice-problems-1
 experiment-background-8
 calculating-descriptive-statistics-1
 descriptive-statistics-and-histograms-1
+editing-graphs-1
+boxplots-1
+homework-3
+practice-questions

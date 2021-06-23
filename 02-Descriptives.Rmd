@@ -613,5 +613,70 @@ knitr::include_graphics('img/2.4.21.png')
 Some ideas to think about: What do the mean, median, and mode indicate about the shape of the distribution? Is it confirmed when we look at the histogram? How does the shape of this distribution compare to the symmetrical normal distribution which is superimposed over it? 
 
 
+### Editing graphs
+
+---
+It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in jamovi. (I might suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.)
+
+### Boxplots
+
+Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.
+
+Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
+
+Using the `SLEEP` data, let's create a boxplot to visually inspect the distribution of the data for the variable. To create the boxplot, let's go to <span style="color:blue">Analyze</span> in the top menu, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>. From there, we can click on <span style="color:blue">Plots</span and select <span style="color:blue">Box plot</span
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.31.png')
+```
+
+In the Results panel, jamovi will produce output containing a boxplot. What do you notice about the relative sizes of the second and third quartiles? Are the whiskers the same size? If not, how might you explain the difference?
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/2.4.33.png')
+```
+
+Notice the circles beyond the whiskers in the boxplot. These circle represent outliers. You can imagine that the identification of these outliers gives you reason to go investigate your data more closely.
+
+
+### Homework
+
+Some concepts can be measured at multiple scales. If the scale is considered nominal, we usually look at the mode for information about central tendency. If the scale is considered ordinal, we usually look at the median for information about central tendency. The measurement of central tendency used for data measured on interval or ratio scales may depend on whether the distribution is skewed. If the distribution is not skewed, we would usually consider the mean. If the distribution is skewed, we might look to the median to avoid the influence the outliers have on the mean. 
+
+Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. If we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. It is debatable whether we might consider Likert scales as ordinal or interval. You will need to take a stance on this matter, but your stance will impact the descriptive statistics that are more useful. If we consider the scale ordinal, we would probably report the median. If we consider the scale interval, we would most likely report the mean.
+
+If, however, we look at `PA_VIGOROUS`, we see that the variable ask participants to indicate their physical activity participation in the previous month. Participants indicate this participation using an open numeric entry. (WHAT DOES THIS NUMBER MEAN? IS IT MEANT TO REPORT THE NUMBER OF HOURS SPENT INVOLVED IN VIGOROUS EXERCISE?) This variable is measured on a ratio scale. Unless the data are skewed, we would likely report the mean. You can see that the answer to a research question about Nova Scotian’s exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
+
+1. Be sure to consider the scales of measurement as you answer the following questions. Calculate the appropriate descriptive statistics and write a paragraph to summarize:
+
+a. Internet access of Nova Scotians using any 2 of the following 3 variables: `INTERNET`, `NET_QUAL`,  and `COMPUTE_HR`.
+
+b. Education of Nova Scotians using any 2 of the following 4 variables `EDU_PREP`, `EDUCAT`, ` EDOPP_A1`, and `CRS_INT`. 
+
+c. Employment of Nova Scotians using the following 2 variables: ` WORKSCHED` and ` WORKHR`. 
+
+Rubric – 0.125 pt for correctly identifying scale of measurement for each variable
+0.125 for correctly measuring central tendency based on scale
+-0.25 for not writing in a sentence
+2. a. What have you learned about Nova Scotians by completing this activity? 
+
+b. Share one question about Nova Scotians on a related topic that you would like to explore further.
+
+
+### Practice Questions
+
+1. Were participants likely to have attended a local/municipal council meeting? How do you know?
+
+2. What is the most populated postal code prefix among participants? What measure of central tendency did you use to determine this, and why? Integrating skills (advanced question): Can you figure out what geographic area this corresponds to? 
+
+3. Can you calculate mean and median postal code prefix? Why or why not?
+
+4. Calculate the mean, median, and mode of ETHNIC1. Which is the most useful and why?
+
+5. Who do Nova Scotians trust more: people in their neighbourhood, people they go to work/school with, or strangers? What measure of central tendency did you use to determine this, and why?
+
+6. How would you have answered homework Question #2 differently had you been asked to look at `INCOME` and `NUMJOB`?
+
+
 
 

@@ -373,6 +373,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.7.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#experiment-background-2"><i class="fa fa-check"></i><b>6.7.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="6.7.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test-1"><i class="fa fa-check"></i><b>6.7.2</b> OPTIONAL: Performing a one-sample <em>t</em>-test</a></li>
 <li class="chapter" data-level="6.7.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>6.7.3</b> Performing a paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="6.7.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics-1"><i class="fa fa-check"></i><b>6.7.4</b> Using descriptive statistics to give context to inferential statistics</a></li>
+<li class="chapter" data-level="6.7.5" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#graphing-your-results-1"><i class="fa fa-check"></i><b>6.7.5</b> Graphing your results</a></li>
+<li class="chapter" data-level="6.7.6" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1"><i class="fa fa-check"></i><b>6.7.6</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="6.7.7" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#lab-homework-6-1"><i class="fa fa-check"></i><b>6.7.7</b> Lab Homework #6</a></li>
+<li class="chapter" data-level="6.7.8" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>6.7.8</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html"><i class="fa fa-check"></i><b>7</b> Lab 7: <em>t</em>-test (Independent Sample)</a>
@@ -1104,7 +1109,7 @@ During the baseline condition, the mean proportion looking time toward the singe
 <div id="jamovi-6" class="section level2" number="6.7">
 <h2><span class="header-section-number">6.7</span> JAMOVI</h2>
 <div class="marginnote">
-<p>This section is copied almost verbatim, with some editorial changes, from <a href="https://www.erinmazerolle.com/statisticsLab/lab-6-t-test-one-sample-paired-sample.html#spss-6">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 6.6, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
+<p>This section is copied almost verbatim, with some editorial changes, from <a href="https://www.erinmazerolle.com/statisticsLab/lab-6-t-test-one-sample-paired-sample.html#spss-6">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 6, Section 6.6, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
 </div>
 <p>In this lab, we will use jamovi to:</p>
 <ol style="list-style-type: decimal">
@@ -1153,14 +1158,62 @@ During the baseline condition, the mean proportion looking time toward the singe
 <p><strong>Important terminology note:</strong> <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code> are represented as two variables in jamovi, but they refer to two levels of a single independent variable. You can think of the independent variable as time point with two levels: baseline and test.</p>
 <p>In order to run the paired-samples <em>t</em>-test, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Paired Samples T-test</span>.</p>
 <p><img src="img/6.4.17.png" /><!-- --></p>
-<p>A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code>. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both and move them at the same time. Make sure that they appear next to each other in the right-hand field, as follows:</p>
+<p>A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code>. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both and move them at the same time using the Control key. Make sure that they appear next to each other in the right-hand field, as follows:</p>
 <p><img src="img/6.4.18.png" /><!-- --></p>
+<p>In Section 2.5.1 of the lab manual, you learned how to request descriptive statistics. If you return to the output generated by jamovi when we ran the one-samples <em>t</em>-test, you should notice that we went back to request this Descriptives table in the output to provide the mean, the sample size, the standard deviation for each measurement - Baseline_Proportion_Gaze_to_Singer and Test_Proportion_Gaze_to_Singer. Do note, however, that you do not have to make this request for the Descriptives table in a second analysis.</p>
 <p>Notice that rather than going back into the <span style="color:blue">Analyses</span> menu, jamovi offers the option to produce the Descriptives table for the two levels of the variable within the pop-up window for the <em>t</em>-tests. Click to select the <span style="color:blue">Descriptives</span>. You may also want to select the <span style="color:blue">Mean difference</span> if you plan to report it in your Results. Alternatively, you will report the means and standard deviations for the two levels of the variable.</p>
 <p><img src="img/6.4.19.png" /><!-- --></p>
 <p>In the Results panel, you should see two tables. The first table shows the results of the paired-samples <em>t</em>-test produces. It indicates a <em>t</em>-value (i.e., our observed <em>t</em>), degrees of freedom (N-1), and a <em>p</em>-value. You can interpret these values the same way as in the previous example. The second table is the Descriptives table. We might report our results in this way:</p>
-<p>During the baseline condition, the difference between infants’ mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples <em>t</em>-test, <em>t</em>(31) = -2.42, <em>p</em> &lt; .05.
-OR
+<p>During the baseline condition, the difference between infants’ mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples <em>t</em>-test, <em>t</em>(31) = -2.42, <em>p</em> &lt; .05.</p>
+</div>
+<div id="using-descriptive-statistics-to-give-context-to-inferential-statistics-1" class="section level3" number="6.7.4">
+<h3><span class="header-section-number">6.7.4</span> Using descriptive statistics to give context to inferential statistics</h3>
+<p>The descriptive statistics are useful for contextualizing the inferential statistics. In this case, we see that, for Baseline_Proportion_Gaze_to_Singer, the mean is 0.52 while for Test_Proportion_Gaze_to_Singer, the mean for 0.59. The standard deviation for both rounds to 0.18. In Section 6.7.3, we reported the mean difference of -0.07 was significant according to the paired-samples <em>t</em>-test. Now, we might add another sentence to explain the difference.</p>
+<p>Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
 According to a paired-samples <em>t</em>-test, there is a significant difference between infants’ mean proportion looking time toward the singer at baseline (<em>M</em> = 0.52, <em>SD</em> = 0.18) and the test phase (<em>M</em> = -.59, <em>SD</em> = 0.18), <em>t</em>(31) = -2.42, <em>p</em> = .02.</p>
+</div>
+<div id="graphing-your-results-1" class="section level3" number="6.7.5">
+<h3><span class="header-section-number">6.7.5</span> Graphing your results</h3>
+<hr />
+<p>In order to visualize the difference between means (for a paired-samples <em>t</em>-test, in this case), it is most appropriate to create a bar graph, or bar plot. Because our two conditions (baseline and test) make up a discrete (and not continuous) categorical variable (also called a nominal variable), a bar graph is most appropriate. Unfortunately, it is not so easy to produce a bar graph with jamovi. In this example, it might be easy enough, but graphing would be increasingly cumbersome with an increasing number of participants or cases and an increasing number of levels of the variable. Your lab instructor will guide you through a work-around solution.</p>
+<p><img src="img/6.4.20.png" /><!-- --></p>
+</div>
+<div id="optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1" class="section level3" number="6.7.6">
+<h3><span class="header-section-number">6.7.6</span> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</h3>
+<hr />
+<p>This section is dedicated to demonstrating that the one-sample and paired-samples <em>t</em>-tests are almost the very same thing. In order to understand this, we must reframe how we think about the paired-samples <em>t</em>-test. We typically consider it a comparison between two samples in which observations have been repeated (like in a before-after scenario, for example). We can also think of the paired-samples <em>t</em>-test as testing the difference scores between two conditions. If the difference between two conditions is 0, then there is no difference, or there is no effect of the independent variable. If the difference is non-zero, then we can say there is a difference.</p>
+<p>Thus, the paired-samples <em>t</em>-test is exactly the same as the one-sample <em>t</em>-test if we consider it as a comparison of the mean difference score to 0. Let’s demonstrate this using jamovi.</p>
+<p>We’ll continue using the same data as above. Specifically, locate the variable named <code>Difference_in_Proportion_Looking</code>. This variable contains the difference score between the baseline and test conditions for each infant. We’re going to treat this as our one-sample (as in the one-sample <em>t</em>-test), and we’ll be comparing it to a mean of 0.</p>
+<p>Let’s begin. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, and then <span style="color:blue">One Sample <em>t</em>-test…</span>.</p>
+<p><img src="img/6.4.31.png" /><!-- --></p>
+<p>A window will appear. Using highlighting and the arrow, move the variable of interest, <code>Difference_in_Proportion_Looking</code>, into the “Dependent Variables” field. Below that, make sure to enter 0 in the <span style="color:blue">Test value</span> field which is under the bolded section called <span style="color:blue">Hypothesis </span>.</p>
+<p><img src="img/6.4.32.png" /><!-- --></p>
+<p>The Results panel in jamovi should look like this:</p>
+<p><img src="img/6.4.33.png" /><!-- --></p>
+<p>You will see that the <em>t</em>-statistic and <em>p</em>-value are identical to the ones obtained when we conducted a paired-samples <em>t</em>-test. Therefore, a paired-samples <em>t</em>-test conducted on two samples is equivalent to a one-sample <em>t</em>-test conducted on the difference scores (calculated on the two samples) compared against 0.</p>
+<p>Nota Bene: You will see that in the previous paired-samples <em>t</em>-test we obtained a <em>t</em>-statistic of -2.42, but here the <em>t</em>-statistic is positive. This difference comes from the fact that jamovi automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive <em>t</em>-statistic as well. In other words, the sign does not matter; it results from the order of the variables.</p>
+</div>
+<div id="lab-homework-6-1" class="section level3" number="6.7.7">
+<h3><span class="header-section-number">6.7.7</span> Lab Homework #6</h3>
+<hr />
+<ol style="list-style-type: decimal">
+<li><p>On average, adults should get roughly 8 hours of sleep per night. Using the data collected in PSYC 291, do students get enough sleep during midterm week? That is, use the average number of hours of sleep students get during the week prior to the Time 2 data collection. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
+<li><p>Does the quality of students’ sleep change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)? Using the data collected in PSYC 291, calculate the composite for students’ perceptions of the quality of their sleep at both Time 1 and Time 2. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
+</ol>
+</div>
+<div id="practice-questions-1" class="section level3" number="6.7.8">
+<h3><span class="header-section-number">6.7.8</span> Practice Questions</h3>
+<p>Single Sample <em>t</em>-tests</p>
+<ol style="list-style-type: decimal">
+<li><p>Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women. Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
+<li><p>Using the data collected in PSYC 291, are students more or less anxious than “somewhat anxious” (i.e., 2 on the scale) during midterm week? Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
+</ol>
+<p>Repeated Measures <em>t</em>-tests</p>
+<ol style="list-style-type: decimal">
+<li><p>Does student stress level change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)? Using the data collected in PSYC 291, calculate the composite for students’ perceptions of stress at both Time 1 and Time 2. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
+<li><p>Do students engage is less physical self-care during midterms (i.e., Time 2) than they do early in the academic term (i.e., Time 1)? Using the data collected in PSYC 291, calculate the composite for the physical self-care subscale at both Time 1 and Time 2 of the Mindful Self-Care Measure. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
+<li><p>Does substance abuse change between Time 1 (early September) and Time 2 (mid-October)? Using the data collected in PSYC 291, conduct the appropriate <em>t</em>-tests for both alcohol consumption over the last week and cannabis consumption over the last week. (Note that this requires 2 separate <em>t</em>-tests – one for alcohol and one for cannabis). What can you conclude about each substance? Write your answers in APA format, including the 95% confidence intervals, and effect sizes (Cohen’s <em>d</em>). Using APA format, graph the data (note that you will need to make up one graph for each substance).</p></li>
+</ol>
 
 </div>
 </div>

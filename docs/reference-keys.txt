@@ -498,3 +498,11 @@ boxplots-1
 homework-3
 practice-questions
 practice-questions-1
+correlation-coefficient-for-bivariate-data-two-variables-1
+correlation-matrix-1
+correlation-and-scatterplots-1
+adding-the-scatterplot-module-to-jamovi
+getting-a-visual-of-the-correlation
+applying-a-filter
+removing-the-filter
+homework-4

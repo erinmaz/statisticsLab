@@ -518,6 +518,10 @@ ___
 
 ## JAMOVI
 
+<div class="marginnote">
+This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-3-correlation.html#spss-3), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+</div>
+
 
 In this lab, we will use jamovi to calculate the correlation coefficient. We will focus on the most commonly used Pearson's coefficient, *r*. We will learn how to:
 

@@ -764,7 +764,15 @@ a) SEX and SLEEP?
 b) COMP_TIME and SLEEP?
 c) MAINACT and EDUCAT?
 
-3. Run the correlation analysis for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. Report the correlation coefficient. Is it considered statistically significant? Write your results following the APA rules we have discussed thus far.
+3. Run the correlation analysis for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. Report the correlation coefficient. Is it considered statistically significant? Write your results following the APA rules discussed below.
+
+**Some formatting guidelines for writing results sections:**
+
+All of the numbers are rounded to two decimal places, but if your *p*-value was .0001, it would be okay to write *p* < .001. 
+
+Italicize symbols such as *p* and *t*.
+
+There are spaces on either side of =, >, or < symbols.
  
 4. Construct the scatterplot for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. What do you notice about the scatterplot? Does the slope increase or decrease?
 Do the dots closely follow the line of best fit?

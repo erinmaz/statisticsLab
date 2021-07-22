@@ -462,7 +462,6 @@ thinking-about-data---practice-questions
 =======
 <<<<<<< HEAD
 attributions-and-versions
-=======
 >>>>>>> Stashed changes
 getting-started-with-jamovi
 starting-jamovi-up
@@ -512,7 +511,4 @@ getting-a-visual-of-the-correlation
 applying-a-filter
 removing-the-filter
 homework-4
-<<<<<<< Updated upstream
-=======
 >>>>>>> b82a7ca53e6094ead25b5e70cec80691afc80d8e
->>>>>>> Stashed changes

@@ -36,7 +36,7 @@ knitr::include_graphics("LabmanualCover.png")
 
 This is the companion lab to our free introductory statistics for undergraduates in psychology textbook, [Answering questions with data](https://www.erinmazerolle.com/statistics/).
 
-This lab manual involves step by-step tutorials to solve data-analysis problems in software. We use open-data sets that are usually paired with a primary research article.
+This lab manual involves step by-step tutorials to solve data analysis problems in software. We use open-data sets that are usually paired with a primary research article.
 
 Each lab has a separate guide for solving the problems in R & R-studio, Excel, SPSS, and JAMOVI.
 
@@ -58,17 +58,12 @@ This was the version we used to adapt the lab manual. That project can be found 
 
 This version was our first edit of the lab manual for PSYC 292 at StFX (Winter 2021), and was completed by Erin Mazerolle and Sherry Neville-MacLean. The changes were mainly focused on the SPSS sections of Labs 1, 2, 3, 6, and 7, and in particular, the homework questions. We also added Lab 12.
 
-<<<<<<< HEAD
 **In progress: Version 2.0.** Last Compiled: `r Sys.Date()`
 
-<<<<<<< Updated upstream
-Section 0.6 of Lab 0 was adapted nearly verbatim, with some editorial changes, from Chapter 3, "Getting started with jamovi," from Navarro, D.J., & Foxcroft, D.R. (2019). Learning statistics with jamovi: A tutorial for psychology students and other beginners. (Version 0.70) while adhering to its license that states "The book is released under a creative commons CC BY-SA 4.0 licence. This means that this book can be reused, remixed, retained, revised and redistributed (including commercially) as long as appropriate credit is given to the authors. If you remix, or modify the original version of this open textbook, you must redistribute all versions of this open textbook under the same license - [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). DOI: 10.24384/hgc3-7p15
-=======
 We are currently working on updating the lab manual to include JAMOVI activities that will use in PSYC 292 at StFX.
-=======
+
 Section 0.6 of Lab 0 was adapted nearly verbatim, with some editorial changes, from Chapter 3, "Getting started with jamovi," from Navarro, D.J., & Foxcroft, D.R. (2019). Learning statistics with jamovi: A tutorial for psychology students and other beginners. (Version 0.70) while adhering to its license that states "The book is released under a creative commons CC BY-SA 4.0 licence. This means that this book can be reused, remixed, retained, revised and redistributed (including commercially) as long as appropriate credit is given to the authors. If you remix, or modify the original version of this open textbook, you must redistribute all versions of this open textbook under the same license - [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). DOI: 10.24384/hgc3-7p15
->>>>>>> b82a7ca53e6094ead25b5e70cec80691afc80d8e
->>>>>>> Stashed changes
+
 
 ### CC BY-SA 4.0 license
 

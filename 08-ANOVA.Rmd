@@ -462,17 +462,17 @@ How to do it in Excel
 In this lab, we will use SPSS to:
 
 1. Perform a One-Factor Analysis of Variance (ANOVA) and Graphing the data
-2. Planned comparisons: Use t-tests to locate differences
-3. Unplanned comparisons: Use a post-hoc test to locate differences
+2. Planned comparisons: Use orthogonal contrasts to locate differences
+3. Unplanned comparisons: Use a *post-hoc* test to locate differences
 
 ### Experiment Background
 
 ---
 
 
-As described at the beginning of this lab manual section, researchers in the James et al. (2015) study sought to explore whether completing a visuospatial task (e.g., Tetris) after a memory was formed would interfere with the storage of that memory, and thereby reduce the frequency of subsequent intrusions. They hypothesized that only participants who complete a visuo-spatial task after reactivation of the traumatic memories would experience a reduction in intrusive memories. In comparison, simply completing a visuo-spatial task (without reactivation) or reactivation (without a visuo-spatial task), would not reduce the occurrence intrusive memories.In other words, if you play Tetris shortly after you were remembering bad memories, you will experience intrusive memories less often in the future.
+As described at the beginning of this lab manual section, researchers in the James et al. (2015) study sought to explore whether completing a visuo-spatial task (e.g., Tetris) after a memory was formed would interfere with the storage of that memory, and thereby reduce the frequency of subsequent intrusions. They hypothesized that only participants who complete a visuo-spatial task after reactivation of the traumatic memories would experience a reduction in intrusive memories. In comparison, simply completing a visuo-spatial task (without reactivation) or reactivation (without a visuo-spatial task), would not reduce the occurrence intrusive memories.In other words, if you play Tetris shortly after you were remembering bad memories, you will experience intrusive memories less often in the future.
 
-The authors conducted an experiment ( N = 72, n = 18 per condition) wherein all participants viewed a series of video clips of graphic violence (e.g., a person getting hit by a van while using his phone as he crosses the road). Pver the next 24 hours, participants recorded their intrusive memories. All groups were predicted to have an equal occurrence of intrusive memories during this pre-manipulation period (called Day 0).
+The authors conducted an experiment (N = 72, n = 18 per condition) wherein all participants viewed a series of video clips of graphic violence (e.g., a person getting hit by a van while using his phone as he crosses the road). Over the next 24 hours, participants recorded their intrusive memories. All groups were predicted to have an equal occurrence of intrusive memories during this pre-manipulation period (called Day 0).
 
 Experimental Task: After this 24-hour period, the participants returned to the lab and completed the experimental task. The experimenters randomly assigned participants to ONE of the following conditions:
 
@@ -529,9 +529,9 @@ SPSS will produce an output window containing the results of the ANOVA (an ANOVA
 knitr::include_graphics('img/8.4.15.png')
 ```
 
-First, let's look at our ANOVA  table: We see our F-statistic listed is 3.795, with a p-value o .014. This tests the null hypothesis that there is no difference among the groups. Since p is less than our likely alpha level (.05), we can reject the null hypothesis and conclude that there IS a difference somewhere among these groups. We may say it more formally as follows:
+First, let's look at our ANOVA  table: We see our *F*-statistic listed is 3.795, with a *p*-value of .014. This tests the null hypothesis that there is no difference among the groups. Since *p* is less than our likely alpha level (.05), we can reject the null hypothesis and conclude that there IS a difference somewhere among these groups. We may say it more formally as follows:
 
-The effect of condition on mean intrusive memories over days 1-7 was significant, F(3, 68)=3.795, p<.05. 
+The effect of condition on mean intrusive memories over days 1-7 was significant, *F*(3, 68) = 3.80, *p* < .05. 
 
 To examine the data further, let's refer to the graph created by SPSS: we can see that the Reactivation + Tetris condition appears to have the smallest mean. As for the others, they are all greater than Reactivation + Tetris, but differ somewhat from each other as well. It is important to know that at this point, we do not know where the significant differences could be. For example, it could be that only Reactivation + Tetris is different from No-Task Control, or it could be that there are other groups different from one another as well. In order to locate where the differences are, we must conduct additional analyses called either planned or unplanned comparisons.
 
@@ -611,11 +611,11 @@ Click <span style="color:blue">Continue</span>, and then <span style="color:blue
 knitr::include_graphics('img/8.4.21.png')
 ```
 
-In this table, every possible group of 2 conditions is being compared. Notice that the table is redundant; it considers the comparison between no-task control and reactivation + tetris to be different from reactivation + tetris vs. no-task control. However, we know these are the same comparisons. So, we only need to look at half of the table, in essence. 
+In this table, every possible group of 2 conditions is being compared. Notice that the table is redundant; it considers the comparison between No-task Control and Reactivation + Tetris to be different from Reactivation + Tetris vs. No-task Control. However, we know these are the same comparisons. So, we only need to look at half of the table, in essence. 
 
-If you start with row 1, this row compares no-task control with reactivation + tetris. If we find the Sig. column, we see the corresponding p-value for this row is .017. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another. Where else is there a Sig. that is less than alpha (.05)?
+If you start with row 1, this row compares No-task Control with Reactivation + Tetris. If we find the Sig. column, we see the corresponding *p*-value for this row is .017. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another. Where else is there a Sig. that is less than alpha (.05)?
 
-Reactivation + Tetris compared with Reactivation only has a p-value of .034. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + tetris is different from no-task control, and reactivation + tetris is different from reactivation only.
+Reactivation + Tetris compared with Reactivation Only has a *p*-value of .034. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + Tetris is different from No-task Control, and Reactivation + Tetris is different from Reactivation Only.
 
 #### Homogeneous Subsets
 
@@ -630,12 +630,12 @@ This table actually gives you the same kind of information as the above table, b
 
 The way to read a homogeneous subsets table is as simple as follows: If the means of two groups ever appear in the same column together, they are not significantly different from one another. If the means of two groups NEVER appear in the same column together, then they ARE significantly different from one another. 
 
-Let's start with Reactivation + Tetris and Tetris Only. Look at the table to determine if the means of these conditions ever appear in the same column together. The answer should be yes. The Reactivation + tetris mean (1.89) and Tetris only mean (3.89) appear in column 1 together. Now, let's move on to Reactivation + Tetris as compared to Reactivation only. Do the means of these two groups ever appear in the same column together? No. The Reactivation + Tetris mean (1.89) only appears in column 1, and the reactivation only mean (4.83) only appears in column 2. This means they are different. 
+Let's start with Reactivation + Tetris and Tetris Only. Look at the table to determine if the means of these conditions ever appear in the same column together. The answer should be yes. The Reactivation + Tetris mean (1.89) and Tetris Only mean (3.89) appear in column 1 together. Now, let's move on to Reactivation + Tetris as compared to Reactivation Only. Do the means of these two groups ever appear in the same column together? No. The Reactivation + Tetris mean (1.89) only appears in column 1, and the Reactivation Only mean (4.83) only appears in column 2. This means they are different. 
 
 If you go through every possible comparison of two groups, you will find that the only differences are between:
 
-1. reactivation + tetris vs. reactivation only
-2. reactivation + tetris vs. no-task control
+1. Reactivation + Tetris vs. Reactivation Only
+2. Reactivation + Tetris vs. No-task Control
 
 These are the same pairwise differences we noted using the multiple comparisons table.
 
@@ -643,9 +643,13 @@ These are the same pairwise differences we noted using the multiple comparisons 
 
 ___
 
-Using this lab’s data set, think about the following question: What if participants’ intrusive memories were not actually affected by the manipulation (tetris and reactivation), but rather the group with the most intrusive memories just happened to react more strongly to the disturbing films? What if there were differences in “level of disturbance” (hint hint: post-film distress rating) among the 4 groups?
+Using this lab’s data set, think about the following questions: 
 
-1. Test this hypothesis using an alpha level of .05. Report your result in proper statistical reporting format. What do you conclude? 
+1. What if participants’ intrusive memories were not actually affected by the manipulation (Tetris and Reactivation), but rather the group with the most intrusive memories just happened to react more strongly to the disturbing films? Are there  differences in “level of disturbance” (hint hint: post-film distress rating) among the 4 groups? Test this hypothesis using an alpha level of .05. Report your result in proper statistical reporting format. What do you conclude? 
+
+You will use the Moodle submission link to upload your .spv file showing your have completed the analysis.
+
+You will use the Moodle quiz to show your interpretation of the SPSS results as well as your Results writing.
 
 2. Do the same type of analysis to determine whether the amount of attention paid to the film differed between the 4 groups. Report your result in proper statistical reporting format. What do you conclude?
 

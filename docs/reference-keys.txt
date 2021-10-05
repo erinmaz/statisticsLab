@@ -512,3 +512,7 @@ applying-a-filter
 removing-the-filter
 homework-4
 >>>>>>> b82a7ca53e6094ead25b5e70cec80691afc80d8e
+follow-up-tests
+planned-comparisons-and-ideas-to-keep-in-mind-when-making-orthogonal-contrasts
+coefficients-for-this-example
+requesting-the-planned-comparisons-in-spss

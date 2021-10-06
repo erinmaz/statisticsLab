@@ -538,9 +538,9 @@ To examine the data further, let's refer to the graph created by SPSS: we can se
 
 ### Follow-Up Tests
 
-In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.), or you will explore the differences without reason to look at something specific if you have a significant F-statistic in the omnibus ANOVA.  This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / *a priori* comparisons) or you will run a *post-hoc* test to explore the differences (you had no reason to look for any specific differences).  
+In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.) or you will explore the differences without reason to look at something specific (if you have a significant result in the omnibus ANOVA).  This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / *a priori* comparisons) or you will run a *post-hoc* test to explore the differences (you had no reason to look for any specific differences).  
 
-In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will NOT run conduct both planned comparisons and post-hoc tests in practice – EVER.  We are doing this for demonstration purposes only.
+In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will **NOT** run conduct both planned comparisons and post-hoc tests in practice – EVER.  We are doing this for demonstration purposes only.
 
 ### Planned Comparisons: T-tests
 
@@ -557,7 +557,7 @@ In our example, we could make up to 3 comparisons because we have 4 groups:
 4. Reactivation Only
 
 <div class="marginnote">
-This section is largely paraphrased from Discovering Statistics Using IBM Statistics, according to its “All rights reserved” copyright license. Thank you Field, A. (2018) for aiding our understanding of orthogonal contrasts. 
+This section is largely paraphrased from Discovering Statistics Using IBM Statistics, according to its “All rights reserved” copyright license. Thank you Field, A. (2018) for aiding in our understanding of orthogonal contrasts. 
 </div>
 
 According to Field (2018), your planned comparisons should also be guided by these rules:
@@ -592,6 +592,7 @@ knitr::include_graphics('img/8.6.3.19.png')
 ```
 
 Sum of Coefficients: -1 + 1 + 0 + 0 = 0
+
 For the second planned comparison, Reactivation + Tetris vs. Tetris Only, we are excluding two groups (No-Task Control and Reactivation Only). Each of those groups will be given a coefficient of zero in the contrast. We are left with two groups to compare. Each can be given a coefficient of 1, but one will need to be a positive 1 and the other will need to be a negative 1. It does not matter which group is given which sign.
 
 Consider the second contrast:
@@ -632,7 +633,7 @@ At this point, we have to click <span style="color:blue">Contrasts</span> to spe
 knitr::include_graphics('img/8.6.4.24.png')
 ```
 
-It is important to keep the coefficients for the contrast in the same order as the order in which the groups are included in the data file. In the data file, No-Task Control, Reactivation + Tetris, Tetris Only, and Reactivation Only are coded as 1, 2, 3, and 4, respectively. Fortunately, we considered our groups in the previously tables in the order they are in the data file. 
+**It is important to keep the coefficients for the contrast in the same order as the order in which the groups are included in the data file.** In the data file, No-Task Control, Reactivation + Tetris, Tetris Only, and Reactivation Only are coded as 1, 2, 3, and 4, respectively. Fortunately, we considered our groups in the previously tables in the order they are in the data file. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.6.4.25.png')
@@ -656,19 +657,19 @@ Now, to enter the coefficients for the second contrast (Groups 2 and 3; Reactiva
 knitr::include_graphics('img/8.6.4.28.png')
 ```
 
-Follow the steps explained above to include the coefficients for the contrast. You will know your second contrast is included when you see something like this – with the four coefficients reported under a section called `Contrast 2 of 2`.
+Follow the steps explained above to include the coefficients for the contrast. You will know your second contrast is included when you see something like this – with the four coefficients reported under a section called "Contrast 2 of 2."
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.6.4.29.png')
 ```
 
-Repeat the process of clicking <span style="color:blue">Next</span> and entering the coefficients for the third contrast (Groups 2 and 4; Reactivation + Tetris vs. Reactivation Only). When you are finished, you will see something like this – with the four coefficients reported under a section called `Contrast 3 of 3`.
+Repeat the process of clicking <span style="color:blue">Next</span> and entering the coefficients for the third contrast (Groups 2 and 4; Reactivation + Tetris vs. Reactivation Only). When you are finished, you will see something like this – with the four coefficients reported under a section called "Contrast 3 of 3."
 
  ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.6.4.30.png')
 ```
 
-Select `Estimate effect size for contrasts`.
+Select "Estimate effect size for contrasts."
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.6.4.31.png')
@@ -680,17 +681,17 @@ Click <span style="color:blue">Continue</span> and then <span style="color:blue"
 knitr::include_graphics('img/8.6.4.32.png')
 ```
 
-As we can see, even when we consider the violation to the assumption of homogeneity of variance, the *t*-test are significant. There is indeed a difference between Groups 1 and 2 (No-Task Control vs. Reactivation + Tetris), *t*(22.63) = -2.99, *p* < .05, *g* = -1.00; between Groups 2 and 3 (Reactivation + Tetris vs. Tetris Only), *t*(27.96) = -2.52, *p* < .05, *g* = -0.62; and between Groups 2 and 4 (Reactivation + Tetris vs. Reactivation Only), *t*(25.68) = -3.32, *p* < .05, *g* = -0.92.
+As we can see, while considering the violation to the assumption of homogeneity of variance, the *t*-tests are significant. We can report Hedge's correction when considering the effect size. There is indeed a difference between Groups 1 and 2 (No-Task Control vs. Reactivation + Tetris), *t*(22.63) = -2.99, *p* < .05, *g* = -1.00; between Groups 2 and 3 (Reactivation + Tetris vs. Tetris Only), *t*(27.96) = -2.52, *p* < .05, *g* = -0.62; and between Groups 2 and 4 (Reactivation + Tetris vs. Reactivation Only), *t*(25.68) = -3.32, *p* < .05, *g* = -0.92.
 
 
-### Unplanned Comparisons: Post-hoc tests
+### Unplanned Comparisons: *Post-hoc* tests
 
 ---
 
 
-Another way to find the differences between groups in a One-Factor ANOVA is to conduct something called a post-hoc test. This test is referred to as "unplanned" because you only conduct one when you have a significant overall ANOVA. The post-hoc test is neat because it is conveniently summoned during the process of conducting an ANOVA, and presents its results in a compact table. 
+Another way to find the differences between groups in a one-way, or one-factor, ANOVA is to conduct something called a *post-hoc* test. This test is referred to as "unplanned" because you only conduct one when you have a significant overall ANOVA. The *post-hoc test* is neat because it is conveniently summoned during the process of conducting an ANOVA, and its results are presented in a compact table. 
 
-Let's use a post-hoc test to look at this data. Although there are many types of post-hoc tests, we're going to conduct the commonly-used Tukey post-hoc test in this example. Let's begin.
+Let's use a *post-hoc* test to look at this data. Although there are many types of post-hoc tests, the commonly used is Tukey post-hoc test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let's begin.
 
 We are going to go through the same steps as before in order to conduct our ANOVA: Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">One-Way ANOVA...</span>
 
@@ -698,13 +699,13 @@ We are going to go through the same steps as before in order to conduct our ANOV
 knitr::include_graphics('img/8.4.12.png')
 ```
 
-Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field. Then, place `Condition` into the "Factor"" field. Now, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various post-hoc tests. We are going to choose <span style="color:blue">Tukey</span>:
+Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the Dependent List field. Then, place `Condition` into the "Factor" field. Next, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various *post-hoc* tests. We are going to choose <span style="color:blue">Games-Howell</span>:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/8.4.20.png')
+knitr::include_graphics('img/8.6.5.33.png')
 ```
 
-Click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>. SPSS will produce the ANOVA table once again, followed by two tables that refer to the post-hoc test. Let's look at the first table, named "Multiple Comparisons:"
+Click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>. SPSS will produce the ANOVA table once again, followed by a table that refer to the *post-hoc* test. Let's look at the table named "Multiple Comparisons."
 
 
 #### Multiple Comparisons
@@ -713,25 +714,25 @@ Click <span style="color:blue">Continue</span>, and then <span style="color:blue
 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/8.4.21.png')
+knitr::include_graphics('img/8.6.5.34.png')
 ```
 
 In this table, every possible group of 2 conditions is being compared. Notice that the table is redundant; it considers the comparison between No-task Control and Reactivation + Tetris to be different from Reactivation + Tetris vs. No-task Control. However, we know these are the same comparisons. So, we only need to look at half of the table, in essence. 
 
-If you start with row 1, this row compares No-task Control with Reactivation + Tetris. If we find the Sig. column, we see the corresponding *p*-value for this row is .017. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another. Where else is there a Sig. that is less than alpha (.05)?
+If you start with row 1, this row compares No-task Control with Reactivation + Tetris. If we find the Sig. column, we see the corresponding *p*-value for this row is .031. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another. Where else is there a Sig. that is less than alpha (.05)?
 
-Reactivation + Tetris compared with Reactivation Only has a *p*-value of .034. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + Tetris is different from No-task Control, and Reactivation + Tetris is different from Reactivation Only.
+Reactivation + Tetris compared with Reactivation Only has a *p*-value of .013. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + Tetris is different from No-task Control, and Reactivation + Tetris is different from Reactivation Only.
 
 #### Homogeneous Subsets
 
 ---
-
+Had Tukey's been conducted as the *post-hoc* test, SPSS would have issued another table in the output file. This table is called “Homogenous Subsets.” (Please recall: Tukey’s is commonly used when homogeneity of variances is assumed. In this example, this is **NOT** the case.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.4.22.png')
 ```
 
-This table actually gives you the same kind of information as the above table, but is more compact and easier to use. In this table you will see the conditions listed on the left, and a number of "subsets"--in this case there are 2 subsets (2 columns labeled 1 and 2, respectively). In these columns, the means of the conditions are listed (in this case, mean number of intrusive memories).
+This table actually gives you the same kind of information as the “Multiple Comparisons” table, but is more compact and easier to use. In this table you will see the conditions listed on the left, and a number of "subsets"--in this case there are 2 subsets (2 columns labeled 1 and 2, respectively). In these columns, the means of the conditions are listed (in this case, mean number of intrusive memories).
 
 The way to read a homogeneous subsets table is as simple as follows: If the means of two groups ever appear in the same column together, they are not significantly different from one another. If the means of two groups NEVER appear in the same column together, then they ARE significantly different from one another. 
 
@@ -750,11 +751,28 @@ ___
 
 Using this lab’s data set, think about the following questions: 
 
-1. What if participants’ intrusive memories were not actually affected by the manipulation (Tetris and Reactivation), but rather the group with the most intrusive memories just happened to react more strongly to the disturbing films? Are there  differences in “level of disturbance” (Hint Hint: post-film distress rating) among the 4 groups? Test this hypothesis using an alpha level of .05. Report your result in proper statistical reporting format. What do you conclude? 
-You will use the Moodle submission link to upload your .spv file showing your have completed the appropriate analysis.
+1. What if participants’ intrusive memories were not actually affected by the manipulation (Tetris and Reactivation), but rather the group with the most intrusive memories just happened to react more strongly to the disturbing films? Are there differences in “level of disturbance” (Hint Hint: post-film distress rating) among the 4 groups? Test this hypothesis using an alpha level of .05. Report your result in proper statistical reporting format. What do you conclude? 
+
+You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis.
+
 You will use the Moodle quiz to show your interpretation of the results in a written Results sentence (or in written Results sentences if need be).
 
 2. Do the same type of analysis to determine whether the amount of attention paid to the film differed between the 4 groups. Report your result in proper statistical reporting format. What do you conclude?
+
+3. Are there differences among the `Number of Provocative Task Intrusions` (also known as “Intrusion Provocation Task [IPT]:  Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups? Test this hypothesis using an alpha level of .05. If the analysis shows a significant result, run follow-up tests using both approaches: planned comparisons and a *post-hoc* test. 
+If you run the planned comparisons, imagine you want to compare the following chunks of variance:
+- Chunk 1 (Reactivation + Tetris) vs Chunk 2 (No-Task Control, Tetris Only, and Reactivation Only)
+- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control + Reactivation Only)
+- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control)
+
+If you run the unplanned comparisons, assume the assumption of heterogeneity of variance is upheld or met.
+
+Report your result in proper statistical reporting format. What do you conclude? 
+
+You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).
+
+You will use the Moodle quiz to show your interpretation of the results in written Results sentences and to answer questions based on what you have learned about follow-up tests.
+
 
 ## JAMOVI
 

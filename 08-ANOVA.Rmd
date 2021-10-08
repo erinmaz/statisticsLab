@@ -762,7 +762,7 @@ You will use the Moodle quiz to show your interpretation of the results in a wri
 3. Are there differences among the `Number of Provocative Task Intrusions` (also known as “Intrusion Provocation Task [IPT]:  Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups? Test this hypothesis using an alpha level of .05. If the analysis shows a significant result, run follow-up tests using both approaches: planned comparisons and a *post-hoc* test. 
 If you run the planned comparisons, imagine you want to compare the following chunks of variance:
 - Chunk 1 (Reactivation + Tetris) vs Chunk 2 (No-Task Control, Tetris Only, and Reactivation Only)
-- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control + Reactivation Only)
+- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control as well as Reactivation Only)
 - Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control)
 
 If you run the unplanned comparisons, assume the assumption of heterogeneity of variance is upheld or met.
@@ -771,7 +771,7 @@ Report your result in proper statistical reporting format. What do you conclude?
 
 You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).
 
-You will use the Moodle quiz to show your interpretation of the results in written Results sentences and to answer questions based on what you have learned about follow-up tests.
+You will use the Moodle quiz to show your interpretation of the results in one written Results sentence and to answer questions based on what you have learned about follow-up tests.
 
 
 ## JAMOVI

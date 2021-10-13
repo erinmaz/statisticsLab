@@ -516,3 +516,7 @@ follow-up-tests
 planned-comparisons-and-ideas-to-keep-in-mind-when-making-orthogonal-contrasts
 coefficients-for-this-example
 requesting-the-planned-comparisons-in-spss
+planned-comparisons-t-contrasts
+other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model
+planned-comparisons
+unplanned-comparisons

@@ -459,9 +459,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.6.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>8.6.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
 <li class="chapter" data-level="8.6.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>8.6.3</b> Follow-Up Tests</a></li>
-<li class="chapter" data-level="8.6.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#planned-comparisons-t-tests"><i class="fa fa-check"></i><b>8.6.4</b> Planned Comparisons: T-tests</a></li>
+<li class="chapter" data-level="8.6.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>8.6.4</b> Planned Comparisons: T-Contrasts</a></li>
 <li class="chapter" data-level="8.6.5" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.6.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
-<li class="chapter" data-level="8.6.6" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.6.6</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.6.6" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>8.6.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
+<li class="chapter" data-level="8.6.7" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.6.7</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="8.7" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a></li>
 </ul></li>
@@ -1229,8 +1230,8 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <p>In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.) or you will explore the differences without reason to look at something specific (if you have a significant result in the omnibus ANOVA). This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / <em>a priori</em> comparisons) or you will run a <em>post-hoc</em> test to explore the differences (you had no reason to look for any specific differences).</p>
 <p>In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will <strong>NOT</strong> run conduct both planned comparisons and post-hoc tests in practice – EVER. We are doing this for demonstration purposes only.</p>
 </div>
-<div id="planned-comparisons-t-tests" class="section level3" number="8.6.4">
-<h3><span class="header-section-number">8.6.4</span> Planned Comparisons: T-tests</h3>
+<div id="planned-comparisons-t-contrasts" class="section level3" number="8.6.4">
+<h3><span class="header-section-number">8.6.4</span> Planned Comparisons: T-Contrasts</h3>
 <hr />
 <div id="planned-comparisons-and-ideas-to-keep-in-mind-when-making-orthogonal-contrasts" class="section level4" number="8.6.4.1">
 <h4><span class="header-section-number">8.6.4.1</span> Planned Comparisons and Ideas to Keep in Mind when Making Orthogonal Contrasts</h4>
@@ -1305,10 +1306,10 @@ For the first planned comparison, No-Task Control vs. Reactivation + Tetris, we
 <h3><span class="header-section-number">8.6.5</span> Unplanned Comparisons: <em>Post-hoc</em> tests</h3>
 <hr />
 <p>Another way to find the differences between groups in a one-way, or one-factor, ANOVA is to conduct something called a <em>post-hoc</em> test. This test is referred to as “unplanned” because you only conduct one when you have a significant overall ANOVA. The <em>post-hoc test</em> is neat because it is conveniently summoned during the process of conducting an ANOVA, and its results are presented in a compact table.</p>
-<p>Let’s use a <em>post-hoc</em> test to look at this data. Although there are many types of post-hoc tests, the commonly used is Tukey post-hoc test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let’s begin.</p>
+<p>Let’s use a <em>post-hoc</em> test to look at this data. Although there are many types of <em>post-hoc</em> tests, the commonly used is Tukey <em>post-hoc</em> test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let’s begin.</p>
 <p>We are going to go through the same steps as before in order to conduct our ANOVA: Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">One-Way ANOVA…</span></p>
 <p><img src="img/8.4.12.png" /><!-- --></p>
-<p>Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the Dependent List field. Then, place <code>Condition</code> into the “Factor” field. Next, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various <em>post-hoc</em> tests. We are going to choose <span style="color:blue">Games-Howell</span>:</p>
+<p>Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent List” field. Then, place <code>Condition</code> into the “Factor” field. Next, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various <em>post-hoc</em> tests. We are going to choose <span style="color:blue">Games-Howell</span> (<strong>Question: Why are we selecting Games-Howell?</strong>):</p>
 <p><img src="img/8.6.5.33.png" /><!-- --></p>
 <p>Click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>. SPSS will produce the ANOVA table once again, followed by a table that refer to the <em>post-hoc</em> test. Let’s look at the table named “Multiple Comparisons.”</p>
 <div id="multiple-comparisons" class="section level4" number="8.6.5.1">
@@ -1335,8 +1336,63 @@ For the first planned comparison, No-Task Control vs. Reactivation + Tetris, we
 <p>These are the same pairwise differences we noted using the multiple comparisons table.</p>
 </div>
 </div>
-<div id="practice-problems-6" class="section level3" number="8.6.6">
-<h3><span class="header-section-number">8.6.6</span> Practice Problems</h3>
+<div id="other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model" class="section level3" number="8.6.6">
+<h3><span class="header-section-number">8.6.6</span> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</h3>
+<p>Oftentimes, there is more than one way to accomplish a similar task using SPSS. We have examined how to conduct an ANOVA using the <span style="color:blue">Analyze</span> → <span style="color:blue">Compare Means</span> → <span style="color:blue">One-Way ANOVA…</span> command. Using the same example, let’s look at another set of commands to request an ANOVA.</p>
+<p>Go to <span style="color:blue">Analyze</span>, then <span style="color:blue"> General Linear Model</span>, and then <span style="color:blue">Univariate…</span></p>
+<p><img src="img/8.6.6.34.png" /><!-- --></p>
+<p>You should be presented with a pop-up window similar to the following:</p>
+<p><img src="img/8.6.6.35.png" /><!-- --></p>
+<p>Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent List” field. Then, place <code>Condition</code> into the “Fixed Factor(s)” field.</p>
+<p><img src="img/8.6.6.36.png" /><!-- --></p>
+<p>Next, click <span style="color:blue">Options</span>.</p>
+<p><img src="img/8.6.6.37.png" /><!-- --></p>
+<p>Here, you could request Descriptive Statistics, Estimates of effect sizes, and Homogeneity Tests. For our purposes, let’s request a test of homogeneity of variance.</p>
+<p><img src="img/8.6.6.38.png" /><!-- --></p>
+<p>Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>.</p>
+<p>SPSS should generate three output tables in the output file. Let’s focus on the homogeneity test first. As we noted using the other set of commands, you should see that Levene’s test is significant.</p>
+<p><img src="img/8.6.6.39.png" /><!-- --></p>
+<p>Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands: <span style="color:blue">Analyze</span> → <span style="color:blue">Compare Means</span> → <span style="color:blue">One-Way ANOVA…</span> → <span style="color:blue">Options</span> → select the adjustment you want (Brown-Forsythe or Welch).</p>
+<p>Although we did not get to request the Brown-Forsythe or Welch adjusted tests, we can compare and contrast the regular overall ANOVA tests. While the Tests of Between-Subjects Effects table generated using these commands is slightly different from the ANOVA table generated using the other commands, you should notice the degrees of freedom, the <em>F</em>-statistic, and the <em>p</em>-value are the same.</p>
+<p><img src="img/8.6.6.40.png" /><!-- --></p>
+<div id="planned-comparisons" class="section level4" number="8.6.6.1">
+<h4><span class="header-section-number">8.6.6.1</span> Planned Comparisons</h4>
+<p>You can also request follow-up tests using the <span style="color:blue">Analyze</span> → <span style="color:blue">General Linear Model</span> → <span style="color:blue">Univariate</span> commands. Let’s begin by considering planned comparisons. After having selected the previously noted commands, select <span style="color:blue">Contrasts</span>.</p>
+<p><img src="img/8.6.6.41.png" /><!-- --></p>
+<p>A pop-up window will appear. Notice that the independent variable is listed in the “Factors” field. Also, notice that there is a drop-down menu you can access by clicking the black, downward-facing arrowhead next to “None” which is the default setting in the “Contrasts” field.</p>
+<p><img src="img/8.6.6.42.png" /><!-- --></p>
+<p>Please visit [IBM’s website] (<a href="https://www.ibm.com/docs/en/spss-statistics/27.0.0?topic=contrasts-contrast-types" class="uri">https://www.ibm.com/docs/en/spss-statistics/27.0.0?topic=contrasts-contrast-types</a>) for more information on the types of contrasts that are programmed into SPSS. In short, Deviation is used to compare the mean of each level to the mean of all combined levels. Simple is used to compare the mean of a given level to the mean of each other level. Difference is also known as Reverse Helmert, and it is used to compare the mean of each level except the first to the mean of the previous levels. Helmert is used to compare the mean of each level except the last to the mean of subsequent levels. Repeated is used to compare the mean of each level except the last to the mean of the subsequent level. Polynomial compares the linear effect, quadratic effect, cubic effect, and so on.</p>
+<p>The best contrast option for our example is Simple; however, our groups are not in the order that allows this comparison. We want to compare Group 1 (No-Task Control) to Group 2 (Reactivation + Tetris), Group 2 (Reactivation + Tetris) to Group 3 (Tetris Only), and Group 2 (Reactivation + Tetris) to Group 4 (Reactivation Only). One way to accomplish a change in order so that we could use Simple is to move the Reactivation + Tetris group to first position in the order.</p>
+<p>Just in case you have not yet encountered recoding or need a refresher, let’s discuss how it is accomplished. First, click <span style="color:blue">Transform</span>, and then click <span style="color:blue">Recode into Different Variable</span>. When the pop-up window appears, move the variable of interest to the “Numeric Variable → Output Variable” field, and enter/create a name for the new variable in the “Name” field under the title “Output Variable” on the far right of the pop-up window. Click <span style="color:blue">Change</span>, and the newly created variable name should be moved to the “Numeric Variable → Output Variable” field near the center of the pop-up window. Next, click <span style="color:blue">Old and New Values…</span>. For our purposes, we will indicate that the “Old Value” of 1 should become the “New Value” of 2, and click <span style="color:blue">Add</span>. We will also indicate that the “Old Value” of 2 should become the “New Value” of 1, and click <span style="color:blue">Add</span> again. To keep the codes for the Tetris Only and Reactivation Only groups, we also need to indicate that the “Old Value” of 3 should become (<em>or stay the same as</em>) the “New Value” of 3 and the “Old Value” of 4 should become (<em>or stay the same as</em>) the “New Value” of 4, respectively, and to click <span style="color:blue">Add</span> after entering each.</p>
+<p><img src="img/8.6.6.43.png" /><!-- --></p>
+<p>Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>. The newly created variable – with the levels changed in their order - will appear at the end of the data file. You may want to change the default setting of 2 under Decimals in the Variable View to 0.</p>
+<p>Now, we can return to the Contrasts, but move the new variable over. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">General Linear Model</span>, and then <span style="color:blue">Univariate</span> commands. Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent List” field. Then, place <code>ConditionRecoded</code> (or whatever you named your new variable) into the “Fixed Factor(s)” field.</p>
+<p><img src="img/8.6.6.44.png" /><!-- --></p>
+<p>Select <span style="color:blue">Contrasts</span>. Use the drop-down menu by “Contrast” to select Simple. Then, click <span style="color:blue">Change</span>.</p>
+<p><img src="img/8.6.6.45.png" /><!-- --></p>
+<p>The change to the Simple contrast will be noted in brackets behind the IV listed in the “Factors” field. Be sure to select “First” so that SPSS will compare the first mean to each other group.</p>
+<p><img src="img/8.6.6.46.png" /><!-- --></p>
+<p>Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>.</p>
+<p>SPSS will generate the tables we discussed previously plus a new table called “Contrasts Results (K Matrix).” You should notice that although the information is depicted in a different manner, the same <em>p</em>-values are being noted for these comparisons as were noted in Section 8.6.4.3 within the “Assumes equal variances” row of the “Contrast Tests” table generated using the <span style="color:blue">Compare Means</span> menu.</p>
+<p><img src="img/8.6.6.47.png" /><!-- --></p>
+<p>While the convenience of a programmed contrast may be appealing, you should also notice a drawback of accessing the contrasts via the <span style="color:blue">General Linear Model</span> menu: not only are we unable to access the adjustments for the <em>F</em>-test, but also we are unable to look at contrast with corrections for the violation to the assumption of homogeneity of variance. It is a good idea to check your data set before deciding which menu provides the best options for you.</p>
+</div>
+<div id="unplanned-comparisons" class="section level4" number="8.6.6.2">
+<h4><span class="header-section-number">8.6.6.2</span> Unplanned Comparisons</h4>
+<p>Now, let’s look at the options for follow-up tests that are performed when you do not have <em>a priori</em> hypotheses, but you do have a significant overall <em>F</em>-test. Again, you can click <span style="color:blue">Analyze</span>, then <span style="color:blue">General Linear Model</span>, and then <span style="color:blue">Univariate</span> commands. Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent List” field. Then, place <code>Condition</code> into the “Fixed Factor(s)” field. This time, click <span style="color:blue">Post Hoc…</span></p>
+<p><img src="img/8.6.6.48.png" /><!-- --></p>
+<p>Move <code>Condition</code> to the “Post Hoc Tests for” field by clicking the arrow between the two fields.</p>
+<p><img src="img/8.6.6.49.png" /><!-- --></p>
+<p>You should notice that options for adjustments which assume homogeneity of variance and options for adjustments which assume heterogeneity of variance are available. Since we noticed a violation to the assumption of homogeneity of variance and have seen the results of Games-Howell in a previous section, let’s select that option.</p>
+<p><img src="img/8.6.6.50.png" /><!-- --></p>
+<p>Click <span style="color:blue">Continue</span> and then <span style="color:blue">OK</span>.</p>
+<p>Notice that the “Multiple Comparisons” table presented in the output file looks the same as the one we observed using the <span style="color:blue">Compare Means</span> menu.</p>
+<p><img src="img/8.6.6.51.png" /><!-- --></p>
+<p>Again, although you could calculate the effect sizes, we were not able to request that SPSS generate them using this <span style="color:blue">General Linear Model</span> menu.</p>
+</div>
+</div>
+<div id="practice-problems-6" class="section level3" number="8.6.7">
+<h3><span class="header-section-number">8.6.7</span> Practice Problems</h3>
 <hr />
 <p>Using this lab’s data set, think about the following questions:</p>
 <ol style="list-style-type: decimal">
@@ -1349,15 +1405,23 @@ For the first planned comparison, No-Task Control vs. Reactivation + Tetris, we
 <li><p>Are there differences among the <code>Number of Provocative Task Intrusions</code> (also known as “Intrusion Provocation Task [IPT]: Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups? Test this hypothesis using an alpha level of .05. If the analysis shows a significant result, run follow-up tests using both approaches: planned comparisons and a <em>post-hoc</em> test.
 If you run the planned comparisons, imagine you want to compare the following chunks of variance:</p></li>
 </ol>
-<ul>
+<ol style="list-style-type: lower-alpha">
 <li>Chunk 1 (Reactivation + Tetris) vs Chunk 2 (No-Task Control, Tetris Only, and Reactivation Only)</li>
-<li>Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control + Reactivation Only)</li>
+<li>hunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control as well as Reactivation Only)</li>
 <li>Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control)</li>
-</ul>
+</ol>
 <p>If you run the unplanned comparisons, assume the assumption of heterogeneity of variance is upheld or met.</p>
-<p>Report your result in proper statistical reporting format. What do you conclude?</p>
+<p>Report your results in proper statistical reporting format. What do you conclude?</p>
 <p>You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).</p>
-<p>You will use the Moodle quiz to show your interpretation of the results in written Results sentences and to answer questions based on what you have learned about follow-up tests.</p>
+<p>You will use the Moodle quiz to show your interpretation of the results in a written Results sentence (or in written Results sentences if need be) and to answer questions based on what you have learned about follow-up tests.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Knowing that Levene’s test was non-significant for Question 3, conduct the ANOVA using the General Linear Model menu. Remember our question: Are there differences among the <code>Number of Provocative Task Intrusions</code> (also known as “Intrusion Provocation Task [IPT]: Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups?</li>
+</ol>
+<p>Request the planned comparisons assuming the same chunks of variance indicated in Question 3.</p>
+<p>Request the unplanned comparisons if the <em>F</em>-test is significant.</p>
+<p>Report your results in proper statistical reporting format. What do you conclude?</p>
+<p>You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).</p>
+<p>You will use the Moodle quiz to show your interpretation of the results in a written Results sentence (or in written Results sentences if need be) and to answer questions based on what you have learned about follow-up tests.</p>
 </div>
 </div>
 <div id="jamovi-8" class="section level2" number="8.7">

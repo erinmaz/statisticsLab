@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Lab 8 One-way ANOVA
 
 <script>
@@ -542,7 +547,7 @@ In practice, you know before conducting your experiment and analyses whether you
 
 In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will **NOT** run conduct both planned comparisons and post-hoc tests in practice – EVER.  We are doing this for demonstration purposes only.
 
-### Planned Comparisons: T-tests
+### Planned Comparisons: T-Contrasts
 
 ---
 
@@ -691,7 +696,7 @@ As we can see, while considering the violation to the assumption of homogeneity 
 
 Another way to find the differences between groups in a one-way, or one-factor, ANOVA is to conduct something called a *post-hoc* test. This test is referred to as "unplanned" because you only conduct one when you have a significant overall ANOVA. The *post-hoc test* is neat because it is conveniently summoned during the process of conducting an ANOVA, and its results are presented in a compact table. 
 
-Let's use a *post-hoc* test to look at this data. Although there are many types of post-hoc tests, the commonly used is Tukey post-hoc test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let's begin.
+Let's use a *post-hoc* test to look at this data. Although there are many types of *post-hoc* tests, the commonly used is Tukey *post-hoc* test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let's begin.
 
 We are going to go through the same steps as before in order to conduct our ANOVA: Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">One-Way ANOVA...</span>
 
@@ -699,7 +704,7 @@ We are going to go through the same steps as before in order to conduct our ANOV
 knitr::include_graphics('img/8.4.12.png')
 ```
 
-Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the Dependent List field. Then, place `Condition` into the "Factor" field. Next, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various *post-hoc* tests. We are going to choose <span style="color:blue">Games-Howell</span>:
+Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the “Dependent List” field. Then, place `Condition` into the "Factor" field. Next, click the button labeled <span style="color:blue">Post-hoc</span>. A window will appear with options for various *post-hoc* tests. We are going to choose <span style="color:blue">Games-Howell</span> (**Question: Why are we selecting Games-Howell?**):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/8.6.5.33.png')
@@ -745,6 +750,142 @@ If you go through every possible comparison of two groups, you will find that th
 
 These are the same pairwise differences we noted using the multiple comparisons table.
 
+
+### Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model
+
+Oftentimes, there is more than one way to accomplish a similar task using SPSS. We have examined how to conduct an ANOVA using the <span style="color:blue">Analyze</span> → <span style="color:blue">Compare Means</span> → <span style="color:blue">One-Way ANOVA...</span> command. Using the same example, let’s look at another set of commands to request an ANOVA.
+
+Go to <span style="color:blue">Analyze</span>, then <span style="color:blue"> General Linear Model</span>, and then <span style="color:blue">Univariate...</span>
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.34.png')
+```
+
+You should be presented with a pop-up window similar to the following:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.35.png')
+```
+
+Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the “Dependent List” field. Then, place `Condition` into the "Fixed Factor(s)" field.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.36.png')
+```
+
+Next, click <span style="color:blue">Options</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.37.png')
+```
+
+Here, you could request Descriptive Statistics, Estimates of effect sizes, and Homogeneity Tests. For our purposes, let’s request a test of homogeneity of variance.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.38.png')
+```
+
+Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>.
+
+SPSS should generate three output tables in the output file. Let’s focus on the homogeneity test first. As we noted using the other set of commands, you should see that Levene’s test is significant.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.39.png')
+```
+
+Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands: <span style="color:blue">Analyze</span> → <span style="color:blue">Compare Means</span> → <span style="color:blue">One-Way ANOVA...</span> → <span style="color:blue">Options</span> → select the adjustment you want (Brown-Forsythe or Welch).
+
+Although we did not get to request the Brown-Forsythe or Welch adjusted tests, we can compare and contrast the regular overall ANOVA tests. While the Tests of Between-Subjects Effects table generated using these commands is slightly different from the ANOVA table generated using the other commands, you should notice the degrees of freedom, the *F*-statistic, and the *p*-value are the same.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.40.png')
+```
+
+#### Planned Comparisons
+
+You can also request follow-up tests using the <span style="color:blue">Analyze</span> → <span style="color:blue">General Linear Model</span> → <span style="color:blue">Univariate</span> commands. Let’s begin by considering planned comparisons. After having selected the previously noted commands, select <span style="color:blue">Contrasts</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.41.png')
+```
+
+A pop-up window will appear. Notice that the independent variable is listed in the “Factors” field. Also, notice that there is a drop-down menu you can access by clicking the black, downward-facing arrowhead next to “None” which is the default setting in the “Contrasts” field. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.42.png')
+```
+
+Please visit [IBM’s website] (https://www.ibm.com/docs/en/spss-statistics/27.0.0?topic=contrasts-contrast-types) for more information on the types of contrasts that are programmed into SPSS. In short, Deviation is used to compare the mean of each level to the mean of all combined levels. Simple is used to compare the mean of a given level to the mean of each other level. Difference is also known as Reverse Helmert, and it is used to compare the mean of each level except the first to the mean of the previous levels. Helmert is used to compare the mean of each level except the last to the mean of subsequent levels. Repeated is used to compare the mean of each level except the last to the mean of the subsequent level. Polynomial compares the linear effect, quadratic effect, cubic effect, and so on. 
+
+The best contrast option for our example is Simple; however, our groups are not in the order that allows this comparison. We want to compare Group 1 (No-Task Control) to Group 2 (Reactivation + Tetris), Group 2 (Reactivation + Tetris) to Group 3 (Tetris Only), and Group 2 (Reactivation + Tetris) to Group 4 (Reactivation Only). One way to accomplish a change in order so that we could use Simple is to move the Reactivation + Tetris group to first position in the order. 
+
+Just in case you have not yet encountered recoding or need a refresher, let’s discuss how it is accomplished. First, click <span style="color:blue">Transform</span>, and then click <span style="color:blue">Recode into Different Variable</span>. When the pop-up window appears, move the variable of interest to the “Numeric Variable → Output Variable” field, and enter/create a name for the new variable in the “Name” field under the title “Output Variable” on the far right of the pop-up window. Click <span style="color:blue">Change</span>, and the newly created variable name should be moved to the “Numeric Variable → Output Variable” field near the center of the pop-up window. Next, click <span style="color:blue">Old and New Values…</span>. For our purposes, we will indicate that the “Old Value” of 1 should become the “New Value” of 2, and click <span style="color:blue">Add</span>. We will also indicate that the “Old Value” of 2 should become the “New Value” of 1, and click <span style="color:blue">Add</span> again. To keep the codes for the Tetris Only and Reactivation Only groups, we also need to indicate that the “Old Value” of 3 should become (*or stay the same as*) the “New Value” of 3 and the “Old Value” of 4 should become (*or stay the same as*) the “New Value” of 4, respectively, and to click <span style="color:blue">Add</span> after entering each. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.43.png')
+```
+
+Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>. The newly created variable – with the levels changed in their order - will appear at the end of the data file. You may want to change the default setting of 2 under Decimals in the Variable View to 0.
+
+Now, we can return to the Contrasts, but move the new variable over. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">General Linear Model</span>, and then <span style="color:blue">Univariate</span> commands. Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the “Dependent List” field. Then, place `ConditionRecoded` (or whatever you named your new variable) into the "Fixed Factor(s)" field. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.44.png')
+```
+
+Select <span style="color:blue">Contrasts</span>. Use the drop-down menu by “Contrast” to select Simple. Then, click <span style="color:blue">Change</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.45.png')
+```
+
+The change to the Simple contrast will be noted in brackets behind the IV listed in the “Factors” field. Be sure to select “First” so that SPSS will compare the first mean to each other group.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.46.png')
+```
+
+Click <span style="color:blue">Continue</span> and <span style="color:blue">Ok</span>.
+
+SPSS will generate the tables we discussed previously plus a new table called “Contrasts Results (K Matrix).” You should notice that although the information is depicted in a different manner, the same *p*-values are being noted for these comparisons as were noted in Section 8.6.4.3 within the “Assumes equal variances” row of the “Contrast Tests” table generated using the <span style="color:blue">Compare Means</span> menu.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.47.png')
+```
+
+While the convenience of a programmed contrast may be appealing, you should also notice a drawback of accessing the contrasts via the <span style="color:blue">General Linear Model</span> menu: not only are we unable to access the adjustments for the *F*-test, but also we are unable to look at contrast with corrections for the violation to the assumption of homogeneity of variance. It is a good idea to check your data set before deciding which menu provides the best options for you.
+
+#### Unplanned Comparisons
+
+Now, let’s look at the options for follow-up tests that are performed when you do not have *a priori* hypotheses, but you do have a significant overall *F*-test. Again, you can click <span style="color:blue">Analyze</span>, then <span style="color:blue">General Linear Model</span>, and then <span style="color:blue">Univariate</span> commands. Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the “Dependent List” field. Then, place `Condition` into the "Fixed Factor(s)" field. This time, click <span style="color:blue">Post Hoc…</span>
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.48.png')
+```
+
+Move `Condition` to the “Post Hoc Tests for” field by clicking the arrow between the two fields. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.49.png')
+```
+
+You should notice that options for adjustments which assume homogeneity of variance and options for adjustments which assume heterogeneity of variance are available. Since we noticed a violation to the assumption of homogeneity of variance and have seen the results of Games-Howell in a previous section, let’s select that option.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.50.png')
+```
+
+Click <span style="color:blue">Continue</span> and then <span style="color:blue">OK</span>.
+
+Notice that the “Multiple Comparisons” table presented in the output file looks the same as the one we observed using the <span style="color:blue">Compare Means</span> menu.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/8.6.6.51.png')
+```
+
+Again, although you could calculate the effect sizes, we were not able to request that SPSS generate them using this <span style="color:blue">General Linear Model</span> menu.
+
+
 ### Practice Problems
 
 ___
@@ -761,17 +902,29 @@ You will use the Moodle quiz to show your interpretation of the results in a wri
 
 3. Are there differences among the `Number of Provocative Task Intrusions` (also known as “Intrusion Provocation Task [IPT]:  Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups? Test this hypothesis using an alpha level of .05. If the analysis shows a significant result, run follow-up tests using both approaches: planned comparisons and a *post-hoc* test. 
 If you run the planned comparisons, imagine you want to compare the following chunks of variance:
-- Chunk 1 (Reactivation + Tetris) vs Chunk 2 (No-Task Control, Tetris Only, and Reactivation Only)
-- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control as well as Reactivation Only)
-- Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control)
+a) Chunk 1 (Reactivation + Tetris) vs Chunk 2 (No-Task Control, Tetris Only, and Reactivation Only)
+b) hunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control as well as Reactivation Only)
+c) Chunk 1 (Reactivation + Tetris) vs. Chunk 2 (No-Task Control)
 
 If you run the unplanned comparisons, assume the assumption of heterogeneity of variance is upheld or met.
 
-Report your result in proper statistical reporting format. What do you conclude? 
+Report your results in proper statistical reporting format. What do you conclude? 
 
 You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).
 
-You will use the Moodle quiz to show your interpretation of the results in one written Results sentence and to answer questions based on what you have learned about follow-up tests.
+You will use the Moodle quiz to show your interpretation of the results in a written Results sentence (or in written Results sentences if need be) and to answer questions based on what you have learned about follow-up tests.
+
+4. Knowing that Levene’s test was non-significant for Question 3, conduct the ANOVA using the General Linear Model menu. Remember our question: Are there differences among the `Number of Provocative Task Intrusions` (also known as “Intrusion Provocation Task [IPT]:  Number of image-based intrusive memories during 2-minute laboratory task on Day 7”) among the 4 groups? 
+
+Request the planned comparisons assuming the same chunks of variance indicated in Question 3.
+
+Request the unplanned comparisons if the *F*-test is significant.
+
+Report your results in proper statistical reporting format. What do you conclude?
+
+You will use the Moodle submission link to upload your .spv file showing you have completed the appropriate analysis (analyses).
+
+You will use the Moodle quiz to show your interpretation of the results in a written Results sentence (or in written Results sentences if need be) and to answer questions based on what you have learned about follow-up tests.
 
 
 ## JAMOVI

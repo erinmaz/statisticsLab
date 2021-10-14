@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Lab 8 One-way ANOVA | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Lab 8 One-way ANOVA | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="lab-7-t-test-independent-sample.html"/>
 <link rel="next" href="lab-9-repeated-measures-anova.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -71,6 +73,7 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -130,6 +133,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -771,11 +775,12 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>Alright, now we have an ANOVA table we can look at. However, it still looks ugly, at least to me. When you are working inside an R Markdown document, you have some more options to make it look nice. We can use the <code>kable</code> and <code>xtable</code> function together, like this.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="lab-8-one-way-anova.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
-<span id="cb14-2"><a href="lab-8-one-way-anova.html#cb14-2" aria-hidden="true" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, all_data)</span>
-<span id="cb14-3"><a href="lab-8-one-way-anova.html#cb14-3" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
-<span id="cb14-4"><a href="lab-8-one-way-anova.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="lab-8-one-way-anova.html#cb14-5" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="lab-8-one-way-anova.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span></code></pre></div>
+<pre><code>## Warning: package &#39;xtable&#39; was built under R version 4.1.1</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="lab-8-one-way-anova.html#cb16-1" aria-hidden="true" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, all_data)</span>
+<span id="cb16-2"><a href="lab-8-one-way-anova.html#cb16-2" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
+<span id="cb16-3"><a href="lab-8-one-way-anova.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="lab-8-one-way-anova.html#cb16-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -826,13 +831,13 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <p>We found a main effect of Intervention type, F(3, 68) = 3.79, MSE = 10.09, p = 0.014.</p>
 </blockquote>
 <p>Part 3 is saying what the pattern was in the means. Remember, that in the ANOVA, a significant effect refers to the global variation among the means. In other words, we can say that there are some differences between the means, but we can’t specifically say which pairs of means are different, or which groups of means are different from one another. How can we report this, where are the means? In fact, we already found them when we plotted the data earlier. So, we can copy paste that code, and print out the means, rather than the figure:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="lab-8-one-way-anova.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
-<span id="cb15-2"><a href="lab-8-one-way-anova.html#cb15-2" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a href="lab-8-one-way-anova.html#cb15-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-4"><a href="lab-8-one-way-anova.html#cb15-4" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
-<span id="cb15-5"><a href="lab-8-one-way-anova.html#cb15-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)))</span>
-<span id="cb15-6"><a href="lab-8-one-way-anova.html#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="lab-8-one-way-anova.html#cb15-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(descriptive_df)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="lab-8-one-way-anova.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
+<span id="cb17-2"><a href="lab-8-one-way-anova.html#cb17-2" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb17-3"><a href="lab-8-one-way-anova.html#cb17-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-4"><a href="lab-8-one-way-anova.html#cb17-4" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
+<span id="cb17-5"><a href="lab-8-one-way-anova.html#cb17-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)))</span>
+<span id="cb17-6"><a href="lab-8-one-way-anova.html#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="lab-8-one-way-anova.html#cb17-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(descriptive_df)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -903,18 +908,18 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <p>There was a control group that did not do anything special after watching the traumatic movie. The mean number of intrusive memories for the control group, gives some idea of the amount of intrusive memories we would expect to measure, when you do nothing to change that number.</p>
 <p>Comparing to the control group is a very sensible thing do to for each of the other groups. If one of the manipulations worked, it should show a different mean (something changed) than the control group.</p>
 <p>So, did the Reaction_only group have less intrusive memories over the control group? First we use the <code>filter</code> function from <code>dplyr</code> to select only the rows from the data frame that have the Control and Reactivation_only conditions. Then we run a t-test</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="lab-8-one-way-anova.html#cb16-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a href="lab-8-one-way-anova.html#cb16-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation_only&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb16-3"><a href="lab-8-one-way-anova.html#cb16-3" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb16-4"><a href="lab-8-one-way-anova.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb16-5"><a href="lab-8-one-way-anova.html#cb16-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb16-6"><a href="lab-8-one-way-anova.html#cb16-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-8-one-way-anova.html#cb18-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="lab-8-one-way-anova.html#cb18-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation_only&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb18-3"><a href="lab-8-one-way-anova.html#cb18-3" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb18-4"><a href="lab-8-one-way-anova.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb18-5"><a href="lab-8-one-way-anova.html#cb18-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb18-6"><a href="lab-8-one-way-anova.html#cb18-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = 0.219, df = 34, p-value = 0.828
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Control and group Reactivation_only is not equal to 0
 ## 95 percent confidence interval:
 ##  -2.299851  2.855406
 ## sample estimates:
@@ -927,18 +932,18 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <h4><span class="header-section-number">8.4.7.4</span> Control vs. Reactivation+Tetris</h4>
 <p>What we really want to know is if Reactivation+Tetris cause fewer intrusive memories…but compared to what? Well, if it did something, it should have a smaller mean than the Control group. So, let’s do that comparison:</p>
 <p>Note: we just change the one level name to the level we want <code>Reactivation+Tetris</code>.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-8-one-way-anova.html#cb18-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb18-2"><a href="lab-8-one-way-anova.html#cb18-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb18-3"><a href="lab-8-one-way-anova.html#cb18-3" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb18-4"><a href="lab-8-one-way-anova.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb18-5"><a href="lab-8-one-way-anova.html#cb18-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb18-6"><a href="lab-8-one-way-anova.html#cb18-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-8-one-way-anova.html#cb20-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="lab-8-one-way-anova.html#cb20-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb20-3"><a href="lab-8-one-way-anova.html#cb20-3" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb20-4"><a href="lab-8-one-way-anova.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb20-5"><a href="lab-8-one-way-anova.html#cb20-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb20-6"><a href="lab-8-one-way-anova.html#cb20-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = 2.9893, df = 34, p-value = 0.005167
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Control and group Reactivation+Tetris is not equal to 0
 ## 95 percent confidence interval:
 ##  1.031592 5.412852
 ## sample estimates:
@@ -949,18 +954,18 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <div id="control-vs.-tetris_only" class="section level4" number="8.4.7.5">
 <h4><span class="header-section-number">8.4.7.5</span> Control vs. Tetris_only</h4>
 <p>Now we can really start wondering what caused the difference. Was it just playing Tetris? It wasn’t just doing the reactivation, we already found out that didn’t do anything. Does just playing Tetris reduce the number of intrusive memories during the week? Let’s compare that to control:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-8-one-way-anova.html#cb20-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="lab-8-one-way-anova.html#cb20-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Tetris_only&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb20-3"><a href="lab-8-one-way-anova.html#cb20-3" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb20-4"><a href="lab-8-one-way-anova.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb20-5"><a href="lab-8-one-way-anova.html#cb20-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb20-6"><a href="lab-8-one-way-anova.html#cb20-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="lab-8-one-way-anova.html#cb22-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a href="lab-8-one-way-anova.html#cb22-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Tetris_only&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb22-3"><a href="lab-8-one-way-anova.html#cb22-3" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb22-4"><a href="lab-8-one-way-anova.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb22-5"><a href="lab-8-one-way-anova.html#cb22-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb22-6"><a href="lab-8-one-way-anova.html#cb22-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = 1.0129, df = 34, p-value = 0.3183
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Control and group Tetris_only is not equal to 0
 ## 95 percent confidence interval:
 ##  -1.230036  3.674480
 ## sample estimates:
@@ -971,18 +976,18 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <div id="tetris_only-vs.-reactivation-tetris" class="section level4" number="8.4.7.6">
 <h4><span class="header-section-number">8.4.7.6</span> Tetris_only vs. Reactivation + Tetris</h4>
 <p>Finally, we might ask if the Reactivation+Tetris group had fewer unwanted memories than the Tetris_only group. Did putting the two things together (reactivation AND Tetris) really do something special here, beyond just playing Tetris.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="lab-8-one-way-anova.html#cb22-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb22-2"><a href="lab-8-one-way-anova.html#cb22-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Tetris_only&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb22-3"><a href="lab-8-one-way-anova.html#cb22-3" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb22-4"><a href="lab-8-one-way-anova.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb22-5"><a href="lab-8-one-way-anova.html#cb22-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb22-6"><a href="lab-8-one-way-anova.html#cb22-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="lab-8-one-way-anova.html#cb24-1" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="lab-8-one-way-anova.html#cb24-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Tetris_only&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb24-3"><a href="lab-8-one-way-anova.html#cb24-3" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb24-4"><a href="lab-8-one-way-anova.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb24-5"><a href="lab-8-one-way-anova.html#cb24-5" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb24-6"><a href="lab-8-one-way-anova.html#cb24-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = -2.5147, df = 34, p-value = 0.01681
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Reactivation+Tetris and group Tetris_only is not equal to 0
 ## 95 percent confidence interval:
 ##  -3.6162855 -0.3837145
 ## sample estimates:
@@ -999,13 +1004,13 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <h3><span class="header-section-number">8.4.9</span> Food for thought</h3>
 <p>Think about what we did here. We almost blindly just downloaded the data and ran the same analysis as the authors did. Sure, we looked at the data first, and then did the analysis. But, did we really look? Did you notice anything about what you looked at? What did we not look closely at that might make you skeptical of the conclusions from the research…</p>
 <p>Here’s a hint. Sample-size. We know that is important. Let’s ask the question, was there an equal number of participants in each of the 4 conditions. We can use <code>dplyr</code> again to do this. We’ll add the <code>length</code> function, which counts the number of subjects in each condition:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="lab-8-one-way-anova.html#cb24-1" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb24-2"><a href="lab-8-one-way-anova.html#cb24-2" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
-<span id="cb24-3"><a href="lab-8-one-way-anova.html#cb24-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
-<span id="cb24-4"><a href="lab-8-one-way-anova.html#cb24-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)),</span>
-<span id="cb24-5"><a href="lab-8-one-way-anova.html#cb24-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">count =</span> <span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions))</span>
-<span id="cb24-6"><a href="lab-8-one-way-anova.html#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="lab-8-one-way-anova.html#cb24-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(descriptive_df)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="lab-8-one-way-anova.html#cb26-1" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="lab-8-one-way-anova.html#cb26-2" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a href="lab-8-one-way-anova.html#cb26-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
+<span id="cb26-4"><a href="lab-8-one-way-anova.html#cb26-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)),</span>
+<span id="cb26-5"><a href="lab-8-one-way-anova.html#cb26-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">count =</span> <span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions))</span>
+<span id="cb26-6"><a href="lab-8-one-way-anova.html#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="lab-8-one-way-anova.html#cb26-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(descriptive_df)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1046,34 +1051,34 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 <p>Let’s do one more thing for fun, and to see everything in action all in one place. Let’s consider the role of outliers. Looking at the first graph we can see that most people in all the groups had fewer than 10 intrusive memories (mean we assume) per week. It looks like 5 people had more than that, and they just happened to be in the other groups. Maybe Reactivation+Tetris made those people have way less intrusive memories (which is why no one is above 10), or maybe the researchers got a little bit unlucky, and accidentally didn’t get any “outliers” (people with extreme values on the measure) in that group.</p>
 <p>Let’s re-run the analysis, but remove anybody with a mean higher than 10. This will only remove 5 subjects, so we will still have a lot left. What happens?</p>
 <p>Before we find out, let me point out again the beauty of R. All we need to do is copy and paste our previous code. Then, just filter the data once to remove the outliers, then voila, we redo everything all in one go. It’s much more complicated and time consuming to do this in many other software programs. You are lucky to be learning R.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-8-one-way-anova.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get rid out of outliers</span></span>
-<span id="cb25-2"><a href="lab-8-one-way-anova.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="lab-8-one-way-anova.html#cb25-3" aria-hidden="true" tabindex="-1"></a>all_data  <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
-<span id="cb25-4"><a href="lab-8-one-way-anova.html#cb25-4" aria-hidden="true" tabindex="-1"></a>             <span class="fu">filter</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">&lt;</span> <span class="dv">10</span>)</span>
-<span id="cb25-5"><a href="lab-8-one-way-anova.html#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="lab-8-one-way-anova.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
-<span id="cb25-7"><a href="lab-8-one-way-anova.html#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-8"><a href="lab-8-one-way-anova.html#cb25-8" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb25-9"><a href="lab-8-one-way-anova.html#cb25-9" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-10"><a href="lab-8-one-way-anova.html#cb25-10" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
-<span id="cb25-11"><a href="lab-8-one-way-anova.html#cb25-11" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)))</span>
-<span id="cb25-12"><a href="lab-8-one-way-anova.html#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-13"><a href="lab-8-one-way-anova.html#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
-<span id="cb25-14"><a href="lab-8-one-way-anova.html#cb25-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-15"><a href="lab-8-one-way-anova.html#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_df, <span class="fu">aes</span>(<span class="at">x=</span>Condition, <span class="at">y=</span>means))<span class="sc">+</span> </span>
-<span id="cb25-16"><a href="lab-8-one-way-anova.html#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>Condition))<span class="sc">+</span> <span class="co"># add means</span></span>
-<span id="cb25-17"><a href="lab-8-one-way-anova.html#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               <span class="co"># add error bars</span></span>
-<span id="cb25-18"><a href="lab-8-one-way-anova.html#cb25-18" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb25-19"><a href="lab-8-one-way-anova.html#cb25-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>Condition, <span class="at">y=</span>Days_One_to_Seven_Number_of_Intrusions), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb25-20"><a href="lab-8-one-way-anova.html#cb25-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb25-21"><a href="lab-8-one-way-anova.html#cb25-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Intrusive Memories (Mean for Week)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-8-one-way-anova.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get rid out of outliers</span></span>
+<span id="cb27-2"><a href="lab-8-one-way-anova.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="lab-8-one-way-anova.html#cb27-3" aria-hidden="true" tabindex="-1"></a>all_data  <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
+<span id="cb27-4"><a href="lab-8-one-way-anova.html#cb27-4" aria-hidden="true" tabindex="-1"></a>             <span class="fu">filter</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">&lt;</span> <span class="dv">10</span>)</span>
+<span id="cb27-5"><a href="lab-8-one-way-anova.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="lab-8-one-way-anova.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
+<span id="cb27-7"><a href="lab-8-one-way-anova.html#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="lab-8-one-way-anova.html#cb27-8" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb27-9"><a href="lab-8-one-way-anova.html#cb27-9" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-10"><a href="lab-8-one-way-anova.html#cb27-10" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Days_One_to_Seven_Number_of_Intrusions),</span>
+<span id="cb27-11"><a href="lab-8-one-way-anova.html#cb27-11" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Days_One_to_Seven_Number_of_Intrusions)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Days_One_to_Seven_Number_of_Intrusions)))</span>
+<span id="cb27-12"><a href="lab-8-one-way-anova.html#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="lab-8-one-way-anova.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
+<span id="cb27-14"><a href="lab-8-one-way-anova.html#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="lab-8-one-way-anova.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_df, <span class="fu">aes</span>(<span class="at">x=</span>Condition, <span class="at">y=</span>means))<span class="sc">+</span> </span>
+<span id="cb27-16"><a href="lab-8-one-way-anova.html#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>Condition))<span class="sc">+</span> <span class="co"># add means</span></span>
+<span id="cb27-17"><a href="lab-8-one-way-anova.html#cb27-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               <span class="co"># add error bars</span></span>
+<span id="cb27-18"><a href="lab-8-one-way-anova.html#cb27-18" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb27-19"><a href="lab-8-one-way-anova.html#cb27-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>Condition, <span class="at">y=</span>Days_One_to_Seven_Number_of_Intrusions), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb27-20"><a href="lab-8-one-way-anova.html#cb27-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
+<span id="cb27-21"><a href="lab-8-one-way-anova.html#cb27-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Intrusive Memories (Mean for Week)&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="lab-8-one-way-anova.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run and report the ANOVA</span></span>
-<span id="cb26-2"><a href="lab-8-one-way-anova.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="lab-8-one-way-anova.html#cb26-3" aria-hidden="true" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, all_data)</span>
-<span id="cb26-4"><a href="lab-8-one-way-anova.html#cb26-4" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
-<span id="cb26-5"><a href="lab-8-one-way-anova.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-6"><a href="lab-8-one-way-anova.html#cb26-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="lab-8-one-way-anova.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run and report the ANOVA</span></span>
+<span id="cb28-2"><a href="lab-8-one-way-anova.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="lab-8-one-way-anova.html#cb28-3" aria-hidden="true" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, all_data)</span>
+<span id="cb28-4"><a href="lab-8-one-way-anova.html#cb28-4" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
+<span id="cb28-5"><a href="lab-8-one-way-anova.html#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="lab-8-one-way-anova.html#cb28-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1104,41 +1109,41 @@ The analysis of variance is not a mathematical theorem, but rather a convenient 
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-8-one-way-anova.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conduct critical comparisons</span></span>
-<span id="cb27-2"><a href="lab-8-one-way-anova.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="lab-8-one-way-anova.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="do">## control vs reactivation+Tetris</span></span>
-<span id="cb27-4"><a href="lab-8-one-way-anova.html#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="lab-8-one-way-anova.html#cb27-5" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb27-6"><a href="lab-8-one-way-anova.html#cb27-6" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb27-7"><a href="lab-8-one-way-anova.html#cb27-7" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb27-8"><a href="lab-8-one-way-anova.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb27-9"><a href="lab-8-one-way-anova.html#cb27-9" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb27-10"><a href="lab-8-one-way-anova.html#cb27-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-8-one-way-anova.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conduct critical comparisons</span></span>
+<span id="cb29-2"><a href="lab-8-one-way-anova.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="lab-8-one-way-anova.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="do">## control vs reactivation+Tetris</span></span>
+<span id="cb29-4"><a href="lab-8-one-way-anova.html#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="lab-8-one-way-anova.html#cb29-5" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb29-6"><a href="lab-8-one-way-anova.html#cb29-6" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Control&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb29-7"><a href="lab-8-one-way-anova.html#cb29-7" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb29-8"><a href="lab-8-one-way-anova.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb29-9"><a href="lab-8-one-way-anova.html#cb29-9" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb29-10"><a href="lab-8-one-way-anova.html#cb29-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = 2.4159, df = 31, p-value = 0.02178
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Control and group Reactivation+Tetris is not equal to 0
 ## 95 percent confidence interval:
 ##  0.2562181 3.0326708
 ## sample estimates:
 ##             mean in group Control mean in group Reactivation+Tetris 
 ##                          3.533333                          1.888889</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-8-one-way-anova.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tetris_only vs reactivation+Tetris</span></span>
-<span id="cb29-2"><a href="lab-8-one-way-anova.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="lab-8-one-way-anova.html#cb29-3" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb29-4"><a href="lab-8-one-way-anova.html#cb29-4" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Tetris_only&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
-<span id="cb29-5"><a href="lab-8-one-way-anova.html#cb29-5" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb29-6"><a href="lab-8-one-way-anova.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
-<span id="cb29-7"><a href="lab-8-one-way-anova.html#cb29-7" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
-<span id="cb29-8"><a href="lab-8-one-way-anova.html#cb29-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-8-one-way-anova.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tetris_only vs reactivation+Tetris</span></span>
+<span id="cb31-2"><a href="lab-8-one-way-anova.html#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="lab-8-one-way-anova.html#cb31-3" aria-hidden="true" tabindex="-1"></a>comparison_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb31-4"><a href="lab-8-one-way-anova.html#cb31-4" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">filter</span>(Condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;Tetris_only&#39;</span>,<span class="st">&#39;Reactivation+Tetris&#39;</span>)<span class="sc">==</span><span class="cn">TRUE</span>)</span>
+<span id="cb31-5"><a href="lab-8-one-way-anova.html#cb31-5" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb31-6"><a href="lab-8-one-way-anova.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Days_One_to_Seven_Number_of_Intrusions <span class="sc">~</span> Condition, </span>
+<span id="cb31-7"><a href="lab-8-one-way-anova.html#cb31-7" aria-hidden="true" tabindex="-1"></a>       comparison_df,</span>
+<span id="cb31-8"><a href="lab-8-one-way-anova.html#cb31-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Days_One_to_Seven_Number_of_Intrusions by Condition
 ## t = -2.3239, df = 33, p-value = 0.02643
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Reactivation+Tetris and group Tetris_only is not equal to 0
 ## 95 percent confidence interval:
 ##  -2.8561054 -0.1896463
 ## sample estimates:
@@ -1344,7 +1349,7 @@ For the first planned comparison, No-Task Control vs. Reactivation + Tetris, we
 <p><img src="img/8.6.6.41.png" /><!-- --></p>
 <p>A pop-up window will appear. Notice that the independent variable is listed in the “Factors” field. Also, notice that there is a drop-down menu you can access by clicking the black, downward-facing arrowhead next to “None” which is the default setting in the “Contrasts” field.</p>
 <p><img src="img/8.6.6.42.png" /><!-- --></p>
-<p>Please visit <a href="https://www.ibm.com/docs/en/spss-statistics/28.0.0?topic=contrasts-contrast-types">SPSS’s website</a> for more information on the types of contrasts that are programmed into SPSS. In short, Deviation is used to compare the mean of each level to the mean of all combined levels. Simple is used to compare the mean of a given level to the mean of each other level. Difference is also known as Reverse Helmert, and it is used to compare the mean of each level except the first to the mean of the previous levels. Helmert is used to compare the mean of each level except the last to the mean of subsequent levels. Repeated is used to compare the mean of each level except the last to the mean of the subsequent level. Polynomial compares the linear effect, quadratic effect, cubic effect, and so on.</p>
+<p>Please visit <a href="https://www.ibm.com/docs/en/spss-statistics/28.0.0?topic=contrasts-contrast-types">SPSS’s website</a> for more information on the types of contrasts that are programmed into SPSS. In short, Deviation is used to compare the mean of a specific level (first or last) to the mean of all combined levels. Simple is used to compare the mean of a given level (first or last) to the mean of each other level. Difference is also known as Reverse Helmert, and it is used to compare the mean of each level except the first to the mean of the previous levels. Helmert is used to compare the mean of each level except the last to the mean of subsequent levels. Repeated is used to compare the mean of each level except the last to the mean of the subsequent level. Polynomial compares the linear effect, quadratic effect, cubic effect, and so on.</p>
 <p>The best contrast option for our example is Simple; however, our groups are not in the order that allows this comparison. We want to compare Group 1 (No-Task Control) to Group 2 (Reactivation + Tetris), Group 2 (Reactivation + Tetris) to Group 3 (Tetris Only), and Group 2 (Reactivation + Tetris) to Group 4 (Reactivation Only). One way to accomplish a change in order so that we could use Simple is to move the Reactivation + Tetris group to first position in the order.</p>
 <p>Just in case you have not yet encountered recoding or need a refresher, let’s discuss how it is accomplished. First, click <span style="color:blue">Transform</span>, and then click <span style="color:blue">Recode into Different Variable</span>. When the pop-up window appears, move the variable of interest to the “Numeric Variable → Output Variable” field, and enter/create a name for the new variable in the “Name” field under the title “Output Variable” on the far right of the pop-up window. Click <span style="color:blue">Change</span>, and the newly created variable name should be moved to the “Numeric Variable → Output Variable” field near the center of the pop-up window. Next, click <span style="color:blue">Old and New Values…</span>. For our purposes, we will indicate that the “Old Value” of 1 should become the “New Value” of 2, and click <span style="color:blue">Add</span>. We will also indicate that the “Old Value” of 2 should become the “New Value” of 1, and click <span style="color:blue">Add</span> again. To keep the codes for the Tetris Only and Reactivation Only groups, we also need to indicate that the “Old Value” of 3 should become (<em>or stay the same as</em>) the “New Value” of 3 and the “Old Value” of 4 should become (<em>or stay the same as</em>) the “New Value” of 4, respectively, and to click <span style="color:blue">Add</span> after entering each.</p>
 <p><img src="img/8.6.6.43.png" /><!-- --></p>
@@ -1415,6 +1420,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

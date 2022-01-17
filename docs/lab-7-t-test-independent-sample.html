@@ -5,24 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Lab 7: t-test (Independent Sample) | Answering questions with data: Lab Manual</title>
-  <meta name="description" content="A lab manual for Psyc 3400" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="description" content="A lab manual for Psyc 292 at StFX" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Lab 7: t-test (Independent Sample) | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="A lab manual for Psyc 3400" />
+  <meta property="og:description" content="A lab manual for Psyc 292 at StFX" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 7 Lab 7: t-test (Independent Sample) | Answering questions with data: Lab Manual" />
   
-  <meta name="twitter:description" content="A lab manual for Psyc 3400" />
+  <meta name="twitter:description" content="A lab manual for Psyc 292 at StFX" />
   
 
 <meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga" />
-<meta name="author" content="Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle and Sherry Neville-MacLean" />
+<meta name="author" content="Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle, Sherry Neville-MacLean, Christine D. Lomore, and Margaret Vail." />
 
 
 
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="lab-6-t-test-one-sample-paired-sample.html"/>
 <link rel="next" href="lab-8-one-way-anova.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -73,7 +71,6 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -134,7 +131,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -156,45 +152,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a>
 <ul>
-<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions</a></li>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions-and-versions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions and Versions</a></li>
 <li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
 <li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
 <li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
 </ul></li>
-<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a>
-<ul>
-<li class="chapter" data-level="0.2.1" data-path="index.html"><a href="index.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
-<li class="chapter" data-level="0.2.2" data-path="index.html"><a href="index.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
-<li class="chapter" data-level="0.2.3" data-path="index.html"><a href="index.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
 </ul></li>
-<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>0.3</b> R</a>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a>
 <ul>
-<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#why-r"><i class="fa fa-check"></i><b>0.3.1</b> Why R?</a></li>
-<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>0.3.2</b> Installing R and R Studio</a></li>
-<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>0.3.3</b> R studio notes and tips</a></li>
-<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>0.3.4</b> How to complete the R Labs</a></li>
-<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#screencast-tutorial"><i class="fa fa-check"></i><b>0.3.5</b> Screencast tutorial</a></li>
-<li class="chapter" data-level="0.3.6" data-path="index.html"><a href="index.html#r-studio-cloud"><i class="fa fa-check"></i><b>0.3.6</b> R-studio Cloud</a></li>
+<li class="chapter" data-level="0.2" data-path="software.html"><a href="software.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="software.html"><a href="software.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="software.html"><a href="software.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="software.html"><a href="software.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
 </ul></li>
-<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#excel"><i class="fa fa-check"></i><b>0.4</b> Excel</a></li>
-<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#spss"><i class="fa fa-check"></i><b>0.5</b> SPSS</a>
+<li class="chapter" data-level="0.3" data-path="software.html"><a href="software.html#r"><i class="fa fa-check"></i><b>0.3</b> R</a>
 <ul>
-<li class="chapter" data-level="0.5.1" data-path="index.html"><a href="index.html#installing-spss"><i class="fa fa-check"></i><b>0.5.1</b> Installing SPSS</a></li>
-<li class="chapter" data-level="0.5.2" data-path="index.html"><a href="index.html#notes-and-tips"><i class="fa fa-check"></i><b>0.5.2</b> Notes and Tips</a></li>
-<li class="chapter" data-level="0.5.3" data-path="index.html"><a href="index.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
-<li class="chapter" data-level="0.5.4" data-path="index.html"><a href="index.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="0.3.1" data-path="software.html"><a href="software.html#why-r"><i class="fa fa-check"></i><b>0.3.1</b> Why R?</a></li>
+<li class="chapter" data-level="0.3.2" data-path="software.html"><a href="software.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>0.3.2</b> Installing R and R Studio</a></li>
+<li class="chapter" data-level="0.3.3" data-path="software.html"><a href="software.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>0.3.3</b> R studio notes and tips</a></li>
+<li class="chapter" data-level="0.3.4" data-path="software.html"><a href="software.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>0.3.4</b> How to complete the R Labs</a></li>
+<li class="chapter" data-level="0.3.5" data-path="software.html"><a href="software.html#screencast-tutorial"><i class="fa fa-check"></i><b>0.3.5</b> Screencast tutorial</a></li>
+<li class="chapter" data-level="0.3.6" data-path="software.html"><a href="software.html#r-studio-cloud"><i class="fa fa-check"></i><b>0.3.6</b> R-studio Cloud</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#jamovi"><i class="fa fa-check"></i><b>0.6</b> JAMOVI</a>
+<li class="chapter" data-level="0.4" data-path="software.html"><a href="software.html#excel"><i class="fa fa-check"></i><b>0.4</b> Excel</a></li>
+<li class="chapter" data-level="0.5" data-path="software.html"><a href="software.html#spss"><i class="fa fa-check"></i><b>0.5</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="0.6.1" data-path="index.html"><a href="index.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
-<li class="chapter" data-level="0.6.2" data-path="index.html"><a href="index.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
-<li class="chapter" data-level="0.6.3" data-path="index.html"><a href="index.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.6.3</b> The Spreadsheet</a></li>
-<li class="chapter" data-level="0.6.4" data-path="index.html"><a href="index.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.6.4</b> Loading Data in jamovi</a></li>
-<li class="chapter" data-level="0.6.5" data-path="index.html"><a href="index.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.6.5</b> Importing Unusual Data Files</a></li>
-<li class="chapter" data-level="0.6.6" data-path="index.html"><a href="index.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.6.6</b> Changing Data from One Level to Another</a></li>
-<li class="chapter" data-level="0.6.7" data-path="index.html"><a href="index.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.6.7</b> Installing Add-on Modules into jamovi</a></li>
-<li class="chapter" data-level="0.6.8" data-path="index.html"><a href="index.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.6.8</b> Quitting jamovi</a></li>
-<li class="chapter" data-level="0.6.9" data-path="index.html"><a href="index.html#summary"><i class="fa fa-check"></i><b>0.6.9</b> Summary</a></li>
+<li class="chapter" data-level="0.5.1" data-path="software.html"><a href="software.html#installing-spss"><i class="fa fa-check"></i><b>0.5.1</b> Installing SPSS</a></li>
+<li class="chapter" data-level="0.5.2" data-path="software.html"><a href="software.html#notes-and-tips"><i class="fa fa-check"></i><b>0.5.2</b> Notes and Tips</a></li>
+<li class="chapter" data-level="0.5.3" data-path="software.html"><a href="software.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="0.5.4" data-path="software.html"><a href="software.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="0.6" data-path="software.html"><a href="software.html#jamovi"><i class="fa fa-check"></i><b>0.6</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="0.6.1" data-path="software.html"><a href="software.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
+<li class="chapter" data-level="0.6.2" data-path="software.html"><a href="software.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
+<li class="chapter" data-level="0.6.3" data-path="software.html"><a href="software.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.6.3</b> The Spreadsheet</a></li>
+<li class="chapter" data-level="0.6.4" data-path="software.html"><a href="software.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.6.4</b> Loading Data in jamovi</a></li>
+<li class="chapter" data-level="0.6.5" data-path="software.html"><a href="software.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.6.5</b> Importing Unusual Data Files</a></li>
+<li class="chapter" data-level="0.6.6" data-path="software.html"><a href="software.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.6.6</b> Changing Data from One Level to Another</a></li>
+<li class="chapter" data-level="0.6.7" data-path="software.html"><a href="software.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.6.7</b> Installing Add-on Modules into jamovi</a></li>
+<li class="chapter" data-level="0.6.8" data-path="software.html"><a href="software.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.6.8</b> Quitting jamovi</a></li>
+<li class="chapter" data-level="0.6.9" data-path="software.html"><a href="software.html#summary"><i class="fa fa-check"></i><b>0.6.9</b> Summary</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a>
@@ -290,7 +289,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.4" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#splitting-a-file"><i class="fa fa-check"></i><b>3.4.4</b> Splitting a File</a></li>
 <li class="chapter" data-level="3.4.5" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#practice-problems-1"><i class="fa fa-check"></i><b>3.4.5</b> Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#jamovi-3"><i class="fa fa-check"></i><b>3.5</b> JAMOVI</a></li>
+<li class="chapter" data-level="3.5" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#jamovi-3"><i class="fa fa-check"></i><b>3.5</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-coefficient-for-bivariate-data-two-variables-1"><i class="fa fa-check"></i><b>3.5.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="3.5.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-matrix-1"><i class="fa fa-check"></i><b>3.5.2</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="3.5.3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>3.5.3</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="3.5.4" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#applying-a-filter"><i class="fa fa-check"></i><b>3.5.4</b> Applying a Filter</a></li>
+<li class="chapter" data-level="3.5.5" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#removing-the-filter"><i class="fa fa-check"></i><b>3.5.5</b> Removing the Filter</a></li>
+<li class="chapter" data-level="3.5.6" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#homework-4"><i class="fa fa-check"></i><b>3.5.6</b> Homework</a></li>
+<li class="chapter" data-level="3.5.7" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#practice-problems-2"><i class="fa fa-check"></i><b>3.5.7</b> Practice Problems</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Normal Distribution &amp; Central Limit Theorem</a>
 <ul>
@@ -311,7 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#saving-data-as-standardized-values."><i class="fa fa-check"></i><b>4.4.1</b> Saving data as standardized values.</a></li>
 <li class="chapter" data-level="4.4.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#computing-variables"><i class="fa fa-check"></i><b>4.4.2</b> Computing variables</a></li>
-<li class="chapter" data-level="4.4.3" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#practice-problems-2"><i class="fa fa-check"></i><b>4.4.3</b> Practice Problems</a></li>
+<li class="chapter" data-level="4.4.3" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#practice-problems-3"><i class="fa fa-check"></i><b>4.4.3</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#jamovi-4"><i class="fa fa-check"></i><b>4.5</b> JAMOVI</a></li>
 </ul></li>
@@ -332,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#calculate-difference-scores-between-pairs-of-measures"><i class="fa fa-check"></i><b>5.3.2</b> Calculate difference scores between pairs of measures</a></li>
 <li class="chapter" data-level="5.3.3" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#conduct-a-sign-test"><i class="fa fa-check"></i><b>5.3.3</b> Conduct a sign test</a></li>
 <li class="chapter" data-level="5.3.4" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#entering-data-for-sign-test-problems"><i class="fa fa-check"></i><b>5.3.4</b> Entering data for sign test problems</a></li>
-<li class="chapter" data-level="5.3.5" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#practice-problems-3"><i class="fa fa-check"></i><b>5.3.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.3.5" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#practice-problems-4"><i class="fa fa-check"></i><b>5.3.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#jamovi-5"><i class="fa fa-check"></i><b>5.4</b> JAMOVI</a></li>
 </ul></li>
@@ -418,7 +426,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.7.4" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1"><i class="fa fa-check"></i><b>7.7.4</b> Optional exercises (good practice and review for the take-home final exam)</a></li>
 <li class="chapter" data-level="7.7.5" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#example-answers-to-practice-problems-1"><i class="fa fa-check"></i><b>7.7.5</b> Example answers to practice problems</a></li>
 <li class="chapter" data-level="7.7.6" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#lab-homework-7-1"><i class="fa fa-check"></i><b>7.7.6</b> Lab Homework #7</a></li>
-<li class="chapter" data-level="7.7.7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#practice-problems-4"><i class="fa fa-check"></i><b>7.7.7</b> Practice Problems</a></li>
+<li class="chapter" data-level="7.7.7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#practice-problems-5"><i class="fa fa-check"></i><b>7.7.7</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 One-way ANOVA</a>
@@ -449,9 +457,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.6.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.6.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>8.6.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
-<li class="chapter" data-level="8.6.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#planned-comparisons-t-tests"><i class="fa fa-check"></i><b>8.6.3</b> Planned Comparisons: T-tests</a></li>
-<li class="chapter" data-level="8.6.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.6.4</b> Unplanned Comparisons: Post-hoc tests</a></li>
-<li class="chapter" data-level="8.6.5" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.6.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>8.6.3</b> Follow-Up Tests</a></li>
+<li class="chapter" data-level="8.6.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>8.6.4</b> Planned Comparisons: T-Contrasts</a></li>
+<li class="chapter" data-level="8.6.5" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.6.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
+<li class="chapter" data-level="8.6.6" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>8.6.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
+<li class="chapter" data-level="8.6.7" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#homework-questions"><i class="fa fa-check"></i><b>8.6.7</b> Homework questions</a></li>
 </ul></li>
 <li class="chapter" data-level="8.7" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a></li>
 </ul></li>
@@ -639,17 +649,17 @@ most of it came from Gosset.
 <div id="load-the-data-1" class="section level3" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Load the data</h3>
 <p>Remember that any line with a # makes a comment and the code does not run. Below is how to load the .csv data from the online repository, or from a local file (you need to change the file path to where the local file is, if you downloaded it). The data contains all of the measures and conditions from Experiment 4.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab-7-t-test-independent-sample.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb1-2"><a href="lab-7-t-test-independent-sample.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load from github repo</span></span>
-<span id="cb1-3"><a href="lab-7-t-test-independent-sample.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#all_data &lt;- fread(&quot;https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/SchroederEpley2015data.csv&quot;)</span></span>
-<span id="cb1-4"><a href="lab-7-t-test-independent-sample.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="lab-7-t-test-independent-sample.html#cb1-5" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;data/SchroederEpley2015data.csv&quot;</span>) <span class="co"># load from file on computer</span></span></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="lab-7-t-test-independent-sample.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb224-2"><a href="lab-7-t-test-independent-sample.html#cb224-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load from github repo</span></span>
+<span id="cb224-3"><a href="lab-7-t-test-independent-sample.html#cb224-3" aria-hidden="true" tabindex="-1"></a><span class="co">#all_data &lt;- fread(&quot;https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/SchroederEpley2015data.csv&quot;)</span></span>
+<span id="cb224-4"><a href="lab-7-t-test-independent-sample.html#cb224-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb224-5"><a href="lab-7-t-test-independent-sample.html#cb224-5" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;data/SchroederEpley2015data.csv&quot;</span>) <span class="co"># load from file on computer</span></span></code></pre></div>
 </div>
 <div id="inspect-data-frame" class="section level3" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Inspect data frame</h3>
 <p>This will give you a big picture of the data frame. Click the button to view it in your browser, then take a look to see what is in it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab-7-t-test-independent-sample.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
-<span id="cb2-2"><a href="lab-7-t-test-independent-sample.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(all_data))</span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="lab-7-t-test-independent-sample.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
+<span id="cb225-2"><a href="lab-7-t-test-independent-sample.html#cb225-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(all_data))</span></code></pre></div>
 </div>
 <div id="find-the-data-you-need" class="section level3" number="7.4.3">
 <h3><span class="header-section-number">7.4.3</span> Find the data you need</h3>
@@ -657,16 +667,16 @@ most of it came from Gosset.
 <div id="condition-variable" class="section level4" number="7.4.3.1">
 <h4><span class="header-section-number">7.4.3.1</span> Condition variable</h4>
 <p>Lucky for us, the condition variable is called <code>CONDITION</code>! Let’s take a look. We printed it out just by writing down <code>all_data$CONDITION</code>. There 0s and 1s for each condition (audio vs. transcript). But which one is which? This isn’t clear from the data, and it isn’t clear from the paper, or from the repository. We have to do some guess work. I went ahead and computed the means for the Intellect_rating between each condition, and then compared those to the graph in the paper for E4. It looks like 1 = audio condition, and 0 = transcript condition.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab-7-t-test-independent-sample.html#cb3-1" aria-hidden="true" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="lab-7-t-test-independent-sample.html#cb226-1" aria-hidden="true" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION</span></code></pre></div>
 <pre><code>##  [1] 1 1 1 0 0 0 1 0 1 0 0 1 1 0 0 1 1 1 0 0 0 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1 0 1
 ## [39] 1</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="lab-7-t-test-independent-sample.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggregate</span>(Intellect_Rating<span class="sc">~</span>CONDITION,all_data,mean)</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="lab-7-t-test-independent-sample.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggregate</span>(Intellect_Rating<span class="sc">~</span>CONDITION,all_data,mean)</span></code></pre></div>
 <pre><code>##   CONDITION Intellect_Rating
 ## 1         0         3.648148
 ## 2         1         5.634921</code></pre>
 <p>Let’s use words instead of 0s and 1s to refer to our experimental conditions. To do this, we will chance the values of 0 and 1, to the words <code>transcript</code> and <code>audio</code>. We can do this in two steps. First we convert the CONDITION column to a factor. This will automatically turn the 0s and 1s into strings (not numbers, text). Factors have an internal variable for the names of the levels, which will be 0 and 1. We can simply change the level names to transcript and audio.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="lab-7-t-test-independent-sample.html#cb7-1" aria-hidden="true" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all_data<span class="sc">$</span>CONDITION)</span>
-<span id="cb7-2"><a href="lab-7-t-test-independent-sample.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(all_data<span class="sc">$</span>CONDITION) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;transcript&quot;</span>,<span class="st">&quot;audio&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="lab-7-t-test-independent-sample.html#cb230-1" aria-hidden="true" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all_data<span class="sc">$</span>CONDITION)</span>
+<span id="cb230-2"><a href="lab-7-t-test-independent-sample.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(all_data<span class="sc">$</span>CONDITION) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;transcript&quot;</span>,<span class="st">&quot;audio&quot;</span>)</span></code></pre></div>
 <p>Now if you look at the <code>all_data</code> variable, you will see the words transcript and audio, where 0s and 1s used to be.</p>
 </div>
 <div id="dependent-measures" class="section level4" number="7.4.3.2">
@@ -688,35 +698,24 @@ most of it came from Gosset.
 <p>What is the first thing we do before even considering an inferential test? Look at the data. Always look at the data. We could make a dot plot or histogram of the data from the <code>Intellect_ratings</code>. But, from our last lab we already learned how to make graphs showing most of the information we would want to look at. For example, we could make a bar graph that has the means for each condition (transcript vs. audio), standard errors of the mean and the actual scores as little dots. This would be great to look at it. Not only will it tell us if there are really weird numbers in the data (who knows maybe the data file is corrupted, you need to look), it will also give us strong intuitions about what to expect for the <em>t</em>-test.</p>
 <p>We can plot each score as a dot using the <code>all_data</code> data frame. If we want to add on a layer for the sample means, and for the sample standard errors, we have to compute those and put them in a new data frame first. Then we use both data frames with ggplot to plot all of the information.</p>
 <p>We will use <code>dplyr</code> to quickly get the means and the standard errors and put them in a new data frame called <code>decriptive_df</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="lab-7-t-test-independent-sample.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:data.table&#39;:
-## 
-##     between, first, last</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="lab-7-t-test-independent-sample.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-2"><a href="lab-7-t-test-independent-sample.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="lab-7-t-test-independent-sample.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
-<span id="cb13-4"><a href="lab-7-t-test-independent-sample.html#cb13-4" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb13-5"><a href="lab-7-t-test-independent-sample.html#cb13-5" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(CONDITION) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-6"><a href="lab-7-t-test-independent-sample.html#cb13-6" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Intellect_Rating),</span>
-<span id="cb13-7"><a href="lab-7-t-test-independent-sample.html#cb13-7" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Intellect_Rating)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Intellect_Rating)))</span>
-<span id="cb13-8"><a href="lab-7-t-test-independent-sample.html#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="lab-7-t-test-independent-sample.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
-<span id="cb13-10"><a href="lab-7-t-test-independent-sample.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_df, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>means))<span class="sc">+</span> </span>
-<span id="cb13-11"><a href="lab-7-t-test-independent-sample.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>CONDITION))<span class="sc">+</span> <span class="co"># add means</span></span>
-<span id="cb13-12"><a href="lab-7-t-test-independent-sample.html#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               <span class="co"># add error bars</span></span>
-<span id="cb13-13"><a href="lab-7-t-test-independent-sample.html#cb13-13" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb13-14"><a href="lab-7-t-test-independent-sample.html#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>Intellect_Rating), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb13-15"><a href="lab-7-t-test-independent-sample.html#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb13-16"><a href="lab-7-t-test-independent-sample.html#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="lab-7-t-test-independent-sample.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb231-2"><a href="lab-7-t-test-independent-sample.html#cb231-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb231-3"><a href="lab-7-t-test-independent-sample.html#cb231-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb231-4"><a href="lab-7-t-test-independent-sample.html#cb231-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
+<span id="cb231-5"><a href="lab-7-t-test-independent-sample.html#cb231-5" aria-hidden="true" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
+<span id="cb231-6"><a href="lab-7-t-test-independent-sample.html#cb231-6" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(CONDITION) <span class="sc">%&gt;%</span> </span>
+<span id="cb231-7"><a href="lab-7-t-test-independent-sample.html#cb231-7" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Intellect_Rating),</span>
+<span id="cb231-8"><a href="lab-7-t-test-independent-sample.html#cb231-8" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Intellect_Rating)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Intellect_Rating)))</span>
+<span id="cb231-9"><a href="lab-7-t-test-independent-sample.html#cb231-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb231-10"><a href="lab-7-t-test-independent-sample.html#cb231-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
+<span id="cb231-11"><a href="lab-7-t-test-independent-sample.html#cb231-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_df, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>means))<span class="sc">+</span> </span>
+<span id="cb231-12"><a href="lab-7-t-test-independent-sample.html#cb231-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>CONDITION))<span class="sc">+</span> <span class="co"># add means</span></span>
+<span id="cb231-13"><a href="lab-7-t-test-independent-sample.html#cb231-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               <span class="co"># add error bars</span></span>
+<span id="cb231-14"><a href="lab-7-t-test-independent-sample.html#cb231-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb231-15"><a href="lab-7-t-test-independent-sample.html#cb231-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>Intellect_Rating), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb231-16"><a href="lab-7-t-test-independent-sample.html#cb231-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
+<span id="cb231-17"><a href="lab-7-t-test-independent-sample.html#cb231-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-276-1.png" width="672" /></p>
 <p>This plot is very useful. First, we can see the numbers in our dependent measure are behaving sensibly. We know that the numbers have to be between 1-10, because those were the only options in the scale. If we found numbers bigger or smaller, we would know something was wrong. Checking for things that are obviously wrong in the data is one reason why we always look at first. We are checking for obvious errors. There are other ways to check to, but looking is fast and easy.</p>
 <div class="marginnote">
 <p><strong>Question:</strong> Why are the standard errors of each sample an appropriate thing to use for error bars?</p>
@@ -730,22 +729,22 @@ most of it came from Gosset.
 </div>
 <p>We use the very same <code>t.test</code> function that we used last time to conduct a <em>t</em>-test. The only difference is that we don’t tell the R to use a paired sample <em>t</em>-test. We leave the <code>paired=TRUE</code> statement out, and R automatically knows we want to do an independent samples <em>t</em>-test. Remember to set the <code>var.equal=TRUE</code>, otherwise R will compute a different version of the <em>t</em>-test.</p>
 <p>You can use different syntax to run the <em>t</em>-test. Because our data is already in a data frame we can use this syntax.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="lab-7-t-test-independent-sample.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Intellect_Rating<span class="sc">~</span>CONDITION, <span class="at">data=</span>all_data, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="lab-7-t-test-independent-sample.html#cb232-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Intellect_Rating<span class="sc">~</span>CONDITION, <span class="at">data=</span>all_data, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  Intellect_Rating by CONDITION
 ## t = -3.5259, df = 37, p-value = 0.001144
-## alternative hypothesis: true difference in means between group transcript and group audio is not equal to 0
+## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
 ##  -3.1284798 -0.8450652
 ## sample estimates:
 ## mean in group transcript      mean in group audio 
 ##                 3.648148                 5.634921</code></pre>
 <p>The <code>t.test</code> function also will work on two variables, not in a data frame. For example, the following does the same thing. But, it’s harder to read, and the means are described in terms of X and Y, not terms of <code>transcript</code> and <code>audio</code>, like the report above.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="lab-7-t-test-independent-sample.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;transcript&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb16-2"><a href="lab-7-t-test-independent-sample.html#cb16-2" aria-hidden="true" tabindex="-1"></a>       all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;audio&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb16-3"><a href="lab-7-t-test-independent-sample.html#cb16-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span>T)</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="lab-7-t-test-independent-sample.html#cb234-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;transcript&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
+<span id="cb234-2"><a href="lab-7-t-test-independent-sample.html#cb234-2" aria-hidden="true" tabindex="-1"></a>       all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;audio&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
+<span id="cb234-3"><a href="lab-7-t-test-independent-sample.html#cb234-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal=</span>T)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
@@ -772,50 +771,50 @@ most of it came from Gosset.
 <p>The <code>all_data</code> frame is partly long and partly wide. If we are only interested in one dependent measure, then it is a long data frame for that measure. For example, example if we are only interested in plotting <code>Intellect_Rating</code>, then we already have one observation of that dependent measure for each row. But, in the other columns, the dependent measures for <code>Impression_Rating</code> and <code>Hire_Rating</code> are in the same rows.</p>
 <p>Before continuing, it is very much worth mentioning that this part of data analysis happens a lot, and it is kind of annoying. I call it the rubix cube problem, because we need to “rotate” and transform the format of the data to accomplish different kinds of analysis goals. It’s good to be able to know how to do this. This problem occurs all of the time, and can occur for any software package. It’s a good thing you are learning R, because we can do these things easily in R. They are not often so easy to do without a computer programming language like R. The worst thing to do is transform the data by hand. That really sucks. Believe me you don’t want to do it. Why? Because you will make mistakes, and you will mess up the data, then you will mess up your analysis. And, you won’t be able to find your mistakes, and it will take you ages to correct them. That sucks.</p>
 <p>There’s more than one way to transform data in R. For example the <code>cast</code> and <code>melt</code> functions do this kind of thing. You can look those up. In this example we will not use those functions. Instead we will show some steps to build the required data frame one step at a time.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-7-t-test-independent-sample.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># repeat CONDITION column three times</span></span>
-<span id="cb18-2"><a href="lab-7-t-test-independent-sample.html#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="lab-7-t-test-independent-sample.html#cb18-3" aria-hidden="true" tabindex="-1"></a>condition <span class="ot">&lt;-</span> <span class="fu">rep</span>(all_data<span class="sc">$</span>CONDITION,<span class="dv">3</span>)</span>
-<span id="cb18-4"><a href="lab-7-t-test-independent-sample.html#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="lab-7-t-test-independent-sample.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># make a ratings variable with all three ratings in one variable</span></span>
-<span id="cb18-6"><a href="lab-7-t-test-independent-sample.html#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="lab-7-t-test-independent-sample.html#cb18-7" aria-hidden="true" tabindex="-1"></a>ratings <span class="ot">&lt;-</span> <span class="fu">c</span>(all_data<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb18-8"><a href="lab-7-t-test-independent-sample.html#cb18-8" aria-hidden="true" tabindex="-1"></a>             all_data<span class="sc">$</span>Impression_Rating,</span>
-<span id="cb18-9"><a href="lab-7-t-test-independent-sample.html#cb18-9" aria-hidden="true" tabindex="-1"></a>             all_data<span class="sc">$</span>Hire_Rating)</span>
-<span id="cb18-10"><a href="lab-7-t-test-independent-sample.html#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="lab-7-t-test-independent-sample.html#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># make a new factor variable with the names of the ratings</span></span>
-<span id="cb18-12"><a href="lab-7-t-test-independent-sample.html#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># need to repeat each level name the appropriate number of times</span></span>
-<span id="cb18-13"><a href="lab-7-t-test-independent-sample.html#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="lab-7-t-test-independent-sample.html#cb18-14" aria-hidden="true" tabindex="-1"></a>num_to_repeat <span class="ot">&lt;-</span> <span class="fu">length</span>(all_data<span class="sc">$</span>CONDITION)</span>
-<span id="cb18-15"><a href="lab-7-t-test-independent-sample.html#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-16"><a href="lab-7-t-test-independent-sample.html#cb18-16" aria-hidden="true" tabindex="-1"></a>rating_type <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Intellect&quot;</span>,<span class="st">&quot;Impression&quot;</span>,<span class="st">&quot;Hire&quot;</span>),num_to_repeat)</span>
-<span id="cb18-17"><a href="lab-7-t-test-independent-sample.html#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-18"><a href="lab-7-t-test-independent-sample.html#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># put the new variables into a data frame</span></span>
-<span id="cb18-19"><a href="lab-7-t-test-independent-sample.html#cb18-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-20"><a href="lab-7-t-test-independent-sample.html#cb18-20" aria-hidden="true" tabindex="-1"></a>plot_all <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(condition,rating_type,ratings)</span>
-<span id="cb18-21"><a href="lab-7-t-test-independent-sample.html#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-22"><a href="lab-7-t-test-independent-sample.html#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the means and standard errors for each rating by condition</span></span>
-<span id="cb18-23"><a href="lab-7-t-test-independent-sample.html#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-24"><a href="lab-7-t-test-independent-sample.html#cb18-24" aria-hidden="true" tabindex="-1"></a>descriptive_all <span class="ot">&lt;-</span> plot_all <span class="sc">%&gt;%</span> </span>
-<span id="cb18-25"><a href="lab-7-t-test-independent-sample.html#cb18-25" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(condition,rating_type) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-26"><a href="lab-7-t-test-independent-sample.html#cb18-26" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(ratings),</span>
-<span id="cb18-27"><a href="lab-7-t-test-independent-sample.html#cb18-27" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(ratings)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(ratings)))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;condition&#39;. You can override using the `.groups` argument.</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-7-t-test-independent-sample.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
-<span id="cb20-2"><a href="lab-7-t-test-independent-sample.html#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="lab-7-t-test-independent-sample.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, <span class="at">y=</span>means, <span class="at">group=</span>condition))<span class="sc">+</span> </span>
-<span id="cb20-4"><a href="lab-7-t-test-independent-sample.html#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>condition), <span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)<span class="sc">+</span> </span>
-<span id="cb20-5"><a href="lab-7-t-test-independent-sample.html#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               </span>
-<span id="cb20-6"><a href="lab-7-t-test-independent-sample.html#cb20-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), </span>
-<span id="cb20-7"><a href="lab-7-t-test-independent-sample.html#cb20-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">1</span>, </span>
-<span id="cb20-8"><a href="lab-7-t-test-independent-sample.html#cb20-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
-<span id="cb20-9"><a href="lab-7-t-test-independent-sample.html#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>plot_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, </span>
-<span id="cb20-10"><a href="lab-7-t-test-independent-sample.html#cb20-10" aria-hidden="true" tabindex="-1"></a>                                <span class="at">y=</span>ratings, </span>
-<span id="cb20-11"><a href="lab-7-t-test-independent-sample.html#cb20-11" aria-hidden="true" tabindex="-1"></a>                                <span class="at">group=</span>condition), </span>
-<span id="cb20-12"><a href="lab-7-t-test-independent-sample.html#cb20-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha=</span>.<span class="dv">25</span>, </span>
-<span id="cb20-13"><a href="lab-7-t-test-independent-sample.html#cb20-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>))<span class="sc">+</span></span>
-<span id="cb20-14"><a href="lab-7-t-test-independent-sample.html#cb20-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb20-15"><a href="lab-7-t-test-independent-sample.html#cb20-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="lab-7-t-test-independent-sample.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="co"># repeat CONDITION column three times</span></span>
+<span id="cb236-2"><a href="lab-7-t-test-independent-sample.html#cb236-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-3"><a href="lab-7-t-test-independent-sample.html#cb236-3" aria-hidden="true" tabindex="-1"></a>condition <span class="ot">&lt;-</span> <span class="fu">rep</span>(all_data<span class="sc">$</span>CONDITION,<span class="dv">3</span>)</span>
+<span id="cb236-4"><a href="lab-7-t-test-independent-sample.html#cb236-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-5"><a href="lab-7-t-test-independent-sample.html#cb236-5" aria-hidden="true" tabindex="-1"></a><span class="co"># make a ratings variable with all three ratings in one variable</span></span>
+<span id="cb236-6"><a href="lab-7-t-test-independent-sample.html#cb236-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-7"><a href="lab-7-t-test-independent-sample.html#cb236-7" aria-hidden="true" tabindex="-1"></a>ratings <span class="ot">&lt;-</span> <span class="fu">c</span>(all_data<span class="sc">$</span>Intellect_Rating,</span>
+<span id="cb236-8"><a href="lab-7-t-test-independent-sample.html#cb236-8" aria-hidden="true" tabindex="-1"></a>             all_data<span class="sc">$</span>Impression_Rating,</span>
+<span id="cb236-9"><a href="lab-7-t-test-independent-sample.html#cb236-9" aria-hidden="true" tabindex="-1"></a>             all_data<span class="sc">$</span>Hire_Rating)</span>
+<span id="cb236-10"><a href="lab-7-t-test-independent-sample.html#cb236-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-11"><a href="lab-7-t-test-independent-sample.html#cb236-11" aria-hidden="true" tabindex="-1"></a><span class="co"># make a new factor variable with the names of the ratings</span></span>
+<span id="cb236-12"><a href="lab-7-t-test-independent-sample.html#cb236-12" aria-hidden="true" tabindex="-1"></a><span class="co"># need to repeat each level name the appropriate number of times</span></span>
+<span id="cb236-13"><a href="lab-7-t-test-independent-sample.html#cb236-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-14"><a href="lab-7-t-test-independent-sample.html#cb236-14" aria-hidden="true" tabindex="-1"></a>num_to_repeat <span class="ot">&lt;-</span> <span class="fu">length</span>(all_data<span class="sc">$</span>CONDITION)</span>
+<span id="cb236-15"><a href="lab-7-t-test-independent-sample.html#cb236-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-16"><a href="lab-7-t-test-independent-sample.html#cb236-16" aria-hidden="true" tabindex="-1"></a>rating_type <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Intellect&quot;</span>,<span class="st">&quot;Impression&quot;</span>,<span class="st">&quot;Hire&quot;</span>),num_to_repeat)</span>
+<span id="cb236-17"><a href="lab-7-t-test-independent-sample.html#cb236-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-18"><a href="lab-7-t-test-independent-sample.html#cb236-18" aria-hidden="true" tabindex="-1"></a><span class="co"># put the new variables into a data frame</span></span>
+<span id="cb236-19"><a href="lab-7-t-test-independent-sample.html#cb236-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-20"><a href="lab-7-t-test-independent-sample.html#cb236-20" aria-hidden="true" tabindex="-1"></a>plot_all <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(condition,rating_type,ratings)</span>
+<span id="cb236-21"><a href="lab-7-t-test-independent-sample.html#cb236-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-22"><a href="lab-7-t-test-independent-sample.html#cb236-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the means and standard errors for each rating by condition</span></span>
+<span id="cb236-23"><a href="lab-7-t-test-independent-sample.html#cb236-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-24"><a href="lab-7-t-test-independent-sample.html#cb236-24" aria-hidden="true" tabindex="-1"></a>descriptive_all <span class="ot">&lt;-</span> plot_all <span class="sc">%&gt;%</span> </span>
+<span id="cb236-25"><a href="lab-7-t-test-independent-sample.html#cb236-25" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">group_by</span>(condition,rating_type) <span class="sc">%&gt;%</span> </span>
+<span id="cb236-26"><a href="lab-7-t-test-independent-sample.html#cb236-26" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(ratings),</span>
+<span id="cb236-27"><a href="lab-7-t-test-independent-sample.html#cb236-27" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(ratings)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(ratings)))</span>
+<span id="cb236-28"><a href="lab-7-t-test-independent-sample.html#cb236-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-29"><a href="lab-7-t-test-independent-sample.html#cb236-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the plot</span></span>
+<span id="cb236-30"><a href="lab-7-t-test-independent-sample.html#cb236-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-31"><a href="lab-7-t-test-independent-sample.html#cb236-31" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, <span class="at">y=</span>means, <span class="at">group=</span>condition))<span class="sc">+</span> </span>
+<span id="cb236-32"><a href="lab-7-t-test-independent-sample.html#cb236-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>condition), <span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)<span class="sc">+</span> </span>
+<span id="cb236-33"><a href="lab-7-t-test-independent-sample.html#cb236-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               </span>
+<span id="cb236-34"><a href="lab-7-t-test-independent-sample.html#cb236-34" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), </span>
+<span id="cb236-35"><a href="lab-7-t-test-independent-sample.html#cb236-35" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">1</span>, </span>
+<span id="cb236-36"><a href="lab-7-t-test-independent-sample.html#cb236-36" aria-hidden="true" tabindex="-1"></a>                <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb236-37"><a href="lab-7-t-test-independent-sample.html#cb236-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>plot_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, </span>
+<span id="cb236-38"><a href="lab-7-t-test-independent-sample.html#cb236-38" aria-hidden="true" tabindex="-1"></a>                                <span class="at">y=</span>ratings, </span>
+<span id="cb236-39"><a href="lab-7-t-test-independent-sample.html#cb236-39" aria-hidden="true" tabindex="-1"></a>                                <span class="at">group=</span>condition), </span>
+<span id="cb236-40"><a href="lab-7-t-test-independent-sample.html#cb236-40" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha=</span>.<span class="dv">25</span>, </span>
+<span id="cb236-41"><a href="lab-7-t-test-independent-sample.html#cb236-41" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>))<span class="sc">+</span></span>
+<span id="cb236-42"><a href="lab-7-t-test-independent-sample.html#cb236-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
+<span id="cb236-43"><a href="lab-7-t-test-independent-sample.html#cb236-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-279-1.png" width="672" /></p>
 <p>Well, we didn’t make the exact graph. We have the bars, the error bars, and we added the individual scores because they are useful to look at. Otherwise, it’s the same graph (except the the ordering of bars is determined alphabetically here. We change that in ggplot, but we won’t do that today.)</p>
 </div>
 <div id="generalization-exercise-6" class="section level3" number="7.4.8">
@@ -993,28 +992,37 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <h3><span class="header-section-number">7.7.2</span> Performing an independent-samples <em>t</em>-test</h3>
 <hr />
 <p>First, let’s open the relevant data file in jamovi. The data set is available <a href="INCLUDE%20A%20LINK">here</a>. The file we are working with in this lesson is called “SchroederEpley2015_Study4_data.sav.” Your data should look like this:</p>
-<p><img src="img/7.4.11.png" /><!-- --></p>
+<p><img src="img/7.4.35.PNG" /><!-- --></p>
 <p>For our analysis, we will focus on only one of the three measures mentioned above: <code>intellect</code>. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch).</p>
-<p>Before we run the <em>t</em>-test, let’s review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Settings</span> button, available at the top of our jamovi spreadsheet window. Check both <code>intellect</code> and <code>CONDITION</code>.</p>
-<p><img src="img/7.4.12.png" /><!-- --></p>
-<p>When you check <code>CONDITION</code>, notice that this <span style="color:blue">Settings</span> button has revealed the values used to signify the Audio and Transcript groups. Take note that these groups are signified by 0s and 1s. This coding helps the program to run our <em>t</em>-test. Keep in mind that whether we look at the codes or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change. Remember to check <code>intellect</code> while considering the information about the study (the context). Is <code>intellect</code> a variable measured on a nominal scale? Does it get represented by integer data?</p>
+<p>Before we run the <em>t</em>-test, let’s review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Settings</span> button, available at the top of our jamovi spreadsheet window. Check <code>CONDITION</code>.</p>
+<p><img src="img/7.4.36.PNG" /><!-- --></p>
+<p>When you check <code>CONDITION</code>, notice that this <span style="color:blue">Settings</span> button has revealed the values used to signify the Audio and Transcript groups. Take note that these groups are signified by 0s and 1s. This coding helps the program to run our <em>t</em>-test. Keep in mind that whether we look at the codes or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.</p>
+<p>Remember to check <code>intellect</code> while considering the information about the study (the context). Is <code>intellect</code> a variable measured on a continuous scale? Does it get represented by decimal-type data? (<em>Hint: Be sure to carefully read the names of the variables during these exercises. Some variable names are similar and can lead to confusion when you select the variables to be included in your analysis.</em>)</p>
+<p><img src="img/7.4.37.PNG" /><!-- --></p>
 <p>Remember to press the <span style="color:blue">Settings</span> button again or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:</p>
-<p><img src="img/7.4.13.png" /><!-- --></p>
+<p><img src="img/7.4.38.PNG" /><!-- --></p>
+<p>Or</p>
+<p><img src="img/7.4.39.PNG" /><!-- --></p>
 <p>Now, we’re ready to run the independent-samples <em>t</em>-test. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Independent Samples T-test</span>.</p>
-<p><img src="img/7.4.14.png" /><!-- --></p>
-<p>A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using <code>intellect</code>, so find this variable in the left-hand list and move it into the “Dependent Variables” field on the right using the arrow. For the field labeled “Grouping Variable,” we will specify which variable is our independent variable. That variable is <code>CONDITION</code> (we have two conditions: audio and transcript). Move <code>CONDITION</code> into the “Grouping Variable” field.</p>
-<p><img src="img/7.4.15.png" /><!-- --></p>
+<p><img src="img/7.4.40.PNG" /><!-- --></p>
+<p>A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using <code>intellect</code>, so find this variable in the left-hand list. One way you can find the <code>intellect</code> variable by clicking on the search icon, the one that looks like a magnifying glass, and then typing the name of the variable. Another way to find the variable is to use the slider at the right of the list of variables and move down until you see the <code>intellect</code> variable. Then, move the variable into the “Dependent Variables” field on the right by highlighting the variable and using the arrow to move it.</p>
+<p><img src="img/7.4.41.PNG" /><!-- --></p>
+<p>For the field labeled “Grouping Variable,” we will specify which variable is our independent variable. That variable is <code>CONDITION</code> (we have two conditions: audio and transcript). Move <code>CONDITION</code> into the “Grouping Variable” field.</p>
+<p><img src="img/7.4.42.PNG" /><!-- --></p>
 <p>In the Results panel, jamovi will produce an output tables as follows:</p>
-<p><img src="img/7.4.17.png" /><!-- --></p>
-<p>The <em>t</em>-test output has similarities with the paired <em>t</em>-test output we saw in Chapter 6 of this lab manual. Similarly to what we learned when discussing the paired <em>t</em>-test output, we can click on the <span style="color:blue">Descriptives</span> button to request a second table contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics.</p>
-<p>In the case of an independent-samples <em>t</em>-test, there is one special consideration to be made: the equality of variances. One of the assumptions of a <em>t</em>-test is that the groups being compared have roughly equal variances. Conveniently, in jamovi, you can request another test to determine if the variances are equal or not: this test is called the Levene’s test. Simply click on <span style="color:blue">Homogeneity test </span>, and the table showing the results will appear between the table depicting the independent-samples <em>t</em>-test and the Descriptives table.</p>
-<p>When interpreting the second output table, or Levene’s test, the rule is as follows: If the <em>p</em>-value in the table is smaller than your alpha level, then your variances are <strong>not</strong> equal and you should request <span style="color:blue"> Welch’s</span> <em>t</em>-test. If the <em>p</em>-value for Levene’s test is larger than alpha, then you can use the Student’s <em>t</em>-test that is automatically generated when you request an independent <em>t</em>-test. However, some people may recommend that you <strong>always</strong> use the Welch’s <em>t</em>-test.</p>
-<p>In this case, the <em>p</em>-value associated with the Levene’s test is .35, which is greater than the conventional alpha level of .05, so you could report the results of the Student <em>t</em>-test, but we are still going to use the Welch’s <em>t</em>-test. The <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.48, the degrees of freedom are adjusted to 33.43, and the <em>p</em>-value for the <em>t</em>-test is .001. <strong>Note</strong>: Be sure to look at the <em>p</em>-value associated with the <em>t</em>-test and not Levene’s test when you are interpreting your <em>t</em>-test results.</p>
+<p><img src="img/7.4.43.PNG" /><!-- --></p>
+<p>The <em>t</em>-test output share some similarities with the paired <em>t</em>-test output we saw in Chapter 6 of this lab manual. The Independent Samples T-Test table contains a t-statistic obtained, the degrees of freedom, and a <em>p</em>-value. Much like we learned when discussing the paired-samples <em>t</em>-test output, we can click on the Indpendent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch’s</span>, and some Assumption Checks.</p>
+<p>In the case of an independent-samples <em>t</em>-test, one assumption made is that there is equality of variances. The groups being compared are assumed to have roughly equal variances. This test is called the Levene’s test. Simply click on <span style="color:blue">Homogeneity test</span>, and the table showing the results will appear between the table depicting the independent-samples <em>t</em>-test and the Descriptives table. Conveniently, in jamovi, you can request another test to determine if the assumption of normality is also upheld. This test is called the Shapiro-Wilk test. It, too, is conveniently requested by clicking on <span style="color:blue">Normality test</span>. The results will appear right after the Independent Samples T-Test table.</p>
+<p><img src="img/7.4.44.PNG" /><!-- --></p>
+<p>When interpreting the second output table, or Shapiro-Wilk test, the rule is as follows: If the <em>p</em>-value in the table is smaller than your alpha level, which is often the conventional .05, then your data are <strong>not</strong> normally distributed and you should request <span style="color:blue"> Welch’s</span> <em>t</em>-test. If the <em>p</em>-value for the test is larger than alpha, then you can use the Student’s <em>t</em>-test that is automatically generated when you request an independent <em>t</em>-test.</p>
+<p>When interpreting the third output table, or Levene’s test, the rule is as follows: If the <em>p</em>-value in the table is smaller than your alpha level, then your variances are <strong>not</strong> equal and you should request <span style="color:blue"> Welch’s</span> <em>t</em>-test. If the <em>p</em>-value for Levene’s test is larger than alpha, then you can use the Student’s <em>t</em>-test that is automatically generated when you request an independent <em>t</em>-test.</p>
+<p><img src="img/7.4.45.PNG" /><!-- --></p>
+<p>Some people may recommend that you <strong>always</strong> use the Welch’s <em>t</em>-test - whether the assumptions are upheld or violated.</p>
+<p><img src="img/7.4.44_Welch.png" /><!-- --></p>
+<p>In this example, the <em>p</em>-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The <em>p</em>-value associated with the Levene’s test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You could report the results of the Student <em>t</em>-test, but we are still going to use the Welch’s <em>t</em>-test. The <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.48, the degrees of freedom are adjusted to 33.4, and the <em>p</em>-value for the <em>t</em>-test is .001. <strong>Note</strong>: Be sure to look at the <em>p</em>-value associated with the <em>t</em>-test and not Levene’s test when you are interpreting your <em>t</em>-test results.</p>
 <p>What does the <em>t</em>-test tell us about the data? We can put our finding into words to clarify:</p>
-<p>Recruiter ratings for audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than ratings for transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). This difference is significant, <em>t</em>(33.43) = -3.48, <em>p</em> &lt; .05.</p>
-<p>You can also include effect sizes in the jamovi output in the first table by clicking on <span style="color:blue"> Effect size</span>. You can include Cohen’s <em>d</em> in your results sentence as well. Find it in the <code>Independent Samples T-Test</code> table in the “Effect Size” column. For example:</p>
-<p>Recruiter ratings for audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than ratings for transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). This difference is significant according to an independent samples <em>t</em>-test, <em>t</em>(33.4) = -3.48, <em>p</em> &lt; .05, <em>d</em> = 1.13.</p>
-<p><strong>Some formatting guidelines for writing results sections: </strong></p>
+<p>Recruiter ratings for audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than ratings for transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). This difference is significant, <em>t</em>(33.4) = -3.48, <em>p</em> &lt; .05, 95% <em>CI</em> [-1.85,-0.39], <em>d</em> = -1.12.</p>
+<p><strong>Some formatting guidelines for writing results sections:</strong></p>
 <p>All of the numbers are rounded to two decimal places, but if your <em>p</em>-value was .0001, it would be okay to write <em>p</em> &lt; .001.</p>
 <p>Italicize symbols such as <em>p</em> and <em>t</em>.</p>
 <p>There are spaces on either side of =, &gt;, or &lt; symbols.</p>
@@ -1023,13 +1031,15 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <h3><span class="header-section-number">7.7.3</span> Graphing your data</h3>
 <hr />
 <p><code>CONDITION</code> in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>.</p>
-<p><img src="img/7.4.18.png" /><!-- --></p>
-<p>Next, move <code>intellect</code> to the “Variables” window by highlighting the variable and using the arrow, and move <code>CONDITION</code> to the “Split by” window. Click on <span style="color:blue">Plots</span>, and then click <span style="color:blue">Bar plot</span>.</p>
-<p><img src="img/7.4.19.png" /><!-- --></p>
+<p><img src="img/7.4.47.PNG" /><!-- --></p>
+<p>Next, move <code>intellect</code> to the “Variables” window by highlighting the variable and using the arrow, and move <code>CONDITION</code> to the “Split by” window.</p>
+<p><img src="img/7.4.48.PNG" /><!-- --></p>
+<p>Click on <span style="color:blue">Plots</span>, and then click <span style="color:blue">Bar plot</span>.</p>
+<p><img src="img/7.4.49.PNG" /><!-- --></p>
 <p>jamovi will produce a bar graph of your mean ratings for both audio and transcript conditions.</p>
-<p><img src="img/7.4.22.png" /><!-- --></p>
+<p><img src="img/7.4.50.PNG" /><!-- --></p>
 <p><strong>Note</strong>: It’s always a good idea to compare your graph to the descriptive statistics to make sure it looks right.
-<strong>Another Important Note</strong>: You cannot simply copy and paste the graph from jamovi into a paper that requires APA-formatting. Be sure to use the other resources provided to you so as to create properly formatted graphs for your course assignments.</p>
+<strong>Another Important Note</strong>: You cannot simply copy and paste the graph from jamovi into a paper that requires APA-formatting. Be sure to use/model the other resources provided to you so as to create properly formatted graphs for your course assignments.</p>
 </div>
 <div id="optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1" class="section level3" number="7.7.4">
 <h3><span class="header-section-number">7.7.4</span> Optional exercises (good practice and review for the take-home final exam)</h3>
@@ -1039,42 +1049,50 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <h4><span class="header-section-number">7.7.4.1</span> Using a cut point to define groups for an independent <em>t</em>-test</h4>
 <p>Sometimes you will see groups defined with a non-nominal independent variable. For example, we might talk about defining countries as “overweight” or “not overweight” depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.</p>
 <p>A commonly used cut point is the median value (this is called a “median split”). Let’s use the example of <code>age</code> in the current dataset. You can find the median value of <code>age</code> in different ways. Let’s go with a familiar path: Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue"> Descriptive Statistics</span>. Move <code>age</code> to the “Variables” filed. If the median were not showing in the table visible in the Results panel, we could click <span style="color:blue">Statistics</span> and select <span style="color:blue">Median</span> . The first output table contains the median:</p>
-<p><img src="img/7.4.23.png" /><!-- --></p>
+<p><img src="img/7.4.51.PNG" /><!-- --></p>
 <p>We can use the median of 29 as the cut point. We’ll be running an independent <em>t</em>-test to determine whether there is a significant difference in <code>intellect</code> between candidates under 29 years old and over 29 years old.</p>
-<p>First, we will need to transform the <code>intellect</code> variable. Click <span style="color:blue">Data</span>, then <span style="color:blue">Add</span>, and then either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>. Notice that when you use <span style="color:blue">Insert</span>, the new, transformed variable is added to the left of whichever variable you have highlighted or were last working in. When you use <span style="color:blue">Append</span>, the new, transformed variable is added to the far right of all the variables.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
+<p>First, we will need to transform the <code>age</code> variable. Click <span style="color:blue">Data</span>, then <span style="color:blue">Add</span>, and then either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>. Notice that when you use <span style="color:blue">Insert</span>, the new, transformed variable is added to the left of whichever variable you have highlighted or were last working in (so I highlighted <code>gender</code>). When you use <span style="color:blue">Append</span>, the new, transformed variable is added to the far right of all the variables.</p>
+<p><img src="img/7.4.52.PNG" /><!-- --></p>
 <p>After clicking the commands to get the transformed variable, be sure to name the variable and to write a description. Select the <span style="color:blue">Source variable</span>, by clicking on the drop-down menu and selecting <code>age</code>.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
+<p><img src="img/7.4.53.PNG" /><!-- --></p>
 <p>Then, create a rule for jamovi to follow to populate the new variable column. To do so, click on <span style="color:blue">using transform</span> and <span style="color:blue">Create New Transform</span>.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
-<p>A new panel will pop up and we will enter our transform rule here. First, we should name the transformation; we might use <code>AgeMedSplit</code> for the transformation name. Next, we must write the recoding rule. Click on <span style="color:blue">Add recode condition</span>. Since our median is 29, we might show that if our source variable has data that is less than 29, it should be recoded as a 1 which we will indicate later to be young. The second part of the recoding rule will indicate what code we want to use if the first part of the rule is not true. Let’s use 2 as our other code. We can also indicate that the “Measure type” is nominal; we have younger and older groups.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
+<p><img src="img/7.4.54.PNG" /><!-- --></p>
+<p>A new panel will pop up and we will enter our transform rule here. First, we should name the transformation; we might use <code>AgeMedSplit</code> for the transformation name. Next, we must write the recoding rule. Click on <span style="color:blue">Add recode condition</span>.</p>
+<p><img src="img/7.4.55.PNG" /><!-- --></p>
+<p>Since our median is 29, we might show that if our source variable has data that is equal to or less than 29, it should be recoded as a 1 which we will consider as a younger age group. The second part of the recoding rule will indicate what code we want to use if the first part of the rule is not true. Let’s use 2 as our other code, for an older age group. We can also indicate that the “Measure type” is nominal; we have younger and older groups. Clarifying the scale of measurement is an important step as you want to use this transformed variable as a grouping variable later.</p>
+<p><img src="img/7.4.56.PNG" /><!-- --></p>
 <p>Click the downward facing arrow to close the transformation window.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
+<p><img src="img/7.4.57.PNG" /><!-- --></p>
 <p>Click the upward facing arrow to close the transformed variable window.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
-<p>Having split the data by age group, we can now run the <em>t</em>-test on <code>intellect</code>. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move <code>intellect</code> into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable <code>Age_MedSplit_YO</code>.</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
-<p>Remember to click <span style="color:blue">Descriptives</span> under “Additional Statistics” to get the Descriptive table and <span style="color:blue">Welch’s</span> so that you can report the <em>t</em>-test without worrying whether or not the assumption of homogeneity of variance has been violated:</p>
-<p><img src="img/7.4.25.png" /><!-- --></p>
+<p><img src="img/7.4.58.PNG" /><!-- --></p>
+<p>Having split the data by age group, we can now run the <em>t</em>-test on <code>intellect</code>. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move <code>intellect</code> into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable <code>AgeGroups_YO</code>.</p>
+<p><img src="img/7.4.59.PNG" /><!-- --></p>
+<p>Remember to click <span style="color:blue">Descriptives</span>, <span style="color:blue">Effect size</span>, and the 95% <span style="color:blue">Confidence interval</span> under “Additional Statistics” to get the Descriptives table and <span style="color:blue">Welch’s</span> so that you can report the <em>t</em>-test without worrying whether or not the assumptions of homogeneity of variance and normality have been violated. You can also click to request these tests: <span style="color:blue">Homogeneity test</span> and <span style="color:blue">Normality test</span>.</p>
+<p><img src="img/7.4.60.PNG" /><!-- --></p>
 <p>Practice writing a sentence describing the results, and then compare it to #1 in the “Example answers to practice problems” below.</p>
 </div>
 <div id="review-correlation-1" class="section level4" number="7.7.4.2">
 <h4><span class="header-section-number">7.7.4.2</span> Review: Correlation</h4>
-<p>Let’s say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent <em>t</em>-test. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>, and then, move <code>age</code> and <code>intellect</code> into the untitled box at the right of the pop-up screeen:</p>
-<p><img src="img/7.4.26.png" /><!-- --></p>
+<p>Let’s say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent <em>t</em>-test. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.</p>
+<p><img src="img/7.4.61.PNG" /><!-- --></p>
+<p>Then, move <code>age</code> and <code>intellect</code> into the untitled box at the right of the pop-up screeen:</p>
+<p><img src="img/7.4.62.PNG" /><!-- --></p>
 <p>In the Results panel, the output table should look as follows:</p>
-<p><img src="img/7.4.27.png" /><!-- --></p>
+<p><img src="img/7.4.63.PNG" /><!-- --></p>
 <p>Write a sentence describing the results of this test. Compare your answer to #2 in the “Example answers to practice problems” below.</p>
-<p>Now, assume you are in the mood to do some exploratory data analysis. We can run multiple bivariate correlations at the same time in the same dialog. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span> again. To the untitled variables box at the right, add <code>age</code>, <code>wordcount</code>, <code>time</code>,<code>intellect’,  and</code>impression`:</p>
-<p><img src="img/7.4.29.png" /><!-- --></p>
+<p>Now, assume you are in the mood to do some exploratory data analysis. We can run multiple bivariate correlations at the same time in the same dialog. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span> again. To the untitled variables box at the right, add <code>age</code>, <code>time</code>, <code>wordcount</code>, <code>intellect</code>, and <code>impression</code>:</p>
+<p><img src="img/7.4.64.PNG" /><!-- --></p>
 <p>In the Results panel, the output table contains the <em>r</em>- and <em>p</em>-values for each possible pair of the five variables:</p>
-<p><img src="img/7.4.30.png" /><!-- --></p>
+<p><img src="img/7.4.65.PNG" /><!-- --></p>
 <p>By default, jamovi does not flag significant correlations. Be sure to review the <em>p</em>-values careful and compare them to the alpha level you set. How many significant correlations do you identify in the correlation matrix?</p>
-<p>If you would like jamovi to flag significant correlations, you can click <span style="color:blue">Flag significant correlations</span> under “Additional options.” Under the correlation matrix, you will notice a note. If the <em>p</em>-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the <em>p</em>-value is less than .01, SPSS will flag it as ** (significant at the .01 level); and if the <em>p</em>-value is less than .001, SPSS will flag it as *** (significant at the .001 level).</p>
-<p><img src="img/7.4.30.png" /><!-- --></p>
-<p>Let’s pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot…</span>. Move <code>intellect</code> into the <span style="color:blue">Y-Axis</span> and <code>age</code> into the <span style="color:blue">X-Axis</span>. These commands should produce a scatterplot in the Results panel.</p>
-<p><img src="img/7.4.30.png" /><!-- --></p>
+<p>If you would like jamovi to flag significant correlations, you can click <span style="color:blue">Flag significant correlations</span> under “Additional options.”</p>
+<p><img src="img/7.4.66.PNG" /><!-- --></p>
+<p>Under the correlation matrix that appears in the Results panel, you will notice a note. If the <em>p</em>-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the <em>p</em>-value is less than .01, SPSS will flag it as ** (significant at the .01 level); and if the <em>p</em>-value is less than .001, SPSS will flag it as *** (significant at the .001 level).</p>
+<p><img src="img/7.4.67.PNG" /><!-- --></p>
+<p>Let’s pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot…</span>. Move <code>intellect</code> into the <span style="color:blue">Y-Axis</span> and <code>age</code> into the <span style="color:blue">X-Axis</span>.</p>
+<p><img src="img/7.4.68.PNG" /><!-- --></p>
+<p>These commands should produce a scatterplot in the Results panel.</p>
+<p><img src="img/7.4.69.PNG" /><!-- --></p>
 <p>Repeat for all correlations with <code>intellect</code>, using <code>intellect</code> on the <code>Y axis</code> each time to make it easier to compare to the example answers below (#3). Compare the pattern of dots in each scatterplot to the <em>r</em>-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson’s <em>r</em> (i.e., linearity, no outliers)?</p>
 </div>
 </div>
@@ -1087,13 +1105,13 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <li><p>Intellect ratings were not significantly correlated with the age of the candidates, <em>r</em> = .05, <em>p</em> &gt; .05.</p></li>
 <li><p>You should have created four scatterplots. They are included below as well as some notes about each.</p></li>
 </ol>
-<p><img src="img/7.4.31.png" /><!-- -->
+<p><img src="img/7.4.69.PNG" /><!-- -->
 For the correlation between <code>age</code> and <code>intellect</code>, we found <em>r</em> was very close to 0, at .05. This is reflected in the pattern of dots, which are spread fairly uniformly across the entire plot. There are no concerns with violating the assumption of linearity on this plot. There are also no outliers.</p>
-<p><img src="img/7.4.32.png" /><!-- -->
+<p><img src="img/7.4.70.PNG" /><!-- -->
 For the correlation between <code>time</code> and <code>intellect</code>, we found <em>r</em> was also close to 0 but negative, at -.07. It is harder to link the <em>r</em> with the plot in this case because of the two dots far to the right in the plot. These might be outliers and could be investigated further, but how to do so is not covered in PSYC 292.</p>
-<p><img src="img/7.4.33.png" /><!-- -->
+<p><img src="img/7.4.71.PNG" /><!-- -->
 The correlation between <code>wordcount</code> and <code>intellect</code> was <em>r</em> = -.24. This is a fairly weak correlation but if you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. The dot to the far right might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292.</p>
-<p><img src="img/7.4.34.png" /><!-- -->
+<p><img src="img/7.4.72.PNG" /><!-- -->
 For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</em> = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.</p>
 </div>
 <div id="lab-homework-7-1" class="section level3" number="7.7.6">
@@ -1104,7 +1122,7 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <li><p>Using APA format, graph the data.</p></li>
 </ol>
 </div>
-<div id="practice-problems-4" class="section level3" number="7.7.7">
+<div id="practice-problems-5" class="section level3" number="7.7.7">
 <h3><span class="header-section-number">7.7.7</span> Practice Problems</h3>
 <ol style="list-style-type: decimal">
 <li><p>Use the same data file from this lab’s tutorial to test whether <code>intellect</code> ratings were different between the <code>gender</code> categories (use alpha = .05). Which <code>gender</code> category had higher <code>intellect</code> ratings? Was this difference significant? What was the effect size? Report your result in a sentence or two, using the example and guidelines above to help with the format and structure. Graph this result (including SEM error bars) as a bar graph.</p></li>
@@ -1149,7 +1167,6 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1177,6 +1194,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

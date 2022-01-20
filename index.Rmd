@@ -540,7 +540,7 @@ It's easy to open .csv files in jamovi. From the top left menu (the button with 
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE, out.width="50%", dev='png'}
+```{r , echo=FALSE, out.width="75%", dev='png'}
 knitr::include_graphics('img/openscreen.png')
 ```
 \caption{A dialog box on a Mac asking you to select the .csv file jamovi should try to import. Mac users will recognize this immediately; it's the usual way in which a Mac asks you to find a file. Windows users won't see this; instead, they'll see the usual Explorer window that Windows always gives you when it wants you to select a file.}
@@ -603,7 +603,7 @@ To install add-on modules, just click on the large \large{"+"} in the top right 
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE, out.width="50%", dev='png'}
+```{r , echo=FALSE, out.width="75%", dev='png'}
 knitr::include_graphics('img/modules.png')
 ``` 
 \caption{Installing add-on modules in jamovi}

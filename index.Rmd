@@ -385,7 +385,7 @@ In our lab sessions, we will be using jamovi to help us with the analyses about 
 ### Getting Started with jamovi
 
 <div class="marginnote">
-This section, included its associated figures, is copied almost verbatim, with some minor editorial changes, from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
+This section, including its associated figures, is copied almost verbatim, with some minor editorial changes, from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
 In this [section], I'll discuss how to get started in jamovi. I'll briefly talk about how to download and install jamovi, but most of the chapter will be focused on getting you started with finding your way around the jamovi GUI. Our goal in this chapter is not to learn any statistical concepts: we're just trying to learn the basics of how jamovi works and get comfortable interacting with the system. To do this, we'll spend a bit of time looking at datasets and variables. In doing so, you'll get a bit of a feel for what it's like to work in jamovi. 
@@ -450,7 +450,7 @@ The most commonly used variables in jamovi are **Data Variables**, these variabl
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE,dev='png'}
+```{r , echo=FALSE, dev='png'}
 knitr::include_graphics('img/measurementlevels.png')
 ```
 
@@ -492,7 +492,7 @@ In order, these are the sum of A and B, a log (base 10) transform of len, the me
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE,dev='png'}
+```{r , echo=FALSE, out.width="75%", dev='png'}
 knitr::include_graphics('img/computedvariable.png')
 ```
 \caption{A newly computed variable, the z-score of `dose'.}
@@ -529,7 +529,7 @@ One quite commonly used data format is the humble *comma separated value* file, 
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE,dev='png'}
+```{r , echo=FALSE, out.width="75%", dev='png'}
 knitr::include_graphics('img/booksalescsv.png')
 ```
 \caption{The \filename{booksales.csv} data file. On the left, I've opened the file using a spreadsheet program (OpenOffice), which shows that the file is basically a table. On the right, the same file is open in a standard text editor (the TextEdit program on a Mac), which shows how the file is formatted. The entries in the table are wrapped in quote marks and separated by commas.}
@@ -540,7 +540,7 @@ It's easy to open .csv files in jamovi. From the top left menu (the button with 
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE,dev='png'}
+```{r , echo=FALSE, out.width="50%", dev='png'}
 knitr::include_graphics('img/openscreen.png')
 ```
 \caption{A dialog box on a Mac asking you to select the .csv file jamovi should try to import. Mac users will recognize this immediately; it's the usual way in which a Mac asks you to find a file. Windows users won't see this; instead, they'll see the usual Explorer window that Windows always gives you when it wants you to select a file.}
@@ -603,7 +603,7 @@ To install add-on modules, just click on the large \large{"+"} in the top right 
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
-```{r , echo=FALSE,dev='png'}
+```{r , echo=FALSE, out.width="50%", dev='png'}
 knitr::include_graphics('img/modules.png')
 ``` 
 \caption{Installing add-on modules in jamovi}

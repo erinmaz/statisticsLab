@@ -802,7 +802,7 @@ This section is  copied almost verbatim, with some editorial changes, from [Answ
 In this lab, it is hoped you will become more acquainted with the jamovi software layout and graph some sample data to make sense of it. We will be doing the following:
 
 1. Opening jamovi and reviewing the jamovi layout 
-2. Reviewing variable properties and the Settings button 
+2. Reviewing variable properties and the Setup button 
 3. Opening a data file and producing different types of graphs 
 
 ### Opening jamovi and reviewing the jamovi layout
@@ -814,31 +814,48 @@ Your lab instructor will take you through the process of downloading, installing
 Once you do, the main jamovi spreadsheet should be apparent. It will look like this, with a basic spreadsheet on the left and a results panel on the right:
 
 ```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
-knitr::include_graphics('img/1.4.11.png')
+knitr::include_graphics('img/1.5.1.1.png')
 ```
-As explained in [Section 0.6.1.2](https://www.erinmazerolle.com/statisticsLab/software.html#getting-started-with-jamovi), you can slide the separating line between these two panels to make one panel or the other larger. You should also recall that, in the spreadsheet, each row represents a case or a *participant* and each column represents a *variable*. (For more details about the jamovi program, see Section 0.6.) If, for example, you obtained the heights (in inches) of 5 people {x= 64, 70, 63, 62, 65} and wanted to enter their data into jamovi, each person’s height would be entered in a new row, not across the columns, as seen below:
+As explained in [Section 0.6.1.2](https://www.erinmazerolle.com/statisticsLab/software.html#getting-started-with-jamovi), you can slide the separating line between these two panels to make one panel or the other larger. You should also recall that, in the spreadsheet, each row represents a case or a *participant* and each column represents a *variable*. (For more details about the jamovi program, see Section 0.6.) If, for example, you obtained the heights (in inches) of 5 people {x = 64, 70, 63, 62, 65} and wanted to enter their data into jamovi, each person’s height would be entered in a new row, not across the columns, as seen below:
 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/1.4.12.png')
+knitr::include_graphics('img/1.5.1.2.png')
 ```
 
-### Reviewing variable properties and the Settings button
+### Reviewing variable properties and the Setup button
 
 ---
 
-Now that we have some data entered, we might want to name our variable so that it’s evident our measurements represent heights. In order to view or modify variable names and other properties, look to the menu ribbon at the top of the jamovi window. While you are within any column representing a variable, you can click the <span style="color:blue">Settings</span> button which is visible when the <span style="color:blue">Data</span> tab is highlighted. This <span style="color:blue">Settings</span> button will reveal, in a top panel, information about the attributes of the variable. Your window will appear as follows:
-
+Now that we have some data entered, we might want to name our variable so that it’s evident our measurements represent heights. In order to view or modify variable names and other properties, look to the menu ribbon at the top of the jamovi window. While you are within any column representing a variable, you can click the <span style="color:blue">Setup</span> button which is visible when the <span style="color:blue">Data</span> tab is highlighted. This <span style="color:blue">Setup</span> button will reveal, in a top panel, information about the attributes of the variable. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/1.4.13.png')
+knitr::include_graphics('img/1.5.2.1A.png')
+```
+
+Once selected, your window will appear as follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.2.1B.png')
 ```
 
 A more detailed description of variable types is presented in [Section 0.6.3](https://www.erinmazerolle.com/statisticsLab/software.html#the-spreadsheet). Within this variable panel, you can edit the name of your variables and specify their properties. Variable names can be anything you like (*without the restrictions that SPSS has*). Based on some user feedback, however, you may want to consider using Camel Case or underscores in variable names to play it safe (ex. ParticipantNumber or Participant_Number). Also, you may want to consider how much of the variable name you will see in the spreadsheet panel based on the size of screen and the number of variables you have in your data set.
 
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.2.2A.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.2.2B.png')
+```
+
 Below the variable name is a place for a description of the data. Below the description is a drop-down menu allowing you to identify the measure type: nominal, ordinal, continuous, or ID. Below that is a drop-down menu allowing you to identify the data type: Integer, Decimal, or Text. The final variable attribute on the left side is a place for you to identify any missing values. To the left of the measure type, data type, and missing values is a box wherein levels can be specified. If you need to code data, this is the place to do so. (Just in case it helps you to know this: It is similar to the Values column in the Variable View of SPSS.) Selecting the “Retain unused levels” radio button forces the program to keep levels even if they do not appear in the data set.
 
-You may want to click the arrowhead that points to the left or right to move to an adjacent variable. Alternatively, clicking the <span style="color:blue">Settings</span> button again or clicking the upward facing arrow will hide this variable attribute information from your view.
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.2.3.png')
+```
+
+You may want to click the arrowhead that points to the left or right to move to an adjacent variable. Alternatively, clicking the <span style="color:blue">Setup</span> button again or clicking the upward facing arrow will hide this variable attribute information from your view.
 
 
 ### Opening a data file and producing different types of graphs

@@ -534,42 +534,42 @@ In this lab, we will use jamovi to calculate a variety of descriptive statistics
 2. Edit graphs
 3. Create and interpret a boxplot
 
-Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
+Let's begin with a short data set {x = 1, 1, 4, 1, 2, 5, 7}
 
-Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In Settings, I have also changed the name of this variable to `x` and changed the scale to continuous.):
+Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In <span style="color:blue">Setup</span>, I have also changed the name of this variable to `X` and changed the scale to continuous.):
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.11.png')
+knitr::include_graphics('img/2.5.1.png')
 ```
 
 ### Calculating Descriptive Statistics
 
 ---
 
-From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. These commands should feel familiar if you completed the lab on creating graphs (bar graphs and histograms)>:
+From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. These commands should feel familiar if you completed the lab on creating graphs (bar graphs and histograms):
 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.12.png')
+knitr::include_graphics('img/2.5.2.png')
 ```
 
-As soon as you select the variable of interest, `x`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results panel. By default, jamovi will show you the sample size, number of missing case measurements, mean, median, standard deviation, minimum, and maximum. 
+As soon as you select the variable of interest, `X`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results pane. By default, jamovi will show you the sample size, number of missing case measurements, mean, median, standard deviation, minimum, and maximum. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.13.png')
+knitr::include_graphics('img/2.5.3.png')
 ```
 
-Recall from the earlier instructions that we would also like to look at the mode, range, and variance – which are not included by default. To include these descriptives statistics, click the <span style="color:blue">Statistics</span> button. Clicking on this button will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will select those which were missing from the default settings: <span style="color:blue"> mode, range, and variance</span>. Another descriptive statistic of interest may be the interquartile range. Let’s select it, too. Click on <span style="color:blue"> IQR</span>.
+Recall from the earlier instructions that we would also like to look at the mode, range, and variance – which are not included by default. To include these descriptive statistics, click the <span style="color:blue">Statistics</span> button. Clicking on this button will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will select those which were missing from the default settings: <span style="color:blue"> mode, range, and variance</span>. Another descriptive statistic of interest may be the interquartile range. Let’s select it, too. Click on <span style="color:blue"> IQR</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.14.png')
+knitr::include_graphics('img/2.5.4.png')
 ```
 
 
-In the Results panel, you should see the additional descriptive statistics appear as you select them. 
+In the Results pane, you should see the additional descriptive statistics appear as you select them. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.15.png')
+knitr::include_graphics('img/2.5.5.png')
 ```
 
 ### Descriptive Statistics and Histograms

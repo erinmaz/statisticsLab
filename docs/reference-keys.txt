@@ -482,3 +482,6 @@ tetris_only-vs-reactivationtetris
 fig:unnamed-chunk-9
 fig:unnamed-chunk-23
 reviewing-variable-properties-and-the-setup-button
+importing-a-data-file
+graphs
+bar-graphs-and-histograms

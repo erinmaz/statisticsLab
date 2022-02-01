@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Lab 1: Graphing Data | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Lab 1: Graphing Data | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="lab-2-descriptive-statistics-and-more-graphs.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -73,7 +71,6 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -133,7 +130,6 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -228,9 +224,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.1</b> Opening jamovi and reviewing the jamovi layout</a></li>
 <li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-setup-button"><i class="fa fa-check"></i><b>1.5.2</b> Reviewing variable properties and the Setup button</a></li>
-<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs-1"><i class="fa fa-check"></i><b>1.5.3</b> Opening a data file and producing different types of graphs</a></li>
-<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.5.4</b> Homework</a></li>
-<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.5</b> Thinking about Data - Practice Questions</a></li>
+<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#importing-a-data-file"><i class="fa fa-check"></i><b>1.5.3</b> Importing a data file</a></li>
+<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#graphs"><i class="fa fa-check"></i><b>1.5.4</b> Graphs</a></li>
+<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.5.5</b> Homework</a></li>
+<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.6</b> Thinking about Data - Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics (and more graphs)</a>
@@ -717,23 +714,23 @@ The commonality between science and art is in trying to see profoundly - to deve
 <p>The above grouped the data by each of the five Borough’s, and then counted the number of times each Borough occurred (using the <code>length</code> function). The result is a new variable called <code>count</code>. I chose to name this variable <code>count</code>. You can see that it is now displayed in the top-right hand corned in the environment tab. If you gave <code>count</code> a different name, like <code>muppets</code>, then it would be named what you called it.</p>
 <p>If you click on the <code>counts</code> variable, you will see the five boroughs listed, along with the counts for how many film permits were requested in each Borough. These are the numbers that we want to plot in a graph.</p>
 <p>We do the plot using a fantastic package called <code>ggplot2</code>. It is very powerful once you get the hand of it, and when you do, you will be able to make all sorts of interesting graphs. Here’s the code to make the plot</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="lab-1-graphing-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.1.2</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="lab-1-graphing-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Borough, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb13-2"><a href="lab-1-graphing-data.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="lab-1-graphing-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-2"><a href="lab-1-graphing-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="lab-1-graphing-data.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Borough, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="lab-1-graphing-data.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1borough-1.png" width="672" /></p>
 <p>There it is, we’re done here! We can easily look at this graph, and answer our question. Most of the film permits were requested in Manhattan, followed by Brooklyn, then Queen’s, the Bronx, and finally Staten Island.</p>
 </div>
 <div id="what-kind-of-films-are-being-made-what-is-the-category" class="section level4" number="1.2.4.2">
 <h4><span class="header-section-number">1.2.4.2</span> What kind of “films” are being made, what is the category?</h4>
 <p>We think you might be skeptical of what you are doing here, copying and pasting things. Soon you’ll see just how fast you can do things by copying and pasting, and make a few little changes. Let’s quickly ask another question about what kinds of films are being made. The column <code>Category</code>, gives us some information about that. Let’s just copy paste the code we already made, and see what kinds of categories the films fall into. See if you can tell what I changed in the code to make this work, I’ll do it all at once:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="lab-1-graphing-data.html#cb14-1" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="lab-1-graphing-data.html#cb14-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Category) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="lab-1-graphing-data.html#cb14-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span>
-<span id="cb14-4"><a href="lab-1-graphing-data.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="lab-1-graphing-data.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb14-6"><a href="lab-1-graphing-data.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)<span class="sc">+</span> </span>
-<span id="cb14-7"><a href="lab-1-graphing-data.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="lab-1-graphing-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="lab-1-graphing-data.html#cb12-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Category) <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="lab-1-graphing-data.html#cb12-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span>
+<span id="cb12-4"><a href="lab-1-graphing-data.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="lab-1-graphing-data.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="lab-1-graphing-data.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)<span class="sc">+</span> </span>
+<span id="cb12-7"><a href="lab-1-graphing-data.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1category-1.png" width="672" /></p>
 <p>OK, so this figure might look a bit weird because the labels on the bottom are running into each other. We’ll fix that in a bit. First, let’s notice the changes.</p>
 <ol style="list-style-type: decimal">
@@ -742,13 +739,13 @@ The commonality between science and art is in trying to see profoundly - to deve
 </ol>
 <p>Fine, so how do we fix the graph? Good question. To be honest, I don’t know right now. I totally forgot how. But, I know ggplot2 can do this, and I’m going to Google it, right now. Then I’m going to find the answer, and use it here. The googling of your questions is a fine way to learn. It’s what everybody does these days….[goes to Google…].</p>
 <p>Found it, actually found a lot of ways to do this. The trick is to add the last line. I just copy-pasted it from the solution I found on <a href="https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2">stack overflow</a> (you will become friend’s with stack overflow, there are many solutions there to all of your questions)</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="lab-1-graphing-data.html#cb15-1" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="lab-1-graphing-data.html#cb15-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Category) <span class="sc">%&gt;%</span></span>
-<span id="cb15-3"><a href="lab-1-graphing-data.html#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span>
-<span id="cb15-4"><a href="lab-1-graphing-data.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="lab-1-graphing-data.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb15-6"><a href="lab-1-graphing-data.html#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)<span class="sc">+</span> </span>
-<span id="cb15-7"><a href="lab-1-graphing-data.html#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="lab-1-graphing-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="lab-1-graphing-data.html#cb13-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Category) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="lab-1-graphing-data.html#cb13-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span>
+<span id="cb13-4"><a href="lab-1-graphing-data.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="lab-1-graphing-data.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb13-6"><a href="lab-1-graphing-data.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)<span class="sc">+</span> </span>
+<span id="cb13-7"><a href="lab-1-graphing-data.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryB-1.png" width="672" /></p>
 </div>
 </div>
@@ -768,47 +765,75 @@ The commonality between science and art is in trying to see profoundly - to deve
 <div id="ylab-changes-y-label" class="section level4" number="1.2.5.1">
 <h4><span class="header-section-number">1.2.5.1</span> ylab() changes y label</h4>
 <p>The last graph had <code>count_of_permits</code> as the label on the y-axis. That doesn’t look right. ggplot2 automatically took the label from the column, and made it be the name on the y-axis. We can change that by adding <code>ylab("what we want")</code>. We do this by adding a <span class="math inline">\(+\)</span> to the last line, then adding <code>ylab()</code></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="lab-1-graphing-data.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb17-2"><a href="lab-1-graphing-data.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb17-3"><a href="lab-1-graphing-data.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb17-4"><a href="lab-1-graphing-data.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="lab-1-graphing-data.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="lab-1-graphing-data.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb15-3"><a href="lab-1-graphing-data.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="lab-1-graphing-data.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryC-1.png" width="672" /></p>
 </div>
 <div id="xlab-changes-x-label" class="section level4" number="1.2.5.2">
 <h4><span class="header-section-number">1.2.5.2</span> xlab() changes x label</h4>
 <p>Let’s slightly modify the x label too:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-1-graphing-data.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb18-2"><a href="lab-1-graphing-data.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb18-3"><a href="lab-1-graphing-data.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb18-4"><a href="lab-1-graphing-data.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb18-5"><a href="lab-1-graphing-data.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="lab-1-graphing-data.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="lab-1-graphing-data.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb16-3"><a href="lab-1-graphing-data.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="lab-1-graphing-data.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb16-5"><a href="lab-1-graphing-data.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryD-1.png" width="672" /></p>
 </div>
 <div id="ggtitle-adds-title" class="section level4" number="1.2.5.3">
 <h4><span class="header-section-number">1.2.5.3</span> ggtitle() adds title</h4>
 <p>Let’s give our graph a title</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="lab-1-graphing-data.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
-<span id="cb19-2"><a href="lab-1-graphing-data.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb19-3"><a href="lab-1-graphing-data.html#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb19-4"><a href="lab-1-graphing-data.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb19-5"><a href="lab-1-graphing-data.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb19-6"><a href="lab-1-graphing-data.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="lab-1-graphing-data.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits )) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="lab-1-graphing-data.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="lab-1-graphing-data.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="lab-1-graphing-data.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-5"><a href="lab-1-graphing-data.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="lab-1-graphing-data.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryE-1.png" width="672" /></p>
 </div>
 <div id="color-adds-color" class="section level4" number="1.2.5.4">
 <h4><span class="header-section-number">1.2.5.4</span> color adds color</h4>
 <p>Let’s make the bars different colors. To do this, we add new code to the inside of the <code>aes()</code> part:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-1-graphing-data.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, <span class="at">color=</span>Category )) <span class="sc">+</span></span>
-<span id="cb20-2"><a href="lab-1-graphing-data.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb20-3"><a href="lab-1-graphing-data.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb20-4"><a href="lab-1-graphing-data.html#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb20-5"><a href="lab-1-graphing-data.html#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb20-6"><a href="lab-1-graphing-data.html#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-1-graphing-data.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, <span class="at">color=</span>Category )) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="lab-1-graphing-data.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb18-3"><a href="lab-1-graphing-data.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="lab-1-graphing-data.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb18-5"><a href="lab-1-graphing-data.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="lab-1-graphing-data.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryF-1.png" width="672" /></p>
 </div>
 <div id="fill-fills-in-color" class="section level4" number="1.2.5.5">
 <h4><span class="header-section-number">1.2.5.5</span> fill fills in color</h4>
 <p>Let’s make the bars different colors. To do this, we add new code to the inside of the <code>aes()</code> part…Notice I’ve started using new lines to make the code more readable.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="lab-1-graphing-data.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb19-2"><a href="lab-1-graphing-data.html#cb19-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb19-3"><a href="lab-1-graphing-data.html#cb19-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="lab-1-graphing-data.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb19-5"><a href="lab-1-graphing-data.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="lab-1-graphing-data.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb19-7"><a href="lab-1-graphing-data.html#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="lab-1-graphing-data.html#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/1categoryG-1.png" width="672" /></p>
+</div>
+<div id="get-rid-of-the-legend" class="section level4" number="1.2.5.6">
+<h4><span class="header-section-number">1.2.5.6</span> get rid of the legend</h4>
+<p>Sometimes you just don’t want the legend on the side, to remove it add</p>
+<p><code>theme(legend.position="none")</code></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-1-graphing-data.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb20-2"><a href="lab-1-graphing-data.html#cb20-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb20-3"><a href="lab-1-graphing-data.html#cb20-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb20-4"><a href="lab-1-graphing-data.html#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb20-5"><a href="lab-1-graphing-data.html#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb20-6"><a href="lab-1-graphing-data.html#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb20-7"><a href="lab-1-graphing-data.html#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="lab-1-graphing-data.html#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb20-9"><a href="lab-1-graphing-data.html#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/1categoryH-1.png" width="672" /></p>
+</div>
+<div id="theme_classic-makes-white-background" class="section level4" number="1.2.5.7">
+<h4><span class="header-section-number">1.2.5.7</span> theme_classic() makes white background</h4>
+<p>The rest is often just visual preference. For example, the graph above has this grey grid behind the bars. For a clean classic no nonsense look, use <code>theme_classic()</code> to take away the grid.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="lab-1-graphing-data.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
 <span id="cb21-2"><a href="lab-1-graphing-data.html#cb21-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
 <span id="cb21-3"><a href="lab-1-graphing-data.html#cb21-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
@@ -816,79 +841,51 @@ The commonality between science and art is in trying to see profoundly - to deve
 <span id="cb21-5"><a href="lab-1-graphing-data.html#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb21-6"><a href="lab-1-graphing-data.html#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb21-7"><a href="lab-1-graphing-data.html#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb21-8"><a href="lab-1-graphing-data.html#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/1categoryG-1.png" width="672" /></p>
-</div>
-<div id="get-rid-of-the-legend" class="section level4" number="1.2.5.6">
-<h4><span class="header-section-number">1.2.5.6</span> get rid of the legend</h4>
-<p>Sometimes you just don’t want the legend on the side, to remove it add</p>
-<p><code>theme(legend.position="none")</code></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="lab-1-graphing-data.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb22-2"><a href="lab-1-graphing-data.html#cb22-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb22-3"><a href="lab-1-graphing-data.html#cb22-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb22-4"><a href="lab-1-graphing-data.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb22-5"><a href="lab-1-graphing-data.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb22-6"><a href="lab-1-graphing-data.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb22-7"><a href="lab-1-graphing-data.html#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb22-8"><a href="lab-1-graphing-data.html#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb22-9"><a href="lab-1-graphing-data.html#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/1categoryH-1.png" width="672" /></p>
-</div>
-<div id="theme_classic-makes-white-background" class="section level4" number="1.2.5.7">
-<h4><span class="header-section-number">1.2.5.7</span> theme_classic() makes white background</h4>
-<p>The rest is often just visual preference. For example, the graph above has this grey grid behind the bars. For a clean classic no nonsense look, use <code>theme_classic()</code> to take away the grid.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-1-graphing-data.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb23-2"><a href="lab-1-graphing-data.html#cb23-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb23-3"><a href="lab-1-graphing-data.html#cb23-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb23-4"><a href="lab-1-graphing-data.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb23-5"><a href="lab-1-graphing-data.html#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb23-6"><a href="lab-1-graphing-data.html#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb23-7"><a href="lab-1-graphing-data.html#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb23-8"><a href="lab-1-graphing-data.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb23-9"><a href="lab-1-graphing-data.html#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb23-10"><a href="lab-1-graphing-data.html#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<span id="cb21-8"><a href="lab-1-graphing-data.html#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-9"><a href="lab-1-graphing-data.html#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-10"><a href="lab-1-graphing-data.html#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryI-1.png" width="672" /></p>
 </div>
 <div id="sometimes-layer-order-matters" class="section level4" number="1.2.5.8">
 <h4><span class="header-section-number">1.2.5.8</span> Sometimes layer order matters</h4>
 <p>Interesting, <code>theme_classic()</code> is misbehaving a little bit. It looks like we have some of our layer out of order, let’s re-order. I just moved <code>theme_classic()</code> to just underneath the <code>geom_bar()</code> line. Now everything get’s drawn properly.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="lab-1-graphing-data.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb24-2"><a href="lab-1-graphing-data.html#cb24-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb24-3"><a href="lab-1-graphing-data.html#cb24-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb24-4"><a href="lab-1-graphing-data.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb24-5"><a href="lab-1-graphing-data.html#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb24-6"><a href="lab-1-graphing-data.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb24-7"><a href="lab-1-graphing-data.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb24-8"><a href="lab-1-graphing-data.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb24-9"><a href="lab-1-graphing-data.html#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb24-10"><a href="lab-1-graphing-data.html#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="lab-1-graphing-data.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb22-2"><a href="lab-1-graphing-data.html#cb22-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb22-3"><a href="lab-1-graphing-data.html#cb22-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="lab-1-graphing-data.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb22-5"><a href="lab-1-graphing-data.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb22-6"><a href="lab-1-graphing-data.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="lab-1-graphing-data.html#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb22-8"><a href="lab-1-graphing-data.html#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-9"><a href="lab-1-graphing-data.html#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="lab-1-graphing-data.html#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryJ-1.png" width="672" /></p>
 </div>
 <div id="font-size" class="section level4" number="1.2.5.9">
 <h4><span class="header-section-number">1.2.5.9</span> Font-size</h4>
 <p>Changing font-size is often something you want to do. ggplot2 can do this in different ways. I suggest using the <code>base_size</code> option inside <code>theme_classic()</code>. You set one number for the largest font size in the graph, and everything else gets scaled to fit with that that first number. It’s really convenient. Look for the inside of <code>theme_classic()</code></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-1-graphing-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb25-2"><a href="lab-1-graphing-data.html#cb25-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb25-3"><a href="lab-1-graphing-data.html#cb25-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb25-4"><a href="lab-1-graphing-data.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb25-5"><a href="lab-1-graphing-data.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb25-6"><a href="lab-1-graphing-data.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb25-7"><a href="lab-1-graphing-data.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb25-8"><a href="lab-1-graphing-data.html#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb25-9"><a href="lab-1-graphing-data.html#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb25-10"><a href="lab-1-graphing-data.html#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-1-graphing-data.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb23-2"><a href="lab-1-graphing-data.html#cb23-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb23-3"><a href="lab-1-graphing-data.html#cb23-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="lab-1-graphing-data.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb23-5"><a href="lab-1-graphing-data.html#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="lab-1-graphing-data.html#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="lab-1-graphing-data.html#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb23-8"><a href="lab-1-graphing-data.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="lab-1-graphing-data.html#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="lab-1-graphing-data.html#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryK-1.png" width="672" />
 or make things small… just to see what happens</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="lab-1-graphing-data.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb26-2"><a href="lab-1-graphing-data.html#cb26-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb26-3"><a href="lab-1-graphing-data.html#cb26-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb26-4"><a href="lab-1-graphing-data.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb26-5"><a href="lab-1-graphing-data.html#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb26-6"><a href="lab-1-graphing-data.html#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb26-7"><a href="lab-1-graphing-data.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb26-8"><a href="lab-1-graphing-data.html#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb26-9"><a href="lab-1-graphing-data.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb26-10"><a href="lab-1-graphing-data.html#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="lab-1-graphing-data.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb24-2"><a href="lab-1-graphing-data.html#cb24-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb24-3"><a href="lab-1-graphing-data.html#cb24-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="lab-1-graphing-data.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb24-5"><a href="lab-1-graphing-data.html#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a href="lab-1-graphing-data.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb24-7"><a href="lab-1-graphing-data.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb24-8"><a href="lab-1-graphing-data.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb24-9"><a href="lab-1-graphing-data.html#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb24-10"><a href="lab-1-graphing-data.html#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1categoryL-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-summary" class="section level4" number="1.2.5.10">
@@ -901,24 +898,24 @@ or make things small… just to see what happens</p>
 <div id="what-are-the-sub-categories-of-films" class="section level4" number="1.2.6.1">
 <h4><span class="header-section-number">1.2.6.1</span> What are the sub-categories of films?</h4>
 <p>Notice the <code>nyc_films</code> data frame also has a column for <code>SubCategoryName</code>. Let’s see what’s going on there with a quick plot.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-1-graphing-data.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the counts (this is a comment it&#39;s just here for you to read)</span></span>
-<span id="cb27-2"><a href="lab-1-graphing-data.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="lab-1-graphing-data.html#cb27-3" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
-<span id="cb27-4"><a href="lab-1-graphing-data.html#cb27-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(SubCategoryName) <span class="sc">%&gt;%</span></span>
-<span id="cb27-5"><a href="lab-1-graphing-data.html#cb27-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(SubCategoryName))</span>
-<span id="cb27-6"><a href="lab-1-graphing-data.html#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="lab-1-graphing-data.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># make the plot</span></span>
-<span id="cb27-8"><a href="lab-1-graphing-data.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-9"><a href="lab-1-graphing-data.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> SubCategoryName, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb27-10"><a href="lab-1-graphing-data.html#cb27-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>SubCategoryName, </span>
-<span id="cb27-11"><a href="lab-1-graphing-data.html#cb27-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> SubCategoryName )) <span class="sc">+</span></span>
-<span id="cb27-12"><a href="lab-1-graphing-data.html#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb27-13"><a href="lab-1-graphing-data.html#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb27-14"><a href="lab-1-graphing-data.html#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb27-15"><a href="lab-1-graphing-data.html#cb27-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb27-16"><a href="lab-1-graphing-data.html#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Sub-category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb27-17"><a href="lab-1-graphing-data.html#cb27-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Sub-category&quot;</span>) <span class="sc">+</span></span>
-<span id="cb27-18"><a href="lab-1-graphing-data.html#cb27-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-1-graphing-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the counts (this is a comment it&#39;s just here for you to read)</span></span>
+<span id="cb25-2"><a href="lab-1-graphing-data.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="lab-1-graphing-data.html#cb25-3" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="lab-1-graphing-data.html#cb25-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(SubCategoryName) <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="lab-1-graphing-data.html#cb25-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(SubCategoryName))</span>
+<span id="cb25-6"><a href="lab-1-graphing-data.html#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="lab-1-graphing-data.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># make the plot</span></span>
+<span id="cb25-8"><a href="lab-1-graphing-data.html#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="lab-1-graphing-data.html#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> SubCategoryName, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb25-10"><a href="lab-1-graphing-data.html#cb25-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>SubCategoryName, </span>
+<span id="cb25-11"><a href="lab-1-graphing-data.html#cb25-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> SubCategoryName )) <span class="sc">+</span></span>
+<span id="cb25-12"><a href="lab-1-graphing-data.html#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb25-13"><a href="lab-1-graphing-data.html#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb25-14"><a href="lab-1-graphing-data.html#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb25-15"><a href="lab-1-graphing-data.html#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb25-16"><a href="lab-1-graphing-data.html#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Sub-category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-17"><a href="lab-1-graphing-data.html#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Sub-category&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-18"><a href="lab-1-graphing-data.html#cb25-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) </span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1subcategory-1.png" width="672" /></p>
 <p>I guess “episodic series” are the most common. Using a graph like this gave us our answer super fast.</p>
 </div>
@@ -926,39 +923,39 @@ or make things small… just to see what happens</p>
 <h4><span class="header-section-number">1.2.6.2</span> Categories by different Boroughs</h4>
 <p>Let’s see one more really useful thing about ggplot2. It’s called <code>facet_wrap()</code>. It’s an ugly word, but you will see that it is very cool, and you can do next-level-super-hero graph styles with <code>facet_wrap</code> that other people can’t do very easily.</p>
 <p>Here’s our question. We know that some films are made in different Boroughs, and that same films are made in different categories, but do different Boroughs have different patterns for the kinds of categories of films they request permits for? Are their more TV shows in Brooklyn? How do we find out? Watch, just like this:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="lab-1-graphing-data.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the counts (this is a comment it&#39;s just here for you to read)</span></span>
-<span id="cb28-2"><a href="lab-1-graphing-data.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="lab-1-graphing-data.html#cb28-3" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
-<span id="cb28-4"><a href="lab-1-graphing-data.html#cb28-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Borough,Category) <span class="sc">%&gt;%</span></span>
-<span id="cb28-5"><a href="lab-1-graphing-data.html#cb28-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="lab-1-graphing-data.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the counts (this is a comment it&#39;s just here for you to read)</span></span>
+<span id="cb26-2"><a href="lab-1-graphing-data.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="lab-1-graphing-data.html#cb26-3" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> nyc_films <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="lab-1-graphing-data.html#cb26-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(Borough,Category) <span class="sc">%&gt;%</span></span>
+<span id="cb26-5"><a href="lab-1-graphing-data.html#cb26-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarize</span>(<span class="at">count_of_permits =</span> <span class="fu">length</span>(Category))</span></code></pre></div>
 <pre><code>## `summarise()` has grouped output by &#39;Borough&#39;. You can override using the `.groups` argument.</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="lab-1-graphing-data.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># make the plot</span></span>
-<span id="cb30-2"><a href="lab-1-graphing-data.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="lab-1-graphing-data.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb30-4"><a href="lab-1-graphing-data.html#cb30-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
-<span id="cb30-5"><a href="lab-1-graphing-data.html#cb30-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
-<span id="cb30-6"><a href="lab-1-graphing-data.html#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb30-7"><a href="lab-1-graphing-data.html#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb30-8"><a href="lab-1-graphing-data.html#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb30-9"><a href="lab-1-graphing-data.html#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb30-10"><a href="lab-1-graphing-data.html#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
-<span id="cb30-11"><a href="lab-1-graphing-data.html#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category and Borough&quot;</span>) <span class="sc">+</span></span>
-<span id="cb30-12"><a href="lab-1-graphing-data.html#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb30-13"><a href="lab-1-graphing-data.html#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Borough, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="lab-1-graphing-data.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># make the plot</span></span>
+<span id="cb28-2"><a href="lab-1-graphing-data.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="lab-1-graphing-data.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb28-4"><a href="lab-1-graphing-data.html#cb28-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Category, </span>
+<span id="cb28-5"><a href="lab-1-graphing-data.html#cb28-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Category )) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="lab-1-graphing-data.html#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb28-7"><a href="lab-1-graphing-data.html#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb28-8"><a href="lab-1-graphing-data.html#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb28-9"><a href="lab-1-graphing-data.html#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb28-10"><a href="lab-1-graphing-data.html#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Category of film&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-11"><a href="lab-1-graphing-data.html#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category and Borough&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-12"><a href="lab-1-graphing-data.html#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-13"><a href="lab-1-graphing-data.html#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Borough, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1facetwrap-1.png" width="672" /></p>
 <p>We did two important things. First we added <code>Borough</code> and <code>Category</code> into the <code>group_by()</code> function. This automatically gives separate counts for each category of film, for each Borough. Then we added <code>facet_wrap(~Borough, ncol=3)</code> to the end of the plot, and it automatically drew us 5 different bar graphs, one for each Borough! That was fast. Imagine doing that by hand.</p>
 <p>The nice thing about this is we can switch things around if we want. For example, we could do it this way by switching the <code>Category</code> with <code>Borough</code>, and facet-wrapping by Category instead of Borough like we did above. Do what works for you.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-1-graphing-data.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Borough, <span class="at">y =</span> count_of_permits, </span>
-<span id="cb31-2"><a href="lab-1-graphing-data.html#cb31-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Borough, </span>
-<span id="cb31-3"><a href="lab-1-graphing-data.html#cb31-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Borough )) <span class="sc">+</span></span>
-<span id="cb31-4"><a href="lab-1-graphing-data.html#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb31-5"><a href="lab-1-graphing-data.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb31-6"><a href="lab-1-graphing-data.html#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb31-7"><a href="lab-1-graphing-data.html#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb31-8"><a href="lab-1-graphing-data.html#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Borough&quot;</span>) <span class="sc">+</span></span>
-<span id="cb31-9"><a href="lab-1-graphing-data.html#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category and Borough&quot;</span>) <span class="sc">+</span></span>
-<span id="cb31-10"><a href="lab-1-graphing-data.html#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb31-11"><a href="lab-1-graphing-data.html#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Category, <span class="at">ncol=</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-1-graphing-data.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(counts, <span class="fu">aes</span>(<span class="at">x =</span> Borough, <span class="at">y =</span> count_of_permits, </span>
+<span id="cb29-2"><a href="lab-1-graphing-data.html#cb29-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>Borough, </span>
+<span id="cb29-3"><a href="lab-1-graphing-data.html#cb29-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span> Borough )) <span class="sc">+</span></span>
+<span id="cb29-4"><a href="lab-1-graphing-data.html#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb29-5"><a href="lab-1-graphing-data.html#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb29-6"><a href="lab-1-graphing-data.html#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb29-7"><a href="lab-1-graphing-data.html#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of Film Permits&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb29-8"><a href="lab-1-graphing-data.html#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Borough&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-9"><a href="lab-1-graphing-data.html#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Number of Film permits in NYC by Category and Borough&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-10"><a href="lab-1-graphing-data.html#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-11"><a href="lab-1-graphing-data.html#cb29-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Category, <span class="at">ncol=</span><span class="dv">5</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1facetwrap2-1.png" width="672" /></p>
 </div>
 </div>
@@ -967,14 +964,14 @@ or make things small… just to see what happens</p>
 <p><a href="https://www.gapminder.org">https://www.gapminder.org</a> is an organization that collects some really interesting worldwide data. They also make cool visualization tools for looking at the data. There are many neat examples, and they have visualization tools built right into their website that you can play around with <a href="https://www.gapminder.org/tools/">https://www.gapminder.org/tools/</a>. That’s fun check it out.</p>
 <p>There is also an R package called <code>gapminder</code>. When you install this package, it loads in some of the data from gapminder, so we can play with it in R.</p>
 <p>If you don’t have the gapminder package installed, you can install it by running this code</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="lab-1-graphing-data.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gapminder&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="lab-1-graphing-data.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gapminder&quot;</span>)</span></code></pre></div>
 <p>Once the package is installed, you need to load the new library, like this. Then, you can put the <code>gapminder</code> data into a data frame, like we do here: <code>gapminder_df</code>.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="lab-1-graphing-data.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
-<span id="cb33-2"><a href="lab-1-graphing-data.html#cb33-2" aria-hidden="true" tabindex="-1"></a>gapminder_df<span class="ot">&lt;-</span>gapminder</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-1-graphing-data.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb31-2"><a href="lab-1-graphing-data.html#cb31-2" aria-hidden="true" tabindex="-1"></a>gapminder_df<span class="ot">&lt;-</span>gapminder</span></code></pre></div>
 <div id="look-at-the-data-frame" class="section level4" number="1.2.7.1">
 <h4><span class="header-section-number">1.2.7.1</span> Look at the data frame</h4>
 <p>You can look at the data frame to see what is in it, and you can use <code>summarytools</code> again to view a summary of the data.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="lab-1-graphing-data.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(gapminder_df))</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="lab-1-graphing-data.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(gapminder_df))</span></code></pre></div>
 <p>There are 1704 rows of data, and we see some columns for country, continent, year, life expectancy, population, and GDP per capita.</p>
 </div>
 </div>
@@ -984,27 +981,27 @@ or make things small… just to see what happens</p>
 <div id="life-expectancy-histogram" class="section level4" number="1.2.8.1">
 <h4><span class="header-section-number">1.2.8.1</span> Life Expectancy histogram</h4>
 <p>How long are people living all around the world according to this data set? There are many ways we could plot the data to find out. The first way is a histogram. We have many numbers for life expectancy in the column <code>lifeExp</code>. This is a big sample, full of numbers for 142 countries across many years. It’s easy to make a histogram in ggplot to view the distribution:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="lab-1-graphing-data.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
-<span id="cb35-2"><a href="lab-1-graphing-data.html#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="lab-1-graphing-data.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb33-2"><a href="lab-1-graphing-data.html#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="Statistics_Lab_files/figure-html/1gapminder-1.png" width="672" /></p>
 <p>See, that was easy. Next, is a code block that adds more layers and settings if you wanted to modify parts of the graph:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-1-graphing-data.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb37-2"><a href="lab-1-graphing-data.html#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>)<span class="sc">+</span> </span>
-<span id="cb37-3"><a href="lab-1-graphing-data.html#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb37-4"><a href="lab-1-graphing-data.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Frequency count&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb37-5"><a href="lab-1-graphing-data.html#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span></span>
-<span id="cb37-6"><a href="lab-1-graphing-data.html#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Histogram of Life Expectancy from Gapminder&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="lab-1-graphing-data.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb35-2"><a href="lab-1-graphing-data.html#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>)<span class="sc">+</span> </span>
+<span id="cb35-3"><a href="lab-1-graphing-data.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb35-4"><a href="lab-1-graphing-data.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Frequency count&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb35-5"><a href="lab-1-graphing-data.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span></span>
+<span id="cb35-6"><a href="lab-1-graphing-data.html#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Histogram of Life Expectancy from Gapminder&quot;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="Statistics_Lab_files/figure-html/1gapminderB-1.png" width="672" /></p>
 <p>The histogram shows a wide range of life expectancies, from below 40 to just over 80. Histograms are useful, they can show you what kinds of values happen more often than others.</p>
 <p>One final thing about histograms in ggplot. You may want to change the bin size. That controls how wide or narrow, or the number of bars (how they split across the range), in the histogram. You need to set the <code>bins=</code> option in <code>geom_histogram()</code>.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-1-graphing-data.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb39-2"><a href="lab-1-graphing-data.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>, <span class="at">bins=</span><span class="dv">50</span>)<span class="sc">+</span> </span>
-<span id="cb39-3"><a href="lab-1-graphing-data.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb39-4"><a href="lab-1-graphing-data.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Frequency count&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-5"><a href="lab-1-graphing-data.html#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-6"><a href="lab-1-graphing-data.html#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Histogram of Life Expectancy from Gapminder&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-1-graphing-data.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">x =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb37-2"><a href="lab-1-graphing-data.html#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;white&quot;</span>, <span class="at">bins=</span><span class="dv">50</span>)<span class="sc">+</span> </span>
+<span id="cb37-3"><a href="lab-1-graphing-data.html#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb37-4"><a href="lab-1-graphing-data.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Frequency count&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb37-5"><a href="lab-1-graphing-data.html#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-6"><a href="lab-1-graphing-data.html#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Histogram of Life Expectancy from Gapminder&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1gapminderC-1.png" width="672" /></p>
 <p>See, same basic patter, but now breaking up the range into 50 little equal sized bins, rather than 30, which is the default. You get to choose what you want to do.</p>
 </div>
@@ -1012,60 +1009,60 @@ or make things small… just to see what happens</p>
 <h4><span class="header-section-number">1.2.8.2</span> Life Expectancy by year Scatterplot</h4>
 <p>We can see we have data for life expectancy and different years. So, does worldwide life expectancy change across the years in the data set? As we go into the future, are people living longer?</p>
 <p>Let’s look at this using a scatter plot. We can set the x-axis to be year, and the y-axis to be life expectancy. Then we can use <code>geom_point()</code> to display a whole bunch of dots, and then look at them. Here’s the simple code:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="lab-1-graphing-data.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year))<span class="sc">+</span></span>
-<span id="cb40-2"><a href="lab-1-graphing-data.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="lab-1-graphing-data.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year))<span class="sc">+</span></span>
+<span id="cb38-2"><a href="lab-1-graphing-data.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1scatterplot-1.png" width="672" /></p>
 <p>Whoa, that’s a lot of dots! Remember that each country is measured each year. So, the bands of dots you see, show the life expectancies for the whole range of countries within each year of the database. There is a big spread inside each year. But, on the whole it looks like groups of dots slowly go up over years.</p>
 </div>
 <div id="one-country-life-expectancy-by-year" class="section level4" number="1.2.8.3">
 <h4><span class="header-section-number">1.2.8.3</span> One country, life expectancy by year</h4>
 <p>I’m (Matt) from Canada, so maybe I want to know if life expectancy for Canadians is going up over the years. To find out the answer for one country, we first need to split the full data set, into another smaller data set that only contains data for Canada. In other words, we want only the rows where the word “Canada” is found in the <code>country</code> column. We will use the <code>filter</code> function from <code>dplyr</code> for this:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-1-graphing-data.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter rows to contain Canada</span></span>
-<span id="cb41-2"><a href="lab-1-graphing-data.html#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="lab-1-graphing-data.html#cb41-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> gapminder_df <span class="sc">%&gt;%</span> </span>
-<span id="cb41-4"><a href="lab-1-graphing-data.html#cb41-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Canada&quot;</span>)</span>
-<span id="cb41-5"><a href="lab-1-graphing-data.html#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-6"><a href="lab-1-graphing-data.html#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the new data contained in smaller_df</span></span>
-<span id="cb41-7"><a href="lab-1-graphing-data.html#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-8"><a href="lab-1-graphing-data.html#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year))<span class="sc">+</span></span>
-<span id="cb41-9"><a href="lab-1-graphing-data.html#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-1-graphing-data.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter rows to contain Canada</span></span>
+<span id="cb39-2"><a href="lab-1-graphing-data.html#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="lab-1-graphing-data.html#cb39-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> gapminder_df <span class="sc">%&gt;%</span> </span>
+<span id="cb39-4"><a href="lab-1-graphing-data.html#cb39-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Canada&quot;</span>)</span>
+<span id="cb39-5"><a href="lab-1-graphing-data.html#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="lab-1-graphing-data.html#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the new data contained in smaller_df</span></span>
+<span id="cb39-7"><a href="lab-1-graphing-data.html#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-8"><a href="lab-1-graphing-data.html#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year))<span class="sc">+</span></span>
+<span id="cb39-9"><a href="lab-1-graphing-data.html#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1scatterB-1.png" width="672" /></p>
 <p>I would say things are looking good for Canadians, their life expectancy is going up over the years!</p>
 </div>
 <div id="multiple-countries-scatterplot" class="section level4" number="1.2.8.4">
 <h4><span class="header-section-number">1.2.8.4</span> Multiple countries scatterplot</h4>
 <p>What if we want to look at a few countries altogether. We can do this too. We just change how we filter the data so more than one country is allowed, then we plot the data. We will also add some nicer color options and make the plot look pretty. First, the simple code:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="lab-1-graphing-data.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter rows to contain countries of choice</span></span>
-<span id="cb42-2"><a href="lab-1-graphing-data.html#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="lab-1-graphing-data.html#cb42-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> gapminder_df <span class="sc">%&gt;%</span> </span>
-<span id="cb42-4"><a href="lab-1-graphing-data.html#cb42-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Canada&quot;</span>,<span class="st">&quot;France&quot;</span>,<span class="st">&quot;Brazil&quot;</span>) <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
-<span id="cb42-5"><a href="lab-1-graphing-data.html#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-6"><a href="lab-1-graphing-data.html#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the new data contained in smaller_df</span></span>
-<span id="cb42-7"><a href="lab-1-graphing-data.html#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-8"><a href="lab-1-graphing-data.html#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, <span class="at">group=</span> country))<span class="sc">+</span></span>
-<span id="cb42-9"><a href="lab-1-graphing-data.html#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="lab-1-graphing-data.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter rows to contain countries of choice</span></span>
+<span id="cb40-2"><a href="lab-1-graphing-data.html#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="lab-1-graphing-data.html#cb40-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> gapminder_df <span class="sc">%&gt;%</span> </span>
+<span id="cb40-4"><a href="lab-1-graphing-data.html#cb40-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Canada&quot;</span>,<span class="st">&quot;France&quot;</span>,<span class="st">&quot;Brazil&quot;</span>) <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb40-5"><a href="lab-1-graphing-data.html#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="lab-1-graphing-data.html#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the new data contained in smaller_df</span></span>
+<span id="cb40-7"><a href="lab-1-graphing-data.html#cb40-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-8"><a href="lab-1-graphing-data.html#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, <span class="at">group=</span> country))<span class="sc">+</span></span>
+<span id="cb40-9"><a href="lab-1-graphing-data.html#cb40-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1scatterC-1.png" width="672" /></p>
 <p>Nice, we can now see three sets of dots, but which are countries do they represent? Let’s add a legend, and make the graph better looking.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-1-graphing-data.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df,<span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, </span>
-<span id="cb43-2"><a href="lab-1-graphing-data.html#cb43-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">group=</span> country, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb43-3"><a href="lab-1-graphing-data.html#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
-<span id="cb43-4"><a href="lab-1-graphing-data.html#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb43-5"><a href="lab-1-graphing-data.html#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb43-6"><a href="lab-1-graphing-data.html#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Year&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-7"><a href="lab-1-graphing-data.html#cb43-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Life expectancy by year for three countries&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-1-graphing-data.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df,<span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, </span>
+<span id="cb41-2"><a href="lab-1-graphing-data.html#cb41-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">group=</span> country, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb41-3"><a href="lab-1-graphing-data.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
+<span id="cb41-4"><a href="lab-1-graphing-data.html#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb41-5"><a href="lab-1-graphing-data.html#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb41-6"><a href="lab-1-graphing-data.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Year&quot;</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a href="lab-1-graphing-data.html#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Life expectancy by year for three countries&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1scatterD-1.png" width="672" /></p>
 </div>
 <div id="geom_line-connecting-the-dots" class="section level4" number="1.2.8.5">
 <h4><span class="header-section-number">1.2.8.5</span> geom_line() connecting the dots</h4>
 <p>We might also want to connect the dots with a line, to make it easier to see the connection! Remember, ggplot2 draws layers on top of layers. So, we add in a new <code>geom_line()</code> layer.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lab-1-graphing-data.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df,<span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, </span>
-<span id="cb44-2"><a href="lab-1-graphing-data.html#cb44-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">group=</span> country, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb44-3"><a href="lab-1-graphing-data.html#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
-<span id="cb44-4"><a href="lab-1-graphing-data.html#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
-<span id="cb44-5"><a href="lab-1-graphing-data.html#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb44-6"><a href="lab-1-graphing-data.html#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb44-7"><a href="lab-1-graphing-data.html#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Year&quot;</span>) <span class="sc">+</span></span>
-<span id="cb44-8"><a href="lab-1-graphing-data.html#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Life expectancy by year for three countries&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="lab-1-graphing-data.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df,<span class="fu">aes</span>(<span class="at">y=</span> lifeExp, <span class="at">x=</span> year, </span>
+<span id="cb42-2"><a href="lab-1-graphing-data.html#cb42-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">group=</span> country, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="lab-1-graphing-data.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
+<span id="cb42-4"><a href="lab-1-graphing-data.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb42-5"><a href="lab-1-graphing-data.html#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb42-6"><a href="lab-1-graphing-data.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb42-7"><a href="lab-1-graphing-data.html#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Year&quot;</span>) <span class="sc">+</span></span>
+<span id="cb42-8"><a href="lab-1-graphing-data.html#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Life expectancy by year for three countries&quot;</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/1scatline-1.png" width="672" /></p>
 </div>
 </div>
@@ -1216,7 +1213,9 @@ SPSS will produce output containing a scatterplot. What relationship do you noti
 <div id="opening-jamovi-and-reviewing-the-jamovi-layout" class="section level3" number="1.5.1">
 <h3><span class="header-section-number">1.5.1</span> Opening jamovi and reviewing the jamovi layout</h3>
 <hr />
-<p>Your lab instructor will take you through the process of downloading, installing, and opening the jamovi program. You may double-click on its icon located on the desktop of your computer, or you may find it using the Start menu. Once the program loads, you can click on the button that looks like three horizontal lines at the top left. This bottom reveals a menu. Take note that you have some familiar options here: New (for a new file), Open (to open an existing file), and Save. For now, we will be examining the basic layout of jamovi without a data set, so you can click the left facing arrow to close this menu.</p>
+<p>To open jamovi if you are using Windows, either double-click its icon located on the desktop of your computer, or click it in the Start menu.</p>
+<p>To open jamovi if you are using a Mac, find the icon in your Applications folder and double-click it.</p>
+<p>Once the program loads, you can click on the button that looks like three horizontal lines at the top left. This bottom reveals a menu. Take note that you have some familiar options here: New (for a new file), Open (to open an existing file), and Save. For now, we will be examining the basic layout of jamovi without a data set, so you can click the left facing arrow to close this menu.</p>
 <p>Once you do, the main jamovi spreadsheet should be apparent. It will look like this, with a basic spreadsheet on the left and a results pane on the right:</p>
 <div class="figure"><span id="fig:unnamed-chunk-23"></span>
 <img src="img/1.5.1.1.png" alt="Empty jamovi spreadsheet"  />
@@ -1241,82 +1240,47 @@ Figure 1.2: Empty jamovi spreadsheet
 <p><img src="img/1.5.2.3.png" /><!-- --></p>
 <p>You may want to click the arrowhead that points to the left or right to move to an adjacent variable. Alternatively, clicking the <span style="color:blue">Setup</span> button again or clicking the upward facing arrow will hide this variable attribute information from your view.</p>
 </div>
-<div id="opening-a-data-file-and-producing-different-types-of-graphs-1" class="section level3" number="1.5.3">
-<h3><span class="header-section-number">1.5.3</span> Opening a data file and producing different types of graphs</h3>
+<div id="importing-a-data-file" class="section level3" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Importing a data file</h3>
 <hr />
-<p>Now that we know about the properties of the jamovi spreadsheet window, let’s open a data file and learn how to make some sense of it by creating different types of graphs. (It is not important for you to <span style="color:blue">Save</span> the jamovi file you just created because we will not be doing anything with those fictitious height data.) Click the button that looks like three horizontal lines at the top left. Select <span style="color:blue">Open</span> and let’s open the EngageNS data set which was made available to you via a link. Remember that EngageNS surveyed Nova Scotians about various aspects of their quality of life.</p>
-<p>The data dictionary was also provided to you via a link. The dictionary lists all the variables that were included in the EngageNS survey and shows how they were measured.</p>
-<p>Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Switch over to Variable View for details of each variable. Take a look at the rows and columns in each file. Each <em>column</em> represents a <em>different variable</em> that was measured in the EngageNS survey. Each <em>row</em> represents the responses of a <em>single survey respondent</em>.</p>
-<div id="bar-graphs-1" class="section level4" number="1.5.3.1">
-<h4><span class="header-section-number">1.5.3.1</span> Bar Graphs</h4>
-<hr />
-<p>Now, let’s refocus on the spreadsheet view. We will not be working with every single variable in this spreadsheet, but we’ll select a few interesting ones with which to answer questions. Let’s start with <code>PARSPORT</code>. Suppose we wanted to know how many respondents in the EngageNS survey are members of or participants in sports or recreational organizations. Let’s use jamovi to produce a graph to answer this question. With your data file open, go up to the <code>Analyses</code> tab on the top menu and choose <span style="color:blue">Exploration</span>, then <span style="color:blue">Descriptive</span>.</p>
-<p><img src="img/1.5.3.1.png" /><!-- --></p>
-<p>You will see an entire new window with the analysis options and results will appear in the Results pane as you select options for the analysis.</p>
-<p><img src="img/1.5.3.2.png" /><!-- --></p>
-<p>The window that appears contains every variable in your spreadsheet listed on the left-hand side. We can choose one variable at a time to plot. Notice that jamovi allows you to search through that long list of variables by clicking on the magnifying glass icon. It will be important to know the names of the variables for which you are searching. Look in the data dictionary to find the names of variables of interest to you as you run your analyses.</p>
-<p>Let’s think about the nature of our question. We would like to know how many people in the data set indicated that they participate in sports and/or recreational organization. <code>PARSPORT</code> is the name of the variable in jamovi, and it is measured using a Yes/No response scale. This is a nominal scale variable and so we will appropriately choose a BAR graph to plot it.</p>
-<p>In the Descriptives window, select the variable of interest for the graph by highlighting <code>PARSPORT</code> and using the arrow to move it to the Variables window on the right. Then, click on <span style="color:blue">Plots</span>. You will see a number of options available. Select <span style="color:blue">Bar plot</span>…</p>
-<p><img src="img/1.5.3.3.png" /><!-- --></p>
-<p>In the Results pane, you will see a Descriptives table was produced when you selected the variable, and a bar graph was produced when you selected <span style="color:blue">Bar plot</span>. Notice how many respondents are involved in sports/recreational organizations and how many are not. Roughly how many people participate in sports/recreational organizations? How many do not?</p>
-<p><img src="img/1.5.3.4.png" /><!-- --></p>
-<p><img src="img/1.5.3.5.png" /><!-- --></p>
-<p>To answer the questions about participants involved in sports/recreational organizations, we need to turn to the data dictionary to find out what the codes 1 and 2 represent.</p>
-<p><img src="img/1.5.3.6.png" /><!-- --></p>
-<p>When viewing the data in <code>PARSPORT</code>, we read the code 1 as YES and the code 2 as NO. By looking at the bar graph, we might estimate that about 3000-3500 respondents participate in sports/recreational organizations and perhaps about 9000 do not.</p>
-<p>Our purpose in this section is to make graphs and read them for information; however, let’s take the chance to discuss a way you could quickly check your estimates. In the Descriptives window, when requesting the descriptive table and bar graph, we could also select the variable click on <span style="color:blue">Frequency</span>. You will see a frequency table appear in the Results pane. The reported frequencies are in line with our estimates based on the bar graph.</p>
-<p><img src="img/1.5.3.7.png" /><!-- --></p>
-<p>Your bar graph will have as many bars as there are categories in your nominal variable. For example, if you want to know how many respondents were from each region of NS, create a bar graph for REGION. The number of regions from which the survey participants come is represented by the number of bars on your graph.</p>
-<p>If you want to construct this graph without moving both <code>PARSPORT</code> and <code>REGION</code> into the same Descriptives table, you can click on the arrow that faces to the right to close the Descriptives analysis and bar plot that you just completed, and then, click on the <span style="color:blue">Exploration</span> and <span style="color:blue">Descriptives</span> commands again. Now, you can repeat the process looking at only <code>REGION</code>.</p>
-<p><img src="img/1.5.3.8.png" /><!-- --></p>
-<p>From how many regions in Canada did the survey participants come?</p>
-<p><img src="img/1.5.3.9.png" /><!-- --></p>
+<p>Now that we know about the properties of the jamovi spreadsheet window, let’s import a data file and learn how to make some sense of it by creating different types of graphs. (It is not important for you to <span style="color:blue">Save</span> the jamovi file you just created because we will not be doing anything with those fictitious height data).</p>
+<p>First, you need to agree to some terms of use for the data we will be using in this class. Complete the quiz <a href="https://moodle.stfx.ca/mod/quiz/view.php?id=830016">here</a>.</p>
+<p>Next, you can download the data file <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017">here</a>. The data file is an Excel spreadsheet (xlsx file). Remember to save the file somewhere sensible on your computer so you can find it later.</p>
+<p>In jamovi, click the button that looks like three horizontal lines at the top left. Select <span style="color:blue">Import</span>. Click <span style="color:blue">Browse</span>, locate the xlsx file you just downloaded, and double click. It is a somewhat large file and will take a few minutes to import. Once it is finished, we want to save it in jamovi format (omv). Click the button that looks like three horizontal lines at the top left. Select Save As, type a sensible name for your file,ensure it is set to “jamovi file (.omv),” click browse and select the folder in which to save your file, and click Save.</p>
+<p>Remember that EngageNS surveyed Nova Scotians about various aspects of their quality of life.
+The data dictionary, which is a *.pdf file found <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017">here</a>, lists all the variables that were included in the EngageNS survey and shows how they were measured.</p>
+<p>Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Take a look at the rows and columns in each file. Each <em>column</em> represents a <em>different variable</em> that was measured in the EngageNS survey. Each <em>row</em> represents the responses of a <em>single survey respondent</em>.</p>
+<p>Switch over to the Variables tab for details of each variable. JAMOVI has attempted to sort out the scale of measurement for each variable, based on the data. Sometimes it gets it right, but sometimes it doesn’t. We can use the data dictionary and what we know about scales of measurement to input the correct scales of measurement as needed.</p>
 </div>
-<div id="histograms-1" class="section level4" number="1.5.3.2">
-<h4><span class="header-section-number">1.5.3.2</span> Histograms</h4>
+<div id="graphs" class="section level3" number="1.5.4">
+<h3><span class="header-section-number">1.5.4</span> Graphs</h3>
 <hr />
-<p>Now, let’s use a different variable to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). A second difference, and one that is more noticeable, is that, in histograms, the bars touch one another while there are gaps between the bars in bar graphs. This is a visual way to show that these types of graphs represent variables measured on different scales of measurement. Histograms are used to represent variables that are measured on continuous scales (e.g., interval or ratio scales). The bars in a histogram touch indicating the continuous nature of the measurement scale.</p>
-<p>In the previous example, respondents indicated simply whether they were or were not participants in sports/recreational organizations. Their responses were either yes or no; therefore, the data is categorical and was measured on a nominal scale. Given that the data is categorical, the gaps between the bars in the bar graph we made earlier represent the non-continuous nature of the data.</p>
-<p>Here, we will deal with people’s self-reported mental health recorded as variable <code>MNTLHLTH</code>. In the EngageNS survey, respondents were asked to rate their own mental health on a 5-point scale, ranging from 1 to 5 where 1 = <em>poor</em>, 2 = <em>fair</em>, 3 = <em>good</em>, 4 = <em>very good</em>, and 5 = <em>excellent</em>.</p>
-<p>TO BE DEVELOPED: DISCUSSION ABOUT ERRORS IN jamovi’s READING OF THE VARIABLE ATTRIBUTES. IT IS NOT A NOMINAL VARIABLE. IT MIGHT BE CONSIDERED ORDINAL OR INTERVAL. ALSO, THIS IS AN APPROPRIATE PLACE TO SHOW STUDENTS HOW TO ADD THE LEVELS/VALUE LABELS BY GOING BACK TO THE DATA DICTIONARY TO THINK ABOUT WHAT THE 1-5 MEAN.
-Visual for errors in variable attributes:
-<img src="img/1.5.3.9B.png" /><!-- -->
-Visual for codes and what they represent from data dictionary:
-<img src="img/1.5.3.9C.png" /><!-- --></p>
-<p>Let’s plot a histogram for this variable. (Remember to close the Descriptives menu, by clicking on the arrow facing to the right, before you keep going unless you want to run the same analyses on a number of variables.) We want to put our variable of interest - <code>MNTLHLTH</code> - on the x-axis and frequency for each score on the y-axis. If you will recall, there were a number of options for types of graphs in the sub-menu we used for the bar graph. It is in that sub-menu where we will find the histogram option.</p>
-<p>Under the <span style="color:blue">Analyses</span> tab, choose <span style="color:blue">Descriptives</span> in the top menu. Let’s either use the search function or scroll through the variable list to find <code>MNTLHLTH</code>. Using the arrow, move that variable into the “Variables” window. Now, click on <span style="color:blue">Plots</span>. Remember we want a histogram, not a bar graph, so let’s select <span style="color:blue">Histogram</span>…</p>
-<p><img src="img/1.5.3.10.png" /><!-- --></p>
-<p>jamovi will produce an output window containing the distribution of scores for respondents’ self-reported mental health.</p>
-<p><img src="img/1.5.3.11.png" /><!-- --></p>
-<p>The histogram produced is not helpful in terms of allowing us to view numbers of respondents on the <em>y</em>-axis. Let’s click to select <span style="color:blue">Frequency tables</span> so we can view the numbers of respondents under each code.</p>
-<p><img src="img/1.5.3.12.png" /><!-- --></p>
-<p>Using the <span style="color:blue">Save as</span> command found when you click on the button that looks like three horizontal lines in the menu at the top of the jamovi screen, remember to save and name your file if you think you may want to look at it again in the future.</p>
-<p><img src="img/1.5.3.13.png" /><!-- --></p>
+<div id="bar-graphs-and-histograms" class="section level4" number="1.5.4.1">
+<h4><span class="header-section-number">1.5.4.1</span> Bar Graphs and Histograms</h4>
+<p>Bar graphs and histograms are different types of graphs. Bar graphs are used for nominal variables. The y-axis of a bar graph could be the mean of each level, the frequency of each level, or some other summary of each level.</p>
+<p>Histograms are used for continuous variables (interval or ratio scales of measurement). The y-axis is always frequency. Sometimes they are labeled “count” or “density,” but they always represent the number of times certain values appear in the data.</p>
+<p>Are ordinal variables continuous? No. However, many ordinal variables can be conceptualized as quasi-interval. Likert scales are often quasi-interval. For the scale to be quasi-interval, we generally require at least five options on the scale. In addition, it should be reasonable to assume equal spacing between options on the scale. For example, a scale with the following options might be considered quasi-interval, because there are five options and they all seem equally spaced from one another:
+Strongly disagree, somewhat disagree, neither agree or disagree, somewhat agree, strongly agree</p>
+<p>A quirk of JAMOVI is that histograms do not include numbers on the y-axis, which makes them difficult to read. However, bar graphs do include numbers on the y-axis. For small, quasi-interval scales, you can approximate a histogram with a bar graph. The biggest difference is that usually histograms do not have any space between the bars, whereas bar graphs do have space between the bars, but this is not problematic for small, quasi-interval scales.</p>
+<p>Let’s use a bar graph to approximate a histogram for participant’s self-reported mental health. In the EngageNS survey, respondents were asked to rate their own mental health on a 5-point scale, ranging from 1 to 5 where 1 = <em>poor</em>, 2 = <em>fair</em>, 3 = <em>good</em>, 4 = <em>very good</em>, and 5 = <em>excellent</em>. The variable name is <code>MNTLHLTH</code>.</p>
+<p>The first thing to check is whether the variable’s properties are correct.</p>
+<p>We will explain the following two figures during the lab.</p>
+<p>Visual for errors in variable attributes:</p>
+<p><img src="img/1.5.3.9B.png" /><!-- --></p>
+<p>Visual for codes and what they represent from data dictionary:</p>
+<p><img src="img/1.5.3.9C.png" /><!-- --></p>
+<p>Let’s plot a histogram for this variable. We will do this as a live demo in the lab.</p>
 </div>
 </div>
-<div id="homework-1" class="section level3" number="1.5.4">
-<h3><span class="header-section-number">1.5.4</span> Homework</h3>
+<div id="homework-1" class="section level3" number="1.5.5">
+<h3><span class="header-section-number">1.5.5</span> Homework</h3>
 <hr />
-<p>Create the following two graphs in a single jamovi file (*.omv). Upload this file to Moodle and use the graphs to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.</p>
-<p>Use the EngageNS data to answer the following questions and to create graphs:</p>
-<ol style="list-style-type: decimal">
-<li>Respondents were asked to indicate their main form of transportation to get to their main job. The variable name is WORK_TRANS. Responses were given on the following response scale: 1 = walk, 2 = bicycle, 3 = personal car, 4 = public transport, 5 = other.</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li><p>Create the most appropriate type of graph for this data.</p></li>
-<li><p>Which form of transportation was used by the most respondents? The least?</p></li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Respondents were asked to rate the overall accessibility of the health care services in the community. The variable name is ACCESS_HLTH. Responses were measured on a 5-point scale: 1 = poor, 2 = fair, 3 = good, 4 = very good, 5 = excellent.</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li><p>Create the most appropriate type of graph for this data.</p></li>
-<li><p>What do you learn by looking at the graph?</p></li>
-<li><p>What would you suggest to government officials about access to health care based on this data?</p></li>
-</ol>
+<p>See Moodle.
+<br><br><br></p>
 </div>
-<div id="thinking-about-data---practice-questions" class="section level3" number="1.5.5">
-<h3><span class="header-section-number">1.5.5</span> Thinking about Data - Practice Questions</h3>
+<div id="thinking-about-data---practice-questions" class="section level3" number="1.5.6">
+<h3><span class="header-section-number">1.5.6</span> Thinking about Data - Practice Questions</h3>
+<hr />
 <ol style="list-style-type: decimal">
 <li>Describe what histograms are, how to interpret them, and what they are useful for. You should answer each of these questions:</li>
 </ol>
@@ -1375,7 +1339,6 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

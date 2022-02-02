@@ -485,3 +485,6 @@ reviewing-variable-properties-and-the-setup-button
 importing-a-data-file
 graphs
 bar-graphs-and-histograms
+selecting-the-appropriate-descriptive-statistics
+selecting-the-central-tendency-measure
+selecting-the-variation-measure

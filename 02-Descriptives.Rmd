@@ -533,9 +533,67 @@ In this lab, we will use jamovi to calculate a variety of descriptive statistics
 1. Select and calculate descriptive statistics
 2. Create and interpret a boxplot
 
+### Pre-lab tasks
+
+---
+
+<b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to virtual help hours if you run into any trouble. 
+
+If you have not already done so, read the "Expectations for lab" posts in our Q&A forum: <a href="https://moodle.stfx.ca/mod/forum/view.php?id=815450" target="_blank">https://moodle.stfx.ca/mod/forum/view.php?id=815450</a>.
+
+We have updated the EngageNS dataset. Please delete your current version and download the latest csv file here: <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017" target="_blank">https://moodle.stfx.ca/mod/url/view.php?id=830017</a>. If this link does not work for you, you may need to complete the EngageNS terms of use quiz here: <a href="https://moodle.stfx.ca/mod/quiz/view.php?id=830016" target="_blank">https://moodle.stfx.ca/mod/quiz/view.php?id=830016</a>.
+
+If you have not already done so, you should also download the data dictionary. It is the pdf file in the OneDrive directory from which you just downloaded the .csv file. The data dictionary contains important information about what the data mean.
+
+Open JAMOVI. It might be slow to open.
+
+Click on the three lines near the top left of the JAMOVI window (circled in red below).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/3lines.png')
+```
+
+Click Import (solid red circle) and then Browse (dashed red circle).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/import_browse.png')
+```
+
+Find the new EngageNS .csv data file you just downloaded. Select it and click open. It may take a few minutes to open.
+
+When it has finished opening, your JAMOVI window should look something like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/engagens_orig_data.png')
+```
+
+You can delete the first three columns. Click the `Data` tab, select a column by clicking on the header (the name of the column, e.g., `A`), and then click the Delete column button (red circle below).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/deletecol.png')
+```
+
+Now save your file as a JAMOVI (.omv) file. Click the three horizontal lines, then click Save As. Input a sensible filename and make sure your file type is set to `jamovi file (.omv)` (red circle below). 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/saveasjamovi.png')
+```
+
+Browse to your PSYC 292 lab folder, and click save.
+
+You are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.
+
+<b>Come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
+
+### The basics
+
+---
+
+In JAMOVI, click the three horizontal lines and then click `New` to open a new file.
+
 Let's begin with a short data set {x = 1, 1, 4, 1, 2, 5, 7}
 
-Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In <span style="color:blue">Setup</span>, I have also changed the name of this variable to `X` and changed the scale to continuous.):
+Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into our new jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In <span style="color:blue">Setup</span>, I have also changed the name of this variable to `X` and changed the scale to continuous.):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.5.1.png')
@@ -545,7 +603,7 @@ knitr::include_graphics('img/2.5.1.png')
 
 ---
 
-From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. These commands should feel familiar if you completed the lab on creating graphs (bar graphs and histograms):
+From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. 
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -564,56 +622,126 @@ Recall from the earlier instructions that we would also like to look at the mode
 knitr::include_graphics('img/2.5.4.png')
 ```
 
-
 In the Results pane, you should see the additional descriptive statistics appear as you select them. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.5.5.png')
 ```
 
-### Descriptive Statistics and Histograms
+### Descriptive Statistics and Graphs
 
 ---
 
-Now, let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the EngageNS data. Remember, you should have already saved a .omv (JAMOVI file) of the EngageNS data on your computer. 
+#### Example 1: Sleep
+
+Now, let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the EngageNS data. Remember, you should have already opened your .omv (JAMOVI file) of the EngageNS data on your computer. 
+
+Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file. When you are ready to start your homework, you can open the original file, save a copy with a new name, and create your homework output in that new file. 
 
 Suppose we wanted to know about Nova Scotian’s sleep duration. We can use both descriptive statistics and graphs such as histograms to explore a variable such as sleep duration. 
 
-Let’s consider the variable of interest. According to the data dictionary, `SLEEP` is the number of hours participants’ reported sleep per day, and it includes both night time and naps. To find the `SLEEP` variable, first click on the Variables tab near the top left (red circle)
-
-Now you can search for your variable of interest by typing in the search bar. Select `SLEEP` from the list. When you click back to the Data tab (next to the Variables tab), you will be on the `SLEEP` variable.
-
-While `SLEEP` is highlighted, click on the <span style="color:blue">Settings</span> button. Consider including a variable description based on the information in the EngageNS data dictionary. Also, ensure that the information jamovi included for the variable attributes is correct based on your interpretation of this variable. On which scale of measurement is `SLEEP` measured? 
-
-After you have considered the variable attributes, click on <span style="color:blue">Descriptives</span> again, or click on the up arrow to close the Settings panel. As you will recall, to get jamovi to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Click on the magnifying glass icon at the top of the list of variables to search. Select `SLEEP` and use the right arrow to move it to the “Variable” window at the right. Remember: You may be able to find the variable of interest more quickly if you use the “Search” function by clicking on the magnifying glass and searching with the variable name.
+You can find information about the `SLEEP` variable in the data dictionary.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.16.png')
+knitr::include_graphics('img/sleepdatadictionary.png')
 ```
 
-The default settings may not give us all descriptive statistics in which we are interested. Let’s consider the scale of measurement. Which measure(s) of central tendency is(are) appropriate to consider based on this scale of measurement? 
+According to the data dictionary, `SLEEP` is the number of hours participants’ reported sleep per day, and it includes both night time and naps. To find the `SLEEP` variable, first click on the Variables tab near the top left (red circle). Now you can search for your variable of interest by typing in the search bar. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.17.png')
+knitr::include_graphics('img/sleepsearch.png')
 ```
 
-As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">( standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. 
+You will notice that there are two variables with similar names, `SLEEP` and `R_SLEEP`. In the EngageNS data, variables that start with `R_` are revised variables. This means they have been cleaned in some way. Not all variables needed cleaning, so they do not have a `R_` version. Always use the `R_` variable if it is there. We will see why in a minute!
+
+For our purposes right now, select `SLEEP` from the list by checking the box. When you click back to the Data tab (next to the Variables tab), you will be on the `SLEEP` variable.
+
+While `SLEEP` is highlighted, click on the <span style="color:blue">Setup</span> button. Consider including a variable description based on the information in the EngageNS data dictionary. Also, ensure that the information jamovi included for the variable attributes is correct based on your interpretation of this variable. `SLEEP` is measured in number of hours. It has equal intervals and a true zero (you can't have negative sleep). So, our `SLEEP` variable is a ratio scale. The measure type is set to continuous, so we are good to go. 
+
+After you have considered the variable attributes, click on <span style="color:blue">Descriptives</span> again, or click on the up arrow to close the Setup panel. As you will recall, to get jamovi to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Click on the magnifying glass icon at the top of the list of variables to search. Select `SLEEP` and use the right arrow to move it to the “Variable” window at the right. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.18.png')
+knitr::include_graphics('img/movesleep.png')
 ```
 
-As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel. Now, we can conveniently ask SPSS to insert a histogram. Let's click on the <span style="color:blue">Plots</span> button, and select <span style="color:blue">Histogram</span>:
+The default settings may not give us all descriptive statistics in which we are interested. Let’s consider the scale of measurement. Which descriptive statistics are appropriate to consider based on this scale of measurement? The most typical choice for a ratio scale of measurement is to report the mean for central tendency, and the standard deviation for variation. Other choices might also be correct, depending on the data and your research question.
+
+As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">( standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.19.png')
+knitr::include_graphics('img/sleepdescriptives.png')
 ```
 
-Below the table of requested descriptive statistics, jamovi will produce a histogram showing the distribution of sleep (in hours). 
+So, we have a mean of 674, a median of 7, and a mode of 7. Pause for a moment and think about that. What does the `SLEEP` variable represent again? Hours of sleep per day. This table is saying that, on average, Nova Scotians sleep for 674 hours per day. What's going on?
+
+In brief, the `SLEEP` variable contains some garbage data. You can see that the maximum is 8.00e+6 or 8 million hours of sleep. Another way to evaluate the data is to look at the histogram. Scroll down below the descriptive statistics you selected to the Plots section, and select Histogram.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.21.png')
+knitr::include_graphics('img/sleephistogram.png')
 ```
+
+The x-axis on this histogram is too big, because of the garbage data. It doesn't make sense to look at a histogram of sleep from 0 to 8 million hours. Assuming you could fit about 5 bars between 0 and 2 million (2e+06), all that tall bar tells us is that most people sleep between 0 and 400 000 hours. Not very helpful. 
+
+Luckily, we can check the revised sleep variable, `R_SLEEP`. The data in this variable have been cleaned to remove any values above 23. Even a sleep duration of 23 would be a bit silly (would you even have time to fill out the survey if you slept for 23 hours a day?) but at least it is a lower number than the number of hours in the day. Back at the top of this window, move the `R_SLEEP` variable into the Variables box. This will add a new column to our Descriptives table:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/sleepr_sleepdescriptives.png')
+```
+
+The mean of `R_SLEEP` is 7.04 hours. Much more sensible than 674 hours!
+
+We can also ask for a histogram of `R_SLEEP`:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/r_sleephistogram.png')
+```
+
+Now that the x-axis stops at 23 instead of 8e+6, we can see the shape of the distribution much better. The tallest bar is somewhere around 7. Almost all of the responses are between 4 and 10. 
+
+You often have to write sentences to report your descriptive statistics. For sleep, you might write: The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.05 (1.30).
+
+
+#### Example 2: Volunteering
+
+Let's look at another variable. The `VOLUNTEER` variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn't. Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?
+
+Back in the Variables tab, search for VOLUNTEER. Select it by clicking so the check box is visible, and then click the Data tab. Click Setup. The measurement type is nominal, which is correct: the `VOLUNTEER` variable does not have order, equal spacing between intervals, or a true 0. We don't need to fix anything here. 
+
+Click the Analyses tab, then click Exploration and then Descriptives. Search for VOLUNTEER and move the variable into the Variables box (note: there's no `R_VOLUNTEER` variable so we don't have to worry about that in this case). As before, select all the measures of Central Tendency and Dispersion. Your table should look like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/volunteerresults.png')
+```
+
+We can use this table to check our prediction from above. The mode is 1, so most participants reported volunteering in the past year.
+
+We could ask more questions about this variable. How many participants volunteered? You can get that information a few different ways. First, select Frequency tables (red circle):
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/frequencytables.png')
+```
+
+The output panel will now include a new table, Frequencies of VOLUNTEER:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/volunteerfrequenciestable.png')
+```
+
+This table shows that 6715 participants answered with a 1, meaning they did volunteer in the past year, and 6015 answered with a 2, meaning they did not. 
+
+You can also get this information from a bar graph. Under Plots, select Bar plot:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/barplot.png')
+```
+
+Your output panel should now include the following graph: 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/barplotvolunteer.png')
+```
+
+Can you see how the frequencies table and bar plot are related?
 
 
 ### Selecting the appropriate descriptive statistics
@@ -635,53 +763,92 @@ Some concepts can be measured at multiple scales of measurement. Consider, for e
 If, however, we look at `PA_VIGOROUS`, we see that the variable ask participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed, we would likely report the mean. You can see that the answer to a research question about Nova Scotian’s exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
 
 #### Selecting the variation measure
+
 To select the appropriate measure of variation, choose the one that goes best with the central tendency measure you chose. 
 
-  Central tendency     Variation
-  -------------------- --------------------
-  Mode                 Frequency of each category
-  Median               IQR
-  Mean                 SD
-
+  Central tendency        Variation
+  ----------------------- --------------------------
+  Mode                    Frequency of each category
+  Median                  IQR
+  Mean                    SD
 
 As you read more psychology research articles, you might notice it's unusual to see statistical variance reported. In addition, we often report the range in addition to another measure of variation.
 
 
+#### Example: Sense of belonging
+
+Participants were also asked about their sense of belonging to the community. As you will see in the data dictionary, their answers could range from 1 = very weak, to 7 = very strong. While it is not explicitly shown, a 4 would be neutral.
+
+Thinking about scales of measurement, this is an example of an ordinal variable. Let's look at the `BELONGING` variable in the dataset. Select the variable (remember you can search in the Variable tab first to find it faster) and click Setup.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/belongingsetup.png')
+```
+
+This time, we need to change the measurement type. JAMOVI thinks this is a nominal variable, but we know it is ordinal. Change it in the dropdown menu. You may get an error and it may not appear to work. Check whether it worked by closing the Setup panel by clicking the up arrow. You should notice that the icon next to `BELONGING` in the spreadsheet now corresponds to an ordinal variable, so we know we successfully set the measurement type to ordinal.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/belongingordinal.png')
+```
+
+Let's look at how Nova Scotia's rated their sense of belonging. As before, click on the Analysis tab, then Exploration, then Descriptives. Search for the `BELONGING` variable and move it into the Variable box. This time, we are only going to select the descriptive statistics that are appropriate. BELONGING is an ordinal scale of measurement, so we are going to use the median as a measure of central tendency, and the IQR as a measure of variation. Your JAMOVI window will look like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/belongingordinaloutput.png')
+```
+
+You could write a sentence to report these results like this: Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.
+
+Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/belongingquasioutput.png')
+```
+
+Now, you might describe your results with a sentence such as: Participants reported a mean (SD) sense of belonging of 4.61 (1.68), corresponding to a sense of belonging between neutral and very strong.
+
+Finally, you might want to look at the data graphically. A histogram would be appropriate whether you are considering `BELONGING` to be ordinal or quasi-interval.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/belonginghistogram.png')
+```
 
 ### Boxplots
 
----
 Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.
 
 Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
 
-Using the `SLEEP` data, let's create a boxplot to visually inspect the distribution of the data for the variable. To create the boxplot, let's go to <span style="color:blue">Analyze</span> in the top menu, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>. From there, we can click on <span style="color:blue">Plots</span and select <span style="color:blue">Box plot</span
+Using the `SLEEP` and `R_SLEEP` variables, let's create boxplots. Move both variables into the Variables box. Under Plots, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.31.png')
+knitr::include_graphics('img/sleepboxplots.png')
 ```
 
-In the Results panel, jamovi will produce output containing a boxplot. What do you notice about the relative sizes of the second and third quartiles? Are the whiskers the same size? If not, how might you explain the difference?
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.33.png')
-```
-
-Notice the circles beyond the whiskers in the boxplot. These circle represent outliers. You can imagine that the identification of these outliers gives you reason to go investigate your data more closely.
+Just like when we looked at the histograms, the `SLEEP` variable isn't very helpful to look at. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for `R_SLEEP` is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers) and outliers (black dots).
 
 
 ### Editing graphs
 
----
 It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in jamovi. I might suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.
 
 
 ### Homework
 
----
+Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.
+
+To save just your output, click the three lines and select Export. This will allow you to save a pdf. 
+
+See Moodle for the homework questions.
+
 1. Be sure to consider the scales of measurement as you answer the following questions. Calculate the appropriate descriptive statistics and write a paragraph to summarize:
 
-a. Internet access of Nova Scotians using any 2 of the following 3 variables: `INTERNET`, `NET_QUAL`,  and `COMPUTE_HR`.
+Use the data dictionary to determine the scale of measurement of the following variables that relate to internet access.
+
+Calculate an appropriate measure of central tendency for each variable.
+Calculate an appropriate measure of variation for each variable.
+
+a. Internet access of Nova Scotians using any 2 of the following 3 variables: `INTERNET`, `NET_QUAL`,  and `HM_SURF`.
 
 b. Education of Nova Scotians using any 2 of the following 4 variables `EDU_PREP`, `EDUCAT`, ` EDOPP_A1`, and `CRS_INT`. 
 
@@ -697,6 +864,7 @@ b. Share one question about Nova Scotians on a related topic that you would like
 
 ### Practice Questions
 
+---
 1. Were participants likely to have attended a local/municipal council meeting? How do you know?
 
 2. What is the most populated postal code prefix among participants? What measure of central tendency did you use to determine this, and why? Integrating skills (advanced question): Can you figure out what geographic area this corresponds to? 

@@ -488,3 +488,12 @@ bar-graphs-and-histograms
 selecting-the-appropriate-descriptive-statistics
 selecting-the-central-tendency-measure
 selecting-the-variation-measure
+pre-lab-tasks
+the-basics
+descriptive-statistics-and-graphs
+example-1-sleep
+example-2-volunteering
+selecting-the-variation
+example-3-sense-of-belonging
+example-belonging
+example-sense-of-belonging

@@ -581,7 +581,9 @@ knitr::include_graphics('img/saveasjamovi.png')
 
 Browse to your PSYC 292 lab folder, and click save.
 
-You are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.
+Read over the remainder of Chapter 2.5 of this lab manual. 
+
+Now, you are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.
 
 <b>Come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
 
@@ -840,26 +842,6 @@ Because .omv files contain both the data and the output, we want to save a new f
 To save just your output, click the three lines and select Export. This will allow you to save a pdf. 
 
 See Moodle for the homework questions.
-
-1. Be sure to consider the scales of measurement as you answer the following questions. Calculate the appropriate descriptive statistics and write a paragraph to summarize:
-
-Use the data dictionary to determine the scale of measurement of the following variables that relate to internet access.
-
-Calculate an appropriate measure of central tendency for each variable.
-Calculate an appropriate measure of variation for each variable.
-
-a. Internet access of Nova Scotians using any 2 of the following 3 variables: `INTERNET`, `NET_QUAL`,  and `HM_SURF`.
-
-b. Education of Nova Scotians using any 2 of the following 4 variables `EDU_PREP`, `EDUCAT`, ` EDOPP_A1`, and `CRS_INT`. 
-
-c. Employment of Nova Scotians using the following 2 variables: ` WORKSCHED` and ` WORKHR`. 
-
-Rubric – 0.125 pt for correctly identifying scale of measurement for each variable
-0.125 for correctly measuring central tendency based on scale
--0.25 for not writing in a sentence
-2. a. What have you learned about Nova Scotians by completing this activity? 
-
-b. Share one question about Nova Scotians on a related topic that you would like to explore further.
 
 
 ### Practice Questions

@@ -704,22 +704,22 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <h4><span class="header-section-number">2.2.3.1</span> range</h4>
 <p>The range is the minimum and maximum values in the set, we use the <code>range</code> function.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -0.86466 25.68443</code></pre>
+<pre><code>## [1] -1.49465 22.20223</code></pre>
 </div>
 <div id="var-variance" class="section level4" number="2.2.3.2">
 <h4><span class="header-section-number">2.2.3.2</span> var = variance</h4>
 <p>We can find the sample variance using <code>var</code>. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 26.20035</code></pre>
+<pre><code>## [1] 23.69294</code></pre>
 </div>
 <div id="sd-standard-deviation" class="section level4" number="2.2.3.3">
 <h4><span class="header-section-number">2.2.3.3</span> sd = standard deviation</h4>
 <p>We find the sample standard deviation us SD. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 5.118628</code></pre>
+<pre><code>## [1] 4.86754</code></pre>
 <p>Remember that the standard deviation is just the square root of the variance, see:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">var</span>(sample_numbers))</span></code></pre></div>
-<pre><code>## [1] 5.118628</code></pre>
+<pre><code>## [1] 4.86754</code></pre>
 </div>
 <div id="all-descriptives" class="section level4" number="2.2.3.4">
 <h4><span class="header-section-number">2.2.3.4</span> All Descriptives</h4>
@@ -727,21 +727,21 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-1" aria-hidden="true" tabindex="-1"></a>sample_numbers <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">10</span>,<span class="dv">5</span>)</span>
 <span id="cb29-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 1001.263</code></pre>
+<pre><code>## [1] 950.151</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(sample_numbers)</span></code></pre></div>
 <pre><code>## [1] 100</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 10.01263</code></pre>
+<pre><code>## [1] 9.50151</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 10.34606</code></pre>
+<pre><code>## [1] 9.49959</code></pre>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">my_mode</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 10.59247</code></pre>
+<pre><code>## [1] 12.28173</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -5.87715 25.54592</code></pre>
+<pre><code>## [1] -1.290636 21.938171</code></pre>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 31.5377</code></pre>
+<pre><code>## [1] 22.32206</code></pre>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 5.615843</code></pre>
+<pre><code>## [1] 4.724623</code></pre>
 </div>
 </div>
 <div id="descriptives-by-conditions" class="section level3" number="2.2.4">
@@ -754,11 +754,11 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>If you look at the <code>my_df</code> data frame, you will see it has 100 rows, there are 10 rows for each condition with a label in the <code>conditions</code> column, and 10 scores for each condition in the <code>scores</code> column. What if you wanted to know the mean of the scores in each condition? You would want to find 10 means.</p>
 <p>The slow way to do it would be like this:</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;A&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 10.48742</code></pre>
+<pre><code>## [1] 12.35057</code></pre>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;B&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 8.876129</code></pre>
+<pre><code>## [1] 11.19325</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;C&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 10.3005</code></pre>
+<pre><code>## [1] 8.23146</code></pre>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and then keep going</span></span></code></pre></div>
 <p>Nobody wants to do that! Not, me I stopped doing it that way, you should to.</p>
 <div id="group_by-and-summarise" class="section level4" number="2.2.4.1">
@@ -779,16 +779,16 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <pre><code>## # A tibble: 10 x 2
 ##    conditions means
 ##  * &lt;fct&gt;      &lt;dbl&gt;
-##  1 A          10.5 
-##  2 B           8.88
-##  3 C          10.3 
-##  4 D          10.0 
-##  5 E          10.9 
-##  6 F          10.8 
-##  7 G           9.15
-##  8 H           7.10
-##  9 I           9.63
-## 10 J           9.22</code></pre>
+##  1 A          12.4 
+##  2 B          11.2 
+##  3 C           8.23
+##  4 D           9.89
+##  5 E          10.5 
+##  6 F           8.70
+##  7 G          11.8 
+##  8 H           9.90
+##  9 I          10.7 
+## 10 J          10.9</code></pre>
 <p>A couple things now. First, the print out of this was ugly. Let’s fix that. we put the results of our code into a new variable, then we use <code>knitr::kable</code> to print it out nicely when we <code>knit</code> the document</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-1" aria-hidden="true" tabindex="-1"></a>summary_df <span class="ot">&lt;-</span> my_df <span class="sc">%&gt;%</span></span>
 <span id="cb59-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-2" aria-hidden="true" tabindex="-1"></a>               <span class="fu">group_by</span>(conditions) <span class="sc">%&gt;%</span></span>
@@ -805,43 +805,43 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">10.487415</td>
+<td align="right">12.350570</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">8.876129</td>
+<td align="right">11.193247</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">10.300504</td>
+<td align="right">8.231460</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">10.015360</td>
+<td align="right">9.890393</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.917504</td>
+<td align="right">10.507489</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">10.839189</td>
+<td align="right">8.701801</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.150920</td>
+<td align="right">11.753030</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">7.104970</td>
+<td align="right">9.904278</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">9.628234</td>
+<td align="right">10.666319</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">9.219119</td>
+<td align="right">10.922103</td>
 </tr>
 </tbody>
 </table>
@@ -866,53 +866,53 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">10.487415</td>
-<td align="right">4.636025</td>
+<td align="right">12.350570</td>
+<td align="right">3.923869</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">8.876129</td>
-<td align="right">5.632357</td>
+<td align="right">11.193247</td>
+<td align="right">5.167707</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">10.300504</td>
-<td align="right">5.950344</td>
+<td align="right">8.231460</td>
+<td align="right">6.365441</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">10.015360</td>
-<td align="right">4.849411</td>
+<td align="right">9.890393</td>
+<td align="right">5.031648</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.917504</td>
-<td align="right">2.576610</td>
+<td align="right">10.507489</td>
+<td align="right">5.244467</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">10.839189</td>
-<td align="right">5.527296</td>
+<td align="right">8.701801</td>
+<td align="right">5.497540</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.150920</td>
-<td align="right">6.686043</td>
+<td align="right">11.753030</td>
+<td align="right">5.455978</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">7.104970</td>
-<td align="right">4.351111</td>
+<td align="right">9.904278</td>
+<td align="right">3.998514</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">9.628234</td>
-<td align="right">4.724651</td>
+<td align="right">10.666319</td>
+<td align="right">5.718605</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">9.219119</td>
-<td align="right">3.808100</td>
+<td align="right">10.922103</td>
+<td align="right">4.533066</td>
 </tr>
 </tbody>
 </table>
@@ -938,73 +938,73 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">10.487415</td>
-<td align="right">4.636025</td>
-<td align="right">2.5482475</td>
-<td align="right">18.25204</td>
+<td align="right">12.350570</td>
+<td align="right">3.923869</td>
+<td align="right">7.2293246</td>
+<td align="right">17.97177</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">8.876129</td>
-<td align="right">5.632357</td>
-<td align="right">1.5175742</td>
-<td align="right">18.40124</td>
+<td align="right">11.193247</td>
+<td align="right">5.167707</td>
+<td align="right">1.3173058</td>
+<td align="right">18.54553</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">10.300504</td>
-<td align="right">5.950344</td>
-<td align="right">1.2184270</td>
-<td align="right">20.36682</td>
+<td align="right">8.231460</td>
+<td align="right">6.365441</td>
+<td align="right">-1.4825113</td>
+<td align="right">16.08548</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">10.015360</td>
-<td align="right">4.849411</td>
-<td align="right">5.1586304</td>
-<td align="right">19.59145</td>
+<td align="right">9.890393</td>
+<td align="right">5.031648</td>
+<td align="right">1.8528730</td>
+<td align="right">20.36618</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.917504</td>
-<td align="right">2.576610</td>
-<td align="right">6.2826098</td>
-<td align="right">15.16835</td>
+<td align="right">10.507489</td>
+<td align="right">5.244467</td>
+<td align="right">1.5322538</td>
+<td align="right">21.54802</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">10.839189</td>
-<td align="right">5.527296</td>
-<td align="right">2.9294764</td>
-<td align="right">23.31085</td>
+<td align="right">8.701801</td>
+<td align="right">5.497540</td>
+<td align="right">0.7703743</td>
+<td align="right">19.25799</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.150920</td>
-<td align="right">6.686043</td>
-<td align="right">-1.0048303</td>
-<td align="right">21.52904</td>
+<td align="right">11.753030</td>
+<td align="right">5.455978</td>
+<td align="right">5.8374621</td>
+<td align="right">21.36137</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">7.104970</td>
-<td align="right">4.351111</td>
-<td align="right">0.2699006</td>
-<td align="right">14.82973</td>
+<td align="right">9.904278</td>
+<td align="right">3.998514</td>
+<td align="right">4.5524262</td>
+<td align="right">18.49736</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">9.628234</td>
-<td align="right">4.724651</td>
-<td align="right">0.4441738</td>
-<td align="right">16.80443</td>
+<td align="right">10.666319</td>
+<td align="right">5.718605</td>
+<td align="right">-0.1055097</td>
+<td align="right">17.52202</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">9.219119</td>
-<td align="right">3.808100</td>
-<td align="right">5.2668402</td>
-<td align="right">17.52576</td>
+<td align="right">10.922103</td>
+<td align="right">4.533066</td>
+<td align="right">2.3804127</td>
+<td align="right">18.01920</td>
 </tr>
 </tbody>
 </table>
@@ -1245,7 +1245,8 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>Now save your file as a JAMOVI (.omv) file. Click the three horizontal lines, then click Save As. Input a sensible filename and make sure your file type is set to <code>jamovi file (.omv)</code> (red circle below).</p>
 <p><img src="img/saveasjamovi.png" /><!-- --></p>
 <p>Browse to your PSYC 292 lab folder, and click save.</p>
-<p>You are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.</p>
+<p>Read over the remainder of Chapter 2.5 of this lab manual.</p>
+<p>Now, you are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.</p>
 <p><b>Come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b></p>
 </div>
 <div id="the-basics" class="section level3" number="2.5.2">
@@ -1392,24 +1393,6 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.</p>
 <p>To save just your output, click the three lines and select Export. This will allow you to save a pdf.</p>
 <p>See Moodle for the homework questions.</p>
-<ol style="list-style-type: decimal">
-<li>Be sure to consider the scales of measurement as you answer the following questions. Calculate the appropriate descriptive statistics and write a paragraph to summarize:</li>
-</ol>
-<p>Use the data dictionary to determine the scale of measurement of the following variables that relate to internet access.</p>
-<p>Calculate an appropriate measure of central tendency for each variable.
-Calculate an appropriate measure of variation for each variable.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Internet access of Nova Scotians using any 2 of the following 3 variables: <code>INTERNET</code>, <code>NET_QUAL</code>, and <code>HM_SURF</code>.</p></li>
-<li><p>Education of Nova Scotians using any 2 of the following 4 variables <code>EDU_PREP</code>, <code>EDUCAT</code>, <code>EDOPP_A1</code>, and <code>CRS_INT</code>.</p></li>
-<li><p>Employment of Nova Scotians using the following 2 variables: <code>WORKSCHED</code> and <code>WORKHR</code>.</p></li>
-</ol>
-<p>Rubric – 0.125 pt for correctly identifying scale of measurement for each variable
-0.125 for correctly measuring central tendency based on scale
--0.25 for not writing in a sentence
-2. a. What have you learned about Nova Scotians by completing this activity?</p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Share one question about Nova Scotians on a related topic that you would like to explore further.</li>
-</ol>
 </div>
 <div id="practice-questions" class="section level3" number="2.5.9">
 <h3><span class="header-section-number">2.5.9</span> Practice Questions</h3>

@@ -668,7 +668,7 @@ knitr::include_graphics('img/movesleep.png')
 
 The default settings may not give us all descriptive statistics in which we are interested. Let’s consider the scale of measurement. Which descriptive statistics are appropriate to consider based on this scale of measurement? The most typical choice for a ratio scale of measurement is to report the mean for central tendency, and the standard deviation for variation. Other choices might also be correct, depending on the data and your research question.
 
-As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">(standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel.
+As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability (<span style="color:blue">standard deviation, variance, range</span>, and <span style="color:blue">IQR</span>). As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/sleepdescriptives.png')
@@ -705,7 +705,7 @@ You often have to write sentences to report your descriptive statistics. For sle
 
 #### Example 2: Volunteering
 
-Let's look at another variable. If you simply select another variable as you did just before with `R_SLEEP`, the new variable will appear in the same table. To begin a new analysis, close the analysis you just completed by click on the right-facing arrow (circled in red in the image below) in the Descriptives menu: 
+Let's look at another variable. If you simply select another variable as you did just before with `R_SLEEP`, the new variable will appear in the same table. To begin a new analysis, close the analysis you just completed by clicking on the right-facing arrow (circled in red in the image below) in the Descriptives menu: 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/CloseAnalysesBeforeNewOnes.png')

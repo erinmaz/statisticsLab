@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Lab 2: Descriptive Statistics (and more graphs) | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Lab 2: Descriptive Statistics (and more graphs) | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="lab-1-graphing-data.html"/>
 <link rel="next" href="lab-3-correlation.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -71,6 +73,7 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -130,6 +133,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -704,22 +708,22 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <h4><span class="header-section-number">2.2.3.1</span> range</h4>
 <p>The range is the minimum and maximum values in the set, we use the <code>range</code> function.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -1.49465 22.20223</code></pre>
+<pre><code>## [1] -4.977664 20.068844</code></pre>
 </div>
 <div id="var-variance" class="section level4" number="2.2.3.2">
 <h4><span class="header-section-number">2.2.3.2</span> var = variance</h4>
 <p>We can find the sample variance using <code>var</code>. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 23.69294</code></pre>
+<pre><code>## [1] 20.68229</code></pre>
 </div>
 <div id="sd-standard-deviation" class="section level4" number="2.2.3.3">
 <h4><span class="header-section-number">2.2.3.3</span> sd = standard deviation</h4>
 <p>We find the sample standard deviation us SD. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 4.86754</code></pre>
+<pre><code>## [1] 4.547779</code></pre>
 <p>Remember that the standard deviation is just the square root of the variance, see:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">var</span>(sample_numbers))</span></code></pre></div>
-<pre><code>## [1] 4.86754</code></pre>
+<pre><code>## [1] 4.547779</code></pre>
 </div>
 <div id="all-descriptives" class="section level4" number="2.2.3.4">
 <h4><span class="header-section-number">2.2.3.4</span> All Descriptives</h4>
@@ -727,21 +731,21 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-1" aria-hidden="true" tabindex="-1"></a>sample_numbers <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">10</span>,<span class="dv">5</span>)</span>
 <span id="cb29-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 950.151</code></pre>
+<pre><code>## [1] 961.6676</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(sample_numbers)</span></code></pre></div>
 <pre><code>## [1] 100</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 9.50151</code></pre>
+<pre><code>## [1] 9.616676</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 9.49959</code></pre>
+<pre><code>## [1] 9.263104</code></pre>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">my_mode</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 12.28173</code></pre>
+<pre><code>## [1] 14.48542</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -1.290636 21.938171</code></pre>
+<pre><code>## [1] -0.2515466 20.2275495</code></pre>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 22.32206</code></pre>
+<pre><code>## [1] 22.3063</code></pre>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 4.724623</code></pre>
+<pre><code>## [1] 4.722955</code></pre>
 </div>
 </div>
 <div id="descriptives-by-conditions" class="section level3" number="2.2.4">
@@ -754,11 +758,11 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>If you look at the <code>my_df</code> data frame, you will see it has 100 rows, there are 10 rows for each condition with a label in the <code>conditions</code> column, and 10 scores for each condition in the <code>scores</code> column. What if you wanted to know the mean of the scores in each condition? You would want to find 10 means.</p>
 <p>The slow way to do it would be like this:</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;A&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 12.35057</code></pre>
+<pre><code>## [1] 11.01494</code></pre>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;B&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 11.19325</code></pre>
+<pre><code>## [1] 9.197404</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;C&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 8.23146</code></pre>
+<pre><code>## [1] 13.65421</code></pre>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and then keep going</span></span></code></pre></div>
 <p>Nobody wants to do that! Not, me I stopped doing it that way, you should to.</p>
 <div id="group_by-and-summarise" class="section level4" number="2.2.4.1">
@@ -778,17 +782,17 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <span id="cb57-3"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">means =</span> <span class="fu">mean</span>(scores))</span></code></pre></div>
 <pre><code>## # A tibble: 10 x 2
 ##    conditions means
-##  * &lt;fct&gt;      &lt;dbl&gt;
-##  1 A          12.4 
-##  2 B          11.2 
-##  3 C           8.23
-##  4 D           9.89
-##  5 E          10.5 
-##  6 F           8.70
-##  7 G          11.8 
-##  8 H           9.90
-##  9 I          10.7 
-## 10 J          10.9</code></pre>
+##    &lt;chr&gt;      &lt;dbl&gt;
+##  1 A          11.0 
+##  2 B           9.20
+##  3 C          13.7 
+##  4 D          12.0 
+##  5 E          11.6 
+##  6 F          11.3 
+##  7 G          10.4 
+##  8 H          12.8 
+##  9 I           9.28
+## 10 J          10.3</code></pre>
 <p>A couple things now. First, the print out of this was ugly. Let’s fix that. we put the results of our code into a new variable, then we use <code>knitr::kable</code> to print it out nicely when we <code>knit</code> the document</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-1" aria-hidden="true" tabindex="-1"></a>summary_df <span class="ot">&lt;-</span> my_df <span class="sc">%&gt;%</span></span>
 <span id="cb59-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-2" aria-hidden="true" tabindex="-1"></a>               <span class="fu">group_by</span>(conditions) <span class="sc">%&gt;%</span></span>
@@ -805,43 +809,43 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">12.350570</td>
+<td align="right">11.014938</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">11.193247</td>
+<td align="right">9.197404</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.231460</td>
+<td align="right">13.654208</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">9.890393</td>
+<td align="right">11.988788</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.507489</td>
+<td align="right">11.647420</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">8.701801</td>
+<td align="right">11.260786</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">11.753030</td>
+<td align="right">10.444389</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">9.904278</td>
+<td align="right">12.775373</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">10.666319</td>
+<td align="right">9.282517</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.922103</td>
+<td align="right">10.292421</td>
 </tr>
 </tbody>
 </table>
@@ -866,53 +870,53 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">12.350570</td>
-<td align="right">3.923869</td>
+<td align="right">11.014938</td>
+<td align="right">3.996504</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">11.193247</td>
-<td align="right">5.167707</td>
+<td align="right">9.197404</td>
+<td align="right">5.818100</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.231460</td>
-<td align="right">6.365441</td>
+<td align="right">13.654208</td>
+<td align="right">5.886494</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">9.890393</td>
-<td align="right">5.031648</td>
+<td align="right">11.988788</td>
+<td align="right">3.761509</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.507489</td>
-<td align="right">5.244467</td>
+<td align="right">11.647420</td>
+<td align="right">5.974007</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">8.701801</td>
-<td align="right">5.497540</td>
+<td align="right">11.260786</td>
+<td align="right">5.762632</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">11.753030</td>
-<td align="right">5.455978</td>
+<td align="right">10.444389</td>
+<td align="right">3.753901</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">9.904278</td>
-<td align="right">3.998514</td>
+<td align="right">12.775373</td>
+<td align="right">5.093321</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">10.666319</td>
-<td align="right">5.718605</td>
+<td align="right">9.282517</td>
+<td align="right">5.606944</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.922103</td>
-<td align="right">4.533066</td>
+<td align="right">10.292421</td>
+<td align="right">6.770598</td>
 </tr>
 </tbody>
 </table>
@@ -938,73 +942,73 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">12.350570</td>
-<td align="right">3.923869</td>
-<td align="right">7.2293246</td>
-<td align="right">17.97177</td>
+<td align="right">11.014938</td>
+<td align="right">3.996504</td>
+<td align="right">3.8779532</td>
+<td align="right">18.56190</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">11.193247</td>
-<td align="right">5.167707</td>
-<td align="right">1.3173058</td>
-<td align="right">18.54553</td>
+<td align="right">9.197404</td>
+<td align="right">5.818100</td>
+<td align="right">0.9854267</td>
+<td align="right">18.92678</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.231460</td>
-<td align="right">6.365441</td>
-<td align="right">-1.4825113</td>
-<td align="right">16.08548</td>
+<td align="right">13.654208</td>
+<td align="right">5.886494</td>
+<td align="right">7.9550868</td>
+<td align="right">26.83676</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">9.890393</td>
-<td align="right">5.031648</td>
-<td align="right">1.8528730</td>
-<td align="right">20.36618</td>
+<td align="right">11.988788</td>
+<td align="right">3.761509</td>
+<td align="right">3.5683475</td>
+<td align="right">15.62526</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.507489</td>
-<td align="right">5.244467</td>
-<td align="right">1.5322538</td>
-<td align="right">21.54802</td>
+<td align="right">11.647420</td>
+<td align="right">5.974007</td>
+<td align="right">3.8327148</td>
+<td align="right">19.44270</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">8.701801</td>
-<td align="right">5.497540</td>
-<td align="right">0.7703743</td>
-<td align="right">19.25799</td>
+<td align="right">11.260786</td>
+<td align="right">5.762632</td>
+<td align="right">4.9506292</td>
+<td align="right">19.45594</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">11.753030</td>
-<td align="right">5.455978</td>
-<td align="right">5.8374621</td>
-<td align="right">21.36137</td>
+<td align="right">10.444389</td>
+<td align="right">3.753901</td>
+<td align="right">3.5304878</td>
+<td align="right">17.25175</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">9.904278</td>
-<td align="right">3.998514</td>
-<td align="right">4.5524262</td>
-<td align="right">18.49736</td>
+<td align="right">12.775373</td>
+<td align="right">5.093321</td>
+<td align="right">3.9348463</td>
+<td align="right">19.86896</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">10.666319</td>
-<td align="right">5.718605</td>
-<td align="right">-0.1055097</td>
-<td align="right">17.52202</td>
+<td align="right">9.282517</td>
+<td align="right">5.606944</td>
+<td align="right">0.7243802</td>
+<td align="right">19.81559</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.922103</td>
-<td align="right">4.533066</td>
-<td align="right">2.3804127</td>
-<td align="right">18.01920</td>
+<td align="right">10.292421</td>
+<td align="right">6.770598</td>
+<td align="right">0.5736086</td>
+<td align="right">21.15833</td>
 </tr>
 </tbody>
 </table>
@@ -1276,7 +1280,7 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <h4><span class="header-section-number">2.5.4.1</span> Example 1: Sleep</h4>
 <p>Now, let’s use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the EngageNS data. Remember, you should have already opened your .omv (JAMOVI file) of the EngageNS data on your computer.</p>
 <p>Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file. When you are ready to start your homework, you can open the original file, save a copy with a new name, and create your homework output in that new file.</p>
-<p>Suppose we wanted to know about Nova Scotian’s sleep duration. We can use both descriptive statistics and graphs such as histograms to explore a variable such as sleep duration.</p>
+<p>Suppose we wanted to know about Nova Scotians’ sleep duration. We can use both descriptive statistics and graphs such as histograms to explore a variable such as sleep duration.</p>
 <p>You can find information about the <code>SLEEP</code> variable in the data dictionary.</p>
 <p><img src="img/sleepdatadictionary.png" /><!-- --></p>
 <p>According to the data dictionary, <code>SLEEP</code> is the number of hours participants’ reported sleep per day, and it includes both night time and naps. To find the <code>SLEEP</code> variable, first click on the Variables tab near the top left (red circle). Now you can search for your variable of interest by typing in the search bar.</p>
@@ -1287,25 +1291,27 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>After you have considered the variable attributes, click on <span style="color:blue">Descriptives</span> again, or click on the up arrow to close the Setup panel. As you will recall, to get jamovi to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Click on the magnifying glass icon at the top of the list of variables to search. Select <code>SLEEP</code> and use the right arrow to move it to the “Variable” window at the right.</p>
 <p><img src="img/movesleep.png" /><!-- --></p>
 <p>The default settings may not give us all descriptive statistics in which we are interested. Let’s consider the scale of measurement. Which descriptive statistics are appropriate to consider based on this scale of measurement? The most typical choice for a ratio scale of measurement is to report the mean for central tendency, and the standard deviation for variation. Other choices might also be correct, depending on the data and your research question.</p>
-<p>As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">( standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel.</p>
+<p>As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">(standard deviation, variance, range)</span>, and <span style="color:blue">(IQR)</span>. As we click to indicate these commands, we will see the resulting Descriptives table in the Results panel.</p>
 <p><img src="img/sleepdescriptives.png" /><!-- --></p>
 <p>So, we have a mean of 674, a median of 7, and a mode of 7. Pause for a moment and think about that. What does the <code>SLEEP</code> variable represent again? Hours of sleep per day. This table is saying that, on average, Nova Scotians sleep for 674 hours per day. What’s going on?</p>
 <p>In brief, the <code>SLEEP</code> variable contains some garbage data. You can see that the maximum is 8.00e+6 or 8 million hours of sleep. Another way to evaluate the data is to look at the histogram. Scroll down below the descriptive statistics you selected to the Plots section, and select Histogram.</p>
 <p><img src="img/Sleephistogram.png" /><!-- --></p>
-<p>The x-axis on this histogram is too big, because of the garbage data. It doesn’t make sense to look at a histogram of sleep from 0 to 8 million hours. Assuming you could fit about 5 bars between 0 and 2 million (2e+06), all that tall bar tells us is that most people sleep between 0 and 400 000 hours. Not very helpful.</p>
-<p>Luckily, we can check the revised sleep variable, <code>R_SLEEP</code>. The data in this variable have been cleaned to remove any values above 23. Even a sleep duration of 23 would be a bit silly (would you even have time to fill out the survey if you slept for 23 hours a day?) but at least it is a lower number than the number of hours in the day. Back at the top of this window, move the <code>R_SLEEP</code> variable into the Variables box. This will add a new column to our Descriptives table:</p>
+<p>The <em>x</em>-axis on this histogram is too big because of the garbage data. It doesn’t make sense to look at a histogram of sleep from 0 to 8 million hours. Assuming you could fit about 5 bars between 0 and 2 million (2e+06), all that tall bar tells us is that most people sleep between 0 and 400 000 hours. Not very helpful.</p>
+<p>Luckily, we can check the revised sleep variable, <code>R_SLEEP</code>. The data in this variable have been cleaned to remove any values above 23. Even a sleep duration of 23 would be a bit silly (Would you even have time to fill out the survey if you slept for 23 hours a day?), but at least it is a lower number than the number of hours in the day. Back at the top of this window, move the <code>R_SLEEP</code> variable into the Variables box. This will add a new column to our Descriptives table:</p>
 <p><img src="img/sleepr_sleepdescriptives.png" /><!-- --></p>
 <p>The mean of <code>R_SLEEP</code> is 7.04 hours. Much more sensible than 674 hours!</p>
 <p>We can also ask for a histogram of <code>R_SLEEP</code>:</p>
 <p><img src="img/r_sleephistogram.png" /><!-- --></p>
-<p>Now that the x-axis stops at 23 instead of 8e+6, we can see the shape of the distribution much better. The tallest bar is somewhere around 7. Almost all of the responses are between 4 and 10.</p>
+<p>Now that the <em>x</em>-axis stops at 23 instead of 8e+6, we can see the shape of the distribution much better. The tallest bar is somewhere around 7. Almost all of the responses are between 4 and 10.</p>
 <p>You often have to write sentences to report your descriptive statistics. For sleep, you might write: The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.05 (1.30).</p>
 </div>
 <div id="example-2-volunteering" class="section level4" number="2.5.4.2">
 <h4><span class="header-section-number">2.5.4.2</span> Example 2: Volunteering</h4>
-<p>Let’s look at another variable. The <code>VOLUNTEER</code> variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn’t. Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?</p>
-<p>Back in the Variables tab, search for VOLUNTEER. Select it by clicking so the check box is visible, and then click the Data tab. Click Setup. The measurement type is nominal, which is correct: the <code>VOLUNTEER</code> variable does not have order, equal spacing between intervals, or a true 0. We don’t need to fix anything here.</p>
-<p>Click the Analyses tab, then click Exploration and then Descriptives. Search for VOLUNTEER and move the variable into the Variables box (note: there’s no <code>R_VOLUNTEER</code> variable so we don’t have to worry about that in this case). As before, select all the measures of Central Tendency and Dispersion. Your table should look like this:</p>
+<p>Let’s look at another variable. If you simply select another variable as you did just before with <code>R_SLEEP</code>, the new variable will appear in the same table. To begin a new analysis, close the analysis you just completed by click on the right-facing arrow (circled in red in the image below) in the Descriptives menu:</p>
+<p><img src="img/CloseAnalysesBeforeNewOnes.png" /><!-- --></p>
+<p>The <code>VOLUNTEER</code> variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn’t. Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?</p>
+<p>Back in the <span style="color:blue">Variables</span> tab, search for VOLUNTEER. Select it by clicking so the check box is visible, and then click the <span style="color:blue">Data</span> tab. Click <span style="color:blue">Setup</span>. The measurement type is nominal, which is correct: the <code>VOLUNTEER</code> variable does not have order, equal spacing between intervals, or a true 0. We don’t need to fix anything here.</p>
+<p>Click the <span style="color:blue">Analyses</span> tab, click <span style="color:blue">Exploration</span> and then click <span style="color:blue">Descriptives</span>. Search for VOLUNTEER and move the variable into the Variables box (Note: There’s no <code>R_VOLUNTEER</code> variable, so we don’t have to worry about that in this case). As before, select all the measures of Central Tendency and Dispersion. Your table should look like this:</p>
 <p><img src="img/volunteerresults.png" /><!-- --></p>
 <p>We can use this table to check our prediction from above. The mode is 1, so most participants reported volunteering in the past year.</p>
 <p>We could ask more questions about this variable. How many participants volunteered? You can get that information a few different ways. First, select Frequency tables (red circle):</p>
@@ -1313,7 +1319,7 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>The output panel will now include a new table, Frequencies of VOLUNTEER:</p>
 <p><img src="img/volunteerfrequenciestable.png" /><!-- --></p>
 <p>This table shows that 6715 participants answered with a 1, meaning they did volunteer in the past year, and 6015 answered with a 2, meaning they did not.</p>
-<p>You can also get this information from a bar graph. Under Plots, select Bar plot:</p>
+<p>You can also get this information from a bar graph. Under <span style="color:blue">Plots</span>, select Bar plot:</p>
 <p><img src="img/barplot.png" /><!-- --></p>
 <p>Your output panel should now include the following graph:</p>
 <p><img src="img/barplotvolunteer.png" /><!-- --></p>
@@ -1329,8 +1335,8 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>Choosing the right descriptive statistics for a given variable depends on understanding the distribution or shape of the data. It also depends on the scale of measurement of your variable. Sometimes, there can be more than one right answer.</p>
 <p>If the measurement scale is nominal, we usually look at the mode for information about central tendency. If the measurement scale is ordinal, we usually look at the median for information about central tendency. The central tendency measure used for interval or ratio scales of measurement can vary. If the distribution is not skewed, we would usually consider the mean. If the distribution is skewed, we might look to the median to avoid the influence the long, asymmetric tail of the distribution has on the mean. The median is also a good choice for interval or ratio data if there are outliers present. This is because the mean is “sensitive” to outliers - outliers can impact the mean a lot. The median is not sensitive to outliers.</p>
 <p>The <code>SLEEP</code> variable is example of how a skewed distribution and/or outliers can impact the mean.</p>
-<p>Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. If we look at <code>HB_EXERCISE</code>, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean.</p>
-<p>If, however, we look at <code>PA_VIGOROUS</code>, we see that the variable ask participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed, we would likely report the mean. You can see that the answer to a research question about Nova Scotian’s exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.</p>
+<p>Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at <code>HB_EXERCISE</code>, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean.</p>
+<p>If, however, we look at <code>PA_VIGOROUS</code>, we see that the variable asks participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed, we would likely report the mean. You can see that the answer to a research question about Nova Scotians’ exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.</p>
 </div>
 <div id="selecting-the-variation-measure" class="section level4" number="2.5.5.2">
 <h4><span class="header-section-number">2.5.5.2</span> Selecting the variation measure</h4>
@@ -1362,11 +1368,11 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div id="example-sense-of-belonging" class="section level4" number="2.5.5.3">
 <h4><span class="header-section-number">2.5.5.3</span> Example: Sense of belonging</h4>
 <p>Participants were also asked about their sense of belonging to the community. As you will see in the data dictionary, their answers could range from 1 = very weak, to 7 = very strong. While it is not explicitly shown, a 4 would be neutral.</p>
-<p>Thinking about scales of measurement, this is an example of an ordinal variable. Let’s look at the <code>BELONGING</code> variable in the dataset. Select the variable (remember you can search in the Variable tab first to find it faster) and click Setup.</p>
+<p>Thinking about scales of measurement, this is an example of an ordinal variable. Let’s look at the <code>BELONGING</code> variable in the dataset. Select the variable (remember you can search in the <span style="color:blue">Variables</span> tab first to find it faster) and click <span style="color:blue">Setup</span>.</p>
 <p><img src="img/belongingsetup.png" /><!-- --></p>
-<p>This time, we need to change the measurement type. JAMOVI thinks this is a nominal variable, but we know it is ordinal. Change it in the dropdown menu. You may get an error and it may not appear to work. Check whether it worked by closing the Setup panel by clicking the up arrow. You should notice that the icon next to <code>BELONGING</code> in the spreadsheet now corresponds to an ordinal variable, so we know we successfully set the measurement type to ordinal.</p>
+<p>This time, we need to change the measurement type. JAMOVI thinks this is a nominal variable, but we know it is ordinal. Change it in the drop-down menu. You may get an error and it may not appear to work. Check whether it worked by closing the Setup panel by clicking the up arrow. You should notice that the icon next to <code>BELONGING</code> in the spreadsheet now corresponds to an ordinal variable, so we know we successfully set the measurement type to ordinal.</p>
 <p><img src="img/belongingordinal.png" /><!-- --></p>
-<p>Let’s look at how Nova Scotia’s rated their sense of belonging. As before, click on the Analysis tab, then Exploration, then Descriptives. Search for the <code>BELONGING</code> variable and move it into the Variable box. This time, we are only going to select the descriptive statistics that are appropriate. BELONGING is an ordinal scale of measurement, so we are going to use the median as a measure of central tendency, and the IQR as a measure of variation. Your JAMOVI window will look like this:</p>
+<p>Let’s look at how Nova Scotians rated their sense of belonging. As before, click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>. Search for the <code>BELONGING</code> variable and move it into the Variable box. This time, we are going to <strong>select only the descriptive statistics that are appropriate</strong>. BELONGING is measured on an ordinal scale of measurement, so we are going to use the <strong>median</strong> as a measure of central tendency, and the <strong>IQR</strong> as a measure of variation. Your JAMOVI window will look like this:</p>
 <p><img src="img/belongingordinaloutput.png" /><!-- --></p>
 <p>You could write a sentence to report these results like this: Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.</p>
 <p>Let’s say you felt that the <code>BELONGING</code> variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation.</p>
@@ -1379,10 +1385,11 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div id="boxplots-1" class="section level3" number="2.5.6">
 <h3><span class="header-section-number">2.5.6</span> Boxplots</h3>
 <p>Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.</p>
-<p>Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.</p>
-<p>Using the <code>SLEEP</code> and <code>R_SLEEP</code> variables, let’s create boxplots. Move both variables into the Variables box. Under Plots, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.</p>
+<p>Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later), and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.</p>
+<p>Using the <code>SLEEP</code> and <code>R_SLEEP</code> variables, let’s create boxplots. You should now feel comfortable accessing descriptive statistics and graphs in the jamovi menus (Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>). Move both variables into the Variables box. Under <span style="color:blue">Plots</span>, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.</p>
 <p><img src="img/sleepboxplots.png" /><!-- --></p>
-<p>Just like when we looked at the histograms, the <code>SLEEP</code> variable isn’t very helpful to look at. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for <code>R_SLEEP</code> is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers) and outliers (black dots).</p>
+<p>Just like when we looked at the histograms, the <code>SLEEP</code> variable isn’t very helpful to look at. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for <code>R_SLEEP</code> is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers), and outliers (black dots).</p>
+<p>Remember to save your file before closing jamovi. You might save the .omv file you created as a newly named file as you began reading and following along in this section. The .omv file will have both data and the results of analyses you conducted. To save just your output, click the three lines and select Export. This will allow you to save a pdf.</p>
 </div>
 <div id="editing-graphs-1" class="section level3" number="2.5.7">
 <h3><span class="header-section-number">2.5.7</span> Editing graphs</h3>
@@ -1390,8 +1397,8 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 </div>
 <div id="homework-3" class="section level3" number="2.5.8">
 <h3><span class="header-section-number">2.5.8</span> Homework</h3>
-<p>Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.</p>
-<p>To save just your output, click the three lines and select Export. This will allow you to save a pdf.</p>
+<p>Because .omv files contain both the data and the output, we want you to save a new file before each novel analysis task. The lab demonstration would be one analysis task. The homework is another analysis task. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.</p>
+<p>Recall that to save just your output, you can click the three lines and select Export. This will allow you to save a pdf.</p>
 <p>See Moodle for the homework questions.</p>
 </div>
 <div id="practice-questions" class="section level3" number="2.5.9">
@@ -1438,6 +1445,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

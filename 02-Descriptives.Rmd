@@ -522,7 +522,7 @@ ___
 
 3. Use the information on your .spv file and the CCHS .sav file to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
-## JAMOVI
+## JAMOVI - Week 4 - February 8 & 9
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#spss-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 

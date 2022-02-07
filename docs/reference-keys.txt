@@ -497,3 +497,6 @@ selecting-the-variation
 example-3-sense-of-belonging
 example-belonging
 example-sense-of-belonging
+jamovi---week-2---january-25-26
+jamovi---week-3---february-1-2
+jamovi---week-4---february-8-9

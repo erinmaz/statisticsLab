@@ -793,7 +793,7 @@ Create the following three graphs in a single SPSS output file (*.spv). Upload t
 2. If you haven't already, create a histogram for life expectancy in the year 2017.
 3. Create a scatterplot of life expectancy of each country in 1800 vs. that of 2018. 
 
-## JAMOVI
+## JAMOVI - Week 3 - February 1 & 2
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 1, Section 1.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#spss-1), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 

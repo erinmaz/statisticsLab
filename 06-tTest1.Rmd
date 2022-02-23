@@ -1,5 +1,4 @@
 # Lab 6: t-Test (one-sample, paired sample)
-
 <script>
 $("#coverpic").hide();
 </script>
@@ -679,7 +678,7 @@ ___
 2. Graph this result (including 1 SEM error bars) as a bar graph. Upload your output file, including the graph, to Moodle.
 
 
-## JAMOVI
+## JAMOVI - Week 8 - March 15 & 16
 
 
 <div class="marginnote">
@@ -700,7 +699,7 @@ In this lab, we will use jamovi to:
 ---
 
 
-For this lab, we will be using the data from Mehr, Song, and Spelke's (2016) study of how music may convey important social information to infants. You can access that [data set](MAYBE A LINK TO MOODLE OR ONEDRIVE) here.
+For this lab, we will be using the data from Mehr, Song, and Spelke's (2016) study of how music may convey important social information to infants. You can access that [data set](https://moodle.stfx.ca/mod/resource/view.php?id=815524) here.
 
 To test their hypothesis, the researchers recruited 32 infants and their parents to complete an experiment. During their first visit to the lab, the parents were taught a new lullaby (one that neither they nor their infants had heard before). The experimenters asked the parents to sing the new lullaby to their child every day for the next 1-2 weeks.
 
@@ -711,7 +710,7 @@ Following this exposure period, the parents and their infants returned to the la
 ---
 
 
-First, let's open the relevant data file. The data file has been simplified and is available [here](link). Right click on "Mehr et al. Simplified Data File" and indicate that you want it opened it in jamovi. Your data should look like this:
+First, let's open the relevant data file. The data file has been simplified and is available [here](https://moodle.stfx.ca/mod/resource/view.php?id=815524). Right click on "Mehr et al. Simplified Data File" and indicate that you want it opened it in jamovi. Your data should look like this:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.35.png')
@@ -748,7 +747,7 @@ knitr::include_graphics('img/6.4.39.png')
 ```
 
 
-The table contains the information resulting from our *t*-test: The *t*-statistic calculated is 0.67, with 31 (N-1) degrees of freedom. The *p*-value is listed as .505 which will be rounded to .51. The fact that this *p*-value is greater than our alpha level (set at .05) means we fail to reject the null hypothesis. In other words, the proportion of time infants spent looking at the singer was not different from .50. We might formally words this as follows:
+The table contains the information resulting from our *t*-test: The *t*-statistic calculated is 0.67, with 31 (*N*-1) degrees of freedom. The *p*-value is listed as .505 which will be rounded to .51. The fact that this *p*-value is greater than our alpha level (set at .05) means we fail to reject the null hypothesis. In other words, the proportion of time infants spent looking at the singer was not different from .50. We might formally words this as follows:
 
 During the baseline condition, the mean proportion looking time toward the singer was not significantly different from .50, according to a one-sample test, *t*(31) = 0.67, *p* = .51.
 
@@ -790,7 +789,7 @@ In order to run the paired-samples *t*-test, go to <span style="color:blue">Anal
 knitr::include_graphics('img/6.4.42.png')
 ```
 
-A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both and move them at the same time using the Control key. Make sure that they appear next to each other in the right-hand field, as follows:
+A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both by using the Control key and then move them at the same time. Make sure that they appear next to each other in the right-hand field, as follows:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.43.png')
@@ -802,7 +801,7 @@ Similar to what you just learned about requesting the descriptive statistics in 
 knitr::include_graphics('img/6.4.44.png')
 ```
 
-In the Results panel, you should see two tables. The first table shows the results of the paired-samples *t*-test produces. It indicates a *t*-value (i.e., our observed *t*), degrees of freedom (N-1), and a *p*-value. You can interpret these values the same way as in the previous example. The second table is the Descriptives table. 
+In the Results panel, you should see two tables. The first table shows the results of the paired-samples *t*-test. The table indicates a *t*-value (i.e., our observed *t*), degrees of freedom (*N*-1), and a *p*-value. You can interpret these values the same way as in the previous example. The second table is the Descriptives table. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/6.4.45.png')
@@ -810,7 +809,7 @@ knitr::include_graphics('img/6.4.45.png')
 
 We might report our results in this way:
 
-During the baseline condition, the difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples *t*-test, *t*(31) = -2.42, *p* < .05, 95% *CI* [-0.79,-0.06], *d* = -0.43.
+During the baseline condition, the difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples *t*-test, *t*(31) = -2.42, *p* < .05, 95% CI [-0.79, -0.06], *d* = -0.43.
 
 ### Using descriptive statistics to give context to inferential statistics
 
@@ -818,7 +817,7 @@ The descriptive statistics are useful for contextualizing the inferential statis
 
 Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
 
-According to a paired-samples *t*-test, there is a significant difference between infants' mean proportion looking time toward the singer at baseline (*M* = 0.52, *SD* = 0.18) and the test phase (*M* = -.59, *SD* = 0.18), *t*(31) = -2.42, *p* = .02, 95% *CI* [-0.79,-0.06], *d* = -0.43. 
+According to a paired-samples *t*-test, there is a significant difference between infants' mean proportion looking time toward the singer at baseline (*M* = 0.52, *SD* = 0.18) and the test phase (*M* = -0.59, *SD* = 0.18), *t*(31) = -2.42, *p* = .02, 95% CI [-0.79, -0.06], *d* = -0.43. 
 
 ### Graphing your results
 

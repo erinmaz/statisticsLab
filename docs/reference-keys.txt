@@ -484,3 +484,6 @@ mann-whitney-u-test-1
 interpreting-and-reporting-the-results-2
 homework-mar-9-and-10
 homework-feb-23-and-24-you-have-already-completed-this---do-not-do-it-again
+jamovi---week-8---march-15-16
+control-vs-reactivationtetris
+tetris_only-vs-reactivationtetris

@@ -809,7 +809,7 @@ knitr::include_graphics('img/6.4.45.png')
 
 We might report our results in this way:
 
-During the baseline condition, the difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples *t*-test, *t*(31) = -2.42, *p* < .05, 95% CI [-0.79, -0.06], *d* = -0.43.
+The difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples *t*-test, *t*(31) = -2.42, *p* < .05, 95% CI [-0.79, -0.06], *d* = -0.43.
 
 ### Using descriptive statistics to give context to inferential statistics
 
@@ -817,7 +817,7 @@ The descriptive statistics are useful for contextualizing the inferential statis
 
 Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
 
-According to a paired-samples *t*-test, there is a significant difference between infants' mean proportion looking time toward the singer at baseline (*M* = 0.52, *SD* = 0.18) and the test phase (*M* = -0.59, *SD* = 0.18), *t*(31) = -2.42, *p* = .02, 95% CI [-0.79, -0.06], *d* = -0.43. 
+According to a paired-samples *t*-test, there is a significant difference between infants' mean proportion looking time toward the singer at baseline (*M* = 0.52, *SD* = 0.18) and the test phase (*M* = 0.59, *SD* = 0.18), *t*(31) = -2.42, *p* = .02, 95% CI [-0.79, -0.06], *d* = -0.43. 
 
 ### Graphing your results
 

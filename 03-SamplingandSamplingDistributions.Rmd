@@ -9,6 +9,7 @@ $("#coverpic").hide();
 
 1. Create sampling distributions from a "population" dataset.
 2. Interpret sampling distributions, especially with respect to sample size.
+3. Use the "filter" function to randomly sample from a dataset, as well as select specific cases from a dataset.
 
 ### Important Info 
 
@@ -128,9 +129,13 @@ We see that the mean number of friends reported by participants who volunteer is
 knitr::include_graphics('img/ResultsVolunteer.png')
 ```
 
-### Practice Problems
+### Homework Problems (draft - to move to Moodle)
 
 ___
 
+1. What is the mean of R_FRIENDS of the entire dataset? How does it compare to the means of samples of N = 5? N = 500? Which of the two sample sizes is more likely to cause you to make a big error estimating the mean of R_FRIENDS for the entire dataset? Explain your reasoning.
 
+2. Report the mean and standard deviation of R_FRIENDS for two groups: Those who do volunteer and those who do not volunteer.
+
+3. Report the mean and standard deviation of R_FRIENDS for those who live in the Antigonish-Guysborough region.
 

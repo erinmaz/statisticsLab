@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Lab 6: Correlation | Answering questions with data: Lab Manual</title>
+  <meta name="description" content="A lab manual for Psyc 292 at StFX" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Lab 6: Correlation | Answering questions with data: Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A lab manual for Psyc 292 at StFX" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Lab 6: Correlation | Answering questions with data: Lab Manual" />
+  
+  <meta name="twitter:description" content="A lab manual for Psyc 292 at StFX" />
+  
+
+<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga" />
+<meta name="author" content="Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle, Sherry Neville-MacLean, Christine D. Lomore, and Margaret Vail." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lab-5-t-test-independent-sample.html"/>
+<link rel="next" href="lab-7-one-way-anova.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-4');
+</script>
+
+
+<script type="text/javascript">
+mattcrump=1;
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Lab Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a>
+<ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions-and-versions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions and Versions</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a>
+<ul>
+<li class="chapter" data-level="0.2" data-path="software.html"><a href="software.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="software.html"><a href="software.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="software.html"><a href="software.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="software.html"><a href="software.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="software.html"><a href="software.html#r"><i class="fa fa-check"></i><b>0.3</b> R</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="software.html"><a href="software.html#why-r"><i class="fa fa-check"></i><b>0.3.1</b> Why R?</a></li>
+<li class="chapter" data-level="0.3.2" data-path="software.html"><a href="software.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>0.3.2</b> Installing R and R Studio</a></li>
+<li class="chapter" data-level="0.3.3" data-path="software.html"><a href="software.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>0.3.3</b> R studio notes and tips</a></li>
+<li class="chapter" data-level="0.3.4" data-path="software.html"><a href="software.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>0.3.4</b> How to complete the R Labs</a></li>
+<li class="chapter" data-level="0.3.5" data-path="software.html"><a href="software.html#screencast-tutorial"><i class="fa fa-check"></i><b>0.3.5</b> Screencast tutorial</a></li>
+<li class="chapter" data-level="0.3.6" data-path="software.html"><a href="software.html#r-studio-cloud"><i class="fa fa-check"></i><b>0.3.6</b> R-studio Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="software.html"><a href="software.html#excel"><i class="fa fa-check"></i><b>0.4</b> Excel</a></li>
+<li class="chapter" data-level="0.5" data-path="software.html"><a href="software.html#spss"><i class="fa fa-check"></i><b>0.5</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="0.5.1" data-path="software.html"><a href="software.html#installing-spss"><i class="fa fa-check"></i><b>0.5.1</b> Installing SPSS</a></li>
+<li class="chapter" data-level="0.5.2" data-path="software.html"><a href="software.html#notes-and-tips"><i class="fa fa-check"></i><b>0.5.2</b> Notes and Tips</a></li>
+<li class="chapter" data-level="0.5.3" data-path="software.html"><a href="software.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="0.5.4" data-path="software.html"><a href="software.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="0.6" data-path="software.html"><a href="software.html#jamovi---week-2---january-25-26"><i class="fa fa-check"></i><b>0.6</b> JAMOVI - Week 2 - January 25 &amp; 26</a>
+<ul>
+<li class="chapter" data-level="0.6.1" data-path="software.html"><a href="software.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
+<li class="chapter" data-level="0.6.2" data-path="software.html"><a href="software.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
+<li class="chapter" data-level="0.6.3" data-path="software.html"><a href="software.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.6.3</b> The Spreadsheet</a></li>
+<li class="chapter" data-level="0.6.4" data-path="software.html"><a href="software.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.6.4</b> Loading Data in jamovi</a></li>
+<li class="chapter" data-level="0.6.5" data-path="software.html"><a href="software.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.6.5</b> Importing Unusual Data Files</a></li>
+<li class="chapter" data-level="0.6.6" data-path="software.html"><a href="software.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.6.6</b> Changing Data from One Level to Another</a></li>
+<li class="chapter" data-level="0.6.7" data-path="software.html"><a href="software.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.6.7</b> Installing Add-on Modules into jamovi</a></li>
+<li class="chapter" data-level="0.6.8" data-path="software.html"><a href="software.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.6.8</b> Quitting jamovi</a></li>
+<li class="chapter" data-level="0.6.9" data-path="software.html"><a href="software.html#summary"><i class="fa fa-check"></i><b>0.6.9</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#r-1"><i class="fa fa-check"></i><b>1.2</b> R</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#download-the-lab-templates"><i class="fa fa-check"></i><b>1.2.1</b> Download the lab templates</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#get-some-data"><i class="fa fa-check"></i><b>1.2.2</b> Get some data</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#look-at-the-data"><i class="fa fa-check"></i><b>1.2.3</b> Look at the data</a></li>
+<li class="chapter" data-level="1.2.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#make-plots-to-answer-questions"><i class="fa fa-check"></i><b>1.2.4</b> Make Plots to answer questions</a></li>
+<li class="chapter" data-level="1.2.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#ggplot2-basics"><i class="fa fa-check"></i><b>1.2.5</b> ggplot2 basics</a></li>
+<li class="chapter" data-level="1.2.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#more-questions-about-nyc-films"><i class="fa fa-check"></i><b>1.2.6</b> More questions about NYC films</a></li>
+<li class="chapter" data-level="1.2.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#gapminder-data"><i class="fa fa-check"></i><b>1.2.7</b> Gapminder Data</a></li>
+<li class="chapter" data-level="1.2.8" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#asking-questions-with-the-gap-minder-data"><i class="fa fa-check"></i><b>1.2.8</b> Asking Questions with the gap minder data</a></li>
+<li class="chapter" data-level="1.2.9" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#generalization-exercise"><i class="fa fa-check"></i><b>1.2.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="1.2.10" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#writing-assignment"><i class="fa fa-check"></i><b>1.2.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#excel-1"><i class="fa fa-check"></i><b>1.3</b> Excel</a></li>
+<li class="chapter" data-level="1.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#spss-1"><i class="fa fa-check"></i><b>1.4</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-spss-and-the-spss-layout-1"><i class="fa fa-check"></i><b>1.4.1</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="1.4.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-variable-view-tab-1"><i class="fa fa-check"></i><b>1.4.2</b> Reviewing variable properties and the Variable View tab</a></li>
+<li class="chapter" data-level="1.4.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.4.3</b> Opening a data file and producing different types of graphs</a></li>
+<li class="chapter" data-level="1.4.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework"><i class="fa fa-check"></i><b>1.4.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-3---february-1-2"><i class="fa fa-check"></i><b>1.5</b> JAMOVI - Week 3 - February 1 &amp; 2</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.1</b> Opening jamovi and reviewing the jamovi layout</a></li>
+<li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-setup-button"><i class="fa fa-check"></i><b>1.5.2</b> Reviewing variable properties and the Setup button</a></li>
+<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#importing-a-data-file"><i class="fa fa-check"></i><b>1.5.3</b> Importing a data file</a></li>
+<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#graphs"><i class="fa fa-check"></i><b>1.5.4</b> Graphs</a></li>
+<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.5.5</b> Homework</a></li>
+<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.6</b> Thinking about Data - Practice Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics (and more graphs)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#r-2"><i class="fa fa-check"></i><b>2.2</b> R</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-basics-in-r"><i class="fa fa-check"></i><b>2.2.1</b> Descriptives basics in R</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#central-tendency"><i class="fa fa-check"></i><b>2.2.2</b> Central Tendency</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#variation"><i class="fa fa-check"></i><b>2.2.3</b> Variation</a></li>
+<li class="chapter" data-level="2.2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-by-conditions"><i class="fa fa-check"></i><b>2.2.4</b> Descriptives by conditions</a></li>
+<li class="chapter" data-level="2.2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#describing-gapminder"><i class="fa fa-check"></i><b>2.2.5</b> Describing gapminder</a></li>
+<li class="chapter" data-level="2.2.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#generalization-exercise-1"><i class="fa fa-check"></i><b>2.2.6</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="2.2.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#writing-assignment-1"><i class="fa fa-check"></i><b>2.2.7</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#excel-2"><i class="fa fa-check"></i><b>2.3</b> Excel</a></li>
+<li class="chapter" data-level="2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#spss-2"><i class="fa fa-check"></i><b>2.4</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics"><i class="fa fa-check"></i><b>2.4.1</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.4.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.4.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="2.4.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs"><i class="fa fa-check"></i><b>2.4.3</b> Editing graphs</a></li>
+<li class="chapter" data-level="2.4.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots"><i class="fa fa-check"></i><b>2.4.4</b> Boxplots</a></li>
+<li class="chapter" data-level="2.4.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-2"><i class="fa fa-check"></i><b>2.4.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9"><i class="fa fa-check"></i><b>2.5</b> JAMOVI - Week 4 - February 8 &amp; 9</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#pre-lab-tasks"><i class="fa fa-check"></i><b>2.5.1</b> Pre-lab tasks</a></li>
+<li class="chapter" data-level="2.5.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics"><i class="fa fa-check"></i><b>2.5.2</b> The basics</a></li>
+<li class="chapter" data-level="2.5.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>2.5.3</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.5.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs"><i class="fa fa-check"></i><b>2.5.4</b> Descriptive Statistics and Graphs</a></li>
+<li class="chapter" data-level="2.5.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics"><i class="fa fa-check"></i><b>2.5.5</b> Selecting the appropriate descriptive statistics</a></li>
+<li class="chapter" data-level="2.5.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots-1"><i class="fa fa-check"></i><b>2.5.6</b> Boxplots</a></li>
+<li class="chapter" data-level="2.5.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1"><i class="fa fa-check"></i><b>2.5.7</b> Editing graphs</a></li>
+<li class="chapter" data-level="2.5.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3"><i class="fa fa-check"></i><b>2.5.8</b> Homework</a></li>
+<li class="chapter" data-level="2.5.9" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions"><i class="fa fa-check"></i><b>2.5.9</b> Practice Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Sampling and Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#important-info-2"><i class="fa fa-check"></i><b>3.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#r-3"><i class="fa fa-check"></i><b>3.2</b> R</a></li>
+<li class="chapter" data-level="3.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#excel-3"><i class="fa fa-check"></i><b>3.3</b> Excel</a></li>
+<li class="chapter" data-level="3.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#spss-3"><i class="fa fa-check"></i><b>3.4</b> SPSS</a></li>
+<li class="chapter" data-level="3.5" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#jamovi"><i class="fa fa-check"></i><b>3.5</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#other-types-of-filters"><i class="fa fa-check"></i><b>3.5.1</b> Other types of filters</a></li>
+<li class="chapter" data-level="3.5.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#practice-problems-1"><i class="fa fa-check"></i><b>3.5.2</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>4</b> Lab 4: t-Test (one-sample, paired sample)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>4.1</b> Does Music Convey Social Information to Infants?</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#study-description"><i class="fa fa-check"></i><b>4.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>4.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>4.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#r-4"><i class="fa fa-check"></i><b>4.4</b> R</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#loading-the-data"><i class="fa fa-check"></i><b>4.4.1</b> Loading the data</a></li>
+<li class="chapter" data-level="4.4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#inspect-the-data-frame"><i class="fa fa-check"></i><b>4.4.2</b> Inspect the data frame</a></li>
+<li class="chapter" data-level="4.4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#get-the-data-for-experiment-one"><i class="fa fa-check"></i><b>4.4.3</b> Get the data for Experiment one</a></li>
+<li class="chapter" data-level="4.4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.4.4</b> Baseline phase: Conduct a one sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>4.4.5</b> Test phase</a></li>
+<li class="chapter" data-level="4.4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>4.4.6</b> Paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-the-findings"><i class="fa fa-check"></i><b>4.4.7</b> Graphing the findings</a></li>
+<li class="chapter" data-level="4.4.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#data-simulation"><i class="fa fa-check"></i><b>4.4.8</b> Data-simulation</a></li>
+<li class="chapter" data-level="4.4.9" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#generalization-exercise-2"><i class="fa fa-check"></i><b>4.4.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="4.4.10" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-assignment-2"><i class="fa fa-check"></i><b>4.4.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#excel-4"><i class="fa fa-check"></i><b>4.5</b> Excel</a></li>
+<li class="chapter" data-level="4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#spss-4"><i class="fa fa-check"></i><b>4.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background"><i class="fa fa-check"></i><b>4.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="4.6.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.6.2</b> OPTIONAL: Performing a one sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.6.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test"><i class="fa fa-check"></i><b>4.6.3</b> Performing a paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.6.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results"><i class="fa fa-check"></i><b>4.6.4</b> Graphing your results</a></li>
+<li class="chapter" data-level="4.6.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test"><i class="fa fa-check"></i><b>4.6.5</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.6.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics"><i class="fa fa-check"></i><b>4.6.6</b> Using descriptive statistics to give context to inferential statistics</a></li>
+<li class="chapter" data-level="4.6.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6"><i class="fa fa-check"></i><b>4.6.7</b> Lab Homework #6</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-8---march-15-16"><i class="fa fa-check"></i><b>4.7</b> JAMOVI - Week 8 - March 15 &amp; 16</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>4.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="4.7.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test-1"><i class="fa fa-check"></i><b>4.7.2</b> OPTIONAL: Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.7.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.7.3</b> Performing a paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.7.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics-1"><i class="fa fa-check"></i><b>4.7.4</b> Using descriptive statistics to give context to inferential statistics</a></li>
+<li class="chapter" data-level="4.7.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results-1"><i class="fa fa-check"></i><b>4.7.5</b> Graphing your results</a></li>
+<li class="chapter" data-level="4.7.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.7.6</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.7.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6-1"><i class="fa fa-check"></i><b>4.7.7</b> Lab Homework #6</a></li>
+<li class="chapter" data-level="4.7.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.7.8</b> Practice Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><i class="fa fa-check"></i><b>5.1</b> Do you come across as smarter when people read what you say or hear what you say?</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#study-description-1"><i class="fa fa-check"></i><b>5.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>5.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="5.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>5.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="5.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#r-5"><i class="fa fa-check"></i><b>5.4</b> R</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#load-the-data"><i class="fa fa-check"></i><b>5.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="5.4.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#inspect-data-frame"><i class="fa fa-check"></i><b>5.4.2</b> Inspect data frame</a></li>
+<li class="chapter" data-level="5.4.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#find-the-data-you-need"><i class="fa fa-check"></i><b>5.4.3</b> Find the data you need</a></li>
+<li class="chapter" data-level="5.4.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#look-at-the-dependent-variable."><i class="fa fa-check"></i><b>5.4.4</b> Look at the dependent variable.</a></li>
+<li class="chapter" data-level="5.4.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#conduct-independent-samples-t-test"><i class="fa fa-check"></i><b>5.4.5</b> Conduct Independent samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.4.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#remaining-ratings"><i class="fa fa-check"></i><b>5.4.6</b> Remaining ratings</a></li>
+<li class="chapter" data-level="5.4.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#reconstructing-the-graph-from-the-paper"><i class="fa fa-check"></i><b>5.4.7</b> Reconstructing the graph from the paper</a></li>
+<li class="chapter" data-level="5.4.8" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#generalization-exercise-3"><i class="fa fa-check"></i><b>5.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="5.4.9" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#writing-assignment-3"><i class="fa fa-check"></i><b>5.4.9</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#excel-5"><i class="fa fa-check"></i><b>5.5</b> Excel</a></li>
+<li class="chapter" data-level="5.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#spss-5"><i class="fa fa-check"></i><b>5.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-2"><i class="fa fa-check"></i><b>5.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.6.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>5.6.2</b> Performing an independent-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.6.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data"><i class="fa fa-check"></i><b>5.6.3</b> Graphing your data</a></li>
+<li class="chapter" data-level="5.6.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises-good-practice-and-review-for-the-take-home-final-exam"><i class="fa fa-check"></i><b>5.6.4</b> Optional exercises (good practice and review for the take-home final exam)</a></li>
+<li class="chapter" data-level="5.6.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7"><i class="fa fa-check"></i><b>5.6.5</b> Lab Homework #7</a></li>
+<li class="chapter" data-level="5.6.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems"><i class="fa fa-check"></i><b>5.6.6</b> Example answers to practice problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi-1"><i class="fa fa-check"></i><b>5.7</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-3"><i class="fa fa-check"></i><b>5.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.7.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>5.7.2</b> Performing an independent-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.7.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data-1"><i class="fa fa-check"></i><b>5.7.3</b> Graphing your data</a></li>
+<li class="chapter" data-level="5.7.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1"><i class="fa fa-check"></i><b>5.7.4</b> Optional exercises (good practice and review for the take-home final exam)</a></li>
+<li class="chapter" data-level="5.7.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems-1"><i class="fa fa-check"></i><b>5.7.5</b> Example answers to practice problems</a></li>
+<li class="chapter" data-level="5.7.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7-1"><i class="fa fa-check"></i><b>5.7.6</b> Lab Homework #7</a></li>
+<li class="chapter" data-level="5.7.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#practice-problems-2"><i class="fa fa-check"></i><b>5.7.7</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html"><i class="fa fa-check"></i><b>6</b> Lab 6: Correlation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>6.1</b> General Goals</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#important-info-3"><i class="fa fa-check"></i><b>6.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#r-6"><i class="fa fa-check"></i><b>6.2</b> R</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#cor-for-correlation"><i class="fa fa-check"></i><b>6.2.1</b> cor for correlation</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#world-happiness-report"><i class="fa fa-check"></i><b>6.2.2</b> World Happiness Report</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#generalization-exercise-4"><i class="fa fa-check"></i><b>6.2.3</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="6.2.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#writing-assignment-4"><i class="fa fa-check"></i><b>6.2.4</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#excel-6"><i class="fa fa-check"></i><b>6.3</b> Excel</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#spss-6"><i class="fa fa-check"></i><b>6.4</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>6.4.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="6.4.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix"><i class="fa fa-check"></i><b>6.4.2</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.4.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>6.4.3</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.4.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#splitting-a-file"><i class="fa fa-check"></i><b>6.4.4</b> Splitting a File</a></li>
+<li class="chapter" data-level="6.4.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-3"><i class="fa fa-check"></i><b>6.4.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi-2"><i class="fa fa-check"></i><b>6.5</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-two-variables-1"><i class="fa fa-check"></i><b>6.5.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-1"><i class="fa fa-check"></i><b>6.5.2</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.5.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>6.5.3</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.5.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#applying-a-filter"><i class="fa fa-check"></i><b>6.5.4</b> Applying a Filter</a></li>
+<li class="chapter" data-level="6.5.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#removing-the-filter"><i class="fa fa-check"></i><b>6.5.5</b> Removing the Filter</a></li>
+<li class="chapter" data-level="6.5.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-4"><i class="fa fa-check"></i><b>6.5.6</b> Homework</a></li>
+<li class="chapter" data-level="6.5.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-4"><i class="fa fa-check"></i><b>6.5.7</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html"><i class="fa fa-check"></i><b>7</b> Lab 7 One-way ANOVA</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris"><i class="fa fa-check"></i><b>7.1</b> How to not think about bad memories by playing Tetris</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#study-description-2"><i class="fa fa-check"></i><b>7.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="7.1.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#study-methods"><i class="fa fa-check"></i><b>7.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>7.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#r-7"><i class="fa fa-check"></i><b>7.4</b> R</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#load-the-data-2"><i class="fa fa-check"></i><b>7.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#inspect-the-dataframe"><i class="fa fa-check"></i><b>7.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#get-the-data-you-need"><i class="fa fa-check"></i><b>7.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="7.4.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#look-at-the-data-2"><i class="fa fa-check"></i><b>7.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#conduct-the-anova"><i class="fa fa-check"></i><b>7.4.5</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="7.4.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#reporting-the-anova-results"><i class="fa fa-check"></i><b>7.4.6</b> Reporting the ANOVA results</a></li>
+<li class="chapter" data-level="7.4.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#individual-comparisons"><i class="fa fa-check"></i><b>7.4.7</b> Individual comparisons</a></li>
+<li class="chapter" data-level="7.4.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-it-all-up."><i class="fa fa-check"></i><b>7.4.8</b> Writing it all up.</a></li>
+<li class="chapter" data-level="7.4.9" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#food-for-thought"><i class="fa fa-check"></i><b>7.4.9</b> Food for thought</a></li>
+<li class="chapter" data-level="7.4.10" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#generalization-exercise-5"><i class="fa fa-check"></i><b>7.4.10</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="7.4.11" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-assignment-5"><i class="fa fa-check"></i><b>7.4.11</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#excel-7"><i class="fa fa-check"></i><b>7.5</b> Excel</a></li>
+<li class="chapter" data-level="7.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#spss-7"><i class="fa fa-check"></i><b>7.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.6.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>7.6.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="7.6.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>7.6.3</b> Follow-Up Tests</a></li>
+<li class="chapter" data-level="7.6.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>7.6.4</b> Planned Comparisons: T-Contrasts</a></li>
+<li class="chapter" data-level="7.6.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>7.6.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
+<li class="chapter" data-level="7.6.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>7.6.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
+<li class="chapter" data-level="7.6.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#homework-questions"><i class="fa fa-check"></i><b>7.6.7</b> Homework questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi-3"><i class="fa fa-check"></i><b>7.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 Repeated Measures ANOVA</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>8.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>8.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>8.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="8.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="8.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#r-8"><i class="fa fa-check"></i><b>8.4</b> R</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#load-the-data-3"><i class="fa fa-check"></i><b>8.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="8.4.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#inspect-the-dataframe-1"><i class="fa fa-check"></i><b>8.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="8.4.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#get-the-data-you-need-1"><i class="fa fa-check"></i><b>8.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-data-3"><i class="fa fa-check"></i><b>8.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="8.4.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-means"><i class="fa fa-check"></i><b>8.4.5</b> Look at the means</a></li>
+<li class="chapter" data-level="8.4.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-the-repeated-measures-anova"><i class="fa fa-check"></i><b>8.4.6</b> Conduct the repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.4.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#follow-up-comparisons"><i class="fa fa-check"></i><b>8.4.7</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="8.4.8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#reporting-everything"><i class="fa fa-check"></i><b>8.4.8</b> Reporting everything</a></li>
+<li class="chapter" data-level="8.4.9" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#generalization-exercise-6"><i class="fa fa-check"></i><b>8.4.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="8.4.10" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#writing-assignment-6"><i class="fa fa-check"></i><b>8.4.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-8"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
+<li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-8"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.6.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>8.6.2</b> Produce a frequency histogram and remove outliers</a></li>
+<li class="chapter" data-level="8.6.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>8.6.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.6.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>8.6.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
+<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#jamovi-4"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9: Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#does-standing-up-make-you-focus-more"><i class="fa fa-check"></i><b>9.1</b> Does standing up make you focus more?</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#study-description-4"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#study-methods-2"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="9.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="9.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#r-9"><i class="fa fa-check"></i><b>9.4</b> R</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#load-the-data-4"><i class="fa fa-check"></i><b>9.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#inspect-the-dataframe-2"><i class="fa fa-check"></i><b>9.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="9.4.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-you-need-2"><i class="fa fa-check"></i><b>9.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="9.4.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-into-the-format-you-want"><i class="fa fa-check"></i><b>9.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="9.4.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-data-4"><i class="fa fa-check"></i><b>9.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="9.4.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-means-1"><i class="fa fa-check"></i><b>9.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="9.4.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-the-anova-1"><i class="fa fa-check"></i><b>9.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="9.4.8" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#between-subjects-anova"><i class="fa fa-check"></i><b>9.4.8</b> Between Subjects ANOVA</a></li>
+<li class="chapter" data-level="9.4.9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.9</b> Repeated measures ANOVA</a></li>
+<li class="chapter" data-level="9.4.10" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#follow-up-comparisons-1"><i class="fa fa-check"></i><b>9.4.10</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="9.4.11" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#generalization-exercise-7"><i class="fa fa-check"></i><b>9.4.11</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="9.4.12" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#writing-asignment"><i class="fa fa-check"></i><b>9.4.12</b> Writing asignment</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-9"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
+<li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-9"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.6.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="9.6.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects"><i class="fa fa-check"></i><b>9.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="9.6.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="9.6.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects-1"><i class="fa fa-check"></i><b>9.6.5</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#jamovi-5"><i class="fa fa-check"></i><b>9.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Mixed Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them"><i class="fa fa-check"></i><b>10.1</b> Do you remember things better when you take pictures of them?</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#study-description-5"><i class="fa fa-check"></i><b>10.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="10.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="10.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#r-10"><i class="fa fa-check"></i><b>10.4</b> R</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#load-the-data-5"><i class="fa fa-check"></i><b>10.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="10.4.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#inspect-the-dataframe-3"><i class="fa fa-check"></i><b>10.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="10.4.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-you-need-3"><i class="fa fa-check"></i><b>10.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="10.4.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-into-the-format-you-want-1"><i class="fa fa-check"></i><b>10.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="10.4.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-data-5"><i class="fa fa-check"></i><b>10.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="10.4.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-means-2"><i class="fa fa-check"></i><b>10.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="10.4.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-the-anova-2"><i class="fa fa-check"></i><b>10.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="10.4.8" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#generalization-exercise-8"><i class="fa fa-check"></i><b>10.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="10.4.9" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#writing-assignment-7"><i class="fa fa-check"></i><b>10.4.9</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-10"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
+<li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-10"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-7"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.6.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.6.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>10.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#jamovi-6"><i class="fa fa-check"></i><b>10.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Choosing an appropriate statistical test</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#general-goals-3"><i class="fa fa-check"></i><b>11.1</b> General Goals</a></li>
+<li class="chapter" data-level="11.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#summary-of-the-tests"><i class="fa fa-check"></i><b>11.2</b> Summary of the tests</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearsons-r-correlation-coefficient"><i class="fa fa-check"></i><b>11.2.1</b> Pearson’s <em>r</em> correlation coefficient</a></li>
+<li class="chapter" data-level="11.2.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spearmans-r-correlation-coefficient"><i class="fa fa-check"></i><b>11.2.2</b> Spearman’s <em>r</em> correlation coefficient</a></li>
+<li class="chapter" data-level="11.2.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test"><i class="fa fa-check"></i><b>11.2.3</b> Independent <em>t</em>-test</a></li>
+<li class="chapter" data-level="11.2.4" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test"><i class="fa fa-check"></i><b>11.2.4</b> Mann-Whitney <em>U</em>-test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spss-11"><i class="fa fa-check"></i><b>11.3</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation"><i class="fa fa-check"></i><b>11.3.1</b> Pearson and Spearman Correlation</a></li>
+<li class="chapter" data-level="11.3.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test-1"><i class="fa fa-check"></i><b>11.3.2</b> Independent <em>t</em>-test</a></li>
+<li class="chapter" data-level="11.3.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test-1"><i class="fa fa-check"></i><b>11.3.3</b> Mann-Whitney <em>U</em>-test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-mar-9-and-10-2021"><i class="fa fa-check"></i><b>11.4</b> Homework (Mar 9 and 10, 2021)</a></li>
+<li class="chapter" data-level="11.5" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-feb-23-and-24-2021"><i class="fa fa-check"></i><b>11.5</b> Homework (Feb 23 and 24, 2021)</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Answering questions with data: Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
+<div id="lab-6-correlation" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Lab 6: Correlation</h1>
+<script>
+$("#coverpic").hide();
+</script>
+<p><span class="newthought">
+If … we choose a group of social phenomena with no antecedent knowledge of the causation or absence of causation among them, then the calculation of correlation coefficients, total or partial, will not advance us a step toward evaluating the importance of the causes at work.
+—Sir Ronald Fisher
+</span></p>
+<p>In lecture and in the textbook, we have been discussing the idea of correlation. This is the idea that two things that we measure can be somehow related to one another. For example, your personal happiness, which we could try to measure say with a questionnaire, might be related to other things in your life that we could also measure, such as number of close friends, yearly salary, how much chocolate you have in your bedroom, or how many times you have said the word Nintendo in your life. Some of the relationships that we can measure are meaningful, and might reflect a causal relationship where one thing causes a change in another thing. Some of the relationships are spurious, and do not reflect a causal relationship.</p>
+<p>In this lab you will learn how to compute correlations between two variables in software, and then ask some questions about the correlations that you observe.</p>
+<div id="general-goals-2" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> General Goals</h2>
+<ol style="list-style-type: decimal">
+<li>Compute Pearson’s <em>r</em> between two variables using software</li>
+<li>Discuss the possible meaning of correlations that you observe</li>
+</ol>
+<div id="important-info-3" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Important Info</h3>
+<p>We use data from the <a href="http://worldhappiness.report">World Happiness Report</a>. A .csv of the data can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv" download>WHR2018.csv</a></p>
+</div>
+</div>
+<div id="r-6" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> R</h2>
+<p>In this lab we use explore to explore correlations between any two variables, and also show how to do a regression line. There will be three main parts. Getting <em>r</em> to compute the correlation, and looking at the data using scatter plots. We’ll look at some correlations from the World Happiness Report. Then you’ll look at correlations using data we collect from ourselves. It will be fun.</p>
+<div id="cor-for-correlation" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> cor for correlation</h3>
+<p>R has the <code>cor</code> function for computing Pearson’s <em>r</em> between any two variables. In fact this same function computes other versions of correlation, but we’ll skip those here. To use the function you just need two variables with numbers in them like this:</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="lab-6-correlation.html#cb148-1" aria-hidden="true" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb148-2"><a href="lab-6-correlation.html#cb148-2" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">13</span>)</span>
+<span id="cb148-3"><a href="lab-6-correlation.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y)</span></code></pre></div>
+<pre><code>## [1] 0.76539</code></pre>
+<p>Well, that was easy.</p>
+<div id="scatterplots-1" class="section level4" number="6.2.1.1">
+<h4><span class="header-section-number">6.2.1.1</span> scatterplots</h4>
+<p>Let’s take our silly example, and plot the data in a scatter plot using ggplot2, and let’s also return the correlation and print it on the scatter plot. Remember, ggplot2 wants the data in a data.frame, so we first put our x and y variables in a data frame.</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="lab-6-correlation.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb150-2"><a href="lab-6-correlation.html#cb150-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-3"><a href="lab-6-correlation.html#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame for plotting</span></span>
+<span id="cb150-4"><a href="lab-6-correlation.html#cb150-4" aria-hidden="true" tabindex="-1"></a>my_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x,y)</span>
+<span id="cb150-5"><a href="lab-6-correlation.html#cb150-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-6"><a href="lab-6-correlation.html#cb150-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plot it</span></span>
+<span id="cb150-7"><a href="lab-6-correlation.html#cb150-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(my_df, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb150-8"><a href="lab-6-correlation.html#cb150-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb150-9"><a href="lab-6-correlation.html#cb150-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(<span class="fu">cor</span>(x,y), <span class="at">digits=</span><span class="dv">2</span>), <span class="at">y=</span><span class="dv">12</span>, <span class="at">x=</span><span class="dv">2</span> ))</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-261-1.png" width="672" /></p>
+<p>Wow, we’re moving fast here.</p>
+</div>
+<div id="lots-of-scatterplots" class="section level4" number="6.2.1.2">
+<h4><span class="header-section-number">6.2.1.2</span> lots of scatterplots</h4>
+<p>Before we move on to real data, let’s look at some fake data first. Often we will have many measures of X and Y, split between a few different conditions, for example, A, B, C, and D. Let’s make some fake data for X and Y, for each condition A, B, C, and D, and then use facet_wrapping to look at four scatter plots all at once</p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="lab-6-correlation.html#cb151-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">40</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb151-2"><a href="lab-6-correlation.html#cb151-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">40</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb151-3"><a href="lab-6-correlation.html#cb151-3" aria-hidden="true" tabindex="-1"></a>conditions<span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="at">each=</span><span class="dv">10</span>)</span>
+<span id="cb151-4"><a href="lab-6-correlation.html#cb151-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb151-5"><a href="lab-6-correlation.html#cb151-5" aria-hidden="true" tabindex="-1"></a>all_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(conditions, x, y)</span>
+<span id="cb151-6"><a href="lab-6-correlation.html#cb151-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb151-7"><a href="lab-6-correlation.html#cb151-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(all_df, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb151-8"><a href="lab-6-correlation.html#cb151-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb151-9"><a href="lab-6-correlation.html#cb151-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conditions)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-262-1.png" width="672" /></p>
+</div>
+<div id="computing-the-correlations-all-at-once" class="section level4" number="6.2.1.3">
+<h4><span class="header-section-number">6.2.1.3</span> computing the correlations all at once</h4>
+<p>We’ve seen how we can make four graphs at once. Facet_wrap will always try to make as many graphs as there are individual conditions in the column variable. In this case there are four, so it makes four.</p>
+<p>Notice, the scatter plots don’t show the correlation (r) values. Getting these numbers on there is possible, but we have to calculate them first. We’ll leave it to you to Google how to do this, if it’s something you want to do. Instead, what we will do is make a table of the correlations in addition to the scatter plot. We again use <code>dplyr</code> to do this:</p>
+<p>OK, we are basically ready to turn to some real data and ask if there are correlations between interesting variables…You will find that there are some… But before we do that, we do one more thing. This will help you become a little bit more skeptical of these “correlations.”</p>
+</div>
+<div id="chance-correlations" class="section level4" number="6.2.1.4">
+<h4><span class="header-section-number">6.2.1.4</span> Chance correlations</h4>
+<p>As you learned from the textbook. We can find correlations by chance alone, even when there is no true correlation between the variables. For example, if we sampled randomly into x, and then sampled some numbers randomly into y. We know they aren’t related, because we randomly sampled the numbers. However, doing this creates some correlations some of the time just by chance. You can demonstrate this to yourself with the following code. It’s a repeat of what we already saw, jut with a few more conditions added. Let’s look at 20 conditions, with random numbers for x and y in each. For each, sample size will be 10. We’ll make the fake data, then make a big graph to look at all. And, even though we get to regression later in the lab, I’ll put the best fit line onto each scatter plot, so you can “see the correlations.”</p>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="lab-6-correlation.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">10</span><span class="sc">*</span><span class="dv">20</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb152-2"><a href="lab-6-correlation.html#cb152-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">10</span><span class="sc">*</span><span class="dv">20</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb152-3"><a href="lab-6-correlation.html#cb152-3" aria-hidden="true" tabindex="-1"></a>conditions<span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">each=</span><span class="dv">10</span>)</span>
+<span id="cb152-4"><a href="lab-6-correlation.html#cb152-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb152-5"><a href="lab-6-correlation.html#cb152-5" aria-hidden="true" tabindex="-1"></a>all_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(conditions, x, y)</span>
+<span id="cb152-6"><a href="lab-6-correlation.html#cb152-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb152-7"><a href="lab-6-correlation.html#cb152-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(all_df, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb152-8"><a href="lab-6-correlation.html#cb152-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb152-9"><a href="lab-6-correlation.html#cb152-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb152-10"><a href="lab-6-correlation.html#cb152-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conditions)<span class="sc">+</span></span>
+<span id="cb152-11"><a href="lab-6-correlation.html#cb152-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-263-1.png" width="672" /></p>
+<p>You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn’t be. You can keep re-doing this graph, by re-knitting your <em>r</em> Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.</p>
+<p>The point is, now you know you can find correlations by chance. So, in the next section, you should always wonder if the correlations you find reflect meaningful association between the x and y variable, or could have just occurred by chance.</p>
+</div>
+</div>
+<div id="world-happiness-report" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> World Happiness Report</h3>
+<p>Let’s take a look at some correlations in real data. We are going to look at responses to a questionnaire about happiness that was sent around the world, from the <a href="http://worldhappiness.report">world happiness report</a></p>
+<div id="load-the-data-1" class="section level4" number="6.2.2.1">
+<h4><span class="header-section-number">6.2.2.1</span> Load the data</h4>
+<p>We load the data into a data frame. Reminder, the following assumes that you have downloaded the <a href="https://github.com/CrumpLab/statisticsLab/raw/master/RMarkdownsLab.zip">RMarkdownsLab.zip</a> file which contains the data file in the data folder.</p>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="lab-6-correlation.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb153-2"><a href="lab-6-correlation.html#cb153-2" aria-hidden="true" tabindex="-1"></a>whr_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&#39;data/WHR2018.csv&#39;</span>)</span></code></pre></div>
+<p>You can also load the data using the following URL</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="lab-6-correlation.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb154-2"><a href="lab-6-correlation.html#cb154-2" aria-hidden="true" tabindex="-1"></a>whr_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="look-at-the-data-1" class="section level4" number="6.2.2.2">
+<h4><span class="header-section-number">6.2.2.2</span> Look at the data</h4>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="lab-6-correlation.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
+<span id="cb155-2"><a href="lab-6-correlation.html#cb155-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(whr_data))</span></code></pre></div>
+<p>You should be able to see that there is data for many different countries, across a few different years. There are lots of different kinds of measures, and each are given a name. I’ll show you some examples of asking questions about correlations with this data, then you get to ask and answer your own questions.</p>
+</div>
+<div id="my-question-1" class="section level4" number="6.2.2.3">
+<h4><span class="header-section-number">6.2.2.3</span> My Question #1</h4>
+<p>For the year 2017 only, does a country’s measure for “Freedom to make life choices” correlate with that country’s measure for " Confidence in national government"?</p>
+<p>Let’s find out. We calculate the correlation, and then we make the scatter plot.</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="lab-6-correlation.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(whr_data<span class="sc">$</span><span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb156-2"><a href="lab-6-correlation.html#cb156-2" aria-hidden="true" tabindex="-1"></a>    whr_data<span class="sc">$</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="lab-6-correlation.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(whr_data, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb158-2"><a href="lab-6-correlation.html#cb158-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y=</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>))<span class="sc">+</span></span>
+<span id="cb158-3"><a href="lab-6-correlation.html#cb158-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb158-4"><a href="lab-6-correlation.html#cb158-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-267-1.png" width="672" /></p>
+<p>Interesting, what happened here? We can see some dots, but the correlation was NA (meaning undefined). This occurred because there are some missing data points in the data. We can remove all the rows with missing data first, then do the correlation. We will do this a couple steps, first creating our own data.frame with only the numbers we want to analyse. We can select the columns we want to keep using <code>select</code>. Then we use <code>filter</code> to remove the rows with NAs.</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="lab-6-correlation.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb159-2"><a href="lab-6-correlation.html#cb159-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-3"><a href="lab-6-correlation.html#cb159-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> whr_data <span class="sc">%&gt;%</span></span>
+<span id="cb159-4"><a href="lab-6-correlation.html#cb159-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(country,</span>
+<span id="cb159-5"><a href="lab-6-correlation.html#cb159-5" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb159-6"><a href="lab-6-correlation.html#cb159-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb159-7"><a href="lab-6-correlation.html#cb159-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>),</span>
+<span id="cb159-8"><a href="lab-6-correlation.html#cb159-8" aria-hidden="true" tabindex="-1"></a>                      <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>))</span>
+<span id="cb159-9"><a href="lab-6-correlation.html#cb159-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-10"><a href="lab-6-correlation.html#cb159-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb159-11"><a href="lab-6-correlation.html#cb159-11" aria-hidden="true" tabindex="-1"></a>    smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## [1] 0.4080963</code></pre>
+<p>Now we see the correlation is .408.</p>
+<p>Although the scatter plot shows the dots are everywhere, it generally shows that as Freedom to make life choices increases in a country, that country’s confidence in their national government also increase. This is a positive correlation. Let’s do this again and add the best fit line, so the trend is more clear, we use <code>geom_smooth(method=lm, se=FALSE)</code>. I also change the <code>alpha</code> value of the dots so they blend it bit, and you can see more of them.</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="lab-6-correlation.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select DVs and filter for NAs</span></span>
+<span id="cb161-2"><a href="lab-6-correlation.html#cb161-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb161-3"><a href="lab-6-correlation.html#cb161-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> whr_data <span class="sc">%&gt;%</span></span>
+<span id="cb161-4"><a href="lab-6-correlation.html#cb161-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(country,</span>
+<span id="cb161-5"><a href="lab-6-correlation.html#cb161-5" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb161-6"><a href="lab-6-correlation.html#cb161-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb161-7"><a href="lab-6-correlation.html#cb161-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>),</span>
+<span id="cb161-8"><a href="lab-6-correlation.html#cb161-8" aria-hidden="true" tabindex="-1"></a>                      <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>))</span>
+<span id="cb161-9"><a href="lab-6-correlation.html#cb161-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb161-10"><a href="lab-6-correlation.html#cb161-10" aria-hidden="true" tabindex="-1"></a><span class="co"># calcualte correlation</span></span>
+<span id="cb161-11"><a href="lab-6-correlation.html#cb161-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb161-12"><a href="lab-6-correlation.html#cb161-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb161-13"><a href="lab-6-correlation.html#cb161-13" aria-hidden="true" tabindex="-1"></a>    smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## [1] 0.4080963</code></pre>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="lab-6-correlation.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data with best fit line</span></span>
+<span id="cb163-2"><a href="lab-6-correlation.html#cb163-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb163-3"><a href="lab-6-correlation.html#cb163-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Freedom to make life choices</span><span class="st">`</span>,</span>
+<span id="cb163-4"><a href="lab-6-correlation.html#cb163-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y=</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>))<span class="sc">+</span></span>
+<span id="cb163-5"><a href="lab-6-correlation.html#cb163-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb163-6"><a href="lab-6-correlation.html#cb163-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb163-7"><a href="lab-6-correlation.html#cb163-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-269-1.png" width="672" /></p>
+</div>
+<div id="my-question-2" class="section level4" number="6.2.2.4">
+<h4><span class="header-section-number">6.2.2.4</span> My Question #2</h4>
+<p>After all that work, we can now speedily answer more questions. For example, what is the relationship between positive affect in a country and negative affect in a country. I wouldn’t be surprised if there was a negative correlation here: when positive feelings generally go up, shouldn’t negative feelings generally go down?</p>
+<p>To answer this question, we just copy paste the last code block, and change the DVs to be <code>Positive affect</code>, and <code>Negative affect</code></p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="lab-6-correlation.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select DVs and filter for NAs</span></span>
+<span id="cb164-2"><a href="lab-6-correlation.html#cb164-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-3"><a href="lab-6-correlation.html#cb164-3" aria-hidden="true" tabindex="-1"></a>smaller_df <span class="ot">&lt;-</span> whr_data <span class="sc">%&gt;%</span></span>
+<span id="cb164-4"><a href="lab-6-correlation.html#cb164-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(country,</span>
+<span id="cb164-5"><a href="lab-6-correlation.html#cb164-5" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Positive affect</span><span class="st">`</span>,</span>
+<span id="cb164-6"><a href="lab-6-correlation.html#cb164-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">`</span><span class="at">Negative affect</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb164-7"><a href="lab-6-correlation.html#cb164-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Positive affect</span><span class="st">`</span>),</span>
+<span id="cb164-8"><a href="lab-6-correlation.html#cb164-8" aria-hidden="true" tabindex="-1"></a>                      <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Negative affect</span><span class="st">`</span>))</span>
+<span id="cb164-9"><a href="lab-6-correlation.html#cb164-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-10"><a href="lab-6-correlation.html#cb164-10" aria-hidden="true" tabindex="-1"></a><span class="co"># calcualte correlation</span></span>
+<span id="cb164-11"><a href="lab-6-correlation.html#cb164-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-12"><a href="lab-6-correlation.html#cb164-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Positive affect</span><span class="st">`</span>,</span>
+<span id="cb164-13"><a href="lab-6-correlation.html#cb164-13" aria-hidden="true" tabindex="-1"></a>    smaller_df<span class="sc">$</span><span class="st">`</span><span class="at">Negative affect</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## [1] -0.3841123</code></pre>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="lab-6-correlation.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data with best fit line</span></span>
+<span id="cb166-2"><a href="lab-6-correlation.html#cb166-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb166-3"><a href="lab-6-correlation.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller_df, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Positive affect</span><span class="st">`</span>,</span>
+<span id="cb166-4"><a href="lab-6-correlation.html#cb166-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y=</span><span class="st">`</span><span class="at">Negative affect</span><span class="st">`</span>))<span class="sc">+</span></span>
+<span id="cb166-5"><a href="lab-6-correlation.html#cb166-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb166-6"><a href="lab-6-correlation.html#cb166-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb166-7"><a href="lab-6-correlation.html#cb166-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-270-1.png" width="672" /></p>
+<p>Bam, there we have it. As positive affect goes up, negative affect goes down. A negative correlation.</p>
+</div>
+</div>
+<div id="generalization-exercise-4" class="section level3" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Generalization Exercise</h3>
+<p>This generalization exercise will explore the idea that correlations between two measures can arise by chance alone. There are two questions to answer. For each question you will be sampling random numbers from uniform distribution. To conduct the estimate, you will be running a simulation 100 times. The questions are:</p>
+<ol style="list-style-type: decimal">
+<li><p>Estimate the range (minimum and maximum) of correlations (using pearons’s r) that could occur by chance between two variables with n=10.</p></li>
+<li><p>Estimate the range (minimum and maximum) of correlations (using pearons’s r) that could occur bychance between two variables with n = 100.</p></li>
+</ol>
+<p>Use these tips to answer the question.</p>
+<p>Tip 1: You can use the <code>runif()</code> function to sample random numbers between a minimum value, and maximum value. The example below sample 10 (n=10) random numbers between the range 0 (min = 0) and 10 (max=10). Everytime you run this code, the 10 values in x will be re-sampled, and will be 10 new random numbers</p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="lab-6-correlation.html#cb167-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">10</span>)</span></code></pre></div>
+<p>Tip 2: You can compute the correlation between two sets of random numbers, by first sampling random numbers into each variable, and then running the <code>cor()</code> function.</p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="lab-6-correlation.html#cb168-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">10</span>)</span>
+<span id="cb168-2"><a href="lab-6-correlation.html#cb168-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">10</span>)</span>
+<span id="cb168-3"><a href="lab-6-correlation.html#cb168-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y)</span></code></pre></div>
+<pre><code>## [1] -0.5677794</code></pre>
+<p>Running the above code will give different values for the correlation each time, because the numbers in x and y are always randomly different. We might expect that because x and y are chosen randomly that there should be a 0 correlation. However, what we see is that random sampling can produce “fake” correlations just by chance alone. We want to estimate the range of correlations that chance can produce.</p>
+<p>Tip 3: One way to estimate the range of correlations that chance can produce is to repeat the above code many times. For example, if you ran the above code 100 times, you could save the correlations each time, then look at the smallest and largest correlation. This would be an estimate of the range of correlations that can be produced by chance. How can you repeat the above code many times to solve this problem?</p>
+<p>We can do this using a <code>for</code> loop. The code below shows how to repeat everything inside the for loop 100 times. The variable <code>i</code> is an index, that goes from 1 to 100. The <code>saved_value</code> variable starts out as an empty variable, and then we put a value into it (at index position i, from 1 to 100). In this code, we put the sum of the products of x and y into the <code>saved_value</code> variable. At the end of the simulation, the <code>save_value</code> variable contains 100 numbers. The <code>min()</code> and <code>max()</code> functions are used to find the minimum and maximum values for each of the 100 simulations. You should be able to modify this code by replacing <code>sum(x*y)</code> with <code>cor(x,y)</code>. Doing this will allow you to run the simulation 100 times, and find the minimum correlation and maximum correlation that arises by chance. This will be estimate for question 1. To provide an estimate for question 2, you will need to change <code>n=10</code> to <code>n=100</code>.</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="lab-6-correlation.html#cb170-1" aria-hidden="true" tabindex="-1"></a>saved_value <span class="ot">&lt;-</span> <span class="fu">c</span>() <span class="co">#make an empty variable</span></span>
+<span id="cb170-2"><a href="lab-6-correlation.html#cb170-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
+<span id="cb170-3"><a href="lab-6-correlation.html#cb170-3" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">10</span>)</span>
+<span id="cb170-4"><a href="lab-6-correlation.html#cb170-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">10</span>)</span>
+<span id="cb170-5"><a href="lab-6-correlation.html#cb170-5" aria-hidden="true" tabindex="-1"></a>  saved_value[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(x<span class="sc">*</span>y)</span>
+<span id="cb170-6"><a href="lab-6-correlation.html#cb170-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb170-7"><a href="lab-6-correlation.html#cb170-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-8"><a href="lab-6-correlation.html#cb170-8" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(saved_value)</span></code></pre></div>
+<pre><code>## [1] 103.145</code></pre>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="lab-6-correlation.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(saved_value)</span></code></pre></div>
+<pre><code>## [1] 460.2103</code></pre>
+</div>
+<div id="writing-assignment-4" class="section level3" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Writing assignment</h3>
+<p>Answer the following questions with complete sentences. When you have finished everything. Knit the document and hand in your stuff (you can submit your .RMD file to blackboard if it does not knit.)</p>
+<ol style="list-style-type: decimal">
+<li><p>Imagine a researcher found a positive correlation between two variables, and reported that the <em>r</em> value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .3 and <em>r</em> = .7. What does a larger value of <em>r</em> represent?</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .5, and <em>r</em> = -.5.</p></li>
+</ol>
+</div>
+</div>
+<div id="excel-6" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Excel</h2>
+<p>How to do it in Excel</p>
+</div>
+<div id="spss-6" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> SPSS</h2>
+<p>In this lab, we will use SPSS to calculate the correlation coefficient. We will focus on the most commonly used Pearson’s coefficient, <em>r</em>. We will learn how to:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate the Pearson’s <em>r</em> correlation coefficient for bivariate data</li>
+<li>Produce a correlation matrix, reporting Pearson’s <em>r</em> for more than two variables at a time</li>
+<li>Produce a scatterplot</li>
+<li>Split a data file for further analysis</li>
+</ol>
+<p>Let’s first begin with a short data set we will enter into a new SPSS data spreadsheet. Remember, in order to calculate a correlation, you need to have bivariate data; that is, you must have at least two variables, x and y. You can have more than two variables, in which case we can calculate a correlation matrix, as indicated in the section that follows.</p>
+<div id="correlation-coefficient-for-bivariate-data-two-variables" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Correlation Coefficient for Bivariate Data: Two Variables</h3>
+<hr />
+<p>Let’s use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9} {y= 6, 5, 8, 7, 9, 7, 8, 10, 13}. Notice there are two variables, <code>x</code> and <code>y</code>. Enter these into SPSS and name them appropriately.</p>
+<p><img src="img/3.4.11.png" /><!-- --></p>
+<p>Next, click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
+<p><img src="img/3.4.12.png" /><!-- --></p>
+<p>The next window will ask you to select variables to correlate. Since we have two (<code>x</code> and <code>y</code>) move them both from the left-hand field to the right-hand field using the arrow. Notice that in this window, <span style="color:blue">Pearson</span> is selected. This is the default setting (and the one we want), but notice there are other ways to calculate the correlation between variables. We will stick with Pearson’s correlation coefficient for this course.</p>
+<p><img src="img/3.4.13.png" /><!-- --></p>
+<p>Now, click <span style="color:blue">OK</span>.</p>
+<p>SPSS will produce an output table containing the correlation coefficient requested. Notice that the table is redundant; it gives us the correlation between x and y, the correlation between y and x, the correlation between x and itself, and the correlation between y and itself. Any variable correlated with itself will result in an <em>r</em> of 1. The Pearson <em>r</em> correlation between variables x and y is .765.</p>
+<p><img src="img/3.4.14.png" /><!-- --></p>
+</div>
+<div id="correlation-matrix" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Correlation Matrix</h3>
+<hr />
+<p>In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you need not re-run the correlations in SPSS repeatedly. You can, in fact, enter multiple variables into the correlation window and obtain a correlation matrix–a table showing every possible bivariate correlation amongst a group of variables.</p>
+<p>To illustrate how this is done, let’s add a new variable to our existing spreadsheet: variable <code>z</code>, {z= 1, 4, 2, 9, 5, 7, 12, 5, 3}
+<img src="img/3.4.15.png" /><!-- --></p>
+<p>From here, go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
+<p><img src="img/3.4.16.png" /><!-- --></p>
+<p>Next, you will encounter the window that asks you to indicate which variables to correlate. Select all three variables (<code>x</code>, <code>y</code>, and <code>z</code>) and move them to the right-hand field using the arrow.</p>
+<p><img src="img/3.4.17.png" /><!-- --></p>
+<p>Click <span style="color:blue">OK</span>. SPSS will produce an output table that contains correlations for every pairing of our three variables, along with the correlations of each variable with itself.</p>
+<p><img src="img/3.4.18.png" /><!-- --></p>
+<p>According to this output:</p>
+<ol style="list-style-type: decimal">
+<li>The correlation coefficient between variables <code>x</code> and <code>y</code> is .765</li>
+<li>The correlation coefficient between variables <code>x</code> and <code>z</code> is .294</li>
+<li>The correlation coefficient between variables <code>y</code> and <code>z</code> is -.080</li>
+</ol>
+</div>
+<div id="correlation-and-scatterplots" class="section level3" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Correlation and Scatterplots</h3>
+<hr />
+<p>To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let’s use data from The World Happiness Report, a questionnaire about happiness. <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/WHR2018.sav">Here</a> is a link to the file named WHR2018.sav.</p>
+<p>Using this data, let’s answer the following question: does a country’s measure for <code>Freedom to make life choices</code> correlate with that country’s measure for <code>Confidence in national government</code>?</p>
+<p>Let’s find the correlation coefficient between these variables first. Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
+<p><img src="img/3.4.19.png" /><!-- --></p>
+<p>Next, a window will appear asking for the variables to be correlated. Go through the list on the left and find <code>Freedom to make life choices</code> as well as <code>Confidence in national government</code>. Move both of these variables to the field on the right using the arrow.</p>
+<p><img src="img/3.4.20.png" /><!-- -->
+Click OK. SPSS will produce a correlation table.</p>
+<p><img src="img/3.4.21.png" /><!-- --></p>
+<p>Based on this output, the correlation between <code>Freedom to make life choices</code> and <code>Confidence in national government</code> is .408.</p>
+<p>Let’s continue to create the scatterplot for this data. Go to <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">Scatter…</span>
+<img src="img/3.4.22.png" /><!-- --></p>
+<p>In the next window, choose <span style="color:blue">Simple</span>, then <span style="color:blue">Define</span>:
+<img src="img/3.4.23.png" /><!-- --></p>
+<p>Next, move your two variables (<code>Freedom to make life choices</code> and <code>Confidence in national government</code>) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now.</p>
+<p><img src="img/3.4.24.png" /><!-- --></p>
+<p>Click <span style="color:blue">OK</span>. SPSS will produce a scatterplot of your data, as follows:</p>
+<p><img src="img/3.4.25.png" /><!-- --></p>
+<p>You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best-fitting line as it minimizes the distance from it to all the data. To edit the scatterplot double click on the graph and a window labeled Chart Editor should appear:</p>
+<p><img src="img/3.4.26.png" /><!-- --></p>
+<p>In this window, find the button at the top that reads <span style="color:blue">Fit Line at Total</span> when you hover your mouse over it. Below, I have highlighted it for clarity:</p>
+<p><img src="img/3.4.27.png" /><!-- --></p>
+<p>Press this button and you will see a new menu. Make sure <span style="color:blue">Linear</span> is selected and click <span style="color:blue">Apply</span>.</p>
+<p><img src="img/3.4.28.png" /><!-- --></p>
+<p>Next, exit from the Chart Editor. This means you will hit the <span style="color:blue">X</span> in the corner of the window. You will find that the graph in your output window has now updated and has a line drawn on it.</p>
+<p><img src="img/3.4.29.png" /><!-- --></p>
+<p>This scatterplot is very important. The distance between the line and the data points is indicative of the strength of the correlation coefficient; they are directly related. For example, if the data were more clustered or tighter to the line, the correlation would be stronger. If the data points are more spread out and far from the line, the correlation is weaker.</p>
+</div>
+<div id="splitting-a-file" class="section level3" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Splitting a File</h3>
+<hr />
+<p>What if we asked the question: for the year 2017 only, does a country’s measure for <code>Freedom to make life choices</code> correlate with that country’s measure for <code>Confidence in national government</code>?</p>
+<p>Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the year is 2017. To acheive this, we’re going to utilize a function called splitting. Splitting takes the file as a whole, and sets it up so that every analysis is done on some subset of the data. For example, if we split our data by year and calculate a correlation coefficient, SPSS will find Pearson <em>r</em> for only 2017, and another for only 2016, and so on.</p>
+<p>In order to split the data, we go to the top menu and choose <span style="color:blue">Data</span>, then <span style="color:blue">Split file…</span></p>
+<p><img src="img/3.4.30.png" /><!-- --></p>
+<p>In the next window, you must select <span style="color:blue">Organize output by groups</span> and then specify which variable will be used to split the data. Select <code>year</code> and move it to the right-hand field using the arrow.</p>
+<p><img src="img/3.4.31.png" /><!-- --></p>
+<p>Click <span style="color:blue">OK</span>. Notice that this will cause the output window to produce some text indicating that you have split your file. You can ignore this and go back to your data window.</p>
+<p>From here, any analysis you choose to do will be done separately for each year’s worth of data. Let’s calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlate</span>, then <span style="color:blue">Bivariate</span>:</p>
+<p><img src="img/3.4.32.png" /><!-- --></p>
+<p>In the next window, select the variables to be used (they will be the same as in the last example).</p>
+<p><img src="img/3.4.33.png" /><!-- --></p>
+<p>Click <span style="color:blue">OK</span>. Notice that in the output window you will see a bunch of correlation tables (13 of them to be exact), one for each year. Scroll down and find the table with the heading “year = 2017.” That’s the table we need in order to answer our question:</p>
+<p><img src="img/3.4.34.png" /><!-- --></p>
+<p>This table indicates that, if we only look at the year 2017, the correlation coefficient between <code>Freedom to make life choices</code> and <code>Confidence in national government</code> is .442.</p>
+<p>It is VERY important to remember that once you have split a file, every analysis that follows the split will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must UNSPLIT your data file (or undo the split). To do this, go to <span style="color:blue">Data</span>, then <span style="color:blue">Split file…</span></p>
+<p><img src="img/3.4.35.png" /><!-- --></p>
+<p>Then make sure to select <span style="color:blue">Analyze all cases, do not create groups</span> and click <span style="color:blue">OK</span>.</p>
+<p><img src="img/3.4.36.png" /><!-- --></p>
+</div>
+<div id="practice-problems-3" class="section level3" number="6.4.5">
+<h3><span class="header-section-number">6.4.5</span> Practice Problems</h3>
+<hr />
+<ol style="list-style-type: decimal">
+<li><p>For the year 2005 ONLY, find the correlation between “perceptions of corruption” and “positive affect.” Create a scatterplot to visualize this relationship. What are your conclusions about the relationship between affect and perceived corruption? Is this surprising to you?</p></li>
+<li><p>What has happened to log GDP (consider this a measure of GDP) in the United States ONLY with time (as the year has increased)? Explain this relationship and provide a scatterplot.</p></li>
+<li><p>Which country (or countries) have seen a more consistent and strong increase in log GDP over time? Which country (or countries) have seen a decrease over time?</p></li>
+</ol>
+</div>
+</div>
+<div id="jamovi-2" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> JAMOVI</h2>
+<div class="marginnote">
+<p>This section is copied almost verbatim, with some editorial changes, from <a href="https://www.erinmazerolle.com/statisticsLab/lab-3-correlation.html#spss-3">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
+</div>
+<p>In this lab, we will use jamovi to calculate the correlation coefficient. We will focus on the most commonly used Pearson’s coefficient, <em>r</em>. We will learn how to:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate the Pearson’s <em>r</em> correlation coefficient for bivariate data</li>
+<li>Produce a correlation matrix, reporting Pearson’s <em>r</em> for more than two variables at a time</li>
+<li>Produce a scatterplot</li>
+<li>Applying a filter to the data set for further analysis</li>
+</ol>
+<p>Let’s first begin with a short data set we will enter into a new jamovi data spreadsheet. Remember, in order to calculate a correlation, you need to have bivariate data; that is, you must have at least two variables, x and y. You can have more than two variables, in which case we can calculate a correlation matrix, as indicated in the section that follows.</p>
+<div id="correlation-coefficient-for-bivariate-data-two-variables-1" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Correlation Coefficient for Bivariate Data: Two Variables</h3>
+<hr />
+<p>Let’s use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9} {y= 6, 5, 8, 7, 9, 7, 8, 10, 13}. Notice there are two variables, <code>x</code> and <code>y</code>. Enter these into jamovi, name them appropriately, and be sure to indicate, in the <span style="color:blue">Analyze</span>, that these data are measured on a continuous scale. (REMEMBER: One assumption of Pearson’s correlation is that the variables are measured on <strong>at least an interval scale</strong>. That means you should not use Pearson’s correlation with variables that are measured on an ordinal scale. Spearman’s correlation may be helpful if you have variables measured on an ordinal scale.)</p>
+<p><img src="img/3.4.11.png" /><!-- --></p>
+<p>Remember to use the upward facing arrow or the <span style="color:blue">Settings</span> button to close the <span style="color:blue">Analyze</span> pop-up window.</p>
+<p><img src="img/3.4.11.png" /><!-- --></p>
+<p>Next, click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>:</p>
+<p><img src="img/3.4.12.png" /><!-- --></p>
+<p>In the pop-up window, you will select variables to correlate. Since we have two (<code>x</code> and <code>y</code>) move them both from the left-hand field to the right-hand field by highlighting them and using the arrow. Notice that in this window, <span style="color:blue">Pearson</span> is selected. This is the default setting (and the one we want), but notice there are other ways to calculate the correlation between variables. We will stick with Pearson’s correlation coefficient for now.</p>
+<p><img src="img/3.4.13.png" /><!-- --></p>
+<p>In the Results panel on the left, jamovi will produce an output table containing the correlation coefficient requested. (If you are familiar with SPSS, you may notice that the jamovi table is unlike the SPSS table in that the jamovi correlation matrix does not have the redundant information in the top and bottom triangles of the matrix; jamovi gives us only the correlation between x and y in the bottom portion of the table. Note: Any variable correlated with itself will result in an <em>r</em> of 1.) The Pearson <em>r</em> correlation between variables x and y is .765.</p>
+<p><img src="img/3.4.14.png" /><!-- --></p>
+</div>
+<div id="correlation-matrix-1" class="section level3" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Correlation Matrix</h3>
+<hr />
+<p>In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you need not re-run the correlations in jamovi repeatedly. You can, in fact, enter multiple variables into the correlation window and obtain a correlation matrix–a table showing every possible bivariate correlation amongst a group of variables.</p>
+<p>To illustrate how this is done, let’s add a new variable to our existing spreadsheet: variable <code>z</code>, {z= 1, 4, 2, 9, 5, 7, 12, 5, 3}.</p>
+<p><img src="img/3.4.15.png" /><!-- --></p>
+<p>From here, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:</p>
+<p><img src="img/3.4.16.png" /><!-- --></p>
+<p>Next, you will encounter the window that asks you to indicate which variables to correlate. Select all three variables (<code>x</code>, <code>y</code>, and <code>z</code>) by highlighting them, and move them to the right-hand field using the arrow.</p>
+<p><img src="img/3.4.17.png" /><!-- --></p>
+<p>jamovi will produce an output table in the Results panel to the right that contains correlations for every pairing of our three variables. You should see three correlation coefficients and three associated <em>p</em>-values.</p>
+<p><img src="img/3.4.18.png" /><!-- --></p>
+<p>According to this output:</p>
+<ol style="list-style-type: decimal">
+<li>The correlation coefficient between variables <code>x</code> and <code>y</code> is .765; that is, Pearson’s <em>r</em> for variables <code>x</code> and <code>y</code> is .765.</li>
+<li>The correlation coefficient between variables <code>x</code> and <code>z</code> is .294; Pearson’s <em>r</em> for <code>x</code> and <code>z</code> is .294.</li>
+<li>The correlation coefficient between variables <code>y</code> and <code>z</code> is -.080; Pearson’s <em>r</em> for <code>y</code> and <code>z</code> is -.080.</li>
+</ol>
+<p>To further our understanding of these correlation coefficients, we should also look to the <em>p</em>-values associated with each coefficient to decide if the correlation is significant or non-significant.</p>
+<ol style="list-style-type: decimal">
+<li>Pearson’s <em>r</em> for variables <code>x</code> and <code>y</code> is .765. The <em>p</em>-value is .02 which is less than a conventional alpha level of .05, so we would consider this result to be significant. We might write:
+A Pearson’s correlation was performed, and variables <code>x</code> and <code>y</code> were found to be significantly correlated, <em>r</em> = .77, <em>p</em> = .02.</li>
+<li>Pearson’s <em>r</em> for <code>x</code> and <code>z</code> is .294. The <em>p</em>-value is .44 which is greater than a conventional alpha level of .05, so we would consider this result to be non-significant. We might write:
+A Pearson’s correlation was performed, and no significant correlation was found between variables <code>x</code> and <code>z</code>, <em>r</em> = .29, <em>p</em> &gt; .05.</li>
+<li>Pearson’s <em>r</em> for <code>y</code> and <code>z</code> is -.080. The <em>p</em>-value is .84 which is greater than a conventional alpha level of .05, so we would consider this result to be non-significant. We might write:
+A Pearson’s correlation was performed, and no significant correlation was found between variables <code>y</code> and <code>z</code>, <em>r</em> = -.08, <em>p</em> &gt; .05.</li>
+</ol>
+</div>
+<div id="correlation-and-scatterplots-1" class="section level3" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Correlation and Scatterplots</h3>
+<hr />
+<p>To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let’s use data from <a href="include%20link">EngageNS</a>.</p>
+<p>Using this data, let’s answer the following question: Does <code>Number of hours per week spent working at main job</code> correlate with <code>Home activity participation on a typical day: Playing computer games</code>?</p>
+<p>Let’s find the correlation coefficient between these variables first. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:</p>
+<p><img src="img/3.4.19.png" /><!-- --></p>
+<p>Next, a window will appear asking for the variables to be correlated. Use the search function to speed up your identification of those variables. Rather than scrolling through all of the variables in the list on the left, look into the Data Dictionary to find the variable names and search for them. Move both of these variables to the field on the right using the arrow.</p>
+<p><img src="img/3.4.20.png" /><!-- --></p>
+<p>In the Results panel, jamovi will produce a correlation table.</p>
+<p><img src="img/3.4.21.png" /><!-- --></p>
+<p>Based on this output, the correlation between <code>WORKHR</code> and <code>HM_CGAME</code> is -.042. The negative sign simply indicates that as the scores on one variable increase, the scores on the other variable decrease; the variables are negatively correlated. Looking at the <em>p</em>-value, we see it is .001, which is less than our commonly used alpha levels. This correlation is significant.</p>
+<p>We might communicate this information like this:
+A Pearson’s correlation analysis was performed, and a significant negative correlation was found between Number of hours per week spent working at main job and Home activity participation on a typical day: Playing computer games, <em>r</em> = -.04, <em>p</em> = .001.</p>
+<div id="adding-the-scatterplot-module-to-jamovi" class="section level4" number="6.5.3.1">
+<h4><span class="header-section-number">6.5.3.1</span> Adding the Scatterplot module to jamovi</h4>
+<p>Before you can request a scatterplot in jamovi, you must add Scatterplot as a module. To do so, click on the addition sign which is white with a blue trim that has the word “Modules” under the sign. Click <span style="color:blue">jamovi library</span>. Under the “Available” tab, you should see a module called <span style="color:blue">scatr</span>. Click to <span style="color:blue">INSTALL</span> it. When it is installed, it will appear in your <span style="color:blue">Exploration</span> menu.</p>
+</div>
+<div id="getting-a-visual-of-the-correlation" class="section level4" number="6.5.3.2">
+<h4><span class="header-section-number">6.5.3.2</span> Getting a visual of the correlation</h4>
+<p>Let’s continue to create the scatterplot for this data.</p>
+<p>Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot</span>.</p>
+<p><img src="img/3.4.22.png" /><!-- --></p>
+<p>In the next window, choose <span style="color:blue">Simple</span>, then <span style="color:blue">Define</span>:
+<img src="img/3.4.23.png" /><!-- --></p>
+<p>Next, move your two variables (<code>WORKHR</code> and <code>HM_CGAMES</code>) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now. (Remember to use the search function to speed up your search for the variables to include.)</p>
+<p><img src="img/3.4.24.png" /><!-- --></p>
+<p>In the Results panel, jamovi will produce a scatterplot of your data, as follows:</p>
+<p><img src="img/3.4.25.png" /><!-- --></p>
+<p>You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best-fitting line as it minimizes the distance from it to all the data. To include the line of best fit, click on <span style="color:blue">Linear</span> under the Regression Line heading.</p>
+<p><img src="img/3.4.26.png" /><!-- --></p>
+<p>You will find that the graph in your Results panel has now updated and has a line drawn on it.</p>
+<p><img src="img/3.4.29.png" /><!-- --></p>
+<p>This line of best fit on the scatterplot is barely visible. Typically, the distance between the line and the data points is indicative of the strength of the correlation coefficient; they are directly related. For example, if the data were more clustered or tighter to the line, the correlation would be stronger. If the data points are more spread out and far from the line, the correlation is weaker. In this case, although there are many data points clustered around the line, we also see there are a number of data points that are quite far from the line. This is a moderate correlation. We also see that this negative correlation is depicted by a line that falls to the left (i.e., a line with a negative slope).</p>
+</div>
+</div>
+<div id="applying-a-filter" class="section level3" number="6.5.4">
+<h3><span class="header-section-number">6.5.4</span> Applying a Filter</h3>
+<hr />
+<p>What if we asked the question: For residents of the Antigonish and Guysborough regions only, does <code>Number of hours per week spent working at main job</code> correlate with <code>Home activity participation on a typical day: Playing computer games</code>?</p>
+<p>Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the <code>REGION</code> is equal to 4. To achieve this, we’re going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson <em>r</em> for only Antigonish and Guysborough, and not for other regions.</p>
+<p>In order to filter the data, we go to the top menu and choose <span style="color:blue">Data</span> and then <span style="color:blue">Filter</span>.</p>
+<p><img src="img/3.4.30.png" /><!-- --></p>
+<p>In the next window, you must set up the filter; indicate which cases will be used. Under “Filter 1,” click on the formula editor, the <span style="color:blue"><em>f<sub>x</sub></em></span> button. Double click on the variable name (<code>REGION</code>), and it will be incorporated into the filter. Then, use two equal signs, and enter the code for the region of interest (4).</p>
+<p><img src="img/3.4.31.png" /><!-- --></p>
+<p>Notice that this will cause a new column in the spreadsheet wherein a green checkmark indicates the case/participant will be included in the analysis and a red “x” indicates the case/participant will be excluded from the analysis.</p>
+<p>From here, any analysis you choose to do will be done for only the cases match the filter. Let’s calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:</p>
+<p><img src="img/3.4.32.png" /><!-- --></p>
+<p>In the next window, select the variables to be used (they will be the same as in the last example).</p>
+<p><img src="img/3.4.33.png" /><!-- --></p>
+<p>Notice that in the output now shows a correlation matrix with different results than you saw when you ran the correlation with the entire data set:</p>
+<p><img src="img/3.4.34.png" /><!-- --></p>
+<p>This table indicates that, if we only look at the Antigonish-Guysborough region, the correlation coefficient between between <code>WORKHR</code> and <code>HM_CGAME</code> is .012 and the <em>p</em>-value is .80. Comparing this <em>p</em>-value to an alpha level of .05, we would say this correlation is non-significant.</p>
+<p>Again, you may want to inspect the scatterplot to get a visual representation of this correlation coefficient for the data collected from participants in the Antigonish-Guysborough region. Challenge: Give the creation of this scatterplot a try on your own. See if your graph matches the one depicted below.</p>
+</div>
+<div id="removing-the-filter" class="section level3" number="6.5.5">
+<h3><span class="header-section-number">6.5.5</span> Removing the Filter</h3>
+<p>It is VERY important to remember that once you have applied a filter, every analysis will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must delete the filter. To do this, you can highlight the column showing the filter in the spreadsheet, go to <span style="color:blue">Data</span>, and then <span style="color:blue">Delete</span>. You will be prompted with a question to verify that you want to delete the filter. Click <span style="color:blue">Yes</span>.</p>
+<p><img src="img/3.4.35.png" /><!-- --></p>
+</div>
+<div id="homework-4" class="section level3" number="6.5.6">
+<h3><span class="header-section-number">6.5.6</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li><p>Look at participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report <em>r</em> and whether the correlation is significant or non-signifcant?</p></li>
+<li><p>Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (Hint: Use the data dictionary to figure out how participants’ main activities were coded.). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?</p></li>
+</ol>
+</div>
+<div id="practice-problems-4" class="section level3" number="6.5.7">
+<h3><span class="header-section-number">6.5.7</span> Practice Problems</h3>
+<hr />
+<p>Use the EngageNS data to answer the following questions:</p>
+<ol style="list-style-type: decimal">
+<li><p>Construct a scatterplot using FRIENDS on the x-axis and SOC_FRND on the y-axis to depict the results you found for the last homework question.</p></li>
+<li><p>Can you run a Pearson’s correlation analysis on the following pairs of variables? Why or why not?</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>SEX and SLEEP?</li>
+<li>COMP_TIME and SLEEP?</li>
+<li>MAINACT and EDUCAT?</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Run the correlation analysis for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. Report the correlation coefficient. Is it considered statistically significant? Write your results following the APA rules discussed below.</li>
+</ol>
+<p><strong>Some formatting guidelines for writing results sections:</strong></p>
+<p>All of the numbers are rounded to two decimal places, but if your <em>p</em>-value was .0001, it would be okay to write <em>p</em> &lt; .001.</p>
+<p>Italicize symbols such as <em>p</em> and <em>t</em>.</p>
+<p>There are spaces on either side of =, &gt;, or &lt; symbols.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Construct the scatterplot for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. What do you notice about the scatterplot? Does the slope increase or decrease?
+Do the dots closely follow the line of best fit?</p></li>
+<li><p>TBD: questions based on PSYC 291 survey / may want to move some from Lab 7</p></li>
+</ol>
+<div class="marginnote">
+<p>The follwoing three questions are copied verbatim from <a href="https://www.erinmazerolle.com/statisticsLab/lab-3-correlation.html#writing-assignment-2">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Imagine a researcher found a positive correlation between two variables, and reported that the <em>r</em> value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .3 and <em>r</em> = .7. What does a larger value of <em>r</em> represent?</p></li>
+<li><p>Explain the difference between a correlation of <em>r</em> = .5, and <em>r</em> = -.5.</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-5-t-test-independent-sample.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-7-one-way-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/CrumpLab/statisticsLab/blob/master/06-Correlation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_Lab.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

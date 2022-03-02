@@ -119,12 +119,6 @@ Then, create a new column in your Excel spreadsheet, "Means for N = 500" and rep
 knitr::include_graphics('img/NewSamplingN500.png')
 ```
 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RepeatingTheFilter.png')
-```
-
-
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/RepeatingTheFilter2.png')
 ```
@@ -153,11 +147,6 @@ We see that the mean number of friends reported by participants who volunteer is
 knitr::include_graphics('img/MeanFriendsVolunteers.png')
 ```
 
-Changing the filter to VOLUNTEER==2, you will see that the mean number of friends reported by participants who did not volunteer is 4.22.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/MeanFriendsNonVolunteers.png')
-```
 
 
 ### Homework Problems 

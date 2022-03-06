@@ -881,13 +881,13 @@ ___
 ### Practice Questions
 
 
-Single Sample *t*-tests
+One Sample *t*-tests
 
 1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.”  Using the data collected in PSYC 291, select only those participants who identify as cisgender women.  Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
 
 2. Using the data collected in PSYC 291, are students more or less anxious than “somewhat anxious” (i.e., 2 on the scale) during midterm week? Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
 
-Repeated Measures *t*-tests
+Paired *t*-tests
 
 1. Does student stress level change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)?  Using the data collected in PSYC 291, calculate the composite for students’ perceptions of stress at both Time 1 and Time 2.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*). Using APA format, graph the data.  
 

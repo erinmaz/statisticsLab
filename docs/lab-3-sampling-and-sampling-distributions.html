@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Lab 3: Sampling and Sampling Distributions | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Lab 3: Sampling and Sampling Distributions | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="lab-2-descriptive-statistics-and-more-graphs.html"/>
 <link rel="next" href="lab-4-t-test-one-sample-paired-sample.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -67,7 +65,6 @@
 <script type="text/javascript">
 mattcrump=1;
 </script>
-
 
 
 
@@ -580,18 +577,25 @@ $("#coverpic").hide();
 <p>We will start with a sample size of 5 (<em>N</em> = 5). To create a sample from our population of 12871, we are going to use the SAMPLE function. This will tell JAMOVI to select 5 rows at random. Type SAMPLE(REGION,5) after the equals sign, as follows:</p>
 <p><img src="img/SAMPLEN5.png" /><!-- --></p>
 <p>We use <code>REGION</code> in this filter as a placeholder. The filter also works if you use <code>VOLUNTEER</code>.</p>
-<p>Now, you will have a new Results table. Yours might have different numbers, but mine looks like this:</p>
+<p>Now, most of the data are excluded, as indicated by the red Xs. If you scroll around, you should be able to find five rows with a green check. Your rows might look something like this:</p>
+<p><img src="img/Filters_redX.png" /><!-- --></p>
+<p>You will also have a new Results table. Yours might have different numbers, but mine looks like this:</p>
 <p><img src="img/ResultsN5.png" /><!-- --></p>
 <p>Not only might the value of the mean you see be different from the result above, but also the value of <em>N</em> recorded in your Descriptives table might not be exactly 5. This difference in <em>N</em> would be the result of your random sample including rows with missing data.</p>
 <p>In your Excel spreadsheet, name a column “Means for N = 5” and input your mean into the next row:</p>
 <p><img src="img/ExcelN5.png" /><!-- --></p>
+<p>You can sample a new set of 5 rows by turning the filter on and off. Move the slider to change the filter from active:</p>
+<p><img src="img/ActiveFilter.png" /><!-- --></p>
+<p>to inactive:
+<img src="img/InactiveFilter.png" /><!-- --></p>
+<p>When you move the slider back to “active,” you should have a different sample in your results table. It will probably have a different mean from your previous sample.</p>
 <p>Repeat this process 19 more times, to record the mean from 20 random samples.</p>
-<p>Once you have 20 samples, input your means into the class [spreadsheet] (<a href="https://moodle.stfx.ca/course/view.php?id=26030#section-10" class="uri">https://moodle.stfx.ca/course/view.php?id=26030#section-10</a>).</p>
+<p>Once you have 20 samples, input your means into the class <a href="https://moodle.stfx.ca/course/view.php?id=26030#section-10">spreadsheet</a>.</p>
 <p>Then, create a new column in your Excel spreadsheet, “Means for N = 500” and repeat the process, but this time select random samples of 500. This means you need to adjust your filter so that it reads SAMPLE(REGION,500), and you have to continue to inactivate and activate the filter until you have 20 means with <em>N</em> = 500.</p>
 <p><img src="img/NewSamplingN500.png" /><!-- --></p>
 <p><img src="img/RepeatingTheFilter2.png" /><!-- --></p>
 <p>Once you have 20 samples with <em>N</em> = 500, input those into the class <a href="https://moodle.stfx.ca/course/view.php?id=26030#section-10">spreadsheet</a>.</p>
-<p>Once everyone has completed these tasks, we will make histograms of the means for both sample sizes as a group. While you are waiting, complete the lab activities described in the next section.</p>
+<p>Once everyone has completed these tasks, we will make histograms of the means for both sample sizes as a group. While you are waiting, complete the lab activities described in the next sections.</p>
 </div>
 <div id="other-types-of-filters" class="section level3" number="3.4.4">
 <h3><span class="header-section-number">3.4.4</span> Other types of filters</h3>
@@ -640,7 +644,6 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

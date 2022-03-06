@@ -95,7 +95,13 @@ knitr::include_graphics('img/SAMPLEN5.png')
 
 We use `REGION` in this filter as a placeholder. The filter also works if you use `VOLUNTEER`.
 
-Now, you will have a new Results table. Yours might have different numbers, but mine looks like this:
+Now, most of the data are excluded, as indicated by the red Xs. If you scroll around, you should be able to find five rows with a green check. Your rows might look something like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/Filters_redX.png')
+```
+
+You will also have a new Results table. Yours might have different numbers, but mine looks like this:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ResultsN5.png')
@@ -109,9 +115,22 @@ In your Excel spreadsheet, name a column "Means for N = 5" and input your mean i
 knitr::include_graphics('img/ExcelN5.png')
 ```
 
+You can sample a new set of 5 rows by turning the filter on and off. Move the slider to change the filter from active:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ActiveFilter.png')
+```
+
+to inactive:
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/InactiveFilter.png')
+```
+
+When you move the slider back to "active," you should have a different sample in your results table. It will probably have a different mean from your previous sample.
+
 Repeat this process 19 more times, to record the mean from 20 random samples. 
 
-Once you have 20 samples, input your means into the class [spreadsheet] (https://moodle.stfx.ca/course/view.php?id=26030#section-10).
+Once you have 20 samples, input your means into the class [spreadsheet](https://moodle.stfx.ca/course/view.php?id=26030#section-10).
 
 Then, create a new column in your Excel spreadsheet, "Means for N = 500" and repeat the process, but this time select random samples of 500. This means you need to adjust your filter so that it reads SAMPLE(REGION,500), and you have to continue to inactivate and activate the filter until you have 20 means with *N* = 500.
 
@@ -125,7 +144,7 @@ knitr::include_graphics('img/RepeatingTheFilter2.png')
 
 Once you have 20 samples with *N* = 500, input those into the class [spreadsheet](https://moodle.stfx.ca/course/view.php?id=26030#section-10).
 
-Once everyone has completed these tasks, we will make histograms of the means for both sample sizes as a group. While you are waiting, complete the lab activities described in the next section.
+Once everyone has completed these tasks, we will make histograms of the means for both sample sizes as a group. While you are waiting, complete the lab activities described in the next sections.
 
 ### Other types of filters
 

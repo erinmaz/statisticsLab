@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Lab 4: t-Test (one-sample, paired sample) | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Lab 4: t-Test (one-sample, paired sample) | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="lab-3-sampling-and-sampling-distributions.html"/>
 <link rel="next" href="lab-5-t-test-independent-sample.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -71,6 +73,7 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -130,6 +133,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -316,14 +320,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-8---march-15-16"><i class="fa fa-check"></i><b>4.7</b> JAMOVI - Week 8 - March 15 &amp; 16</a>
 <ul>
-<li class="chapter" data-level="4.7.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>4.7.1</b> Experiment Background</a></li>
-<li class="chapter" data-level="4.7.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test-1"><i class="fa fa-check"></i><b>4.7.2</b> OPTIONAL: Performing a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.7.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.7.3</b> Performing a paired-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.7.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics-1"><i class="fa fa-check"></i><b>4.7.4</b> Using descriptive statistics to give context to inferential statistics</a></li>
-<li class="chapter" data-level="4.7.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results-1"><i class="fa fa-check"></i><b>4.7.5</b> Graphing your results</a></li>
-<li class="chapter" data-level="4.7.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.7.6</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.7.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6-1"><i class="fa fa-check"></i><b>4.7.7</b> Lab Homework #6</a></li>
-<li class="chapter" data-level="4.7.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.7.8</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.7.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.7.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.7.2</b> Pre-lab Tasks</a></li>
+<li class="chapter" data-level="4.7.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.7.3</b> Research Context for Data Set</a></li>
+<li class="chapter" data-level="4.7.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.7.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
+<li class="chapter" data-level="4.7.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.7.5</b> Homework Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#excel-5"><i class="fa fa-check"></i><b>5.5</b> Excel</a></li>
 <li class="chapter" data-level="5.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#spss-5"><i class="fa fa-check"></i><b>5.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="5.6.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-2"><i class="fa fa-check"></i><b>5.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.6.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>5.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="5.6.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>5.6.2</b> Performing an independent-samples <em>t</em>-test</a></li>
 <li class="chapter" data-level="5.6.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data"><i class="fa fa-check"></i><b>5.6.3</b> Graphing your data</a></li>
 <li class="chapter" data-level="5.6.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises-good-practice-and-review-for-the-take-home-final-exam"><i class="fa fa-check"></i><b>5.6.4</b> Optional exercises (good practice and review for the take-home final exam)</a></li>
@@ -358,7 +359,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi"><i class="fa fa-check"></i><b>5.7</b> JAMOVI</a>
 <ul>
-<li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-3"><i class="fa fa-check"></i><b>5.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-2"><i class="fa fa-check"></i><b>5.7.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="5.7.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>5.7.2</b> Performing an independent-samples <em>t</em>-test</a></li>
 <li class="chapter" data-level="5.7.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data-1"><i class="fa fa-check"></i><b>5.7.3</b> Graphing your data</a></li>
 <li class="chapter" data-level="5.7.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1"><i class="fa fa-check"></i><b>5.7.4</b> Optional exercises (good practice and review for the take-home final exam)</a></li>
@@ -430,13 +431,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#excel-7"><i class="fa fa-check"></i><b>7.7</b> Excel</a></li>
 <li class="chapter" data-level="7.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#spss-7"><i class="fa fa-check"></i><b>7.8</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="7.8.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.8.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.8.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>7.8.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="7.8.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>7.8.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
 <li class="chapter" data-level="7.8.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>7.8.3</b> Follow-Up Tests</a></li>
 <li class="chapter" data-level="7.8.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>7.8.4</b> Planned Comparisons: T-Contrasts</a></li>
 <li class="chapter" data-level="7.8.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>7.8.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
 <li class="chapter" data-level="7.8.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>7.8.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
-<li class="chapter" data-level="7.8.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#homework-questions"><i class="fa fa-check"></i><b>7.8.7</b> Homework questions</a></li>
+<li class="chapter" data-level="7.8.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#homework-questions-1"><i class="fa fa-check"></i><b>7.8.7</b> Homework questions</a></li>
 </ul></li>
 <li class="chapter" data-level="7.9" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi-2"><i class="fa fa-check"></i><b>7.9</b> JAMOVI</a></li>
 </ul></li>
@@ -465,7 +466,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-8"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
 <li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-8"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.6.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>8.6.2</b> Produce a frequency histogram and remove outliers</a></li>
 <li class="chapter" data-level="8.6.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>8.6.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
 <li class="chapter" data-level="8.6.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>8.6.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
@@ -500,7 +501,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-9"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
 <li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-9"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="9.6.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="9.6.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects"><i class="fa fa-check"></i><b>9.6.3</b> Calculate simple effects</a></li>
 <li class="chapter" data-level="9.6.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
@@ -532,7 +533,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-10"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
 <li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-10"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-7"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="10.6.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="10.6.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>10.6.3</b> Calculate simple effects</a></li>
 <li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
@@ -828,9 +829,10 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 <div id="dot-plot-of-raw-scores" class="section level4" number="4.4.7.2">
 <h4><span class="header-section-number">4.4.7.2</span> Dot plot of raw scores</h4>
 <p>This shows every scores value on the y-axis, split by the baseline and test groups. If you just looked at this, you might not think the test phase was different from the baseline phase. Still very useful to see the spread of individual scores. Supports the intuition that the scores are still kind of in a similar ballpark.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb36-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span></span>
-<span id="cb36-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.1.2</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span></span>
+<span id="cb38-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="dot-plot-with-means-and-raw-scores" class="section level4" number="4.4.7.3">
@@ -840,11 +842,11 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 </div>
 <p><code>ggplot2</code> is great because it let’s us add different layers on top of an existing plot. It would be good to see where the mean values for each sample lie on top of the sample scores. We can do this. But, to do it, we need to supply ggplot with another data frame, one that contains the means for each phase in long form. There are are only two phases, and two means, so we will make a rather small data.frame. It will have two columns, a Phase column, and Mean_value column. There will only be two rows in the data frame, one for the mean for each phase.</p>
 <p>To make the smaller data frame for the means we will use the <code>aggregate</code> function. This allows us to find the means for each phase from the plot_df data frame. It also automatically returns the data frame we are looking for.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb37-1" aria-hidden="true" tabindex="-1"></a>mean_df <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(Proportions <span class="sc">~</span> Phase, plot_df, mean)</span>
-<span id="cb37-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
-<span id="cb37-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb37-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>mean_df, <span class="at">color=</span><span class="st">&quot;Red&quot;</span>, <span class="at">size=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-1" aria-hidden="true" tabindex="-1"></a>mean_df <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(Proportions <span class="sc">~</span> Phase, plot_df, mean)</span>
+<span id="cb39-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
+<span id="cb39-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb39-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>mean_df, <span class="at">color=</span><span class="st">&quot;Red&quot;</span>, <span class="at">size=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 <div id="bar-plot" class="section level4" number="4.4.7.4">
@@ -855,14 +857,14 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 <li>added <code>stat="identity"</code> Necessary for bar plot to show specific numbers</li>
 <li>added <code>aes(fill=Phase)</code> Makes each bar a different color, depending on which phase it comes from</li>
 </ol>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
-<span id="cb38-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb38-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
+<span id="cb40-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb40-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>OK, we see the bars and some of the dots, but not all of them. What is going on? Remember, ggplot2 works in layers. Whatever layer you add first will be printed first in the graph, whatever layer you add second will be printed on top of the first. We put the bars on top of the dots. Let’s change the order of the layers so the dot’s go on top of the bars.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
-<span id="cb39-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))<span class="sc">+</span></span>
-<span id="cb39-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
+<span id="cb41-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))<span class="sc">+</span></span>
+<span id="cb41-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="bar-plot-with-error-bars" class="section level4" number="4.4.7.5">
@@ -875,30 +877,30 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 <p><strong>Question:</strong> How would error bars based on the standard error of the mean differences aid in visual inference about the role of chance in producing the difference?</p>
 </div>
 <p>Error bars are commonly used as an aid for visual inference. The use of error bars can be a subtle nuanced issue. This is because there a different kinds of error bars that can be plotted, and each one supports different kinds of inference. In general, the error bar is supposed to represent some aspect of the variability associated with each mean. We could plot little bars that are +1 or -1 standard deviations of each mean, or we would do +1 or -1 standard errors of each mean. In the case of paired samples, neither or these error bars would be appropriate, they wouldn’t reflect the variability associated with mean we are interested in. In a paired samples <em>t</em>-test, we are interested in the variability of the mean of the difference scores. Let’s calculate the standard error of the mean (SEM) for the difference scores between Baseline and Test, and then add error bars to the plot.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-1" aria-hidden="true" tabindex="-1"></a>difference_scores <span class="ot">&lt;-</span> baseline<span class="sc">-</span>test_phase <span class="co">#calculate difference scores</span></span>
-<span id="cb40-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-2" aria-hidden="true" tabindex="-1"></a>standard_error <span class="ot">&lt;-</span> <span class="fu">sd</span>(difference_scores)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(difference_scores)) <span class="co">#calculate SEM</span></span>
-<span id="cb40-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
-<span id="cb40-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))<span class="sc">+</span></span>
-<span id="cb40-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">data=</span>mean_df, <span class="fu">aes</span>(<span class="at">ymin=</span>Proportions<span class="sc">-</span>standard_error, </span>
-<span id="cb40-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>Proportions<span class="sc">+</span>standard_error), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb40-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb40-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-1" aria-hidden="true" tabindex="-1"></a>difference_scores <span class="ot">&lt;-</span> baseline<span class="sc">-</span>test_phase <span class="co">#calculate difference scores</span></span>
+<span id="cb42-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-2" aria-hidden="true" tabindex="-1"></a>standard_error <span class="ot">&lt;-</span> <span class="fu">sd</span>(difference_scores)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(difference_scores)) <span class="co">#calculate SEM</span></span>
+<span id="cb42-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x=</span>Phase, <span class="at">y=</span>Proportions))<span class="sc">+</span> </span>
+<span id="cb42-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>mean_df, <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>,<span class="fu">aes</span>(<span class="at">fill=</span>Phase))<span class="sc">+</span></span>
+<span id="cb42-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">data=</span>mean_df, <span class="fu">aes</span>(<span class="at">ymin=</span>Proportions<span class="sc">-</span>standard_error, </span>
+<span id="cb42-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>Proportions<span class="sc">+</span>standard_error), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb42-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <div class="marginnote">
 <p><strong>Question:</strong> What is one reason why these error bars (standard error of the mean difference between Baseline and Test) are appropriate to use. What is one reason they are not appropriate to use?</p>
 </div>
 <p>We have done something that is useful for visual inference. From the textbook, we learned that differences of about 2 standard errors of the mean are near the point where we would claim that chance is unlikely to have produced the difference. This is a rough estimate. But, we can see that the top of the error bar for Baseline is lower than the bottom of the error bar for Test, resulting in a difference greater than 2 standard error bars. So, based on this graph, we might expect the difference between conditions to be significant. We can also complain about what we have done here, we are placing the same error bars from the mean difference scores onto the means for each condition. In some sense this is misleading. The error bars are not for the depicted sample means, they are for the hidden single set of difference scores. To make this more clear, we will make a bar plot with a single bar only for the differences scores.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-1" aria-hidden="true" tabindex="-1"></a>difference_scores <span class="ot">&lt;-</span> test_phase<span class="sc">-</span>baseline <span class="co">#calculate difference scores</span></span>
-<span id="cb41-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-2" aria-hidden="true" tabindex="-1"></a>standard_error <span class="ot">&lt;-</span> <span class="fu">sd</span>(difference_scores)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(difference_scores)) <span class="co">#calculate SEM</span></span>
-<span id="cb41-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-3" aria-hidden="true" tabindex="-1"></a>mean_difference <span class="ot">&lt;-</span> <span class="fu">mean</span>(difference_scores)</span>
-<span id="cb41-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x=</span><span class="st">&quot;MeanDifference&quot;</span>, <span class="at">y=</span>mean_difference)<span class="sc">+</span></span>
-<span id="cb41-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">width=</span>.<span class="dv">5</span>, <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb41-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>)<span class="sc">+</span></span>
-<span id="cb41-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>difference_scores), <span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb41-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>mean_difference<span class="sc">-</span>standard_error, </span>
-<span id="cb41-10"><a href="lab-4-t-test-one-sample-paired-sample.html#cb41-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>mean_difference<span class="sc">+</span>standard_error), <span class="at">width=</span>.<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-1" aria-hidden="true" tabindex="-1"></a>difference_scores <span class="ot">&lt;-</span> test_phase<span class="sc">-</span>baseline <span class="co">#calculate difference scores</span></span>
+<span id="cb43-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-2" aria-hidden="true" tabindex="-1"></a>standard_error <span class="ot">&lt;-</span> <span class="fu">sd</span>(difference_scores)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(difference_scores)) <span class="co">#calculate SEM</span></span>
+<span id="cb43-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-3" aria-hidden="true" tabindex="-1"></a>mean_difference <span class="ot">&lt;-</span> <span class="fu">mean</span>(difference_scores)</span>
+<span id="cb43-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x=</span><span class="st">&quot;MeanDifference&quot;</span>, <span class="at">y=</span>mean_difference)<span class="sc">+</span></span>
+<span id="cb43-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">width=</span>.<span class="dv">5</span>, <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb43-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb43-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>difference_scores), <span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
+<span id="cb43-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>mean_difference<span class="sc">-</span>standard_error, </span>
+<span id="cb43-10"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>mean_difference<span class="sc">+</span>standard_error), <span class="at">width=</span>.<span class="dv">1</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <div class="marginnote">
 <p><strong>Question:</strong> Why is is it more appropriate to put the standard error of the difference on this bar graph? What important aspects of the original results shown in the previous graph are missing from this graph?</p>
@@ -908,16 +910,16 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 <div id="bar-plot-with-confidence-intervals" class="section level4" number="4.4.7.6">
 <h4><span class="header-section-number">4.4.7.6</span> Bar plot with confidence intervals</h4>
 <p>Confidence intervals are also often used for error bars, rather than the standard error (or other measure of variance). If we use 95% confidence intervals, then our error bars can be even more helpful for visual inference. Running the <code>t.test</code> function produces confidence interval estimates, and we can pull them out and use them for error bars.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-1" aria-hidden="true" tabindex="-1"></a>t_test_results <span class="ot">&lt;-</span> <span class="fu">t.test</span>(difference_scores)</span>
-<span id="cb42-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-2" aria-hidden="true" tabindex="-1"></a>lower_interval<span class="ot">&lt;-</span> t_test_results<span class="sc">$</span>conf.int[<span class="dv">1</span>]</span>
-<span id="cb42-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-3" aria-hidden="true" tabindex="-1"></a>upper_interval<span class="ot">&lt;-</span> t_test_results<span class="sc">$</span>conf.int[<span class="dv">2</span>]</span>
-<span id="cb42-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x=</span><span class="st">&quot;MeanDifference&quot;</span>, <span class="at">y=</span>mean_difference)<span class="sc">+</span></span>
-<span id="cb42-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">width=</span>.<span class="dv">5</span>, <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb42-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>)<span class="sc">+</span></span>
-<span id="cb42-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>difference_scores), <span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb42-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower_interval, </span>
-<span id="cb42-10"><a href="lab-4-t-test-one-sample-paired-sample.html#cb42-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>upper_interval), <span class="at">width=</span>.<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-1" aria-hidden="true" tabindex="-1"></a>t_test_results <span class="ot">&lt;-</span> <span class="fu">t.test</span>(difference_scores)</span>
+<span id="cb44-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-2" aria-hidden="true" tabindex="-1"></a>lower_interval<span class="ot">&lt;-</span> t_test_results<span class="sc">$</span>conf.int[<span class="dv">1</span>]</span>
+<span id="cb44-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-3" aria-hidden="true" tabindex="-1"></a>upper_interval<span class="ot">&lt;-</span> t_test_results<span class="sc">$</span>conf.int[<span class="dv">2</span>]</span>
+<span id="cb44-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x=</span><span class="st">&quot;MeanDifference&quot;</span>, <span class="at">y=</span>mean_difference)<span class="sc">+</span></span>
+<span id="cb44-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">width=</span>.<span class="dv">5</span>, <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb44-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb44-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>difference_scores), <span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
+<span id="cb44-9"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower_interval, </span>
+<span id="cb44-10"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">ymax=</span>upper_interval), <span class="at">width=</span>.<span class="dv">1</span>)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <p>Notice that the 95% confidence intervals around the mean are wider than the SEM error bars from the previous graph. These new confidence intervals tell us that 95% of the time our sample mean will fall between the two lines. The bottom line is slightly above 0, so we can now visually see support for our statistical inference that chance was unlikely to produce the result. If chance was likely to produce the result, the horizontal line indicating 0, would be well inside the confidence interval. We can also notice that the mean difference was just barely different from chance, that lower bar is almost touching 0.</p>
 </div>
@@ -925,33 +927,33 @@ Any experiment may be regarded as forming an individual of a ‘population’ of
 <div id="data-simulation" class="section level3" number="4.4.8">
 <h3><span class="header-section-number">4.4.8</span> Data-simulation</h3>
 <p>We can do a little bit of data simulation to get a better feel for this kind of data. For example, we saw that the dots in our plots were quite variable. We might wonder about what chance can do in the current experiment. One way to do this is to estimate the standard deviation of the looking time proportions. Perhaps the best way to do that would be to an average of the standard deviation in the baseline and test_phase conditions. Then, we could simulate 32 scores from a normal distribution with mean = .5, and standard deviation equaling our mean standard deviation. We could calculate the mean of our simulated sample. And, we could do this many times, say 1000 times. Then, we could look at a histogram of our means. This will show the range of sample means we would expect just by chance. This is another way to tell whether the observed difference in this experiment in the testing phase was close or not close from being produced by chance. Take a look at the histogram. What do you think?</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-1" aria-hidden="true" tabindex="-1"></a>sample_sd   <span class="ot">&lt;-</span> (<span class="fu">sd</span>(baseline)<span class="sc">+</span><span class="fu">sd</span>(test_phase))<span class="sc">/</span><span class="dv">2</span></span>
-<span id="cb43-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-3" aria-hidden="true" tabindex="-1"></a>simulated_means <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="dv">1000</span>)</span>
-<span id="cb43-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
-<span id="cb43-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-5" aria-hidden="true" tabindex="-1"></a> simulated_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">32</span>,.<span class="dv">5</span>, sample_sd))</span>
-<span id="cb43-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb43-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(simulated_means)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-1" aria-hidden="true" tabindex="-1"></a>sample_sd   <span class="ot">&lt;-</span> (<span class="fu">sd</span>(baseline)<span class="sc">+</span><span class="fu">sd</span>(test_phase))<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb45-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-3" aria-hidden="true" tabindex="-1"></a>simulated_means <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="dv">1000</span>)</span>
+<span id="cb45-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
+<span id="cb45-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-5" aria-hidden="true" tabindex="-1"></a> simulated_means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">32</span>,.<span class="dv">5</span>, sample_sd))</span>
+<span id="cb45-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb45-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(simulated_means)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-22-1.png" width="672" />
 #### Simulating the mean differences</p>
 <p>We can do the simulation slightly differently to give us a different look at chance. Above we simulated the sample means from a normal distribution centered on .5. The experimental question of interest was whether the mean difference between the baseline and test_phase condition was different. So, we should do a simulation of the difference scores. First, we estimate the standard deviation of the difference scores, and then run the simulation with a normal distribution centered on 0 (an expected mean difference of 0). This shows roughly how often we might expect mean differences of various sizes to occur. One major limitation is that we likely had only a rough estimate of the true standard deviation of these mean differences, after all there were only 32 of them, so we should take this with a grain of salt. Nevertheless, the pattern in the simulation fits well with the observations in that we already made from the data.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-1" aria-hidden="true" tabindex="-1"></a>sample_sd   <span class="ot">&lt;-</span> <span class="fu">sd</span>(baseline<span class="sc">-</span>test_phase)</span>
-<span id="cb44-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-3" aria-hidden="true" tabindex="-1"></a>simulated_mean_difference <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="dv">1000</span>)</span>
-<span id="cb44-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
-<span id="cb44-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-5" aria-hidden="true" tabindex="-1"></a> simulated_mean_difference[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">32</span>,<span class="dv">0</span>, sample_sd))</span>
-<span id="cb44-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb44-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(simulated_mean_difference)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-1" aria-hidden="true" tabindex="-1"></a>sample_sd   <span class="ot">&lt;-</span> <span class="fu">sd</span>(baseline<span class="sc">-</span>test_phase)</span>
+<span id="cb46-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-3" aria-hidden="true" tabindex="-1"></a>simulated_mean_difference <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="dv">1000</span>)</span>
+<span id="cb46-4"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
+<span id="cb46-5"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-5" aria-hidden="true" tabindex="-1"></a> simulated_mean_difference[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">32</span>,<span class="dv">0</span>, sample_sd))</span>
+<span id="cb46-6"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb46-7"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-8"><a href="lab-4-t-test-one-sample-paired-sample.html#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(simulated_mean_difference)</span></code></pre></div>
 <p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
 <div id="generalization-exercise-2" class="section level3" number="4.4.9">
 <h3><span class="header-section-number">4.4.9</span> Generalization Exercise</h3>
 <p>( 1 point - Pass/Fail )</p>
 <p>The following code creates two variables with simulated means for each of 20 subjects in two conditions (A and B). Each sample comes from a normal distribution with mean = 100, and standard deviation = 25.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-1" aria-hidden="true" tabindex="-1"></a>Condition_A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">100</span>,<span class="dv">25</span>)</span>
-<span id="cb45-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb45-2" aria-hidden="true" tabindex="-1"></a>Condition_B <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">100</span>,<span class="dv">25</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="lab-4-t-test-one-sample-paired-sample.html#cb47-1" aria-hidden="true" tabindex="-1"></a>Condition_A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">100</span>,<span class="dv">25</span>)</span>
+<span id="cb47-2"><a href="lab-4-t-test-one-sample-paired-sample.html#cb47-2" aria-hidden="true" tabindex="-1"></a>Condition_B <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">100</span>,<span class="dv">25</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li><p>Conduct a paired samples <em>t</em>-test on sample data stored in the variables <code>Condition_A</code>, and <code>Condition_B</code>. Report the results of the <em>t</em>-test, and the mean difference between conditions</p></li>
 <li><p>The above code assumes no difference in the means between Condition A and Condition B. Both samples come from the same normal distribution. Change the mean for one of the distributions. Make the change large enough so that you find a significant <em>p</em>-value (p &lt; 0.05) when you conduct the <em>t</em>-test on the new simulated data. Report the <em>t</em>-test and the means for each condition</p></li>
@@ -1095,118 +1097,80 @@ During the baseline condition, the mean proportion looking time toward the singe
 <div id="jamovi---week-8---march-15-16" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> JAMOVI - Week 8 - March 15 &amp; 16</h2>
 <div class="marginnote">
-<p>This section is copied almost verbatim, with some editorial changes, from <a href="https://www.erinmazerolle.com/statisticsLab/lab-6-t-test-one-sample-paired-sample.html#spss-6">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 6, Section 6.6, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
+<p>This lab activity was developed by Erin Mazerolle and Sherry Neville-MacLean.</p>
 </div>
+<div id="learning-objectives-1" class="section level3" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> Learning Objectives</h3>
 <p>In this lab, we will use jamovi to:</p>
 <ol style="list-style-type: decimal">
+<li>Perform a paired-sample <em>t</em>-test (an inferential statistic)</li>
+<li>Use descriptive statistics and graphs to give context to inferential statistics</li>
+<li>Report a paired-sample <em>t</em>-test in APA format</li>
 <li>Perform a one-sample <em>t</em>-test</li>
-<li>Perform a paired-samples <em>t</em>-test</li>
-<li>Graph the data</li>
-<li>Assess the relationship between a one-sample and a paired-samples <em>t</em>-test</li>
-<li>Practice using descriptive statistics to give context to inferential statistics</li>
-</ol>
-<div id="experiment-background-1" class="section level3" number="4.7.1">
-<h3><span class="header-section-number">4.7.1</span> Experiment Background</h3>
-<hr />
-<p>For this lab, we will be using the data from Mehr, Song, and Spelke’s (2016) study of how music may convey important social information to infants. You can access that <a href="https://moodle.stfx.ca/mod/resource/view.php?id=815524">data set</a> here.</p>
-<p>To test their hypothesis, the researchers recruited 32 infants and their parents to complete an experiment. During their first visit to the lab, the parents were taught a new lullaby (one that neither they nor their infants had heard before). The experimenters asked the parents to sing the new lullaby to their child every day for the next 1-2 weeks.</p>
-<p>Following this exposure period, the parents and their infants returned to the lab to complete the experimental portion of the study. Infants were first shown a screen with side-by-side videos of two unfamiliar people, each of whom were silently smiling and looking at the infant. The researchers recorded the looking behavior (or gaze) of the infants during this ‘baseline’ phase. Next, one by one, the two unfamiliar people on the screen sang either the lullaby that the parents learned or a different lullaby (that had the same lyrics and rhythm, but a different melody). Finally, the infants saw the same silent video used at baseline, and the researchers again recorded the looking behavior of the infants during this ‘test’ phase.</p>
-</div>
-<div id="optional-performing-a-one-sample-t-test-1" class="section level3" number="4.7.2">
-<h3><span class="header-section-number">4.7.2</span> OPTIONAL: Performing a one-sample <em>t</em>-test</h3>
-<hr />
-<p>First, let’s open the relevant data file. The data file has been simplified and is available <a href="https://moodle.stfx.ca/mod/resource/view.php?id=815524">here</a>. Right click on “Mehr et al. Simplified Data File” and indicate that you want it opened it in jamovi. Your data should look like this:</p>
-<p><img src="img/6.4.35.PNG" /><!-- --></p>
-<p>We will use jamovi to determine whether the infants looked equally at each of the people in the side-by-side videos at baseline. Let’s think about why this is important. The infants in this experiment watched silent video recordings of two people (baseline). Later, each person in the videos sang a song, one familiar (their parents had sang the song to them many times), and one unfamiliar. Afterwards, the infants watched the silent video of the two singers again (test phase). The critical question was whether the infants would look more to the person who sang the familiar song compared to the person who sang the unfamiliar song.</p>
-<p>If the measure of what infants “like” or “prefer” is based on how long they look at a stimulus (in this case, a person in a video), we need to know that, at baseline (before either of the people were associated with a song), infants looked equally at each person. If one of the people in the video was more memorable or attractive to the infants, then they would have a preferential bias towards looking at one person over the other. This could mean that the results of the study may have nothing to do with the songs, but rather an inherent bias towards the appearance of one of the people. This is why it is important to ensure that the infants looked at the people equally to start with (at baseline).</p>
-<p>In our data file, the variable we will use is called “Baseline_Proportion_Gaze_to_Singer”; this variable represents the proportion of time (out of 100%) that the infant spent looking at the person who would later be the singer of the familiar song. If the infant looks equally at each person, then the proportion of time spent looking at one out of the two people should be .5, or half of the time. Thus, we want to test whether the proportions measured are different from .5. Whenever we want to compare a sample data set (the proportions measured for all 32 infants) to a known mean (.5, or the proportion we expect if infants looked equally at both people), we use a one-sample <em>t</em>-test.</p>
-<p>In order to run the <em>t</em>-test, go to the <span style="color:blue">Analyses</span> menu option, then choose <span style="color:blue">T-Tests</span> and then <span style="color:blue">One Sample T-test</span>:</p>
-<p><img src="img/6.4.36.PNG" /><!-- --></p>
-<p>This will open up a window in which you will specify which variable contains the relevant sample data. Remember, we are interested in the variable labeled <code>Baseline_Proportion_Gaze_to_Singer</code>, so let’s choose this variable from the list on the left by highlighting it, and then use the arrow to move it to the “Dependent Variables” window which is the field to the right.</p>
-<p><img src="img/6.4.37.PNG" /><!-- --></p>
-<p>Next, make sure to change the value in the field labeled <span style="color:blue">Test Value</span>, which is show under the <span style="color:blue">Hypothesis</span> label, to the mean to which you are comparing the sample. Since we are comparing our sample’s proportions to the proportion that represents equal time spent looking at both people in the video, we are going to use .5 as our test value. Enter this number in the appropriate field. Your window should look like this:</p>
-<p><img src="img/6.4.38.PNG" /><!-- --></p>
-<p>Now, if you look to the Results panel (which is on the right-hand side), you should see a table indicating the results of the one-sample <em>t</em>-test.</p>
-<p><img src="img/6.4.39.PNG" /><!-- --></p>
-<p>The table contains the information resulting from our <em>t</em>-test: The <em>t</em>-statistic calculated is 0.67, with 31 (<em>N</em>-1) degrees of freedom. The <em>p</em>-value is listed as .505 which will be rounded to .51. The fact that this <em>p</em>-value is greater than our alpha level (set at .05) means we fail to reject the null hypothesis. In other words, the proportion of time infants spent looking at the singer was not different from .50. We might formally words this as follows:</p>
-<p>During the baseline condition, the mean proportion looking time toward the singer was not significantly different from .50, according to a one-sample test, <em>t</em>(31) = 0.67, <em>p</em> = .51.</p>
-<p>Typically, however, we would include the descriptive statistics in this write-up as well. You might remember the skills you learned in Lab 2, Section 2.5.1, about requesting the descriptive statistics for this variable (Click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>, move the variable of interest to the Variables window, and select the desired statistics that are appropriate based on the scale of measurement, and look to the Results panel for the Descriptives table.).</p>
-<p>Alternatively, <strong>and much more conveniently</strong>, you could click on the One Sample T-test table in the Result panel. This will bring up the Analyses panel again. In here, you can click to add <span style="color:blue">Descriptives</span>:</p>
-<p><img src="img/6.4.40.PNG" /><!-- --></p>
-<p>The Results panel will automatically be updated to include in that analysis the newly requested information. The first table - the one with the one-sample <em>t</em>-test results - is still visible; however, there should now be a second table - a Descriptives table.</p>
-<p><img src="img/6.4.41.PNG" /><!-- --></p>
-<p>We can see from this latter table that the average proportion of time spent looking at the person who would later be the familiar song singer is .52. This is very close to .50.</p>
-<p>To add to the previously recommended write-up, we might write:</p>
-<p>During the baseline condition, the mean proportion looking time toward the singer was .52, and was not significantly different from .50, according to a one-sample test, <em>t</em>(31) = 0.67, <em>p</em> = .51.</p>
-<p>Alternatively, we could also write:
-During the baseline condition, the mean proportion looking time toward the singer was .52, and was not significantly different from .50, according to a one-sample test, <em>t</em>(31) = 0.67, <em>p</em> &gt; .05.</p>
-</div>
-<div id="performing-a-paired-samples-t-test-1" class="section level3" number="4.7.3">
-<h3><span class="header-section-number">4.7.3</span> Performing a paired-samples <em>t</em>-test</h3>
-<hr />
-<p>In this example, we will be comparing data from two measurements taken from the same individuals. In the same data file as above, we have two variables named <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code>. These variables represent the proportion of time spent looking at the familiar song singer at baseline, and then again in the test phase (after the 1-2 week period in which infants have been familiarized with the song). Because each infant was measured once (baseline), and then re-measured again (test), we will use a paired-samples <em>t</em>-test.</p>
-<p><strong>Important terminology note:</strong> <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code> are represented as two variables in jamovi, but they refer to two levels of a single independent variable. You can think of the independent variable as time point with two levels: baseline and test.</p>
-<p>In order to run the paired-samples <em>t</em>-test, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Paired Samples T-test</span>.</p>
-<p><img src="img/6.4.42.PNG" /><!-- --></p>
-<p>A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: <code>Baseline_Proportion_Gaze_to_Singer</code> and <code>Test_Proportion_Gaze_to_Singer</code>. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both by using the Control key and then move them at the same time. Make sure that they appear next to each other in the right-hand field, as follows:</p>
-<p><img src="img/6.4.43.PNG" /><!-- --></p>
-<p>Similar to what you just learned about requesting the descriptive statistics in the One Sample T-Test command, you can request these descriptive statistics through the same type of commands in the <span style="color:blue">Paired Samples T-Test</span> command options. That is to say, jamovi offers the option to produce the Descriptives table for the two levels of the variable within the pop-up window for the <em>t</em>-tests. Click to select the <span style="color:blue">Descriptives</span>. You may also want to select the <span style="color:blue">Mean difference</span> if you plan to report it in your Results. Alternatively, you will report the means and standard deviations for the two levels of the variable. You may also be interested in reporting the <span style="color:blue">Effect size</span> and the 95% <span style="color:blue">Confidence interval</span>.</p>
-<p><img src="img/6.4.44.PNG" /><!-- --></p>
-<p>In the Results panel, you should see two tables. The first table shows the results of the paired-samples <em>t</em>-test. The table indicates a <em>t</em>-value (i.e., our observed <em>t</em>), degrees of freedom (<em>N</em>-1), and a <em>p</em>-value. You can interpret these values the same way as in the previous example. The second table is the Descriptives table.</p>
-<p><img src="img/6.4.45.PNG" /><!-- --></p>
-<p>We might report our results in this way:</p>
-<p>The difference between infants’ mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples <em>t</em>-test, <em>t</em>(31) = -2.42, <em>p</em> &lt; .05, 95% CI [-0.79, -0.06], <em>d</em> = -0.43.</p>
-</div>
-<div id="using-descriptive-statistics-to-give-context-to-inferential-statistics-1" class="section level3" number="4.7.4">
-<h3><span class="header-section-number">4.7.4</span> Using descriptive statistics to give context to inferential statistics</h3>
-<p>The descriptive statistics are useful for contextualizing the inferential statistics. In this case, we see that, for <code>Baseline_Proportion_Gaze_to_Singer</code>, the mean is 0.52 while for <code>Test_Proportion_Gaze_to_Singer</code>, the mean for 0.59. The standard deviation for both rounds to 0.18. In Section 6.7.3, we reported the mean difference of -0.07 was significant according to the paired-samples <em>t</em>-test. Now, we might add another sentence to explain the difference.</p>
-<p>Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:</p>
-<p>According to a paired-samples <em>t</em>-test, there is a significant difference between infants’ mean proportion looking time toward the singer at baseline (<em>M</em> = 0.52, <em>SD</em> = 0.18) and the test phase (<em>M</em> = 0.59, <em>SD</em> = 0.18), <em>t</em>(31) = -2.42, <em>p</em> = .02, 95% CI [-0.79, -0.06], <em>d</em> = -0.43.</p>
-</div>
-<div id="graphing-your-results-1" class="section level3" number="4.7.5">
-<h3><span class="header-section-number">4.7.5</span> Graphing your results</h3>
-<hr />
-<p>In order to visualize the difference between means (for a paired-samples <em>t</em>-test, in this case), it is most appropriate to create a bar graph, or bar plot. Because our two conditions (baseline and test) make up a discrete (and not continuous) categorical variable (also called a nominal variable), a bar graph is most appropriate. Unfortunately, it is not so easy to produce a bar graph with jamovi. In this example, it might be easy enough, but graphing would be increasingly cumbersome with an increasing number of participants or cases and an increasing number of levels of the variable. Your lab instructor will guide you through a work-around solution.</p>
-<p><img src="img/6.4.46.PNG" /><!-- --></p>
-</div>
-<div id="optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1" class="section level3" number="4.7.6">
-<h3><span class="header-section-number">4.7.6</span> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</h3>
-<hr />
-<p>This section is dedicated to demonstrating that the one-sample and paired-samples <em>t</em>-tests are almost the very same thing. In order to understand this, we must reframe how we think about the paired-samples <em>t</em>-test. We typically consider it a comparison between two samples in which observations have been repeated (like in a before-after scenario, for example). We can also think of the paired-samples <em>t</em>-test as testing the difference scores between two conditions. If the difference between two conditions is 0, then there is no difference, or there is no effect of the independent variable. If the difference is non-zero, then we can say there is a difference.</p>
-<p>Thus, the paired-samples <em>t</em>-test is exactly the same as the one-sample <em>t</em>-test if we consider it as a comparison of the mean difference score to 0. Let’s demonstrate this using jamovi.</p>
-<p>We’ll continue using the same data as above. Specifically, locate the variable named <code>Difference_in_Proportion_Looking</code>. This variable contains the difference score between the baseline and test conditions for each infant. We’re going to treat this as our one-sample (as in the one-sample <em>t</em>-test), and we’ll be comparing it to a mean of 0.</p>
-<p>Let’s begin. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, and then <span style="color:blue">One Sample T-test</span>.</p>
-<p><img src="img/6.4.47.PNG" /><!-- --></p>
-<p>A window will appear. Using highlighting and the arrow, move the variable of interest, <code>Difference_in_Proportion_Looking</code>, into the “Dependent Variables” field.</p>
-<p><img src="img/6.4.48.PNG" /><!-- --></p>
-<p>Below that, make sure to enter 0 in the <span style="color:blue">Test value</span> field which is under the section with the bolded title “Hypothesis.”</p>
-<p><img src="img/6.4.49.PNG" /><!-- --></p>
-<p>The Results panel in jamovi should look like this:</p>
-<p><img src="img/6.4.50.PNG" /><!-- --></p>
-<p>You will see that the <em>t</em>-statistic and <em>p</em>-value are identical to the ones obtained when we conducted a paired-samples <em>t</em>-test. Therefore, a paired-samples <em>t</em>-test conducted on two samples is equivalent to a one-sample <em>t</em>-test conducted on the difference scores (calculated on the two samples) compared against 0.</p>
-<p>Nota Bene: You will see that in the previous paired-samples <em>t</em>-test we obtained a <em>t</em>-statistic of -2.42, but here the <em>t</em>-statistic is positive. This difference comes from the fact that jamovi automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive <em>t</em>-statistic as well. In other words, the sign does not matter; it results from the order of the variables.</p>
-</div>
-<div id="lab-homework-6-1" class="section level3" number="4.7.7">
-<h3><span class="header-section-number">4.7.7</span> Lab Homework #6</h3>
-<hr />
-<ol style="list-style-type: decimal">
-<li><p>On average, adults should get roughly 8 hours of sleep per night. Using the data collected in PSYC 291, do students get enough sleep during midterm week? That is, use the average number of hours of sleep students get during the week prior to the Time 2 data collection. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
-<li><p>Does the quality of students’ sleep change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)? Using the data collected in PSYC 291, calculate the composite for students’ perceptions of the quality of their sleep at both Time 1 and Time 2. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
 </ol>
 </div>
-<div id="practice-questions-1" class="section level3" number="4.7.8">
-<h3><span class="header-section-number">4.7.8</span> Practice Questions</h3>
-<p>One Sample <em>t</em>-tests</p>
-<ol style="list-style-type: decimal">
-<li><p>Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women. Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
-<li><p>Using the data collected in PSYC 291, are students more or less anxious than “somewhat anxious” (i.e., 2 on the scale) during midterm week? Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
-</ol>
-<p>Paired <em>t</em>-tests</p>
-<ol style="list-style-type: decimal">
-<li><p>Does student stress level change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)? Using the data collected in PSYC 291, calculate the composite for students’ perceptions of stress at both Time 1 and Time 2. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
-<li><p>Do students engage is less physical self-care during midterms (i.e., Time 2) than they do early in the academic term (i.e., Time 1)? Using the data collected in PSYC 291, calculate the composite for the physical self-care subscale at both Time 1 and Time 2 of the Mindful Self-Care Measure. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>). Using APA format, graph the data.</p></li>
-<li><p>Does substance abuse change between Time 1 (early September) and Time 2 (mid-October)? Using the data collected in PSYC 291, conduct the appropriate <em>t</em>-tests for both alcohol consumption over the last week and cannabis consumption over the last week. (Note that this requires 2 separate <em>t</em>-tests – one for alcohol and one for cannabis). What can you conclude about each substance? Write your answers in APA format, including the 95% confidence intervals, and effect sizes (Cohen’s <em>d</em>). Using APA format, graph the data (note that you will need to make up one graph for each substance).</p></li>
-</ol>
+<div id="pre-lab-tasks-2" class="section level3" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> Pre-lab Tasks</h3>
+<p>Before lab, be sure to complete the <a href="https://moodle.stfx.ca/mod/quiz/view.php?id=837148">Psychology 291 Data: Terms of Use quiz</a>.</p>
+<p>When you pass that quiz, download the data file and data dictionary from <a href="link%20to%20be%20added">OneDrive</a>. Be sure to practice your data management skills and save the files in an appropriate file folder in your Psych 292 Lab folder.</p>
+<p>Be sure to install any updates required for JAMOVI and to have the data file opened in JAMOVI before your lab begins.</p>
+</div>
+<div id="research-context-for-data-set" class="section level3" number="4.7.3">
+<h3><span class="header-section-number">4.7.3</span> Research Context for Data Set</h3>
+<p>The data set with which we will be working is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use.</p>
+<p>The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).</p>
+<p>When information about the variables (anxiety, stress, sleep, self-care, and substance use) was collected, multiple questions were asked. These questions might be considered items that are used to measure the variable, and the variable can be considered a construct. Oftentimes, multiple items are asked to get measurement that is more reflective of the construct than any one item. To get this measurement, a composite score is calculated. Many times, composite scores are obtained by either averaging or summing the scores for the items that measure the construct.</p>
+<div class="marginnote">
+<p>Cohen, S., Kamarck, T., &amp; Mermelstein, R. (1983). A global measure of perceived stress. <em>Journal of Health and Social Behavior, 24</em>, 385-396.</p>
+</div>
+<p>Sometimes, a survey or test has items that are opposite statements or that look at the levels of the answer from opposite, or near opposite, perspectives. For example, when stress was measured the <em>Perceived Stress Scale</em> by Cohen, Kamarck, and Mermelstein (1983) was used. In this measure of stress, respondents answer on a scale from 1 to 5 (where 1 = never, 2 = almost never, 3 = sometimes, 4 = fairly often, and 5 = very often). One item, item #7, asked “In the last 7 days, how often have you been able to control irritations in your life?” Another item, item #9, asked “In the last 7 days, how often have you been angered because of things that were outside of your control?” A person who indicates they often felt able to control irritations should also report infrequent anger caused by things outside their control.</p>
+<p>Before a composite score is computed, the scale scores for any oppositely worded items would need to be recoded, and in this case, reverse coded. When using the <em>Perceived Stress Scale</em>, for item #7, we would reverse the scale so that 1 = 5, 2 = 4, 3 = 3, 4 = 2, and 5 = 1.</p>
+<p>The recoding and the calculation of composite scores has been completed for you in this data set. For perceived stress, for example, the scores for items #4, 5, 7, and 8 were reverse coded, and then, a sum of the item scores was calculated. <code>T1_Stress</code> represents the composite score of perceived stress at time 1, or at the beginning of the term.</p>
+</div>
+<div id="performing-a-paired-samples-t-test-1" class="section level3" number="4.7.4">
+<h3><span class="header-section-number">4.7.4</span> Performing a Paired-Samples <em>t</em>-Test</h3>
+<div id="motivation-to-perform-statistical-analyses" class="section level4" number="4.7.4.1">
+<h4><span class="header-section-number">4.7.4.1</span> Motivation to perform statistical analyses</h4>
+<p>Imagine you are a researcher who is interested in how midterms impact students’ sleep patterns. You are curious about whether the number of nightly sleep hours changes during midterm time. You plan to use the survey data described above to answer your question.</p>
+<p>First, what is your research question?
+Do the number of hours of sleep change during midterms?
+This is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.</p>
+</div>
+<div id="using-descriptive-statistics-to-look-at-the-question" class="section level4" number="4.7.4.2">
+<h4><span class="header-section-number">4.7.4.2</span> Using descriptive statistics to look at the question</h4>
+<p>What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! First, though, what is the scale of measurement for hours of sleep? To answer this question, look at the data dictionary.</p>
+<p><img src="img/DataDictionary_SleepHours.png" /><!-- --></p>
+<p>We can see by looking at <code>T1_sleep_hours</code> and <code>T2_sleep_hours</code> in JAMOVI, that the scale is entered as continuous (which can be used for variables measured on interval or ratio scales).</p>
+<p><img src="img/SleepHours_VariableAttributes.png" /><!-- --></p>
+<p><img src="img/SleepHours_VariableAttributes2.png" /><!-- --></p>
+<p>Since we have data measured on a ratio scale, we can calculate the means and standard deviations, and we can look at the histograms. You should recall the commands used to request <a href="https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9">descriptive statistics</a> and <a href="https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2">graphs</a> from previous chapters. Let’s make those requests now.</p>
+<p><img src="img/SleepHours_Descriptives.png" /><!-- --></p>
+<p><img src="img/T1_SleepHours_Histogram.png" /><!-- --></p>
+<p><img src="img/T2_SleepHours_Histogram.png" /><!-- --></p>
+<p>Stretch your Thinking: Why do the histograms look high-low-high-low? (Answer: because people tend to write/remember whole hours, so those values occur more frequently in the data).</p>
+</div>
+<div id="motivation-to-perform-inferential-statistics" class="section level4" number="4.7.4.3">
+<h4><span class="header-section-number">4.7.4.3</span> Motivation to perform inferential statistics</h4>
+<p>Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error?</p>
+<p>Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: <strong>No.</strong>) Do the differences between timepoints exist in the population of all students? That is what inferential statistics will help us decide.</p>
+<p>Erin to do: (I will try to make a graph to go with this paragraph INF_FIG)</p>
+<p>We use a paired-samples <em>t</em>-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples <em>t</em>-tests are also known as paired <em>t</em>-tests, matched <em>t</em>-tests, and dependent <em>t</em>-tests.</p>
+<p>First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
+So, our null hypothesis (H_0) is there is no difference in sleep between the two timepoints: <span class="math inline">\(\mu_T1\)</span> = <span class="math inline">\(\mu_T2\)</span>.
+Our alternative hypothesis (H_A or H_1) is there is a difference: <span class="math inline">\(\mu_T1\)</span> <span class="math inline">\(\mu_T2\)</span>.</p>
+<p>Question: Why are our hypotheses about the mean, as opposed to a different measure of central tendency, or the distributions? Answer: <em>t</em>-tests answer questions about means. Other tests can be used for research questions about different statistics.</p>
+</div>
+<div id="using-jamovi-to-request-the-paired-samples-t-test" class="section level4" number="4.7.4.4">
+<h4><span class="header-section-number">4.7.4.4</span> Using JAMOVI to request the paired-samples <em>t</em>-test</h4>
+<p>• Do CI of the mean difference – not of the effect size
+• Use Descriptive plot – this is essentially a bar graph without the bars, with the median on it. Use Excel if we have time to do a bar graph
+• Explain how to interpret the t-value, df, the CI of the mean difference, the effect size, and the p-value
+• Write APA sentence</p>
+</div>
+</div>
+<div id="homework-questions" class="section level3" number="4.7.5">
+<h3><span class="header-section-number">4.7.5</span> Homework Questions</h3>
+<p>Continue the scenario above – use composite sleep quality variables</p>
 
 </div>
 </div>
@@ -1240,6 +1204,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1267,6 +1232,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

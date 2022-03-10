@@ -682,216 +682,114 @@ ___
 
 
 <div class="marginnote">
-This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 6, Section 6.6, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-6-t-test-one-sample-paired-sample.html#spss-6), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+This lab activity was developed by Erin Mazerolle and Sherry Neville-MacLean.
 </div>
 
 
+### Learning Objectives
+
 In this lab, we will use jamovi to:
 
-1. Perform a one-sample *t*-test
-2. Perform a paired-samples *t*-test
-3. Graph the data
-4. Assess the relationship between a one-sample and a paired-samples *t*-test
-5. Practice using descriptive statistics to give context to inferential statistics
+1. Perform a paired-sample *t*-test (an inferential statistic)
+2. Use descriptive statistics and graphs to give context to inferential statistics
+3. Report a paired-sample *t*-test in APA format
+4. Perform a one-sample *t*-test
 
-### Experiment Background
+### Pre-lab Tasks
 
----
+Before lab, be sure to complete the [Psychology 291 Data: Terms of Use quiz](https://moodle.stfx.ca/mod/quiz/view.php?id=837148).
 
+When you pass that quiz, download the data file and data dictionary from [OneDrive](link to be added). Be sure to practice your data management skills and save the files in an appropriate file folder in your Psych 292 Lab folder. 
 
-For this lab, we will be using the data from Mehr, Song, and Spelke's (2016) study of how music may convey important social information to infants. You can access that [data set](https://moodle.stfx.ca/mod/resource/view.php?id=815524) here.
-
-To test their hypothesis, the researchers recruited 32 infants and their parents to complete an experiment. During their first visit to the lab, the parents were taught a new lullaby (one that neither they nor their infants had heard before). The experimenters asked the parents to sing the new lullaby to their child every day for the next 1-2 weeks.
-
-Following this exposure period, the parents and their infants returned to the lab to complete the experimental portion of the study. Infants were first shown a screen with side-by-side videos of two unfamiliar people, each of whom were silently smiling and looking at the infant. The researchers recorded the looking behavior (or gaze) of the infants during this ‘baseline’ phase. Next, one by one, the two unfamiliar people on the screen sang either the lullaby that the parents learned or a different lullaby (that had the same lyrics and rhythm, but a different melody). Finally, the infants saw the same silent video used at baseline, and the researchers again recorded the looking behavior of the infants during this ‘test’ phase.
-
-### OPTIONAL: Performing a one-sample *t*-test
-
----
+Be sure to install any updates required for JAMOVI and to have the data file opened in JAMOVI before your lab begins.
 
 
-First, let's open the relevant data file. The data file has been simplified and is available [here](https://moodle.stfx.ca/mod/resource/view.php?id=815524). Right click on "Mehr et al. Simplified Data File" and indicate that you want it opened it in jamovi. Your data should look like this:
+### Research Context for Data Set
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.35.png')
-```
+The data set with which we will be working is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. 
 
-We will use jamovi to determine whether the infants looked equally at each of the people in the side-by-side videos at baseline. Let's think about why this is important. The infants in this experiment watched silent video recordings of two people (baseline). Later, each person in the videos sang a song, one familiar (their parents had sang the song to them many times), and one unfamiliar. Afterwards, the infants watched the silent video of the two singers again (test phase). The critical question was whether the infants would look more to the person who sang the familiar song compared to the person who sang the unfamiliar song.
+The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).
 
-If the measure of what infants "like" or "prefer" is based on how long they look at a stimulus (in this case, a person in a video), we need to know that, at baseline (before either of the people were associated with a song), infants looked equally at each person. If one of the people in the video was more memorable or attractive to the infants, then they would have a preferential bias towards looking at one person over the other. This could mean that the results of the study may have nothing to do with the songs, but rather an inherent bias towards the appearance of one of the people. This is why it is important to ensure that the infants looked at the people equally to start with (at baseline). 
+When information about the variables (anxiety, stress, sleep,  self-care, and substance use) was collected, multiple questions were asked. These questions might be considered items that are used to measure the variable, and the variable can be considered a construct. Oftentimes, multiple items are asked to get measurement that is more reflective of the construct than any one item. To get this measurement, a composite score is calculated. Many times, composite scores are obtained by either averaging or summing the scores for the items that measure the construct. 
 
-In our data file, the variable we will use is called "Baseline_Proportion_Gaze_to_Singer"; this variable represents the proportion of time (out of 100%) that the infant spent looking at the person who would later be the singer of the familiar song. If the infant looks equally at each person, then the proportion of time spent looking at one out of the two people should be .5, or half of the time. Thus, we want to test whether the proportions measured are different from .5. Whenever we want to compare a sample data set (the proportions measured for all 32 infants) to a known mean (.5, or the proportion we expect if infants looked equally at both people), we use a one-sample *t*-test.
+<div class="marginnote">
+Cohen, S., Kamarck, T., & Mermelstein, R. (1983). A global measure of perceived stress. *Journal of Health and Social Behavior, 24*, 385-396.
+</div>
 
-In order to run the *t*-test, go to the <span style="color:blue">Analyses</span> menu option, then choose <span style="color:blue">T-Tests</span> and then <span style="color:blue">One Sample T-test</span>:
+Sometimes, a survey or test has items that are opposite statements or that look at the levels of the answer from opposite, or near opposite, perspectives. For example, when stress was measured the *Perceived Stress Scale* by Cohen, Kamarck, and Mermelstein (1983) was used. In this measure of stress, respondents answer on a scale from 1 to 5 (where 1 = never, 2 = almost never, 3 = sometimes, 4 = fairly often, and 5 = very often). One item, item #7, asked "In the last 7 days, how often have you been able to control irritations in your life?" Another item, item #9, asked "In the last 7 days, how often have you been angered because of things that were outside of your control?" A person who indicates they often felt able to control irritations should also report infrequent anger caused by things outside their control. 
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.36.png')
-```
+Before a composite score is computed, the scale scores for any oppositely worded items would need to be recoded, and in this case, reverse coded. When using the *Perceived Stress Scale*, for item #7, we would reverse the scale so that 1 = 5, 2 = 4, 3 = 3, 4 = 2, and 5 = 1.
 
-This will open up a window in which you will specify which variable contains the relevant sample data. Remember, we are interested in the variable labeled `Baseline_Proportion_Gaze_to_Singer`, so let's choose this variable from the list on the left by highlighting it, and then use the arrow to move it to the “Dependent Variables” window which is the field to the right. 
+The recoding and the calculation of composite scores has been completed for you in this data set. For perceived stress, for example, the scores for items #4, 5, 7, and 8 were reverse coded, and then, a sum of the item scores was calculated. `T1_Stress` represents the composite score of perceived stress at time 1, or at the beginning of the term.
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.37.png')
-```
+### Performing a Paired-Samples *t*-Test
 
-Next, make sure to change the value in the field labeled <span style="color:blue">Test Value</span>, which is show under the <span style="color:blue">Hypothesis</span> label, to the mean to which you are comparing the sample. Since we are comparing our sample's proportions to the proportion that represents equal time spent looking at both people in the video, we are going to use .5 as our test value. Enter this number in the appropriate field. Your window should look like this:
+#### Motivation to perform statistical analyses
+
+Imagine you are a researcher who is interested in how midterms impact students' sleep patterns. You are curious about whether the number of nightly sleep hours changes during midterm time. You plan to use the survey data described above to answer your question.
+
+First, what is your research question? 
+Do the number of hours of sleep change during midterms?
+This is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.
+
+#### Using descriptive statistics to look at the question
+
+What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! First, though, what is the scale of measurement for hours of sleep? To answer this question, look at the data dictionary.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.38.png')
+knitr::include_graphics('img/DataDictionary_SleepHours.png')
 ```
 
-Now, if you look to the Results panel (which is on the right-hand side), you should see a table indicating the results of the one-sample *t*-test.
+We can see by looking at `T1_sleep_hours` and `T2_sleep_hours` in JAMOVI, that the scale is entered as continuous (which can be used for variables measured on interval or ratio scales).
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.39.png')
+knitr::include_graphics('img/SleepHours_VariableAttributes.png')
 ```
-
-
-The table contains the information resulting from our *t*-test: The *t*-statistic calculated is 0.67, with 31 (*N*-1) degrees of freedom. The *p*-value is listed as .505 which will be rounded to .51. The fact that this *p*-value is greater than our alpha level (set at .05) means we fail to reject the null hypothesis. In other words, the proportion of time infants spent looking at the singer was not different from .50. We might formally words this as follows:
-
-During the baseline condition, the mean proportion looking time toward the singer was not significantly different from .50, according to a one-sample test, *t*(31) = 0.67, *p* = .51.
-
-Typically, however, we would include the descriptive statistics in this write-up as well. You might remember the skills you learned in Lab 2, Section 2.5.1, about requesting the descriptive statistics for this variable (Click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>, move the variable of interest to the Variables window, and select the desired statistics that are appropriate based on the scale of measurement, and look to the Results panel for the Descriptives table.).
-
-Alternatively, **and much more conveniently**, you could click on the One Sample T-test table in the Result panel. This will bring up the Analyses panel again. In here, you can click to add <span style="color:blue">Descriptives</span>:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.40.png')
+knitr::include_graphics('img/SleepHours_VariableAttributes2.png')
 ```
 
-The Results panel will automatically be updated to include in that analysis the newly requested information. The first table - the one with the one-sample *t*-test results - is still visible; however, there should now be a second table - a Descriptives table. 
+Since we have data measured on a ratio scale, we can calculate the means and standard deviations, and we can look at the histograms. You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2) from previous chapters. Let's make those requests now.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.41.png')
+knitr::include_graphics('img/SleepHours_Descriptives.png')
 ```
-
-We can see from this latter table that the average proportion of time spent looking at the person who would later be the familiar song singer is .52. This is very close to .50. 
-
-To add to the previously recommended write-up, we might write:
-
-During the baseline condition, the mean proportion looking time toward the singer was .52, and was not significantly different from .50, according to a one-sample test, *t*(31) = 0.67, *p* = .51.
-
-Alternatively, we could also write: 
-During the baseline condition, the mean proportion looking time toward the singer was .52, and was not significantly different from .50, according to a one-sample test, *t*(31) = 0.67, *p* > .05.
-
-### Performing a paired-samples *t*-test
-
----
-
-
-In this example, we will be comparing data from two measurements taken from the same individuals. In the same data file as above, we have two variables named `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. These variables represent the proportion of time spent looking at the familiar song singer at baseline, and then again in the test phase (after the 1-2 week period in which infants have been familiarized with the song). Because each infant was measured once (baseline), and then re-measured again (test), we will use a paired-samples *t*-test.
-
-**Important terminology note:** `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer` are represented as two variables in jamovi, but they refer to two levels of a single independent variable. You can think of the independent variable as time point with two levels: baseline and test.
-
-In order to run the paired-samples *t*-test, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Paired Samples T-test</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.42.png')
+knitr::include_graphics('img/T1_SleepHours_Histogram.png')
 ```
-
-A window will appear with a list of all variables in a field on the left. We must choose the two variables that contain our data: `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. Move these into the right-hand field, labelled “Paired Variables,” using the arrow. You can move one level of the variable at a time, or you can highlight both by using the Control key and then move them at the same time. Make sure that they appear next to each other in the right-hand field, as follows:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.43.png')
+knitr::include_graphics('img/T2_SleepHours_Histogram.png')
 ```
 
-Similar to what you just learned about requesting the descriptive statistics in the One Sample T-Test command, you can request these descriptive statistics through the same type of commands in the <span style="color:blue">Paired Samples T-Test</span> command options. That is to say, jamovi offers the option to produce the Descriptives table for the two levels of the variable within the pop-up window for the *t*-tests. Click to select the <span style="color:blue">Descriptives</span>. You may also want to select the <span style="color:blue">Mean difference</span> if you plan to report it in your Results. Alternatively, you will report the means and standard deviations for the two levels of the variable. You may also be interested in reporting the <span style="color:blue">Effect size</span> and the 95% <span style="color:blue">Confidence interval</span>.
+Stretch your Thinking: Why do the histograms look high-low-high-low? (Answer: because people tend to write/remember whole hours, so those values occur more frequently in the data).
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.44.png')
-```
+#### Motivation to perform inferential statistics
 
-In the Results panel, you should see two tables. The first table shows the results of the paired-samples *t*-test. The table indicates a *t*-value (i.e., our observed *t*), degrees of freedom (*N*-1), and a *p*-value. You can interpret these values the same way as in the previous example. The second table is the Descriptives table. 
+Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error? 
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.45.png')
-```
+Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: **No.**) Do the differences between timepoints exist in the population of all students? That is what inferential statistics will help us decide. 
 
-We might report our results in this way:
+Erin to do: (I will try to make a graph to go with this paragraph INF_FIG)
+ 
+We use a paired-samples *t*-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples *t*-tests are also known as paired *t*-tests, matched *t*-tests, and dependent *t*-tests. 
+ 
+First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
+So, our null hypothesis (H_0) is there is no difference in sleep between the two timepoints: $\mu_T1$ = $\mu_T2$.
+Our alternative hypothesis (H_A or H_1) is there is a difference: $\mu_T1$ \neq $\mu_T2$.
+ 
+Question: Why are our hypotheses about the mean, as opposed to a different measure of central tendency, or the distributions? Answer: *t*-tests answer questions about means. Other tests can be used for research questions about different statistics.
 
-The difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired-samples *t*-test, *t*(31) = -2.42, *p* < .05, 95% CI [-0.79, -0.06], *d* = -0.43.
+#### Using JAMOVI to request the paired-samples *t*-test
 
-### Using descriptive statistics to give context to inferential statistics
+•	Do CI of the mean difference – not of the effect size
+•	Use Descriptive plot – this is essentially a bar graph without the bars, with the median on it. Use Excel if we have time to do a bar graph
+•	Explain how to interpret the t-value, df, the CI of the mean difference, the effect size, and the p-value
+•	Write APA sentence
+ 
+### Homework Questions
 
-The descriptive statistics are useful for contextualizing the inferential statistics. In this case, we see that, for `Baseline_Proportion_Gaze_to_Singer`, the mean is 0.52 while for `Test_Proportion_Gaze_to_Singer`, the mean for 0.59. The standard deviation for both rounds to 0.18. In Section 6.7.3, we reported the mean difference of -0.07 was significant according to the paired-samples *t*-test. Now, we might add another sentence to explain the difference. 
-
-Using the means and the standard deviations for each level of the independent variable, we will generate a more detailed interpretation which includes a statement about whether there is an increase or a decrease:
-
-According to a paired-samples *t*-test, there is a significant difference between infants' mean proportion looking time toward the singer at baseline (*M* = 0.52, *SD* = 0.18) and the test phase (*M* = 0.59, *SD* = 0.18), *t*(31) = -2.42, *p* = .02, 95% CI [-0.79, -0.06], *d* = -0.43. 
-
-### Graphing your results
-
----
-
-In order to visualize the difference between means (for a paired-samples *t*-test, in this case), it is most appropriate to create a bar graph, or bar plot. Because our two conditions (baseline and test) make up a discrete (and not continuous) categorical variable (also called a nominal variable), a bar graph is most appropriate. Unfortunately, it is not so easy to produce a bar graph with jamovi. In this example, it might be easy enough, but graphing would be increasingly cumbersome with an increasing number of participants or cases and an increasing number of levels of the variable. Your lab instructor will guide you through a work-around solution.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.46.png')
-```
-
-### OPTIONAL: The relationship between the one-sample and the paired-samples *t*-test
-
----
-
-
-This section is dedicated to demonstrating that the one-sample and paired-samples *t*-tests are almost the very same thing. In order to understand this, we must reframe how we think about the paired-samples *t*-test. We typically consider it a comparison between two samples in which observations have been repeated (like in a before-after scenario, for example). We can also think of the paired-samples *t*-test as testing the difference scores between two conditions. If the difference between two conditions is 0, then there is no difference, or there is no effect of the independent variable. If the difference is non-zero, then we can say there is a difference. 
-
-Thus, the paired-samples *t*-test is exactly the same as the one-sample *t*-test if we consider it as a comparison of the mean difference score to 0. Let's demonstrate this using jamovi. 
-
-We'll continue using the same data as above. Specifically, locate the variable named `Difference_in_Proportion_Looking`. This variable contains the difference score between the baseline and test conditions for each infant. We're going to treat this as our one-sample (as in the one-sample *t*-test), and we'll be comparing it to a mean of 0. 
-
-Let's begin. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, and then <span style="color:blue">One Sample T-test</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.47.png')
-```
-
-A window will appear. Using highlighting and the arrow, move the variable of interest, `Difference_in_Proportion_Looking`, into the "Dependent Variables" field. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.48.png')
-```
-
-Below that, make sure to enter 0 in the <span style="color:blue">Test value</span> field which is under the section with the bolded title "Hypothesis". 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.49.png')
-```
-
-The Results panel in jamovi should look like this:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/6.4.50.png')
-```
-
-You will see that the *t*-statistic and *p*-value are identical to the ones obtained when we conducted a paired-samples *t*-test. Therefore, a paired-samples *t*-test conducted on two samples is equivalent to a one-sample *t*-test conducted on the difference scores (calculated on the two samples) compared against 0. 
-
-Nota Bene: You will see that in the previous paired-samples *t*-test we obtained a *t*-statistic of -2.42, but here the *t*-statistic is positive. This difference comes from the fact that jamovi automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive *t*-statistic as well. In other words, the sign does not matter; it results from the order of the variables. 
-
-### Lab Homework #6
-
-___
-
-
-1. On average, adults should get roughly 8 hours of sleep per night.  Using the data collected in PSYC 291, do students get enough sleep during midterm week?  That is, use the average number of hours of sleep students get during the week prior to the Time 2 data collection.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
-
-2. Does the quality of students’ sleep change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)?  Using the data collected in PSYC 291, calculate the composite for students’ perceptions of the quality of their sleep at both Time 1 and Time 2.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).  Using APA format, graph the data.  
-
-
-### Practice Questions
-
-
-One Sample *t*-tests
-
-1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.”  Using the data collected in PSYC 291, select only those participants who identify as cisgender women.  Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
-
-2. Using the data collected in PSYC 291, are students more or less anxious than “somewhat anxious” (i.e., 2 on the scale) during midterm week? Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
-
-Paired *t*-tests
-
-1. Does student stress level change between the time early in the academic year (i.e., Time 1 – September) and midterms (i.e., Time 2 – mid-October)?  Using the data collected in PSYC 291, calculate the composite for students’ perceptions of stress at both Time 1 and Time 2.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*). Using APA format, graph the data.  
-
-2. Do students engage is less physical self-care during midterms (i.e., Time 2) than they do early in the academic term (i.e., Time 1)?  Using the data collected in PSYC 291, calculate the composite for the physical self-care subscale at both Time 1 and Time 2 of the Mindful Self-Care Measure.  Conduct the appropriate *t*-test.  What can you conclude?  Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*). Using APA format, graph the data.  
-
-3. Does substance abuse change between Time 1 (early September) and Time 2 (mid-October)?  Using the data collected in PSYC 291, conduct the appropriate *t*-tests for both alcohol consumption over the last week and cannabis consumption over the last week.  (Note that this requires 2 separate *t*-tests – one for alcohol and one for cannabis).  What can you conclude about each substance?  Write your answers in APA format, including the 95% confidence intervals, and effect sizes (Cohen’s *d*). Using APA format, graph the data (note that you will need to make up one graph for each substance).  
-
+Continue the scenario above – use composite sleep quality variables
+ 

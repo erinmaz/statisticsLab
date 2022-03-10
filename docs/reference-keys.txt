@@ -436,3 +436,11 @@ homework-feb-23-and-24-2021
 simulating-the-mean-differences
 control-vs-reactivationtetris
 tetris_only-vs-reactivationtetris
+learning-objectives-1
+pre-lab-tasks-2
+research-context-for-data-set
+motivation-to-perform-statistical-analyses
+using-descriptive-statistics-to-look-at-the-question
+motivation-to-perform-inferential-statistics
+using-jamovi-to-request-the-paired-samples-t-test
+homework-questions-1

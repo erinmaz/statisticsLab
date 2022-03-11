@@ -169,6 +169,7 @@ the-impact-of-sampling-on-research-results
 other-types-of-filters
 homework-problems
 lab-4-t-test-one-sample-paired-sample
+intro-material-for-r-and-spss-activities
 does-music-convey-social-information-to-infants
 study-description
 lab-skills-learned
@@ -206,13 +207,15 @@ optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test
 using-descriptive-statistics-to-give-context-to-inferential-statistics
 lab-homework-6
 jamovi---week-8---march-15-16
-experiment-background-1
-optional-performing-a-one-sample-t-test-1
+learning-objectives-1
+pre-lab-tasks-2
+research-context-for-data-set
 performing-a-paired-samples-t-test-1
-using-descriptive-statistics-to-give-context-to-inferential-statistics-1
-graphing-your-results-1
-optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test-1
-lab-homework-6-1
+motivation-to-perform-statistical-analyses
+using-descriptive-statistics-to-look-at-the-question
+motivation-to-perform-inferential-statistics
+using-jamovi-to-request-the-paired-samples-t-test
+homework-questions
 practice-questions-1
 lab-5-t-test-independent-sample
 do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say
@@ -233,7 +236,7 @@ generalization-exercise-3
 writing-assignment-3
 excel-5
 spss-5
-experiment-background-2
+experiment-background-1
 performing-an-independent-samples-t-test
 graphing-your-data
 optional-exercises-good-practice-and-review-for-the-take-home-final-exam
@@ -242,7 +245,7 @@ review-correlation
 lab-homework-7
 example-answers-to-practice-problems
 jamovi
-experiment-background-3
+experiment-background-2
 performing-an-independent-samples-t-test-1
 graphing-your-data-1
 optional-exercises-good-practice-and-review-for-the-take-home-final-exam-1
@@ -312,7 +315,7 @@ generalization-exercise-5
 writing-assignment-5
 excel-7
 spss-7
-experiment-background-4
+experiment-background-3
 performing-a-one-factor-analysis-of-variance-anova-graphing-the-data
 follow-up-tests
 planned-comparisons-t-contrasts
@@ -324,7 +327,7 @@ multiple-comparisons
 other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model
 planned-comparisons
 unplanned-comparisons
-homework-questions
+homework-questions-1
 jamovi-2
 lab-8-repeated-measures-anova
 betcha-cant-type-jhdbzkco-very-fast-on-your-first-try
@@ -352,7 +355,7 @@ generalization-exercise-6
 writing-assignment-6
 excel-8
 spss-8
-experiment-background-5
+experiment-background-4
 produce-a-frequency-histogram-and-remove-outliers
 conduct-and-graph-one-factor-repeated-measures-anova
 conduct-planned-comparisons-using-a-paired-samples-t-test
@@ -385,7 +388,7 @@ generalization-exercise-7
 writing-asignment
 excel-9
 spss-9
-experiment-background-6
+experiment-background-5
 conduct-a-between-subjects-two-factor-analysis-of-variance-anova
 calculate-simple-effects
 conduct-a-repeated-measures-two-factor-analysis-of-variance-anova
@@ -412,7 +415,7 @@ generalization-exercise-8
 writing-assignment-7
 excel-10
 spss-10
-experiment-background-7
+experiment-background-6
 conduct-a-mixed-factorial-analysis-of-variance-anova
 calculate-simple-effects-2
 practice-problems-6
@@ -433,14 +436,3 @@ mann-whitney-u-test-1
 interpreting-and-reporting-the-results-2
 homework-mar-9-and-10-2021
 homework-feb-23-and-24-2021
-simulating-the-mean-differences
-control-vs-reactivationtetris
-tetris_only-vs-reactivationtetris
-learning-objectives-1
-pre-lab-tasks-2
-research-context-for-data-set
-motivation-to-perform-statistical-analyses
-using-descriptive-statistics-to-look-at-the-question
-motivation-to-perform-inferential-statistics
-using-jamovi-to-request-the-paired-samples-t-test
-homework-questions-1

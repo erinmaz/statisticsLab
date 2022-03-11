@@ -13,11 +13,13 @@ Any experiment may be regarded as forming an individual of a 'population' of exp
 This lab is modified and extended from [Open Stats Labs](https://sites.trinity.edu/osl). Thanks to Open Stats Labs (Dr. Kevin P. McIntyre) for their fantastic work.
 </div>
 
-## Does Music Convey Social Information to Infants?
+## Intro material for R and SPSS activities
+
+### Does Music Convey Social Information to Infants?
 
 This lab activity uses the open data from Experiment 1 of Mehr, Song, and Spelke (2016) to teach one-sample and paired samples *t*-tests. Results of the activity provided below should exactly reproduce the results described in the paper.
 
-### STUDY DESCRIPTION
+#### Study description
 
 Parents often sing to their children and, even as infants, children listen to and look at their parents while they are singing. Research by Mehr, Song, and Spelke (2016) sought to explore the psychological function that music has for parents and infants, by examining the hypothesis that particular melodies convey important social information to infants. Specifically, melodies convey information about social affiliation.
 
@@ -27,7 +29,7 @@ To test this hypothesis, the researchers recruited 32 infants and their parents 
 
 Following this 1-2 week exposure period, the parents and their infant returned to the lab to complete the experimental portion of the study. Infants were first shown a screen with side-by-side videos of two unfamiliar people, each of whom were silently smiling and looking at the infant. The researchers recorded the looking behavior (or gaze) of the infants during this ‘baseline’ phase. Next, one by one, the two unfamiliar people on the screen sang either the lullaby that the parents learned or a different lullaby (that had the same lyrics and rhythm, but a different melody). Finally, the infants saw the same silent video used at baseline, and the researchers again recorded the looking behavior of the infants during this ‘test’ phase.For more details on the experiment’s methods, please refer to Mehr et al. (2016) Experiment 1.
 
-## Lab skills learned
+### Lab skills learned
 
 1. Conducting a one-sample *t*-test
 2. Conducting a paired samples *t*-test
@@ -35,7 +37,7 @@ Following this 1-2 week exposure period, the parents and their infant returned t
 4. Discussing inferences and limitations
 
 
-## Important Stuff
+### Important Stuff
 - citation: Mehr, S. A., Song. L. A., & Spelke, E. S. (2016). For 5-month-old infants, melodies are social. Psychological Science, 27, 486-501.
 - [Link to .pdf of article](http://journals.sagepub.com/stoken/default+domain/d5HcBHg85XamSXGdYqYN/full)
 - <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/MehrSongSpelke2016.csv" download>Data in .csv format</a>
@@ -682,7 +684,7 @@ ___
 
 
 <div class="marginnote">
-This lab activity was developed by Erin Mazerolle and Sherry Neville-MacLean.
+This lab activity was developed by Erin Mazerolle, Christine Lomore, and Sherry Neville-MacLean.
 </div>
 
 
@@ -710,15 +712,15 @@ The data set with which we will be working is from an online survey. Participant
 
 The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).
 
-When information about the variables (anxiety, stress, sleep,  self-care, and substance use) was collected, multiple questions were asked. These questions might be considered items that are used to measure the variable, and the variable can be considered a construct. Oftentimes, multiple items are asked to get measurement that is more reflective of the construct than any one item. To get this measurement, a composite score is calculated. Many times, composite scores are obtained by either averaging or summing the scores for the items that measure the construct. 
+Multiple questions were asked for each topic of interest (or "construct"). In this case, the constructs were: anxiety, stress, sleep,  self-care, and substance use. Multiple questions (or "items") are often asked because no one item fully reflects the construct. A "composite score" for the construct can be calculated by combining the scores from the individual items. There are many ways to calculate composite scores. The most simple composite scores are simply sums or averages of all the items relevant to the construct.
 
 <div class="marginnote">
 Cohen, S., Kamarck, T., & Mermelstein, R. (1983). A global measure of perceived stress. *Journal of Health and Social Behavior, 24*, 385-396.
 </div>
 
-Sometimes, a survey or test has items that are opposite statements or that look at the levels of the answer from opposite, or near opposite, perspectives. For example, when stress was measured the *Perceived Stress Scale* by Cohen, Kamarck, and Mermelstein (1983) was used. In this measure of stress, respondents answer on a scale from 1 to 5 (where 1 = never, 2 = almost never, 3 = sometimes, 4 = fairly often, and 5 = very often). One item, item #7, asked "In the last 7 days, how often have you been able to control irritations in your life?" Another item, item #9, asked "In the last 7 days, how often have you been angered because of things that were outside of your control?" A person who indicates they often felt able to control irritations should also report infrequent anger caused by things outside their control. 
+Surveys that ask participants to rate statements often include a mix of both positive and negative statements. For example, the *Perceived Stress Scale* by Cohen, Kamarck, and Mermelstein (1983) asks respondents to answer on a scale from 1 to 5 (where 1 = never, 2 = almost never, 3 = sometimes, 4 = fairly often, and 5 = very often). One item, item #7, asked "In the last 7 days, how often have you been able to control irritations in your life?" For this question, a response of 1 would indicate higher stress and a response of 5 would indicate lower stress. Another item, item #9, asked "In the last 7 days, how often have you been angered because of things that were outside of your control?" We would interpret responses to this question in the opposite direction: a response of 1 would indicate lower stress and a response of 5 would indicate higher stress. 
 
-Before a composite score is computed, the scale scores for any oppositely worded items would need to be recoded, and in this case, reverse coded. When using the *Perceived Stress Scale*, for item #7, we would reverse the scale so that 1 = 5, 2 = 4, 3 = 3, 4 = 2, and 5 = 1.
+Before a composite score is computed, the scale scores for any oppositely worded items would need to be "reverse coded." You might also encounter the term "recoded" which is a more general term; reverse coding is one type of recoding. When using the *Perceived Stress Scale*, for item #7, we would reverse the scale so that 1 = 5, 2 = 4, 3 = 3, 4 = 2, and 5 = 1.
 
 The recoding and the calculation of composite scores has been completed for you in this data set. For perceived stress, for example, the scores for items #4, 5, 7, and 8 were reverse coded, and then, a sum of the item scores was calculated. `T1_Stress` represents the composite score of perceived stress at time 1, or at the beginning of the term.
 
@@ -729,8 +731,10 @@ The recoding and the calculation of composite scores has been completed for you 
 Imagine you are a researcher who is interested in how midterms impact students' sleep patterns. You are curious about whether the number of nightly sleep hours changes during midterm time. You plan to use the survey data described above to answer your question.
 
 First, what is your research question? 
-Do the number of hours of sleep change during midterms?
-This is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.
+
+Possible research question: Do the number of hours of sleep change during midterms?
+
+Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.
 
 #### Using descriptive statistics to look at the question
 
@@ -764,7 +768,9 @@ knitr::include_graphics('img/T1_SleepHours_Histogram.png')
 knitr::include_graphics('img/T2_SleepHours_Histogram.png')
 ```
 
-Stretch your Thinking: Why do the histograms look high-low-high-low? (Answer: because people tend to write/remember whole hours, so those values occur more frequently in the data).
+Stretch your Thinking: Why do the histograms look high-low-high-low? 
+
+(Answer: because people tend to write/remember whole hours, so those values occur more frequently in the data).
 
 #### Motivation to perform inferential statistics
 
@@ -777,8 +783,8 @@ Erin to do: (I will try to make a graph to go with this paragraph INF_FIG)
 We use a paired-samples *t*-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples *t*-tests are also known as paired *t*-tests, matched *t*-tests, and dependent *t*-tests. 
  
 First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
-So, our null hypothesis (H_0) is there is no difference in sleep between the two timepoints: $\mu_T1$ = $\mu_T2$.
-Our alternative hypothesis (H_A or H_1) is there is a difference: $\mu_T1$ \neq $\mu_T2$.
+So, our null hypothesis ($H_0$) is there is no difference in sleep between the two timepoints: $\mu_{T1}$ = $\mu_{T2}$.
+Our alternative hypothesis ($H_A$ or $H_1$) is there is a difference: $\mu_{T1}$ $\neq$ $\mu_{T2}$.
  
 Question: Why are our hypotheses about the mean, as opposed to a different measure of central tendency, or the distributions? Answer: *t*-tests answer questions about means. Other tests can be used for research questions about different statistics.
 
@@ -793,3 +799,7 @@ Question: Why are our hypotheses about the mean, as opposed to a different measu
 
 Continue the scenario above – use composite sleep quality variables
  
+### Practice Questions
+
+1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women. Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate *t*-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
+

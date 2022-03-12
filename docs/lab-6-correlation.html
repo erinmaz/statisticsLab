@@ -323,9 +323,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
 <li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
 <li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-jamovi-to-request-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Using JAMOVI to request a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.5</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.6</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.7</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.8</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -622,7 +623,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb150-7"><a href="lab-6-correlation.html#cb150-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(my_df, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
 <span id="cb150-8"><a href="lab-6-correlation.html#cb150-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
 <span id="cb150-9"><a href="lab-6-correlation.html#cb150-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(<span class="fu">cor</span>(x,y), <span class="at">digits=</span><span class="dv">2</span>), <span class="at">y=</span><span class="dv">12</span>, <span class="at">x=</span><span class="dv">2</span> ))</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-268-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-265-1.png" width="672" /></p>
 <p>Wow, we’re moving fast here.</p>
 </div>
 <div id="lots-of-scatterplots" class="section level4" number="6.2.1.2">
@@ -637,7 +638,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb151-7"><a href="lab-6-correlation.html#cb151-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(all_df, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
 <span id="cb151-8"><a href="lab-6-correlation.html#cb151-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
 <span id="cb151-9"><a href="lab-6-correlation.html#cb151-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conditions)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-269-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-266-1.png" width="672" /></p>
 </div>
 <div id="computing-the-correlations-all-at-once" class="section level4" number="6.2.1.3">
 <h4><span class="header-section-number">6.2.1.3</span> computing the correlations all at once</h4>
@@ -659,7 +660,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb152-9"><a href="lab-6-correlation.html#cb152-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb152-10"><a href="lab-6-correlation.html#cb152-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conditions)<span class="sc">+</span></span>
 <span id="cb152-11"><a href="lab-6-correlation.html#cb152-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-270-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-267-1.png" width="672" /></p>
 <p>You can see that the slope of the blue line is not always flat. Sometimes it looks like there is a correlation, when we know there shouldn’t be. You can keep re-doing this graph, by re-knitting your <em>r</em> Markdown document, or by pressing the little green play button. This is basically you simulating the outcomes as many times as you press the button.</p>
 <p>The point is, now you know you can find correlations by chance. So, in the next section, you should always wonder if the correlations you find reflect meaningful association between the x and y variable, or could have just occurred by chance.</p>
 </div>
@@ -693,7 +694,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb158-2"><a href="lab-6-correlation.html#cb158-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y=</span><span class="st">`</span><span class="at">Confidence in national government</span><span class="st">`</span>))<span class="sc">+</span></span>
 <span id="cb158-3"><a href="lab-6-correlation.html#cb158-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
 <span id="cb158-4"><a href="lab-6-correlation.html#cb158-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-274-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-271-1.png" width="672" /></p>
 <p>Interesting, what happened here? We can see some dots, but the correlation was NA (meaning undefined). This occurred because there are some missing data points in the data. We can remove all the rows with missing data first, then do the correlation. We will do this a couple steps, first creating our own data.frame with only the numbers we want to analyse. We can select the columns we want to keep using <code>select</code>. Then we use <code>filter</code> to remove the rows with NAs.</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="lab-6-correlation.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb159-2"><a href="lab-6-correlation.html#cb159-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -730,7 +731,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb163-5"><a href="lab-6-correlation.html#cb163-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
 <span id="cb163-6"><a href="lab-6-correlation.html#cb163-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb163-7"><a href="lab-6-correlation.html#cb163-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-276-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-273-1.png" width="672" /></p>
 </div>
 <div id="my-question-2" class="section level4" number="6.2.2.4">
 <h4><span class="header-section-number">6.2.2.4</span> My Question #2</h4>
@@ -757,7 +758,7 @@ If … we choose a group of social phenomena with no antecedent knowledge of the
 <span id="cb166-5"><a href="lab-6-correlation.html#cb166-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
 <span id="cb166-6"><a href="lab-6-correlation.html#cb166-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, <span class="at">se=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb166-7"><a href="lab-6-correlation.html#cb166-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-277-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-274-1.png" width="672" /></p>
 <p>Bam, there we have it. As positive affect goes up, negative affect goes down. A negative correlation.</p>
 </div>
 </div>

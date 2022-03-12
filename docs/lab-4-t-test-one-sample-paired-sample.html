@@ -320,9 +320,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
 <li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
 <li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-jamovi-to-request-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Using JAMOVI to request a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.5</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.6</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.7</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.8</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -1140,7 +1141,7 @@ During the baseline condition, the mean proportion looking time toward the singe
 </div>
 <div id="motivation-to-perform-inferential-statistics" class="section level4" number="4.5.4.3">
 <h4><span class="header-section-number">4.5.4.3</span> Motivation to perform inferential statistics</h4>
-<p>Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error?</p>
+<p>Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. It looks like the mean sleep duration is slightly lower during midterms, compared to the beginning of term. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error?</p>
 <p>Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: <strong>No.</strong>) Do the differences between timepoints exist in the population of all students? That is what inferential statistics will help us decide.</p>
 <p>We use a paired-samples <em>t</em>-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples <em>t</em>-tests are also known as paired <em>t</em>-tests, matched <em>t</em>-tests, and dependent <em>t</em>-tests.</p>
 <p>First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
@@ -1166,28 +1167,43 @@ Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span cl
 <p>Compare these descriptive statistics to the ones we generated earlier via the Exploration function. Why are they different? We’ll answer this question below.</p>
 <p>The plot includes both the mean and the median of both variables. The mean has “whiskers” that represent the 95% confidence interval. You can think of this plot as a bar graph, without the bars:</p>
 <p><img src="img/pairedplot.png" /><!-- --></p>
-<p><strong>Tip</strong>: If you would like to make a bar graph corresponding to a paired t-test, it’s a bit tricky in JAMOVI. We recommend using Excel to plot your means. Usually, the standard errors (SE), which can be found in the Descriptives table, are a good choice for your error bars.</p>
+<p><strong>Tip</strong>: If you would like to make a bar graph corresponding to a paired <em>t</em>-test, it’s a bit tricky in JAMOVI. We recommend using Excel to plot your means. Usually, the standard errors (SE), which can be found in the Descriptives table, are a good choice for your error bars.</p>
+</div>
+<div id="interpreting-the-paired-samples-t-test-output" class="section level4" number="4.5.4.5">
+<h4><span class="header-section-number">4.5.4.5</span> Interpreting the Paired Samples <em>t</em>-Test output</h4>
 <p>What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the <em>p</em>-value (in this case, 0.009) and the effect size (in this case, 0.308). The p-value is the probability of observing a difference, as or more extreme than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your p-value is “low enough?” We typically use a cutoff, called an alpha, of 0.05 or 5%. If your p-value is lower than your alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 &lt; 0.05, so we reject the null hypothesis. Note that we do not accept the alternative hypothesis!</p>
 <p>In research papers, we often use the phrase “statistically significant” or “significantly different” to mean reject the null hypothesis. For example, we observed significantly different sleep durations at time 1 versus time 2.</p>
 <p>The effect size gives us a sense for how large the difference is. Cohen’s <em>d</em> is the appropriate effect size for a <em>t</em>-test, but we will learn about effect sizes for other tests as the course progresses. Cohen’s <em>d</em> tells us how large the mean difference is, in units of standard deviation. In this case, Cohen’s <em>d</em> is 0.308, so the difference in sleep duration between time 1 and time 2 is about 0.3 standard deviations.</p>
 <p>The degrees of freedom (df) for a paired <em>t</em>-test is equal to the number of participants included in the test minus one:
 <span class="math inline">\(df = N - 1\)</span></p>
-<p>(Note: different tests use different formulas for df). Our df = 76, meaning that 77 participants were included in the paired <em>t</em>-test. There are actually 103 participants in the dataset, but not all participants had sleep duration data for both time points. Participants with missing data at one or both timepoints get excluded from the test. This is why the descriptives statistics are different depending on whether you generate them via the Exploration panel or the Paired T-Test. The Exploration descriptives table includes all participants with data, whereas the Paired T-Test descriptives table only includes participants with data at both time points.</p>
+<div class="marginnote">
+<p>Note: Different tests use different formulas for df.</p>
+</div>
+<p>Our df = 76, meaning that 77 participants were included in the paired <em>t</em>-test. There are actually 103 participants in the dataset, but not all participants had sleep duration data for both time points. Participants with missing data at one or both timepoints get excluded from the test. This is why the descriptives statistics are different depending on whether you generate them via the Exploration panel or the Paired T-Test. The Exploration descriptives table includes all participants with data, whereas the Paired T-Test descriptives table only includes participants with data at both time points.</p>
 <p>The 95% confidence interval for a paired <em>t</em>-test are limits constructed that, for 95% of samples, the population mean difference will fall within the limits. This means that, assuming our sample belongs to that 95% of samples, the population mean difference is between 0.101 and 0.670. Remember, if we collected the data again using a different sample, we would get a different estimate for the population mean.</p>
-<p>We can write sentences in APA format to describe our results. Such sentences are what you tend to see in Results sections of research papers. For this example, we would write a sentence such as:</p>
-<p>Using a paired <em>t</em>-test, we observed a significant difference in sleep duration between the beginning of term and midterms (<em>t</em>(76) = 2.70, <em>p</em> = .009, <em>d</em> = 0.31). Mean (standard deviation) sleep duration at the beginning of term was 7.03 (1.14) hours, dropping to 6.64 (1.30) hours at midterms. The mean difference was 0.39 (95% CI [0.10, 0.67]).</p>
+</div>
+</div>
+<div id="writing-results-in-apa-format" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> Writing results in APA format</h3>
+<p>We can write sentences in APA format to describe our results. Such sentences are what you tend to see in Results sections of research papers. For the paired <em>t</em>-test example above, we would write a sentence such as:</p>
+<p>Using a paired <em>t</em>-test, we observed a significant difference in sleep duration between the beginning of term and midterms (<em>t</em>(76) = 2.70, <em>p</em> = .009, <em>d</em> = 0.31). Mean (standard deviation) sleep duration at the beginning of term was 7.03 (1.14) hours, dropping to 6.64 (1.30) hours at midterms. The mean difference was 0.39 hours (95% CI [0.10, 0.67]).</p>
 <p>Can you find where all the numbers in the sentence came from in the two tables?</p>
 <p>A few notes about APA format:</p>
 <ol style="list-style-type: decimal">
 <li><p>Always note the name of the test you performed (in this case, paired <em>t</em>-test).</p></li>
 <li><p>We usually round to two decimal places, except for <em>p</em>-values.</p></li>
 <li><p>Do not include a leading 0 before the decimal for the <em>p</em>-value (<em>p</em> = .009 not <em>p</em> = 0.009)</p></li>
-<li><p>Pay attention to spacing, parentheses, etc.</p></li>
+</ol>
+<div class="marginnote">
+<p>Yes, I’m serious. No, I don’t know why. Yes, it does seem a bit silly. Yes, you lose points if you don’t adhere to APA format when requested to do so.</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it’s <em>t</em>(76) = 2.70 <strong>not</strong> <em>t</em>(76)=2.70.</p></li>
+<li><p>Symbols such as <em>t</em>, <em>p</em>, and <em>d</em> are italicized.</p></li>
 </ol>
 </div>
-</div>
-<div id="using-jamovi-to-request-a-one-sample-t-test" class="section level3" number="4.5.5">
-<h3><span class="header-section-number">4.5.5</span> Using JAMOVI to request a one-sample <em>t</em>-test</h3>
+<div id="performing-a-one-sample-t-test" class="section level3" number="4.5.6">
+<h3><span class="header-section-number">4.5.6</span> Performing a one-sample <em>t</em>-test</h3>
 <p>Sometimes you are interested in whether a sample’s mean is different from a specific value. For example, you might wonder whether students are getting 8 hours of sleep per night at the start of term. To ask this question, we use a one-sample <em>t</em>-test:</p>
 <p><img src="img/onesample.png" /><!-- --></p>
 <p>Move your variable of interest (T1_sleep_hours) into the Dependent Variables box.</p>
@@ -1197,15 +1213,16 @@ Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span cl
 <p>The <em>p</em>-value is less than .05, so we reject our null hypothesis. Sleep duration is significantly different from 8 hours per night at the beginning of term.</p>
 <p>You can also add the outputs we included for the paired <em>t</em>-test, including mean difference, confidence interval, descriptives, and descriptive plots.</p>
 </div>
-<div id="homework-questions" class="section level3" number="4.5.6">
-<h3><span class="header-section-number">4.5.6</span> Homework Questions</h3>
+<div id="homework-questions" class="section level3" number="4.5.7">
+<h3><span class="header-section-number">4.5.7</span> Homework Questions</h3>
 <p>See Moodle.</p>
 </div>
-<div id="practice-questions-1" class="section level3" number="4.5.7">
-<h3><span class="header-section-number">4.5.7</span> Practice Questions</h3>
+<div id="practice-questions-1" class="section level3" number="4.5.8">
+<h3><span class="header-section-number">4.5.8</span> Practice Questions</h3>
 <ol style="list-style-type: decimal">
 <li><p>Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women (hint: review lab manual section on <a href="https://www.erinmazerolle.com/statisticsLab/lab-3-sampling-and-sampling-distributions.html#other-types-of-filters">filters</a>). Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s <em>d</em>).</p></li>
-<li><p>Is there a significant difference in cannabis use between the beginning of term and midterms? Report your results in APA format.</p></li>
+<li><p>Is there a significant difference in cannabis use between the beginning of term versus midterms? Report your results in APA format.</p></li>
+<li><p>Consider the sleep duration example. Use JAMOVI to perform a directional test, such that the alternative hypothesis is that sleep duration at the beginning of term is longer than sleep duration at midterms. Compare your results to the non-directional test. What are the similarities and what are the differences?</p></li>
 </ol>
 
 </div>

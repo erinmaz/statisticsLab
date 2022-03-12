@@ -323,9 +323,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
 <li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
 <li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-jamovi-to-request-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Using JAMOVI to request a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.5</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.6</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.7</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.8</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -665,7 +666,7 @@ No amount of experimentation can ever prove me right; a single experiment can pr
 <h3><span class="header-section-number">10.4.5</span> Look at the data</h3>
 <p>Remember before we do any analysis, we always want to “look” at the data. This first pass let’s us know if the data “look right.” For example, the data file could be messed up and maybe there aren’t any numbers there, or maybe the numbers are just too weird. For example, the memory performance DV is a percent, so it should range between 0 and 100, if we find numbers that are negative or greater than 100, then we know something is wrong.</p>
 <div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="lab-10-mixed-factorial-anova.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(new_data<span class="sc">$</span>memory_accuracy)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-461-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-458-1.png" width="672" /></p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="lab-10-mixed-factorial-anova.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(new_data<span class="sc">$</span>memory_accuracy)</span></code></pre></div>
 <pre><code>## [1]  11.11111 100.00000</code></pre>
 <p>Great, the numbers check out, they are all inside the range of 0 to 100.</p>
@@ -692,7 +693,7 @@ No amount of experimentation can ever prove me right; a single experiment can pr
 <span id="cb238-13"><a href="lab-10-mixed-factorial-anova.html#cb238-13" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
 <span id="cb238-14"><a href="lab-10-mixed-factorial-anova.html#cb238-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
 <span id="cb238-15"><a href="lab-10-mixed-factorial-anova.html#cb238-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">50</span>,<span class="dv">100</span>))</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-462-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-459-1.png" width="672" /></p>
 </div>
 <div id="conduct-the-anova-2" class="section level3" number="10.4.7">
 <h3><span class="header-section-number">10.4.7</span> Conduct the ANOVA</h3>

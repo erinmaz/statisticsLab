@@ -742,9 +742,10 @@ It is VERY important to remember that once you have applied a filter, every anal
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.35.png')
 ```
-#### Optional activity
 
-Let's say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent *t*-test. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
+### Optional activities
+
+Consider the experiment and dataset from the [independent *t*-test lab](https://www.erinmazerolle.com/statisticsLab/lab-5-t-test-independent-sample.html#jamovi). Let's say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this using correlation. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.61.png')
@@ -806,8 +807,6 @@ Repeat for all correlations with `intellect`, using `intellect` on the `Y axis` 
 
 ### Example answers to optional activities
 
-___
-
 1. Intellect ratings were not significantly correlated with the age of the candidates, *r* = .05, *p* > .05.
 
 2. You should have created four scatterplots. They are included below as well as some notes about each. 
@@ -866,17 +865,15 @@ There are spaces on either side of =, >, or < symbols.
 4. Construct the scatterplot for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. What do you notice about the scatterplot? Does the slope increase or decrease?
 Do the dots closely follow the line of best fit?
 
-5. TBD: questions based on PSYC 291 survey / may want to move some from Lab 7
-
 <div class="marginnote">
-The follwoing three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+The follwoing three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
 </div>
 
-6. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
+5. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
 
-7. Explain the difference between a correlation of *r* = .3 and *r* = .7. What does a larger value of *r* represent?
+6. Explain the difference between a correlation of *r* = .3 and *r* = .7. What does a larger value of *r* represent?
 
-8. Explain the difference between a correlation of *r* = .5, and *r* = -.5.
+7. Explain the difference between a correlation of *r* = .5, and *r* = -.5.
 
 
 

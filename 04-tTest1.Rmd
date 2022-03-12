@@ -701,8 +701,9 @@ In this lab, we will use jamovi to:
 
 Before lab, be sure to complete the [Psychology 291 Data: Terms of Use quiz](https://moodle.stfx.ca/mod/quiz/view.php?id=837148).
 
-When you pass that quiz, download the data file and data dictionary from [OneDrive](link to be added). Be sure to practice your data management skills and save the files in an appropriate file folder in your Psych 292 Lab folder. 
-Be sure to have the data file opened in JAMOVI before your lab begins.
+When you pass that quiz, download the data file and data dictionary from [OneDrive](https://moodle.stfx.ca/mod/url/view.php?id=837149). Be sure to practice your data management skills and save the files in an appropriate file folder in your Psych 292 Lab folder. 
+
+This week we will be importing a different file format. The data file in OneDrive is a .sav file. Be sure to use the import function in JAMOVI instead of open. We did some testing and this seems to work better for more versions of JAMOVI. Be sure to have the data file opened in JAMOVI before your lab begins.
 
 
 ### Research Context for Data Set
@@ -726,23 +727,7 @@ Note that this is just one possible research question. You might also ask a dire
 
 #### Using descriptive statistics to look at the question
 
-What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! First, though, what is the scale of measurement for hours of sleep? To answer this question, look at the data dictionary.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/DataDictionary_SleepHours.png')
-```
-
-We can see by looking at `T1_sleep_hours` and `T2_sleep_hours` in JAMOVI, that the scale is entered as continuous (which can be used for variables measured on interval or ratio scales).
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/SleepHours_VariableAttributes.png')
-```
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/SleepHours_VariableAttributes2.png')
-```
-
-Since we have data measured on a ratio scale, we can calculate the means and standard deviations, and we can look at the histograms. You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2) from previous chapters. Let's make those requests now.
+What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2) from previous chapters. Let's make those requests now.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/SleepHours_Descriptives.png')
@@ -846,18 +831,46 @@ Using a paired *t*-test, we observed a significant difference in sleep duration 
 Can you find where all the numbers in the sentence came from in the two tables?
 
 A few notes about APA format:
+
 1. Always note the name of the test you performed (in this case, paired *t*-test). 
+
 2. We usually round to two decimal places, except for *p*-values.
+
 3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009 not *p* = 0.009)
+
 4. Pay attention to spacing, parentheses, etc.
 
- 
+
+### Using JAMOVI to request a one-sample *t*-test
+
+Sometimes you are interested in whether a sample's mean is different from a  specific value. For example, you might wonder whether students are getting 8 hours of sleep per night at the start of term. To ask this question, we use a one-sample *t*-test: 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/onesample.png')
+```
+
+Move your variable of interest (T1_sleep_hours) into the Dependent Variables box.
+
+Under hypothesis, be sure to set your test value to 8. If you leave it at 0, it will test whether the mean sleep duration is equal to 0. So, your null hypothesis is that sleep duration at the start of term is equal to 8 hours, i.e., $H_0: \mu = 8$
+
+Your output will look like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/onesampleoutput.png')
+```
+
+The *p*-value is less than .05, so we reject our null hypothesis. Sleep duration is significantly different from 8 hours per night at the beginning of term.
+
+You can also add the outputs we included for the paired *t*-test, including mean difference, confidence interval, descriptives, and descriptive plots. 
+
+
 ### Homework Questions
 
 See Moodle.
  
 ### Practice Questions
 
-1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women. Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate *t*-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
+1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women (hint: review lab manual section on [filters](https://www.erinmazerolle.com/statisticsLab/lab-3-sampling-and-sampling-distributions.html#other-types-of-filters)). Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate *t*-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
+
 2. Is there a significant difference in cannabis use between the beginning of term and midterms? Report your results in APA format.
 

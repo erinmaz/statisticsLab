@@ -323,8 +323,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
 <li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
 <li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.5</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.6</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-jamovi-to-request-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Using JAMOVI to request a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -687,7 +688,7 @@ most of it came from Gosset.
 <span id="cb142-15"><a href="lab-5-t-test-independent-sample.html#cb142-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>Intellect_Rating), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
 <span id="cb142-16"><a href="lab-5-t-test-independent-sample.html#cb142-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
 <span id="cb142-17"><a href="lab-5-t-test-independent-sample.html#cb142-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
 <p>This plot is very useful. First, we can see the numbers in our dependent measure are behaving sensibly. We know that the numbers have to be between 1-10, because those were the only options in the scale. If we found numbers bigger or smaller, we would know something was wrong. Checking for things that are obviously wrong in the data is one reason why we always look at first. We are checking for obvious errors. There are other ways to check to, but looking is fast and easy.</p>
 <div class="marginnote">
 <p><strong>Question:</strong> Why are the standard errors of each sample an appropriate thing to use for error bars?</p>
@@ -786,7 +787,7 @@ most of it came from Gosset.
 <span id="cb147-41"><a href="lab-5-t-test-independent-sample.html#cb147-41" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>))<span class="sc">+</span></span>
 <span id="cb147-42"><a href="lab-5-t-test-independent-sample.html#cb147-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
 <span id="cb147-43"><a href="lab-5-t-test-independent-sample.html#cb147-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
 <p>Well, we didn’t make the exact graph. We have the bars, the error bars, and we added the individual scores because they are useful to look at. Otherwise, it’s the same graph (except the the ordering of bars is determined alphabetically here. We change that in ggplot, but we won’t do that today.)</p>
 </div>
 <div id="generalization-exercise-3" class="section level3" number="5.4.8">

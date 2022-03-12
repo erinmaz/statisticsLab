@@ -215,6 +215,7 @@ motivation-to-perform-statistical-analyses
 using-descriptive-statistics-to-look-at-the-question
 motivation-to-perform-inferential-statistics
 using-jamovi-to-request-the-paired-samples-t-test
+using-jamovi-to-request-a-one-sample-t-test
 homework-questions
 practice-questions-1
 lab-5-t-test-independent-sample

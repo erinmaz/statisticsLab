@@ -436,3 +436,5 @@ mann-whitney-u-test-1
 interpreting-and-reporting-the-results-2
 homework-mar-9-and-10-2021
 homework-feb-23-and-24-2021
+control-vs-reactivationtetris
+tetris_only-vs-reactivationtetris

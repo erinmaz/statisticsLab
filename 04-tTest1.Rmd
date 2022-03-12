@@ -777,8 +777,6 @@ Stretch your Thinking: Why do the histograms look high-low-high-low?
 Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error? 
 
 Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: **No.**) Do the differences between timepoints exist in the population of all students? That is what inferential statistics will help us decide. 
-
-Erin to do: (I will try to make a graph to go with this paragraph INF_FIG)
  
 We use a paired-samples *t*-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples *t*-tests are also known as paired *t*-tests, matched *t*-tests, and dependent *t*-tests. 
  
@@ -790,16 +788,88 @@ Question: Why are our hypotheses about the mean, as opposed to a different measu
 
 #### Using JAMOVI to request the paired-samples *t*-test
 
-•	Do CI of the mean difference – not of the effect size
-•	Use Descriptive plot – this is essentially a bar graph without the bars, with the median on it. Use Excel if we have time to do a bar graph
-•	Explain how to interpret the t-value, df, the CI of the mean difference, the effect size, and the p-value
-•	Write APA sentence
+You can find the paired *t*-tests in JAMOVI by clicking Analyses -> T-Tests, Paired Samples T-Test:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/paired_menu.png')
+```
+
+Move your two variables of interest to "Paired Variables":
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/select_vars_pairedttest.png')
+```
+
+Under Tests, "Student's" should be selected (Student was the pseudonym of the person who invented the t-test). Also, make sure Measure 1 $\neq$ Measure 2 under Hypothesis (because we have a non-directional hypothesis for this example):
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/paired_ttest_params1.png')
+```
+
+Under Additional Statistics, select Mean difference and under that, Confidence Interval. Select Effect size. You can also select Descriptives and Descriptive Plots:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/paired_ttest_params2.png')
+```
+
+There will now be some output in the JAMOVI output panel. The first table is Paired Samples T-Test. It names the variables that were used in the test (T1_sleep_hours and T2_sleep hours), gives the Student's t-value (under the statistic column), the degrees of freedom (df), the p-value (p), the mean difference, the standard error (SE) of the difference, the 95% Confidence Interval lower and upper bounds, and Cohen's *d* (under the Effect size column). This table is quite wide, so we've split it into two below:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/pairedttestoutput_1.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/pairedttestoutput_2.png')
+```
+
+The Descriptives table gives some descriptive statistics, which is convenient for writing up your results:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/paireddescriptives.png')
+```
+
+Compare these descriptive statistics to the ones we generated earlier via the Exploration function. Why are they different? We'll answer this question below.
+
+The plot includes both the mean and the median of both variables. The mean has "whiskers" that represent the 95% confidence interval. You can think of this plot as a bar graph, without the bars: 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/pairedplot.png')
+```
+
+**Tip**: If you would like to make a bar graph corresponding to a paired t-test, it's a bit tricky in JAMOVI. We recommend using Excel to plot your means. Usually, the standard errors (SE), which can be found in the Descriptives table, are a good choice for your error bars.
+
+What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the *p*-value (in this case, 0.009) and the effect size (in this case, 0.308). The p-value is the probability of observing a difference, as or more extreme than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your p-value is "low enough"? We typically use a cutoff, called an alpha, of 0.05 or 5%. If your p-value is lower than your alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 < 0.05, so we reject the null hypothesis. Note that we do not accept the alternative hypothesis!
+
+In research papers, we often use the phrase "statistically significant" or "significantly different" to mean reject the null hypothesis. For example, we observed significantly different sleep durations at time 1 versus time 2.
+
+The effect size gives us a sense for how large the difference is. Cohen's *d* is the appropriate effect size for a *t*-test, but we will learn about effect sizes for other tests as the course progresses. Cohen's *d* tells us how large the mean difference is, in units of standard deviation. In this case, Cohen's *d* is 0.308, so the difference in sleep duration between time 1 and time 2 is about 0.3 standard deviations. 
+
+The degrees of freedom (df) for a paired *t*-test is equal to the number of participants included in the test minus one:
+$df = N - 1$
+
+(Note: different tests use different formulas for df). Our df = 76, meaning that 77 participants were included in the paired *t*-test. There are actually 103 participants in the dataset, but not all participants had sleep duration data for both time points. Participants with missing data at one or both timepoints get excluded from the test. This is why the descriptives statistics are different depending on whether you generate them via the Exploration panel or the Paired T-Test. The Exploration descriptives table includes all participants with data, whereas the Paired T-Test descriptives table only includes participants with data at both time points.
+
+The 95% confidence interval for a paired *t*-test are limits constructed that, for 95% of samples, the population mean difference will fall within the limits. This means that, assuming our sample belongs to that 95% of samples, the population mean difference is between 0.101 and 0.670. Remember, if we collected the data again using a different sample, we would get a different estimate for the population mean.
+
+We can write sentences in APA format to describe our results. Such sentences are what you tend to see in Results sections of research papers. For this example, we would write a sentence such as:
+
+Using a paired *t*-test, we observed a significant difference in sleep duration between the beginning of term and midterms (*t*(76) = 2.70, *p* = .009, *d* = 0.31). Mean (standard deviation) sleep duration at the beginning of term was 7.03 (1.14) hours, dropping to 6.64 (1.30) hours at midterms. The mean difference was 0.39 (95% CI [0.10, 0.67]).
+
+Can you find where all the numbers in the sentence came from in the two tables?
+
+A few notes about APA format:
+1. Always note the name of the test you performed (in this case, paired *t*-test). 
+2. We usually round to two decimal places, except for *p*-values.
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009 not *p* = 0.009)
+4. Pay attention to spacing, parentheses, etc.
+
  
 ### Homework Questions
 
-Continue the scenario above – use composite sleep quality variables
+See Moodle.
  
 ### Practice Questions
 
 1. Canada’s Healthy Drinking Guidelines suggest that women should consume “no more than 2 standard drinks on most days and no more than 10 drinks per week.” Using the data collected in PSYC 291, select only those participants who identify as cisgender women. Compare the number of drinks women in PSYC 291 consumed in the week prior to Time 1 (September) to the healthy drinking standard. Conduct the appropriate *t*-test. What can you conclude? Write your answer in APA format, including the 95% confidence interval, and effect size (Cohen’s *d*).
+2. Is there a significant difference in cannabis use between the beginning of term and midterms? Report your results in APA format.
 

@@ -742,13 +742,102 @@ It is VERY important to remember that once you have applied a filter, every anal
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.35.png')
 ```
+#### Optional activity
+
+Let's say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent *t*-test. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.61.png')
+```
+
+Then, move `age` and `intellect` into the untitled box at the right of the pop-up screeen:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.62.png')
+```
+
+In the Results panel, the output table should look as follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.63.png')
+```
+
+Write a sentence describing the results of this test. Compare your answer to #1 in the "Example answers to practice problems" below. 
+
+Now, assume you are in the mood to do some exploratory data analysis. We can run multiple bivariate correlations at the same time in the same dialog. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span> again. To the untitled variables box at the right, add `age`, `time`, `wordcount`, `intellect`,  and `impression`:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.64.png')
+```
+
+In the Results panel, the output table contains the *r*- and *p*-values for each possible pair of the five variables:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.65.png')
+```
+
+By default, jamovi does not flag significant correlations. Be sure to review the *p*-values careful and compare them to the alpha level you set.  How many significant correlations do you identify in the correlation matrix?
+
+If you would like jamovi to flag significant correlations, you can click <span style="color:blue">Flag significant correlations</span> under “Additional options”. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.66.png')
+```
+
+Under the correlation matrix that appears in the Results panel, you will notice a note. If the *p*-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the *p*-value is less than .01, SPSS will flag it as ** (significant at the .01 level); and if the *p*-value is less than .001, SPSS will flag it as *** (significant at the .001 level).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.67.png')
+```
+
+Let's pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot...</span>. Move `intellect` into the <span style="color:blue">Y-Axis</span> and `age` into the <span style="color:blue">X-Axis</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.68.png')
+```
+
+These commands should produce a scatterplot in the Results panel. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.69.png')
+```
+
+Repeat for all correlations with `intellect`, using `intellect` on the `Y axis` each time to make it easier to compare to the example answers below (#2). Compare the pattern of dots in each scatterplot to the *r*-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson's *r* (i.e., linearity, no outliers)?
+
+### Example answers to optional activities
+
+___
+
+1. Intellect ratings were not significantly correlated with the age of the candidates, *r* = .05, *p* > .05.
+
+2. You should have created four scatterplots. They are included below as well as some notes about each. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.69.png')
+```
+For the correlation between `age` and `intellect`, we found *r* was very close to 0, at .05. This is reflected in the pattern of dots, which are spread fairly uniformly across the entire plot. There are no concerns with violating the assumption of linearity on this plot. There are also no outliers.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.70.png')
+```
+For the correlation between `time` and `intellect`, we found *r* was also close to 0 but negative, at -.07. It is harder to link the *r* with the plot in this case because of the two dots far to the right in the plot. These might be outliers and could be investigated further, but how to do so is not covered in PSYC 292. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.71.png')
+```
+The correlation between `wordcount` and `intellect` was *r* = -.24. This is a fairly weak correlation but if you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. The dot to the far right might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.72.png')
+```
+For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
+
 
 ### Homework
 
 1. Look at participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report *r* and whether the correlation is significant or non-signifcant?
 
 2. Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (Hint: Use the data dictionary to figure out how participants’ main activities were coded.). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?
-
 
 
 ### Practice Problems

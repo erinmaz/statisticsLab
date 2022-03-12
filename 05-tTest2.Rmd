@@ -394,7 +394,7 @@ knitr::include_graphics('img/7.4.22.png')
 
 **Note**: It's always a good idea to compare your graph to the descriptive statistics to make sure it looks right. 
 
-### Optional exercises (good practice and review for the take-home final exam)
+### Optional activities
 
 ---
 
@@ -426,9 +426,7 @@ Click <span style="color:blue">Continue</span> and then <span style="color:blue"
 knitr::include_graphics('img/7.4.25.png')
 ```
 
-Practice writing a sentence describing the results, and then compare it to #1 in the "Example answers to practice problems" below.
-
-#### Review: Correlation
+Practice writing a sentence describing the results, and then compare it to #1 in the "Example answers to optional activities" below.
 
 Let's say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent *t*-test. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlation</span>, then <span style="color:blue">Bivariate...</span> and move `age` and `intellect` into the `Variables` box:
 
@@ -513,7 +511,7 @@ For `impression` and `intellect`, a correlation of *r* = .83 was observed. In th
 
 
 <div class="marginnote">
-This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 7, Section 7.6, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-7-t-test-independent-sample.html#spss-7), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
+This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 7, Section 7.6, SPSS](https://www.crumplab.com/statisticsLab/lab-7-t-test-independent-sample.html#spss-7), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
 </div>
 
 In this lab, we will use jamovi to:
@@ -521,10 +519,9 @@ In this lab, we will use jamovi to:
 1. Perform an independent-samples *t*-test
 2. Graph the data
 
-### Experiment Background
+### Pre-lab reading and tasks
 
----
-
+#### Experiment Background
 
 Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).
 
@@ -532,16 +529,16 @@ To conduct this study, the authors randomly assigned 39 professional recruiters 
 
 So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, and we can find out.
 
-### Performing an independent-samples *t*-test
 
----
+#### Download and open the data
 
-
-First, let's open the relevant data file in jamovi. The data set is available [here](INCLUDE A LINK). The file we are working with in this lesson is called "SchroederEpley2015_Study4_data.sav". Your data should look like this:
+The dataset described above can be downloaded [here](INCLUDE A LINK). IMPORT OR OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
 ```
+
+### Performing an independent-samples *t*-test
 
 For our analysis, we will focus on only one of the three measures mentioned above: `intellect`. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch). 
 
@@ -603,8 +600,7 @@ In the case of an independent-samples *t*-test, one assumption made is that ther
 knitr::include_graphics('img/7.4.44.png')
 ```
 
-When interpreting the second output table, or Shapiro-Wilk test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, which is often the conventional .05, then your data are **not** normally distributed and you should request <span style="color:blue"> Welch’s</span> *t*-test. If the *p*-value for the test is larger than alpha, then you can use the Student’s *t*-test that is automatically generated when you request an independent *t*-test. 
-
+When interpreting the second output table, or Shapiro-Wilk test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, which is often the conventional .05, then your data are **not** normally distributed. Is this a problem? It depends. Remember, the normality assumption of the *t*-test refers to the sampling distribution, not the distribution of the sample. If your sample size is reasonably large (N >= 30), you can usually rely on the central limit theorem to assuming your **sampling distribution** is normal. 
 
 When interpreting the third output table, or Levene's test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, then your variances are **not** equal and you should request <span style="color:blue"> Welch’s</span> *t*-test. If the *p*-value for Levene's test is larger than alpha, then you can use the Student’s *t*-test that is automatically generated when you request an independent *t*-test. 
 
@@ -622,11 +618,9 @@ In this example, the *p*-value associated with the Shapiro-Wilk test is .12, whi
 
 What does the *t*-test tell us about the data? We can put our finding into words to clarify:
 
-Recruiter ratings for audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than ratings for transcripts of pitches (*M* = 4.65, *SD* = 1.91). This difference is significant, *t*(33.4) = -3.48, *p* < .05, 95% *CI* [-1.85,-0.39], *d* = -1.12.
+Recruiter ratings for audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than ratings for transcripts of pitches (*M* = 4.65, *SD* = 1.91). This difference is significant, *t*(33.4) = -3.48, *p* < .05, *d* = -1.12 (95% *CI* [-1.85,-0.39]).
 
-
-
-**Some formatting guidelines for writing results sections:**
+### Some APA formatting reminders for writing results sections
 
 All of the numbers are rounded to two decimal places, but if your *p*-value was .0001, it would be okay to write *p* < .001. 
 
@@ -635,9 +629,6 @@ Italicize symbols such as *p* and *t*.
 There are spaces on either side of =, >, or < symbols. 
 
 ### Graphing your data
-
----
-
 
 `CONDITION` in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>.
 
@@ -664,12 +655,10 @@ knitr::include_graphics('img/7.4.50.png')
 ```
 
 **Note**: It's always a good idea to compare your graph to the descriptive statistics to make sure it looks right. 
-**Another Important Note**: You cannot simply copy and paste the graph from jamovi into a paper that requires APA-formatting. Be sure to use/model the other resources provided to you so as to create properly formatted graphs for your course assignments.
+**Another Important Note**: Unfortunately, you cannot simply copy and paste the graph from jamovi into a paper that requires APA formatting. Be sure to use/model the other resources provided to you so as to create properly formatted graphs for your course assignments.
 
 
-### Optional exercises (good practice and review for the take-home final exam)
-
----
+### Optional exercises 
 
 At this point, you've covered everything you need to successfully complete the homework assignment below. However, there are a number of different analyses we can practice with this dataset. This section walks you through some optional analyses to consolidate what we've already covered as well as add breadth. If you're running out of time, skip down to the Homework now. You can return to these exercises later (i.e., when studying).
 
@@ -739,105 +728,18 @@ Remember to click <span style="color:blue">Descriptives</span>, <span style="col
 knitr::include_graphics('img/7.4.60.png')
 ```
 
-Practice writing a sentence describing the results, and then compare it to #1 in the "Example answers to practice problems" below.
+Practice writing a sentence describing the results, and then compare it to #1 in the "Example answers to optional activities" below.
 
-#### Review: Correlation
 
-Let's say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent *t*-test. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.61.png')
-```
-
-Then, move `age` and `intellect` into the untitled box at the right of the pop-up screeen:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.62.png')
-```
-
-In the Results panel, the output table should look as follows:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.63.png')
-```
-
-Write a sentence describing the results of this test. Compare your answer to #2 in the "Example answers to practice problems" below. 
-
-Now, assume you are in the mood to do some exploratory data analysis. We can run multiple bivariate correlations at the same time in the same dialog. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span> again. To the untitled variables box at the right, add `age`, `time`, `wordcount`, `intellect`,  and `impression`:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.64.png')
-```
-
-In the Results panel, the output table contains the *r*- and *p*-values for each possible pair of the five variables:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.65.png')
-```
-
-By default, jamovi does not flag significant correlations. Be sure to review the *p*-values careful and compare them to the alpha level you set.  How many significant correlations do you identify in the correlation matrix?
-
-If you would like jamovi to flag significant correlations, you can click <span style="color:blue">Flag significant correlations</span> under “Additional options”. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.66.png')
-```
-
-Under the correlation matrix that appears in the Results panel, you will notice a note. If the *p*-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the *p*-value is less than .01, SPSS will flag it as ** (significant at the .01 level); and if the *p*-value is less than .001, SPSS will flag it as *** (significant at the .001 level).
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.67.png')
-```
-
-Let's pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot...</span>. Move `intellect` into the <span style="color:blue">Y-Axis</span> and `age` into the <span style="color:blue">X-Axis</span>. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.68.png')
-```
-
-These commands should produce a scatterplot in the Results panel. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.69.png')
-```
-
-Repeat for all correlations with `intellect`, using `intellect` on the `Y axis` each time to make it easier to compare to the example answers below (#3). Compare the pattern of dots in each scatterplot to the *r*-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson's *r* (i.e., linearity, no outliers)?
-
-### Example answers to practice problems
-
-___
+#### Example answers to optional activities
 
 1. Intellect ratings for candidates aged 29 or younger (*M* = 5.33, *SD* = 1.94) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.88, *SD* = 2.28), as demonstrated by an independent *t*-test [*t*(29.7) = -0.74, *p* > .05].
 **Note**: If you included Cohen's *d*, the value was -0.26, but we often don't report effect size if the effect was not significant. 
 
-2. Intellect ratings were not significantly correlated with the age of the candidates, *r* = .05, *p* > .05.
-
-3. You should have created four scatterplots. They are included below as well as some notes about each. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.69.png')
-```
-For the correlation between `age` and `intellect`, we found *r* was very close to 0, at .05. This is reflected in the pattern of dots, which are spread fairly uniformly across the entire plot. There are no concerns with violating the assumption of linearity on this plot. There are also no outliers.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.70.png')
-```
-For the correlation between `time` and `intellect`, we found *r* was also close to 0 but negative, at -.07. It is harder to link the *r* with the plot in this case because of the two dots far to the right in the plot. These might be outliers and could be investigated further, but how to do so is not covered in PSYC 292. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.71.png')
-```
-The correlation between `wordcount` and `intellect` was *r* = -.24. This is a fairly weak correlation but if you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. The dot to the far right might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.72.png')
-```
-For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 ### Lab Homework #7
 
-___
-1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are high consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to low consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s d). 
+1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are high consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to low consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). 
 
 2. Using APA format, graph the data. 
 

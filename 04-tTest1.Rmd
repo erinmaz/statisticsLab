@@ -890,3 +890,5 @@ See Moodle.
 
 3. Consider the sleep duration example. Use JAMOVI to perform a directional test, such that the alternative hypothesis is that sleep duration at the beginning of term is longer than sleep duration at midterms. Compare your results to the non-directional test. What are the similarities and what are the differences?
 
+4. Does it matter in what order you input the variables for the paired *t*-test? Why or why not? If you aren't sure, given it a try!
+

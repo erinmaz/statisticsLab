@@ -507,7 +507,7 @@ knitr::include_graphics('img/7.4.34.png')
 For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 
-## JAMOVI
+## JAMOVI - Week 9 - March 22 & 23
 
 
 <div class="marginnote">
@@ -532,7 +532,7 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 
 #### Download and open the data
 
-The dataset described above can be downloaded [here](INCLUDE A LINK). IMPORT OR OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
+The dataset described above can be downloaded [here](https://moodle.stfx.ca/mod/resource/view.php?id=843154). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
@@ -592,7 +592,7 @@ In the Results panel, jamovi will produce an output tables as follows:
 knitr::include_graphics('img/7.4.43.png')
 ```
 
-The *t*-test output share some similarities with the paired *t*-test output we saw in Chapter 6 of this lab manual. The Independent Samples T-Test table contains a t-statistic obtained, the degrees of freedom, and a *p*-value. Much like we learned when discussing the paired-samples *t*-test output, we can click on the Indpendent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch's</span>, and some Assumption Checks. 
+The *t*-test output share some similarities with the paired *t*-test output we saw in Chapter 4 of this lab manual. The Independent Samples T-Test table contains a *t*-statistic obtained, the degrees of freedom, and a *p*-value. Much like we learned when discussing the paired-samples *t*-test output, we can click on the Independent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch's</span>, and some Assumption Checks. 
 
 In the case of an independent-samples *t*-test, one assumption made is that there is equality of variances. The groups being compared are assumed to  have roughly equal variances. This test is called the Levene's test. Simply click on <span style="color:blue">Homogeneity test</span>, and the table showing the results will appear between the table depicting the independent-samples *t*-test and the Descriptives table. Conveniently, in jamovi, you can request another test to determine if the assumption of normality is also upheld. This test is called the Shapiro-Wilk test. It, too, is conveniently requested by clicking on <span style="color:blue">Normality test</span>. The results will appear right after the Independent Samples T-Test table.
 

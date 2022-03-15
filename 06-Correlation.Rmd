@@ -519,7 +519,7 @@ ___
 ## JAMOVI
 
 <div class="marginnote">
-This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-3-correlation.html#spss-3), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+Some of this section is copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#spss-3), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
 </div>
 
 
@@ -530,94 +530,17 @@ In this lab, we will use jamovi to calculate the correlation coefficient. We wil
 3. Produce a scatterplot
 4. Applying a filter to the data set for further analysis
 
-Let's first begin with a short data set we will enter into a new jamovi data spreadsheet. Remember, in order to calculate a correlation, you need to have bivariate data; that is, you must have at least two variables, x and y. You can have more than two variables, in which case we can calculate a correlation matrix, as indicated in the section that follows. 
+### Pre-lab tasks
 
 ### Correlation Coefficient for Bivariate Data: Two Variables
 
----
-
-Let's use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9} {y= 6, 5, 8, 7, 9, 7, 8, 10, 13}. Notice there are two variables, `x` and `y`. Enter these into jamovi, name them appropriately, and be sure to indicate, in the <span style="color:blue">Analyze</span>, that these data are measured on a continuous scale. (REMEMBER: One assumption of Pearson’s correlation is that the variables are measured on **at least an interval scale**. That means you should not use Pearson’s correlation with variables that are measured on an ordinal scale. Spearman’s correlation may be helpful if you have variables measured on an ordinal scale.)
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.11.png')
-```
-
-Remember to use the upward facing arrow or the <span style="color:blue">Settings</span> button to close the <span style="color:blue">Analyze</span> pop-up window.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.11.png')
-```
-
-Next, click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.12.png')
-```
-
-In the pop-up window, you will select variables to correlate. Since we have two (`x` and `y`) move them both from the left-hand field to the right-hand field by highlighting them and using the arrow. Notice that in this window, <span style="color:blue">Pearson</span> is selected. This is the default setting (and the one we want), but notice there are other ways to calculate the correlation between variables. We will stick with Pearson's correlation coefficient for now. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.13.png')
-```
-
-In the Results panel on the left, jamovi will produce an output table containing the correlation coefficient requested. (If you are familiar with SPSS, you may notice that the jamovi table is unlike the SPSS table in that the jamovi correlation matrix does not have the redundant information in the top and bottom triangles of the matrix; jamovi gives us only the correlation between x and y in the bottom portion of the table. Note: Any variable correlated with itself will result in an *r* of 1.) The Pearson *r* correlation between variables x and y is .765.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.14.png')
-```
 
 
 ### Correlation Matrix
 
----
-
-
-In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you need not re-run the correlations in jamovi repeatedly. You can, in fact, enter multiple variables into the correlation window and obtain a correlation matrix--a table showing every possible bivariate correlation amongst a group of variables.
-
-To illustrate how this is done, let's add a new variable to our existing spreadsheet: variable `z`, {z= 1, 4, 2, 9, 5, 7, 12, 5, 3}.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.15.png')
-```
-
-From here, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.16.png')
-```
-
-Next, you will encounter the window that asks you to indicate which variables to correlate. Select all three variables (`x`, `y`, and `z`) by highlighting them, and move them to the right-hand field using the arrow. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.17.png')
-```
-
-jamovi will produce an output table in the Results panel to the right that contains correlations for every pairing of our three variables.  You should see three correlation coefficients and three associated *p*-values.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.18.png')
-```
-
-According to this output:
-
-1. The correlation coefficient between variables `x` and `y` is .765; that is, Pearson’s *r* for variables `x` and `y` is .765.
-2. The correlation coefficient between variables `x` and `z` is .294; Pearson’s *r* for `x` and `z` is .294.
-3. The correlation coefficient between variables `y` and `z` is -.080; Pearson’s *r* for `y` and `z` is -.080.
-
-To further our understanding of these correlation coefficients, we should also look to the *p*-values associated with each coefficient to decide if the correlation is significant or non-significant.
-
-1. Pearson’s *r* for variables `x` and `y` is .765. The *p*-value is .02 which is less than a conventional alpha level of .05, so we would consider this result to be significant. We might write: 
-A Pearson’s correlation was performed, and variables `x` and `y` were found to be significantly correlated, *r* = .77, *p* = .02.
-2. Pearson’s *r* for `x` and `z` is .294. The *p*-value is .44 which is greater than a conventional alpha level of .05, so we would consider this result to be non-significant. We might write: 
-A Pearson’s correlation was performed, and no significant correlation was found between variables `x` and `z`, *r* = .29, *p* > .05.
-3. Pearson’s *r* for `y` and `z` is -.080. The *p*-value is .84 which is greater than a conventional alpha level of .05, so we would consider this result to be non-significant. We might write: 
-A Pearson’s correlation was performed, and no significant correlation was found between variables `y` and `z`, *r* = -.08, *p* > .05.
-
+In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you can enter multiple variables into the correlation window and obtain a correlation matrix. The correlation matrix is a table showing every possible bivariate correlation amongst a group of variables.
 
 ### Correlation and Scatterplots
-
----
-
 
 To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let's use data from [EngageNS](include link). 
 
@@ -635,7 +558,7 @@ Next, a window will appear asking for the variables to be correlated. Use the se
 knitr::include_graphics('img/3.4.20.png')
 ```
 
-In the Results panel, jamovi will produce a correlation table.
+In the Results panel, jamovi will produce a correlation matrix.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.21.png')
@@ -693,8 +616,6 @@ This line of best fit on the scatterplot is barely visible. Typically, the dista
 
 ### Applying a Filter
 
----
-
 What if we asked the question: For residents of the Antigonish and Guysborough regions only, does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`?
 
 Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the `REGION` is equal to 4. To achieve this, we're going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson *r* for only Antigonish and Guysborough, and not for other regions. 
@@ -737,7 +658,7 @@ Again, you may want to inspect the scatterplot to get a visual representation of
 
 ### Removing the Filter
 
-It is VERY important to remember that once you have applied a filter, every analysis will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must delete the filter. To do this, you can highlight the column showing the filter in the spreadsheet, go to <span style="color:blue">Data</span>, and then <span style="color:blue">Delete</span>. You will be prompted with a question to verify that you want to delete the filter. Click <span style="color:blue">Yes</span>.
+It is **very** important to remember that once you have applied a filter, every analysis will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must delete the filter. To do this, you can highlight the column showing the filter in the spreadsheet, go to <span style="color:blue">Data</span>, and then <span style="color:blue">Delete</span>. You will be prompted with a question to verify that you want to delete the filter. Click <span style="color:blue">Yes</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/3.4.35.png')
@@ -834,9 +755,9 @@ For `impression` and `intellect`, a correlation of *r* = .83 was observed. In th
 
 ### Homework
 
-1. Look at participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report *r* and whether the correlation is significant or non-signifcant?
+1. Consider participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report *r* and whether the correlation is significant or non-significant.
 
-2. Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (Hint: Use the data dictionary to figure out how participants’ main activities were coded.). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?
+2. Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (**Hint**: Use the data dictionary to figure out how participants’ main activities were coded). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?
 
 
 ### Practice Problems
@@ -845,7 +766,7 @@ ___
 
 Use the EngageNS data to answer the following questions:
 
-1. Construct a scatterplot using FRIENDS on the x-axis and SOC_FRND on the y-axis to depict the results you found for the last homework question.
+1. Construct a scatterplot using R_FRIENDS on the x-axis and SOC_FRND on the y-axis to depict the results you found for the last homework question.
 
 2. Can you run a Pearson’s correlation analysis on the following pairs of variables? Why or why not?
 a) SEX and SLEEP?
@@ -866,7 +787,7 @@ There are spaces on either side of =, >, or < symbols.
 Do the dots closely follow the line of best fit?
 
 <div class="marginnote">
-The follwoing three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
+The following three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
 </div>
 
 5. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.

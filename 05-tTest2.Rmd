@@ -518,8 +518,13 @@ In this lab, we will use jamovi to:
 
 1. Perform an independent-samples *t*-test
 2. Graph the data
+3. Report the results of an independent-samples *t*-test
 
 ### Pre-lab reading and tasks
+
+1. Read the following section about an experiment performed by Schroeder and Epley.
+2. Download the data set (instructions are below).
+3. Have the data set opened in JAMOVI before lab begins.
 
 #### Experiment Background
 
@@ -527,7 +532,7 @@ Schroeder and Epley (2015) conducted an experiment to determine whether a person
 
 To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness. These ratings were then averaged to create a single measure of the job candidate’s intellect, with higher scores indicating the recruiters rated the candidates as higher in intellect. The participants also rated their overall impression of the job candidate (a composite of two items measuring positive and negative impressions). Finally, the participants indicated how likely they would be to recommend hiring the job candidate (0 - not at all likely, 10 - extremely likely).
 
-So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, and we can find out.
+So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts or when the heard the applicants speak? We have the data, and we can find out.
 
 
 #### Download and open the data
@@ -542,13 +547,13 @@ knitr::include_graphics('img/7.4.35.png')
 
 For our analysis, we will focus on only one of the three measures mentioned above: `intellect`. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch). 
 
-Before we run the *t*-test, let's review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Settings</span> button, available at the top of our jamovi spreadsheet window. Check `CONDITION`. 
+Before we run the *t*-test, let's review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Setup</span> button, available at the top of our jamovi spreadsheet window. Check `CONDITION`. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.36.png')
 ```
 
-When you check `CONDITION`, notice that this <span style="color:blue">Settings</span> button has revealed the values used to signify the Audio and Transcript groups. Take note that these groups are signified by 0s and 1s. This coding helps the program to run our *t*-test. Keep in mind that whether we look at the codes or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change. 
+When you check `CONDITION`, notice that this <span style="color:blue">Setup</span> button has revealed the values used to signify the Audio and Transcript groups. Take note that these groups are signified by 0s and 1s. This coding helps the program to run our *t*-test. Keep in mind that whether we look at the codes or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change. 
 
 Remember to check `intellect` while considering the information about the study (the context). Is `intellect` a variable measured on a continuous scale? Does it get represented by decimal-type data? (*Hint: Be sure to carefully read the names of the variables during these exercises. Some variable names are similar and can lead to confusion when you select the variables to be included in your analysis.*)
 
@@ -556,7 +561,7 @@ Remember to check `intellect` while considering the information about the study 
 knitr::include_graphics('img/7.4.37.png')
 ```
 
-Remember to press the <span style="color:blue">Settings</span> button again or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:
+Remember to press the <span style="color:blue">Setup</span> button again or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.38.png')
@@ -618,15 +623,22 @@ In this example, the *p*-value associated with the Shapiro-Wilk test is .12, whi
 
 What does the *t*-test tell us about the data? We can put our finding into words to clarify:
 
-Recruiter ratings for audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than ratings for transcripts of pitches (*M* = 4.65, *SD* = 1.91). This difference is significant, *t*(33.4) = -3.48, *p* < .05, *d* = -1.12 (95% *CI* [-1.85,-0.39]).
+Recruiter ratings of candidates' intellect when the recruiters heard audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than their ratings of candidates' intellect when they read transcripts of pitches (*M* = 4.65, *SD* = 1.91). An independent *t*-test revealed that this difference is significant, *t*(33.4) = -3.48, *p* < .05, *d* = -1.12 (95% CI [-1.85,-0.39]).
 
 ### Some APA formatting reminders for writing results sections
 
-All of the numbers are rounded to two decimal places, but if your *p*-value was .0001, it would be okay to write *p* < .001. 
+1. Always note the name of the test you performed (in this case, independent *t*-test, or independent-samples *t*-test) and whether the result is significant or non-significant (*Note: We do not use the word insignificant.*). 
 
-Italicize symbols such as *p* and *t*.
+2. We usually round to two decimal places, except for *p*-values. If your *p*-value was .0001, it would be okay to write *p* = .0001 or *p* < .001.
 
-There are spaces on either side of =, >, or < symbols. 
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .05 not *p* < 0.05).
+
+<div class="marginnote">
+Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
+</div>
+
+4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(33.4) = -3.48 **not** *t*(33.4)=-3.48. There are spaces on either side of =, >, or < symbols.
+
 
 ### Graphing your data
 
@@ -739,26 +751,24 @@ Practice writing a sentence describing the results, and then compare it to #1 in
 
 ### Lab Homework #7
 
-1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are high consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to low consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). 
 
-2. Using APA format, graph the data. 
-
+See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-12).
 
 
 ### Practice Problems
 
-1. Use the same data file from this lab’s tutorial to test whether `intellect` ratings were different between the `gender` categories (use alpha = .05). Which `gender` category had higher `intellect` ratings? Was this difference significant? What was the effect size? Report your result in a sentence or two, using the example and guidelines above to help with the format and structure. Graph this result (including SEM error bars) as a bar graph. 
+1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are higher consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to lower consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). Graph the results.
 
-2. Using the EngageNS data, run an independent samples *t*-test to examine whether people who volunteer in their community (variable name=VOLUNTEER; 1=yes, 2=no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Using APA format, graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Test whether there is a correlation between BELONGING and CIW_WELLB).  
+2. Use the same data file from this lab’s tutorial to test whether `intellect` ratings were different between the `gender` categories (use alpha = .05). Which `gender` category had higher `intellect` ratings? Was this difference significant? What was the effect size? Report your result in a sentence or two, using the example and guidelines above to help with the format and structure. Graph this result (including SEM error bars) as a bar graph. 
 
-3. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1=yes, 2=no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Using APA format, graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between DISCRIM1, LIFESAT, and SECURITY?
+3. Using the EngageNS data, run an independent-samples *t*-test to examine whether people who volunteer in their community (variable name=VOLUNTEER; 1=yes, 2=no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Test whether there is a correlation between BELONGING and CIW_WELLB).  
 
-4. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who have internet access at home (INTERNET; 1=yes, 2=no) report different levels of a) work-life balance (WL_BALANCE), b) reading books for pleasure (HM_READ), and c) playing board games/cards with family/friends (HM_CARDS) than those who do not have internet access at home.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Using APA format, graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between WL_BALANCE, HM_READ, and HM_CARDS?
+4. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1=yes, 2=no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between DISCRIM1, LIFESAT, and SECURITY?
 
-5. Using the data collected in PSYC 291, test whether there are differences in alcohol consumption at both Time 1 and Time 2 between students who live on campus and those who live off campus.  Note that you will have to conduct two independent samples *t*-tests – one for Time 1 and one for Time 2.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Using APA format, graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Is there a correlation between TIME 1 and TIME 2 alcohol consumption?
+5. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who have internet access at home (INTERNET; 1=yes, 2=no) report different levels of a) work-life balance (WL_BALANCE), b) reading books for pleasure (HM_READ), and c) playing board games/cards with family/friends (HM_CARDS) than those who do not have internet access at home.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  
 
-6. Using the data collected in PSYC 291, test whether those who have family to visit at least twice a month experience less anxiety than those who do not have family they can visit.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Using APA format, graph the data.  
+ 
 
-7. Using the data collected in PSYC 291, perform a median split on the Time 1 total self-care variable.  Do people who engage in high levels of self-care experience different levels of perceived stress at Time 2 (i.e., during midterms) than those who engage in low levels of self-care?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s d). Using APA format, graph the data. 
+ 
 
-8. TBD - question on the experiment 
+

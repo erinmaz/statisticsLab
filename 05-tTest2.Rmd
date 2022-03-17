@@ -537,7 +537,7 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 
 #### Download and open the data
 
-The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=26030). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
+The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=26030#section-12). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
@@ -755,7 +755,6 @@ Practice writing a sentence describing the results, and then compare it to #1 in
 or if you reported the statistics adding the Welch's adjustment...
 
 Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test with Welch's adjustment [*t*(32) = 0.19, *p* > .05].
-**Note**: If you included Cohen's *d*, the value was 0.07, but we often don't report effect size if the effect was not significant. 
 
 
 

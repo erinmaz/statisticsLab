@@ -537,7 +537,7 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 
 #### Download and open the data
 
-The dataset described above can be downloaded [here](https://moodle.stfx.ca/mod/resource/view.php?id=843154). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
+The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=26030). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
@@ -686,7 +686,7 @@ knitr::include_graphics('img/7.4.51.png')
 
 We can use the median of 29 as the cut point. We'll be running an independent *t*-test to determine whether there is a significant difference in `intellect` between candidates under 29 years old and over 29 years old. 
 
-First, we will need to transform the `age` variable. Click <span style="color:blue">Data</span>, then <span style="color:blue">Add</span>, and then either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>. Notice that when you use <span style="color:blue">Insert</span>, the new, transformed variable is added to the left of whichever variable you have highlighted or were last working in (so I highlighted `gender`). When you use <span style="color:blue">Append</span>, the new, transformed variable is added to the far right of all the variables. 
+First, we will need to transform the `age` variable. Click <span style="color:blue">Data</span>, then <span style="color:blue">Add</span>, and then either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>. Notice that when you use <span style="color:blue">Insert</span>, the new, transformed variable is added to the left of whichever variable you have highlighted or were last working in (so I highlighted `time`). When you use <span style="color:blue">Append</span>, the new, transformed variable is added to the far right of all the variables. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.52.png')
@@ -704,7 +704,7 @@ Then, create a rule for jamovi to follow to populate the new variable column. To
 knitr::include_graphics('img/7.4.54.png')
 ```
 
-A new panel will pop up and we will enter our transform rule here. First, we should name the transformation; we might use `AgeMedSplit` for the transformation name. Next, we must write the recoding rule. Click on <span style="color:blue">Add recode condition</span>.  
+A new panel will pop up and we will enter our transform rule here. First, we should name the transformation; we might use "AgeMedSplit" for the transformation name. Next, we must write the recoding rule. Click on <span style="color:blue">Add recode condition</span>.  
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.55.png')
@@ -714,6 +714,10 @@ Since our median is 29, we might show that if our source variable has data that 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.56.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.56B.png')
 ```
 
 Click the downward facing arrow to close the transformation window.
@@ -728,7 +732,7 @@ Click the upward facing arrow to close the transformed variable window.
 knitr::include_graphics('img/7.4.58.png')
 ```
 
-Having split the data by age group, we can now run the *t*-test on `intellect`. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move `intellect` into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable `AgeGroups_YO`. 
+Having split the data by age group, we can now run the *t*-test on `intellect`. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move `intellect` into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable `age_category`. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.59.png')
@@ -745,8 +749,14 @@ Practice writing a sentence describing the results, and then compare it to #1 in
 
 #### Example answers to optional activities
 
-1. Intellect ratings for candidates aged 29 or younger (*M* = 5.33, *SD* = 1.94) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.88, *SD* = 2.28), as demonstrated by an independent *t*-test [*t*(29.7) = -0.74, *p* > .05].
-**Note**: If you included Cohen's *d*, the value was -0.26, but we often don't report effect size if the effect was not significant. 
+1. Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test [*t*(32) = 0.19, *p* > .05].
+**Note**: If you included Cohen's *d*, the value was 0.07, but we often don't report effect size if the effect was not significant. 
+
+or if you reported the statistics adding the Welch's adjustment...
+
+Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test with Welch's adjustment [*t*(32) = 0.19, *p* > .05].
+**Note**: If you included Cohen's *d*, the value was 0.07, but we often don't report effect size if the effect was not significant. 
+
 
 
 ### Lab Homework #7
@@ -759,16 +769,9 @@ See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-12).
 
 1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are higher consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to lower consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). Graph the results.
 
-2. Use the same data file from this lab’s tutorial to test whether `intellect` ratings were different between the `gender` categories (use alpha = .05). Which `gender` category had higher `intellect` ratings? Was this difference significant? What was the effect size? Report your result in a sentence or two, using the example and guidelines above to help with the format and structure. Graph this result (including SEM error bars) as a bar graph. 
+2. Using the EngageNS data, run an independent-samples *t*-test to examine whether people who volunteer in their community (variable name = VOLUNTEER; 1 = yes, 2 = no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).    
 
-3. Using the EngageNS data, run an independent-samples *t*-test to examine whether people who volunteer in their community (variable name=VOLUNTEER; 1=yes, 2=no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Test whether there is a correlation between BELONGING and CIW_WELLB).  
+3. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1 = yes, 2 = no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between DISCRIM1, LIFESAT, and SECURITY?
 
-4. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1=yes, 2=no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between DISCRIM1, LIFESAT, and SECURITY?
-
-5. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who have internet access at home (INTERNET; 1=yes, 2=no) report different levels of a) work-life balance (WL_BALANCE), b) reading books for pleasure (HM_READ), and c) playing board games/cards with family/friends (HM_CARDS) than those who do not have internet access at home.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s d). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  
-
- 
-
- 
-
+4. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who have internet access at home (INTERNET; 1 = yes, 2 = no) report different levels of a) work-life balance (WL_BALANCE), b) reading books for pleasure (HM_READ), and c) playing board games/cards with family/friends (HM_CARDS) than those who do not have internet access at home.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  
 

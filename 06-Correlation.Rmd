@@ -516,7 +516,7 @@ ___
 3. Which country (or countries) have seen a more consistent and strong increase in log GDP over time? Which country (or countries) have seen a decrease over time?
 
 
-## JAMOVI
+## JAMOVI - Week 10 - March 29 & 30
 
 <div class="marginnote">
 Some of this section is copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#spss-3), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
@@ -547,7 +547,7 @@ Analyses -> Regression -> Correlation Matrix:
 knitr::include_graphics('img/cormenu.png')
 ```
 
-Move your variables of interest, T1_sleep_quality_composite and T1_anxiety, to the right box:
+Move your variables of interest, T1_sleep_quality_composite and T1_anxiety_composite, to the right box:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/corvars.png')
@@ -559,11 +559,7 @@ An output table will be generated in the results panel:
 knitr::include_graphics('img/coroutput.png')
 ```
 
-The table indicates that Pearson's *r* between the two variables is -0.425, with a *p*-value of less than .001. You could write that result in APA format as follows:
-
->There was significant correlation between sleep quality and anxiety at the beginning of midterms, Pearson's *r* = .43, *p* < .001.
-
-Note that we did not use a leading zero for *r* and we rounded to two decimal places.
+The table indicates that Pearson's *r* between the two variables is -0.425, with a *p*-value of less than .001. This is a negative correlation: as one variable goes up, the other goes down.
 
 ### Correlation Matrix
 
@@ -580,6 +576,32 @@ Now the output panel has three sets of results:
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/coroutput2.png')
 ```
+
+Note that some of the correlations are negative, and some are positive. Some are significant (with *p* < .05) and some are not.
+
+### APA format reporting of a correlation
+
+Recall the output for the correlation between T1_sleep_quality_composite and T1_anxiety_composite:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/coroutput.png')
+```
+
+You could write the results in APA format as follows:
+
+>There was significant correlation between sleep quality and anxiety at the beginning of midterms, Pearson's *r* = -.43, *p* < .001.
+
+Note that we did not use a leading zero for *r* and we rounded to two decimal places.
+
+Now consider the example of the correlation between T1_sleep_hours and T1_anxiety_composite:
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/coroutput2.png')
+```
+
+To report this result in APA format, you would write something such as:
+
+>There was not a significant correlation between sleep duration and anxiety at the beginning of midterms, Pearson's *r* = .13, *p* > .05.
+
 
 ### Correlation and Scatterplots
 
@@ -598,98 +620,75 @@ These are handy for having a quick look, but are kind of small.
 
 #### Adding the Scatterplot module to jamovi
 
-Before you can request a larger scatterplot in jamovi, you must add Scatterplot as a module. To do so, click on the addition sign which is white with a blue trim that has the word “Modules” under the sign. Click <span style="color:blue">jamovi library</span>. Under the “Available” tab, you should see a module called <span style="color:blue">scatr</span>. Click to <span style="color:blue">INSTALL</span> it. When it is installed, it will appear in your <span style="color:blue">Exploration</span> menu.
+Before you can request a larger scatterplot in jamovi, you must add Scatterplot as a module. To do so, click on the addition sign which is white with a blue trim that has the word “Modules” underneath. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/modulesplus.png')
+```
+
+Click <span style="color:blue">jamovi library</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/jamovilibrary.png')
+```
+
+Under the “Available” tab, you should see a module called <span style="color:blue">scatr</span>. Click to <span style="color:blue">INSTALL</span> it. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/modules.png')
+```
+
+When it is installed, it will appear in your <span style="color:blue">Exploration</span> menu.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/scatr.png')
+```
 
 #### Getting a visual of the correlation
 
-Let's continue to create the scatterplot for this data. 
+Let's continue to create the scatterplot for this data, starting with the T1_sleep_quality_composite and T1_anxiety_composite variables.
 
 Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.22.png')
+knitr::include_graphics('img/scatr2.png')
 ```
 
-In the next window, choose <span style="color:blue">Simple</span>, then <span style="color:blue">Define</span>:
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.23.png')
-```
-
-Next, move your two variables (`WORKHR` and `HM_CGAMES`) into the x-axis and y-axis fields. Again, it does not matter which variable goes where, for now. (Remember to use the search function to speed up your search for the variables to include.)
+Move T1_sleep_quality_composite into the X-Axis box and T1_anxiety_composite into the Y-Axis box:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.24.png')
+knitr::include_graphics('img/scattersetup.png')
 ```
 
 In the Results panel, jamovi will produce a scatterplot of your data, as follows:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.25.png')
+knitr::include_graphics('img/scatterplot1.png')
 ```
 
-You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best-fitting line as it minimizes the distance from it to all the data. To include the line of best fit, click on <span style="color:blue">Linear</span> under the Regression Line heading. 
+At this point, it would be equally correct to plot T1_anxiety_composite on the X-Axis and T1_sleep_quality_composite on the Y-Axis. Note that you get a different graph:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.26.png')
+knitr::include_graphics('img/scatterplot2.png')
+```
+
+Let's continue with the second scatterplot, with T1_anxiety_composite on the X-Axis and T1_sleep_quality_composite on the Y-Axis. You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best fit line because it minimizes the distance between the line and the data points. To include the line of best fit, click on <span style="color:blue">Linear</span> under the Regression Line heading. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/linear.png')
 ```
 
 You will find that the graph in your Results panel has now updated and has a line drawn on it.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.29.png')
+knitr::include_graphics('img/scatterplot_line.png')
 ```
 
-This line of best fit on the scatterplot is barely visible. Typically, the distance between the line and the data points is indicative of the strength of the correlation coefficient; they are directly related. For example, if the data were more clustered or tighter to the line, the correlation would be stronger. If the data points are more spread out and far from the line, the correlation is weaker. In this case, although there are many data points clustered around the line, we also see there are a number of data points that are quite far from the line. This is a moderate correlation. We also see that this negative correlation is depicted by a line that falls to the left (i.e., a line with a negative slope).
+The best fit line goes from the top left to the bottom right; it has a negative slope. This is consistent with the negative Pearson's *r* we found in the correlation matrix. 
 
-### Applying a Filter
 
-What if we asked the question: For residents of the Antigonish and Guysborough regions only, does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`?
 
-Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the `REGION` is equal to 4. To achieve this, we're going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson *r* for only Antigonish and Guysborough, and not for other regions. 
 
-In order to filter the data, we go to the top menu and choose <span style="color:blue">Data</span> and then <span style="color:blue">Filter</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.30.png')
-```
-
-In the next window, you must set up the filter; indicate which cases will be used. Under “Filter 1,” click on the formula editor, the <span style="color:blue">*f~x~*</span> button. Double click on the variable name (`REGION`), and it will be incorporated into the filter. Then, use two equal signs, and enter the code for the region of interest (4). 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.31.png')
-```
-
-Notice that this will cause a new column in the spreadsheet wherein a green checkmark indicates the case/participant will be included in the analysis and a red “x” indicates the case/participant will be excluded from the analysis.
-
-From here, any analysis you choose to do will be done for only the cases match the filter. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.32.png')
-```
-
-In the next window, select the variables to be used (they will be the same as in the last example). 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.33.png')
-```
-
-Notice that in the output now shows a correlation matrix with different results than you saw when you ran the correlation with the entire data set:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.34.png')
-```
-
-This table indicates that, if we only look at the Antigonish-Guysborough region, the correlation coefficient between between `WORKHR` and `HM_CGAME` is .012 and the *p*-value is .80. Comparing this *p*-value to an alpha level of .05, we would say this correlation is non-significant.
-
-Again, you may want to inspect the scatterplot to get a visual representation of this correlation coefficient for the data collected from participants in the Antigonish-Guysborough region. Challenge: Give the creation of this scatterplot a try on your own. See if your graph matches the one depicted below.
-
-### Removing the Filter
-
-It is **very** important to remember that once you have applied a filter, every analysis will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must delete the filter. To do this, you can highlight the column showing the filter in the spreadsheet, go to <span style="color:blue">Data</span>, and then <span style="color:blue">Delete</span>. You will be prompted with a question to verify that you want to delete the filter. Click <span style="color:blue">Yes</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/3.4.35.png')
-```
 
 ### Optional activities
 
@@ -753,6 +752,33 @@ knitr::include_graphics('img/7.4.69.png')
 
 Repeat for all correlations with `intellect`, using `intellect` on the `Y axis` each time to make it easier to compare to the example answers below (#2). Compare the pattern of dots in each scatterplot to the *r*-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson's *r* (i.e., linearity, no outliers)?
 
+
+#### Applying a Filter
+
+Next, consider the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017). Consider the question: does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`? Run the appropriate correlation.
+
+Next, what if we asked the question: For residents of the Antigonish and Guysborough regions only, does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`?
+
+Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the `REGION` is equal to 4 (see the [data dictionary](https://moodle.stfx.ca/mod/url/view.php?id=830017) for an explanation). To achieve this, we're going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson *r* for only Antigonish and Guysborough, and not for other regions. 
+
+In order to filter the data, we go to the top menu and choose <span style="color:blue">Data</span> and then <span style="color:blue">Filter</span>.
+
+In the next window, you must set up the filter; indicate which cases will be used. Under “Filter 1,” click on the formula editor, the <span style="color:blue">*f~x~*</span> button. Double click on the variable name (`REGION`), and it will be incorporated into the filter. Then, use two equal signs, and enter the code for the region of interest (4).
+
+Notice that this will cause a new column in the spreadsheet wherein a green checkmark indicates the case/participant will be included in the analysis and a red “x” indicates the case/participant will be excluded from the analysis.
+
+From here, any analysis you choose to do will be done for only the cases match the filter. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:
+
+In the next window, select the variables to be used in the correlation (`WORKHR` and `HM_CGAME`). 
+
+Notice that in the output now shows a correlation matrix with different results than you saw when you ran the correlation with the entire data set.
+
+Again, you may want to inspect the scatterplot to get a visual representation of this correlation coefficient for the data collected from participants in the Antigonish-Guysborough region. Challenge: Give the creation of this scatterplot a try on your own. See if your graph matches the one depicted below.
+
+#### Removing the Filter
+
+It is **very** important to remember that once you have applied a filter, every analysis will be done on the split variable. If you want to go back to performing analyses and calculating statistics for the data as a whole, you must delete the filter. To do this, you can highlight the column showing the filter in the spreadsheet, go to <span style="color:blue">Data</span>, and then <span style="color:blue">Delete</span>. You will be prompted with a question to verify that you want to delete the filter. Click <span style="color:blue">Yes</span>.
+
 ### Example answers to optional activities
 
 1. Intellect ratings were not significantly correlated with the age of the candidates, *r* = .05, *p* > .05.
@@ -789,9 +815,7 @@ For `impression` and `intellect`, a correlation of *r* = .83 was observed. In th
 
 ### Practice Problems
 
-___
-
-Use the EngageNS data to answer the following questions:
+Use the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017) to answer questions 1-4.
 
 1. Construct a scatterplot using R_FRIENDS on the x-axis and SOC_FRND on the y-axis to depict the results you found for the last homework question.
 

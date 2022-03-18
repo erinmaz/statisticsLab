@@ -281,16 +281,17 @@ correlation-matrix
 correlation-and-scatterplots
 splitting-a-file
 practice-problems-2
-jamovi
+jamovi---week-10---march-29-30
 pre-lab-tasks-3
 correlation-coefficient-for-bivariate-data
 correlation-matrix-1
+apa-format-reporting-of-a-correlation
 correlation-and-scatterplots-1
 adding-the-scatterplot-module-to-jamovi
 getting-a-visual-of-the-correlation
+optional-activities-1
 applying-a-filter
 removing-the-filter
-optional-activities-1
 example-answers-to-optional-activities-1
 homework-4
 practice-problems-3
@@ -335,7 +336,7 @@ other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model
 planned-comparisons
 unplanned-comparisons
 homework-questions-1
-jamovi-1
+jamovi
 lab-8-repeated-measures-anova
 betcha-cant-type-jhdbzkco-very-fast-on-your-first-try
 study-description-3
@@ -367,7 +368,7 @@ produce-a-frequency-histogram-and-remove-outliers
 conduct-and-graph-one-factor-repeated-measures-anova
 conduct-planned-comparisons-using-a-paired-samples-t-test
 practice-problems-4
-jamovi-2
+jamovi-1
 lab-9-factorial-anova
 does-standing-up-make-you-focus-more
 study-description-4
@@ -401,7 +402,7 @@ calculate-simple-effects
 conduct-a-repeated-measures-two-factor-analysis-of-variance-anova
 calculate-simple-effects-1
 practice-problems-5
-jamovi-3
+jamovi-2
 lab-10-mixed-factorial-anova
 do-you-remember-things-better-when-you-take-pictures-of-them
 study-description-5
@@ -426,7 +427,7 @@ experiment-background-6
 conduct-a-mixed-factorial-analysis-of-variance-anova
 calculate-simple-effects-2
 practice-problems-6
-jamovi-4
+jamovi-3
 lab-11-choosing-an-appropriate-statistical-test
 general-goals-3
 summary-of-the-tests

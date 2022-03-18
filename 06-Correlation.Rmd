@@ -920,11 +920,11 @@ Do the dots closely follow the line of best fit?
 The following three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
 </div>
 
-5. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
+7. Imagine a researcher found a positive correlation between two variables, and reported that the *r* value was +.3. One possibility is that there is a true correlation between these two variables. Discuss one alternative possibility that would also explain the observation of +.3 value between the variables.
 
-6. Explain the difference between a correlation of *r* = .3 and *r* = .7. What does a larger value of *r* represent?
+8. Explain the difference between a correlation of *r* = .3 and *r* = .7. What does a larger value of *r* represent?
 
-7. Explain the difference between a correlation of *r* = .5, and *r* = -.5.
+9. Explain the difference between a correlation of *r* = .5, and *r* = -.5.
 
 
 

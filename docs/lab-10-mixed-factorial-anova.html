@@ -669,7 +669,7 @@ No amount of experimentation can ever prove me right; a single experiment can pr
 <h3><span class="header-section-number">10.4.5</span> Look at the data</h3>
 <p>Remember before we do any analysis, we always want to “look” at the data. This first pass let’s us know if the data “look right.” For example, the data file could be messed up and maybe there aren’t any numbers there, or maybe the numbers are just too weird. For example, the memory performance DV is a percent, so it should range between 0 and 100, if we find numbers that are negative or greater than 100, then we know something is wrong.</p>
 <div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="lab-10-mixed-factorial-anova.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(new_data<span class="sc">$</span>memory_accuracy)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-454-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-456-1.png" width="672" /></p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="lab-10-mixed-factorial-anova.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(new_data<span class="sc">$</span>memory_accuracy)</span></code></pre></div>
 <pre><code>## [1]  11.11111 100.00000</code></pre>
 <p>Great, the numbers check out, they are all inside the range of 0 to 100.</p>
@@ -696,7 +696,7 @@ No amount of experimentation can ever prove me right; a single experiment can pr
 <span id="cb238-13"><a href="lab-10-mixed-factorial-anova.html#cb238-13" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
 <span id="cb238-14"><a href="lab-10-mixed-factorial-anova.html#cb238-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
 <span id="cb238-15"><a href="lab-10-mixed-factorial-anova.html#cb238-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">50</span>,<span class="dv">100</span>))</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-455-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-457-1.png" width="672" /></p>
 </div>
 <div id="conduct-the-anova-2" class="section level3" number="10.4.7">
 <h3><span class="header-section-number">10.4.7</span> Conduct the ANOVA</h3>

@@ -534,6 +534,8 @@ To conduct this study, the authors randomly assigned 39 professional recruiters 
 
 So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts or when the heard the applicants speak? We have the data, and we can find out.
 
+**Note**: This dataset includes variables that have very similar names. Be careful to select the correct variable as you complete the exercises.
+
 
 #### Download and open the data
 
@@ -607,19 +609,31 @@ knitr::include_graphics('img/7.4.44.png')
 
 When interpreting the second output table, or Shapiro-Wilk test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, which is often the conventional .05, then your data are **not** normally distributed. Is this a problem? It depends. Remember, the normality assumption of the *t*-test refers to the sampling distribution, not the distribution of the sample. If your sample size is reasonably large (N >= 30), you can usually rely on the central limit theorem to assuming your **sampling distribution** is normal. 
 
-When interpreting the third output table, or Levene's test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, then your variances are **not** equal and you should request <span style="color:blue"> Welch’s</span> *t*-test. If the *p*-value for Levene's test is larger than alpha, then you can use the Student’s *t*-test that is automatically generated when you request an independent *t*-test. 
+The next output table is Levene's test, which checks the assumption of homogeneity of variance.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/LevenesTest.png')
+```
+
+When interpreting Levene's test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, then your variances are **not** equal and you should request <span style="color:blue"> Welch’s</span> *t*-test. If the *p*-value for Levene's test is larger than alpha, then you can use the Student’s *t*-test that is automatically generated when you request an independent *t*-test. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.45.png')
 ```
 
-Some people may recommend that you **always** use the Welch’s *t*-test - whether the assumptions are upheld or violated. 
+Some people may recommend that you **always** use Welch’s *t*-test - whether the assumptions are upheld or violated. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.44_Welch.png')
 ```
 
 In this example, the *p*-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The *p*-value associated with the Levene's test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You could report the results of the Student *t*-test, but we are still going to use the Welch’s *t*-test. The *t*-statistic for our independent-samples *t*-test is -3.48, the degrees of freedom are adjusted to 33.4, and the *p*-value for the *t*-test is .001. **Note**: Be sure to look at the *p*-value associated with the *t*-test and not Levene's test when you are interpreting your *t*-test results. 
+
+We can also look at the descriptive statistics to better understand what happened in the experiment:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/indttestdesc.png')
+```
 
 What does the *t*-test tell us about the data? We can put our finding into words to clarify:
 
@@ -749,7 +763,7 @@ Practice writing a sentence describing the results, and then compare it to #1 in
 
 #### Example answers to optional activities
 
-1. Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test [*t*(32) = 0.19, *p* > .05].
+Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test [*t*(32) = 0.19, *p* > .05].
 **Note**: If you included Cohen's *d*, the value was 0.07, but we often don't report effect size if the effect was not significant. 
 
 or if you reported the statistics adding the Welch's adjustment...
@@ -766,11 +780,11 @@ See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-12).
 
 ### Practice Problems
 
-1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are higher consumers of alcohol experience different levels of anxiety at Time 2 (i.e., during midterms) compared to lower consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). Graph the results.
+1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are higher consumers of alcohol report different sleep durations at Time 2 (i.e., during midterms) compared to lower consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). Graph the results.
 
-2. Using the EngageNS data, run an independent-samples *t*-test to examine whether people who volunteer in their community (variable name = VOLUNTEER; 1 = yes, 2 = no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).    
+2. Using the EngageNS data, run an independent-samples *t*-test to examine whether people who volunteer in their community (variable name = VOLUNTEER; 1 = yes, 2 = no) report feeling higher perceptions of belonging in the community (variable name = BELONGING).  Run a second independent-samples *t*-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB).  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make separate graphs to report the result of each of the *t*-tests).    
 
-3. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1 = yes, 2 = no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  Are there any correlations between DISCRIM1, LIFESAT, and SECURITY?
+3. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who were born in Canada (BORN_CAN; 1 = yes, 2 = no) experience different levels of a) discrimination (DISCRIM1) due to their ethnicity/race/skin colour, b) life satisfaction (LIFESAT), and c) job security (SECURITY) than those not born in Canada.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make separate graphs to report the result of each of the *t*-tests).
 
 4. Using the EngageNS data, run 3 separate independent samples *t*-tests to examine whether people who have internet access at home (INTERNET; 1 = yes, 2 = no) report different levels of a) work-life balance (WL_BALANCE), b) reading books for pleasure (HM_READ), and c) playing board games/cards with family/friends (HM_CARDS) than those who do not have internet access at home.  What can you conclude from each *t*-test?  Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s *d*). Graph the data (Note that you will need to make up separate graphs to report the result of each of the *t*-tests).  
 

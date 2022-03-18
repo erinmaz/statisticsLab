@@ -530,7 +530,21 @@ In this lab, we will use jamovi to calculate the correlation coefficient. We wil
 3. Produce a scatterplot
 4. Applying a filter to the data set for further analysis
 
-### Pre-lab tasks
+### Pre-lab reading and tasks
+
+#### Assumptions of correlation
+
+This lab will focus on Pearson's correlation. For the calculation to make sense, the data must meet certain criteria. These are known as the assumptions of Pearson's correlation. 
+
+Pearson's correlation assumes:
+
+1. There is a linear relation between the two variables. For this to be assessed, the scale of measurement of both variables must be at least interval. You cannot assess whether the relation is linear without equal spacing between intervals. **Do not run Pearson's correlation on nominal or ordinal variables**.
+
+2. There are no outliers. We are not going to get too much into outliers. If you have a point in your dataset that is really far away from the other points, you might have an outlier.
+
+Additionally, if you want to look at the *p*-value associated with Pearson's correlation (i.e., if you want to do inference), the data must adhere to the normality assumption
+
+#### Download and open data
 
 For the purpose of this lab, we have created a version of the PSYC 291 survey data that contains a few more variables. Download it [here](https://moodle.stfx.ca/mod/url/view.php?id=837149). The file name starts with "V2 PSYC 291 ..." Note that this is a .omv file, so you can open it instead of importing. I created it with an older version of JAMOVI, so hopefully it opens on everyone's computer.
 
@@ -541,17 +555,21 @@ Have the file open in JAMOVI before the beginning of your lab session.
 ### Correlation Coefficient for Bivariate Data
 
 Bivariate is a fancy way of saying two variables. Let's say you were interested in the relationship between two variables: sleep quality and anxiety at the start of the semester. To calculate a correlation in JAMOVI, go to
-Analyses -> Regression -> Correlation Matrix:
+<span style="color:blue">Analyses</span> -> <span style="color:blue">Regression</span> -> <span style="color:blue">Correlation Matrix</span>:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/cormenu.png')
 ```
 
-Move your variables of interest, T1_sleep_quality_composite and T1_anxiety_composite, to the right box:
+<br>
+
+Move your variables of interest, `T1_sleep_quality_composite` and `T1_anxiety_composite`, to the right box:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/corvars.png')
 ```
+
+<br>
 
 An output table will be generated in the results panel:
 
@@ -559,17 +577,21 @@ An output table will be generated in the results panel:
 knitr::include_graphics('img/coroutput.png')
 ```
 
+<br>
+
 The table indicates that Pearson's *r* between the two variables is -0.425, with a *p*-value of less than .001. This is a negative correlation: as one variable goes up, the other goes down.
 
 ### Correlation Matrix
 
 In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you can enter multiple variables into the correlation window and obtain a correlation matrix. The correlation matrix is a table showing every possible bivariate correlation amongst a group of variables.
 
-Let's add T1_sleep_hours to our correlation matrix. First move the variable to the right box:
+Let's add `T1_sleep_hours` to our correlation matrix. First move the variable to the right box:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/corvars2.png')
 ```
+
+<br>
 
 Now the output panel has three sets of results:
 
@@ -577,44 +599,59 @@ Now the output panel has three sets of results:
 knitr::include_graphics('img/coroutput2.png')
 ```
 
+<br>
+
 Note that some of the correlations are negative, and some are positive. Some are significant (with *p* < .05) and some are not.
 
 ### APA format reporting of a correlation
 
-Recall the output for the correlation between T1_sleep_quality_composite and T1_anxiety_composite:
+Recall the output for the correlation between `T1_sleep_quality_composite` and `T1_anxiety_composite`:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/coroutput.png')
 ```
 
+<br>
+
 You could write the results in APA format as follows:
 
 >There was significant correlation between sleep quality and anxiety at the beginning of midterms, Pearson's *r* = -.43, *p* < .001.
 
+<br>
+
 Note that we did not use a leading zero for *r* and we rounded to two decimal places.
 
-Now consider the example of the correlation between T1_sleep_hours and T1_anxiety_composite:
+Now consider the example of the correlation between `T1_sleep_hours` and `T1_anxiety_composite`:
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/coroutput2.png')
 ```
+
+<br>
 
 To report this result in APA format, you would write something such as:
 
 >There was not a significant correlation between sleep duration and anxiety at the beginning of midterms, Pearson's *r* = .13, *p* > .05.
 
+<br>
 
 ### Correlation and Scatterplots
 
-To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Depending on your version of JAMOVI, you may have the option to enable a correlation matrix plot from the correlation matrix analysis panel:
+To accompany the calculation of the correlation coefficient, the scatterplot is the relevant graph. Depending on your version of JAMOVI, you may have the option to enable a correlation matrix plot from the correlation matrix analysis panel:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/corplot.png')
 ```
 
+<br>
+
+
 This will produce a scatterplot for each of the correlations you requested.
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/corplotoutput.png')
 ```
+
+<br>
+
 
 These are handy for having a quick look, but are kind of small. 
 
@@ -626,11 +663,17 @@ Before you can request a larger scatterplot in jamovi, you must add Scatterplot 
 knitr::include_graphics('img/modulesplus.png')
 ```
 
+<br>
+
+
 Click <span style="color:blue">jamovi library</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/jamovilibrary.png')
 ```
+
+<br>
+
 
 Under the “Available” tab, you should see a module called <span style="color:blue">scatr</span>. Click to <span style="color:blue">INSTALL</span> it. 
 
@@ -638,15 +681,21 @@ Under the “Available” tab, you should see a module called <span style="color
 knitr::include_graphics('img/modules.png')
 ```
 
+<br>
+
+
 When it is installed, it will appear in your <span style="color:blue">Exploration</span> menu.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/scatr.png')
 ```
 
+<br>
+
+
 #### Getting a visual of the correlation
 
-Let's continue to create the scatterplot for this data, starting with the T1_sleep_quality_composite and T1_anxiety_composite variables.
+Let's continue to create the scatterplot for this data, starting with the `T1_sleep_quality_composite` and `T1_anxiety_composite` variables.
 
 Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot</span>.
 
@@ -654,11 +703,17 @@ Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Ex
 knitr::include_graphics('img/scatr2.png')
 ```
 
-Move T1_sleep_quality_composite into the X-Axis box and T1_anxiety_composite into the Y-Axis box:
+<br>
+
+
+Move `T1_sleep_quality_composite` into the X-Axis box and `T1_anxiety_composite` into the Y-Axis box:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/scattersetup.png')
 ```
+
+<br>
+
 
 In the Results panel, jamovi will produce a scatterplot of your data, as follows:
 
@@ -666,17 +721,26 @@ In the Results panel, jamovi will produce a scatterplot of your data, as follows
 knitr::include_graphics('img/scatterplot1.png')
 ```
 
-At this point, it would be equally correct to plot T1_anxiety_composite on the X-Axis and T1_sleep_quality_composite on the Y-Axis. Note that you get a different graph:
+<br>
+
+
+At this point, it would be equally correct to plot `T1_anxiety_composite` on the X-Axis and `T1_sleep_quality_composite` on the Y-Axis. Note that you get a different graph:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/scatterplot2.png')
 ```
 
-Let's continue with the second scatterplot, with T1_anxiety_composite on the X-Axis and T1_sleep_quality_composite on the Y-Axis. You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best fit line because it minimizes the distance between the line and the data points. To include the line of best fit, click on <span style="color:blue">Linear</span> under the Regression Line heading. 
+<br>
+
+
+Let's continue with the second scatterplot, with `T1_anxiety_composite` on the X-Axis and `T1_sleep_quality_composite` on the Y-Axis. You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best fit line because it minimizes the distance between the line and the data points. To include the line of best fit, click on <span style="color:blue">Linear</span> under the Regression Line heading. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/linear.png')
 ```
+
+<br>
+
 
 You will find that the graph in your Results panel has now updated and has a line drawn on it.
 
@@ -684,11 +748,10 @@ You will find that the graph in your Results panel has now updated and has a lin
 knitr::include_graphics('img/scatterplot_line.png')
 ```
 
+<br>
+
+
 The best fit line goes from the top left to the bottom right; it has a negative slope. This is consistent with the negative Pearson's *r* we found in the correlation matrix. 
-
-
-
-
 
 ### Optional activities
 
@@ -698,17 +761,23 @@ Consider the experiment and dataset from the [independent *t*-test lab](https://
 knitr::include_graphics('img/7.4.61.png')
 ```
 
+<br>
+
 Then, move `age` and `intellect` into the untitled box at the right of the pop-up screeen:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.62.png')
 ```
 
+<br>
+
 In the Results panel, the output table should look as follows:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.63.png')
 ```
+
+<br>
 
 Write a sentence describing the results of this test. Compare your answer to #1 in the "Example answers to practice problems" below. 
 
@@ -718,11 +787,15 @@ Now, assume you are in the mood to do some exploratory data analysis. We can run
 knitr::include_graphics('img/7.4.64.png')
 ```
 
+<br>
+
 In the Results panel, the output table contains the *r*- and *p*-values for each possible pair of the five variables:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.65.png')
 ```
+
+<br>
 
 By default, jamovi does not flag significant correlations. Be sure to review the *p*-values careful and compare them to the alpha level you set.  How many significant correlations do you identify in the correlation matrix?
 
@@ -732,11 +805,15 @@ If you would like jamovi to flag significant correlations, you can click <span s
 knitr::include_graphics('img/7.4.66.png')
 ```
 
-Under the correlation matrix that appears in the Results panel, you will notice a note. If the *p*-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the *p*-value is less than .01, SPSS will flag it as ** (significant at the .01 level); and if the *p*-value is less than .001, SPSS will flag it as *** (significant at the .001 level).
+<br>
+
+Under the correlation matrix that appears in the Results panel, you will notice a note. If the *p*-value is under .05, jamovi will flag the correlation coefficient as * (significant at the .05 level); if the *p*-value is less than .01, jamovi will flag it as ** (significant at the .01 level); and if the *p*-value is less than .001, jamovi will flag it as *** (significant at the .001 level).
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.67.png')
 ```
+
+<br>
 
 Let's pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and then <span style="color:blue">Scatterplot...</span>. Move `intellect` into the <span style="color:blue">Y-Axis</span> and `age` into the <span style="color:blue">X-Axis</span>. 
 
@@ -744,30 +821,30 @@ Let's pick a few pairs of variables and make scatterplots. We have a good range 
 knitr::include_graphics('img/7.4.68.png')
 ```
 
+<br>
+
 These commands should produce a scatterplot in the Results panel. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.69.png')
 ```
 
-Repeat for all correlations with `intellect`, using `intellect` on the `Y axis` each time to make it easier to compare to the example answers below (#2). Compare the pattern of dots in each scatterplot to the *r*-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson's *r* (i.e., linearity, no outliers)?
+<br>
+
+Repeat for all correlations with `intellect`, using `intellect` on the Y axis each time to make it easier to compare to the example answers below (#2). Compare the pattern of dots in each scatterplot to the *r*-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson's *r* (i.e., linearity, no outliers)?
 
 
 #### Applying a Filter
 
-Next, consider the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017). Consider the question: does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`? Run the appropriate correlation.
+Next, consider the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017). Consider the question: does the number of hours per week a person spends working at their main job correlate with their computer game playing? Use the data [data dictionary](https://moodle.stfx.ca/mod/url/view.php?id=830017) to identify the relevant variables and run the appropriate correlation.
 
-Next, what if we asked the question: For residents of the Antigonish and Guysborough regions only, does `Number of hours per week spent working at main job` correlate with `Home activity participation on a typical day: Playing computer games`?
+Next, what if we asked the question: For residents of the Antigonish and Guysborough regions only, does the number of hours per week a person spends working at their main job correlate with their computer game playing? Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the `REGION` is equal to 4 (see the [data dictionary](https://moodle.stfx.ca/mod/url/view.php?id=830017) for an explanation). To achieve this, we're going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson *r* for only Antigonish and Guysborough, and not for other regions. 
 
-Notice that this question is asking us to find the correlation between the same two variables we used in the previous example, but only in the case where the `REGION` is equal to 4 (see the [data dictionary](https://moodle.stfx.ca/mod/url/view.php?id=830017) for an explanation). To achieve this, we're going to utilize a function called filtering. Filtering the data set makes only those cases that meet our criteria available for use in the analysis to be run. For example, if we filter our data by region and calculate a correlation coefficient, jamovi will find Pearson *r* for only Antigonish and Guysborough, and not for other regions. 
-
-In order to filter the data, we go to the top menu and choose <span style="color:blue">Data</span> and then <span style="color:blue">Filter</span>.
-
-In the next window, you must set up the filter; indicate which cases will be used. Under “Filter 1,” click on the formula editor, the <span style="color:blue">*f~x~*</span> button. Double click on the variable name (`REGION`), and it will be incorporated into the filter. Then, use two equal signs, and enter the code for the region of interest (4).
+In order to filter the data, we go to the top menu and choose <span style="color:blue">Data</span> and then <span style="color:blue">Filter</span>. In the next window, you must set up the filter; indicate which cases will be used. Under “Filter 1,” click on the formula editor, the <span style="color:blue">*f~x~*</span> button. Double click on the variable name (`REGION`), and it will be incorporated into the filter. Then, use two equal signs, and enter the code for the region of interest (4).
 
 Notice that this will cause a new column in the spreadsheet wherein a green checkmark indicates the case/participant will be included in the analysis and a red “x” indicates the case/participant will be excluded from the analysis.
 
-From here, any analysis you choose to do will be done for only the cases match the filter. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>:
+From here, any analysis you choose to do will be done for only the cases match the filter. Let's calculate the correlation coefficient, as usual. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Regression</span>, and then <span style="color:blue">Correlation Matrix</span>.
 
 In the next window, select the variables to be used in the correlation (`WORKHR` and `HM_CGAME`). 
 
@@ -808,14 +885,12 @@ For `impression` and `intellect`, a correlation of *r* = .83 was observed. In th
 
 ### Homework
 
-1. Consider participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report *r* and whether the correlation is significant or non-significant.
-
-2. Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (**Hint**: Use the data dictionary to figure out how participants’ main activities were coded). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?
+See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-13).
 
 
 ### Practice Problems
 
-Use the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017) to answer questions 1-4.
+Use the [EngageNS Quality of Life dataset](https://moodle.stfx.ca/mod/url/view.php?id=830017) to answer questions 1-6.
 
 1. Construct a scatterplot using R_FRIENDS on the x-axis and SOC_FRND on the y-axis to depict the results you found for the last homework question.
 
@@ -836,6 +911,10 @@ There are spaces on either side of =, >, or < symbols.
  
 4. Construct the scatterplot for any set(s) of variables you determined to be appropriate for using Pearson’s correlation. What do you notice about the scatterplot? Does the slope increase or decrease?
 Do the dots closely follow the line of best fit?
+
+5. Consider participants’ reported number of close friends and their reported time spent socializing with friends. Are these scores correlated? If so, report *r* and whether the correlation is significant or non-significant.
+
+6. Apply a filter so that you are looking at only the data for participants’ whose main activity is going to school (**Hint**: Use the data dictionary to figure out how participants’ main activities were coded). Now, run the same correlation you looked at in #1. Are number of close friends and reported time spent socializing with friends correlated for students? Is the correlation significant? Compare these results to the results in #1. Is the correlation between number of close friends and reported time spent socializing with friends stronger or weaker for students than it is for Nova Scotians?
 
 <div class="marginnote">
 The following three questions are copied  verbatim from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.2.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#writing-assignment-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 

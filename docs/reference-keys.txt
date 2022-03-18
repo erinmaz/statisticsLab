@@ -282,7 +282,9 @@ correlation-and-scatterplots
 splitting-a-file
 practice-problems-2
 jamovi---week-10---march-29-30
-pre-lab-tasks-3
+pre-lab-reading-and-tasks-1
+assumptions-of-correlation
+download-and-open-data
 correlation-coefficient-for-bivariate-data
 correlation-matrix-1
 apa-format-reporting-of-a-correlation

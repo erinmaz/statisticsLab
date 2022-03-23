@@ -917,7 +917,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 d. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(33.4) = -3.48 **not** *t*(33.4)=-3.48. There are spaces on either side of =, >, or < symbols.
 
-e. Italicize symbols such as **M*, *SD*, *p*, and *r*.
+e. Italicize symbols such as *M*, *SD*, *p*, and *r*.
 
 
  

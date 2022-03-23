@@ -852,7 +852,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(76) = 2.70 **not** *t*(76)=2.70. 
 
-5. Symbols such as *t*, *p*, and *d* are italicized.
+5. Symbols such as *M*, *SD*, *t*, *p*, and *d* are italicized.
 
 
 ### Performing a one-sample *t*-test

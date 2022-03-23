@@ -653,6 +653,8 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(33.4) = -3.48 **not** *t*(33.4)=-3.48. There are spaces on either side of =, >, or < symbols.
 
+5. Italicize symbols such as **M*, *SD*, *p*, *t*, and *d*.
+
 
 ### Graphing your data
 

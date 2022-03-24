@@ -544,7 +544,7 @@ Pearson's correlation assumes:
 
 Additionally, if you want to look at the *p*-value associated with Pearson's correlation (i.e., if you want to do inference), the data must adhere to the normality assumption.
 
-#### Download and open data
+#### Download and open data & Install scatr module
 
 For the purpose of this lab, we have created a version of the PSYC 291 survey data that contains a few more variables. Download it [here](https://moodle.stfx.ca/mod/url/view.php?id=837149). The file name starts with "V2 PSYC 291 ..." Note that this is a .omv file, so you can open it instead of importing. I created it with an older version of JAMOVI, so hopefully it opens on everyone's computer.
 

@@ -449,3 +449,4 @@ homework-feb-23-and-24-2021
 simulating-the-mean-differences
 control-vs-reactivationtetris
 tetris_only-vs-reactivationtetris
+download-and-open-data-install-scatr-module

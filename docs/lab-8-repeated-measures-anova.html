@@ -676,7 +676,7 @@ However, perhaps the main point is that you are under no obligation to analyse v
 <p>For example, this study involves reaction times: the time between seeing something and responding to it. If you had done a study like this before, you would know that it usually doesn’t take people that long to start responding. Most reaction times will be under a second (or 1000 milliseconds). But, sometime people are little slow, and sometimes they do funny things like check their phone in the middle of an experiment.</p>
 <p>Before I analyze reaction time data, I often make a histogram of all of the RT data, like this:</p>
 <div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="lab-8-repeated-measures-anova.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(all_data<span class="sc">$</span>PureRTs)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-382-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-383-1.png" width="672" /></p>
 <p>We can see that almost all of the reaction times are well below 5000 milliseconds (5 seconds), which is good. Most of the time people were paying attention and not “checking their phone.” Notice, the range of the histogram goes out to 15,000 milliseconds. You can’t see any bars out there (too small to notice), but there must be at least a few trials where somebody took 15 seconds to start responding. These are called outliers. We will remove them before we conduct our analysis</p>
 </div>
 <div id="look-at-the-means" class="section level3" number="8.4.5">
@@ -723,7 +723,7 @@ However, perhaps the main point is that you are under no obligation to analyse v
 <span id="cb202-34"><a href="lab-8-repeated-measures-anova.html#cb202-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
 <span id="cb202-35"><a href="lab-8-repeated-measures-anova.html#cb202-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Mean Reaction Time (ms)&quot;</span>)<span class="sc">+</span></span>
 <span id="cb202-36"><a href="lab-8-repeated-measures-anova.html#cb202-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Typing Material&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-383-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-384-1.png" width="672" /></p>
 <p>Alright, we made things a little bit more complicated than they need to be. Our primary question is whether reaction times followed this pattern: Normal &lt; Bigrams &lt; Random. We can see the means do follow this pattern. However, shouldn’t we only be looking at three means, why are their six means, and two lines?</p>
 <p>The above code included the second independent variable <code>Block</code>. As a result, you are seeing the means for Typing material when subjects could see the keyboard, and when the couldn’t see the keyboard. We will come back to this later. For now, let’s ignore the Block condition, and find the means for the Typing Material IV by averaging over the Block conditions. We run the same code as above, by take out <code>Block</code>, in the <code>group_by</code> function. We also take <code>Block</code> out the ggplot function.</p>
 <p><strong>VERY IMPORTANT</strong>: We did something in the above code that we didn’t point out. We filtered the data before we found the means. For most of the data sets in other labs, we given you data that is more or less ready to analyse. More often than not data needs to be pre-processed, or filtered before you analyze it. We can use the <code>filter</code> function in <code>dplyr</code> to do our filtering. <code>filter</code> filters the rows for us, so we will only include the rows that we want.</p>
@@ -764,7 +764,7 @@ However, perhaps the main point is that you are under no obligation to analyse v
 <span id="cb203-27"><a href="lab-8-repeated-measures-anova.html#cb203-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
 <span id="cb203-28"><a href="lab-8-repeated-measures-anova.html#cb203-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Mean Reaction Time (ms)&quot;</span>)<span class="sc">+</span></span>
 <span id="cb203-29"><a href="lab-8-repeated-measures-anova.html#cb203-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Typing Material&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-384-1.png" width="672" /></p>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-385-1.png" width="672" /></p>
 </div>
 <div id="conduct-the-repeated-measures-anova" class="section level3" number="8.4.6">
 <h3><span class="header-section-number">8.4.6</span> Conduct the repeated Measures ANOVA</h3>

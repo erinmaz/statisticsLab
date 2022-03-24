@@ -284,7 +284,7 @@ practice-problems-2
 jamovi---week-10---march-29-30
 pre-lab-reading-and-tasks-1
 assumptions-of-correlation
-download-and-open-data
+download-and-open-data-install-scatr-module
 correlation-coefficient-for-bivariate-data
 correlation-matrix-1
 apa-format-reporting-of-a-correlation
@@ -446,7 +446,3 @@ mann-whitney-u-test-1
 interpreting-and-reporting-the-results-2
 homework-mar-9-and-10-2021
 homework-feb-23-and-24-2021
-simulating-the-mean-differences
-control-vs-reactivationtetris
-tetris_only-vs-reactivationtetris
-download-and-open-data-install-scatr-module

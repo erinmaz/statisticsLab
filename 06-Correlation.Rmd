@@ -542,7 +542,11 @@ Pearson's correlation assumes:
 
 2. There are no outliers. We are not going to get too much into outliers. If you have a point in your dataset that is really far away from the other points, you might have an outlier.
 
-Additionally, if you want to look at the *p*-value associated with Pearson's correlation (i.e., if you want to do inference), the data must adhere to the normality assumption.
+<div class="marginnote">
+Field, A (2018) *Discovering Statistics Using IMB SPSS Statistics*, 5th edition. Sage: California.
+</div>
+
+Additionally, if you want to look at the *p*-value associated with Pearson's correlation (i.e., if you want to do inference), the data must adhere to the normality assumption. If your sample size is large, you don't need to worry about normality. If your sample size is small, you should check that your variables are normally distributed.
 
 #### Download and open data & Install scatr module
 
@@ -877,7 +881,15 @@ For the correlation between `time` and `intellect`, we found *r* was also close 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.71.png')
 ```
-The correlation between `wordcount` and `intellect` was *r* = -.24. This is a fairly weak correlation but if you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. The dot to the far right might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292. 
+The correlation between `wordcount` and `intellect` was *r* = -.24. This is a fairly weak correlation. The dot to the far right in the first plot might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292. If you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. This is more obvious if we zoom in:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/7.4.71 zoomed in.png')
+```
+
+<br>
+
+Next, let's look at the scatterplot for `impression` and `intellect`.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.72.png')

@@ -1,3 +1,378 @@
+--- 
+title: "Answering questions with data: Lab Manual"
+author: 
+- "Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga"
+- "Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle, Sherry Neville-MacLean, Christine D. Lomore, and Margaret Vail. "
+date: "Last Compiled `r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    includes:
+      in_header: includeme.html
+      before_body: testpic.html
+    css: [tufte.css, style.css]
+    fontsettings:
+      theme: white
+      family: sans
+      size: 1
+documentclass: book
+bibliography: [book.bib, packages.bib, MyLibrary.bib]
+biblio-style: apalike
+link-citations: yes
+#github-repo: rstudio/bookdown-demo
+description: "A lab manual for Psyc 292 at StFX"
+---
+
+# Preface {-}
+
+Placeholder
+
+
+## Important notes
+### Attributions and Versions
+### CC BY-SA 4.0 license
+### Copying the lab manual
+### Acknowledgments
+## Data
+### Data Repository
+### CSV format
+### SPSS format
+## R
+### Why R?
+### Installing R and R Studio
+### R studio notes and tips
+#### Console
+#### Script Editor
+#### Workspace and History
+#### File, Plot, Packages, Help
+### How to complete the R Labs
+#### R projects
+#### Installing libraries
+#### Quick install
+#### R markdown
+#### R markdown lab templates
+### Screencast tutorial
+### R-studio Cloud
+## Excel 
+## SPSS
+### Installing SPSS
+### Notes and Tips
+#### Discrepancies in Visuals
+#### Hidden Toolbars
+### Opening SPSS and the SPSS layout
+#### Reviewing variable properties and the Variable View tab
+### Practice Problems 
+## JAMOVI - Week 2 - January 25 & 26
+### Getting Started with jamovi
+#### Installing jamovi
+#### Starting jamovi up
+### Analyses 
+### The Spreadsheet
+#### Variables
+#### Computed Variables
+##### Copy and Paste
+##### Syntax Mode
+### Loading Data in jamovi
+#### Importing Data from CSV Files
+### Importing Unusual Data Files
+#### Loading Data from Text Files
+##### Loading Data from SPSS (and other statistics packages)
+##### Loading Excel Files 
+### Changing Data from One Level to Another
+### Installing Add-on Modules into jamovi 
+### Quitting jamovi 
+### Summary
+
+<!--chapter:end:index.Rmd-->
+
+
+# Lab 1: Graphing Data
+
+Placeholder
+
+
+## General Goals
+### Important info
+## R 
+### Download the lab templates
+### Get some data
+### Look at the data
+#### summarytools
+### Make Plots to answer questions
+#### Where are the most film permits being requested?
+#### What kind of "films" are being made, what is the category?
+### ggplot2 basics
+#### ylab() changes y label
+#### xlab() changes x label
+#### ggtitle() adds title
+#### color adds color
+#### fill fills in color
+#### get rid of the legend
+#### theme_classic() makes white background
+#### Sometimes layer order matters
+#### Font-size
+#### ggplot2 summary
+### More questions about NYC films
+#### What are the sub-categories of films?
+#### Categories by different Boroughs
+### Gapminder Data
+#### Look at the data frame
+### Asking Questions with the gap minder data
+#### Life Expectancy histogram
+#### Life Expectancy by year Scatterplot
+#### One country, life expectancy by year
+#### Multiple countries scatterplot
+#### geom_line() connecting the dots
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Opening SPSS and the SPSS layout
+### Reviewing variable properties and the Variable View tab
+### Opening a data file and producing different types of graphs
+#### Bar Graphs
+#### Histograms
+#### Scatterplots
+### Homework
+## JAMOVI - Week 3 - February 1 & 2
+### Opening jamovi and reviewing the jamovi layout
+### Reviewing variable properties and the Setup button
+### Importing a data file
+### Graphs
+#### Bar Graphs and Histograms
+### Homework
+### Thinking about Data - Practice Questions
+
+<!--chapter:end:01-Graphing.Rmd-->
+
+
+# Lab 2: Descriptive Statistics (and more graphs)
+
+Placeholder
+
+
+## General Goals
+### Important info
+## R
+### Descriptives basics in R
+#### Making numbers in R
+#### Sum
+#### Length
+### Central Tendency
+#### Mean
+#### Median
+#### Mode
+### Variation
+#### range
+#### var = variance
+#### sd = standard deviation
+#### All Descriptives
+### Descriptives by conditions
+#### group_by and summarise
+#### multiple descriptives
+### Describing gapminder
+#### What are some descriptive for Life expectancy by continent?
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Calculating Descriptive Statistics
+### Descriptive Statistics and Histograms
+### Editing graphs
+#### Editing the axes
+#### Editing the bin width
+### Boxplots
+### Homework
+## JAMOVI - Week 4 - February 8 & 9
+### Pre-lab tasks
+### The basics
+### Calculating Descriptive Statistics
+### Descriptive Statistics and Graphs
+#### Example 1: Sleep
+#### Example 2: Volunteering
+### Selecting the appropriate descriptive statistics
+#### Selecting the central tendency measure
+#### Selecting the variation measure
+#### Example: Sense of belonging
+### Boxplots
+### Editing graphs
+### Homework
+### Practice Questions
+
+<!--chapter:end:02-Descriptives.Rmd-->
+
+
+# Lab 3: Sampling and Sampling Distributions
+
+Placeholder
+
+
+## R
+## Excel
+## SPSS
+## JAMOVI - Week 7 - March 8 & 9
+### Learning Objectives
+### Pre-lab tasks
+### The impact of sampling on research results
+### Other types of filters
+### Homework Problems 
+
+<!--chapter:end:03-SamplingandSamplingDistributions.Rmd-->
+
+
+# Lab 4: t-Test (one-sample, paired sample)
+
+Placeholder
+
+
+## Intro material for R and SPSS activities
+### Does Music Convey Social Information to Infants?
+#### Study description
+### Lab skills learned
+### Important Stuff
+## R
+### Loading the data
+### Inspect the data frame
+#### summarytools
+### Get the data for Experiment one
+### Baseline phase: Conduct a one sample *t*-test
+#### Look at the numbers
+#### Look at the descriptives
+#### Conduct t.test
+### Test phase
+### Paired-samples *t*-test
+#### Relationship between one-sample and paired sample *t*-test
+#### Usefulness of difference scores
+### Graphing the findings
+#### Make the dataframe for plotting
+#### Dot plot of raw scores
+#### Dot plot with means and raw scores
+#### Bar plot
+#### Bar plot with error bars
+#### Bar plot with confidence intervals
+### Data-simulation
+#### Simulating the mean differences
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### OPTIONAL: Performing a one sample *t*-test
+### Performing a paired-samples *t*-test
+### Graphing your results
+### OPTIONAL: The relationship between the one-sample and the paired-samples *t*-test
+### Using descriptive statistics to give context to inferential statistics
+### Lab Homework #6
+## JAMOVI - Week 8 - March 15 & 16
+### Learning Objectives
+### Pre-lab Tasks
+### Research Context for Data Set
+### Performing a Paired-Samples *t*-Test
+#### Motivation to perform statistical analyses
+#### Using descriptive statistics to look at the question
+#### Motivation to perform inferential statistics
+#### Using JAMOVI to request the paired-samples *t*-test
+#### Interpreting the Paired Samples *t*-Test output
+### Writing results in APA format
+### Performing a one-sample *t*-test
+### Homework Questions
+### Practice Questions
+
+<!--chapter:end:04-tTest1.Rmd-->
+
+
+# Lab 5: *t*-test (Independent Sample)
+
+Placeholder
+
+
+## Do you come across as smarter when people read what you say or hear what you say?
+### STUDY DESCRIPTION
+## Lab skills learned
+## Important Stuff
+## R
+### Load the data
+### Inspect data frame
+### Find the data you need
+#### Condition variable
+#### Dependent Measures
+### Look at the dependent variable.
+### Conduct Independent samples *t*-test
+### Remaining ratings
+### Reconstructing the graph from the paper
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### Performing an independent-samples *t*-test
+### Graphing your data
+### Optional activities
+#### Using a cut point to define groups for an independent *t*-test
+### Lab Homework #7
+### Example answers to practice problems
+## JAMOVI - Week 9 - March 22 & 23
+### Pre-lab reading and tasks
+#### Experiment Background
+#### Download and open the data
+### Performing an independent-samples *t*-test
+### Some APA formatting reminders for writing results sections
+### Graphing your data
+### Optional exercises 
+#### Using a cut point to define groups for an independent *t*-test
+#### Example answers to optional activities
+### Lab Homework #7
+### Practice Problems
+
+<!--chapter:end:05-tTest2.Rmd-->
+
+
+# Lab 6: Correlation
+
+Placeholder
+
+
+## General Goals
+### Important Info
+## R
+### cor for correlation
+#### scatterplots
+#### lots of scatterplots
+#### computing the correlations all at once
+#### Chance correlations
+### World Happiness Report
+#### Load the data
+#### Look at the data
+#### My Question #1
+#### My Question #2
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Correlation Coefficient for Bivariate Data: Two Variables
+### Correlation Matrix
+### Correlation and Scatterplots
+### Splitting a File
+### Practice Problems
+## JAMOVI - Week 10 - March 29 & 30
+### Pre-lab reading and tasks
+#### Assumptions of correlation
+#### Download and open data & Install scatr module
+### Correlation Coefficient for Bivariate Data
+### Correlation Matrix
+### APA format reporting of a correlation
+### Correlation and Scatterplots
+#### Adding the Scatterplot module to jamovi
+#### Getting a visual of the correlation
+### Optional activities
+#### Applying a Filter
+#### Removing the Filter
+### Example answers to optional activities
+### Homework
+### Practice Problems
+
+<!--chapter:end:06-Correlation.Rmd-->
+
 ---
 output:
   pdf_document: default
@@ -1047,3 +1422,145 @@ knitr::include_graphics('img/ResultingBarGraph.png')
 
 
 We can see that the Reactivation + Tetris condition appears to have the smallest mean. As for the others, they are all greater than Reactivation + Tetris, but differ somewhat from each other as well. It is important to know that at this point, we do not know where the significant differences could be. For example, it could be that Reactivation + Tetris is different from only No-Task Control, or it could be that it is different from other groups as well. In order to locate where the differences are, we must conduct additional analyses called either planned or unplanned comparisons.
+
+<!--chapter:end:07-ANOVA.Rmd-->
+
+
+# Lab 8 Repeated Measures ANOVA
+
+Placeholder
+
+
+## Betcha can't type JHDBZKCO very fast on your first try
+### STUDY DESCRIPTION
+### Study Methods
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+#### The independent variable
+#### The dependent variables
+### Look at the data
+### Look at the means
+### Conduct the repeated Measures ANOVA
+#### Report the means too
+### Follow-up comparisons
+#### Normal vs Bigrams
+####  Bigrams vs Random
+### Reporting everything
+#### First way
+#### Second way
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### Produce a frequency histogram and remove outliers
+### Conduct and graph One-Factor Repeated Measures ANOVA
+### Conduct planned comparisons using a paired-samples t-test
+### Practice Problems
+## JAMOVI
+
+<!--chapter:end:08-RMANOVA.Rmd-->
+
+
+# Lab 9: Factorial ANOVA
+
+Placeholder
+
+
+## Does standing up make you focus more?
+### STUDY DESCRIPTION
+### Study Methods
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+### Get the data into the format you want
+#### The independent variables
+#### The dependent variables
+### Look at the data
+### Look at the means
+### Conduct the ANOVA
+### Between Subjects ANOVA
+#### ANOVA write-up
+### Repeated measures ANOVA
+#### ANOVA write-up
+### Follow-up comparisons
+#### Sitting Stroop
+#### Standing Stroop
+### Generalization Exercise
+### Writing asignment
+## Excel
+## SPSS
+### Experiment Background
+### Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Practice Problems
+## JAMOVI
+
+<!--chapter:end:09-Factorial.Rmd-->
+
+
+# Lab 10: Mixed Factorial ANOVA
+
+Placeholder
+
+
+## Do you remember things better when you take pictures of them?
+### Study description
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+### Get the data into the format you want
+#### The independent variables
+#### The dependent variable
+#### Transforming the data
+### Look at the data
+### Look at the means
+### Conduct the ANOVA
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### Conduct a Mixed-Factorial Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Practice Problems
+## JAMOVI
+
+<!--chapter:end:10-Factorial2.Rmd-->
+
+
+# Lab 11: Choosing an appropriate statistical test
+
+Placeholder
+
+
+## General Goals
+## Summary of the tests
+### Pearson's *r* correlation coefficient
+### Spearman's *r* correlation coefficient
+### Independent *t*-test
+### Mann-Whitney *U*-test
+## SPSS
+### Pearson and Spearman Correlation
+#### Interpreting and reporting the results
+### Independent *t*-test
+#### Interpreting and reporting the results
+### Mann-Whitney *U*-test
+#### Interpreting and reporting the results
+## Homework (Mar 9 and 10, 2021)
+## Homework (Feb 23 and 24, 2021) 
+
+<!--chapter:end:11-ChoosingTest.Rmd-->
+

@@ -446,3 +446,8 @@ mann-whitney-u-test-1
 interpreting-and-reporting-the-results-2
 homework-mar-9-and-10-2021
 homework-feb-23-and-24-2021
+simulating-the-mean-differences
+checking-assumptions
+performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1
+some-apa-formatting-reminders-for-writing-results-sections-1
+experiment-background-7

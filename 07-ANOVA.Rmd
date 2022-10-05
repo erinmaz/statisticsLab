@@ -2,6 +2,7 @@
 output:
   pdf_document: default
   html_document: default
+  word_document: default
 ---
 # Lab 7 One-way ANOVA
 

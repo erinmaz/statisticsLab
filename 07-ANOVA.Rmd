@@ -977,7 +977,7 @@ In the Results panel, JAMOVI will produce some output depicting the results of t
 knitr::include_graphics('img/OneWayANOVAResultsAssumptionChecks.png')
 ```
 
-Levene’s test is significant (*p* <.05) suggesting that there is a violation of the assumption of homogeneity of variance. In other words, we cannot assume equal variances. Remember that this interpretation of Levene’s test only tells us how to proceed when interpreting the results of the ANOVA. It tells us if we should report the ANOVA using Welch’s adjustment (unequal variances among groups; heterogeneity of variance) or if we could report Fisher’s statistic (equal variances among groups; homogeneity of variance).
+Levene’s test is significant (*p* < .05) suggesting that there is a violation of the assumption of homogeneity of variance. In other words, we cannot assume equal variances. Remember that this interpretation of Levene’s test only tells us how to proceed when interpreting the results of the ANOVA. It tells us if we should report the ANOVA using Welch’s adjustment (unequal variances among groups; heterogeneity of variance) or if we could report Fisher’s statistic (equal variances among groups; homogeneity of variance).
 
 Above the the Assumption Checks and the Group Descriptives table are the results of the One-Way ANOVA. Let’s look at this table. 
 
@@ -1009,7 +1009,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *F*(3, 35.75) = 6.08 **not** *F*(3,35.75)=6.08. There are spaces on either side of =, >, or < symbols.
 
-5. Italicize symbols such as **M*, *SD*, *p*, *t*, *d*, and *F*.
+5. Italicize symbols such as *M*, *SD*, *p*, *t*, *d*, and *F*.
 
 
 Had Levene’s test been non-significant, we might have reported Fisher’s statistic. 

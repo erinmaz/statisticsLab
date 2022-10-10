@@ -445,6 +445,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.7.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.7.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="7.7.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#checking-assumptions"><i class="fa fa-check"></i><b>7.7.2</b> Checking Assumptions</a></li>
 <li class="chapter" data-level="7.7.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><i class="fa fa-check"></i><b>7.7.3</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="7.7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests-1"><i class="fa fa-check"></i><b>7.7.4</b> Follow-Up Tests</a></li>
+<li class="chapter" data-level="7.7.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#unplanned-comparisons-post-hoc-tests-1"><i class="fa fa-check"></i><b>7.7.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
+<li class="chapter" data-level="7.7.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-jamovi-anova"><i class="fa fa-check"></i><b>7.7.6</b> Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 Repeated Measures ANOVA</a>
@@ -1460,6 +1463,71 @@ For the first planned comparison, No-Task Control vs. Reactivation + Tetris, we
 <p>The resulting graph is much easier to read.</p>
 <p><img src="img/ResultingBarGraph.png" /><!-- --></p>
 <p>We can see that the Reactivation + Tetris condition appears to have the smallest mean. As for the others, they are all greater than Reactivation + Tetris, but differ somewhat from each other as well. It is important to know that at this point, we do not know where the significant differences could be. For example, it could be that Reactivation + Tetris is different from only No-Task Control, or it could be that it is different from other groups as well. In order to locate where the differences are, we must conduct additional analyses called either planned or unplanned comparisons.</p>
+</div>
+</div>
+<div id="follow-up-tests-1" class="section level3" number="7.7.4">
+<h3><span class="header-section-number">7.7.4</span> Follow-Up Tests</h3>
+<p>In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.) or you will explore the differences without reason to look at something specific (if you have a significant result in the omnibus ANOVA). This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / <em>a priori</em> comparisons) or you will run a <em>post-hoc</em> test to explore the differences (you had no reason to look for any specific differences).</p>
+<p>In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will <strong>NOT</strong> run conduct both planned comparisons and post-hoc tests in practice – EVER. We are doing this for demonstration purposes only.</p>
+</div>
+<div id="unplanned-comparisons-post-hoc-tests-1" class="section level3" number="7.7.5">
+<h3><span class="header-section-number">7.7.5</span> Unplanned Comparisons: <em>Post-hoc</em> tests</h3>
+<hr />
+<p>One way to find the differences between groups in a one-way, or one-factor, ANOVA is to conduct something called a <em>post-hoc</em> test. This test is referred to as “unplanned” because you only conduct one when you have a significant overall ANOVA. The <em>post-hoc test</em> is neat because it is conveniently summoned during the process of conducting an ANOVA, and its results are presented in a compact table.</p>
+<p>Let’s use a <em>post-hoc</em> test to look at this data. Although there are many types of <em>post-hoc</em> tests, the commonly used is Tukey <em>post-hoc</em> test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let’s begin.</p>
+<p>We are going to go through similar steps as discussed in order to conduct our ANOVA: Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">ANOVA</span>, then <span style="color:blue">One-Way ANOVA…</span></p>
+<p>Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent Variables” field. Then, place <code>Condition</code> into the “Grouping Variable” field.</p>
+<p><img src="img/OneWayANOVACommands_BeforeFollowUps.png" /><!-- --></p>
+<p>Next, click the ribbon labeled <span style="color:blue">Post-Hoc Tests</span>. Below the ribbon, options for various <em>post-hoc</em> tests. We are going to choose <span style="color:blue">Games-Howell</span> (<strong>Question: Why are we selecting Games-Howell?</strong>):</p>
+<p><img src="img/OneWayANOVAPostHocCommands.png" /><!-- --></p>
+<p>In the Results pane, JAMOVI will produce the ANOVA table, and tables for descriptive statistics and assumption checks if you requested them, followed by a table that refer to the <em>post-hoc</em> test. Let’s look at the table:</p>
+<div id="multiple-comparisons-1" class="section level4" number="7.7.5.1">
+<h4><span class="header-section-number">7.7.5.1</span> Multiple Comparisons</h4>
+<hr />
+<p><img src="img/GamesHowellPostHocTest.png" /><!-- --></p>
+<p>Notice that the table avoids redundancy; it considers the comparison between No-task Control and Reactivation + Tetris to be same as that between Reactivation + Tetris and No-task Control. In essence, we only need to look at half of the table. To simplify what we need to read, the JAMOVI output shows only the top right triangle (and excludes the bottom left triangle).</p>
+<p>If you start reading along row 1, we see this row compares No-task Control with Reactivation + Tetris. We see the corresponding <em>p</em>-value for this row is .031. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another.</p>
+<p><img src="img/GamesHowellPostHocTest_SigPValue.png" /><!-- --></p>
+<p>Look through the table: Are there other <em>p</em>-values that are less than alpha (.05)?</p>
+<p>Reactivation + Tetris compared with Reactivation Only has a <em>p</em>-value of .013. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + Tetris is different from No-task Control, and Reactivation + Tetris is different from Reactivation Only.</p>
+<p><img src="img/GamesHowellPostHocTest_2SigPValues.png" /><!-- --></p>
+<p><img src="img/GamesHowellPostHocTest_SigAndNonSigPValues.png" /><!-- --></p>
+<p>Notice that those <em>p</em>-values in yellow boxes are significant while those in black boxes are not significant.</p>
+<p>There is no option to request the effect sizes of these differences here; however, you could calculate them.</p>
+</div>
+</div>
+<div id="other-commands-used-to-conduct-the-one-way-anova-in-jamovi-anova" class="section level3" number="7.7.6">
+<h3><span class="header-section-number">7.7.6</span> Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA</h3>
+<p>Oftentimes, there is more than one way to accomplish a similar task using JAMOVI. We have examined how to conduct an ANOVA using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span> commands. Using the same example, let’s look at another set of commands to request an ANOVA.</p>
+<p>Click on <span style="color:blue">Analyses</span>, <span style="color:blue"> ANOVA</span>, and then <span style="color:blue">ANOVA</span>.</p>
+<p><img src="img/ANOVACommands.png" /><!-- --></p>
+<p>Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent List” field. Then, place <code>Condition</code> into the “Fixed Factor(s)” field.</p>
+<p><img src="img/ANOVACommandsWithVariablesSelected.png" /><!-- --></p>
+<p>Under the “Assumption Checks” ribbon, you could request <span style="color:blue"> Homogeneity test</span>. You could also request <span style="color:blue"> Normality test</span>; however, if you have previously checked the data to see if it met the assumption of normality, you would not need to do so here again.</p>
+<p><img src="img/ANOVACommandsWithAssumptionChecksAndVariance.png" /><!-- --></p>
+<p>JAMOVI should generate three output tables in the output file. Let’s focus on the homogeneity test first. As we noticed when using the other set of commands, you should see that Levene’s test is significant.</p>
+<p><img src="img/ANOVAResultsAssumptionChecks.png" /><!-- --></p>
+<p>Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands: <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>, and by default, the adjustment we might use was selected (Brown-Forsythe or Welch): <span style="color:blue">Don’t assume equal (Welch’s)</span>.</p>
+<p>Although we did not get to request the test both with and without the adjustment using this second set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), we can compare and contrast the regular overall ANOVA tests. While the table generated using these commands is slightly different from the ANOVA table generated using the other commands, you should notice the degrees of freedom, the <em>F</em>-statistic, and the <em>p</em>-value are the same in this table as they were for the row reporting Fisher’s statistic in the table generated with the other set of commands.</p>
+<p>In the Results pane, you should see this ANOVA table:
+<img src="img/ANOVAResultsANOVATable.png" /><!-- --></p>
+<p>Compare the values found in it to the values found in the table we generated with the other set of commands.
+<img src="img/ANOVAResultsANOVATable_StatsHighlighted.png" /><!-- --></p>
+<p><img src="img/OneWayANOVAResultsANOVATable_StatsHighlighted.png" /><!-- --></p>
+<div id="unplanned-comparisons-1" class="section level4" number="7.7.6.1">
+<h4><span class="header-section-number">7.7.6.1</span> Unplanned Comparisons</h4>
+<p>Now, let’s look at the options for follow-up tests that are performed when you do not have <em>a priori</em> hypotheses, but you do have a significant overall <em>F</em>-test. Again, you can click <span style="color:blue">Analyses</span>, then <span style="color:blue">ANOVA</span>, and then <span style="color:blue">ANOVA</span> commands. Place the dependent variable (<code>Days_One_to_Seven_Number_of_Intrusions</code>) in its appropriate field – in the “Dependent Variables” field. Then, place <code>Condition</code> into the “Fixed Factor(s)” field. Alternatively, highlight the results generated in the Results pane.
+This time, click the <span style="color:blue">Post Hoc</span> ribbon. Move the <code>Condition</code> variable from the left field to the right field by highlighting the variable and clicking the right-facing arrow.</p>
+<p><img src="img/ANOVAPostHocCommands.png" /><!-- --></p>
+<p><img src="img/ANOVAPostHocCommands2.png" /><!-- --></p>
+<p>You should notice that by default, Tukey’s correction is selected. You might also notice that there is no option to request Games-Howell. Since we noticed a violation to the assumption of homogeneity of variance and have seen the results of Games-Howell in a previous section, we would have like to have had that option.</p>
+<p><img src="img/ANOVAPostHocCommands3.png" /><!-- --></p>
+<p>You do not need to rerun the commands; you can just look at the results shown for this hypothetical situation:
+While we cannot view request Games-Howell with this set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), you can see that had we had been looking for Tukey’s correction with the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> One-Way ANOVA</span> and requesting Tukey’s), we would have generated the same results in that case as we did using this set of commands.</p>
+<p><img src="img/OneWayANOVAPostHocCommands_Tukeys.png" /><!-- --></p>
+<p>Although the lack of the Games-Howell adjustment is a drawback to this set of commands, an advantage to this set of commands is that you could request the effect sizes here. To request that JAMOVI generate them, click on <span style="color:blue">Effect size</span>.</p>
+<p><img src="img/ANOVAPostHocAndEffectSize.png" /><!-- --></p>
+<p>In fact, it is a good idea to check whether the data set meets the assumption of homogeneity of variance before deciding which menu provides the best options for you.</p>
 
 </div>
 </div>

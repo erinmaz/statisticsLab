@@ -451,3 +451,8 @@ checking-assumptions
 performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1
 some-apa-formatting-reminders-for-writing-results-sections-1
 experiment-background-7
+follow-up-tests-1
+unplanned-comparisons-post-hoc-tests-1
+multiple-comparisons-1
+other-commands-used-to-conduct-the-one-way-anova-in-jamovi-anova
+unplanned-comparisons-1

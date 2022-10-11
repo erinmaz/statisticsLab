@@ -885,7 +885,7 @@ This section is copied almost verbatim, with some editorial changes, from [Answe
 In this lab (and the next lab), we will use JAMOVI to:
 
 1. Perform a One-Factor Analysis of Variance (ANOVA) and Graph the data
-2. Planned comparisons: Use orthogonal contrasts to locate differences
+2. Planned comparisons: Use programmed contrasts to locate differences 
 3. Unplanned comparisons: Use a *post-hoc* test to locate differences
 
 ### Experiment Background
@@ -963,7 +963,7 @@ knitr::include_graphics('img/OneWayANOVAResultsDescriptiveTable.png')
 knitr::include_graphics('img/OneWayANOVAResultsDescriptivePlot.png')
 ```
 
-Although the titles of the conditions on the *x*-axis are not easy to read, the graph can be helpful. Remember that we looked at the four conditions (1 = No-Task Control, 2 = Reactivation+Tetris, 3 = Tetris Only, and 4 = Reactivation Only).
+Although the titles of the conditions on the x-axis are not easy to read, the graph can be helpful. Remember that we looked at the four conditions (1 = No-Task Control, 2 = Reactivation+Tetris, 3 = Tetris Only, and 4 = Reactivation Only).
 
 Then, under **Variances**, we could click <span style="color:blue">Assume equal (Fisher’s)</span> just in case we believe the assumption of homogeneity of variance is upheld. With that assumption in mind, under **Assumption Checks**, we should also select <span style="color:blue">Homogeneity test</span>. You might also request <span style="color:blue">Normality test (Fisher’s)</span>; however, you might not make this selection if you already checked the data set to see if it met this assumption.
 
@@ -977,7 +977,7 @@ In the Results panel, JAMOVI will produce some output depicting the results of t
 knitr::include_graphics('img/OneWayANOVAResultsAssumptionChecks.png')
 ```
 
-Levene’s test is significant (*p* < .05) suggesting that there is a violation of the assumption of homogeneity of variance. In other words, we cannot assume equal variances. Remember that this interpretation of Levene’s test only tells us how to proceed when interpreting the results of the ANOVA. It tells us if we should report the ANOVA using Welch’s adjustment (unequal variances among groups; heterogeneity of variance) or if we could report Fisher’s statistic (equal variances among groups; homogeneity of variance).
+Levene’s test is significant (*p* <.05) suggesting that there is a violation of the assumption of homogeneity of variance. In other words, we cannot assume equal variances. Remember that this interpretation of Levene’s test only tells us how to proceed when interpreting the results of the ANOVA. It tells us if we should report the ANOVA using Welch’s adjustment (unequal variances among groups; heterogeneity of variance) or if we could report Fisher’s statistic (equal variances among groups; homogeneity of variance).
 
 Above the the Assumption Checks and the Group Descriptives table are the results of the One-Way ANOVA. Let’s look at this table. 
 
@@ -993,11 +993,11 @@ knitr::include_graphics('img/OneWayANOVAResultsANOVATableReadingWelchs.png')
 
 We see our *F*-statistic listed is 6.0824, with a *p*-value of .0019. This tests the null hypothesis that there is no difference among the groups. Since *p* is less than our likely alpha level (.05), we can reject the null hypothesis and conclude that there IS a difference somewhere among these groups. We may say it more formally as follows:
 
-A one-way analysis of variance with Welch's adjustment was performed, and the effect of condition on mean intrusive memories over days 1-7 was significant, *F*(3, 35.75) = 6.08, *p* < .05. 
+The effect of condition on mean intrusive memories over days 1-7 was significant, *F*(3, 35.75) = 6.08, *p* < .05. 
 
 #### Some APA formatting reminders for writing results sections
 
-1. Note the name of the test you performed (in this case, one-way analysis of variance, or ANOVA) and whether the result is significant or non-significant *(**Note**: We do not use the word insignificant.)*. 
+1. Always note the name of the test you performed (in this case, one-way analysis of variance, or ANOVA) and whether the result is significant or non-significant *(**Note**: We do not use the word insignificant.)*. 
 
 2. We usually round to two decimal places, except for *p*-values. If your *p*-value was .0001, it would be okay to write *p* = .0001 or *p* < .001.
 
@@ -1009,7 +1009,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *F*(3, 35.75) = 6.08 **not** *F*(3,35.75)=6.08. There are spaces on either side of =, >, or < symbols.
 
-5. Italicize symbols such as *M*, *SD*, *p*, *t*, *d*, and *F*.
+5. Italicize symbols such as **M*, *SD*, *p*, *t*, *d*, and *F*.
 
 
 Had Levene’s test been non-significant, we might have reported Fisher’s statistic. 
@@ -1020,7 +1020,7 @@ knitr::include_graphics('img/OneWayANOVAResultsANOVATableReadingFishers.png')
 
 In that row of the One-Way ANOVA results table, we see our *F*-statistic listed is 3.7948, with a *p*-value of .014. Since *p* is less than our likely alpha level (.05), we would have rejected the null hypothesis and concluded that there IS a difference somewhere among these groups. We might have said it more formally as follows:
 
-A one-way ANOVA was performed, and the effect of condition on mean intrusive memories over days 1-7 was significant, *F*(3, 68) = 3.80, *p* < .05. 
+The effect of condition on mean intrusive memories over days 1-7 was significant, *F*(3, 68) = 3.80, *p* < .05. 
 
 To examine the data further, let's refer to the graph created by JAMOVI: 
 
@@ -1049,15 +1049,13 @@ knitr::include_graphics('img/ResultingBarGraph.png')
 
 We can see that the Reactivation + Tetris condition appears to have the smallest mean. As for the others, they are all greater than Reactivation + Tetris, but differ somewhat from each other as well. It is important to know that at this point, we do not know where the significant differences could be. For example, it could be that Reactivation + Tetris is different from only No-Task Control, or it could be that it is different from other groups as well. In order to locate where the differences are, we must conduct additional analyses called either planned or unplanned comparisons.
 
-
 ### Follow-Up Tests
 
 In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.) or you will explore the differences without reason to look at something specific (if you have a significant result in the omnibus ANOVA).  This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / *a priori* comparisons) or you will run a *post-hoc* test to explore the differences (you had no reason to look for any specific differences).  
 
 In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will **NOT** run conduct both planned comparisons and post-hoc tests in practice – EVER.  We are doing this for demonstration purposes only.
 
-
-### Unplanned Comparisons: *Post-hoc* tests
+#### Unplanned Comparisons: *Post-hoc* tests
 
 ---
 
@@ -1080,11 +1078,6 @@ knitr::include_graphics('img/OneWayANOVAPostHocCommands.png')
 ```
 
 In the Results pane, JAMOVI will produce the ANOVA table, and tables for descriptive statistics and assumption checks if you requested them, followed by a table that refer to the *post-hoc* test. Let's look at the table:
-
-
-#### Multiple Comparisons
-
----
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -1111,12 +1104,11 @@ knitr::include_graphics('img/GamesHowellPostHocTest_2SigPValues.png')
 knitr::include_graphics('img/GamesHowellPostHocTest_SigAndNonSigPValues.png')
 ```
 
-Notice that those *p*-values in yellow boxes are significant while those in black boxes are not significant.
+Notice that those *p*-values in yellow boxes are significant while those in black boxes are not significant. (Note: We could have asked JAMOVI to flag the significant *p*-values.)
 
 There is no option to request the effect sizes of these differences here; however, you could calculate them.
 
-
-### Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA
+##### Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA
 
 Oftentimes, there is more than one way to accomplish a similar task using JAMOVI. We have examined how to conduct an ANOVA using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span> commands. Using the same example, let’s look at another set of commands to request an ANOVA.
 
@@ -1145,7 +1137,7 @@ JAMOVI should generate three output tables in the output file. Let’s focus on 
 knitr::include_graphics('img/ANOVAResultsAssumptionChecks.png')
 ```
 
-Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands: <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>, and by default, the adjustment we might use was selected (Brown-Forsythe or Welch): <span style="color:blue">Don’t assume equal (Welch’s)</span>.
+Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>), and by default, the adjustment we might use was selected (Welch's). The selection reads as <span style="color:blue">Don’t assume equal (Welch’s)</span>.
 
 Although we did not get to request the test both with and without the adjustment using this second set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), we can compare and contrast the regular overall ANOVA tests. While the table generated using these commands is slightly different from the ANOVA table generated using the other commands, you should notice the degrees of freedom, the *F*-statistic, and the *p*-value are the same in this table as they were for the row reporting Fisher’s statistic in the table generated with the other set of commands.
 
@@ -1192,9 +1184,111 @@ knitr::include_graphics('img/OneWayANOVAPostHocCommands_Tukeys.png')
 
 
 Although the lack of the Games-Howell adjustment is a drawback to this set of commands, an advantage to this set of commands is that you could request the effect sizes here. To request that JAMOVI generate them, click on <span style="color:blue">Effect size</span>.
-
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVAPostHocAndEffectSize.png')
 ```
 
 In fact, it is a good idea to check whether the data set meets the assumption of homogeneity of variance before deciding which menu provides the best options for you.
+
+
+#### Planned Comparisons
+
+For the sake of our demonstration, let’s follow the planned comparisons that the researchers reported. It is very likely their planned comparisons were based on the literature about visual images and memory. They report three planned comparisons:
+
+1) No-Task Control vs. Reactivation + Tetris
+
+2) Reactivation + Tetris vs. Tetris Only
+
+3) Reactivation + Tetris vs. Reactivation Only
+
+We did not discuss how to access planned comparisons in the first set of menu options in JAMOVI (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>) because it would require us to transform the grouping variable or independent variable for each and every comparison and then to use a different type of analysis. This is tedious work.
+
+You can more easily request *a priori* follow-up tests using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span> commands. After having selected the previously noted commands, click on the “Contrasts” ribbon and click the black arrow next to the word none in the field to the right. You should see a menu appear giving you options for programmed contrasts.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVAPlannedContrastsOptions.png')
+```
+
+Please visit [Learning Statistics with Jamovi]( https://davidfoxcroft.github.io/lsj-book/) for more information on the types of contrasts that are programmed into JAMOVI. For a quick reference, let’s refer to Table 14.15 from Navarro and Foxcroft (2019). 
+
+<div class="marginnote">
+This following table is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). </div>
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ContrastTypesTableFromLSJ.png')
+```
+
+The best contrast option for our example is Simple; however, our groups are not in the order that allows this comparison. We want to compare Group 1 (No-Task Control) to Group 2 (Reactivation + Tetris), Group 2 (Reactivation + Tetris) to Group 3 (Tetris Only), and Group 2 (Reactivation + Tetris) to Group 4 (Reactivation Only). One way to accomplish a change in order so that we could use Simple is to move the Reactivation + Tetris group to first position in the order. 
+
+Just in case you have not yet encountered recoding or need a refresher, let’s discuss one way it is accomplished in JAMOVI. First, click <span style="color:blue">Data</span>, and then, while the variable to be change is highlighted (which can be accomplished by clicking on the top of that column) click <span style="color:blue">Transform</span>. When the variable-attributes pane appears, rename the “new variable” to something that makes sense. We will use `Condition_Recoded` for our purposes. Also, under “using transform,” select <span style="color:blue">Create New Transform…</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingConditionForPlannedContrasts.png')
+```
+
+When the pane regarding the transformation appears, indicate what should be changed. In our current example, we want to switch the first and second groups in terms of their position (We want Reactivation + Tetris to be in the first place and No-Task Control to be in the second place when the comparisons are made). Click <span style="color:blue">Add recode condition</span> to begin recoding.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/TransformationForPlannedContrasts.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/TransformationForPlannedContrasts2.png')
+```
+
+Click <span style="color:blue">Add recode condition</span> to add other conditions. We do not want any changes to Groups 3 (Tetris Only) or 4 (Reactivation Only).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/TransformationForPlannedContrasts3.png')
+```
+
+We can close out the transformation by clicking the downward-facing arrow and then the upward-facing arrow.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ClosingTransformation.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ClosingTransformation2.png')
+```
+
+In the data, you will see the newly created variable for recoding condition, `Condition_Recoded`.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodedConditionVariableResults.png')
+```
+
+Now, we can return to the planned contrasts, and move the new variable over. Click <span style="color:blue">Analyses</span>, then <span style="color:blue">ANOVA</span>, and then <span style="color:blue">ANOVA</span> commands. Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its appropriate field – in the “Dependent Variable” field. Then, place `Condition_Recoded` (or whatever you named your new variable) into the "Fixed Factor(s)" field. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVACommandsWithRecodedCondition.png')
+```
+Click on the “Contrasts” ribbon, and select <span style="color:blue">Contrasts</span>. Use the drop-down menu by “Contrast” to select Simple. Then, click <span style="color:blue">Change</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVACommandsWithRecodedCondition.png')
+```
+
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVACommandsWithPlannedContrast.png')
+```
+
+In the Results pane, JAMOVI will generate an ANOVA table similar to what we discussed previously plus a novel table called “Contrasts”.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVAResultsANOVATable2.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ANOVAPlannedContrastsResults.png')
+```
+
+While the convenience of a programmed contrast may be appealing, you should also notice a drawback of accessing the contrasts via the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span> commands: not only are we unable to request both the regular and the robust ANOVA, but also we are unable to look at contrasts with corrections for the violation to the assumption of homogeneity of variance. As you may recall from class, it would be better to look at these follow-up tests with Hedge’s correction.
+
+Remember: It is a good idea to check your data set before deciding whether a menu and set of commands is helpful in a given case. 
+
+### Writing your Results
+
+coming soon

@@ -1053,7 +1053,7 @@ We can see that the Reactivation + Tetris condition appears to have the smallest
 
 In practice, you know before conducting your experiment and analyses whether you have reason to look for specific differences (based on what the literature says, theories that exist, etc.) or you will explore the differences without reason to look at something specific (if you have a significant result in the omnibus ANOVA).  This differentiation will determine whether you will conduct orthogonal linear contrasts / planned comparisons (you had reasons to look for specific differences / *a priori* comparisons) or you will run a *post-hoc* test to explore the differences (you had no reason to look for any specific differences).  
 
-In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will **NOT** run conduct both planned comparisons and post-hoc tests in practice – EVER.  We are doing this for demonstration purposes only.
+In lab, we are going to take both approaches with the same example just to discuss how to do each type of follow-up. You will **NOT** run conduct both planned comparisons and *post-hoc* tests in practice – EVER.  We are doing this for demonstration purposes only.
 
 #### Unplanned Comparisons: *Post-hoc* tests
 
@@ -1061,7 +1061,7 @@ In lab, we are going to take both approaches with the same example just to discu
 
 One way to find the differences between groups in a one-way, or one-factor, ANOVA is to conduct something called a *post-hoc* test. This test is referred to as "unplanned" because you only conduct one when you have a significant overall ANOVA. The *post-hoc test* is neat because it is conveniently summoned during the process of conducting an ANOVA, and its results are presented in a compact table. 
 
-Let's use a *post-hoc* test to look at this data. Although there are many types of *post-hoc* tests, the commonly used is Tukey *post-hoc* test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let's begin.
+Let's use a *post-hoc* test to look at this data. Although there are many types of *post-hoc* tests, a commonly used one is Tukey *post-hoc* test when the assumption of homogeneity of variance is met. When that assumption is violated, Games-Howell is commonly used. Let's begin.
 
 We are going to go through similar steps as discussed in order to conduct our ANOVA: Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">ANOVA</span>, then <span style="color:blue">One-Way ANOVA...</span>
 
@@ -1071,13 +1071,13 @@ Place the dependent variable (`Days_One_to_Seven_Number_of_Intrusions`) in its a
 knitr::include_graphics('img/OneWayANOVACommands_BeforeFollowUps.png')
 ```
 
-Next, click the ribbon labeled <span style="color:blue">Post-Hoc Tests</span>. Below the ribbon, options for various *post-hoc* tests. We are going to choose <span style="color:blue">Games-Howell</span> (**Question: Why are we selecting Games-Howell?**):
+Next, click the ribbon labeled <span style="color:blue">Post-Hoc Tests</span>. Below the ribbon, options for various *post-hoc* tests are available. We are going to choose <span style="color:blue">Games-Howell</span> (**Question: Why are we selecting Games-Howell?**):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/OneWayANOVAPostHocCommands.png')
 ```
 
-In the Results pane, JAMOVI will produce the ANOVA table, and tables for descriptive statistics and assumption checks if you requested them, followed by a table that refer to the *post-hoc* test. Let's look at the table:
+In the Results pane, JAMOVI will produce the ANOVA table, and tables for descriptive statistics and assumption checks if you requested them, followed by a table that refers to the *post-hoc* test. Let's look at the table:
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -1108,6 +1108,10 @@ Notice that those *p*-values in yellow boxes are significant while those in blac
 
 There is no option to request the effect sizes of these differences here; however, you could calculate them.
 
+##### Writing the Results 
+
+An ANOVA using the Welch adjustment revealed a significant effect of condition on number of image-based intrusive memories recorded in the diary after intervention, *F*(3, 35.75) = 6.08, *p*= .002. A post-hoc Games-Howell test indicated that the mean number of memories for the Reactivation + Tetris group was significantly different from the mean of two other groups: No-Task Control, *p* = .031, and Reactivation Only, *p* = .013. The mean number of memories for the Reactivation + Tetris group was not significantly different from the mean of the Tetris Only group, *p* > .05. Specifically, the Reactivation + Tetris group reported fewer memories (*M* = 1.89, *SD* = 1.75) than the No-Task Control group (*M* = 5.11, *SD* = 4.23) and the Reactivation Only group (*M* = 4.83, *SD* = 3.33), but not significantly fewer memories than the Tetris Only group (*M* = 3.89, *SD* = 2.89). No significant differences were found between any other groups, *p* > .05.
+
 ##### Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA
 
 Oftentimes, there is more than one way to accomplish a similar task using JAMOVI. We have examined how to conduct an ANOVA using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span> commands. Using the same example, let’s look at another set of commands to request an ANOVA.
@@ -1137,7 +1141,7 @@ JAMOVI should generate three output tables in the output file. Let’s focus on 
 knitr::include_graphics('img/ANOVAResultsAssumptionChecks.png')
 ```
 
-Based on that significant result, we would prefer to use an adjusted ANOVA. Recall that adjustment can be requested using the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>), and by default, the adjustment we might use was selected (Welch's). The selection reads as <span style="color:blue">Don’t assume equal (Welch’s)</span>.
+Based on that significant result, we would prefer to use an ANOVA with Welch's adjustment (robust ANOVA). Recall that adjustment can be requested using the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>), and by default, the adjustment we might use was selected (Welch's). The selection reads as <span style="color:blue">Don’t assume equal (Welch’s)</span>. This robust ANOVA is not available to using the current menu options (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span>). That is a drawback to this set of commands. This is to say that this set of commands is only useful when homogeneity of variances can be assumed.
 
 Although we did not get to request the test both with and without the adjustment using this second set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), we can compare and contrast the regular overall ANOVA tests. While the table generated using these commands is slightly different from the ANOVA table generated using the other commands, you should notice the degrees of freedom, the *F*-statistic, and the *p*-value are the same in this table as they were for the row reporting Fisher’s statistic in the table generated with the other set of commands.
 
@@ -1146,7 +1150,8 @@ In the Results pane, you should see this ANOVA table:
 knitr::include_graphics('img/ANOVAResultsANOVATable.png')
 ```
 
-Compare the values found in it to the values found in the table we generated with the other set of commands.
+Let's compare the values found in it to the values found in the table we generated with the other set of commands.
+
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVAResultsANOVATable_StatsHighlighted.png')
 ```
@@ -1154,6 +1159,7 @@ knitr::include_graphics('img/ANOVAResultsANOVATable_StatsHighlighted.png')
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/OneWayANOVAResultsANOVATable_StatsHighlighted.png')
 ```
+Both tables report the same statistics.
 
 #### Unplanned Comparisons
 
@@ -1176,7 +1182,7 @@ knitr::include_graphics('img/ANOVAPostHocCommands3.png')
 ```
 
 You do not need to rerun the commands; you can just look at the results shown for this hypothetical situation:
-While we cannot view request Games-Howell with this set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), you can see that had we had been looking for Tukey’s correction with the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> One-Way ANOVA</span> and requesting Tukey’s), we would have generated the same results in that case as we did using this set of commands.
+While we cannot view request Games-Howell with this set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> ANOVA</span>), you can see that had we been looking for Tukey’s correction with the other set of commands (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue"> One-Way ANOVA</span> and requesting Tukey’s), we would have generated the same results in that case as we did using this set of commands.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/OneWayANOVAPostHocCommands_Tukeys.png')
@@ -1188,7 +1194,7 @@ Although the lack of the Games-Howell adjustment is a drawback to this set of co
 knitr::include_graphics('img/ANOVAPostHocAndEffectSize.png')
 ```
 
-In fact, it is a good idea to check whether the data set meets the assumption of homogeneity of variance before deciding which menu provides the best options for you.
+Remember: It is a good idea to check whether the data set meets the assumption of homogeneity of variance before deciding which menu provides the best options for you.
 
 
 #### Planned Comparisons
@@ -1203,7 +1209,7 @@ For the sake of our demonstration, let’s follow the planned comparisons that t
 
 We did not discuss how to access planned comparisons in the first set of menu options in JAMOVI (<span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">One-Way ANOVA</span>) because it would require us to transform the grouping variable or independent variable for each and every comparison and then to use a different type of analysis. This is tedious work.
 
-You can more easily request *a priori* follow-up tests using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span> commands. After having selected the previously noted commands, click on the “Contrasts” ribbon and click the black arrow next to the word none in the field to the right. You should see a menu appear giving you options for programmed contrasts.
+You can more easily request *a priori* follow-up tests using the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span> commands. After having selected the previously noted commands, click on the “Contrasts” ribbon and click the black arrow next to the word "none" in the field to the right. You should see a menu appear giving you options for programmed contrasts.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVAPlannedContrastsOptions.png')
@@ -1263,12 +1269,12 @@ Now, we can return to the planned contrasts, and move the new variable over. Cli
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVACommandsWithRecodedCondition.png')
 ```
-Click on the “Contrasts” ribbon, and select <span style="color:blue">Contrasts</span>. Use the drop-down menu by “Contrast” to select Simple. Then, click <span style="color:blue">Change</span>. 
+
+Click on the “Contrasts” ribbon. Use the drop-down menu by the word "none" to select Simple.  
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVACommandsWithRecodedCondition.png')
 ```
-
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -1289,6 +1295,6 @@ While the convenience of a programmed contrast may be appealing, you should also
 
 Remember: It is a good idea to check your data set before deciding whether a menu and set of commands is helpful in a given case. 
 
-### Writing your Results
 
-coming soon
+
+

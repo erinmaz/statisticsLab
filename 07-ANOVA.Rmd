@@ -1110,7 +1110,7 @@ There is no option to request the effect sizes of these differences here; howeve
 
 ##### Writing the Results 
 
-An ANOVA using the Welch adjustment revealed a significant effect of condition on number of image-based intrusive memories recorded in the diary after intervention, *F*(3, 35.75) = 6.08, *p*= .002. A post-hoc Games-Howell test indicated that the mean number of memories for the Reactivation + Tetris group was significantly different from the mean of two other groups: No-Task Control, *p* = .031, and Reactivation Only, *p* = .013. The mean number of memories for the Reactivation + Tetris group was not significantly different from the mean of the Tetris Only group, *p* > .05. Specifically, the Reactivation + Tetris group reported fewer memories (*M* = 1.89, *SD* = 1.75) than the No-Task Control group (*M* = 5.11, *SD* = 4.23) and the Reactivation Only group (*M* = 4.83, *SD* = 3.33), but not significantly fewer memories than the Tetris Only group (*M* = 3.89, *SD* = 2.89). No significant differences were found between any other groups, *p* > .05.
+An ANOVA using the Welch adjustment revealed a significant effect of condition on number of image-based intrusive memories recorded in the diary after intervention, *F*(3, 35.75) = 6.08, *p*= .002. A *post-hoc* Games-Howell test indicated that the mean number of memories for the Reactivation + Tetris group was significantly different from the mean of two other groups: No-Task Control, *p* = .031, and Reactivation Only, *p* = .013. The mean number of memories for the Reactivation + Tetris group was not significantly different from the mean of the Tetris Only group, *p* > .05. Specifically, the Reactivation + Tetris group reported fewer memories (*M* = 1.89, *SD* = 1.75) than the No-Task Control group (*M* = 5.11, *SD* = 4.23) and the Reactivation Only group (*M* = 4.83, *SD* = 3.33), but not significantly fewer memories than the Tetris Only group (*M* = 3.89, *SD* = 2.89). No significant differences were found between any other groups, *p* > .05.
 
 ##### Other Commands Used to Conduct the One-Way ANOVA in JAMOVI: ANOVA
 
@@ -1238,9 +1238,12 @@ When the pane regarding the transformation appears, indicate what should be chan
 knitr::include_graphics('img/TransformationForPlannedContrasts.png')
 ```
 
+
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/TransformationForPlannedContrasts2.png')
 ```
+
+You may notice the term `$source` in this window. That term represents that this transformation you are creating could be used with other variables to be recoded later (so long as your intention in those subsequent transformations is to switch groups 1 and 2 and to keep all other groups in the original order). In the transformation we will create, our `$source` is `Condition`.
 
 Click <span style="color:blue">Add recode condition</span> to add other conditions. We do not want any changes to Groups 3 (Tetris Only) or 4 (Reactivation Only).
 
@@ -1289,6 +1292,17 @@ knitr::include_graphics('img/ANOVAResultsANOVATable2.png')
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/ANOVAPlannedContrastsResults.png')
+```
+
+It would be nice to see the names of those groups, rather than the numbers. If you like, try to add notes to your table to demonstrate what the numbers represent:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/AddingNotesToResultsTables.png')
+```
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/AddingNotesToResultsTables2.png')
 ```
 
 While the convenience of a programmed contrast may be appealing, you should also notice a drawback of accessing the contrasts via the <span style="color:blue">Analyses</span> → <span style="color:blue">ANOVA</span> → <span style="color:blue">ANOVA</span> commands: not only are we unable to request both the regular and the robust ANOVA, but also we are unable to look at contrasts with corrections for the violation to the assumption of homogeneity of variance. As you may recall from class, it would be better to look at these follow-up tests with Hedge’s correction.

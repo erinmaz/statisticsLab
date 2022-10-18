@@ -459,3 +459,9 @@ unplanned-comparisons-1
 planned-comparisons-1
 writing-your-results
 writing-the-results
+checking-assumptions-1
+conduct-and-graph-one-factor-repeated-measures-anova-1
+conduct-planned-comparisons-using-a-paired-samples-t-test-1
+experiment-background-8
+control-vs-reactivationtetris
+tetris_only-vs-reactivationtetris

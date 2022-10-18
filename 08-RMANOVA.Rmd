@@ -598,6 +598,133 @@ ___
 
 ## JAMOVI
 
-How to do it in JAMOVI
+
+<div class="marginnote">
+This section is copied, almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 8, Section 8.6, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-8-repeated-measures-anova.html#spss-8), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
+</div>
 
 
+
+In this lab, we will use JAMOVI to:
+
+1. Conduct and graph One-Factor Repeated Measures ANOVA
+2. Conduct planned comparisons using a paired-samples *t*-test
+
+### Experiment Background
+
+---
+
+As described in more detail at the [beginning of this lab manual section](https://www.erinmazerolle.com/statisticsLab/lab-8-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try), Behmer and Crump (2017) recruited 38 subjects to type words presented on a screen as quickly as they could. The independent variable was typing material and it had 3 levels: Normal (5 letter English words), Bigrams (5 letter non-words that have properties like real words), and Random (random 5 letter strings). The authors wanted to know whether reaction time (RT) was different according to the type of word being typed.
+
+Dependent Variables: There were three dependent variables, that all measured different aspects of typing performance. Reaction times (RTs) were defined as the temporal interval between seeing a stimulus (to type), and then starting to type it (first key press). Inter-keystroke intervals (IKSIs) are the times between each key-press. Last, accuracy was also measured (correct or incorrect key-presses). For this analysis we will use `Pure RTs` as our one DV.
+
+Nota bene: This is a repeated measures design because each participant typed letter strings from the Normal, Bigrams, and Random conditions.
+
+### Checking Assumptions
+
+Recall that the Repeated Measures ANOVA assumes: 1. The sampling distributions are normally distributed. Consider the central limit theorem and histograms. 2. The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet. 3. The scores are independent. Consider the experimental design and/or look at the JAMOVI data spreadsheet to verify. We would typically assume that random sampling was used. 4. Sphericity is met. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.
+
+Challenge: On your own and using the data set to be used in our lab demonstration, check the other assumptions. Were these assumptions met or violated? How do you know? (**Be prepared to answer these questions at the beginning of lab.**)
+
+### Conduct and graph One-Factor Repeated Measures ANOVA
+
+---
+ [Here](https://moodle.stfx.ca/mod/resource/view.php?id=926115) is the link to the data set we will use; it's called BehmerCrumpMeanRTs.omv. When you open the file, it should look like this:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/BehmerCrump_FileView.png')
+```
+
+Notice that this file contains means. Each person's data is contained within a row: there are 3 measurements corresponding to all stimulus conditions. To calculate a One-Factor Repeated Measures ANOVA, go to <span style="color:blue">Analyses</span>, <span style="color:blue">ANOVA</span>, and then <span style="color:blue">Repeated Measures ANOVA</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVACommands.png')
+```
+
+In the pane where you enter the commands, you can label your within-subjects variable. In the window called Repeated Measures Factors, type the name after highlight the area where you read “RM Factor 1”. Remember, we are looking at a **One-Factor** Repeated Measures ANOVA, so we only need to concern ourselves with this section. In other words, we do not have other “factors” to consider (We can ignore “RM Factor 2”.). 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_NamingTheFactor.png')
+```
+
+At this point, we need to define the levels of this factor. Notice that only two levels are being displayed in JAMOVI under the “Repeated Measures Factors” window. In its font colour, “Level 3” is light grey, rather than black. (*Even if we move the names of the levels into the “Repeated Measures Cells,” JAMOVI does not rename the levels above.*) If you want the names of the levels to show in your output, type the names of the levels in where you see Level 1, Level 2, and so on in the “Repeated Measures Factors” window. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_NamingTheLevels.png')
+```
+
+Then, you should highlight and **drag** each level from the window on the left to the corresponding area in the “Repeated Measures Cells” window on the right. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_BigramsMoved.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_NormalMoved.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_RandomMoved.png')
+```
+
+Before we can look at the results JAMOVI has been generating in the Results pane, we should request Mauchly’s test. To do this, move down in commands pane (on the left), and under the “Assumption Checks” ribbon, select <span style="color:blue">Sphericity tests</span>. Just in case the assumption of sphericity is violated, you could request corrections at this time; click <span style="color:blue">Greenhouse-Geisser</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Sphericity.png')
+```
+
+JAMOVI will produce a few tables in the Results pane. Much like you checked the results of Levene’s test before moving ahead to read the One-Way ANOVA table (when you performed a One-Factor or One-Way ANOVA), you should check the results of Mauchly’s test before moving ahead to read the Repeated Measures ANOVA table. Let’s do that; let’s check the results of Mauchly’s test.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_MauchlysTestResults.png')
+```
+
+Mauchly’s test indicates a significant result, *p* < .0001. The assumption of sphericity is violated. We should read the results of the Repeated Measures ANOVA table with the sphericity correction, the Greenhouse-Geisser correction, applied. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Results.png')
+```
+
+To make it easier for you to read, let’s cover any information that we will not use in our interpretation of the results.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Results_Simplified.png')
+```
+
+From this table, we see that there is a significant effect of stimulus on reaction time, *F*(1.17, 43.46) = 420.33, *p* < .0001. We might say it more formally as follows:
+
+Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+
+Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_MauchlysTestResults.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Results_Simplified.png')
+```
+
+Remember this is an omnibus ANOVA result. We do not know how many differences among means exist or between which means they would be found.
+
+In order to graph this data and look at the means, go to back into the analysis commands. Remember, you can do this by clicking on the results generated in the Results pane. The commands will appear on the left of your JAMOVI file. Now, scroll down to the “Estimated Marginal Means” ribbon. Move the factor (in our example, `Typing_Material_Condition`, to the Marginal Means window under “Term 1”. Then, under “Output”, select <span style="color:blue">Marginal means plot</span> and <span style="color:blue">Marginal means tables</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Graph.png')
+```
+
+In the Results pane, you should now see a graph and a table. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_GraphOfMeans_Results.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_EMMTable_Results.png')
+```
+
+To the best of our knowledge, there is currently no way to request a bar graph depicting all three means using JAMOVI.
+
+### Conduct planned comparisons using a paired-samples t-test
+
+Under development

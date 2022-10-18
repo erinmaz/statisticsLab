@@ -598,6 +598,7 @@ ___
 
 ## JAMOVI
 
+---
 
 <div class="marginnote">
 This section is copied, almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 8, Section 8.6, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-8-repeated-measures-anova.html#spss-8), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
@@ -608,7 +609,8 @@ This section is copied, almost verbatim, with some editorial changes, from [Answ
 In this lab, we will use JAMOVI to:
 
 1. Conduct and graph One-Factor Repeated Measures ANOVA
-2. Conduct planned comparisons using a paired-samples *t*-test
+2. Conduct follow-up tests
+
 
 ### Experiment Background
 
@@ -620,15 +622,21 @@ Dependent Variables: There were three dependent variables, that all measured dif
 
 Nota bene: This is a repeated measures design because each participant typed letter strings from the Normal, Bigrams, and Random conditions.
 
+
 ### Checking Assumptions
 
-Recall that the Repeated Measures ANOVA assumes: 1. The sampling distributions are normally distributed. Consider the central limit theorem and histograms. 2. The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet. 3. The scores are independent. Consider the experimental design and/or look at the JAMOVI data spreadsheet to verify. We would typically assume that random sampling was used. 4. Sphericity is met. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.
+Recall that the Repeated Measures ANOVA assumes: 
+1. The sampling distributions are normally distributed. Consider the central limit theorem and histograms. 
+2. The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet. 
+3. The data are spherical. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.
 
 Challenge: On your own and using the data set to be used in our lab demonstration, check the other assumptions. Were these assumptions met or violated? How do you know? (**Be prepared to answer these questions at the beginning of lab.**)
+
 
 ### Conduct and graph One-Factor Repeated Measures ANOVA
 
 ---
+
  [Here](https://moodle.stfx.ca/mod/resource/view.php?id=926115) is the link to the data set we will use; it's called BehmerCrumpMeanRTs.omv. When you open the file, it should look like this:
 
 ```{r , echo=FALSE,dev='png'}
@@ -653,7 +661,7 @@ At this point, we need to define the levels of this factor. Notice that only two
 knitr::include_graphics('img/RM_ANOVA_NamingTheLevels.png')
 ```
 
-Then, you should highlight and **drag** each level from the window on the left to the corresponding area in the “Repeated Measures Cells” window on the right. 
+Then, you should highlight and **drag** each and every level of the factor (aka variable) from the window on the left to the corresponding area in the “Repeated Measures Cells” window on the right. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/RM_ANOVA_BigramsMoved.png')
@@ -691,9 +699,14 @@ To make it easier for you to read, let’s cover any information that we will no
 knitr::include_graphics('img/RM_ANOVA_Results_Simplified.png')
 ```
 
-From this table, we see that there is a significant effect of stimulus on reaction time, *F*(1.17, 43.46) = 420.33, *p* < .0001. We might say it more formally as follows:
+From this table, we see that there is a significant effect of stimulus on reaction time because *p* < .0001. We might say it more formally as follows:
 
-Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+A one-way repeated measures ANOVA was conducted, and Greenhouse, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+
+OR something like this:
+
+A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* > .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+
 
 Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?
 
@@ -723,8 +736,93 @@ knitr::include_graphics('img/RM_ANOVA_GraphOfMeans_Results.png')
 knitr::include_graphics('img/RM_ANOVA_EMMTable_Results.png')
 ```
 
+Think about an answer to this question: Looking at the graph and considering the mean of each level, where would you guess at least one significant difference in mean reaction times between stimulus levels might be found?
+
 To the best of our knowledge, there is currently no way to request a bar graph depicting all three means using JAMOVI.
 
-### Conduct planned comparisons using a paired-samples t-test
+### Conduct follow-up tests
 
-Under development
+
+#### Planned comparisons
+
+If you had *a priori* hypotheses about where the difference(s) may be, you would conduct planned comparisons. In JAMOVI, you would do this by conducting paired-samples *t*-tests because, in each comparison, the reactions times are being measured from the same people. Remember to apply a Bonferroni correction (Divide your alpha by the number of *t*-tests planned.).
+
+
+#### *Post-hoc* tests
+
+If you had no *a priori* hypotheses about where the difference(s) may be, you would conduct unplanned comparisons, or *post-hoc* tests. To find out where the difference among these 3 conditions exists, we will use *post-hoc* tests. 
+We could go through the menus again to request the *post-hoc* tests, or we could simplify the output in the Results pane by clicking on the Results to have the commands pop up to the left. Let’s do the latter. Next, w scroll down to the “Post Hoc Tests” ribbon, move the factor (`Typing_Material_Condition`) to the window on the right, and then select the correction you want applied. Let’s select <span style="color:blue">Bonferroni</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_PostHocCommands.png')
+```
+
+JAMOVI will produce a new table in the Results pane. It will appear before the graph JAMOVI created based on commands entered previously. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_PostHocResults.png')
+```
+
+Before reading ahead, think about this: We had already written information about the results of the omnibus ANOVA. What would we now add to this write-up to help readers understand the significant result in more detail?
+
+If we wish to view and report the descriptive statistics, we could find the mean reaction times for each level (typing material condition), as well as the 95% confidence interval, in the “Estimated Marginal Means” table in the Results pane. This table does not give us the standard deviation, though. To get the standard deviations, use the commands with which you are familiar: <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_DescStats.png')
+```
+
+To get the effect sizes, you will need to calculate Cohen’s *d*. An appropriate formula to use follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RM_ANOVA_Cohensd.png')
+```
+
+We will need to calculate the effect size for each comparison we will report. Remember, there were three unique comparisons. We can take the mean difference from the “Post Hoc Comparisons” table or fill in each pair of means and take the difference.
+The calculation of effect size for the comparison between the Bigram and Normal conditions follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/EffectSize_BigramsVsNormal.png')
+```
+
+The calculation of effect size for the comparison between the Bigram and Random conditions follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/EffectSize_BigramsVsRandom.png')
+```
+
+The calculation of effect size for the comparison between the Normal and Normal conditions follows:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/EffectSize_NormalVsRandom.png')
+```
+
+Based on the statistics presented in tables presented in this section, we would add to what we had already formally written about the omnibus ANOVA and construct a Results section something like this:
+
+A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* > .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001. *Post-hoc* pairwise comparisons with Bonferroni corrections were performed. It was found that mean reaction time in the Bigram condition (*M* = 431.99, *SD* = 103.63, 95% CI [397.93, 466.05]) was significantly different from that in the Normal condition (*M* = 365.76, *SD* = 85.69, 95% CI [337.60, 393.93]), *p* < .0001, *d* = 0.64, and the mean reaction time in the Bigram condition was also significantly different from that in the Random condition (*M* = 596.23, *SD* = 139.77, 95% CI [550.29, 642.29]), *p* < .0001, *d* = -1.58. Furthermore, the mean reaction time in the Normal condition was significantly different from that in the Random condition, *p* < .0001, *d* = -2.69.
+
+
+### Some APA formatting reminders for writing results sections
+
+1. Always note the name of the test you performed (in this case, one-way analysis of variance, or ANOVA) and whether the result is significant or non-significant *(**Note**: We do not use the word insignificant.)*. 
+
+2. We usually round to two decimal places, except for *p*-values. If your *p*-value was .0001, it would be okay to write *p* = .0001 or *p* < .001.
+
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .05 not *p* < 0.05) or before ε (ex. ε = .59 not ε = 0.59).
+<div class="marginnote">
+Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
+</div>
+
+4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *F*(3, 35.75) = 6.08 **not** *F*(3,35.75)=6.08. There are spaces on either side of =, >, or < symbols.
+
+5. Italicize symbols such as *M*, *SD*, *p*, *t*, *d*, and *F*.
+
+
+### Homework
+
+See [Moodle](https://moodle.stfx.ca/course/view.php?id=28797).
+
+
+### Practice Problems
+
+UNDER CONSTRUCTION
+

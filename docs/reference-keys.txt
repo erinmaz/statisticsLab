@@ -465,3 +465,9 @@ conduct-planned-comparisons-using-a-paired-samples-t-test-1
 experiment-background-8
 control-vs-reactivationtetris
 tetris_only-vs-reactivationtetris
+conduct-follow-up-tests
+planned-comparisons-2
+post-hoc-tests
+some-apa-formatting-reminders-for-writing-results-sections-2
+homework-5
+practice-problems-7

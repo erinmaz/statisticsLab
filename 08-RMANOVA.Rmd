@@ -649,7 +649,7 @@ Notice that this file contains means. Each person's data is contained within a r
 knitr::include_graphics('img/RM_ANOVACommands.png')
 ```
 
-In the pane where you enter the commands, you can label your within-subjects variable. In the window called Repeated Measures Factors, type the name after highlight the area where you read “RM Factor 1”. Remember, we are looking at a **One-Factor** Repeated Measures ANOVA, so we only need to concern ourselves with this section. In other words, we do not have other “factors” to consider (We can ignore “RM Factor 2”.). 
+In the pane where you enter the commands, you can label your within-subjects variable. In the window called "Repeated Measures Factors," type the name after highlighting or clicking in the area where you read “RM Factor 1”. Remember, we are looking at a **One-Factor** Repeated Measures ANOVA, so we only need to concern ourselves with this section. In other words, we do not have other “factors” to consider (We can ignore “RM Factor 2”.). 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/RM_ANOVA_NamingTheFactor.png')
@@ -699,13 +699,13 @@ To make it easier for you to read, let’s cover any information that we will no
 knitr::include_graphics('img/RM_ANOVA_Results_Simplified.png')
 ```
 
-From this table, we see that there is a significant effect of stimulus on reaction time because *p* < .0001. We might say it more formally as follows:
+From this table, we see that there is a significant effect of stimulus (or typing material) on reaction time because *p* < .0001. We might say it more formally as follows:
 
 A one-way repeated measures ANOVA was conducted, and Greenhouse, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
 
 OR something like this:
 
-A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* > .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* < .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
 
 
 Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?
@@ -736,7 +736,7 @@ knitr::include_graphics('img/RM_ANOVA_GraphOfMeans_Results.png')
 knitr::include_graphics('img/RM_ANOVA_EMMTable_Results.png')
 ```
 
-Think about an answer to this question: Looking at the graph and considering the mean of each level, where would you guess at least one significant difference in mean reaction times between stimulus levels might be found?
+**Think about an answer to this question**: Looking at the graph and considering the mean of each level, where would you guess at least one significant difference in mean reaction times between stimulus levels might be found?
 
 To the best of our knowledge, there is currently no way to request a bar graph depicting all three means using JAMOVI.
 
@@ -751,7 +751,7 @@ If you had *a priori* hypotheses about where the difference(s) may be, you would
 #### *Post-hoc* tests
 
 If you had no *a priori* hypotheses about where the difference(s) may be, you would conduct unplanned comparisons, or *post-hoc* tests. To find out where the difference among these 3 conditions exists, we will use *post-hoc* tests. 
-We could go through the menus again to request the *post-hoc* tests, or we could simplify the output in the Results pane by clicking on the Results to have the commands pop up to the left. Let’s do the latter. Next, w scroll down to the “Post Hoc Tests” ribbon, move the factor (`Typing_Material_Condition`) to the window on the right, and then select the correction you want applied. Let’s select <span style="color:blue">Bonferroni</span>.
+We could go through the menus again to request the *post-hoc* tests, or we could simplify the output in the Results pane by clicking on the Results to have the commands pop up to the left. Let’s do the latter. Next, scroll down to the “Post Hoc Tests” ribbon, move the factor (`Typing_Material_Condition`) to the window on the right, and then select the correction you want applied. Let’s select <span style="color:blue">Bonferroni</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/RM_ANOVA_PostHocCommands.png')
@@ -763,7 +763,7 @@ JAMOVI will produce a new table in the Results pane. It will appear before the g
 knitr::include_graphics('img/RM_ANOVA_PostHocResults.png')
 ```
 
-Before reading ahead, think about this: We had already written information about the results of the omnibus ANOVA. What would we now add to this write-up to help readers understand the significant result in more detail?
+Before reading ahead, **think about this**: We had already written information about the results of the omnibus ANOVA. What would we now add to this write-up to help readers understand the significant result in more detail?
 
 If we wish to view and report the descriptive statistics, we could find the mean reaction times for each level (typing material condition), as well as the 95% confidence interval, in the “Estimated Marginal Means” table in the Results pane. This table does not give us the standard deviation, though. To get the standard deviations, use the commands with which you are familiar: <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>.
 

@@ -1163,7 +1163,7 @@ C. Discuss whether the general pattern is the same as before.</p>
 <p><img src="img/BehmerCrump_FileView.png" /><!-- --></p>
 <p>Notice that this file contains means. Each person’s data is contained within a row: there are 3 measurements corresponding to all stimulus conditions. To calculate a One-Factor Repeated Measures ANOVA, go to <span style="color:blue">Analyses</span>, <span style="color:blue">ANOVA</span>, and then <span style="color:blue">Repeated Measures ANOVA</span>.</p>
 <p><img src="img/RM_ANOVACommands.png" /><!-- --></p>
-<p>In the pane where you enter the commands, you can label your within-subjects variable. In the window called Repeated Measures Factors, type the name after highlight the area where you read “RM Factor 1”. Remember, we are looking at a <strong>One-Factor</strong> Repeated Measures ANOVA, so we only need to concern ourselves with this section. In other words, we do not have other “factors” to consider (We can ignore “RM Factor 2”.).</p>
+<p>In the pane where you enter the commands, you can label your within-subjects variable. In the window called “Repeated Measures Factors,” type the name after highlighting or clicking in the area where you read “RM Factor 1”. Remember, we are looking at a <strong>One-Factor</strong> Repeated Measures ANOVA, so we only need to concern ourselves with this section. In other words, we do not have other “factors” to consider (We can ignore “RM Factor 2”.).</p>
 <p><img src="img/RM_ANOVA_NamingTheFactor.png" /><!-- --></p>
 <p>At this point, we need to define the levels of this factor. Notice that only two levels are being displayed in JAMOVI under the “Repeated Measures Factors” window. In its font colour, “Level 3” is light grey, rather than black. (<em>Even if we move the names of the levels into the “Repeated Measures Cells,” JAMOVI does not rename the levels above.</em>) If you want the names of the levels to show in your output, type the names of the levels in where you see Level 1, Level 2, and so on in the “Repeated Measures Factors” window.</p>
 <p><img src="img/RM_ANOVA_NamingTheLevels.png" /><!-- --></p>
@@ -1179,10 +1179,10 @@ C. Discuss whether the general pattern is the same as before.</p>
 <p><img src="img/RM_ANOVA_Results.png" /><!-- --></p>
 <p>To make it easier for you to read, let’s cover any information that we will not use in our interpretation of the results.</p>
 <p><img src="img/RM_ANOVA_Results_Simplified.png" /><!-- --></p>
-<p>From this table, we see that there is a significant effect of stimulus on reaction time because <em>p</em> &lt; .0001. We might say it more formally as follows:</p>
+<p>From this table, we see that there is a significant effect of stimulus (or typing material) on reaction time because <em>p</em> &lt; .0001. We might say it more formally as follows:</p>
 <p>A one-way repeated measures ANOVA was conducted, and Greenhouse, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
 <p>OR something like this:</p>
-<p>A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, <em>χ^2</em> = 0.30, <em>p</em> &gt; .05. The results indicated that reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
+<p>A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, <em>χ^2</em> = 0.30, <em>p</em> &lt; .05. The results indicated that reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
 <p>Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?</p>
 <p><img src="img/RM_ANOVA_MauchlysTestResults.png" /><!-- --></p>
 <p><img src="img/RM_ANOVA_Results_Simplified.png" /><!-- --></p>
@@ -1192,7 +1192,7 @@ C. Discuss whether the general pattern is the same as before.</p>
 <p>In the Results pane, you should now see a graph and a table.</p>
 <p><img src="img/RM_ANOVA_GraphOfMeans_Results.png" /><!-- --></p>
 <p><img src="img/RM_ANOVA_EMMTable_Results.png" /><!-- --></p>
-<p>Think about an answer to this question: Looking at the graph and considering the mean of each level, where would you guess at least one significant difference in mean reaction times between stimulus levels might be found?</p>
+<p><strong>Think about an answer to this question</strong>: Looking at the graph and considering the mean of each level, where would you guess at least one significant difference in mean reaction times between stimulus levels might be found?</p>
 <p>To the best of our knowledge, there is currently no way to request a bar graph depicting all three means using JAMOVI.</p>
 </div>
 <div id="conduct-follow-up-tests" class="section level3 hasAnchor" number="8.7.4">
@@ -1204,11 +1204,11 @@ C. Discuss whether the general pattern is the same as before.</p>
 <div id="post-hoc-tests" class="section level4 hasAnchor" number="8.7.4.2">
 <h4><span class="header-section-number">8.7.4.2</span> <em>Post-hoc</em> tests<a href="lab-8-repeated-measures-anova.html#post-hoc-tests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>If you had no <em>a priori</em> hypotheses about where the difference(s) may be, you would conduct unplanned comparisons, or <em>post-hoc</em> tests. To find out where the difference among these 3 conditions exists, we will use <em>post-hoc</em> tests.
-We could go through the menus again to request the <em>post-hoc</em> tests, or we could simplify the output in the Results pane by clicking on the Results to have the commands pop up to the left. Let’s do the latter. Next, w scroll down to the “Post Hoc Tests” ribbon, move the factor (<code>Typing_Material_Condition</code>) to the window on the right, and then select the correction you want applied. Let’s select <span style="color:blue">Bonferroni</span>.</p>
+We could go through the menus again to request the <em>post-hoc</em> tests, or we could simplify the output in the Results pane by clicking on the Results to have the commands pop up to the left. Let’s do the latter. Next, scroll down to the “Post Hoc Tests” ribbon, move the factor (<code>Typing_Material_Condition</code>) to the window on the right, and then select the correction you want applied. Let’s select <span style="color:blue">Bonferroni</span>.</p>
 <p><img src="img/RM_ANOVA_PostHocCommands.png" /><!-- --></p>
 <p>JAMOVI will produce a new table in the Results pane. It will appear before the graph JAMOVI created based on commands entered previously.</p>
 <p><img src="img/RM_ANOVA_PostHocResults.png" /><!-- --></p>
-<p>Before reading ahead, think about this: We had already written information about the results of the omnibus ANOVA. What would we now add to this write-up to help readers understand the significant result in more detail?</p>
+<p>Before reading ahead, <strong>think about this</strong>: We had already written information about the results of the omnibus ANOVA. What would we now add to this write-up to help readers understand the significant result in more detail?</p>
 <p>If we wish to view and report the descriptive statistics, we could find the mean reaction times for each level (typing material condition), as well as the 95% confidence interval, in the “Estimated Marginal Means” table in the Results pane. This table does not give us the standard deviation, though. To get the standard deviations, use the commands with which you are familiar: <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>.</p>
 <p><img src="img/RM_ANOVA_DescStats.png" /><!-- --></p>
 <p>To get the effect sizes, you will need to calculate Cohen’s <em>d</em>. An appropriate formula to use follows:</p>

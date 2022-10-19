@@ -827,5 +827,7 @@ See [Moodle](https://moodle.stfx.ca/course/view.php?id=28797).
 
 2. In the lab demonstration, we saw that the assumption of sphericity was violated. Try changing data points until the assumption is upheld while aiming to minimize the changes you make overall.
 
-3. Use this [data set]() to practice checking assumptions and running a repeated measures ANOVA with follow-up testsing.
+3. Use the Mean Accuracy Scores 2 [data set](https://moodle.stfx.ca/mod/resource/view.php?id=926491) to practice checking assumptions and running a repeated measures ANOVA with follow-up testsing.
+
+4. When we discussed *t*-tests, we talked about the Mehr, Song, and Spelke (2016) study. Have a look at that [data set](https://moodle.stfx.ca/mod/resource/view.php?id=901715), and try to develop a research question that might be answered with a repeated measures ANOVA. (*Hint*: It is okay to use only the variable name, rather than the phrase for what was measured, in your research question.)
 

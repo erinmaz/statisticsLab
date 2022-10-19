@@ -1150,11 +1150,13 @@ C. Discuss whether the general pattern is the same as before.</p>
 </div>
 <div id="checking-assumptions-1" class="section level3 hasAnchor" number="8.7.2">
 <h3><span class="header-section-number">8.7.2</span> Checking Assumptions<a href="lab-8-repeated-measures-anova.html#checking-assumptions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Recall that the Repeated Measures ANOVA assumes:
-1. The sampling distributions are normally distributed. Consider the central limit theorem and histograms.
-2. The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet.
-3. The data are spherical. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.</p>
-<p>Challenge: On your own and using the data set to be used in our lab demonstration, check the other assumptions. Were these assumptions met or violated? How do you know? (<strong>Be prepared to answer these questions at the beginning of lab.</strong>)</p>
+<p>Recall that the Repeated Measures ANOVA assumes:</p>
+<ol style="list-style-type: decimal">
+<li><p>The sampling distributions are normally distributed. Consider the central limit theorem and/or histograms.</p></li>
+<li><p>The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet.</p></li>
+<li><p>The data are spherical. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.</p></li>
+</ol>
+<p><strong>Challenge</strong>: On your own and using the data set to be used in our lab demonstration, check the first two assumptions. Were these assumptions met or violated? How do you know? (<strong>Be prepared to answer these questions at the beginning of lab.</strong>)</p>
 </div>
 <div id="conduct-and-graph-one-factor-repeated-measures-anova-1" class="section level3 hasAnchor" number="8.7.3">
 <h3><span class="header-section-number">8.7.3</span> Conduct and graph One-Factor Repeated Measures ANOVA<a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1180,9 +1182,7 @@ C. Discuss whether the general pattern is the same as before.</p>
 <p>To make it easier for you to read, let’s cover any information that we will not use in our interpretation of the results.</p>
 <p><img src="img/RM_ANOVA_Results_Simplified.png" /><!-- --></p>
 <p>From this table, we see that there is a significant effect of stimulus (or typing material) on reaction time because <em>p</em> &lt; .0001. We might say it more formally as follows:</p>
-<p>A one-way repeated measures ANOVA was conducted, and Greenhouse, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
-<p>OR something like this:</p>
-<p>A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, <em>χ^2</em> = 0.30, <em>p</em> &lt; .05. The results indicated that reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
+<p>A one-way repeated measures ANOVA was conducted, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59) because Mauchly’s test indicated a violation to the assumption, <em>p</em> &lt; .05. The mean reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001.</p>
 <p>Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?</p>
 <p><img src="img/RM_ANOVA_MauchlysTestResults.png" /><!-- --></p>
 <p><img src="img/RM_ANOVA_Results_Simplified.png" /><!-- --></p>
@@ -1199,7 +1199,7 @@ C. Discuss whether the general pattern is the same as before.</p>
 <h3><span class="header-section-number">8.7.4</span> Conduct follow-up tests<a href="lab-8-repeated-measures-anova.html#conduct-follow-up-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="planned-comparisons-2" class="section level4 hasAnchor" number="8.7.4.1">
 <h4><span class="header-section-number">8.7.4.1</span> Planned comparisons<a href="lab-8-repeated-measures-anova.html#planned-comparisons-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>If you had <em>a priori</em> hypotheses about where the difference(s) may be, you would conduct planned comparisons. In JAMOVI, you would do this by conducting paired-samples <em>t</em>-tests because, in each comparison, the reactions times are being measured from the same people. Remember to apply a Bonferroni correction (Divide your alpha by the number of <em>t</em>-tests planned.).</p>
+<p>If you had <em>a priori</em> hypotheses about where the difference(s) may be, you would conduct planned comparisons. In JAMOVI, there is no easy way for us to request these planned comparisons because there are no built-in or programmed contrasts, and there is no way to chunk variance. As such, you would do conduct planned comparisons in JAMOVI by conducting paired-samples <em>t</em>-tests because, in each comparison, the reactions times are being measured from the same people.</p>
 </div>
 <div id="post-hoc-tests" class="section level4 hasAnchor" number="8.7.4.2">
 <h4><span class="header-section-number">8.7.4.2</span> <em>Post-hoc</em> tests<a href="lab-8-repeated-measures-anova.html#post-hoc-tests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1221,7 +1221,7 @@ The calculation of effect size for the comparison between the Bigram and Normal 
 <p>The calculation of effect size for the comparison between the Normal and Normal conditions follows:</p>
 <p><img src="img/EffectSize_NormalVsRandom.png" /><!-- --></p>
 <p>Based on the statistics presented in tables presented in this section, we would add to what we had already formally written about the omnibus ANOVA and construct a Results section something like this:</p>
-<p>A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity because Mauchly’s test indicated a violation to the assumption, <em>χ^2</em> = 0.30, <em>p</em> &gt; .05. The results indicated that reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001. <em>Post-hoc</em> pairwise comparisons with Bonferroni corrections were performed. It was found that mean reaction time in the Bigram condition (<em>M</em> = 431.99, <em>SD</em> = 103.63, 95% CI [397.93, 466.05]) was significantly different from that in the Normal condition (<em>M</em> = 365.76, <em>SD</em> = 85.69, 95% CI [337.60, 393.93]), <em>p</em> &lt; .0001, <em>d</em> = 0.64, and the mean reaction time in the Bigram condition was also significantly different from that in the Random condition (<em>M</em> = 596.23, <em>SD</em> = 139.77, 95% CI [550.29, 642.29]), <em>p</em> &lt; .0001, <em>d</em> = -1.58. Furthermore, the mean reaction time in the Normal condition was significantly different from that in the Random condition, <em>p</em> &lt; .0001, <em>d</em> = -2.69.</p>
+<p>A one-way repeated measures ANOVA was conducted, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59) because Mauchly’s test indicated a violation to the assumption, <em>p</em> &lt; .05. The mean reaction times were significantly different among the types of stimulus, <em>F</em>(1.17, 43.46) = 420.33, <em>p</em> &lt; .0001. <em>Post-hoc</em> pairwise comparisons with Bonferroni corrections were performed. It was found that mean reaction time in the Bigram condition (<em>M</em> = 431.99, <em>SD</em> = 103.63, 95% CI [397.93, 466.05]) was significantly different from that in the Normal condition (<em>M</em> = 365.76, <em>SD</em> = 85.69, 95% CI [337.60, 393.93]), <em>p</em> &lt; .0001, <em>d</em> = 0.64, and the mean reaction time in the Bigram condition was also significantly different from that in the Random condition (<em>M</em> = 596.23, <em>SD</em> = 139.77, 95% CI [550.29, 642.29]), <em>p</em> &lt; .0001, <em>d</em> = -1.58. Furthermore, the mean reaction time in the Normal condition was significantly different from that in the Random condition, <em>p</em> &lt; .0001, <em>d</em> = -2.69.</p>
 </div>
 </div>
 <div id="some-apa-formatting-reminders-for-writing-results-sections-2" class="section level3 hasAnchor" number="8.7.5">
@@ -1243,7 +1243,11 @@ The calculation of effect size for the comparison between the Bigram and Normal 
 </div>
 <div id="practice-problems-5" class="section level3 hasAnchor" number="8.7.7">
 <h3><span class="header-section-number">8.7.7</span> Practice Problems<a href="lab-8-repeated-measures-anova.html#practice-problems-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>UNDER CONSTRUCTION</p>
+<ol style="list-style-type: decimal">
+<li><p>In the lab demonstration, we saw that the assumption of sphericity was violated. Try changing data points until the assumption is upheld.</p></li>
+<li><p>In the lab demonstration, we saw that the assumption of sphericity was violated. Try changing data points until the assumption is upheld while aiming to minimize the changes you make overall.</p></li>
+<li><p>Use this <a href="">data set</a> to practice checking assumptions and running a repeated measures ANOVA with follow-up testsing.</p></li>
+</ol>
 
 </div>
 </div>

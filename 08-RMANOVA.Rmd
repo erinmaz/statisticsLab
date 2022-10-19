@@ -626,18 +626,21 @@ Nota bene: This is a repeated measures design because each participant typed let
 ### Checking Assumptions
 
 Recall that the Repeated Measures ANOVA assumes: 
-1. The sampling distributions are normally distributed. Consider the central limit theorem and histograms. 
+
+1. The sampling distributions are normally distributed. Consider the central limit theorem and/or histograms. 
+
 2. The data are measured using an interval or a ratio scale. Consider what you know about how the data were collected and/or look at the variable attributes in the JAMOVI data spreadsheet. 
+
 3. The data are spherical. (No two conditions are any more dependent than any other two. OR There is equal correlation among pairs of conditions. OR There is equal variance among differences between pairs of conditions.) To test this, we use Mauchly’s test. This test can be requested when you run the Repeated Measures ANOVA in JAMOVI.
 
-Challenge: On your own and using the data set to be used in our lab demonstration, check the other assumptions. Were these assumptions met or violated? How do you know? (**Be prepared to answer these questions at the beginning of lab.**)
+**Challenge**: On your own and using the data set to be used in our lab demonstration, check the first two assumptions. Were these assumptions met or violated? How do you know? (**Be prepared to answer these questions at the beginning of lab.**)
 
 
 ### Conduct and graph One-Factor Repeated Measures ANOVA
 
 ---
 
- [Here](https://moodle.stfx.ca/mod/resource/view.php?id=926115) is the link to the data set we will use; it's called BehmerCrumpMeanRTs.omv. When you open the file, it should look like this:
+[Here](https://moodle.stfx.ca/mod/resource/view.php?id=926115) is the link to the data set we will use; it's called BehmerCrumpMeanRTs.omv. When you open the file, it should look like this:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/BehmerCrump_FileView.png')
@@ -701,11 +704,7 @@ knitr::include_graphics('img/RM_ANOVA_Results_Simplified.png')
 
 From this table, we see that there is a significant effect of stimulus (or typing material) on reaction time because *p* < .0001. We might say it more formally as follows:
 
-A one-way repeated measures ANOVA was conducted, and Greenhouse, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59). The reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
-
-OR something like this:
-
-A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity were used because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* < .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
+A one-way repeated measures ANOVA was conducted, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59) because Mauchly’s test indicated a violation to the assumption, *p* < .05. The mean reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001.
 
 
 Have a look at the two tables from which these results were taken. Can you see where these statistics were taken from?
@@ -745,7 +744,7 @@ To the best of our knowledge, there is currently no way to request a bar graph d
 
 #### Planned comparisons
 
-If you had *a priori* hypotheses about where the difference(s) may be, you would conduct planned comparisons. In JAMOVI, you would do this by conducting paired-samples *t*-tests because, in each comparison, the reactions times are being measured from the same people. Remember to apply a Bonferroni correction (Divide your alpha by the number of *t*-tests planned.).
+If you had *a priori* hypotheses about where the difference(s) may be, you would conduct planned comparisons. In JAMOVI, there is no easy way for us to request these planned comparisons because there are no built-in or programmed contrasts, and there is no way to chunk variance. As such, you would do conduct planned comparisons in JAMOVI by conducting paired-samples *t*-tests because, in each comparison, the reactions times are being measured from the same people. 
 
 
 #### *Post-hoc* tests
@@ -798,7 +797,7 @@ knitr::include_graphics('img/EffectSize_NormalVsRandom.png')
 
 Based on the statistics presented in tables presented in this section, we would add to what we had already formally written about the omnibus ANOVA and construct a Results section something like this:
 
-A one-way repeated measures ANOVA was conducted with Greenhouse-Geisser estimates of sphericity because Mauchly’s test indicated a violation to the assumption, *χ^2* = 0.30, *p* > .05. The results indicated that reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001. *Post-hoc* pairwise comparisons with Bonferroni corrections were performed. It was found that mean reaction time in the Bigram condition (*M* = 431.99, *SD* = 103.63, 95% CI [397.93, 466.05]) was significantly different from that in the Normal condition (*M* = 365.76, *SD* = 85.69, 95% CI [337.60, 393.93]), *p* < .0001, *d* = 0.64, and the mean reaction time in the Bigram condition was also significantly different from that in the Random condition (*M* = 596.23, *SD* = 139.77, 95% CI [550.29, 642.29]), *p* < .0001, *d* = -1.58. Furthermore, the mean reaction time in the Normal condition was significantly different from that in the Random condition, *p* < .0001, *d* = -2.69.
+A one-way repeated measures ANOVA was conducted, and Greenhouse-Geisser estimates of sphericity were used to correct the degrees of freedom (ε = .59) because Mauchly’s test indicated a violation to the assumption, *p* < .05. The mean reaction times were significantly different among the types of stimulus, *F*(1.17, 43.46) = 420.33, *p* < .0001. *Post-hoc* pairwise comparisons with Bonferroni corrections were performed. It was found that mean reaction time in the Bigram condition (*M* = 431.99, *SD* = 103.63, 95% CI [397.93, 466.05]) was significantly different from that in the Normal condition (*M* = 365.76, *SD* = 85.69, 95% CI [337.60, 393.93]), *p* < .0001, *d* = 0.64, and the mean reaction time in the Bigram condition was also significantly different from that in the Random condition (*M* = 596.23, *SD* = 139.77, 95% CI [550.29, 642.29]), *p* < .0001, *d* = -1.58. Furthermore, the mean reaction time in the Normal condition was significantly different from that in the Random condition, *p* < .0001, *d* = -2.69.
 
 
 ### Some APA formatting reminders for writing results sections
@@ -824,5 +823,9 @@ See [Moodle](https://moodle.stfx.ca/course/view.php?id=28797).
 
 ### Practice Problems
 
-UNDER CONSTRUCTION
+1. In the lab demonstration, we saw that the assumption of sphericity was violated. Try changing data points until the assumption is upheld.
+
+2. In the lab demonstration, we saw that the assumption of sphericity was violated. Try changing data points until the assumption is upheld while aiming to minimize the changes you make overall.
+
+3. Use this [data set]() to practice checking assumptions and running a repeated measures ANOVA with follow-up testsing.
 

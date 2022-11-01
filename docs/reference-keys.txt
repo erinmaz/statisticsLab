@@ -471,3 +471,17 @@ post-hoc-tests
 some-apa-formatting-reminders-for-writing-results-sections-2
 homework-5
 practice-problems-7
+jamovi-correlation-for-psyc-394-students
+pre-lab-reading-and-tasks-2
+assumptions-of-correlation-1
+download-and-open-data
+install-scatr-module-if-required
+correlation-coefficient-for-bivariate-data-1
+correlation-matrix-2
+apa-format-reporting-of-a-correlation-1
+correlation-and-scatterplots-2
+getting-a-visual-of-the-correlation-1
+optional-activities-2
+example-answers-to-optional-activities-2
+homework-6
+practice-problems-8

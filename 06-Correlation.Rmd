@@ -1205,7 +1205,7 @@ This best fit line goes from the upper top left to the bottom right; it has a ne
 
 ### Optional activities
 
-Consider a [dataset](Thttps://moodle.stfx.ca/mod/resource/view.php?id=930603) from Schroeder and Epley (2005). Rather than asking about a difference in how candidates were perceived by recruiters as the authors did, imagine you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this using correlation. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
+Consider a [dataset](https://moodle.stfx.ca/mod/resource/view.php?id=930603) from Schroeder and Epley (2005). Rather than asking about a difference in how candidates were perceived by recruiters as the authors did, imagine you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this using correlation. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Correlation Matrix</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.61.png')

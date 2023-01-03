@@ -1,17 +1,12 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Lab 1: Graphing Data
-
 <script>
 $("#coverpic").hide();
 </script>
 
+
 <span class="newthought">
 The commonality between science and art is in trying to see profoundly - to develop strategies of seeing and showing.
----Edward Tufte
+-Edward Tufte
 </span>
 
 As we have found out from the textbook and lecture, when we measure things, we get lots of numbers. Too many. Sometimes so many your head explodes just thinking about them. One of **the most helpful things** you can do to begin to make sense of these numbers, is to look at them in graphical form. Unfortunately, for sight-impaired individuals, graphical summary of data is much more well-developed than other forms of summarizing data for our human senses. Some researchers are developing auditory versions of visual graphs, a process called **sonification**, but we aren't prepared to demonstrate that here. Instead, we will make charts, and plots, and things to look at, rather than the numbers themselves, mainly because these are tools that are easiest to get our hands on, they are the most developed, and they work really well for visual summary. If time permits, at some point I would like to come back here and do the same things with sonification. I think that would be really, really cool!
@@ -649,9 +644,9 @@ In this lab, we will get you acquainted with the SPSS software layout and graph 
 2. Reviewing variable properties and the Variable View tab
 3. Opening a data file and producing different types of graphs
 
+
 ### Opening SPSS and the SPSS layout
 
----
 
 Your lab instructor will take you through the process of opening the SPSS program. You may double-click on its icon located on the desktop of your lab computer, or you may find it using the Start menu. Once the program loads,  you will be prompted with a pop-up window that asks you which file you would like to open. For now, we will be examining the basic layout of SPSS without a data set, so you can click <span style="color:blue">Cancel</span>. 
 
@@ -667,9 +662,9 @@ Notice at the bottom of your window there are two tabs; "Data View" and "Variabl
 knitr::include_graphics('img/1.4.12.png')
 ```
 
+
 ### Reviewing variable properties and the Variable View tab
 
----
 
 Now that we have some data entered, we might want to name our variable so that it's evident our measurements represent heights. In order to view or modify variable names and other properties, look to the bottom of your SPSS window and switch over to the "Data View" tab. Once you do this, your window will appear as follows:
 
@@ -688,18 +683,16 @@ Here, you can edit the name of your variables, and specify their properties. Var
 + Values: For nominal scale data, let's say 1 represents male and 2 represents female, this is where you include the values and their corresponding labels. 
 + Measure: This variable property allows you to specify the nature of your data. Depending on the kind of scale you are using, you will choose a different measure type. Nominal and ordinal are chosen for nominal and ordinal scales, respectively. "Scale" is used when your data is measured on a ratio or interval scale. 
 
-### Opening a data file and producing different types of graphs
 
----
+### Opening a data file and producing different types of graphs
 
 
 Now that we know about the properties of the SPSS spreadsheet window, let's open a data file and learn how to make some sense of it by creating different types of graphs. Use the 'nyc_films.sav' file from the zip file you downloaded in section 0.2.3, which contains information about film permits (requests made by film companies to shoot TV shows and movies on location) filed in New York City.
 
 Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Switch over to Variable View for details of each variable. 
 
-#### Bar Graphs
 
----
+#### Bar Graphs
 
 
 Now, back to Data View. We will not be working with every single variable in this spreadsheet, but we'll select a few interesting ones with which to answer questions. Let's start with `borough`. Suppose we wanted to know which borough receives the most film permits (you can probably guess which one is most popular). Let's use SPSS to produce a graph to answer this question. With your data file open, go up to the top menu and choose <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>. You will see an entire list of possible graphs we can use to plot our data. 
@@ -726,9 +719,8 @@ SPSS will produce a new output window which will contain the bar graph you have 
 knitr::include_graphics('img/1.4.17.png')
 ```
 
-#### Histograms
 
----
+#### Histograms
 
 
 Now, let's use a different data set to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). In the previous example, boroughs were simply labels or names, so we used a nominal scale and therefore a bar graph. Here, we will deal with life expectancy (measured in years), an interval scale measure. Open life_expectancy.sav (from the zip file you downloaded from 0.2.3). Open this file and examine its rows and columns. Each column represents a year during which life expectancy was measured. Each row represents a different country. 
@@ -751,9 +743,9 @@ SPSS will produce an output window containing the distribution of life expectanc
 knitr::include_graphics('img/1.4.20.png')
 ```
 
+
 #### Scatterplots
 
----
 
 
 Now, we will look to a different type of data plot; the scatterplot. A scatterplot allows us to visualize bivariate data, that is, data for which there are two measurements per individual. For example, we may ask whether life expectancy in a country (or how long you live, on average) is related to the average income. Using the life_expectancy.sav data file, let's plot both variables: `2017 [v219]` and `income`. The income variable in the spreadsheet refers to data collected in 2017 by the Better Life Initiative. Notice not all the countries listed have estimates for average annual income. For those that do, this value represents household net adjusted income (annual) in US dollars. 
@@ -793,7 +785,7 @@ Create the following three graphs in a single SPSS output file (*.spv). Upload t
 2. If you haven't already, create a histogram for life expectancy in the year 2017.
 3. Create a scatterplot of life expectancy of each country in 1800 vs. that of 2018. 
 
-## JAMOVI - Week 3 - February 1 & 2
+## JAMOVI - Week 7 - February 28th & March 1st
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 1, Section 1.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#spss-1), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
@@ -805,9 +797,9 @@ In this lab, it is hoped you will become more acquainted with the jamovi softwar
 2. Reviewing variable properties and the Setup button 
 3. Opening a data file and producing different types of graphs 
 
+
 ### Opening jamovi and reviewing the jamovi layout
 
----
 
 To open jamovi if you are using Windows, either double-click its icon located on the desktop of your computer, or click it in the Start menu. 
 
@@ -828,9 +820,9 @@ As explained in [Section 0.6.1.2](https://www.erinmazerolle.com/statisticsLab/so
 knitr::include_graphics('img/1.5.1.2.png')
 ```
 
+
 ### Reviewing variable properties and the Setup button
 
----
 
 Now that we have some data entered, we might want to name our variable so that it’s evident our measurements represent heights. In order to view or modify variable names and other properties, look to the menu ribbon at the top of the jamovi window. While you are within any column representing a variable, you can click the <span style="color:blue">Setup</span> button which is visible when the <span style="color:blue">Data</span> tab is highlighted. This <span style="color:blue">Setup</span> button will reveal, in a top panel, information about the attributes of the variable. 
 
@@ -865,7 +857,6 @@ You may want to click the arrowhead that points to the left or right to move to 
 
 ### Importing a data file
 
----
 
 Now that we know about the properties of the jamovi spreadsheet window, let’s import a data file and learn how to make some sense of it by creating different types of graphs. (It is not important for you to <span style="color:blue">Save</span> the jamovi file you just created because we will not be doing anything with those fictitious height data). 
 
@@ -884,9 +875,9 @@ Switch over to the Variables tab for details of each variable. JAMOVI has attemp
 
 ### Graphs
 
----
 
 #### Bar Graphs and Histograms
+
 
 Bar graphs and histograms are different types of graphs. Bar graphs are used for nominal variables. The y-axis of a bar graph could be the mean of each level, the frequency of each level, or some other summary of each level. 
 
@@ -917,20 +908,16 @@ knitr::include_graphics('img/1.5.3.9C.png')
 
 Let's plot a histogram for this variable. We will do this as a live demo in the lab.
 
+
 ### Homework
 
----
 
 See Moodle.
-<br><br><br>
-
-
 
 
 ### Thinking about Data - Practice Questions
 
----
- 
+
 1. Describe what histograms are, how to interpret them, and what they are useful for. You should answer each of these questions:
 
 The answers to each of these questions are worth .25 points each, for a total of 2 points.

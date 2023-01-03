@@ -1,5 +1,4 @@
 # Lab 5: *t*-test (Independent Sample)
-
 <script>
 $("#coverpic").hide();
 </script>
@@ -9,7 +8,7 @@ $("#coverpic").hide();
 I think he [Gosset] was really the big influence in
 statistics... he asked the questions and Pearson and Fisher put them into statistical language, and then Neyman came to work with the mathematics. But I think
 most of it came from Gosset.
----F. N. David
+-F. N. David
 </span>
 
 
@@ -269,9 +268,8 @@ In this lab, we will use SPSS to:
 1. Perform an independent-samples *t*-test
 2. Graph the data
 
-### Experiment Background
 
----
+### Experiment Background
 
 
 Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).
@@ -280,9 +278,8 @@ To conduct this study, the authors randomly assigned 39 professional recruiters 
 
 So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, and we can find out.
 
-### Performing an independent-samples *t*-test
 
----
+### Performing an independent-samples *t*-test
 
 
 First, let's open the relevant data file in SPSS. You should have already downloaded this data file from section 0.2.3 of the lab manual - we used it when we worked through the exercises in Chapter 12 of the lab manual. The file we are working with in this lesson is called "SchroederEpley2015_Study4_data.sav". Your data should look like this:
@@ -355,9 +352,8 @@ Italicize symbols such as *p* and *t*.
 
 There are spaces on either side of =, >, or < symbols. 
 
-### Graphing your data
 
----
+### Graphing your data
 
 
 `CONDITION` in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">Bar...</span>
@@ -394,13 +390,15 @@ knitr::include_graphics('img/7.4.22.png')
 
 **Note**: It's always a good idea to compare your graph to the descriptive statistics to make sure it looks right. 
 
+
 ### Optional activities
 
----
 
 At this point, you've covered everything you need to successfully complete the homework assignment below. However, there are a number of different analyses we can practice with this dataset. This section walks you through some optional analyses to consolidate what we've already covered as well as add breadth. If you're running out of time, skip down to the Homework now. You can return to these exercises later (i.e., when studying).
 
+
 #### Using a cut point to define groups for an independent *t*-test
+
 
 Sometimes you will see groups defined with a non-nominal independent variable. For example, in class we talked about defining countries as "overweight" or "not overweight" depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.
 
@@ -507,7 +505,7 @@ knitr::include_graphics('img/7.4.34.png')
 For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 
-## JAMOVI - Week 9 - March 22 & 23
+## JAMOVI - Week 9 - March 21st & 22nd
 
 
 <div class="marginnote">
@@ -520,13 +518,17 @@ In this lab, we will use jamovi to:
 2. Graph the data
 3. Report the results of an independent-samples *t*-test
 
+
 ### Pre-lab reading and tasks
+
 
 1. Read the following section about an experiment performed by Schroeder and Epley.
 2. Download the data set (instructions are below).
 3. Have the data set opened in JAMOVI before lab begins.
 
+
 #### Experiment Background
+
 
 Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).
 
@@ -539,13 +541,16 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 
 #### Download and open the data
 
+
 The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=26030#section-12). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
 ```
 
+
 ### Performing an independent-samples *t*-test
+
 
 For our analysis, we will focus on only one of the three measures mentioned above: `intellect`. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch). 
 
@@ -639,7 +644,9 @@ What does the *t*-test tell us about the data? We can put our finding into words
 
 Recruiter ratings of candidates' intellect when the recruiters heard audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than their ratings of candidates' intellect when they read transcripts of pitches (*M* = 4.65, *SD* = 1.91). An independent *t*-test revealed that this difference is significant, *t*(33.4) = -3.48, *p* < .05, *d* = -1.12 (95% CI [-1.85,-0.39]).
 
+
 ### Some APA formatting reminders for writing results sections
+
 
 1. Always note the name of the test you performed (in this case, independent *t*-test, or independent-samples *t*-test) and whether the result is significant or non-significant (*Note: We do not use the word insignificant.*). 
 
@@ -657,6 +664,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 
 ### Graphing your data
+
 
 `CONDITION` in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>.
 
@@ -688,9 +696,12 @@ knitr::include_graphics('img/7.4.50.png')
 
 ### Optional exercises 
 
+
 At this point, you've covered everything you need to successfully complete the homework assignment below. However, there are a number of different analyses we can practice with this dataset. This section walks you through some optional analyses to consolidate what we've already covered as well as add breadth. If you're running out of time, skip down to the Homework now. You can return to these exercises later (i.e., when studying).
 
+
 #### Using a cut point to define groups for an independent *t*-test
+
 
 Sometimes you will see groups defined with a non-nominal independent variable. For example, we might talk about defining countries as "overweight" or "not overweight" depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.
 
@@ -765,6 +776,7 @@ Practice writing a sentence describing the results, and then compare it to #1 in
 
 #### Example answers to optional activities
 
+
 Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) were not significantly different from intellect ratings for candidates over age 29 (*M* = 5.51, *SD* = 1.83), as demonstrated by an independent *t*-test [*t*(32) = 0.19, *p* > .05].
 **Note**: If you included Cohen's *d*, the value was 0.07, but we often don't report effect size if the effect was not significant. 
 
@@ -781,6 +793,7 @@ See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-12).
 
 
 ### Practice Problems
+
 
 1. Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable.  Do people who are higher consumers of alcohol report different sleep durations at Time 2 (i.e., during midterms) compared to lower consumers of alcohol?  Conduct the appropriate *t*-test. What can you conclude?  Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s *d*). Graph the results.
 

@@ -3,9 +3,10 @@
 $("#coverpic").hide();
 </script>
 
+
 <span class="newthought">
 Any experiment may be regarded as forming an individual of a 'population' of experiments which might be performed under the same conditions. A series of experiments is a sample drawn from this population.
----William Sealy Gossett
+-William Sealy Gossett
 </span>
 
 
@@ -467,8 +468,6 @@ In this lab, we will use SPSS to:
 
 ### Experiment Background
 
----
-
 
 For this lab, we will be using the data from Mehr, Song, and Spelke's (2016) study of how music may convey important social information to infants. 
 
@@ -476,9 +475,8 @@ To test their hypothesis, the researchers recruited 32 infants and their parents
 
 Following this exposure period, the parents and their infants returned to the lab to complete the experimental portion of the study. Infants were first shown a screen with side-by-side videos of two unfamiliar people, each of whom were silently smiling and looking at the infant. The researchers recorded the looking behavior (or gaze) of the infants during this ‘baseline’ phase. Next, one by one, the two unfamiliar people on the screen sang either the lullaby that the parents learned or a different lullaby (that had the same lyrics and rhythm, but a different melody). Finally, the infants saw the same silent video used at baseline, and the researchers again recorded the looking behavior of the infants during this ‘test’ phase.
 
-### OPTIONAL: Performing a one sample *t*-test
 
----
+### OPTIONAL: Performing a one sample *t*-test
 
 
 First, let's open the relevant data file. The data file has been simplified and is available on the lab Moodle page under "T-Tests." Click on "Mehr et al. Simplified Data File" to download it, note the filename and where you've downloaded it to, and then open it in SPSS. Your data should look like this:
@@ -525,8 +523,6 @@ During the baseline condition, the mean proportion looking time toward the singe
 
 ### Performing a paired-samples *t*-test
 
----
-
 
 In this example, we will be comparing data from two measurements taken from the same individuals. In the same data file as above, we have two variables named `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. These variables represent the proportion of time spent looking at the familiar song singer at baseline, and then again in the test phase (after the 1-2 week period in which infants have been familiarized with the song). Because each infant was measured once (baseline), and then re-measured again (test), we will use a paired samples *t*-test.
 
@@ -554,9 +550,8 @@ The paired samples *t*-test produces a *t*-value (i.e., our observed *t*), degre
 
 During the baseline condition, the difference between infants' mean proportion looking time toward the singer at baseline and the test phase was -0.07, and this difference was significant according to a paired samples *t*-test, t(31) = -2.42, *p* < .05.
 
-### Graphing your results
 
----
+### Graphing your results
 
 
 In order to visualize the difference between means (for a paired-samples *t*-test, in this case), it is most appropriate to create a bar chart, or bar plot. Because our two conditions (baseline and test) make up a discrete (and not continuous) categorical variable (also called a nominal variable), a bar chart is most appropriate. Let's begin by going to <span style="color:blue">Graphs</span>, then <span style="color:blue">Chart Builder...</span>
@@ -620,9 +615,8 @@ If you are satisfied with the chart, click OK and it will appear in an SPSS outp
 knitr::include_graphics('img/6.4.30.png')
 ```
 
-### OPTIONAL: The relationship between the one-sample and the paired-samples *t*-test
 
----
+### OPTIONAL: The relationship between the one-sample and the paired-samples *t*-test
 
 
 This section is dedicated to demonstrating that the one-sample and paired-samples *t*-tests are almost the very same thing. In order to understand this, we must reframe how we think about the paired-samples *t*-test. We typically consider it a comparison between two samples in which observations have been repeated (like in a before-after scenario, for example). We can also think of the paired samples *t*-test as testing the difference scores between two conditions. If the difference between two conditions is 0, then there is no difference, or there is no effect of the independent variable. If the difference is non-zero, then we can say there is a difference. 
@@ -653,9 +647,9 @@ You will see that the t-statistic and p-value are identical to the ones obtained
 
 Nota Bene: You will see that in the previous paired-samples *t*-test we obtained a t-statistic of -2.42, but here the t-statistic is positive. This difference comes from the fact that SPSS automatically subtracts the later-occurring variable in your spreadsheet from the earlier-occurring one. If your variables were ordered differently, you would obtain a positive t-statistic as well. In other words, the sign does not matter; it results from the order of the variables. 
 
+
 ### Using descriptive statistics to give context to inferential statistics
 
----
 
 In Section 2.4.1 of the lab manual, you learned how to request descriptive statistics. If you return to the output generated by SPSS when we ran the paired-samples *t*-test, you should notice that the first table depicted in the output provides the mean, the sample size, the standard deviation, and the standard error of the mean for each measurement - Baseline_Proportion_Gaze_to_Singer and Test_Proportion_Gaze_to_Singer. 
 
@@ -680,7 +674,7 @@ ___
 2. Graph this result (including 1 SEM error bars) as a bar graph. Upload your output file, including the graph, to Moodle.
 
 
-## JAMOVI - Week 8 - March 15 & 16
+## JAMOVI - Week 9 - March 14th & 15th 
 
 
 <div class="marginnote">
@@ -697,7 +691,9 @@ In this lab, we will use jamovi to:
 3. Report a paired-sample *t*-test in APA format
 4. Perform a one-sample *t*-test
 
+
 ### Pre-lab Tasks
+
 
 Before lab, be sure to complete the [Psychology 291 Data: Terms of Use quiz](https://moodle.stfx.ca/mod/quiz/view.php?id=837148).
 
@@ -715,6 +711,7 @@ The survey was delivered to the same class of students twice during the semester
 
 ### Performing a Paired-Samples *t*-Test
 
+
 #### Motivation to perform statistical analyses
 
 Imagine you are a researcher who is interested in how midterms impact students' sleep patterns. You are curious about whether the number of nightly sleep hours changes during midterm time. You plan to use the survey data described above to answer your question.
@@ -725,7 +722,9 @@ Possible research question: Do the number of hours of sleep change during midter
 
 Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.
 
+
 #### Using descriptive statistics to look at the question
+
 
 What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2) from previous chapters. Let's make those requests now.
 

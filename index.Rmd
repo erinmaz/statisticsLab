@@ -377,7 +377,7 @@ Here, you can edit the name of your variables, and specify their properties. Var
 2. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
 
 
-## JAMOVI - Week 2 - January 25 & 26
+## JAMOVI - Week 1 - January 10th & 11th 
 
 
 In our lab sessions, we will be using jamovi to help us with the analyses about which we are learning in classes. Throughout each lab, we will show you how to use jamovi to solve specific problems, and then you will use the examples to solve in-lab assignments, homework, and the analysis for your team project.
@@ -390,7 +390,7 @@ This section, including its associated figures, is copied almost verbatim, with 
 
 In this [section], I'll discuss how to get started in jamovi. I'll briefly talk about how to download and install jamovi, but most of the chapter will be focused on getting you started with finding your way around the jamovi GUI. Our goal in this chapter is not to learn any statistical concepts: we're just trying to learn the basics of how jamovi works and get comfortable interacting with the system. To do this, we'll spend a bit of time looking at datasets and variables. In doing so, you'll get a bit of a feel for what it's like to work in jamovi. 
 
-However, before going into any of the specifics, it's worth talking a little about why you might want to use jamovi at all. Given that you're reading this, you've probaby got your own reasons. However, if those reasons are *because that's what my stats class uses*, it might worth explaining a little why your lecturer has chosen to use jamovi for the class. Of course, I don't really know why *other* people choose jamovi, so I'm really talking about why I use it.
+However, before going into any of the specifics, it's worth talking a little about why you might want to use jamovi at all. Given that you're reading this, you've probably got your own reasons. However, if those reasons are *because that's what my stats class uses*, it might worth explaining a little why your lecturer has chosen to use jamovi for the class. Of course, I don't really know why *other* people choose jamovi, so I'm really talking about why I use it.
 
 - It's sort of obvious but worth saying anyway: doing your statistics on a computer is faster, easier and more powerful than doing statistics by hand. Computers excel at mindless repetitive tasks, and a lot of statistical calculations are both mindless and repetitive. For most people, the only reason to ever do statistical calculations with pencil and paper is for learning purposes. In my class, I do occasionally suggest doing some calculations that way, but the only real value to it is pedagogical. It does help you to get a "feel" for statistics to do some calculations yourself, so it's worth doing it once. But only once!
 
@@ -410,6 +410,10 @@ Okay, enough with the sales pitch. Let's get started. Just as with any piece of 
 
 [jamovi Homepage](https://www.jamovi.org/)
 
+
+<div class="marginnote">
+As previously indicated, the content of this section comes from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). **While Navarro & Foxcroft (2019) discuss an earlier version, you will download the most current version of jamovi that is appropriate for your technology. The most current version will be used in PSYC 292 Labs. If you need help, please refer to any resources posted on your lab Moodle site and/or visit the lab instructor prior to your first lab.**
+</div>
 
 At the top of the page, under the heading "Download," you'll see separate links for Windows users, Mac users, and Linux users. If you follow the relevant link, you'll see that the online instructions are pretty self-explanatory. As of this writing, the current version of jamovi is 0.9, but they usually issue updates every few months, so you'll probably have a newer version.^2^[Athough jamovi is updated frequently, it doesn't usually make much of a difference for the sort of work we'll do in this book. In fact, during the writing of the book, I upgraded several times, and it didn't make much difference at all to what is in this book.]
 
@@ -472,7 +476,7 @@ The variable editor can be opened by selecting `Setup` from the data tab or by d
 
 New variables can be inserted or appended to the data set using the `Add` button from the data ribbon. The `Add` button also allows the addition of computed variables.
 
-#### Computed Variables
+#### Computed Variables - Week 4 - January 31st & February 1st
 
 Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, z-scores, sum-scores, negative scoring, and means.
 

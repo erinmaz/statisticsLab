@@ -4,10 +4,13 @@
 $("#coverpic").hide();
 </script>
 
+
 <span class="newthought">
 Describing comic sensibility is near impossible. It's sort of an abstract silliness, that sometimes the joke isn't the star.
----Dana Carvey
+-Dana Carvey
 </span>
+
+
 
 The purpose of this lab is to show you how to compute basic descriptive statistics, including measures of central tendency (mean, mode, median) and variation (range, variance, standard deviation). 
 
@@ -339,7 +342,7 @@ knitr::include_graphics('img/2.4.11.png')
 
 ### Calculating Descriptive Statistics
 
----
+
 
 From here, go to the top menu and choose <span style="color:blue">Analyze</span>, then <span style="color:blue">Descriptive Statistics</span> and then <span style="color:blue">Frequencies</span>:
 
@@ -369,7 +372,7 @@ knitr::include_graphics('img/2.4.15.png')
 
 ### Descriptive Statistics and Histograms
 
----
+
 
 
 Now let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the life_expectancy.sav you downloaded from Section 0.2.3 (the same file we used for our lab session on graphing last week). 
@@ -422,7 +425,7 @@ Something to think about: What do the mean, median, and mode indicate about the 
 
 ### Editing graphs
 
----
+
 It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs are the same.
 
 #### Editing the axes
@@ -522,20 +525,21 @@ ___
 
 3. Use the information on your .spv file and the CCHS .sav file to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
-## JAMOVI - Week 4 - February 8 & 9
+## JAMOVI - Week 3 - January 24th & 25th 
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#spss-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
 </div>
+
 
 In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will learn to:
 
 1. Select and calculate descriptive statistics
 2. Create and interpret a boxplot
 
+
 ### Pre-lab tasks
 
----
 
 <b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to virtual help hours if you run into any trouble. 
 
@@ -587,9 +591,10 @@ Now, you are all ready for lab! You can close everything for now, but before you
 
 <b>Come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
 
+
 ### The basics
 
----
+
 
 In JAMOVI, click the three horizontal lines and then click `New` to open a new file.
 
@@ -601,9 +606,10 @@ Suppose we want to calculate the measures of central tendency (mean, median, and
 knitr::include_graphics('img/2.5.1.png')
 ```
 
+
 ### Calculating Descriptive Statistics
 
----
+
 
 From here, go to the top menu, click on <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. 
 
@@ -630,9 +636,10 @@ In the Results pane, you should see the additional descriptive statistics appear
 knitr::include_graphics('img/2.5.5.png')
 ```
 
+
 ### Descriptive Statistics and Graphs
 
----
+
 
 #### Example 1: Sleep
 
@@ -705,6 +712,7 @@ You often have to write sentences to report your descriptive statistics. For sle
 
 #### Example 2: Volunteering
 
+
 Let's look at another variable. If you simply select another variable as you did just before with `R_SLEEP`, the new variable will appear in the same table. To begin a new analysis, close the analysis you just completed by clicking on the right-facing arrow (circled in red in the image below) in the Descriptives menu: 
 
 ```{r , echo=FALSE,dev='png'}
@@ -754,12 +762,13 @@ Can you see how the frequencies table and bar plot are related?
 
 ### Selecting the appropriate descriptive statistics
 
----
 
 We usually report at least two descriptive statistics for each variable: a measure of central tendency and a measure of variation.
 
 
 #### Selecting the central tendency measure
+
+
 Choosing the right descriptive statistics for a given variable depends on understanding the distribution or shape of the data. It also depends on the scale of measurement of your variable. Sometimes, there can be more than one right answer.
 
 If the measurement scale is nominal, we usually look at the mode for information about central tendency. If the measurement scale is ordinal, we usually look at the median for information about central tendency. The central tendency measure used for interval or ratio scales of measurement can vary. If the distribution is not skewed, we would usually consider the mean. If the distribution is skewed, we might look to the median to avoid the influence the long, asymmetric tail of the distribution has on the mean. The median is also a good choice for interval or ratio data if there are outliers present. This is because the mean is "sensitive" to outliers - outliers can impact the mean a lot. The median is not sensitive to outliers.
@@ -770,7 +779,9 @@ Some concepts can be measured at multiple scales of measurement. Consider, for e
 
 If, however, we look at `PA_VIGOROUS`, we see that the variable asks participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed or there are outliers, we would likely report the mean. You can see that the answer to a research question about Nova Scotians' exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
 
+
 #### Selecting the variation measure
+
 
 To select the appropriate measure of variation, choose the one that goes best with the central tendency measure you chose. 
 
@@ -784,6 +795,7 @@ As you read more psychology research articles, you might notice it's unusual to 
 
 
 #### Example: Sense of belonging
+
 
 Participants were also asked about their sense of belonging to the community. As you will see in the data dictionary, their answers could range from 1 = very weak, to 7 = very strong. While it is not explicitly shown, a 4 would be neutral.
 
@@ -821,7 +833,9 @@ Finally, you might want to look at the data graphically. A histogram would be ap
 knitr::include_graphics('img/belonginghistogram.png')
 ```
 
+
 ### Boxplots
+
 
 Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.
 
@@ -840,10 +854,12 @@ Remember to save your file before closing jamovi. You might save the .omv file y
 
 ### Editing graphs
 
+
 It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in jamovi. I might suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.
 
 
 ### Homework
+
 
 Because .omv files contain both the data and the output, we want you to save a new file before each novel analysis task. The lab demonstration would be one analysis task. The homework is another analysis task. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.
 
@@ -854,7 +870,7 @@ See Moodle for the homework questions.
 
 ### Practice Questions
 
----
+
 1. Were participants likely to have attended a local/municipal council meeting? How do you know?
 
 2. What is the most populated postal code prefix among participants? What measure of central tendency did you use to determine this, and why? Integrating skills (advanced question): Can you figure out what geographic area this corresponds to? 
@@ -866,7 +882,3 @@ See Moodle for the homework questions.
 5. Who do Nova Scotians trust more: people in their neighbourhood, people they go to work/school with, or strangers? What measure of central tendency did you use to determine this, and why?
 
 6. How would you have answered homework Question #2 differently had you been asked to look at `INCOME` and `NUMJOB`?
-
-
-
-

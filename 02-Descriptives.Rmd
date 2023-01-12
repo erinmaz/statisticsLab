@@ -538,16 +538,14 @@ In this lab, we will use jamovi to calculate a variety of descriptive statistics
 2. Create and interpret a boxplot
 
 
-### Pre-lab tasks
+### Getting ready for this lesson
 
 
 <b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to virtual help hours if you run into any trouble. 
 
-If you have not already done so, read the "Expectations for lab" posts in our Q&A forum: <a href="https://moodle.stfx.ca/mod/forum/view.php?id=815450" target="_blank">https://moodle.stfx.ca/mod/forum/view.php?id=815450</a>.
+You will need access to the EngageNS dataset for this lesson. Be sure you completed the Terms of Use quiz in Moodle and download the data set before lab.
 
-We have updated the EngageNS dataset. Please delete your current version and download the latest csv file here: <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017" target="_blank">https://moodle.stfx.ca/mod/url/view.php?id=830017</a>. If this link does not work for you, you may need to complete the EngageNS terms of use quiz here: <a href="https://moodle.stfx.ca/mod/quiz/view.php?id=830016" target="_blank">https://moodle.stfx.ca/mod/quiz/view.php?id=830016</a>.
-
-If you have not already done so, you should also download the data dictionary. It is the pdf file in the OneDrive directory from which you just downloaded the .csv file. The data dictionary contains important information about what the data mean.
+You should also download the data dictionary. It is the pdf file in the OneDrive directory from which you just downloaded the .omv file. The data dictionary contains important information about what the data mean.
 
 Open JAMOVI. It might be slow to open.
 
@@ -557,13 +555,9 @@ Click on the three lines near the top left of the JAMOVI window (circled in red 
 knitr::include_graphics('img/3lines.png')
 ```
 
-Click Import (solid red circle) and then Browse (dashed red circle).
+Click <span style="color:blue">Open</span> and then <span style="color:blue">Browse</span>.
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/import_browse.png')
-```
-
-Find the new EngageNS .csv data file you just downloaded. Select it and click open. It may take a few minutes to open.
+Find the EngageNS .omv data file you just downloaded. Select it and click open. It may take a few minutes to open.
 
 When it has finished opening, your JAMOVI window should look something like this:
 
@@ -571,13 +565,7 @@ When it has finished opening, your JAMOVI window should look something like this
 knitr::include_graphics('img/engagens_orig_data.png')
 ```
 
-You can delete the first three columns. Click the `Data` tab, select a column by clicking on the header (the name of the column, e.g., `A`), and then click the Delete column button (red circle below).
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/deletecol.png')
-```
-
-Now save your file as a JAMOVI (.omv) file. Click the three horizontal lines, then click Save As. Input a sensible filename and make sure your file type is set to `jamovi file (.omv)` (red circle below). 
+Now, you are going to save the JAMOVI (.omv) file. Click the three horizontal lines, then click <span style="color:blue">Save As</span>. Input a sensible file name (perhaps with the term "StartingFile" or "Original_Data") and make sure your file type is set to `jamovi file (.omv)` (red circle below). 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/saveasjamovi.png')
@@ -596,7 +584,7 @@ Now, you are all ready for lab! You can close everything for now, but before you
 
 
 
-In JAMOVI, click the three horizontal lines and then click `New` to open a new file.
+In JAMOVI, click the three horizontal lines and then click <span style="color:blue">New</span> to open a new file.
 
 Let's begin with a short data set {x = 1, 1, 4, 1, 2, 5, 7}
 
@@ -645,7 +633,7 @@ knitr::include_graphics('img/2.5.5.png')
 
 Now, let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the EngageNS data. Remember, you should have already opened your .omv (JAMOVI file) of the EngageNS data on your computer. 
 
-Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file. When you are ready to start your homework, you can open the original file, save a copy with a new name, and create your homework output in that new file. 
+Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting <span style="color:blue">Save As</span>. Give the file a new name. A file name related to the date and or the lab lesson might be helpful. Now, as you generate output by following the instructions below, you can continue to save this file. **When you are ready to start your homework, you can open the original file, save a copy with a new name, and create your homework output in that new file.**
 
 Suppose we wanted to know about Nova Scotians' sleep duration. We can use both descriptive statistics and graphs such as histograms to explore a variable such as sleep duration. 
 
@@ -719,7 +707,7 @@ Let's look at another variable. If you simply select another variable as you did
 knitr::include_graphics('img/CloseAnalysesBeforeNewOnes.png')
 ```
 
-The `VOLUNTEER` variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn't. Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?
+The `VOLUNTEER` variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn't. (**Notice this coding has been recorded in the variable attributes. This may not be the case for all variables you use this term. You will be responsible for adding variable attributes based on what you find in the data dictionary.**) Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?
 
 Back in the <span style="color:blue">Variables</span> tab, search for VOLUNTEER. Select it by clicking so the check box is visible, and then click the <span style="color:blue">Data</span> tab. Click <span style="color:blue">Setup</span>. The measurement type is nominal, which is correct: the `VOLUNTEER` variable does not have order, equal spacing between intervals, or a true 0. We don't need to fix anything here. 
 
@@ -847,9 +835,9 @@ Using the `SLEEP` and `R_SLEEP` variables, let's create boxplots. You should now
 knitr::include_graphics('img/sleepboxplots.png')
 ```
 
-Just like when we looked at the histograms, the `SLEEP` variable isn't very helpful to look at. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for `R_SLEEP` is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers), and outliers (black dots).
+Just like when we looked at the histograms, looking at the boxplot for the `SLEEP` variable isn't very helpful. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for `R_SLEEP` is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers), and outliers (black dots).
 
-Remember to save your file before closing jamovi. You might save the .omv file you created as a newly named file as you began reading and following along in this section. The .omv file will have both data and the results of analyses you conducted. To save just your output, click the three lines and select Export. This will allow you to save a pdf. 
+Remember to save your file before closing jamovi by clicking on the three lines near the top left and selecting the appropriate command. You might have saved the .omv file you created as a newly named file as you began reading and following along in this section. If not, you might want to use <span style="color:blue">Save As</span> now and give the file a new name. The .omv file will have both data and the results of analyses you conducted. To save just your output, after clicking the three lines, select <span style="color:blue">Export</span>. This will allow you to save a pdf. 
 
 
 ### Editing graphs
@@ -861,11 +849,11 @@ It is helpful to know how to manipulate not just the superficial, cosmetic appea
 ### Homework
 
 
-Because .omv files contain both the data and the output, we want you to save a new file before each novel analysis task. The lab demonstration would be one analysis task. The homework is another analysis task. So, before you start your homework, save a new copy of your .omv file by clicking on the three lines and selecting Save As. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.
+Because .omv files contain both the data and the output, we want you to save a new file before each novel analysis task. The lab demonstration would be one analysis task. The homework is another analysis task. So, before you start your homework, open the starting JAMOVI file with which you were provided and save a new version of your .omv file by clicking on the three lines and selecting <span style="color:blue">Save As</span>. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.
 
-Recall that to save just your output, you can click the three lines and select Export. This will allow you to save a pdf. 
+Recall that to save just your output, you can click the three lines and select <span style="color:blue">Export</span>. This will allow you to save a pdf. 
 
-See Moodle for the homework questions.
+See [Moodle](https://moodle.stfx.ca/course/view.php?id=29319) for the homework questions.
 
 
 ### Practice Questions

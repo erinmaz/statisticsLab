@@ -494,3 +494,4 @@ jamovi---week-9---march-21st-22nd
 jamovi---week-10---march-28th-29th
 fig:unnamed-chunk-9
 fig:unnamed-chunk-23
+getting-ready-for-this-lesson

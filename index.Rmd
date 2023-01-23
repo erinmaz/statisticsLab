@@ -504,6 +504,197 @@ knitr::include_graphics('img/computedvariable.png')
 *V-functions*.  
 Several functions are already available in jamovi and available from the drop down box labelled *f~x~*. A number of functions appear in pairs, one prefixed with a V and the other not. V functions perform their calculation on a variable as a whole whereas non-V functions perform their calculation row by row. For example, MEAN(A, B) will produce the mean of A and B for each row whereas VMEAN(A) gives the mean of all the values in A.
 
+##### Rationale for Recoding
+
+<div class="marginnote">
+
+This section and its subsection was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro & Foxcroft (2019) for the purposes of a lab lesson.
+
+</div>
+
+As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering the survey questions and decide to select all extreme responses. This data is not useful. 
+
+As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. If, for example, the researcher is using a scale where “extremely agree” indicates participants score high on the construct being measured (ex. “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude.), the researcher may reword some statements in the questionnaire so that “extremely agree” indicates they score low on the construct being measured (ex. “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.).
+
+###### An Example of Recoding and Computing a New Variable
+
+<div class="marginnote">
+
+The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., & Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan & S. Oskamp (Eds.), The social psychology of health: Claremont Symposium on Applied Social Psychology (pp. 31–67). Newbury Park, CA: Sage. This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.
+
+</div>
+
+Let’s consider a scale that is often used as a measure of stress in psychological studies, the Perceived Stress Scale, by Cohen and Williamson (1988). We can walk through the process of recoding data and data computations with this example. Let’s begin by looking at the scale itself.
+
+**Perceived Stress Scale**
+
+Instructions: The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way. Although some of the questions are similar, there are differences between them and you should treat each one as a separate question. The best approach is to answer each question fairly quickly. That is, don’t try to count up the number of times you felt a particular way, but rather indicate the alternative that seems like a reasonable estimate. 
+
+For each question, chose from the following alternatives:
+0 = never
+1 = almost never
+2 = sometimes
+3 = fairly often
+4 = very often
+
+Questions:
+In the last month, how often have you…
+1. been upset because of something that happened unexpectedly?
+2. felt that you were unable to control the important things in your life?
+3. felt nervous and “stressed”?
+4. felt confident about your ability to handle your personal problems?
+5. felt that things were going your way?
+6. found that you could not cope with all the things that you had to do?
+7. been able to control irritations in your life?
+8. felt that you were on top of things?
+9. been angered because of things that happened that were outside of your control?
+10. felt difficulties were piling up so high that you could not overcome them?
+
+Those questions that are negatively worded in terms of the construct will be reverse coded before moving forward to a calculation. 
+
+Which items appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct)? (*Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.*) Write your answers on a sheet or document.
+
+Which items appear to be negatively worded in terms of the construct? (*Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.*) Write your answers on the same sheet or document.
+
+Check your answers: 
+If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.
+If you answered that scoring a 4 on questions 4, 5, 7, and 8 would indicate lack of stress, you are correct!
+
+Imagine we have a participant who scores in the following way:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ScoresOnPSS.png')
+```
+
+Enter these scores into a JAMOVI data file of your own. Then, follow along with the proceeding commands to be sure you feel comfortable using JAMOVI to recode data and compute new variables.
+The score on the PSS is calculated by reversing the answers to the questions that are oppositely worded (questions 4, 5, 7, and 8) and, then, summing the scores.
+
+Let’s work through this process with the participant’s scores. We can begin by recoding item 4, shown as `PSS4` in the data file. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4.png')
+```
+
+A new column will appear to the right of the column for the `PSS4` and the variable attributes panel will drop down. You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it `PSS4_Recoded`. You can see that the source variable is correctly shown as `PSS4`. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_2.png')
+```
+
+Now, it is time to add the transform rule that you want used. Click on the white box after “using transform” and select <span style="color:blue">Create New Transform</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_3.png')
+```
+
+When you do click that button, a new panel will appear. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_4.png')
+```
+
+Let’s fill in the information to tell JAMOVI what we want done to the data. We will give the “)transformation a name (“Reverse_Coding”) and click the <span style="color:blue">Show formula editor</span> button which looks like *f~x~*. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_5.png')
+```
+
+A new panel opens, and we will enter the formula to have the transformations calculated. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_6.png')
+```
+
+We can write this equation to get the recoded values:
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_7.png')
+```
+
+To close the transformation panel, click on the downward facing arrow.
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_8.png')
+```
+
+To get out of  the Transformed Variable panel, click on the upward facing arrow.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_9.png')
+```
+
+You should see the recoded PSS4 value in the `PSS_Recoded` column.
+
+Repeat the steps to recode `PSS5`, `PSS7`, and `PSS8`. For these cases, you will not need to select <span style="color:blue">Create New Transform</span>. Instead, you will select the transformation rule you already created, <span style="color:blue">Reverse_Coding </span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_10.png')
+```
+
+Now, you can see all 4 recoded values. Notice the transformed variables are noted with red circles by their names at the top of the columns.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_11.png')
+```
+
+Recall the scoring instructions say that after recoding the values for these scale items, we should sum the scores. Let’s do that now. 
+Move to the column to the right of `PSS10`, and select <span style="color:blue">Data</span> and select <span style="color:blue">Compute</span>.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_12.png')
+```
+
+If the Computed Variable panel does not drop down for you, click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_13.png')
+```
+
+Let’s fill in the variable attributes and enter the formula for JAMOVI to follow to compute the sum. Remember, we want to include the recoded values for items 4, 5, 7, and 8. We do not want to include the original values for those items. One way to calculate the sum is by using the SUM command in the formula editor and placing all variable names you want included in the sum in the brackets behind the word SUM with commas between the variable names. Alternatively, you could select each variable name and use plus signs between them.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_14.png')
+```
+
+As you did with the Transformed Variable panel, you can close the Computed Variable panel by clicking the upward facing arrow.
+This may seem like a lot of work to do for one participant’s sum; however, these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set compiled from the scores given by a larger sample.
+
+#####  Z-scores as a Type of Computed Variable 
+
+<div class="marginnote">
+
+  This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro & Foxcroft (2019) for the purposes of a lab lesson.
+
+</div>
+
+There will be times when you want to compute *z*-scores. (For example, you may want to look at a large data set and decide whether you have extreme outliers.) Getting *z-scores in JAMOVI is very easy. 
+
+Looking at the following fictitious data showing the `PSS_Score` for 10 participants, let’s look at the process to get the *z*-scores for those `PSS_Score` values. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/RecodingScoresOnPSS4_15.png')
+```
+
+To follow along with the proceeding commands, you can enter the 10 values in a new column of the data file you are working with. 
+
+In the statistical package, *z*-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span>. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the *z*-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ZScoresAsComputedVariables.png')
+```
+
+Remember to click the upward facing arrow to close the Computed Variable panel. `Z_PSS_Score` in the image below depicts the *z*-scores for `PSS_Score`. Notice that computed variables have a black circle to the right of their name near the top of the column.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/ZScoresAsComputedVariables_1.png')
+```
+
+##### Homework
+
+See [Moodle]( https://moodle.stfx.ca/course/view.php?id=29319) for homework questions.
+
+
 ##### Copy and Paste
 
 jamovi produces nice American Psychological Association (APA) formatted tables and attractive plots. It is often useful to be able to copy and paste these, perhaps into a Word document, or into an email to a colleague. To copy results, right click on the object of interest, and from the menu, select exactly what you want to copy. The menu allows you to choose to copy only the image or the entire analysis. Selecting `copy` copies the content to the clipboard, and this content can be pasted into other programs in the usual way. You can practice this later on when we do some analyses.

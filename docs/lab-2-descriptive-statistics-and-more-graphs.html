@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Lab 2: Descriptive Statistics (and more graphs) | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Lab 2: Descriptive Statistics (and more graphs) | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="A lab manual for Psyc 292 at StFX" />
   
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="lab-1-graphing-data.html"/>
 <link rel="next" href="lab-3-sampling-and-sampling-distributions.html"/>
-<script src="libs/header-attrs-2.17/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +41,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -153,444 +151,444 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Statistics Lab Manual</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#preface" id="toc-preface">Preface</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li><a href="index.html#important-notes" id="toc-important-notes"><span class="toc-section-number">0.1</span> Important notes</a>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a>
 <ul>
-<li><a href="index.html#attributions-and-versions" id="toc-attributions-and-versions"><span class="toc-section-number">0.1.1</span> Attributions and Versions</a></li>
-<li><a href="index.html#cc-by-sa-4.0-license" id="toc-cc-by-sa-4.0-license"><span class="toc-section-number">0.1.2</span> CC BY-SA 4.0 license</a></li>
-<li><a href="index.html#copying-the-lab-manual" id="toc-copying-the-lab-manual"><span class="toc-section-number">0.1.3</span> Copying the lab manual</a></li>
-<li><a href="index.html#acknowledgments" id="toc-acknowledgments"><span class="toc-section-number">0.1.4</span> Acknowledgments</a></li>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions-and-versions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions and Versions</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
 </ul></li>
-<li><a href="index.html#data" id="toc-data"><span class="toc-section-number">0.2</span> Data</a>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a>
 <ul>
-<li><a href="index.html#data-repository" id="toc-data-repository"><span class="toc-section-number">0.2.1</span> Data Repository</a></li>
-<li><a href="index.html#csv-format" id="toc-csv-format"><span class="toc-section-number">0.2.2</span> CSV format</a></li>
-<li><a href="index.html#spss-format" id="toc-spss-format"><span class="toc-section-number">0.2.3</span> SPSS format</a></li>
+<li class="chapter" data-level="0.2.1" data-path="index.html"><a href="index.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="index.html"><a href="index.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="index.html"><a href="index.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
 </ul></li>
-<li><a href="index.html#r" id="toc-r"><span class="toc-section-number">0.3</span> R</a>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>0.3</b> R</a>
 <ul>
-<li><a href="index.html#why-r" id="toc-why-r"><span class="toc-section-number">0.3.1</span> Why R?</a></li>
-<li><a href="index.html#installing-r-and-r-studio" id="toc-installing-r-and-r-studio"><span class="toc-section-number">0.3.2</span> Installing R and R Studio</a></li>
-<li><a href="index.html#r-studio-notes-and-tips" id="toc-r-studio-notes-and-tips"><span class="toc-section-number">0.3.3</span> R studio notes and tips</a></li>
-<li><a href="index.html#how-to-complete-the-r-labs" id="toc-how-to-complete-the-r-labs"><span class="toc-section-number">0.3.4</span> How to complete the R Labs</a></li>
-<li><a href="index.html#screencast-tutorial" id="toc-screencast-tutorial"><span class="toc-section-number">0.3.5</span> Screencast tutorial</a></li>
-<li><a href="index.html#r-studio-cloud" id="toc-r-studio-cloud"><span class="toc-section-number">0.3.6</span> R-studio Cloud</a></li>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#why-r"><i class="fa fa-check"></i><b>0.3.1</b> Why R?</a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>0.3.2</b> Installing R and R Studio</a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>0.3.3</b> R studio notes and tips</a></li>
+<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>0.3.4</b> How to complete the R Labs</a></li>
+<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#screencast-tutorial"><i class="fa fa-check"></i><b>0.3.5</b> Screencast tutorial</a></li>
+<li class="chapter" data-level="0.3.6" data-path="index.html"><a href="index.html#r-studio-cloud"><i class="fa fa-check"></i><b>0.3.6</b> R-studio Cloud</a></li>
 </ul></li>
-<li><a href="index.html#excel" id="toc-excel"><span class="toc-section-number">0.4</span> Excel</a></li>
-<li><a href="index.html#spss" id="toc-spss"><span class="toc-section-number">0.5</span> SPSS</a>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#excel"><i class="fa fa-check"></i><b>0.4</b> Excel</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#spss"><i class="fa fa-check"></i><b>0.5</b> SPSS</a>
 <ul>
-<li><a href="index.html#installing-spss" id="toc-installing-spss"><span class="toc-section-number">0.5.1</span> Installing SPSS</a></li>
-<li><a href="index.html#notes-and-tips" id="toc-notes-and-tips"><span class="toc-section-number">0.5.2</span> Notes and Tips</a></li>
-<li><a href="index.html#opening-spss-and-the-spss-layout" id="toc-opening-spss-and-the-spss-layout"><span class="toc-section-number">0.5.3</span> Opening SPSS and the SPSS layout</a></li>
-<li><a href="index.html#practice-problems" id="toc-practice-problems"><span class="toc-section-number">0.5.4</span> Practice Problems</a></li>
+<li class="chapter" data-level="0.5.1" data-path="index.html"><a href="index.html#installing-spss"><i class="fa fa-check"></i><b>0.5.1</b> Installing SPSS</a></li>
+<li class="chapter" data-level="0.5.2" data-path="index.html"><a href="index.html#notes-and-tips"><i class="fa fa-check"></i><b>0.5.2</b> Notes and Tips</a></li>
+<li class="chapter" data-level="0.5.3" data-path="index.html"><a href="index.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="0.5.4" data-path="index.html"><a href="index.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
 </ul></li>
-<li><a href="index.html#jamovi---week-1---january-10th-11th" id="toc-jamovi---week-1---january-10th-11th"><span class="toc-section-number">0.6</span> JAMOVI - Week 1 - January 10th &amp; 11th</a>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#jamovi---week-1---january-10th-11th"><i class="fa fa-check"></i><b>0.6</b> JAMOVI - Week 1 - January 10th &amp; 11th</a>
 <ul>
-<li><a href="index.html#getting-started-with-jamovi" id="toc-getting-started-with-jamovi"><span class="toc-section-number">0.6.1</span> Getting Started with jamovi</a></li>
-<li><a href="index.html#analyses" id="toc-analyses"><span class="toc-section-number">0.6.2</span> Analyses</a></li>
-<li><a href="index.html#the-spreadsheet" id="toc-the-spreadsheet"><span class="toc-section-number">0.6.3</span> The Spreadsheet</a></li>
-<li><a href="index.html#loading-data-in-jamovi" id="toc-loading-data-in-jamovi"><span class="toc-section-number">0.6.4</span> Loading Data in jamovi</a></li>
-<li><a href="index.html#importing-unusual-data-files" id="toc-importing-unusual-data-files"><span class="toc-section-number">0.6.5</span> Importing Unusual Data Files</a></li>
-<li><a href="index.html#changing-data-from-one-level-to-another" id="toc-changing-data-from-one-level-to-another"><span class="toc-section-number">0.6.6</span> Changing Data from One Level to Another</a></li>
-<li><a href="index.html#installing-add-on-modules-into-jamovi" id="toc-installing-add-on-modules-into-jamovi"><span class="toc-section-number">0.6.7</span> Installing Add-on Modules into jamovi</a></li>
-<li><a href="index.html#quitting-jamovi" id="toc-quitting-jamovi"><span class="toc-section-number">0.6.8</span> Quitting jamovi</a></li>
-<li><a href="index.html#summary" id="toc-summary"><span class="toc-section-number">0.6.9</span> Summary</a></li>
-</ul></li>
-</ul></li>
-<li><a href="lab-1-graphing-data.html#lab-1-graphing-data" id="toc-lab-1-graphing-data"><span class="toc-section-number">1</span> Lab 1: Graphing Data</a>
-<ul>
-<li><a href="lab-1-graphing-data.html#general-goals" id="toc-general-goals"><span class="toc-section-number">1.1</span> General Goals</a>
-<ul>
-<li><a href="lab-1-graphing-data.html#important-info" id="toc-important-info"><span class="toc-section-number">1.1.1</span> Important info</a></li>
-</ul></li>
-<li><a href="lab-1-graphing-data.html#r-1" id="toc-r-1"><span class="toc-section-number">1.2</span> R</a>
-<ul>
-<li><a href="lab-1-graphing-data.html#download-the-lab-templates" id="toc-download-the-lab-templates"><span class="toc-section-number">1.2.1</span> Download the lab templates</a></li>
-<li><a href="lab-1-graphing-data.html#get-some-data" id="toc-get-some-data"><span class="toc-section-number">1.2.2</span> Get some data</a></li>
-<li><a href="lab-1-graphing-data.html#look-at-the-data" id="toc-look-at-the-data"><span class="toc-section-number">1.2.3</span> Look at the data</a></li>
-<li><a href="lab-1-graphing-data.html#make-plots-to-answer-questions" id="toc-make-plots-to-answer-questions"><span class="toc-section-number">1.2.4</span> Make Plots to answer questions</a></li>
-<li><a href="lab-1-graphing-data.html#ggplot2-basics" id="toc-ggplot2-basics"><span class="toc-section-number">1.2.5</span> ggplot2 basics</a></li>
-<li><a href="lab-1-graphing-data.html#more-questions-about-nyc-films" id="toc-more-questions-about-nyc-films"><span class="toc-section-number">1.2.6</span> More questions about NYC films</a></li>
-<li><a href="lab-1-graphing-data.html#gapminder-data" id="toc-gapminder-data"><span class="toc-section-number">1.2.7</span> Gapminder Data</a></li>
-<li><a href="lab-1-graphing-data.html#asking-questions-with-the-gap-minder-data" id="toc-asking-questions-with-the-gap-minder-data"><span class="toc-section-number">1.2.8</span> Asking Questions with the gap minder data</a></li>
-<li><a href="lab-1-graphing-data.html#generalization-exercise" id="toc-generalization-exercise"><span class="toc-section-number">1.2.9</span> Generalization Exercise</a></li>
-<li><a href="lab-1-graphing-data.html#writing-assignment" id="toc-writing-assignment"><span class="toc-section-number">1.2.10</span> Writing assignment</a></li>
-</ul></li>
-<li><a href="lab-1-graphing-data.html#excel-1" id="toc-excel-1"><span class="toc-section-number">1.3</span> Excel</a></li>
-<li><a href="lab-1-graphing-data.html#spss-1" id="toc-spss-1"><span class="toc-section-number">1.4</span> SPSS</a>
-<ul>
-<li><a href="lab-1-graphing-data.html#opening-spss-and-the-spss-layout-1" id="toc-opening-spss-and-the-spss-layout-1"><span class="toc-section-number">1.4.1</span> Opening SPSS and the SPSS layout</a></li>
-<li><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-variable-view-tab-1" id="toc-reviewing-variable-properties-and-the-variable-view-tab-1"><span class="toc-section-number">1.4.2</span> Reviewing variable properties and the Variable View tab</a></li>
-<li><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs" id="toc-opening-a-data-file-and-producing-different-types-of-graphs"><span class="toc-section-number">1.4.3</span> Opening a data file and producing different types of graphs</a></li>
-<li><a href="lab-1-graphing-data.html#homework" id="toc-homework"><span class="toc-section-number">1.4.4</span> Homework</a></li>
-</ul></li>
-<li><a href="lab-1-graphing-data.html#jamovi---week-7---february-28th-march-1st" id="toc-jamovi---week-7---february-28th-march-1st"><span class="toc-section-number">1.5</span> JAMOVI - Week 7 - February 28th &amp; March 1st</a>
-<ul>
-<li><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout" id="toc-opening-jamovi-and-reviewing-the-jamovi-layout"><span class="toc-section-number">1.5.1</span> Opening jamovi and reviewing the jamovi layout</a></li>
-<li><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-setup-button" id="toc-reviewing-variable-properties-and-the-setup-button"><span class="toc-section-number">1.5.2</span> Reviewing variable properties and the Setup button</a></li>
-<li><a href="lab-1-graphing-data.html#importing-a-data-file" id="toc-importing-a-data-file"><span class="toc-section-number">1.5.3</span> Importing a data file</a></li>
-<li><a href="lab-1-graphing-data.html#graphs" id="toc-graphs"><span class="toc-section-number">1.5.4</span> Graphs</a></li>
-<li><a href="lab-1-graphing-data.html#homework-1" id="toc-homework-1"><span class="toc-section-number">1.5.5</span> Homework</a></li>
-<li><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions" id="toc-thinking-about-data---practice-questions"><span class="toc-section-number">1.5.6</span> Thinking about Data - Practice Questions</a></li>
+<li class="chapter" data-level="0.6.1" data-path="index.html"><a href="index.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
+<li class="chapter" data-level="0.6.2" data-path="index.html"><a href="index.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
+<li class="chapter" data-level="0.6.3" data-path="index.html"><a href="index.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.6.3</b> The Spreadsheet</a></li>
+<li class="chapter" data-level="0.6.4" data-path="index.html"><a href="index.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.6.4</b> Loading Data in jamovi</a></li>
+<li class="chapter" data-level="0.6.5" data-path="index.html"><a href="index.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.6.5</b> Importing Unusual Data Files</a></li>
+<li class="chapter" data-level="0.6.6" data-path="index.html"><a href="index.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.6.6</b> Changing Data from One Level to Another</a></li>
+<li class="chapter" data-level="0.6.7" data-path="index.html"><a href="index.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.6.7</b> Installing Add-on Modules into jamovi</a></li>
+<li class="chapter" data-level="0.6.8" data-path="index.html"><a href="index.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.6.8</b> Quitting jamovi</a></li>
+<li class="chapter" data-level="0.6.9" data-path="index.html"><a href="index.html#summary"><i class="fa fa-check"></i><b>0.6.9</b> Summary</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#lab-2-descriptive-statistics-and-more-graphs" id="toc-lab-2-descriptive-statistics-and-more-graphs"><span class="toc-section-number">2</span> Lab 2: Descriptive Statistics (and more graphs)</a>
+<li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a>
 <ul>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#general-goals-1" id="toc-general-goals-1"><span class="toc-section-number">2.1</span> General Goals</a>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a>
 <ul>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#important-info-1" id="toc-important-info-1"><span class="toc-section-number">2.1.1</span> Important info</a></li>
+<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
 </ul></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#r-2" id="toc-r-2"><span class="toc-section-number">2.2</span> R</a>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#r-1"><i class="fa fa-check"></i><b>1.2</b> R</a>
 <ul>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-basics-in-r" id="toc-descriptives-basics-in-r"><span class="toc-section-number">2.2.1</span> Descriptives basics in R</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#central-tendency" id="toc-central-tendency"><span class="toc-section-number">2.2.2</span> Central Tendency</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#variation" id="toc-variation"><span class="toc-section-number">2.2.3</span> Variation</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-by-conditions" id="toc-descriptives-by-conditions"><span class="toc-section-number">2.2.4</span> Descriptives by conditions</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#describing-gapminder" id="toc-describing-gapminder"><span class="toc-section-number">2.2.5</span> Describing gapminder</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#generalization-exercise-1" id="toc-generalization-exercise-1"><span class="toc-section-number">2.2.6</span> Generalization Exercise</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#writing-assignment-1" id="toc-writing-assignment-1"><span class="toc-section-number">2.2.7</span> Writing assignment</a></li>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#download-the-lab-templates"><i class="fa fa-check"></i><b>1.2.1</b> Download the lab templates</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#get-some-data"><i class="fa fa-check"></i><b>1.2.2</b> Get some data</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#look-at-the-data"><i class="fa fa-check"></i><b>1.2.3</b> Look at the data</a></li>
+<li class="chapter" data-level="1.2.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#make-plots-to-answer-questions"><i class="fa fa-check"></i><b>1.2.4</b> Make Plots to answer questions</a></li>
+<li class="chapter" data-level="1.2.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#ggplot2-basics"><i class="fa fa-check"></i><b>1.2.5</b> ggplot2 basics</a></li>
+<li class="chapter" data-level="1.2.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#more-questions-about-nyc-films"><i class="fa fa-check"></i><b>1.2.6</b> More questions about NYC films</a></li>
+<li class="chapter" data-level="1.2.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#gapminder-data"><i class="fa fa-check"></i><b>1.2.7</b> Gapminder Data</a></li>
+<li class="chapter" data-level="1.2.8" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#asking-questions-with-the-gap-minder-data"><i class="fa fa-check"></i><b>1.2.8</b> Asking Questions with the gap minder data</a></li>
+<li class="chapter" data-level="1.2.9" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#generalization-exercise"><i class="fa fa-check"></i><b>1.2.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="1.2.10" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#writing-assignment"><i class="fa fa-check"></i><b>1.2.10</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#excel-2" id="toc-excel-2"><span class="toc-section-number">2.3</span> Excel</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#spss-2" id="toc-spss-2"><span class="toc-section-number">2.4</span> SPSS</a>
+<li class="chapter" data-level="1.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#excel-1"><i class="fa fa-check"></i><b>1.3</b> Excel</a></li>
+<li class="chapter" data-level="1.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#spss-1"><i class="fa fa-check"></i><b>1.4</b> SPSS</a>
 <ul>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics" id="toc-calculating-descriptive-statistics"><span class="toc-section-number">2.4.1</span> Calculating Descriptive Statistics</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-histograms" id="toc-descriptive-statistics-and-histograms"><span class="toc-section-number">2.4.2</span> Descriptive Statistics and Histograms</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs" id="toc-editing-graphs"><span class="toc-section-number">2.4.3</span> Editing graphs</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots" id="toc-boxplots"><span class="toc-section-number">2.4.4</span> Boxplots</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-2" id="toc-homework-2"><span class="toc-section-number">2.4.5</span> Homework</a></li>
+<li class="chapter" data-level="1.4.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-spss-and-the-spss-layout-1"><i class="fa fa-check"></i><b>1.4.1</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="1.4.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-variable-view-tab-1"><i class="fa fa-check"></i><b>1.4.2</b> Reviewing variable properties and the Variable View tab</a></li>
+<li class="chapter" data-level="1.4.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.4.3</b> Opening a data file and producing different types of graphs</a></li>
+<li class="chapter" data-level="1.4.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.4.4</b> Homework</a></li>
 </ul></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-3---january-24th-25th" id="toc-jamovi---week-3---january-24th-25th"><span class="toc-section-number">2.5</span> JAMOVI - Week 3 - January 24th &amp; 25th</a>
+<li class="chapter" data-level="1.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-7---february-28th-march-1st"><i class="fa fa-check"></i><b>1.5</b> JAMOVI - Week 7 - February 28th &amp; March 1st</a>
 <ul>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#getting-ready-for-this-lesson" id="toc-getting-ready-for-this-lesson"><span class="toc-section-number">2.5.1</span> Getting ready for this lesson</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics" id="toc-the-basics"><span class="toc-section-number">2.5.2</span> The basics</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics-1" id="toc-calculating-descriptive-statistics-1"><span class="toc-section-number">2.5.3</span> Calculating Descriptive Statistics</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs" id="toc-descriptive-statistics-and-graphs"><span class="toc-section-number">2.5.4</span> Descriptive Statistics and Graphs</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics" id="toc-selecting-the-appropriate-descriptive-statistics"><span class="toc-section-number">2.5.5</span> Selecting the appropriate descriptive statistics</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots-1" id="toc-boxplots-1"><span class="toc-section-number">2.5.6</span> Boxplots</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1" id="toc-editing-graphs-1"><span class="toc-section-number">2.5.7</span> Editing graphs</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3" id="toc-homework-3"><span class="toc-section-number">2.5.8</span> Homework</a></li>
-<li><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions" id="toc-practice-questions"><span class="toc-section-number">2.5.9</span> Practice Questions</a></li>
-</ul></li>
-</ul></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#lab-3-sampling-and-sampling-distributions" id="toc-lab-3-sampling-and-sampling-distributions"><span class="toc-section-number">3</span> Lab 3: Sampling and Sampling Distributions</a>
-<ul>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#r-3" id="toc-r-3"><span class="toc-section-number">3.1</span> R</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#excel-3" id="toc-excel-3"><span class="toc-section-number">3.2</span> Excel</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#spss-3" id="toc-spss-3"><span class="toc-section-number">3.3</span> SPSS</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#jamovi---week-7---march-8-9" id="toc-jamovi---week-7---march-8-9"><span class="toc-section-number">3.4</span> JAMOVI - Week 7 - March 8 &amp; 9</a>
-<ul>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#learning-objectives" id="toc-learning-objectives"><span class="toc-section-number">3.4.1</span> Learning Objectives</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#pre-lab-tasks" id="toc-pre-lab-tasks"><span class="toc-section-number">3.4.2</span> Pre-lab tasks</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#the-impact-of-sampling-on-research-results" id="toc-the-impact-of-sampling-on-research-results"><span class="toc-section-number">3.4.3</span> The impact of sampling on research results</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#other-types-of-filters" id="toc-other-types-of-filters"><span class="toc-section-number">3.4.4</span> Other types of filters</a></li>
-<li><a href="lab-3-sampling-and-sampling-distributions.html#homework-problems" id="toc-homework-problems"><span class="toc-section-number">3.4.5</span> Homework Problems</a></li>
+<li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.1</b> Opening jamovi and reviewing the jamovi layout</a></li>
+<li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-setup-button"><i class="fa fa-check"></i><b>1.5.2</b> Reviewing variable properties and the Setup button</a></li>
+<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#importing-a-data-file"><i class="fa fa-check"></i><b>1.5.3</b> Importing a data file</a></li>
+<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#graphs"><i class="fa fa-check"></i><b>1.5.4</b> Graphs</a></li>
+<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-2"><i class="fa fa-check"></i><b>1.5.5</b> Homework</a></li>
+<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.6</b> Thinking about Data - Practice Questions</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#lab-4-t-test-one-sample-paired-sample" id="toc-lab-4-t-test-one-sample-paired-sample"><span class="toc-section-number">4</span> Lab 4: t-Test (one-sample, paired sample)</a>
+<li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics (and more graphs)</a>
 <ul>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#intro-material-for-r-and-spss-activities" id="toc-intro-material-for-r-and-spss-activities"><span class="toc-section-number">4.1</span> Intro material for R and SPSS activities</a>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a>
 <ul>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants" id="toc-does-music-convey-social-information-to-infants"><span class="toc-section-number">4.1.1</span> Does Music Convey Social Information to Infants?</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#lab-skills-learned" id="toc-lab-skills-learned"><span class="toc-section-number">4.1.2</span> Lab skills learned</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#important-stuff" id="toc-important-stuff"><span class="toc-section-number">4.1.3</span> Important Stuff</a></li>
+<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
 </ul></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#r-4" id="toc-r-4"><span class="toc-section-number">4.2</span> R</a>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#r-2"><i class="fa fa-check"></i><b>2.2</b> R</a>
 <ul>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#loading-the-data" id="toc-loading-the-data"><span class="toc-section-number">4.2.1</span> Loading the data</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#inspect-the-data-frame" id="toc-inspect-the-data-frame"><span class="toc-section-number">4.2.2</span> Inspect the data frame</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#get-the-data-for-experiment-one" id="toc-get-the-data-for-experiment-one"><span class="toc-section-number">4.2.3</span> Get the data for Experiment one</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test" id="toc-baseline-phase-conduct-a-one-sample-t-test"><span class="toc-section-number">4.2.4</span> Baseline phase: Conduct a one sample <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#test-phase" id="toc-test-phase"><span class="toc-section-number">4.2.5</span> Test phase</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#paired-samples-t-test" id="toc-paired-samples-t-test"><span class="toc-section-number">4.2.6</span> Paired-samples <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-the-findings" id="toc-graphing-the-findings"><span class="toc-section-number">4.2.7</span> Graphing the findings</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#data-simulation" id="toc-data-simulation"><span class="toc-section-number">4.2.8</span> Data-simulation</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#generalization-exercise-2" id="toc-generalization-exercise-2"><span class="toc-section-number">4.2.9</span> Generalization Exercise</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#writing-assignment-2" id="toc-writing-assignment-2"><span class="toc-section-number">4.2.10</span> Writing assignment</a></li>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-basics-in-r"><i class="fa fa-check"></i><b>2.2.1</b> Descriptives basics in R</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#central-tendency"><i class="fa fa-check"></i><b>2.2.2</b> Central Tendency</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#variation"><i class="fa fa-check"></i><b>2.2.3</b> Variation</a></li>
+<li class="chapter" data-level="2.2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-by-conditions"><i class="fa fa-check"></i><b>2.2.4</b> Descriptives by conditions</a></li>
+<li class="chapter" data-level="2.2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#describing-gapminder"><i class="fa fa-check"></i><b>2.2.5</b> Describing gapminder</a></li>
+<li class="chapter" data-level="2.2.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#generalization-exercise-1"><i class="fa fa-check"></i><b>2.2.6</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="2.2.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#writing-assignment-1"><i class="fa fa-check"></i><b>2.2.7</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#excel-4" id="toc-excel-4"><span class="toc-section-number">4.3</span> Excel</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#spss-4" id="toc-spss-4"><span class="toc-section-number">4.4</span> SPSS</a>
+<li class="chapter" data-level="2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#excel-2"><i class="fa fa-check"></i><b>2.3</b> Excel</a></li>
+<li class="chapter" data-level="2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#spss-2"><i class="fa fa-check"></i><b>2.4</b> SPSS</a>
 <ul>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background" id="toc-experiment-background"><span class="toc-section-number">4.4.1</span> Experiment Background</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test" id="toc-optional-performing-a-one-sample-t-test"><span class="toc-section-number">4.4.2</span> OPTIONAL: Performing a one sample <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test" id="toc-performing-a-paired-samples-t-test"><span class="toc-section-number">4.4.3</span> Performing a paired-samples <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results" id="toc-graphing-your-results"><span class="toc-section-number">4.4.4</span> Graphing your results</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test" id="toc-optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test"><span class="toc-section-number">4.4.5</span> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics" id="toc-using-descriptive-statistics-to-give-context-to-inferential-statistics"><span class="toc-section-number">4.4.6</span> Using descriptive statistics to give context to inferential statistics</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6" id="toc-lab-homework-6"><span class="toc-section-number">4.4.7</span> Lab Homework #6</a></li>
+<li class="chapter" data-level="2.4.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics"><i class="fa fa-check"></i><b>2.4.1</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.4.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.4.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="2.4.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs"><i class="fa fa-check"></i><b>2.4.3</b> Editing graphs</a></li>
+<li class="chapter" data-level="2.4.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots"><i class="fa fa-check"></i><b>2.4.4</b> Boxplots</a></li>
+<li class="chapter" data-level="2.4.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3"><i class="fa fa-check"></i><b>2.4.5</b> Homework</a></li>
 </ul></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-14th-15th" id="toc-jamovi---week-9---march-14th-15th"><span class="toc-section-number">4.5</span> JAMOVI - Week 9 - March 14th &amp; 15th</a>
+<li class="chapter" data-level="2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-3---january-24th-25th"><i class="fa fa-check"></i><b>2.5</b> JAMOVI - Week 3 - January 24th &amp; 25th</a>
 <ul>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1" id="toc-learning-objectives-1"><span class="toc-section-number">4.5.1</span> Learning Objectives</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-1" id="toc-pre-lab-tasks-1"><span class="toc-section-number">4.5.2</span> Pre-lab Tasks</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set" id="toc-research-context-for-data-set"><span class="toc-section-number">4.5.3</span> Research Context for Data Set</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1" id="toc-performing-a-paired-samples-t-test-1"><span class="toc-section-number">4.5.4</span> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format" id="toc-writing-results-in-apa-format"><span class="toc-section-number">4.5.5</span> Writing results in APA format</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test" id="toc-performing-a-one-sample-t-test"><span class="toc-section-number">4.5.6</span> Performing a one-sample <em>t</em>-test</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions" id="toc-homework-questions"><span class="toc-section-number">4.5.7</span> Homework Questions</a></li>
-<li><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1" id="toc-practice-questions-1"><span class="toc-section-number">4.5.8</span> Practice Questions</a></li>
+<li class="chapter" data-level="2.5.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#getting-ready-for-this-lesson"><i class="fa fa-check"></i><b>2.5.1</b> Getting ready for this lesson</a></li>
+<li class="chapter" data-level="2.5.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics"><i class="fa fa-check"></i><b>2.5.2</b> The basics</a></li>
+<li class="chapter" data-level="2.5.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>2.5.3</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.5.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs"><i class="fa fa-check"></i><b>2.5.4</b> Descriptive Statistics and Graphs</a></li>
+<li class="chapter" data-level="2.5.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics"><i class="fa fa-check"></i><b>2.5.5</b> Selecting the appropriate descriptive statistics</a></li>
+<li class="chapter" data-level="2.5.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots-1"><i class="fa fa-check"></i><b>2.5.6</b> Boxplots</a></li>
+<li class="chapter" data-level="2.5.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1"><i class="fa fa-check"></i><b>2.5.7</b> Editing graphs</a></li>
+<li class="chapter" data-level="2.5.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-4"><i class="fa fa-check"></i><b>2.5.8</b> Homework</a></li>
+<li class="chapter" data-level="2.5.9" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions"><i class="fa fa-check"></i><b>2.5.9</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-5-t-test-independent-sample.html#lab-5-t-test-independent-sample" id="toc-lab-5-t-test-independent-sample"><span class="toc-section-number">5</span> Lab 5: <em>t</em>-test (Independent Sample)</a>
+<li class="chapter" data-level="3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Sampling and Sampling Distributions</a>
 <ul>
-<li><a href="lab-5-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say" id="toc-do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><span class="toc-section-number">5.1</span> Do you come across as smarter when people read what you say or hear what you say?</a>
+<li class="chapter" data-level="3.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#r-3"><i class="fa fa-check"></i><b>3.1</b> R</a></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#excel-3"><i class="fa fa-check"></i><b>3.2</b> Excel</a></li>
+<li class="chapter" data-level="3.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#spss-3"><i class="fa fa-check"></i><b>3.3</b> SPSS</a></li>
+<li class="chapter" data-level="3.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#jamovi---week-7---march-8-9"><i class="fa fa-check"></i><b>3.4</b> JAMOVI - Week 7 - March 8 &amp; 9</a>
 <ul>
-<li><a href="lab-5-t-test-independent-sample.html#study-description-1" id="toc-study-description-1"><span class="toc-section-number">5.1.1</span> STUDY DESCRIPTION</a></li>
-</ul></li>
-<li><a href="lab-5-t-test-independent-sample.html#lab-skills-learned-1" id="toc-lab-skills-learned-1"><span class="toc-section-number">5.2</span> Lab skills learned</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#important-stuff-1" id="toc-important-stuff-1"><span class="toc-section-number">5.3</span> Important Stuff</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#r-5" id="toc-r-5"><span class="toc-section-number">5.4</span> R</a>
-<ul>
-<li><a href="lab-5-t-test-independent-sample.html#load-the-data" id="toc-load-the-data"><span class="toc-section-number">5.4.1</span> Load the data</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#inspect-data-frame" id="toc-inspect-data-frame"><span class="toc-section-number">5.4.2</span> Inspect data frame</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#find-the-data-you-need" id="toc-find-the-data-you-need"><span class="toc-section-number">5.4.3</span> Find the data you need</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#look-at-the-dependent-variable." id="toc-look-at-the-dependent-variable."><span class="toc-section-number">5.4.4</span> Look at the dependent variable.</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#conduct-independent-samples-t-test" id="toc-conduct-independent-samples-t-test"><span class="toc-section-number">5.4.5</span> Conduct Independent samples <em>t</em>-test</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#remaining-ratings" id="toc-remaining-ratings"><span class="toc-section-number">5.4.6</span> Remaining ratings</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#reconstructing-the-graph-from-the-paper" id="toc-reconstructing-the-graph-from-the-paper"><span class="toc-section-number">5.4.7</span> Reconstructing the graph from the paper</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#generalization-exercise-3" id="toc-generalization-exercise-3"><span class="toc-section-number">5.4.8</span> Generalization Exercise</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#writing-assignment-3" id="toc-writing-assignment-3"><span class="toc-section-number">5.4.9</span> Writing assignment</a></li>
-</ul></li>
-<li><a href="lab-5-t-test-independent-sample.html#excel-5" id="toc-excel-5"><span class="toc-section-number">5.5</span> Excel</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#spss-5" id="toc-spss-5"><span class="toc-section-number">5.6</span> SPSS</a>
-<ul>
-<li><a href="lab-5-t-test-independent-sample.html#experiment-background-1" id="toc-experiment-background-1"><span class="toc-section-number">5.6.1</span> Experiment Background</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test" id="toc-performing-an-independent-samples-t-test"><span class="toc-section-number">5.6.2</span> Performing an independent-samples <em>t</em>-test</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#graphing-your-data" id="toc-graphing-your-data"><span class="toc-section-number">5.6.3</span> Graphing your data</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#optional-activities" id="toc-optional-activities"><span class="toc-section-number">5.6.4</span> Optional activities</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#lab-homework-7" id="toc-lab-homework-7"><span class="toc-section-number">5.6.5</span> Lab Homework #7</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems" id="toc-example-answers-to-practice-problems"><span class="toc-section-number">5.6.6</span> Example answers to practice problems</a></li>
-</ul></li>
-<li><a href="lab-5-t-test-independent-sample.html#jamovi---week-9---march-21st-22nd" id="toc-jamovi---week-9---march-21st-22nd"><span class="toc-section-number">5.7</span> JAMOVI - Week 9 - March 21st &amp; 22nd</a>
-<ul>
-<li><a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks" id="toc-pre-lab-reading-and-tasks"><span class="toc-section-number">5.7.1</span> Pre-lab reading and tasks</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1" id="toc-performing-an-independent-samples-t-test-1"><span class="toc-section-number">5.7.2</span> Performing an independent-samples <em>t</em>-test</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections" id="toc-some-apa-formatting-reminders-for-writing-results-sections"><span class="toc-section-number">5.7.3</span> Some APA formatting reminders for writing results sections</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#graphing-your-data-1" id="toc-graphing-your-data-1"><span class="toc-section-number">5.7.4</span> Graphing your data</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#optional-exercises" id="toc-optional-exercises"><span class="toc-section-number">5.7.5</span> Optional exercises</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#lab-homework-7-1" id="toc-lab-homework-7-1"><span class="toc-section-number">5.7.6</span> Lab Homework #7</a></li>
-<li><a href="lab-5-t-test-independent-sample.html#practice-problems-1" id="toc-practice-problems-1"><span class="toc-section-number">5.7.7</span> Practice Problems</a></li>
+<li class="chapter" data-level="3.4.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#learning-objectives"><i class="fa fa-check"></i><b>3.4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.4.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#pre-lab-tasks"><i class="fa fa-check"></i><b>3.4.2</b> Pre-lab tasks</a></li>
+<li class="chapter" data-level="3.4.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#the-impact-of-sampling-on-research-results"><i class="fa fa-check"></i><b>3.4.3</b> The impact of sampling on research results</a></li>
+<li class="chapter" data-level="3.4.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#other-types-of-filters"><i class="fa fa-check"></i><b>3.4.4</b> Other types of filters</a></li>
+<li class="chapter" data-level="3.4.5" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#homework-problems"><i class="fa fa-check"></i><b>3.4.5</b> Homework Problems</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-6-correlation.html#lab-6-correlation" id="toc-lab-6-correlation"><span class="toc-section-number">6</span> Lab 6: Correlation</a>
+<li class="chapter" data-level="4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>4</b> Lab 4: t-Test (one-sample, paired sample)</a>
 <ul>
-<li><a href="lab-6-correlation.html#general-goals-2" id="toc-general-goals-2"><span class="toc-section-number">6.1</span> General Goals</a>
+<li class="chapter" data-level="4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#intro-material-for-r-and-spss-activities"><i class="fa fa-check"></i><b>4.1</b> Intro material for R and SPSS activities</a>
 <ul>
-<li><a href="lab-6-correlation.html#important-info-2" id="toc-important-info-2"><span class="toc-section-number">6.1.1</span> Important Info</a></li>
+<li class="chapter" data-level="4.1.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>4.1.1</b> Does Music Convey Social Information to Infants?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>4.1.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="4.1.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>4.1.3</b> Important Stuff</a></li>
 </ul></li>
-<li><a href="lab-6-correlation.html#r-6" id="toc-r-6"><span class="toc-section-number">6.2</span> R</a>
+<li class="chapter" data-level="4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#r-4"><i class="fa fa-check"></i><b>4.2</b> R</a>
 <ul>
-<li><a href="lab-6-correlation.html#cor-for-correlation" id="toc-cor-for-correlation"><span class="toc-section-number">6.2.1</span> cor for correlation</a></li>
-<li><a href="lab-6-correlation.html#world-happiness-report" id="toc-world-happiness-report"><span class="toc-section-number">6.2.2</span> World Happiness Report</a></li>
-<li><a href="lab-6-correlation.html#generalization-exercise-4" id="toc-generalization-exercise-4"><span class="toc-section-number">6.2.3</span> Generalization Exercise</a></li>
-<li><a href="lab-6-correlation.html#writing-assignment-4" id="toc-writing-assignment-4"><span class="toc-section-number">6.2.4</span> Writing assignment</a></li>
+<li class="chapter" data-level="4.2.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#loading-the-data"><i class="fa fa-check"></i><b>4.2.1</b> Loading the data</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#inspect-the-data-frame"><i class="fa fa-check"></i><b>4.2.2</b> Inspect the data frame</a></li>
+<li class="chapter" data-level="4.2.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#get-the-data-for-experiment-one"><i class="fa fa-check"></i><b>4.2.3</b> Get the data for Experiment one</a></li>
+<li class="chapter" data-level="4.2.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.2.4</b> Baseline phase: Conduct a one sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.2.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>4.2.5</b> Test phase</a></li>
+<li class="chapter" data-level="4.2.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>4.2.6</b> Paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.2.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-the-findings"><i class="fa fa-check"></i><b>4.2.7</b> Graphing the findings</a></li>
+<li class="chapter" data-level="4.2.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#data-simulation"><i class="fa fa-check"></i><b>4.2.8</b> Data-simulation</a></li>
+<li class="chapter" data-level="4.2.9" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#generalization-exercise-2"><i class="fa fa-check"></i><b>4.2.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="4.2.10" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-assignment-2"><i class="fa fa-check"></i><b>4.2.10</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-6-correlation.html#excel-6" id="toc-excel-6"><span class="toc-section-number">6.3</span> Excel</a></li>
-<li><a href="lab-6-correlation.html#spss-6" id="toc-spss-6"><span class="toc-section-number">6.4</span> SPSS</a>
+<li class="chapter" data-level="4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#excel-4"><i class="fa fa-check"></i><b>4.3</b> Excel</a></li>
+<li class="chapter" data-level="4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#spss-4"><i class="fa fa-check"></i><b>4.4</b> SPSS</a>
 <ul>
-<li><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-two-variables" id="toc-correlation-coefficient-for-bivariate-data-two-variables"><span class="toc-section-number">6.4.1</span> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
-<li><a href="lab-6-correlation.html#correlation-matrix" id="toc-correlation-matrix"><span class="toc-section-number">6.4.2</span> Correlation Matrix</a></li>
-<li><a href="lab-6-correlation.html#correlation-and-scatterplots" id="toc-correlation-and-scatterplots"><span class="toc-section-number">6.4.3</span> Correlation and Scatterplots</a></li>
-<li><a href="lab-6-correlation.html#splitting-a-file" id="toc-splitting-a-file"><span class="toc-section-number">6.4.4</span> Splitting a File</a></li>
-<li><a href="lab-6-correlation.html#practice-problems-2" id="toc-practice-problems-2"><span class="toc-section-number">6.4.5</span> Practice Problems</a></li>
+<li class="chapter" data-level="4.4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background"><i class="fa fa-check"></i><b>4.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="4.4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.4.2</b> OPTIONAL: Performing a one sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test"><i class="fa fa-check"></i><b>4.4.3</b> Performing a paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results"><i class="fa fa-check"></i><b>4.4.4</b> Graphing your results</a></li>
+<li class="chapter" data-level="4.4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test"><i class="fa fa-check"></i><b>4.4.5</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics"><i class="fa fa-check"></i><b>4.4.6</b> Using descriptive statistics to give context to inferential statistics</a></li>
+<li class="chapter" data-level="4.4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6"><i class="fa fa-check"></i><b>4.4.7</b> Lab Homework #6</a></li>
 </ul></li>
-<li><a href="lab-6-correlation.html#jamovi---week-10---march-28th-29th" id="toc-jamovi---week-10---march-28th-29th"><span class="toc-section-number">6.5</span> JAMOVI - Week 10 - March 28th &amp; 29th</a>
+<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-14th-15th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 14th &amp; 15th</a>
 <ul>
-<li><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-1" id="toc-pre-lab-reading-and-tasks-1"><span class="toc-section-number">6.5.1</span> Pre-lab reading and tasks</a></li>
-<li><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data" id="toc-correlation-coefficient-for-bivariate-data"><span class="toc-section-number">6.5.2</span> Correlation Coefficient for Bivariate Data</a></li>
-<li><a href="lab-6-correlation.html#correlation-matrix-1" id="toc-correlation-matrix-1"><span class="toc-section-number">6.5.3</span> Correlation Matrix</a></li>
-<li><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation" id="toc-apa-format-reporting-of-a-correlation"><span class="toc-section-number">6.5.4</span> APA format reporting of a correlation</a></li>
-<li><a href="lab-6-correlation.html#correlation-and-scatterplots-1" id="toc-correlation-and-scatterplots-1"><span class="toc-section-number">6.5.5</span> Correlation and Scatterplots</a></li>
-<li><a href="lab-6-correlation.html#optional-activities-1" id="toc-optional-activities-1"><span class="toc-section-number">6.5.6</span> Optional activities</a></li>
-<li><a href="lab-6-correlation.html#example-answers-to-optional-activities-1" id="toc-example-answers-to-optional-activities-1"><span class="toc-section-number">6.5.7</span> Example answers to optional activities</a></li>
-<li><a href="lab-6-correlation.html#homework-4" id="toc-homework-4"><span class="toc-section-number">6.5.8</span> Homework</a></li>
-<li><a href="lab-6-correlation.html#practice-problems-3" id="toc-practice-problems-3"><span class="toc-section-number">6.5.9</span> Practice Problems</a></li>
-</ul></li>
-<li><a href="lab-6-correlation.html#jamovi-correlation-for-psyc-394-students" id="toc-jamovi-correlation-for-psyc-394-students"><span class="toc-section-number">6.6</span> JAMOVI – Correlation – FOR PSYC 394 STUDENTS</a>
-<ul>
-<li><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-2" id="toc-pre-lab-reading-and-tasks-2"><span class="toc-section-number">6.6.1</span> Pre-lab reading and tasks</a></li>
-<li><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-1" id="toc-correlation-coefficient-for-bivariate-data-1"><span class="toc-section-number">6.6.2</span> Correlation Coefficient for Bivariate Data</a></li>
-<li><a href="lab-6-correlation.html#correlation-matrix-2" id="toc-correlation-matrix-2"><span class="toc-section-number">6.6.3</span> Correlation Matrix</a></li>
-<li><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation-1" id="toc-apa-format-reporting-of-a-correlation-1"><span class="toc-section-number">6.6.4</span> APA format reporting of a correlation</a></li>
-<li><a href="lab-6-correlation.html#correlation-and-scatterplots-2" id="toc-correlation-and-scatterplots-2"><span class="toc-section-number">6.6.5</span> Correlation and Scatterplots</a></li>
-<li><a href="lab-6-correlation.html#optional-activities-2" id="toc-optional-activities-2"><span class="toc-section-number">6.6.6</span> Optional activities</a></li>
-<li><a href="lab-6-correlation.html#example-answers-to-optional-activities-2" id="toc-example-answers-to-optional-activities-2"><span class="toc-section-number">6.6.7</span> Example answers to optional activities</a></li>
-<li><a href="lab-6-correlation.html#homework-5" id="toc-homework-5"><span class="toc-section-number">6.6.8</span> Homework</a></li>
-<li><a href="lab-6-correlation.html#practice-problems-4" id="toc-practice-problems-4"><span class="toc-section-number">6.6.9</span> Practice Problems</a></li>
+<li class="chapter" data-level="4.5.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-1"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
+<li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
+<li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.5</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.6</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.7</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.8</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-7-one-way-anova.html#lab-7-one-way-anova" id="toc-lab-7-one-way-anova"><span class="toc-section-number">7</span> Lab 7 One-way ANOVA</a>
+<li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
 <ul>
-<li><a href="lab-7-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris" id="toc-how-to-not-think-about-bad-memories-by-playing-tetris"><span class="toc-section-number">7.1</span> How to not think about bad memories by playing Tetris</a>
+<li class="chapter" data-level="5.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><i class="fa fa-check"></i><b>5.1</b> Do you come across as smarter when people read what you say or hear what you say?</a>
 <ul>
-<li><a href="lab-7-one-way-anova.html#study-description-2" id="toc-study-description-2"><span class="toc-section-number">7.1.1</span> STUDY DESCRIPTION</a></li>
-<li><a href="lab-7-one-way-anova.html#study-methods" id="toc-study-methods"><span class="toc-section-number">7.1.2</span> Study Methods</a></li>
+<li class="chapter" data-level="5.1.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#study-description-1"><i class="fa fa-check"></i><b>5.1.1</b> STUDY DESCRIPTION</a></li>
 </ul></li>
-<li><a href="lab-7-one-way-anova.html#lab-skills-learned-2" id="toc-lab-skills-learned-2"><span class="toc-section-number">7.2</span> Lab Skills Learned</a></li>
-<li><a href="lab-7-one-way-anova.html#important-stuff-2" id="toc-important-stuff-2"><span class="toc-section-number">7.3</span> Important Stuff</a></li>
-<li><a href="lab-7-one-way-anova.html#r-7" id="toc-r-7"><span class="toc-section-number">7.4</span> R</a>
+<li class="chapter" data-level="5.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>5.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="5.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>5.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="5.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#r-5"><i class="fa fa-check"></i><b>5.4</b> R</a>
 <ul>
-<li><a href="lab-7-one-way-anova.html#load-the-data-2" id="toc-load-the-data-2"><span class="toc-section-number">7.4.1</span> Load the data</a></li>
-<li><a href="lab-7-one-way-anova.html#inspect-the-dataframe" id="toc-inspect-the-dataframe"><span class="toc-section-number">7.4.2</span> Inspect the dataframe</a></li>
-<li><a href="lab-7-one-way-anova.html#get-the-data-you-need" id="toc-get-the-data-you-need"><span class="toc-section-number">7.4.3</span> Get the data you need</a></li>
-<li><a href="lab-7-one-way-anova.html#look-at-the-data-2" id="toc-look-at-the-data-2"><span class="toc-section-number">7.4.4</span> Look at the data</a></li>
-<li><a href="lab-7-one-way-anova.html#conduct-the-anova" id="toc-conduct-the-anova"><span class="toc-section-number">7.4.5</span> Conduct the ANOVA</a></li>
-<li><a href="lab-7-one-way-anova.html#reporting-the-anova-results" id="toc-reporting-the-anova-results"><span class="toc-section-number">7.4.6</span> Reporting the ANOVA results</a></li>
-<li><a href="lab-7-one-way-anova.html#individual-comparisons" id="toc-individual-comparisons"><span class="toc-section-number">7.4.7</span> Individual comparisons</a></li>
-<li><a href="lab-7-one-way-anova.html#writing-it-all-up." id="toc-writing-it-all-up."><span class="toc-section-number">7.4.8</span> Writing it all up.</a></li>
-<li><a href="lab-7-one-way-anova.html#food-for-thought" id="toc-food-for-thought"><span class="toc-section-number">7.4.9</span> Food for thought</a></li>
+<li class="chapter" data-level="5.4.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#load-the-data"><i class="fa fa-check"></i><b>5.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="5.4.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#inspect-data-frame"><i class="fa fa-check"></i><b>5.4.2</b> Inspect data frame</a></li>
+<li class="chapter" data-level="5.4.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#find-the-data-you-need"><i class="fa fa-check"></i><b>5.4.3</b> Find the data you need</a></li>
+<li class="chapter" data-level="5.4.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#look-at-the-dependent-variable."><i class="fa fa-check"></i><b>5.4.4</b> Look at the dependent variable.</a></li>
+<li class="chapter" data-level="5.4.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#conduct-independent-samples-t-test"><i class="fa fa-check"></i><b>5.4.5</b> Conduct Independent samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.4.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#remaining-ratings"><i class="fa fa-check"></i><b>5.4.6</b> Remaining ratings</a></li>
+<li class="chapter" data-level="5.4.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#reconstructing-the-graph-from-the-paper"><i class="fa fa-check"></i><b>5.4.7</b> Reconstructing the graph from the paper</a></li>
+<li class="chapter" data-level="5.4.8" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#generalization-exercise-3"><i class="fa fa-check"></i><b>5.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="5.4.9" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#writing-assignment-3"><i class="fa fa-check"></i><b>5.4.9</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-7-one-way-anova.html#control-vs-reactivationtetris" id="toc-control-vs-reactivationtetris"><span class="toc-section-number">7.5</span> control vs reactivation+Tetris</a></li>
-<li><a href="lab-7-one-way-anova.html#tetris_only-vs-reactivationtetris" id="toc-tetris_only-vs-reactivationtetris"><span class="toc-section-number">7.6</span> Tetris_only vs reactivation+Tetris</a>
+<li class="chapter" data-level="5.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#excel-5"><i class="fa fa-check"></i><b>5.5</b> Excel</a></li>
+<li class="chapter" data-level="5.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#spss-5"><i class="fa fa-check"></i><b>5.6</b> SPSS</a>
 <ul>
-<li><a href="lab-7-one-way-anova.html#generalization-exercise-5" id="toc-generalization-exercise-5"><span class="toc-section-number">7.6.1</span> Generalization Exercise</a></li>
-<li><a href="lab-7-one-way-anova.html#writing-assignment-5" id="toc-writing-assignment-5"><span class="toc-section-number">7.6.2</span> Writing assignment</a></li>
+<li class="chapter" data-level="5.6.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>5.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.6.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>5.6.2</b> Performing an independent-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.6.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data"><i class="fa fa-check"></i><b>5.6.3</b> Graphing your data</a></li>
+<li class="chapter" data-level="5.6.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-activities"><i class="fa fa-check"></i><b>5.6.4</b> Optional activities</a></li>
+<li class="chapter" data-level="5.6.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7"><i class="fa fa-check"></i><b>5.6.5</b> Lab Homework #7</a></li>
+<li class="chapter" data-level="5.6.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems"><i class="fa fa-check"></i><b>5.6.6</b> Example answers to practice problems</a></li>
 </ul></li>
-<li><a href="lab-7-one-way-anova.html#excel-7" id="toc-excel-7"><span class="toc-section-number">7.7</span> Excel</a></li>
-<li><a href="lab-7-one-way-anova.html#spss-7" id="toc-spss-7"><span class="toc-section-number">7.8</span> SPSS</a>
+<li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi---week-9---march-21st-22nd"><i class="fa fa-check"></i><b>5.7</b> JAMOVI - Week 9 - March 21st &amp; 22nd</a>
 <ul>
-<li><a href="lab-7-one-way-anova.html#experiment-background-3" id="toc-experiment-background-3"><span class="toc-section-number">7.8.1</span> Experiment Background</a></li>
-<li><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data" id="toc-performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><span class="toc-section-number">7.8.2</span> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
-<li><a href="lab-7-one-way-anova.html#follow-up-tests" id="toc-follow-up-tests"><span class="toc-section-number">7.8.3</span> Follow-Up Tests</a></li>
-<li><a href="lab-7-one-way-anova.html#planned-comparisons-t-contrasts" id="toc-planned-comparisons-t-contrasts"><span class="toc-section-number">7.8.4</span> Planned Comparisons: T-Contrasts</a></li>
-<li><a href="lab-7-one-way-anova.html#unplanned-comparisons-post-hoc-tests" id="toc-unplanned-comparisons-post-hoc-tests"><span class="toc-section-number">7.8.5</span> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
-<li><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model" id="toc-other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><span class="toc-section-number">7.8.6</span> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
-<li><a href="lab-7-one-way-anova.html#homework-questions-1" id="toc-homework-questions-1"><span class="toc-section-number">7.8.7</span> Homework questions</a></li>
-</ul></li>
-<li><a href="lab-7-one-way-anova.html#jamovi" id="toc-jamovi"><span class="toc-section-number">7.9</span> JAMOVI</a>
-<ul>
-<li><a href="lab-7-one-way-anova.html#experiment-background-4" id="toc-experiment-background-4"><span class="toc-section-number">7.9.1</span> Experiment Background</a></li>
-<li><a href="lab-7-one-way-anova.html#checking-assumptions" id="toc-checking-assumptions"><span class="toc-section-number">7.9.2</span> Checking Assumptions</a></li>
-<li><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1" id="toc-performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><span class="toc-section-number">7.9.3</span> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
-<li><a href="lab-7-one-way-anova.html#follow-up-tests-1" id="toc-follow-up-tests-1"><span class="toc-section-number">7.9.4</span> Follow-Up Tests</a></li>
+<li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks"><i class="fa fa-check"></i><b>5.7.1</b> Pre-lab reading and tasks</a></li>
+<li class="chapter" data-level="5.7.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>5.7.2</b> Performing an independent-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.7.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections"><i class="fa fa-check"></i><b>5.7.3</b> Some APA formatting reminders for writing results sections</a></li>
+<li class="chapter" data-level="5.7.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data-1"><i class="fa fa-check"></i><b>5.7.4</b> Graphing your data</a></li>
+<li class="chapter" data-level="5.7.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises"><i class="fa fa-check"></i><b>5.7.5</b> Optional exercises</a></li>
+<li class="chapter" data-level="5.7.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7-1"><i class="fa fa-check"></i><b>5.7.6</b> Lab Homework #7</a></li>
+<li class="chapter" data-level="5.7.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#practice-problems-1"><i class="fa fa-check"></i><b>5.7.7</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
-<li><a href="lab-8-repeated-measures-anova.html#lab-8-repeated-measures-anova" id="toc-lab-8-repeated-measures-anova"><span class="toc-section-number">8</span> Lab 8 Repeated Measures ANOVA</a>
+<li class="chapter" data-level="6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html"><i class="fa fa-check"></i><b>6</b> Lab 6: Correlation</a>
 <ul>
-<li><a href="lab-8-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try" id="toc-betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><span class="toc-section-number">8.1</span> Betcha can’t type JHDBZKCO very fast on your first try</a>
+<li class="chapter" data-level="6.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>6.1</b> General Goals</a>
 <ul>
-<li><a href="lab-8-repeated-measures-anova.html#study-description-3" id="toc-study-description-3"><span class="toc-section-number">8.1.1</span> STUDY DESCRIPTION</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#study-methods-1" id="toc-study-methods-1"><span class="toc-section-number">8.1.2</span> Study Methods</a></li>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#important-info-2"><i class="fa fa-check"></i><b>6.1.1</b> Important Info</a></li>
 </ul></li>
-<li><a href="lab-8-repeated-measures-anova.html#lab-skills-learned-3" id="toc-lab-skills-learned-3"><span class="toc-section-number">8.2</span> Lab Skills Learned</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#important-stuff-3" id="toc-important-stuff-3"><span class="toc-section-number">8.3</span> Important Stuff</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#r-8" id="toc-r-8"><span class="toc-section-number">8.4</span> R</a>
+<li class="chapter" data-level="6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#r-6"><i class="fa fa-check"></i><b>6.2</b> R</a>
 <ul>
-<li><a href="lab-8-repeated-measures-anova.html#load-the-data-3" id="toc-load-the-data-3"><span class="toc-section-number">8.4.1</span> Load the data</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#inspect-the-dataframe-1" id="toc-inspect-the-dataframe-1"><span class="toc-section-number">8.4.2</span> Inspect the dataframe</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#get-the-data-you-need-1" id="toc-get-the-data-you-need-1"><span class="toc-section-number">8.4.3</span> Get the data you need</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#look-at-the-data-3" id="toc-look-at-the-data-3"><span class="toc-section-number">8.4.4</span> Look at the data</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#look-at-the-means" id="toc-look-at-the-means"><span class="toc-section-number">8.4.5</span> Look at the means</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#conduct-the-repeated-measures-anova" id="toc-conduct-the-repeated-measures-anova"><span class="toc-section-number">8.4.6</span> Conduct the repeated Measures ANOVA</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#follow-up-comparisons" id="toc-follow-up-comparisons"><span class="toc-section-number">8.4.7</span> Follow-up comparisons</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#reporting-everything" id="toc-reporting-everything"><span class="toc-section-number">8.4.8</span> Reporting everything</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#generalization-exercise-6" id="toc-generalization-exercise-6"><span class="toc-section-number">8.4.9</span> Generalization Exercise</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#writing-assignment-6" id="toc-writing-assignment-6"><span class="toc-section-number">8.4.10</span> Writing assignment</a></li>
+<li class="chapter" data-level="6.2.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#cor-for-correlation"><i class="fa fa-check"></i><b>6.2.1</b> cor for correlation</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#world-happiness-report"><i class="fa fa-check"></i><b>6.2.2</b> World Happiness Report</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#generalization-exercise-4"><i class="fa fa-check"></i><b>6.2.3</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="6.2.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#writing-assignment-4"><i class="fa fa-check"></i><b>6.2.4</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-8-repeated-measures-anova.html#excel-8" id="toc-excel-8"><span class="toc-section-number">8.5</span> Excel</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#spss-8" id="toc-spss-8"><span class="toc-section-number">8.6</span> SPSS</a>
+<li class="chapter" data-level="6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#excel-6"><i class="fa fa-check"></i><b>6.3</b> Excel</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#spss-6"><i class="fa fa-check"></i><b>6.4</b> SPSS</a>
 <ul>
-<li><a href="lab-8-repeated-measures-anova.html#experiment-background-5" id="toc-experiment-background-5"><span class="toc-section-number">8.6.1</span> Experiment Background</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers" id="toc-produce-a-frequency-histogram-and-remove-outliers"><span class="toc-section-number">8.6.2</span> Produce a frequency histogram and remove outliers</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova" id="toc-conduct-and-graph-one-factor-repeated-measures-anova"><span class="toc-section-number">8.6.3</span> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test" id="toc-conduct-planned-comparisons-using-a-paired-samples-t-test"><span class="toc-section-number">8.6.4</span> Conduct planned comparisons using a paired-samples t-test</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#practice-problems-5" id="toc-practice-problems-5"><span class="toc-section-number">8.6.5</span> Practice Problems</a></li>
+<li class="chapter" data-level="6.4.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>6.4.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="6.4.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix"><i class="fa fa-check"></i><b>6.4.2</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.4.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>6.4.3</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.4.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#splitting-a-file"><i class="fa fa-check"></i><b>6.4.4</b> Splitting a File</a></li>
+<li class="chapter" data-level="6.4.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-2"><i class="fa fa-check"></i><b>6.4.5</b> Practice Problems</a></li>
 </ul></li>
-<li><a href="lab-8-repeated-measures-anova.html#jamovi-1" id="toc-jamovi-1"><span class="toc-section-number">8.7</span> JAMOVI</a>
+<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi---week-10---march-28th-29th"><i class="fa fa-check"></i><b>6.5</b> JAMOVI - Week 10 - March 28th &amp; 29th</a>
 <ul>
-<li><a href="lab-8-repeated-measures-anova.html#experiment-background-6" id="toc-experiment-background-6"><span class="toc-section-number">8.7.1</span> Experiment Background</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#checking-assumptions-1" id="toc-checking-assumptions-1"><span class="toc-section-number">8.7.2</span> Checking Assumptions</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova-1" id="toc-conduct-and-graph-one-factor-repeated-measures-anova-1"><span class="toc-section-number">8.7.3</span> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#conduct-follow-up-tests" id="toc-conduct-follow-up-tests"><span class="toc-section-number">8.7.4</span> Conduct follow-up tests</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#some-apa-formatting-reminders-for-writing-results-sections-2" id="toc-some-apa-formatting-reminders-for-writing-results-sections-2"><span class="toc-section-number">8.7.5</span> Some APA formatting reminders for writing results sections</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#homework-6" id="toc-homework-6"><span class="toc-section-number">8.7.6</span> Homework</a></li>
-<li><a href="lab-8-repeated-measures-anova.html#practice-problems-6" id="toc-practice-problems-6"><span class="toc-section-number">8.7.7</span> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-1"><i class="fa fa-check"></i><b>6.5.1</b> Pre-lab reading and tasks</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data"><i class="fa fa-check"></i><b>6.5.2</b> Correlation Coefficient for Bivariate Data</a></li>
+<li class="chapter" data-level="6.5.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-1"><i class="fa fa-check"></i><b>6.5.3</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.5.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation"><i class="fa fa-check"></i><b>6.5.4</b> APA format reporting of a correlation</a></li>
+<li class="chapter" data-level="6.5.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>6.5.5</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.5.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-1"><i class="fa fa-check"></i><b>6.5.6</b> Optional activities</a></li>
+<li class="chapter" data-level="6.5.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-1"><i class="fa fa-check"></i><b>6.5.7</b> Example answers to optional activities</a></li>
+<li class="chapter" data-level="6.5.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-5"><i class="fa fa-check"></i><b>6.5.8</b> Homework</a></li>
+<li class="chapter" data-level="6.5.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-3"><i class="fa fa-check"></i><b>6.5.9</b> Practice Problems</a></li>
 </ul></li>
-</ul></li>
-<li><a href="lab-9-factorial-anova.html#lab-9-factorial-anova" id="toc-lab-9-factorial-anova"><span class="toc-section-number">9</span> Lab 9: Factorial ANOVA</a>
+<li class="chapter" data-level="6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi-correlation-for-psyc-394-students"><i class="fa fa-check"></i><b>6.6</b> JAMOVI – Correlation – FOR PSYC 394 STUDENTS</a>
 <ul>
-<li><a href="lab-9-factorial-anova.html#does-standing-up-make-you-focus-more" id="toc-does-standing-up-make-you-focus-more"><span class="toc-section-number">9.1</span> Does standing up make you focus more?</a>
-<ul>
-<li><a href="lab-9-factorial-anova.html#study-description-4" id="toc-study-description-4"><span class="toc-section-number">9.1.1</span> STUDY DESCRIPTION</a></li>
-<li><a href="lab-9-factorial-anova.html#study-methods-2" id="toc-study-methods-2"><span class="toc-section-number">9.1.2</span> Study Methods</a></li>
+<li class="chapter" data-level="6.6.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-2"><i class="fa fa-check"></i><b>6.6.1</b> Pre-lab reading and tasks</a></li>
+<li class="chapter" data-level="6.6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-1"><i class="fa fa-check"></i><b>6.6.2</b> Correlation Coefficient for Bivariate Data</a></li>
+<li class="chapter" data-level="6.6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-2"><i class="fa fa-check"></i><b>6.6.3</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation-1"><i class="fa fa-check"></i><b>6.6.4</b> APA format reporting of a correlation</a></li>
+<li class="chapter" data-level="6.6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-2"><i class="fa fa-check"></i><b>6.6.5</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-2"><i class="fa fa-check"></i><b>6.6.6</b> Optional activities</a></li>
+<li class="chapter" data-level="6.6.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-2"><i class="fa fa-check"></i><b>6.6.7</b> Example answers to optional activities</a></li>
+<li class="chapter" data-level="6.6.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-6"><i class="fa fa-check"></i><b>6.6.8</b> Homework</a></li>
+<li class="chapter" data-level="6.6.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-4"><i class="fa fa-check"></i><b>6.6.9</b> Practice Problems</a></li>
 </ul></li>
-<li><a href="lab-9-factorial-anova.html#lab-skills-learned-4" id="toc-lab-skills-learned-4"><span class="toc-section-number">9.2</span> Lab Skills Learned</a></li>
-<li><a href="lab-9-factorial-anova.html#important-stuff-4" id="toc-important-stuff-4"><span class="toc-section-number">9.3</span> Important Stuff</a></li>
-<li><a href="lab-9-factorial-anova.html#r-9" id="toc-r-9"><span class="toc-section-number">9.4</span> R</a>
-<ul>
-<li><a href="lab-9-factorial-anova.html#load-the-data-4" id="toc-load-the-data-4"><span class="toc-section-number">9.4.1</span> Load the data</a></li>
-<li><a href="lab-9-factorial-anova.html#inspect-the-dataframe-2" id="toc-inspect-the-dataframe-2"><span class="toc-section-number">9.4.2</span> Inspect the dataframe</a></li>
-<li><a href="lab-9-factorial-anova.html#get-the-data-you-need-2" id="toc-get-the-data-you-need-2"><span class="toc-section-number">9.4.3</span> Get the data you need</a></li>
-<li><a href="lab-9-factorial-anova.html#get-the-data-into-the-format-you-want" id="toc-get-the-data-into-the-format-you-want"><span class="toc-section-number">9.4.4</span> Get the data into the format you want</a></li>
-<li><a href="lab-9-factorial-anova.html#look-at-the-data-4" id="toc-look-at-the-data-4"><span class="toc-section-number">9.4.5</span> Look at the data</a></li>
-<li><a href="lab-9-factorial-anova.html#look-at-the-means-1" id="toc-look-at-the-means-1"><span class="toc-section-number">9.4.6</span> Look at the means</a></li>
-<li><a href="lab-9-factorial-anova.html#conduct-the-anova-1" id="toc-conduct-the-anova-1"><span class="toc-section-number">9.4.7</span> Conduct the ANOVA</a></li>
-<li><a href="lab-9-factorial-anova.html#between-subjects-anova" id="toc-between-subjects-anova"><span class="toc-section-number">9.4.8</span> Between Subjects ANOVA</a></li>
-<li><a href="lab-9-factorial-anova.html#repeated-measures-anova" id="toc-repeated-measures-anova"><span class="toc-section-number">9.4.9</span> Repeated measures ANOVA</a></li>
-<li><a href="lab-9-factorial-anova.html#follow-up-comparisons-1" id="toc-follow-up-comparisons-1"><span class="toc-section-number">9.4.10</span> Follow-up comparisons</a></li>
-<li><a href="lab-9-factorial-anova.html#generalization-exercise-7" id="toc-generalization-exercise-7"><span class="toc-section-number">9.4.11</span> Generalization Exercise</a></li>
-<li><a href="lab-9-factorial-anova.html#writing-asignment" id="toc-writing-asignment"><span class="toc-section-number">9.4.12</span> Writing asignment</a></li>
 </ul></li>
-<li><a href="lab-9-factorial-anova.html#excel-9" id="toc-excel-9"><span class="toc-section-number">9.5</span> Excel</a></li>
-<li><a href="lab-9-factorial-anova.html#spss-9" id="toc-spss-9"><span class="toc-section-number">9.6</span> SPSS</a>
+<li class="chapter" data-level="7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html"><i class="fa fa-check"></i><b>7</b> Lab 7 One-way ANOVA</a>
 <ul>
-<li><a href="lab-9-factorial-anova.html#experiment-background-7" id="toc-experiment-background-7"><span class="toc-section-number">9.6.1</span> Experiment Background</a></li>
-<li><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova" id="toc-conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><span class="toc-section-number">9.6.2</span> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
-<li><a href="lab-9-factorial-anova.html#calculate-simple-effects" id="toc-calculate-simple-effects"><span class="toc-section-number">9.6.3</span> Calculate simple effects</a></li>
-<li><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova" id="toc-conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><span class="toc-section-number">9.6.4</span> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
-<li><a href="lab-9-factorial-anova.html#calculate-simple-effects-1" id="toc-calculate-simple-effects-1"><span class="toc-section-number">9.6.5</span> Calculate simple effects</a></li>
-<li><a href="lab-9-factorial-anova.html#practice-problems-7" id="toc-practice-problems-7"><span class="toc-section-number">9.6.6</span> Practice Problems</a></li>
-</ul></li>
-<li><a href="lab-9-factorial-anova.html#jamovi-2" id="toc-jamovi-2"><span class="toc-section-number">9.7</span> JAMOVI</a></li>
-</ul></li>
-<li><a href="lab-10-mixed-factorial-anova.html#lab-10-mixed-factorial-anova" id="toc-lab-10-mixed-factorial-anova"><span class="toc-section-number">10</span> Lab 10: Mixed Factorial ANOVA</a>
+<li class="chapter" data-level="7.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris"><i class="fa fa-check"></i><b>7.1</b> How to not think about bad memories by playing Tetris</a>
 <ul>
-<li><a href="lab-10-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them" id="toc-do-you-remember-things-better-when-you-take-pictures-of-them"><span class="toc-section-number">10.1</span> Do you remember things better when you take pictures of them?</a>
-<ul>
-<li><a href="lab-10-mixed-factorial-anova.html#study-description-5" id="toc-study-description-5"><span class="toc-section-number">10.1.1</span> Study description</a></li>
+<li class="chapter" data-level="7.1.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#study-description-2"><i class="fa fa-check"></i><b>7.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="7.1.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#study-methods"><i class="fa fa-check"></i><b>7.1.2</b> Study Methods</a></li>
 </ul></li>
-<li><a href="lab-10-mixed-factorial-anova.html#lab-skills-learned-5" id="toc-lab-skills-learned-5"><span class="toc-section-number">10.2</span> Lab Skills Learned</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#important-stuff-5" id="toc-important-stuff-5"><span class="toc-section-number">10.3</span> Important Stuff</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#r-10" id="toc-r-10"><span class="toc-section-number">10.4</span> R</a>
+<li class="chapter" data-level="7.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>7.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#r-7"><i class="fa fa-check"></i><b>7.4</b> R</a>
 <ul>
-<li><a href="lab-10-mixed-factorial-anova.html#load-the-data-5" id="toc-load-the-data-5"><span class="toc-section-number">10.4.1</span> Load the data</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#inspect-the-dataframe-3" id="toc-inspect-the-dataframe-3"><span class="toc-section-number">10.4.2</span> Inspect the dataframe</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#get-the-data-you-need-3" id="toc-get-the-data-you-need-3"><span class="toc-section-number">10.4.3</span> Get the data you need</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#get-the-data-into-the-format-you-want-1" id="toc-get-the-data-into-the-format-you-want-1"><span class="toc-section-number">10.4.4</span> Get the data into the format you want</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#look-at-the-data-5" id="toc-look-at-the-data-5"><span class="toc-section-number">10.4.5</span> Look at the data</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#look-at-the-means-2" id="toc-look-at-the-means-2"><span class="toc-section-number">10.4.6</span> Look at the means</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#conduct-the-anova-2" id="toc-conduct-the-anova-2"><span class="toc-section-number">10.4.7</span> Conduct the ANOVA</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#generalization-exercise-8" id="toc-generalization-exercise-8"><span class="toc-section-number">10.4.8</span> Generalization Exercise</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#writing-assignment-7" id="toc-writing-assignment-7"><span class="toc-section-number">10.4.9</span> Writing assignment</a></li>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#load-the-data-2"><i class="fa fa-check"></i><b>7.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#inspect-the-dataframe"><i class="fa fa-check"></i><b>7.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#get-the-data-you-need"><i class="fa fa-check"></i><b>7.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="7.4.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#look-at-the-data-2"><i class="fa fa-check"></i><b>7.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#conduct-the-anova"><i class="fa fa-check"></i><b>7.4.5</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="7.4.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#reporting-the-anova-results"><i class="fa fa-check"></i><b>7.4.6</b> Reporting the ANOVA results</a></li>
+<li class="chapter" data-level="7.4.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#individual-comparisons"><i class="fa fa-check"></i><b>7.4.7</b> Individual comparisons</a></li>
+<li class="chapter" data-level="7.4.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-it-all-up."><i class="fa fa-check"></i><b>7.4.8</b> Writing it all up.</a></li>
+<li class="chapter" data-level="7.4.9" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#food-for-thought"><i class="fa fa-check"></i><b>7.4.9</b> Food for thought</a></li>
 </ul></li>
-<li><a href="lab-10-mixed-factorial-anova.html#excel-10" id="toc-excel-10"><span class="toc-section-number">10.5</span> Excel</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#spss-10" id="toc-spss-10"><span class="toc-section-number">10.6</span> SPSS</a>
+<li class="chapter" data-level="7.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#control-vs-reactivationtetris"><i class="fa fa-check"></i><b>7.5</b> control vs reactivation+Tetris</a></li>
+<li class="chapter" data-level="7.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#tetris_only-vs-reactivationtetris"><i class="fa fa-check"></i><b>7.6</b> Tetris_only vs reactivation+Tetris</a>
 <ul>
-<li><a href="lab-10-mixed-factorial-anova.html#experiment-background-8" id="toc-experiment-background-8"><span class="toc-section-number">10.6.1</span> Experiment Background</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova" id="toc-conduct-a-mixed-factorial-analysis-of-variance-anova"><span class="toc-section-number">10.6.2</span> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2" id="toc-calculate-simple-effects-2"><span class="toc-section-number">10.6.3</span> Calculate simple effects</a></li>
-<li><a href="lab-10-mixed-factorial-anova.html#practice-problems-8" id="toc-practice-problems-8"><span class="toc-section-number">10.6.4</span> Practice Problems</a></li>
+<li class="chapter" data-level="7.6.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#generalization-exercise-5"><i class="fa fa-check"></i><b>7.6.1</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="7.6.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-assignment-5"><i class="fa fa-check"></i><b>7.6.2</b> Writing assignment</a></li>
 </ul></li>
-<li><a href="lab-10-mixed-factorial-anova.html#jamovi-3" id="toc-jamovi-3"><span class="toc-section-number">10.7</span> JAMOVI</a></li>
-</ul></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#lab-11-choosing-an-appropriate-statistical-test" id="toc-lab-11-choosing-an-appropriate-statistical-test"><span class="toc-section-number">11</span> Lab 11: Choosing an appropriate statistical test</a>
+<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#excel-7"><i class="fa fa-check"></i><b>7.7</b> Excel</a></li>
+<li class="chapter" data-level="7.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#spss-7"><i class="fa fa-check"></i><b>7.8</b> SPSS</a>
 <ul>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#general-goals-3" id="toc-general-goals-3"><span class="toc-section-number">11.1</span> General Goals</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#summary-of-the-tests" id="toc-summary-of-the-tests"><span class="toc-section-number">11.2</span> Summary of the tests</a>
-<ul>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearsons-r-correlation-coefficient" id="toc-pearsons-r-correlation-coefficient"><span class="toc-section-number">11.2.1</span> Pearson’s <em>r</em> correlation coefficient</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#spearmans-r-correlation-coefficient" id="toc-spearmans-r-correlation-coefficient"><span class="toc-section-number">11.2.2</span> Spearman’s <em>r</em> correlation coefficient</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test" id="toc-independent-t-test"><span class="toc-section-number">11.2.3</span> Independent <em>t</em>-test</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test" id="toc-mann-whitney-u-test"><span class="toc-section-number">11.2.4</span> Mann-Whitney <em>U</em>-test</a></li>
+<li class="chapter" data-level="7.8.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>7.8.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.8.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>7.8.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="7.8.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>7.8.3</b> Follow-Up Tests</a></li>
+<li class="chapter" data-level="7.8.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>7.8.4</b> Planned Comparisons: T-Contrasts</a></li>
+<li class="chapter" data-level="7.8.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>7.8.5</b> Unplanned Comparisons: <em>Post-hoc</em> tests</a></li>
+<li class="chapter" data-level="7.8.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>7.8.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
+<li class="chapter" data-level="7.8.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#homework-questions-1"><i class="fa fa-check"></i><b>7.8.7</b> Homework questions</a></li>
 </ul></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#spss-11" id="toc-spss-11"><span class="toc-section-number">11.3</span> SPSS</a>
+<li class="chapter" data-level="7.9" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi"><i class="fa fa-check"></i><b>7.9</b> JAMOVI</a>
 <ul>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation" id="toc-pearson-and-spearman-correlation"><span class="toc-section-number">11.3.1</span> Pearson and Spearman Correlation</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test-1" id="toc-independent-t-test-1"><span class="toc-section-number">11.3.2</span> Independent <em>t</em>-test</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test-1" id="toc-mann-whitney-u-test-1"><span class="toc-section-number">11.3.3</span> Mann-Whitney <em>U</em>-test</a></li>
+<li class="chapter" data-level="7.9.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.9.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.9.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#checking-assumptions"><i class="fa fa-check"></i><b>7.9.2</b> Checking Assumptions</a></li>
+<li class="chapter" data-level="7.9.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><i class="fa fa-check"></i><b>7.9.3</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="7.9.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests-1"><i class="fa fa-check"></i><b>7.9.4</b> Follow-Up Tests</a></li>
 </ul></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-mar-9-and-10-2021" id="toc-homework-mar-9-and-10-2021"><span class="toc-section-number">11.4</span> Homework (Mar 9 and 10, 2021)</a></li>
-<li><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-feb-23-and-24-2021" id="toc-homework-feb-23-and-24-2021"><span class="toc-section-number">11.5</span> Homework (Feb 23 and 24, 2021)</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 Repeated Measures ANOVA</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>8.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>8.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>8.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="8.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="8.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#r-8"><i class="fa fa-check"></i><b>8.4</b> R</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#load-the-data-3"><i class="fa fa-check"></i><b>8.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="8.4.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#inspect-the-dataframe-1"><i class="fa fa-check"></i><b>8.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="8.4.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#get-the-data-you-need-1"><i class="fa fa-check"></i><b>8.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-data-3"><i class="fa fa-check"></i><b>8.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="8.4.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-means"><i class="fa fa-check"></i><b>8.4.5</b> Look at the means</a></li>
+<li class="chapter" data-level="8.4.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-the-repeated-measures-anova"><i class="fa fa-check"></i><b>8.4.6</b> Conduct the repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.4.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#follow-up-comparisons"><i class="fa fa-check"></i><b>8.4.7</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="8.4.8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#reporting-everything"><i class="fa fa-check"></i><b>8.4.8</b> Reporting everything</a></li>
+<li class="chapter" data-level="8.4.9" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#generalization-exercise-6"><i class="fa fa-check"></i><b>8.4.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="8.4.10" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#writing-assignment-6"><i class="fa fa-check"></i><b>8.4.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-8"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
+<li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-8"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.6.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>8.6.2</b> Produce a frequency histogram and remove outliers</a></li>
+<li class="chapter" data-level="8.6.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>8.6.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.6.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>8.6.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
+<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#jamovi-1"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>8.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.7.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#checking-assumptions-1"><i class="fa fa-check"></i><b>8.7.2</b> Checking Assumptions</a></li>
+<li class="chapter" data-level="8.7.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova-1"><i class="fa fa-check"></i><b>8.7.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.7.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-follow-up-tests"><i class="fa fa-check"></i><b>8.7.4</b> Conduct follow-up tests</a></li>
+<li class="chapter" data-level="8.7.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#some-apa-formatting-reminders-for-writing-results-sections-2"><i class="fa fa-check"></i><b>8.7.5</b> Some APA formatting reminders for writing results sections</a></li>
+<li class="chapter" data-level="8.7.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#homework-7"><i class="fa fa-check"></i><b>8.7.6</b> Homework</a></li>
+<li class="chapter" data-level="8.7.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.7.7</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9: Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#does-standing-up-make-you-focus-more"><i class="fa fa-check"></i><b>9.1</b> Does standing up make you focus more?</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#study-description-4"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#study-methods-2"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="9.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="9.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#r-9"><i class="fa fa-check"></i><b>9.4</b> R</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#load-the-data-4"><i class="fa fa-check"></i><b>9.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#inspect-the-dataframe-2"><i class="fa fa-check"></i><b>9.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="9.4.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-you-need-2"><i class="fa fa-check"></i><b>9.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="9.4.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-into-the-format-you-want"><i class="fa fa-check"></i><b>9.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="9.4.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-data-4"><i class="fa fa-check"></i><b>9.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="9.4.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-means-1"><i class="fa fa-check"></i><b>9.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="9.4.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-the-anova-1"><i class="fa fa-check"></i><b>9.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="9.4.8" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#between-subjects-anova"><i class="fa fa-check"></i><b>9.4.8</b> Between Subjects ANOVA</a></li>
+<li class="chapter" data-level="9.4.9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.9</b> Repeated measures ANOVA</a></li>
+<li class="chapter" data-level="9.4.10" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#follow-up-comparisons-1"><i class="fa fa-check"></i><b>9.4.10</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="9.4.11" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#generalization-exercise-7"><i class="fa fa-check"></i><b>9.4.11</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="9.4.12" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#writing-asignment"><i class="fa fa-check"></i><b>9.4.12</b> Writing asignment</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-9"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
+<li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-9"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-7"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.6.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="9.6.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects"><i class="fa fa-check"></i><b>9.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="9.6.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="9.6.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects-1"><i class="fa fa-check"></i><b>9.6.5</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#jamovi-2"><i class="fa fa-check"></i><b>9.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Mixed Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them"><i class="fa fa-check"></i><b>10.1</b> Do you remember things better when you take pictures of them?</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#study-description-5"><i class="fa fa-check"></i><b>10.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="10.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="10.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#r-10"><i class="fa fa-check"></i><b>10.4</b> R</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#load-the-data-5"><i class="fa fa-check"></i><b>10.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="10.4.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#inspect-the-dataframe-3"><i class="fa fa-check"></i><b>10.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="10.4.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-you-need-3"><i class="fa fa-check"></i><b>10.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="10.4.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-into-the-format-you-want-1"><i class="fa fa-check"></i><b>10.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="10.4.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-data-5"><i class="fa fa-check"></i><b>10.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="10.4.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-means-2"><i class="fa fa-check"></i><b>10.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="10.4.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-the-anova-2"><i class="fa fa-check"></i><b>10.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="10.4.8" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#generalization-exercise-8"><i class="fa fa-check"></i><b>10.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="10.4.9" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#writing-assignment-7"><i class="fa fa-check"></i><b>10.4.9</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-10"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
+<li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-10"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-8"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.6.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.6.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>10.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#jamovi-3"><i class="fa fa-check"></i><b>10.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Choosing an appropriate statistical test</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#general-goals-3"><i class="fa fa-check"></i><b>11.1</b> General Goals</a></li>
+<li class="chapter" data-level="11.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#summary-of-the-tests"><i class="fa fa-check"></i><b>11.2</b> Summary of the tests</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearsons-r-correlation-coefficient"><i class="fa fa-check"></i><b>11.2.1</b> Pearson’s <em>r</em> correlation coefficient</a></li>
+<li class="chapter" data-level="11.2.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spearmans-r-correlation-coefficient"><i class="fa fa-check"></i><b>11.2.2</b> Spearman’s <em>r</em> correlation coefficient</a></li>
+<li class="chapter" data-level="11.2.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test"><i class="fa fa-check"></i><b>11.2.3</b> Independent <em>t</em>-test</a></li>
+<li class="chapter" data-level="11.2.4" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test"><i class="fa fa-check"></i><b>11.2.4</b> Mann-Whitney <em>U</em>-test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spss-11"><i class="fa fa-check"></i><b>11.3</b> SPSS</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation"><i class="fa fa-check"></i><b>11.3.1</b> Pearson and Spearman Correlation</a></li>
+<li class="chapter" data-level="11.3.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test-1"><i class="fa fa-check"></i><b>11.3.2</b> Independent <em>t</em>-test</a></li>
+<li class="chapter" data-level="11.3.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test-1"><i class="fa fa-check"></i><b>11.3.3</b> Mann-Whitney <em>U</em>-test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-mar-9-and-10-2021"><i class="fa fa-check"></i><b>11.4</b> Homework (Mar 9 and 10, 2021)</a></li>
+<li class="chapter" data-level="11.5" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#homework-feb-23-and-24-2021"><i class="fa fa-check"></i><b>11.5</b> Homework (Feb 23 and 24, 2021)</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -708,22 +706,22 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <h4><span class="header-section-number">2.2.3.1</span> range<a href="lab-2-descriptive-statistics-and-more-graphs.html#range" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The range is the minimum and maximum values in the set, we use the <code>range</code> function.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -6.65930 23.41456</code></pre>
+<pre><code>## [1] -2.710192 19.754264</code></pre>
 </div>
 <div id="var-variance" class="section level4 hasAnchor" number="2.2.3.2">
 <h4><span class="header-section-number">2.2.3.2</span> var = variance<a href="lab-2-descriptive-statistics-and-more-graphs.html#var-variance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We can find the sample variance using <code>var</code>. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 33.98737</code></pre>
+<pre><code>## [1] 17.12711</code></pre>
 </div>
 <div id="sd-standard-deviation" class="section level4 hasAnchor" number="2.2.3.3">
 <h4><span class="header-section-number">2.2.3.3</span> sd = standard deviation<a href="lab-2-descriptive-statistics-and-more-graphs.html#sd-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We find the sample standard deviation us SD. Note, divides by (n-1)</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 5.829869</code></pre>
+<pre><code>## [1] 4.138491</code></pre>
 <p>Remember that the standard deviation is just the square root of the variance, see:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">var</span>(sample_numbers))</span></code></pre></div>
-<pre><code>## [1] 5.829869</code></pre>
+<pre><code>## [1] 4.138491</code></pre>
 </div>
 <div id="all-descriptives" class="section level4 hasAnchor" number="2.2.3.4">
 <h4><span class="header-section-number">2.2.3.4</span> All Descriptives<a href="lab-2-descriptive-statistics-and-more-graphs.html#all-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -731,21 +729,21 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-1" aria-hidden="true" tabindex="-1"></a>sample_numbers <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">10</span>,<span class="dv">5</span>)</span>
 <span id="cb29-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 1003.599</code></pre>
+<pre><code>## [1] 995.1655</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(sample_numbers)</span></code></pre></div>
 <pre><code>## [1] 100</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 10.03599</code></pre>
+<pre><code>## [1] 9.951655</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 10.39579</code></pre>
+<pre><code>## [1] 9.900157</code></pre>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">my_mode</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 17.61443</code></pre>
+<pre><code>## [1] 5.946325</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] -6.23819 21.71991</code></pre>
+<pre><code>## [1] -3.037515 21.127674</code></pre>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 26.02746</code></pre>
+<pre><code>## [1] 23.79883</code></pre>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_numbers)</span></code></pre></div>
-<pre><code>## [1] 5.101712</code></pre>
+<pre><code>## [1] 4.878404</code></pre>
 </div>
 </div>
 <div id="descriptives-by-conditions" class="section level3 hasAnchor" number="2.2.4">
@@ -758,11 +756,11 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p>If you look at the <code>my_df</code> data frame, you will see it has 100 rows, there are 10 rows for each condition with a label in the <code>conditions</code> column, and 10 scores for each condition in the <code>scores</code> column. What if you wanted to know the mean of the scores in each condition? You would want to find 10 means.</p>
 <p>The slow way to do it would be like this:</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;A&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 9.936286</code></pre>
+<pre><code>## [1] 11.5689</code></pre>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;B&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 10.01151</code></pre>
+<pre><code>## [1] 11.171</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_df[my_df<span class="sc">$</span>conditions<span class="sc">==</span><span class="st">&quot;C&quot;</span>,]<span class="sc">$</span>scores)</span></code></pre></div>
-<pre><code>## [1] 8.275022</code></pre>
+<pre><code>## [1] 9.275071</code></pre>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and then keep going</span></span></code></pre></div>
 <p>Nobody wants to do that! Not, me I stopped doing it that way, you should to.</p>
 <div id="group_by-and-summarise" class="section level4 hasAnchor" number="2.2.4.1">
@@ -780,19 +778,19 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb57-1" aria-hidden="true" tabindex="-1"></a>my_df <span class="sc">%&gt;%</span></span>
 <span id="cb57-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(conditions) <span class="sc">%&gt;%</span></span>
 <span id="cb57-3"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">means =</span> <span class="fu">mean</span>(scores))</span></code></pre></div>
-<pre><code>## # A tibble: 10 x 2
+<pre><code>## # A tibble: 10 × 2
 ##    conditions means
 ##    &lt;chr&gt;      &lt;dbl&gt;
-##  1 A           9.94
-##  2 B          10.0 
-##  3 C           8.28
-##  4 D           8.34
-##  5 E          10.7 
-##  6 F           9.36
-##  7 G           9.60
-##  8 H          10.4 
-##  9 I          11.2 
-## 10 J          10.3</code></pre>
+##  1 A          11.6 
+##  2 B          11.2 
+##  3 C           9.28
+##  4 D          13.0 
+##  5 E           9.76
+##  6 F          11.3 
+##  7 G          11.9 
+##  8 H          11.1 
+##  9 I          10.6 
+## 10 J          10.8</code></pre>
 <p>A couple things now. First, the print out of this was ugly. Let’s fix that. we put the results of our code into a new variable, then we use <code>knitr::kable</code> to print it out nicely when we <code>knit</code> the document</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-1" aria-hidden="true" tabindex="-1"></a>summary_df <span class="ot">&lt;-</span> my_df <span class="sc">%&gt;%</span></span>
 <span id="cb59-2"><a href="lab-2-descriptive-statistics-and-more-graphs.html#cb59-2" aria-hidden="true" tabindex="-1"></a>               <span class="fu">group_by</span>(conditions) <span class="sc">%&gt;%</span></span>
@@ -809,43 +807,43 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">9.936286</td>
+<td align="right">11.568901</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">10.011514</td>
+<td align="right">11.170998</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.275022</td>
+<td align="right">9.275071</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">8.342254</td>
+<td align="right">12.991745</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.659549</td>
+<td align="right">9.757164</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">9.364848</td>
+<td align="right">11.269849</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.601904</td>
+<td align="right">11.923593</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">10.371771</td>
+<td align="right">11.149742</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">11.151296</td>
+<td align="right">10.552012</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.319067</td>
+<td align="right">10.754016</td>
 </tr>
 </tbody>
 </table>
@@ -870,53 +868,53 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">9.936286</td>
-<td align="right">6.118136</td>
+<td align="right">11.568901</td>
+<td align="right">3.979143</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">10.011514</td>
-<td align="right">4.336547</td>
+<td align="right">11.170998</td>
+<td align="right">4.466916</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.275022</td>
-<td align="right">4.274990</td>
+<td align="right">9.275071</td>
+<td align="right">3.144547</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">8.342254</td>
-<td align="right">3.732405</td>
+<td align="right">12.991745</td>
+<td align="right">4.576684</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.659549</td>
-<td align="right">5.410334</td>
+<td align="right">9.757164</td>
+<td align="right">3.715411</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">9.364848</td>
-<td align="right">2.837763</td>
+<td align="right">11.269849</td>
+<td align="right">4.364817</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.601904</td>
-<td align="right">7.946973</td>
+<td align="right">11.923593</td>
+<td align="right">5.858167</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">10.371771</td>
-<td align="right">3.750799</td>
+<td align="right">11.149742</td>
+<td align="right">5.479156</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">11.151296</td>
-<td align="right">4.353019</td>
+<td align="right">10.552012</td>
+<td align="right">3.768196</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.319067</td>
-<td align="right">5.194765</td>
+<td align="right">10.754016</td>
+<td align="right">5.383737</td>
 </tr>
 </tbody>
 </table>
@@ -942,73 +940,73 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">9.936286</td>
-<td align="right">6.118136</td>
-<td align="right">1.224324</td>
-<td align="right">21.60172</td>
+<td align="right">11.568901</td>
+<td align="right">3.979143</td>
+<td align="right">5.8366539</td>
+<td align="right">18.33197</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">10.011514</td>
-<td align="right">4.336547</td>
-<td align="right">3.953533</td>
-<td align="right">16.18317</td>
+<td align="right">11.170998</td>
+<td align="right">4.466916</td>
+<td align="right">2.7181454</td>
+<td align="right">18.30555</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">8.275022</td>
-<td align="right">4.274990</td>
-<td align="right">2.731655</td>
-<td align="right">15.02099</td>
+<td align="right">9.275071</td>
+<td align="right">3.144547</td>
+<td align="right">4.7510683</td>
+<td align="right">13.53059</td>
 </tr>
 <tr class="even">
 <td align="left">D</td>
-<td align="right">8.342254</td>
-<td align="right">3.732405</td>
-<td align="right">2.148550</td>
-<td align="right">13.64915</td>
+<td align="right">12.991745</td>
+<td align="right">4.576684</td>
+<td align="right">4.3960891</td>
+<td align="right">19.36262</td>
 </tr>
 <tr class="odd">
 <td align="left">E</td>
-<td align="right">10.659549</td>
-<td align="right">5.410334</td>
-<td align="right">4.233683</td>
-<td align="right">20.86815</td>
+<td align="right">9.757164</td>
+<td align="right">3.715411</td>
+<td align="right">6.1350642</td>
+<td align="right">18.41343</td>
 </tr>
 <tr class="even">
 <td align="left">F</td>
-<td align="right">9.364848</td>
-<td align="right">2.837763</td>
-<td align="right">3.219015</td>
-<td align="right">12.30864</td>
+<td align="right">11.269849</td>
+<td align="right">4.364817</td>
+<td align="right">2.4967429</td>
+<td align="right">16.78941</td>
 </tr>
 <tr class="odd">
 <td align="left">G</td>
-<td align="right">9.601904</td>
-<td align="right">7.946973</td>
-<td align="right">-2.862646</td>
-<td align="right">24.55107</td>
+<td align="right">11.923593</td>
+<td align="right">5.858167</td>
+<td align="right">5.8556238</td>
+<td align="right">23.22163</td>
 </tr>
 <tr class="even">
 <td align="left">H</td>
-<td align="right">10.371771</td>
-<td align="right">3.750799</td>
-<td align="right">2.652520</td>
-<td align="right">15.39775</td>
+<td align="right">11.149742</td>
+<td align="right">5.479156</td>
+<td align="right">4.6863059</td>
+<td align="right">20.97633</td>
 </tr>
 <tr class="odd">
 <td align="left">I</td>
-<td align="right">11.151296</td>
-<td align="right">4.353019</td>
-<td align="right">4.307335</td>
-<td align="right">18.82106</td>
+<td align="right">10.552012</td>
+<td align="right">3.768196</td>
+<td align="right">3.2639464</td>
+<td align="right">16.38539</td>
 </tr>
 <tr class="even">
 <td align="left">J</td>
-<td align="right">10.319067</td>
-<td align="right">5.194765</td>
-<td align="right">1.509305</td>
-<td align="right">18.06010</td>
+<td align="right">10.754016</td>
+<td align="right">5.383737</td>
+<td align="right">-0.6950355</td>
+<td align="right">18.82524</td>
 </tr>
 </tbody>
 </table>
@@ -1202,8 +1200,8 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p><img src="img/2.4.33.png" /><!-- --></p>
 <p>Notice the circles with numbers next to them in the boxplot. These circle represent outliers, and the numbers correspond to the case/participant/subject number that is being recorded. Sometimes, you will see asterisks with numbers next to them in the boxplot. These asterisks represent extreme outliers. You can imagine that the identification of these outliers gives you reason to go investigate your data more closely.</p>
 </div>
-<div id="homework-2" class="section level3 hasAnchor" number="2.4.5">
-<h3><span class="header-section-number">2.4.5</span> Homework<a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="homework-3" class="section level3 hasAnchor" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Homework<a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <ol style="list-style-type: decimal">
 <li>Create a single SPSS output file (.spv) and upload it to Moodle. The file should contain the following:</li>
@@ -1284,7 +1282,7 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <p><img src="img/sleepdescriptives.png" /><!-- --></p>
 <p>So, we have a mean of 674, a median of 7, and a mode of 7. Pause for a moment and think about that. What does the <code>SLEEP</code> variable represent again? Hours of sleep per day. This table is saying that, on average, Nova Scotians sleep for 674 hours per day. What’s going on?</p>
 <p>In brief, the <code>SLEEP</code> variable contains some garbage data. You can see that the maximum is 8.00e+6 or 8 million hours of sleep. Another way to evaluate the data is to look at the histogram. Scroll down below the descriptive statistics you selected to the Plots section, and select Histogram.</p>
-<p><img src="img/Sleephistogram.png" /><!-- --></p>
+<p><img src="img/sleephistogram.png" /><!-- --></p>
 <p>The <em>x</em>-axis on this histogram is too big because of the garbage data. It doesn’t make sense to look at a histogram of sleep from 0 to 8 million hours. Assuming you could fit about 5 bars between 0 and 2 million (2e+06), all that tall bar tells us is that most people sleep between 0 and 400 000 hours. Not very helpful.</p>
 <p>Luckily, we can check the revised sleep variable, <code>R_SLEEP</code>. The data in this variable have been cleaned to remove any values above 23. Even a sleep duration of 23 would be a bit silly (Would you even have time to fill out the survey if you slept for 23 hours a day?), but at least it is a lower number than the number of hours in the day. Back at the top of this window, move the <code>R_SLEEP</code> variable into the Variables box. This will add a new column to our Descriptives table:</p>
 <p><img src="img/sleepr_sleepdescriptives.png" /><!-- --></p>
@@ -1383,8 +1381,8 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
 <h3><span class="header-section-number">2.5.7</span> Editing graphs<a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in jamovi. I might suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.</p>
 </div>
-<div id="homework-3" class="section level3 hasAnchor" number="2.5.8">
-<h3><span class="header-section-number">2.5.8</span> Homework<a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="homework-4" class="section level3 hasAnchor" number="2.5.8">
+<h3><span class="header-section-number">2.5.8</span> Homework<a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Because .omv files contain both the data and the output, we want you to save a new file before each novel analysis task. The lab demonstration would be one analysis task. The homework is another analysis task. So, before you start your homework, open the starting JAMOVI file with which you were provided and save a new version of your .omv file by clicking on the three lines and selecting <span style="color:blue">Save As</span>. Give the file a new name. Then, as you generate output by following the instructions below, you can continue to save this file.</p>
 <p>Recall that to save just your output, you can click the three lines and select <span style="color:blue">Export</span>. This will allow you to save a pdf.</p>
 <p>See <a href="https://moodle.stfx.ca/course/view.php?id=29319">Moodle</a> for the homework questions.</p>
@@ -1413,7 +1411,6 @@ Describing comic sensibility is near impossible. It’s sort of an abstract sill
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1453,6 +1450,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Statistics_Lab.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

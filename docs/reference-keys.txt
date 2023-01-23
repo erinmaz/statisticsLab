@@ -495,3 +495,7 @@ jamovi---week-10---march-28th-29th
 fig:unnamed-chunk-9
 fig:unnamed-chunk-23
 getting-ready-for-this-lesson
+rationale-for-recoding
+an-example-of-recoding-and-computing-a-new-variable
+z-scores-as-a-type-of-computed-variable
+homework-7

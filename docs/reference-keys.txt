@@ -499,3 +499,4 @@ rationale-for-recoding
 an-example-of-recoding-and-computing-a-new-variable
 z-scores-as-a-type-of-computed-variable
 homework-7
+z-scores-as-a-type-of-computed-variable-in-jamovi

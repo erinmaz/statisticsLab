@@ -869,7 +869,7 @@ Okay, enough with the sales pitch. Let’s get started. Just as with any piece o
 <div id="computed-variables---week-4---january-31st-february-1st" class="section level4 hasAnchor" number="0.6.3.2">
 <h4><span class="header-section-number">0.6.3.2</span> Computed Variables - Week 4 - January 31st &amp; February 1st<a href="software.html#computed-variables---week-4---january-31st-february-1st" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, z-scores, sum-scores, negative scoring, and means.</p>
-<p>Computed variables can be added to the data set with the <code>Add</code> button available on the data tab. This will produce a formula box where you can specify the formula. The usual arithmetic operators are available. Some examples of formulas are:</p>
+<p>One way computed variables can be added to the data set with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu where you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading “Computed Variable,” the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think “Appendix”). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appear to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:</p>
 <p>A + B</p>
 <p>LOG10(len)</p>
 <p>MEAN(A, B)</p>
@@ -886,58 +886,60 @@ Several functions are already available in jamovi and available from the drop do
 <div class="marginnote">
 <p>This section and its subsection was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
-<p>As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering the survey questions and decide to select all extreme responses. This data is not useful.</p>
+<p>As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering the survey questions and decide to select all extreme responses. These data are not useful.</p>
 <p>As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. If, for example, the researcher is using a scale where “extremely agree” indicates participants score high on the construct being measured (ex. “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude.), the researcher may reword some statements in the questionnaire so that “extremely agree” indicates they score low on the construct being measured (ex. “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.).</p>
 <div id="an-example-of-recoding-and-computing-a-new-variable" class="section level6 hasAnchor" number="0.6.3.2.1.1">
 <h6><span class="header-section-number">0.6.3.2.1.1</span> An Example of Recoding and Computing a New Variable<a href="software.html#an-example-of-recoding-and-computing-a-new-variable" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <div class="marginnote">
-<p>The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., &amp; Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan &amp; S. Oskamp (Eds.), The social psychology of health: Claremont Symposium on Applied Social Psychology (pp. 31–67). Newbury Park, CA: Sage. This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.</p>
+<p>The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., &amp; Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan &amp; S. Oskamp (Eds.), <em>The social psychology of health: Claremont Symposium on Applied Social Psychology</em> (pp. 31–67). Newbury Park, CA: Sage. This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.</p>
 </div>
 <p>Let’s consider a scale that is often used as a measure of stress in psychological studies, the Perceived Stress Scale, by Cohen and Williamson (1988). We can walk through the process of recoding data and data computations with this example. Let’s begin by looking at the scale itself.</p>
 <p><strong>Perceived Stress Scale</strong></p>
-<p>Instructions: The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way. Although some of the questions are similar, there are differences between them and you should treat each one as a separate question. The best approach is to answer each question fairly quickly. That is, don’t try to count up the number of times you felt a particular way, but rather indicate the alternative that seems like a reasonable estimate.</p>
-<p>For each question, chose from the following alternatives:
-0 = never
-1 = almost never
-2 = sometimes
-3 = fairly often
-4 = very often</p>
-<p>Questions:
-In the last month, how often have you…
-1. been upset because of something that happened unexpectedly?
-2. felt that you were unable to control the important things in your life?
-3. felt nervous and “stressed”?
-4. felt confident about your ability to handle your personal problems?
-5. felt that things were going your way?
-6. found that you could not cope with all the things that you had to do?
-7. been able to control irritations in your life?
-8. felt that you were on top of things?
-9. been angered because of things that happened that were outside of your control?
-10. felt difficulties were piling up so high that you could not overcome them?</p>
+<p><em>Instructions</em>: The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way. Although some of the questions are similar, there are differences between them and you should treat each one as a separate question. The best approach is to answer each question fairly quickly. That is, don’t try to count up the number of times you felt a particular way, but rather indicate the alternative that seems like a reasonable estimate.</p>
+<p>For each question, chose from the following alternatives:</p>
+<p>0 = never</p>
+<p>1 = almost never</p>
+<p>2 = sometimes</p>
+<p>3 = fairly often</p>
+<p>4 = very often</p>
+<p><em>Questions</em>: In the last month, how often have you…</p>
+<ol style="list-style-type: decimal">
+<li><p>been upset because of something that happened unexpectedly?</p></li>
+<li><p>felt that you were unable to control the important things in your life?</p></li>
+<li><p>felt nervous and “stressed”?</p></li>
+<li><p>felt confident about your ability to handle your personal problems?</p></li>
+<li><p>felt that things were going your way?</p></li>
+<li><p>found that you could not cope with all the things that you had to do?</p></li>
+<li><p>been able to control irritations in your life?</p></li>
+<li><p>felt that you were on top of things?</p></li>
+<li><p>been angered because of things that happened that were outside of your control?</p></li>
+<li><p>felt difficulties were piling up so high that you could not overcome them?</p></li>
+</ol>
 <p>Those questions that are negatively worded in terms of the construct will be reverse coded before moving forward to a calculation.</p>
 <p>Which items appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct)? (<em>Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.</em>) Write your answers on a sheet or document.</p>
-<p>Which items appear to be negatively worded in terms of the construct? (<em>Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.</em>) Write your answers on the same sheet or document.</p>
+<p>Which items appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct)? (<em>Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.</em>) Write your answers on the same sheet or document.</p>
 <p>Check your answers:
 If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.
 If you answered that scoring a 4 on questions 4, 5, 7, and 8 would indicate lack of stress, you are correct!</p>
 <p>Imagine we have a participant who scores in the following way:</p>
 <p><img src="img/ScoresOnPSS.png" /><!-- --></p>
-<p>Enter these scores into a JAMOVI data file of your own. Then, follow along with the proceeding commands to be sure you feel comfortable using JAMOVI to recode data and compute new variables.
+<p>Enter these scores into a JAMOVI data file of your own (creating a new file), or go to <a href="https://moodle.stfx.ca/course/view.php?id=29319#section-9">Moodle</a> to download and open the data file named “Fictitious Data Set - PSS_RecodingAndDataComputations_OneParticipant.” Then, follow along with the proceeding commands to be sure you feel comfortable using JAMOVI to recode data and compute new variables.
 The score on the PSS is calculated by reversing the answers to the questions that are oppositely worded (questions 4, 5, 7, and 8) and, then, summing the scores.</p>
-<p>Let’s work through this process with the participant’s scores. We can begin by recoding item 4, shown as <code>PSS4</code> in the data file. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.</p>
+<p>Let’s work through this process with the participant’s scores. We can begin by recoding item 4, shown as <code>PSS4</code> in the data file. This process is similar to, but not the same as, computing a new variable. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.</p>
 <p><img src="img/RecodingScoresOnPSS4.png" /><!-- --></p>
-<p>A new column will appear to the right of the column for the <code>PSS4</code> and the variable attributes panel will drop down. You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it <code>PSS4_Recoded</code>. You can see that the source variable is correctly shown as <code>PSS4</code>.</p>
+<p>A new column will appear to the right of the column for the <code>PSS4</code> and the variable attributes panel will drop down. (As you can imagine, you could also use these commands: <span style="color:blue">Data</span>, <span style="color:blue">Add</span>, and under “Transformed Variable,” either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>.) You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it <code>PSS4_Recoded</code>. You can see that the source variable is correctly shown as <code>PSS4</code>.</p>
 <p><img src="img/RecodingScoresOnPSS4_2.png" /><!-- --></p>
 <p>Now, it is time to add the transform rule that you want used. Click on the white box after “using transform” and select <span style="color:blue">Create New Transform</span>.</p>
 <p><img src="img/RecodingScoresOnPSS4_3.png" /><!-- --></p>
 <p>When you do click that button, a new panel will appear.</p>
 <p><img src="img/RecodingScoresOnPSS4_4.png" /><!-- --></p>
-<p>Let’s fill in the information to tell JAMOVI what we want done to the data. We will give the “)transformation a name (“Reverse_Coding”) and click the <span style="color:blue">Show formula editor</span> button which looks like <em>f<sub>x</sub></em>.</p>
+<p>Let’s fill in the information to tell JAMOVI what we want done to the data. We will give the transformation a name (“Reverse_Coding”) and click the <span style="color:blue">Show formula editor</span> button which looks like <em>f<sub>x</sub></em>.</p>
 <p><img src="img/RecodingScoresOnPSS4_5.png" /><!-- --></p>
 <p>A new panel opens, and we will enter the formula to have the transformations calculated.</p>
 <p><img src="img/RecodingScoresOnPSS4_6.png" /><!-- --></p>
-<p>We can write this equation to get the recoded values:</p>
+<p>Because 4 is the maximum score value and 0 is the minimum score value, we can write this equation to get the recoded values:</p>
 <p><img src="img/RecodingScoresOnPSS4_7.png" /><!-- --></p>
+<p>Go ahead and check the math on each of those recoded values!</p>
 <p>To close the transformation panel, click on the downward facing arrow.</p>
 <p><img src="img/RecodingScoresOnPSS4_8.png" /><!-- --></p>
 <p>To get out of the Transformed Variable panel, click on the upward facing arrow.</p>
@@ -958,16 +960,16 @@ Move to the column to the right of <code>PSS10</code>, and select <span style="c
 This may seem like a lot of work to do for one participant’s sum; however, these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set compiled from the scores given by a larger sample.</p>
 </div>
 </div>
-<div id="z-scores-as-a-type-of-computed-variable" class="section level5 hasAnchor" number="0.6.3.2.2">
-<h5><span class="header-section-number">0.6.3.2.2</span> Z-scores as a Type of Computed Variable<a href="software.html#z-scores-as-a-type-of-computed-variable" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="z-scores-as-a-type-of-computed-variable-in-jamovi" class="section level5 hasAnchor" number="0.6.3.2.2">
+<h5><span class="header-section-number">0.6.3.2.2</span> Z-scores (as a Type of Computed Variable in JAMOVI)<a href="software.html#z-scores-as-a-type-of-computed-variable-in-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <div class="marginnote">
 <p>This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
-<p>There will be times when you want to compute <em>z</em>-scores. (For example, you may want to look at a large data set and decide whether you have extreme outliers.) Getting *z-scores in JAMOVI is very easy.</p>
+<p>There will be times when you want to compute <em>z</em>-scores. (For example, you may want to look at a large data set and decide whether you have extreme outliers.) Getting <em>z</em>-scores in JAMOVI is very easy.</p>
 <p>Looking at the following fictitious data showing the <code>PSS_Score</code> for 10 participants, let’s look at the process to get the <em>z</em>-scores for those <code>PSS_Score</code> values.</p>
 <p><img src="img/RecodingScoresOnPSS4_15.png" /><!-- --></p>
-<p>To follow along with the proceeding commands, you can enter the 10 values in a new column of the data file you are working with.</p>
-<p>In the statistical package, <em>z</em>-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span>. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the <em>z</em>-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.</p>
+<p>To follow along with the proceeding commands, you might add the other <code>PSS_Score</code> values in that column (if you created your own data file), or you can go to <a href="https://moodle.stfx.ca/course/view.php?id=29319#section-9">Moodle</a> to download the data file called “Fictitious Data Set - PSS_RecodingAndDataComputations_TenParticipants_RecodedAndComputed,” and then, in JAMOVI, open that data file.</p>
+<p>In JAMOVI, <em>z</em>-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span>. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the <em>z</em>-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.</p>
 <p><img src="img/ZScoresAsComputedVariables.png" /><!-- --></p>
 <p>Remember to click the upward facing arrow to close the Computed Variable panel. <code>Z_PSS_Score</code> in the image below depicts the <em>z</em>-scores for <code>PSS_Score</code>. Notice that computed variables have a black circle to the right of their name near the top of the column.</p>
 <p><img src="img/ZScoresAsComputedVariables_1.png" /><!-- --></p>

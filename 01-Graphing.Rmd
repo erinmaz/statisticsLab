@@ -655,6 +655,7 @@ Once you do, the main SPSS spreadsheet should open. It will look like this, a ba
 ```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.4.11.png')
 ```
+
 Notice at the bottom of your window there are two tabs; "Data View" and "Variable View". In data view, we enter data into our spreadsheet. You will notice that rows are numbered on the left-hand side of the spreadsheet, while columns are labeled "var". This is an indication of the general structure of SPSS: Variables are contained in the columns, and rows indicate individual observations.  For example, if you obtained the heights (in inches) of 5 people {x= 64, 70, 63, 62, 65} and wanted to enter their data into SPSS, each person's height would be entered in a new row, not across the columns, as seen below:
 
 
@@ -793,27 +794,27 @@ This section is  copied almost verbatim, with some editorial changes, from [Answ
 
 In this lab, it is hoped you will become more acquainted with the jamovi software layout and graph some sample data to make sense of it. We will be doing the following:
 
-1. Opening jamovi and reviewing the jamovi layout 
-2. Reviewing variable properties and the Setup button 
+1. Deciding on which is the best graph based on the scale of measurement
+2, Reviewing variable attributes (or properties) using the Edit (in Variables menu) or Setup (in Data menu) buttons 
 3. Opening a data file and producing different types of graphs 
 
 
-### Opening jamovi and reviewing the jamovi layout
+### Opening JAMOVI and Reviewing the JAMOVI Layout
 
 
 To open jamovi if you are using Windows, either double-click its icon located on the desktop of your computer, or click it in the Start menu. 
 
 To open jamovi if you are using a Mac, find the icon in your Applications folder and double-click it.
 
-Once the program loads, you can click on the button that looks like three horizontal lines at the top left. This bottom reveals a menu. Take note that you have some familiar options here: New (for a new file), Open (to open an existing file), and Save. For now, we will be examining the basic layout of jamovi without a data set, so you can click the left facing arrow to close this menu.
+Once the program loads, you can click on the button that looks like three horizontal lines at the top left. This bottom reveals a menu. Take note that you have some familiar options here: <span style="color:blue">New</span> (for a new file), <span style="color:blue">Open</span> (to open an existing file), and <span style="color:blue">Save</span>. For now, we will be reviewing the basic layout of jamovi without a data set, so you can click the left facing arrow to close this menu.
 
-Once you do, the main jamovi spreadsheet should be apparent. It will look like this, with a basic spreadsheet on the left and a results pane on the right:
+Once you do, the main jamovi spreadsheet should be apparent. It will look like this, with a basic spreadsheet on the left and a results panel on the right:
 
 ```{r , fig.cap="Empty jamovi spreadsheet", echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.5.1.1.png')
 ```
 
-As explained in [Section 0.6.1.2](https://www.erinmazerolle.com/statisticsLab/software.html#getting-started-with-jamovi), you can slide the separating line between these two panels to make one panel or the other larger. You should also recall that, in the spreadsheet, each row represents a case or a *participant* and each column represents a *variable*. (For more details about the jamovi program, see Section 0.6.) If, for example, you obtained the heights (in inches) of 5 people {x = 64, 70, 63, 62, 65} and wanted to enter their data into jamovi, each person’s height would be entered in a new row, not across the columns, as seen below:
+As explained in [Section 0.6.1.2](https://www.erinmazerolle.com/statisticsLab/software.html#getting-started-with-jamovi), you can slide the separating line between these two panels to make one panel or the other larger. You should also recall that, in the spreadsheet, each row represents a case or a *participant* and each column represents a *variable*. (For more details about the jamovi program, see Section 0.6.) If, for example, you obtained the heights (in inches) of 5 people {x = 64, 70, 63, 62, 65} and wanted to enter their data into jamovi, each person’s height would be entered in a new row, as seen below, not across the columns:
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -821,10 +822,10 @@ knitr::include_graphics('img/1.5.1.2.png')
 ```
 
 
-### Reviewing variable properties and the Setup button
+### Reviewing Variable Properties and the Edit or Setup button
 
 
-Now that we have some data entered, we might want to name our variable so that it’s evident our measurements represent heights. In order to view or modify variable names and other properties, look to the menu ribbon at the top of the jamovi window. While you are within any column representing a variable, you can click the <span style="color:blue">Setup</span> button which is visible when the <span style="color:blue">Data</span> tab is highlighted. This <span style="color:blue">Setup</span> button will reveal, in a top panel, information about the attributes of the variable. 
+Now that we have some data entered, we might want to name our variable so that it’s evident our measurements represent heights. In order to view or modify variable names and other properties, look to the menu ribbon at the top of the jamovi window. Notice that when you are enterring data, you are working in the <span style="color:blue">Data</span> tab or menu (look at the top set of menu options). While you are within any column representing a variable, you can click the <span style="color:blue">Setup</span> button. This <span style="color:blue">Setup</span> button will reveal, in a top panel, information about the attributes of the variable. (You may recall from lab that the other way to access this panel is to have the variable name highlighted while in the <span style="color:blue">Variables</span>) menu and to click the <span style="color:blue">Edit</span> button.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/1.5.2.1A.png')
@@ -855,58 +856,115 @@ knitr::include_graphics('img/1.5.2.3.png')
 You may want to click the arrowhead that points to the left or right to move to an adjacent variable. Alternatively, clicking the <span style="color:blue">Setup</span> button again or clicking the upward facing arrow will hide this variable attribute information from your view.
 
 
-### Importing a data file
+### Opening a Data File (Through the JAMOVI Software)
 
 
-Now that we know about the properties of the jamovi spreadsheet window, let’s import a data file and learn how to make some sense of it by creating different types of graphs. (It is not important for you to <span style="color:blue">Save</span> the jamovi file you just created because we will not be doing anything with those fictitious height data). 
+Now that we know about the properties of the jamovi spreadsheet window, let’s open a data file and learn how to make some sense of it by creating different types of graphs. (It is not important for you to <span style="color:blue">Save</span> the jamovi file you just created because we will not be doing anything with those fictitious height data). 
 
-First, you need to agree to some terms of use for the data we will be using in this class. Complete the quiz <a href="https://moodle.stfx.ca/mod/quiz/view.php?id=830016">here</a>.
+For a previous lab, you agreed to some terms of use regarding the data set we will be using in this lab. Then, you downloaded the data file and saved the file somewhere sensible on your computer so you could find it later.
 
-Next, you can download the data file <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017">here</a>. The data file is an Excel spreadsheet (xlsx file). Remember to save the file somewhere sensible on your computer so you can find it later.
+In jamovi, click the button that looks like three horizontal lines at the top left. Select <span style="color:blue">Open</span>. Click <span style="color:blue">Browse</span>, locate the jamovi file you  downloaded (*EngageNS_StartingFile_2023.omv*), and double click. It is a somewhat large file and will take a few minutes to import. Once it is finished, we want to save it in jamovi format (.omv) using a new name to indicate you will change it for the lab demonstration. Click the button that looks like three horizontal lines at the top left. Select <span style="color:blue">Save As</span>, type a sensible name for your file, ensure it is set to "jamovi file (.omv)", click browse and select the folder in which to save your file, and click <span style="color:blue">Save</span>. (Mac users may need to copy the file, paste it, and rename it.) Remember that EngageNS surveyed Nova Scotians about various aspects of their quality of life. 
 
-In jamovi, click the button that looks like three horizontal lines at the top left. Select <span style="color:blue">Import</span>. Click <span style="color:blue">Browse</span>, locate the xlsx file you just downloaded, and double click. It is a somewhat large file and will take a few minutes to import. Once it is finished, we want to save it in jamovi format (omv). Click the button that looks like three horizontal lines at the top left. Select Save As, type a sensible name for your file,ensure it is set to "jamovi file (.omv)", click browse and select the folder in which to save your file, and click Save.
+The data dictionary, which is a .pdf file (in this case), lists all the variables that were included in the EngageNS survey and shows how these variables were measured.You should open this file, too. (It is not a jamovi file, and you should be able to open it by double-clicking on the file name - *CIW-NovaScotia2019-SurveyDataDictionary* - wherever you saved the file.)
 
-Remember that EngageNS surveyed Nova Scotians about various aspects of their quality of life.
-The data dictionary, which is a *.pdf file found <a href="https://moodle.stfx.ca/mod/url/view.php?id=830017">here</a>, lists all the variables that were included in the EngageNS survey and shows how they were measured.
+Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Take a look at the rows and columns in each file. Each **column** represents a **different variable** that was measured in the EngageNS survey. Each **row** represents the responses of a **single survey respondent**.
 
-Once you open the data file, browse through to familiarize yourself with the variables that are being measured. Take a look at the rows and columns in each file. Each *column* represents a *different variable* that was measured in the EngageNS survey. Each *row* represents the responses of a *single survey respondent*.
+After opening the data file and data dictionary, browse through both files to familiarize yourself with the variables that are being measured. After you review the “Variable label” (second column) and the “Response options” (third column) in the data dictionary, switch over to Variable View in the data file to check the variable attributes of each variable.
 
-Switch over to the Variables tab for details of each variable. JAMOVI has attempted to sort out the scale of measurement for each variable, based on the data. Sometimes it gets it right, but sometimes it doesn't. We can use the data dictionary and what we know about scales of measurement to input the correct scales of measurement as needed.
+Switch over to the <span style="color:blue">Variables</span> menu for a list of variables, and a quick view of the details of each variable (See the icon to the left of the variable name and the description to the right of the variable name). Sometimes this information is correct, but sometimes it is erroneous. We can use the data dictionary and what we know about scales of measurement to input the correct scales of measurement as needed.
 
-### Graphs
+The scale of measurement will help us consider the most appropriate type of graph for the data collected on any given variable.
+
+
+### Producing Different Types of Graphs
 
 
 #### Bar Graphs and Histograms
 
 
-Bar graphs and histograms are different types of graphs. Bar graphs are used for nominal variables. The y-axis of a bar graph could be the mean of each level, the frequency of each level, or some other summary of each level. 
+Bar graphs and histograms are different types of graphs. Bar graphs are used for nominal variables. The *y*-axis of a bar graph could be the mean of each level, the frequency of each level, or some other summary of each level. 
 
-Histograms are used for continuous variables (interval or ratio scales of measurement). The y-axis is always frequency. Sometimes they are labeled "count" or "density," but they always represent the number of times certain values appear in the data.
+Histograms are used for continuous variables (interval or ratio scales of measurement). The *y*-axis is always frequency. Sometimes they are labeled "count" or "density," but they always represent the number of times certain values appear in the data.
 
 Are ordinal variables continuous? No. However, many ordinal variables can be conceptualized as quasi-interval. Likert scales are often quasi-interval. For the scale to be quasi-interval, we generally require at least five options on the scale. In addition, it should be reasonable to assume equal spacing between options on the scale. For example, a scale with the following options might be considered quasi-interval, because there are five options and they all seem equally spaced from one another:
 Strongly disagree, somewhat disagree, neither agree or disagree, somewhat agree, strongly agree
 
-A quirk of JAMOVI is that histograms do not include numbers on the y-axis, which makes them difficult to read. However, bar graphs do include numbers on the y-axis in JAMOVI. For small, quasi-interval scales, you can approximate a histogram with a bar graph. The biggest difference is that usually histograms do not have any space between the bars, whereas bar graphs do have space between the bars, but this is not problematic for small, quasi-interval scales.
+A quirk of JAMOVI is that histograms do not include numbers across all of the *y*-axis, which makes them difficult to read. However, bar graphs do include numbers below each bar on the *y*-axis in JAMOVI. For small, quasi-interval scales, you **could** (*See note that follows this paragraph.*) approximate a histogram with a bar graph. The biggest difference is that usually histograms do not have any space between the bars, whereas bar graphs do have space between the bars, but this is not problematic for small, quasi-interval scales. (**Remember: In 292, for the 2023 Winter term, you will treat Likert scales that are quasi-interval as interval scales. Therefore, you will use histograms when graphing quasi-interval scales.**)
 
-Let's use a bar graph to approximate a histogram for participant's self-reported mental health. In the EngageNS survey, respondents were asked to rate their own mental health on a 5-point scale, ranging from 1 to 5 where 1 = *poor*, 2 = *fair*, 3 = *good*, 4 = *very good*, and 5 = *excellent*. The variable name is `MNTLHLTH`.
 
-The first thing to check is whether the variable's properties are correct. 
+#### Bar Graphs
 
-We will explain the following two figures during the lab.
+Now, let’s have a look at the spreadsheet showing the data set using the <span style="color:blue">Data</span> menu. We will not be working with every single variable in this spreadsheet, but we’ll select a few interesting ones with which to answer questions. Let’s start with `PARSPORT`. Suppose we want to know how many respondents in the EngageNS survey are members of or participants in sports or recreational organizations. Let’s use JAMOVI to produce a graph to answer the question. Go up to the top menu and choose <span style="color:blue">Analyses</span>, then select <span style="color:blue">Exploration</span>, and then select <span style="color:blue">Descriptives</span>. 
 
-Visual for errors in variable attributes:
+Let’s think about the nature of our question.  We want to know how many people in the data set indicated that they participate in sports and/or recreational organizations. From a quick check in the data dictionary, we can determine that `PARSPORT` is the name of the variable, it represents whether the survey respondent is a member or participant in sports or recreational activities, and it is measured using Yes/No response options. These response options represent a nominal scale, so we will appropriately choose a BAR graph to plot it. (Bar graphs are used to represent nominal scales because nominal scales are not continuous. In bar graphs, the bars do not touch – showing the non-continuous nature of the scale.)
 
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/1.5.3.9B.png')
-```
-
-Visual for codes and what they represent from data dictionary:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/1.5.3.9C.png')
+knitr::include_graphics('img/PARSPORTinDataDictionary.png')
 ```
 
-Let's plot a histogram for this variable. We will do this as a live demo in the lab.
+
+In the analysis panel (the view to the left in JAMOVI), select the variable of interest for the graph by highlighting `PARSPORT` and using the right-facing arrow to move it to that Variables field on the right. 
+
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/MovingPARSPORTToVarField.png')
+```
+
+Then, click on the <span style="color:blue">Plots</span> ribbon. You will see a number of options available. Select  <span style="color:blue">Bar plot</span>…
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/PARSPORTBarGraphCommands.png')
+```
+
+In the Results panel, you will see a Descriptives table was produced when you selected the variable, and a bar graph was produced when you selected `Bar plot.`  Notice how many respondents are involved in sports/recreational organizations and how many are not. Roughly how many people participate in sports/recreational organizations? How many do not?
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/PARSPORTBarGraph.png')
+```
+
+Your bar graph will have as many bars as there are categories in your nominal variable. For example, if you want to know how many respondents were from each region of NS, create a bar graph for REGION. The number of regions from which the survey participants come is represented by the number of bars on your graph. If you want to construct this graph without moving both `PARSPORT` and `REGION` into the same Descriptives table, you can click on the arrow that faces to the right to close the Descriptives analysis and bar plot that you just completed.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/PARSPORTBarGraphCommitToResults.png')
+```
+
+Then, click on the <span style="color:blue">Exploration</span> and <span style="color:blue">Descriptives</span> commands again. Now, you can repeat the process looking at only `REGION`. From how many regions in Canada did the survey participants come? (Yes, the labelling of the *x*-axis is very difficult to read with the word overlapping.)
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/REGIONBarGraph_MessyXAxis.png')
+```
+
+#### Histograms
+
+
+Now, let’s use a different variable to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). A second difference, and one that is more noticeable, is that, in histograms, the bars touch one another while there are gaps between the bars in bar graphs. This is a visual way to show that these types of graphs represent variables measured on different scales of measurement. Histograms are used to represent variables that are measured on continuous scales (e.g., interval or ratio scales). The bars in a histogram touch indicating the continuous nature of the measurement scale. In the previous example, respondents indicated simply whether they were or were not participants in sports/recreational organizations. Their responses were either yes or no; therefore, the data is categorical and was measured on a nominal scale. Given that the data is categorical, the gaps between the bars in the bar graph we made earlier represent the non-continuous nature of the data.
+Here, we will deal with people’s self-reported mental health, `MNTLHLTH`. In the EngageNS survey, respondents were asked to rate their own mental health on a 5-point scale, ranging from 1 to 5 where 1 = poor, 2 = fair, 3 = good, 4 = very good, and 5 = excellent. 
+**This is a good example of a real data set where there is inaccurate information.** Having looked at the data dictionary and viewed the response options, you would consider `MNTLHLTH` to have a quasi-interval scale; however, in JAMOVI we see the variable attributes indicating `MNTLHLTH` has a nominal scale (under Measure type). Depending on where you land on the quasi-interval scale controversy, you should change the “Measure type” to ordinal or continuous.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/MNTLHLTHWrongScale.png')
+```
+
+Let’s plot a histogram for this variable. (Remember to close the Descriptives menu, by clicking on the arrow facing to the right, before you keep going unless you want to run the same analyses on a number of variables.) We want to put our variable of interest - mental health - on the *x*-axis and frequency for each score on the *y*-axis. If you will recall, there were a number of options for types of graphs in the sub-menu we used for the bar graph. It is in that sub-menu where we will find the histogram option.
+Under the <span style="color:blue">Analyses</span> tab, choose <span style="color:blue">Exploration</span> and <span style="color:blue">Descriptives</span>. Let’s either use the search function or scroll through the variable list to find `MNTLHLTH`. Using the arrow or dragging the highlighted variable and dropping it, move `MNTLHLTH` into the Variables field. Now, click on the <span style="color:blue">Plots</span> ribbon. From here, remember we want a histogram, not a bar graph, so let’s select <span style="color:blue">Histogram</span>…
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/MNTLHLTHCommands.png')
+```
+
+(*Shrug! I am not sure why the icon representing the scale changes back to “nominal” when the variable is moved to the Variable field.*)
+
+JAMOVI will produce, in the Results panel, the distribution of scores for respondents’ self-reported mental health. (Remember to save your file – using a different name than that you use for your starting file – if you think you may want to look at it again in the future.)
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/MNTLHLTHHistogram.png')
+```
+
+### Tables
+
+
+TO BE CONTINUED
 
 
 ### Homework
@@ -925,7 +983,7 @@ The answers to each of these questions are worth .25 points each, for a total of
 - What do the bars on a histogram represent?
 - How many bars can a histogram have?
 - What do the heights of the bars tell you?
-- What is on the x-axis and y-axis of a histogram?
+- What is on the *x*-axis and *y*-axis of a histogram?
 - What does the tallest bar on a histogram tell you?
 - What does the shortest bar on a histogram tell you?
 - What are some uses for histograms, or why would you want to look at a histogram of some numbers that you collected?

@@ -953,8 +953,6 @@ Under the <span style="color:blue">Analyses</span> tab, choose <span style="colo
 knitr::include_graphics('img/MNTLHLTHCommands.png')
 ```
 
-(*Shrug! I am not sure why the icon representing the scale changes back to “nominal” when the variable is moved to the Variable field.*)
-
 JAMOVI will produce, in the Results panel, the distribution of scores for respondents’ self-reported mental health. (Remember to save your file – using a different name than that you use for your starting file – if you think you may want to look at it again in the future.)
 
 ```{r , echo=FALSE,dev='png'}

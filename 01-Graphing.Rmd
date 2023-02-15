@@ -962,7 +962,7 @@ knitr::include_graphics('img/MNTLHLTHHistogram.png')
 ### Tables
 
 
-TO BE CONTINUED
+Please see the lab Moodle site for a handout of what you are expected to know about APA-formatted tables.
 
 
 ### Homework

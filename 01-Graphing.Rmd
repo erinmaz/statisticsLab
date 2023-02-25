@@ -795,7 +795,7 @@ This section is  copied almost verbatim, with some editorial changes, from [Answ
 In this lab, it is hoped you will become more acquainted with the jamovi software layout and graph some sample data to make sense of it. We will be doing the following:
 
 1. Deciding on which is the best graph based on the scale of measurement
-2, Reviewing variable attributes (or properties) using the Edit (in Variables menu) or Setup (in Data menu) buttons 
+2. Reviewing variable attributes (or properties) using the Edit (in Variables menu) or Setup (in Data menu) buttons 
 3. Opening a data file and producing different types of graphs 
 
 
@@ -929,7 +929,7 @@ Your bar graph will have as many bars as there are categories in your nominal va
 knitr::include_graphics('img/PARSPORTBarGraphCommitToResults.png')
 ```
 
-Then, click on the <span style="color:blue">Exploration</span> and <span style="color:blue">Descriptives</span> commands again. Now, you can repeat the process looking at only `REGION`. From how many regions in Canada did the survey participants come? (Yes, the labelling of the *x*-axis is very difficult to read with the word overlapping.)
+Then, click on the <span style="color:blue">Exploration</span> and <span style="color:blue">Descriptives</span> commands again. Now, you can repeat the process looking at only `REGION`. From how many regions in Canada did the survey participants come? (Yes, the labelling of the *x*-axis is very difficult to read with the words overlapping.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/REGIONBarGraph_MessyXAxis.png')

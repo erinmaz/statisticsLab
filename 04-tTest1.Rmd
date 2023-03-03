@@ -526,7 +526,7 @@ During the baseline condition, the mean proportion looking time toward the singe
 
 In this example, we will be comparing data from two measurements taken from the same individuals. In the same data file as above, we have two variables named `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer`. These variables represent the proportion of time spent looking at the familiar song singer at baseline, and then again in the test phase (after the 1-2 week period in which infants have been familiarized with the song). Because each infant was measured once (baseline), and then re-measured again (test), we will use a paired samples *t*-test.
 
-**Important terminology note:** `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer` are represented as two variables in SPSS, but they refer to two levels of a single independent variable. You can think of the independent variable as timepoint with two levels: baseline and test.
+**Important terminology note:** `Baseline_Proportion_Gaze_to_Singer` and `Test_Proportion_Gaze_to_Singer` are represented as two variables in SPSS, but they refer to two levels of a single independent variable. You can think of the independent variable as time point with two levels: baseline and test.
 
 In order to run the paired-samples *t*-test, go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">Paired-Samples T-test..</span>.
 
@@ -692,21 +692,13 @@ In this lab, we will use jamovi to:
 4. Perform a one-sample *t*-test
 
 
-### Pre-lab Tasks
-
-
-Before lab, be sure to complete the [Psychology 291 Data: Terms of Use quiz](https://moodle.stfx.ca/mod/quiz/view.php?id=837148).
-
-When you pass that quiz, download the data file and data dictionary from [OneDrive](https://moodle.stfx.ca/mod/url/view.php?id=837149). Be sure to practice your data management skills and save the files in an appropriate file folder in your Psych 292 Lab folder. 
-
-This week we will be importing a different file format. The data file in OneDrive is a .sav file. Be sure to use the import function in JAMOVI instead of open. We did some testing and this seems to work better for more versions of JAMOVI. Be sure to have the data file opened in JAMOVI before your lab begins.
-
-
 ### Research Context for Data Set
 
-The data set with which we will be working is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. We are using a subset of the data from the survey for this lab.
+We will be working with the Psych 291 data set. This data set is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. We are using a subset of the data from the survey for this lab.
 
 The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).
+
+Before you start, please look at the variable `T2_sleep_hours`. Examine the minimum and maximum scores. Do you have concerns about the data? You should. It is not possible to sleep 42 hours per night. Delete this meaningless data from line 13. Then, as you follow along, you should get the same answers as depicted in this chapter/section.
 
 
 ### Performing a Paired-Samples *t*-Test
@@ -726,7 +718,7 @@ Note that this is just one possible research question. You might also ask a dire
 #### Using descriptive statistics to look at the question
 
 
-What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two timepoints: descriptive statistics! graphing! You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-3---february-1-2) from previous chapters. Let's make those requests now.
+What might you do to answer this question? You can use some JAMOVI skills we’ve already learned to explore the differences in sleep duration between the two time points: descriptive statistics! graphing! You should recall the commands used to request [descriptive statistics](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-3---january-24th-25th) and [graphs](https://www.erinmazerolle.com/statisticsLab/lab-1-graphing-data.html#jamovi---week-7---february-28th-march-1st) from previous chapters. Let's make those requests now.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/SleepHours_Descriptives.png')
@@ -746,21 +738,22 @@ Stretch your Thinking: Why do the histograms look high-low-high-low?
 
 #### Motivation to perform inferential statistics
 
-Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two timepoints. It looks like the mean sleep duration is slightly lower during midterms, compared to the beginning of term. But, how confident are we that that the means are truly different? That is, do the differences between these timepoints represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error? 
+Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two time points. It looks like the mean sleep duration is slightly lower during midterms, compared to the beginning of term. But, how confident are we that that the means are truly different? That is, do the differences between these time points represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error? 
 
-Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: **No.**) Do the differences between timepoints exist in the population of all students? That is what inferential statistics will help us decide. 
+Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: **No.**) Do the differences between time points exist in the population of all students? That is what inferential statistics will help us decide. 
  
 We use a paired-samples *t*-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples *t*-tests are also known as paired *t*-tests, matched *t*-tests, and dependent *t*-tests. 
  
 First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
-So, our null hypothesis ($H_0$) is there is no difference in sleep between the two timepoints: $\mu_{T1}$ = $\mu_{T2}$.
+So, our null hypothesis ($H_0$) is there is no difference in sleep between the two time points: $\mu_{T1}$ = $\mu_{T2}$.
 Our alternative hypothesis ($H_A$ or $H_1$) is there is a difference: $\mu_{T1}$ $\neq$ $\mu_{T2}$.
  
 Question: Why are our hypotheses about the mean, as opposed to a different measure of central tendency, or the distributions? Answer: *t*-tests answer questions about means. Other tests can be used for research questions about different statistics.
 
 #### Using JAMOVI to request the paired-samples *t*-test
 
-You can find the paired *t*-tests in JAMOVI by clicking Analyses -> T-Tests, Paired Samples T-Test:
+You can find the paired *t*-tests in JAMOVI by clicking <span style="color:blue">Analyses</span> menu, <span style="color:blue">T-Tests</span>, and then, <span style="color:blue">Paired Samples T-Test</span>:
+
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/paired_menu.png')
@@ -772,19 +765,19 @@ Move your two variables of interest to "Paired Variables":
 knitr::include_graphics('img/select_vars_pairedttest.png')
 ```
 
-Under Tests, "Student's" should be selected (Student was the pseudonym of the person who invented the t-test). Also, make sure Measure 1 $\neq$ Measure 2 under Hypothesis (because we have a non-directional hypothesis for this example):
+Under **Tests**, "Student's" should be selected (Student was the pseudonym of the person who invented the t-test). Also, make sure Measure 1 $\neq$ Measure 2 under **Hypothesis** (because we have a non-directional hypothesis for this example):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/paired_ttest_params1.png')
 ```
 
-Under Additional Statistics, select Mean difference and under that, Confidence Interval. Select Effect size. You can also select Descriptives and Descriptive Plots:
+Under **Additional Statistics**, select Mean difference and under that, Confidence Interval. Select Effect size. You can also select Descriptives and Descriptive Plots:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/paired_ttest_params2.png')
 ```
 
-There will now be some output in the JAMOVI output panel. The first table is Paired Samples T-Test. It names the variables that were used in the test (T1_sleep_hours and T2_sleep hours), gives the Student's t-value (under the statistic column), the degrees of freedom (df), the p-value (p), the mean difference, the standard error (SE) of the difference, the 95% Confidence Interval lower and upper bounds, and Cohen's *d* (under the Effect size column). This table is quite wide, so we've split it into two below:
+There will now be some output in the JAMOVI output panel. The first table is Paired Samples T-Test. It names the variables that were used in the test (`T1_sleep_hours` and `T2_sleep hours`), gives the Student's *t*-value (under the statistic column), the degrees of freedom (df), the *p*-value (p), the mean difference, the standard error (SE) of the difference, the 95% Confidence Interval lower and upper bounds, and Cohen's *d* (under the Effect size column). This table is quite wide, so we've split it into two below:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/pairedttestoutput_1.png')
@@ -812,22 +805,22 @@ knitr::include_graphics('img/pairedplot.png')
 
 #### Interpreting the Paired Samples *t*-Test output
 
-What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the *p*-value (in this case, 0.009) and the effect size (in this case, 0.308). The p-value is the probability of observing a difference, as or more extreme than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your p-value is "low enough"? We typically use a cutoff, called an alpha, of 0.05 or 5%. If your p-value is lower than your alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 < 0.05, so we reject the null hypothesis. Note that we do not accept the alternative hypothesis!
+What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the *p*-value (in this case, 0.009) and the effect size (in this case, 0.308). The *p*-value is the probability of observing a difference as extreme, or more extreme, than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your *p*-value is "low enough"? We typically use a cutoff, called an alpha, of 0.05 or 5%. If the *p*-value is lower than the alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 < 0.05, so we reject the null hypothesis. Note that we **do not accept the alternative hypothesis**!
 
 In research papers, we often use the phrase "statistically significant" or "significantly different" to mean reject the null hypothesis. For example, we observed significantly different sleep durations at time 1 versus time 2.
 
-The effect size gives us a sense for how large the difference is. Cohen's *d* is the appropriate effect size for a *t*-test, but we will learn about effect sizes for other tests as the course progresses. Cohen's *d* tells us how large the mean difference is, in units of standard deviation. In this case, Cohen's *d* is 0.308, so the difference in sleep duration between time 1 and time 2 is about 0.3 standard deviations. 
+The effect size gives us a sense for how large the difference is. Cohen's *d* is the appropriate effect size for a *t*-test, but you may learn about effect sizes for other tests as you progress in studies of statistics. Cohen's *d* tells us how large the mean difference is, in units of standard deviation. In this case, Cohen's *d* is 0.308, so the difference in sleep duration between time 1 and time 2 is about 0.3 standard deviations. 
 
-The degrees of freedom (df) for a paired *t*-test is equal to the number of participants included in the test minus one:
+The degrees of freedom (*df*) for a paired *t*-test is equal to the number of participants included in the test minus one:
 $df = N - 1$
 
 <div class="marginnote">
 Note: Different tests use different formulas for df.
 </div>
 
-Our df = 76, meaning that 77 participants were included in the paired *t*-test. There are actually 103 participants in the dataset, but not all participants had sleep duration data for both time points. Participants with missing data at one or both timepoints get excluded from the test. This is why the descriptives statistics are different depending on whether you generate them via the Exploration panel or the Paired T-Test. The Exploration descriptives table includes all participants with data, whereas the Paired T-Test descriptives table only includes participants with data at both time points.
+Our *df* = 76, meaning that 77 participants were included in the paired *t*-test. There were actually 103 participants (and 101 participants' scores are shown in the data set), but not all participants had sleep duration data for both time points. Participants with missing data at one or both time points get excluded from the test. This is why the descriptives statistics are different depending on whether you generate them via the <span style="color:blue">Exploration</span> panel or the <span style="color:blue">Paired T-Test</span> command. The <span style="color:blue">Exploration</span> descriptives table includes all participants with data, whereas the <span style="color:blue">Paired T-Test</span> descriptives table only includes participants with data at both time points.
 
-The 95% confidence interval for a paired *t*-test are limits constructed that, for 95% of samples, the population mean difference will fall within the limits. This means that, assuming our sample belongs to that 95% of samples, the population mean difference is between 0.101 and 0.670. Remember, if we collected the data again using a different sample, we would get a different estimate for the population mean.
+The 95% confidence interval for a paired *t*-test are limits constructed such that, for 95% of samples, the population mean difference will fall within the limits. This means that, assuming our sample belongs to that 95% of samples, the population mean difference is between 0.101 and 0.670. Remember, if we collected the data again using a different sample, we would get a different estimate for the population mean.
 
 ### Writing results in APA format
 
@@ -841,9 +834,9 @@ A few notes about APA format:
 
 1. Always note the name of the test you performed (in this case, paired *t*-test). 
 
-2. We usually round to two decimal places, except for *p*-values.
+2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 
-3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009 not *p* = 0.009)
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009 **not** *p* = 0.009)
 
 <div class="marginnote">
 Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
@@ -856,15 +849,15 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 ### Performing a one-sample *t*-test
 
-Sometimes you are interested in whether a sample's mean is different from a  specific value. For example, you might wonder whether students are getting 8 hours of sleep per night at the start of term. To ask this question, we use a one-sample *t*-test: 
+Sometimes you are interested in whether a sample's mean is different from a  specific value. For example, you might wonder whether students are getting 8 hours of sleep per night at the start of term. To ask this question, we use a one-sample *t*-test. Click <span style="color:blue">Analyses</span> menu, then choose <span style="color:blue">T-Tests</span>, and then, <span style="color:blue">One-Sample T-test</span>: 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/onesample.png')
 ```
 
-Move your variable of interest (T1_sleep_hours) into the Dependent Variables box.
+Move your variable of interest (`T1_sleep_hours`) into the Dependent Variables box.
 
-Under hypothesis, be sure to set your test value to 8. If you leave it at 0, it will test whether the mean sleep duration is equal to 0. So, your null hypothesis is that sleep duration at the start of term is equal to 8 hours, i.e., $H_0: \mu = 8$
+Under **Hypothesis**, be sure to set your "Test value" to 8. If you leave it at 0, it will test whether the mean sleep duration is equal to 0. So, your null hypothesis is that sleep duration at the start of term is equal to 8 hours, i.e., $H_0: \mu = 8$
 
 Your output will look like this:
 

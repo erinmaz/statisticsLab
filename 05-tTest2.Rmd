@@ -509,7 +509,7 @@ For `impression` and `intellect`, a correlation of *r* = .83 was observed. In th
 
 
 <div class="marginnote">
-This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 7, Section 7.6, SPSS](https://www.crumplab.com/statisticsLab/lab-7-t-test-independent-sample.html#spss-7), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
+This section is copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 7, Section 7.6, SPSS](https://www.crumplab.com/statisticsLab/lab-7-t-test-independent-sample.html#spss-7), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 
 </div>
 
 In this lab, we will use jamovi to:
@@ -542,7 +542,7 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 #### Download and open the data
 
 
-The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=26030#section-12). What do you think? Should you IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
+The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=29319). Do you recall the difference between <span style="color:blue">Import</span>ing and <span style="color:blue">Open</span>ing a file in JAMOVI? Which command do you think should use: IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.35.png')
@@ -554,7 +554,7 @@ knitr::include_graphics('img/7.4.35.png')
 
 For our analysis, we will focus on only one of the three measures mentioned above: `intellect`. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch). 
 
-Before we run the *t*-test, let's review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Setup</span> button, available at the top of our jamovi spreadsheet window. Check `CONDITION`. 
+Before we run the *t*-test, let's review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Setup</span> button (or using the <span style="color:blue">Variables</span> menu and the <span style="color:blue">Edit</span> button), available at the top of our jamovi spreadsheet window. Check `CONDITION`. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.36.png')
@@ -568,7 +568,7 @@ Remember to check `intellect` while considering the information about the study 
 knitr::include_graphics('img/7.4.37.png')
 ```
 
-Remember to press the <span style="color:blue">Setup</span> button again or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:
+Remember to press the <span style="color:blue">Setup</span> button again (or the <span style="color:blue">Edit</span> button again if you are using the <span style="color:blue">Edit</span> menu) or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.38.png')
@@ -583,16 +583,16 @@ knitr::include_graphics('img/7.4.39.png')
 Now, we're ready to run the independent-samples *t*-test. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Independent Samples T-test</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.40.png')
+knitr::include_graphics('img/IndependentTTestCommands.png')
 ```
 
-A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using `intellect`, so find this variable in the left-hand list. One way you can find the `intellect` variable by clicking on the search icon, the one that looks like a magnifying glass, and then typing the name of the variable. Another way to find the variable is to use the slider at the right of the list of variables and move down until you see the `intellect` variable. Then, move the variable into the "Dependent Variables" field on the right by highlighting the variable and using the arrow to move it. 
+A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using `intellect`, so find this variable in the left-hand list. One way you can find the `intellect` variable by clicking on the search icon, the one that looks like a magnifying glass, and then typing the name of the variable. Another way to find the variable is to use the slider at the right of the list of variables and move down until you see the `intellect` variable. Then, move the variable into the **Dependent Variables** field on the right by highlighting the variable and using the arrow to move it. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.41.png')
 ```
 
-For the field labeled "Grouping Variable", we will specify which variable is our independent variable. That variable is `CONDITION` (we have two conditions: audio and transcript). Move `CONDITION` into the "Grouping Variable" field. 
+For the field labeled **Grouping Variable**, we will specify which variable is our independent variable. That variable is `CONDITION` (we have two conditions: audio and transcript). Move `CONDITION` into the **Grouping Variable** field. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.42.png')
@@ -604,9 +604,15 @@ In the Results panel, jamovi will produce an output tables as follows:
 knitr::include_graphics('img/7.4.43.png')
 ```
 
-The *t*-test output share some similarities with the paired *t*-test output we saw in Chapter 4 of this lab manual. The Independent Samples T-Test table contains a *t*-statistic obtained, the degrees of freedom, and a *p*-value. Much like we learned when discussing the paired-samples *t*-test output, we can click on the Independent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch's</span>, and some Assumption Checks. 
+The *t*-test output share some similarities with the paired *t*-test output we saw in Chapter 4 of this lab manual. The Independent Samples T-Test table contains a *t*-statistic obtained, the degrees of freedom, and a *p*-value. Much like we learned when discussing the paired-samples *t*-test output, we can click on the Independent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch's</span>, and some **Assumption Checks**. 
 
 In the case of an independent-samples *t*-test, one assumption made is that there is equality of variances. The groups being compared are assumed to  have roughly equal variances. This test is called the Levene's test. Simply click on <span style="color:blue">Homogeneity test</span>, and the table showing the results will appear between the table depicting the independent-samples *t*-test and the Descriptives table. Conveniently, in jamovi, you can request another test to determine if the assumption of normality is also upheld. This test is called the Shapiro-Wilk test. It, too, is conveniently requested by clicking on <span style="color:blue">Normality test</span>. The results will appear right after the Independent Samples T-Test table.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/AssumptionChecks.png')
+```
+
+Let’s examine the results of these assumption checks.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/7.4.44.png')
@@ -632,7 +638,7 @@ Some people may recommend that you **always** use Welch’s *t*-test - whether t
 knitr::include_graphics('img/7.4.44_Welch.png')
 ```
 
-In this example, the *p*-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The *p*-value associated with the Levene's test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You could report the results of the Student *t*-test, but we are still going to use the Welch’s *t*-test. The *t*-statistic for our independent-samples *t*-test is -3.48, the degrees of freedom are adjusted to 33.4, and the *p*-value for the *t*-test is .001. **Note**: Be sure to look at the *p*-value associated with the *t*-test and not Levene's test when you are interpreting your *t*-test results. 
+In this example, the *p*-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The *p*-value associated with the Levene's test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You **could** report the results of the Student *t*-test, but we are still going to use the Welch’s *t*-test for this example. The *t*-statistic for our independent-samples *t*-test is -3.48, the degrees of freedom are adjusted to 33.4, and the *p*-value for the *t*-test is .001. **Note**: Be sure to look at the *p*-value associated with the *t*-test - and not Levene's test - when you are interpreting your *t*-test results. 
 
 We can also look at the descriptive statistics to better understand what happened in the experiment:
 
@@ -650,9 +656,9 @@ Recruiter ratings of candidates' intellect when the recruiters heard audio job p
 
 1. Always note the name of the test you performed (in this case, independent *t*-test, or independent-samples *t*-test) and whether the result is significant or non-significant (*Note: We do not use the word insignificant.*). 
 
-2. We usually round to two decimal places, except for *p*-values. If your *p*-value was .0001, it would be okay to write *p* = .0001 or *p* < .001.
+2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 
-3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .05 not *p* < 0.05).
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .05 **not** *p* < 0.05).
 
 <div class="marginnote">
 Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
@@ -660,7 +666,7 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(33.4) = -3.48 **not** *t*(33.4)=-3.48. There are spaces on either side of =, >, or < symbols.
 
-5. Italicize symbols such as **M*, *SD*, *p*, *t*, and *d*.
+5. Italicize symbols such as *M*, *SD*, *p*, *t*, and *d*.
 
 
 ### Graphing your data

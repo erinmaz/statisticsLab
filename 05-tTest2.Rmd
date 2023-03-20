@@ -534,7 +534,7 @@ Schroeder and Epley (2015) conducted an experiment to determine whether a person
 
 To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness. These ratings were then averaged to create a single measure of the job candidate’s intellect, with higher scores indicating the recruiters rated the candidates as higher in intellect. The participants also rated their overall impression of the job candidate (a composite of two items measuring positive and negative impressions). Finally, the participants indicated how likely they would be to recommend hiring the job candidate (0 - not at all likely, 10 - extremely likely).
 
-So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts or when the heard the applicants speak? We have the data, and we can find out.
+So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts or when they heard the applicants speak? We have the data, and we can find out.
 
 **Note**: This dataset includes variables that have very similar names. Be careful to select the correct variable as you complete the exercises.
 
@@ -648,7 +648,7 @@ knitr::include_graphics('img/indttestdesc.png')
 
 What does the *t*-test tell us about the data? We can put our finding into words to clarify:
 
-Recruiter ratings of candidates' intellect when the recruiters heard audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than their ratings of candidates' intellect when they read transcripts of pitches (*M* = 4.65, *SD* = 1.91). An independent *t*-test revealed that this difference is significant, *t*(33.4) = -3.48, *p* < .05, *d* = -1.12 (95% CI [-1.85,-0.39]).
+Recruiter ratings of candidates' intellect when the recruiters heard audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than their ratings of candidates' intellect when they read transcripts of pitches (*M* = 4.65, *SD* = 1.91). An independent *t*-test revealed that this difference is significant, *t*(33.43) = -3.48, *p* = .001, *d* = -1.12 (95% CI [-1.85,-0.39]).
 
 
 ### Some APA formatting reminders for writing results sections
@@ -658,7 +658,7 @@ Recruiter ratings of candidates' intellect when the recruiters heard audio job p
 
 2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 
-3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .05 **not** *p* < 0.05).
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .001 **not** *p* < 0.001).
 
 <div class="marginnote">
 Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.

@@ -674,7 +674,7 @@ ___
 2. Graph this result (including 1 SEM error bars) as a bar graph. Upload your output file, including the graph, to Moodle.
 
 
-## JAMOVI - Week 9 - March 14th & 15th 
+## JAMOVI - Week 9 - March 12th & 13th 
 
 
 <div class="marginnote">

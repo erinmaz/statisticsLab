@@ -505,7 +505,7 @@ knitr::include_graphics('img/7.4.34.png')
 For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 
-## JAMOVI - Week 9 - March 21st & 22nd
+## JAMOVI - Week 10 - March 19th & 20th
 
 
 <div class="marginnote">

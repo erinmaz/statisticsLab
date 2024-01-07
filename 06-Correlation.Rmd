@@ -512,7 +512,7 @@ ___
 3. Which country (or countries) have seen a more consistent and strong increase in log GDP over time? Which country (or countries) have seen a decrease over time?
 
 
-## JAMOVI - Week 10 - March 28th & 29th 
+## JAMOVI - Week 11 - March 26th & 27th 
 
 <div class="marginnote">
 Some of this section is copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 3, Section 3.4, SPSS](https://www.crumplab.com/statisticsLab/lab-3-correlation.html#spss-3), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, & Chavarga (2018). 

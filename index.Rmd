@@ -476,7 +476,7 @@ The variable editor can be opened by selecting `Setup` from the data tab or by d
 
 New variables can be inserted or appended to the data set using the `Add` button from the data ribbon. The `Add` button also allows the addition of computed variables.
 
-#### Computed Variables - Week 4 - January 31st & February 1st
+#### Computed Variables - Week 5 - February 6th & 7th
 
 Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, z-scores, sum-scores, negative scoring, and means.
 

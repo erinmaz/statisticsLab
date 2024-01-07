@@ -508,3 +508,9 @@ histograms-1
 tables
 download-and-open-data-1
 jamovi---week-1---january-9th-10th
+computed-variables---week-5---february-6th-7th
+jamovi---week-4---january-30th-31st
+jamovi---week-3---january-23rd-24th
+jamovi---week-9---march-12th-13th
+jamovi---week-10---march-19th-20th
+jamovi---week-11---march-26th-27th

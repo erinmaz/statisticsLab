@@ -507,3 +507,4 @@ bar-graphs-1
 histograms-1
 tables
 download-and-open-data-1
+jamovi---week-1---january-9th-10th

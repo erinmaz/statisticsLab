@@ -483,13 +483,14 @@ Then <span style="color:blue">Close</span>. Click the x to close the Chart Edito
 knitr::include_graphics('img/2.4.30.png')
 ```
 
+
 ### Boxplots
 
-Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles.You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile. The two ends of the box mark the first (or lower) quartile and the third (or upper) quartile. The difference between the first and third quartile is known as the interquartile range (IQR). 
+Another useful graph is the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles.You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile. The two ends of the box mark the first (or lower) quartile and the third (or upper) quartile. The difference between the first and third quartile is known as the interquartile range (IQR). 
 
-Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
+Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we will get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
 
-Using the life_expectancy.sav data file, let's create a boxplot to visually inspect the distribution of the data for the variable: `1934 [v136]`. To create the boxplot, let's go to <span style="color:blue">Analyze</span> in the menu toolbar, then <span style="color:blue">Descriptives</span>, then <span style="color:blue">Explore</span>.
+Using the life_expectancy.sav data file, we can create a boxplot to visually inspect the distribution of the data for the variable: `1934 [v136]`. To create the boxplot, go to <span style="color:blue">Analyze</span> in the menu toolbar, then <span style="color:blue">Descriptives</span>, then <span style="color:blue">Explore</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.4.31.png')
@@ -535,7 +536,7 @@ This section is  copied almost verbatim, with some editorial changes, from [Answ
 In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will learn to:
 
 1. Select and calculate descriptive statistics
-2. Create and interpret a boxplot
+2. Create and interpret a boxplot (We will skip this information for PSYC 292 labs in Winter 2024.)
 
 
 ### Getting ready for this lesson
@@ -674,7 +675,7 @@ So, we have a mean of 674, a median of 7, and a mode of 7. Pause for a moment an
 In brief, the `SLEEP` variable contains some garbage data. You can see that the maximum is 8.00e+6 or 8 million hours of sleep. Another way to evaluate the data is to look at the histogram. Scroll down below the descriptive statistics you selected to the Plots section, and select Histogram.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/sleephistogram.png')
+knitr::include_graphics('img/Sleephistogram.png')
 ```
 
 The *x*-axis on this histogram is too big because of the garbage data. It doesn't make sense to look at a histogram of sleep from 0 to 8 million hours. Assuming you could fit about 5 bars between 0 and 2 million (2e+06), all that tall bar tells us is that most people sleep between 0 and 400 000 hours. Not very helpful. 
@@ -731,7 +732,7 @@ The output panel will now include a new table, Frequencies of VOLUNTEER:
 knitr::include_graphics('img/volunteerfrequenciestable.png')
 ```
 
-This table shows that 6715 participants answered with a 1, meaning they did volunteer in the past year, and 6015 answered with a 2, meaning they did not. 
+This table shows that 6715 participants answered with a 1, meaning they did volunteer in the past year, and 6105 answered with a 2, meaning they did not. 
 
 You can also get this information from a bar graph. Under <span style="color:blue">Plots</span>, select Bar plot:
 
@@ -759,11 +760,19 @@ We usually report at least two descriptive statistics for each variable: a measu
 
 Choosing the right descriptive statistics for a given variable depends on understanding the distribution or shape of the data. It also depends on the scale of measurement of your variable. Sometimes, there can be more than one right answer.
 
+  Scale of measurement    Central tendency
+  ----------------------- --------------------------
+  Nominal                 Mode
+  Ordinal                 Median
+  Quasi-interval          *Your choice of how to treat this scale affects which descriptive statistics will be used*
+  Interval                Mean *OR Median if the distribution is skewed or there are outliers*
+  Ratio                   Mean *OR Median if the distribution is skewed or there are outliers*
+
 If the measurement scale is nominal, we usually look at the mode for information about central tendency. If the measurement scale is ordinal, we usually look at the median for information about central tendency. The central tendency measure used for interval or ratio scales of measurement can vary. If the distribution is not skewed, we would usually consider the mean. If the distribution is skewed, we might look to the median to avoid the influence the long, asymmetric tail of the distribution has on the mean. The median is also a good choice for interval or ratio data if there are outliers present. This is because the mean is "sensitive" to outliers - outliers can impact the mean a lot. The median is not sensitive to outliers.
 
-The `SLEEP` variable is example of how a skewed distribution and/or outliers can impact the mean. 
+The `SLEEP` variable is an example of how a skewed distribution and/or outliers can impact the mean. 
 
-Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean.
+Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean. **(For 292 labs in the Winter of 2024, you are asked to consider *Likert scales that have reasonably equal intervals* as interval scales.)**
 
 If, however, we look at `PA_VIGOROUS`, we see that the variable asks participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed or there are outliers, we would likely report the mean. You can see that the answer to a research question about Nova Scotians' exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
 
@@ -787,7 +796,7 @@ As you read more psychology research articles, you might notice it's unusual to 
 
 Participants were also asked about their sense of belonging to the community. As you will see in the data dictionary, their answers could range from 1 = very weak, to 7 = very strong. While it is not explicitly shown, a 4 would be neutral.
 
-Thinking about scales of measurement, this is an example of an ordinal variable. Let's look at the `BELONGING` variable in the dataset. Select the variable (remember you can search in the <span style="color:blue">Variables</span> tab first to find it faster) and click <span style="color:blue">Setup</span>.
+Thinking about scales of measurement, this could arguably be perceived as an example of an ordinal variable. Let's look at the `BELONGING` variable in the dataset. Select the variable (remember you can search in the <span style="color:blue">Variables</span> tab first to find it faster) and click <span style="color:blue">Setup</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belongingsetup.png')
@@ -807,7 +816,7 @@ knitr::include_graphics('img/belongingordinaloutput.png')
 
 You could write a sentence to report these results like this: Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.
 
-Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. 
+Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. (Remember: This is the default choice in 292 Labs for the Winter of 2024.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belongingquasioutput.png')
@@ -821,15 +830,14 @@ Finally, you might want to look at the data graphically. A histogram would be ap
 knitr::include_graphics('img/belonginghistogram.png')
 ```
 
-
 ### Boxplots
 
 
-Let’s look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.
+Let us look at another useful graph: the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles. You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile (Q2). The two ends of the box mark the first (or lower) quartile (also called Q1) and the third (or upper) quartile (also called Q3). These lines marking the sides of the box might be considered as the medians of the lower half of the data set and the upper half of the data set. The difference between the first and third quartile is known as the interquartile range (IQR). In effect, IQR = Q3 – Q1.
 
 Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later), and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
 
-Using the `SLEEP` and `R_SLEEP` variables, let's create boxplots. You should now feel comfortable accessing descriptive statistics and graphs in the jamovi menus (Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>). Move both variables into the Variables box. Under <span style="color:blue">Plots</span>, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.
+Using the `SLEEP` and `R_SLEEP` variables, we can create boxplots. You should now feel comfortable accessing descriptive statistics and graphs in the jamovi menus (Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>). Move both variables into the Variables box. Under <span style="color:blue">Plots</span>, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/sleepboxplots.png')

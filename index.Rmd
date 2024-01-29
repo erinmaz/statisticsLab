@@ -478,9 +478,9 @@ New variables can be inserted or appended to the data set using the `Add` button
 
 #### Computed Variables - Week 5 - February 6th & 7th
 
-Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, z-scores, sum-scores, negative scoring, and means.
+Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, *z*-scores, sum-scores, negative scoring, and means.
 
-One way computed variables can be added to the data set with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu where you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading "Computed Variable," the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think "Appendix"). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appear to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:
+One way computed variables can be added to the data set with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu in which you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading "Computed Variable," the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think "Appendix"). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appearing to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:
 
 A + B 
 
@@ -490,16 +490,18 @@ MEAN(A, B)
 
 (dose - VMEAN(dose)) / VSTDEV(dose)
 
-In order, these are the sum of A and B, a log (base 10) transform of len, the mean of A and B, and the z-score of the variable dose. [The figure] below shows the jamovi screen for the new variable computed as the z-score of dose (from the `Tooth Growth' example data set).
+In order, these are the sum of A and B, a log (base 10) transform of len, the mean of A and B, and the *z*-score of the variable dose. The figure below shows the jamovi screen for the new variable computed as the *z*-score of dose (from the `Tooth Growth' example data set).
 
 <div class="marginnote">
 As previously noted in this section, this figure is copied from [Learning statistics with jamovi: A tutorial for psychology students and other beginners, Version 0.70](https://www.learnstatswithjamovi.com/), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Navarro & Foxcroft (2019). 
 </div>
 
+
 ```{r , echo=FALSE, out.width="75%", dev='png'}
 knitr::include_graphics('img/computedvariable.png')
 ```
 \caption{A newly computed variable, the z-score of `dose'.}
+
 
 *V-functions*.  
 Several functions are already available in jamovi and available from the drop down box labelled *f~x~*. A number of functions appear in pairs, one prefixed with a V and the other not. V functions perform their calculation on a variable as a whole whereas non-V functions perform their calculation row by row. For example, MEAN(A, B) will produce the mean of A and B for each row whereas VMEAN(A) gives the mean of all the values in A.
@@ -568,9 +570,9 @@ For each question, chose from the following alternatives:
 
 Those questions that are negatively worded in terms of the construct will be reverse coded before moving forward to a calculation. 
 
-Which items appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct)? (*Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.*) Write your answers on a sheet or document.
+Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct). (*Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.*) Write your answers on a sheet or in a document.
 
-Which items appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct)? (*Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.*) Write your answers on the same sheet or document.
+Indicate the nubmers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct). (*Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.*) Write your answers on the same sheet or in the same document.
 
 Check your answers: 
 If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.

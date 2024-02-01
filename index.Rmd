@@ -514,15 +514,17 @@ This section and its subsection was developed by Sherry Neville-MacLean. This co
 
 </div>
 
-As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering the survey questions and decide to select all extreme responses. These data are not useful. 
+As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering survey questions and decide to select all extreme responses. These data are not useful. 
 
-As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. If, for example, the researcher is using a scale where “extremely agree” indicates participants score high on the construct being measured (ex. “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude.), the researcher may reword some statements in the questionnaire so that “extremely agree” indicates they score low on the construct being measured (ex. “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.).
+As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. Imagine an example where the researcher is using a scale on which “extremely agree” indicates participants score high on the construct being measured (ex. gratitude). Consider this survey statement: “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude. The researcher may reword some statements in the questionnaire so that “extremely agree” indicates the participants score low on the construct. After rewording, another statement on the gratitude questionnaire might read like this: “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude. 
+
+To be able to look at individual survey respondents' score across all questions, their overall score on the gratitude scale, the researcher often, first, must recode some "negatively" worded items' scores. In the above example, the second answer would need to be recoded before being considered with the answer to the first item, the "positively" worded statement.
 
 ###### An Example of Recoding and Computing a New Variable
 
 <div class="marginnote">
 
-The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., & Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan & S. Oskamp (Eds.), *The social psychology of health: Claremont Symposium on Applied Social Psychology* (pp. 31–67). Newbury Park, CA: Sage. This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.
+The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., & Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan & S. Oskamp (Eds.), *The social psychology of health: Claremont Symposium on Applied Social Psychology* (pp. 31–67). Newbury Park, CA: Sage. **This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.**
 
 </div>
 
@@ -570,144 +572,152 @@ For each question, chose from the following alternatives:
 
 Those questions that are negatively worded in terms of the construct will be reverse coded before moving forward to a calculation. 
 
-Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct). (*Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.*) Write your answers on a sheet or in a document.
+Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct). (*Notice: This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate a high level of the construct.*) Write your answers on a sheet or in a document.
 
-Indicate the nubmers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct). (*Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.*) Write your answers on the same sheet or in the same document.
+Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct). (*Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.*) Write your answers on the same sheet or in the same document.
 
 Check your answers: 
 If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.
 If you answered that scoring a 4 on questions 4, 5, 7, and 8 would indicate lack of stress, you are correct!
 
-Imagine we have a participant who scores in the following way:
+Notice that the "Stress" scale in the PSYC 291 Survey data dictionary is adapted from the PSS. In the PSYC 291 Survey, respondents were asked about these items, but for the past week, not the past month. The levels of the response options were the same as the PSS. For some reason, however, the data in the data set range from 1 to 5. It seems reasonable that 1 represents "never" and 5 represents "very often," and we will proceed using this idea of the scale anchors.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/ScoresOnPSS.png')
+knitr::include_graphics('img/StressScaleFromPSYC291Survey.png')
 ```
 
-Enter these scores into a JAMOVI data file of your own (creating a new file), or go to [Moodle](https://moodle.stfx.ca/course/view.php?id=29319#section-9) to download and open the data file named "Fictitious Data Set - PSS_RecodingAndDataComputations_OneParticipant." Then, follow along with the proceeding commands to be sure you feel comfortable using JAMOVI to recode data and compute new variables.
-The score on the PSS is calculated by reversing the answers to the questions that are oppositely worded (questions 4, 5, 7, and 8) and, then, summing the scores.
-
-Let’s work through this process with the participant’s scores. We can begin by recoding item 4, shown as `PSS4` in the data file. This process is similar to, but not the same as, computing a new variable. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.
+Let’s work through the process of computing a new variable (a composite variable) using the Stress items for T1 in the PSYC 291 Survey data file. As you can see in the data dictionary, T1 is "during the first week of classes in September." The first step to computing the new variable is recoding. We need to recode items 4, 5, 7, and 8 before we can compute a composite score for all Stress items. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4.png')
+knitr::include_graphics('img/StressScale_ShowingVariablesToRecode.png')
 ```
 
-A new column will appear to the right of the column for the `PSS4` and the variable attributes panel will drop down. (As you can imagine, you could also use these commands: <span style="color:blue">Data</span>, <span style="color:blue">Add</span>, and under "Transformed Variable," either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>.) You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it `PSS4_Recoded`. You can see that the source variable is correctly shown as `PSS4`. 
+We will begin by recoding item 4, shown as `T1_stress4` in the data file. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_2.png')
+knitr::include_graphics('img/StressScale_CommandsToRecode.png')
 ```
 
-Now, it is time to add the transform rule that you want used. Click on the white box after “using transform” and select <span style="color:blue">Create New Transform</span>.
+A new column will appear to the right of the column for the `T1_stress4` and the variable attributes panel will drop down. (As you can imagine, you could also use these commands: <span style="color:blue">Data</span>, <span style="color:blue">Add</span>, and under "Transformed Variable," either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>.) You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it `T1_stress4_Recoded`. You can see that the source variable is correctly shown as `T1_stress4`. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_3.png')
+knitr::include_graphics('img/StressScale_CommandsToRecodeT1Stress4.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/StressScale_RenamingT1Stress4RecodedVariable.png')
+```
+
+Now, it is time to add the transform rule that you want used. Click on the white box after “using transform” and select <span style="color:blue">Create New Transform</span>. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4.png')
 ```
 
 When you do click that button, a new panel will appear. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_4.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_2.png')
 ```
 
 Let’s fill in the information to tell JAMOVI what we want done to the data. We will give the transformation a name (“Reverse_Coding”) and click the <span style="color:blue">Show formula editor</span> button which looks like *f~x~*. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_5.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_3.png')
 ```
 
 A new panel opens, and we will enter the formula to have the transformations calculated. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_6.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_4.png')
 ```
 
-Because 4 is the maximum score value and 0 is the minimum score value, we can write this equation to get the recoded values:
+Because 5 is the maximum score value and 1 is the minimum score value, we can write this equation to get the recoded values:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_7.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_5.png')
 ```
 
 Go ahead and check the math on each of those recoded values!
 
 To close the transformation panel, click on the downward facing arrow.
 
-
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_8.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_6.png')
 ```
 
 To get out of  the Transformed Variable panel, click on the upward facing arrow.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_9.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_7.png')
 ```
 
-You should see the recoded PSS4 value in the `PSS_Recoded` column.
+You should see the recoded T1_stress4 value in the `T1_stress4_Recoded` column.
 
-Repeat the steps to recode `PSS5`, `PSS7`, and `PSS8`. For these cases, you will not need to select <span style="color:blue">Create New Transform</span>. Instead, you will select the transformation rule you already created, <span style="color:blue">Reverse_Coding </span>.
+Repeat the steps to recode `T1_stress5`, `T1_stress7`, and `T1_stress8`. For these cases, you will not need to select <span style="color:blue">Create New Transform</span>. Instead, you will select the transformation rule you already created, <span style="color:blue">Reverse_Coding </span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_10.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_8.png')
 ```
 
 Now, you can see all 4 recoded values. Notice the transformed variables are noted with red circles by their names at the top of the columns.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_11.png')
+knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_9.png')
 ```
 
 Recall the scoring instructions say that after recoding the values for these scale items, we should sum the scores. Let’s do that now. 
-Move to the column to the right of `PSS10`, and select <span style="color:blue">Data</span> and select <span style="color:blue">Compute</span>.
+Move to the column for `T1_stress10`, highlight that column, and select <span style="color:blue">Data</span> and select <span style="color:blue">Compute</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_12.png')
+knitr::include_graphics('img/StressScale_ComputationCommands.png')
 ```
 
 If the Computed Variable panel does not drop down for you, click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_13.png')
+knitr::include_graphics('img/StressScale_ComputationCommands_2.png')
 ```
 
 Let’s fill in the variable attributes and enter the formula for JAMOVI to follow to compute the sum. Remember, we want to include the recoded values for items 4, 5, 7, and 8. We do not want to include the original values for those items. One way to calculate the sum is by using the SUM command in the formula editor and placing all variable names you want included in the sum in the brackets behind the word SUM with commas between the variable names. Alternatively, you could select each variable name and use plus signs between them.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_14.png')
+knitr::include_graphics('img/StressScale_ComputationFormula1.png')
+```
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/StressScale_ComputationFormula2.png')
 ```
 
 As you did with the Transformed Variable panel, you can close the Computed Variable panel by clicking the upward facing arrow.
-This may seem like a lot of work to do for one participant’s sum; however, these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set compiled from the scores given by a larger sample.
+This may seem like a lot of work to do for a score on one variable; however, you can imagine these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set or recoding and/or computations of many variables.
 
 #####  Z-scores (as a Type of Computed Variable in JAMOVI)
 
 <div class="marginnote">
 
-  This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro & Foxcroft (2019) for the purposes of a lab lesson.
+This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro & Foxcroft (2019) for the purposes of a lab lesson.
 
 </div>
 
 There will be times when you want to compute *z*-scores. (For example, you may want to look at a large data set and decide whether you have extreme outliers.) Getting *z*-scores in JAMOVI is very easy. 
 
-Looking at the following fictitious data showing the `PSS_Score` for 10 participants, let’s look at the process to get the *z*-scores for those `PSS_Score` values. 
+Let’s look at the process to get the *z*-scores for those `Stress Composite Score` values. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/RecodingScoresOnPSS4_15.png')
+knitr::include_graphics('img/StressScale_Column.png')
 ```
 
-To follow along with the proceeding commands, you might add the other `PSS_Score` values in that column (if you created your own data file), or you can go to  [Moodle](https://moodle.stfx.ca/course/view.php?id=29319#section-9) to download the data file called "Fictitious Data Set - PSS_RecodingAndDataComputations_TenParticipants_RecodedAndComputed," and then, in JAMOVI, open that data file. 
-
-In JAMOVI, *z*-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span>. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the *z*-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.
+In JAMOVI, *z*-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span> after the variable column is highlighted. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the *z*-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/ZScoresAsComputedVariables.png')
+knitr::include_graphics('img/StressScale_ZScoreFormula.png')
 ```
 
-Remember to click the upward facing arrow to close the Computed Variable panel. `Z_PSS_Score` in the image below depicts the *z*-scores for `PSS_Score`. Notice that computed variables have a black circle to the right of their name near the top of the column.
+Remember to click the upward facing arrow to close the Computed Variable panel. `Standardized Stress Score` in the image below depicts the *z*-scores for `Stress Composite Score`. Notice that computed variables have a black circle to the right of their name near the top of the column.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/ZScoresAsComputedVariables_1.png')
+knitr::include_graphics('img/StressScale_ZScoreColumn.png')
 ```
 
 ##### Homework

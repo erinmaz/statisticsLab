@@ -890,12 +890,13 @@ Several functions are already available in jamovi and available from the drop do
 <div class="marginnote">
 <p>This section and its subsection was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
-<p>As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering the survey questions and decide to select all extreme responses. These data are not useful.</p>
-<p>As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. If, for example, the researcher is using a scale where “extremely agree” indicates participants score high on the construct being measured (ex. “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude.), the researcher may reword some statements in the questionnaire so that “extremely agree” indicates they score low on the construct being measured (ex. “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.).</p>
+<p>As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering survey questions and decide to select all extreme responses. These data are not useful.</p>
+<p>As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. Imagine an example where the researcher is using a scale on which “extremely agree” indicates participants score high on the construct being measured (ex. gratitude). Consider this survey statement: “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude. The researcher may reword some statements in the questionnaire so that “extremely agree” indicates the participants score low on the construct. After rewording, another statement on the gratitude questionnaire might read like this: “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.</p>
+<p>To be able to look at individual survey respondents’ score across all questions, their overall score on the gratitude scale, the researcher often, first, must recode some “negatively” worded items’ scores. In the above example, the second answer would need to be recoded before being considered with the answer to the first item, the “positively” worded statement.</p>
 <div id="an-example-of-recoding-and-computing-a-new-variable" class="section level6 hasAnchor" number="0.6.3.2.1.1">
 <h6><span class="header-section-number">0.6.3.2.1.1</span> An Example of Recoding and Computing a New Variable<a href="software.html#an-example-of-recoding-and-computing-a-new-variable" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <div class="marginnote">
-<p>The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., &amp; Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan &amp; S. Oskamp (Eds.), <em>The social psychology of health: Claremont Symposium on Applied Social Psychology</em> (pp. 31–67). Newbury Park, CA: Sage. This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.</p>
+<p>The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., &amp; Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan &amp; S. Oskamp (Eds.), <em>The social psychology of health: Claremont Symposium on Applied Social Psychology</em> (pp. 31–67). Newbury Park, CA: Sage. <strong>This material is being used educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.</strong></p>
 </div>
 <p>Let’s consider a scale that is often used as a measure of stress in psychological studies, the Perceived Stress Scale, by Cohen and Williamson (1988). We can walk through the process of recoding data and data computations with this example. Let’s begin by looking at the scale itself.</p>
 <p><strong>Perceived Stress Scale</strong></p>
@@ -920,48 +921,50 @@ Several functions are already available in jamovi and available from the drop do
 <li><p>felt difficulties were piling up so high that you could not overcome them?</p></li>
 </ol>
 <p>Those questions that are negatively worded in terms of the construct will be reverse coded before moving forward to a calculation.</p>
-<p>Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct). (<em>Notice: Confusion might result if you think about this idea in terms of positive wording and negative wording. This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate the construct.</em>) Write your answers on a sheet or in a document.</p>
-<p>Indicate the nubmers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct). (<em>Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.</em>) Write your answers on the same sheet or in the same document.</p>
+<p>Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing stress (the construct). (<em>Notice: This question is not asking you if the construct of stress is positive or negative. It is asking if answering the question with a 4 would indicate a high level of the construct.</em>) Write your answers on a sheet or in a document.</p>
+<p>Indicate the numbers of the items that appear to be worded in terms that scoring a 4 (very often) would represent showing lack of stress (the construct). (<em>Notice: This question is not asking you if the construct is positive or negative. It is asking if answering the question with a 4 would indicate lack of the construct.</em>) Write your answers on the same sheet or in the same document.</p>
 <p>Check your answers:
 If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.
 If you answered that scoring a 4 on questions 4, 5, 7, and 8 would indicate lack of stress, you are correct!</p>
-<p>Imagine we have a participant who scores in the following way:</p>
-<p><img src="img/ScoresOnPSS.png" /><!-- --></p>
-<p>Enter these scores into a JAMOVI data file of your own (creating a new file), or go to <a href="https://moodle.stfx.ca/course/view.php?id=29319#section-9">Moodle</a> to download and open the data file named “Fictitious Data Set - PSS_RecodingAndDataComputations_OneParticipant.” Then, follow along with the proceeding commands to be sure you feel comfortable using JAMOVI to recode data and compute new variables.
-The score on the PSS is calculated by reversing the answers to the questions that are oppositely worded (questions 4, 5, 7, and 8) and, then, summing the scores.</p>
-<p>Let’s work through this process with the participant’s scores. We can begin by recoding item 4, shown as <code>PSS4</code> in the data file. This process is similar to, but not the same as, computing a new variable. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.</p>
-<p><img src="img/RecodingScoresOnPSS4.png" /><!-- --></p>
-<p>A new column will appear to the right of the column for the <code>PSS4</code> and the variable attributes panel will drop down. (As you can imagine, you could also use these commands: <span style="color:blue">Data</span>, <span style="color:blue">Add</span>, and under “Transformed Variable,” either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>.) You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it <code>PSS4_Recoded</code>. You can see that the source variable is correctly shown as <code>PSS4</code>.</p>
-<p><img src="img/RecodingScoresOnPSS4_2.png" /><!-- --></p>
+<p>Notice that the “Stress” scale in the PSYC 291 Survey data dictionary is adapted from the PSS. In the PSYC 291 Survey, respondents were asked about these items, but for the past week, not the past month. The levels of the response options were the same as the PSS. For some reason, however, the data in the data set range from 1 to 5. It seems reasonable that 1 represents “never” and 5 represents “very often,” and we will proceed using this idea of the scale anchors.</p>
+<p><img src="img/StressScaleFromPSYC291Survey.png" /><!-- --></p>
+<p>Let’s work through the process of computing a new variable (a composite variable) using the Stress items for T1 in the PSYC 291 Survey data file. As you can see in the data dictionary, T1 is “during the first week of classes in September.” The first step to computing the new variable is recoding. We need to recode items 4, 5, 7, and 8 before we can compute a composite score for all Stress items.</p>
+<p><img src="img/StressScale_ShowingVariablesToRecode.png" /><!-- --></p>
+<p>We will begin by recoding item 4, shown as <code>T1_stress4</code> in the data file. While the column for that item is highlighted, select <span style="color:blue">Data</span>, and then, select <span style="color:blue">Transform</span>.</p>
+<p><img src="img/StressScale_CommandsToRecode.png" /><!-- --></p>
+<p>A new column will appear to the right of the column for the <code>T1_stress4</code> and the variable attributes panel will drop down. (As you can imagine, you could also use these commands: <span style="color:blue">Data</span>, <span style="color:blue">Add</span>, and under “Transformed Variable,” either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>.) You can fill in the information for what you want this variable to be called and record its notable attributes. For our purposes, let’s call it <code>T1_stress4_Recoded</code>. You can see that the source variable is correctly shown as <code>T1_stress4</code>.</p>
+<p><img src="img/StressScale_CommandsToRecodeT1Stress4.png" /><!-- --></p>
+<p><img src="img/StressScale_RenamingT1Stress4RecodedVariable.png" /><!-- --></p>
 <p>Now, it is time to add the transform rule that you want used. Click on the white box after “using transform” and select <span style="color:blue">Create New Transform</span>.</p>
-<p><img src="img/RecodingScoresOnPSS4_3.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4.png" /><!-- --></p>
 <p>When you do click that button, a new panel will appear.</p>
-<p><img src="img/RecodingScoresOnPSS4_4.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_2.png" /><!-- --></p>
 <p>Let’s fill in the information to tell JAMOVI what we want done to the data. We will give the transformation a name (“Reverse_Coding”) and click the <span style="color:blue">Show formula editor</span> button which looks like <em>f<sub>x</sub></em>.</p>
-<p><img src="img/RecodingScoresOnPSS4_5.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_3.png" /><!-- --></p>
 <p>A new panel opens, and we will enter the formula to have the transformations calculated.</p>
-<p><img src="img/RecodingScoresOnPSS4_6.png" /><!-- --></p>
-<p>Because 4 is the maximum score value and 0 is the minimum score value, we can write this equation to get the recoded values:</p>
-<p><img src="img/RecodingScoresOnPSS4_7.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_4.png" /><!-- --></p>
+<p>Because 5 is the maximum score value and 1 is the minimum score value, we can write this equation to get the recoded values:</p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_5.png" /><!-- --></p>
 <p>Go ahead and check the math on each of those recoded values!</p>
 <p>To close the transformation panel, click on the downward facing arrow.</p>
-<p><img src="img/RecodingScoresOnPSS4_8.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_6.png" /><!-- --></p>
 <p>To get out of the Transformed Variable panel, click on the upward facing arrow.</p>
-<p><img src="img/RecodingScoresOnPSS4_9.png" /><!-- --></p>
-<p>You should see the recoded PSS4 value in the <code>PSS_Recoded</code> column.</p>
-<p>Repeat the steps to recode <code>PSS5</code>, <code>PSS7</code>, and <code>PSS8</code>. For these cases, you will not need to select <span style="color:blue">Create New Transform</span>. Instead, you will select the transformation rule you already created, <span style="color:blue">Reverse_Coding </span>.</p>
-<p><img src="img/RecodingScoresOnPSS4_10.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_7.png" /><!-- --></p>
+<p>You should see the recoded T1_stress4 value in the <code>T1_stress4_Recoded</code> column.</p>
+<p>Repeat the steps to recode <code>T1_stress5</code>, <code>T1_stress7</code>, and <code>T1_stress8</code>. For these cases, you will not need to select <span style="color:blue">Create New Transform</span>. Instead, you will select the transformation rule you already created, <span style="color:blue">Reverse_Coding </span>.</p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_8.png" /><!-- --></p>
 <p>Now, you can see all 4 recoded values. Notice the transformed variables are noted with red circles by their names at the top of the columns.</p>
-<p><img src="img/RecodingScoresOnPSS4_11.png" /><!-- --></p>
+<p><img src="img/StressScale_TransformationToRecodeT1Stress4_9.png" /><!-- --></p>
 <p>Recall the scoring instructions say that after recoding the values for these scale items, we should sum the scores. Let’s do that now.
-Move to the column to the right of <code>PSS10</code>, and select <span style="color:blue">Data</span> and select <span style="color:blue">Compute</span>.</p>
-<p><img src="img/RecodingScoresOnPSS4_12.png" /><!-- --></p>
+Move to the column for <code>T1_stress10</code>, highlight that column, and select <span style="color:blue">Data</span> and select <span style="color:blue">Compute</span>.</p>
+<p><img src="img/StressScale_ComputationCommands.png" /><!-- --></p>
 <p>If the Computed Variable panel does not drop down for you, click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted.</p>
-<p><img src="img/RecodingScoresOnPSS4_13.png" /><!-- --></p>
+<p><img src="img/StressScale_ComputationCommands_2.png" /><!-- --></p>
 <p>Let’s fill in the variable attributes and enter the formula for JAMOVI to follow to compute the sum. Remember, we want to include the recoded values for items 4, 5, 7, and 8. We do not want to include the original values for those items. One way to calculate the sum is by using the SUM command in the formula editor and placing all variable names you want included in the sum in the brackets behind the word SUM with commas between the variable names. Alternatively, you could select each variable name and use plus signs between them.</p>
-<p><img src="img/RecodingScoresOnPSS4_14.png" /><!-- --></p>
+<p><img src="img/StressScale_ComputationFormula1.png" /><!-- --></p>
+<p><img src="img/StressScale_ComputationFormula2.png" /><!-- --></p>
 <p>As you did with the Transformed Variable panel, you can close the Computed Variable panel by clicking the upward facing arrow.
-This may seem like a lot of work to do for one participant’s sum; however, these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set compiled from the scores given by a larger sample.</p>
+This may seem like a lot of work to do for a score on one variable; however, you can imagine these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set or recoding and/or computations of many variables.</p>
 </div>
 </div>
 <div id="z-scores-as-a-type-of-computed-variable-in-jamovi" class="section level5 hasAnchor" number="0.6.3.2.2">
@@ -970,13 +973,12 @@ This may seem like a lot of work to do for one participant’s sum; however, the
 <p>This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
 <p>There will be times when you want to compute <em>z</em>-scores. (For example, you may want to look at a large data set and decide whether you have extreme outliers.) Getting <em>z</em>-scores in JAMOVI is very easy.</p>
-<p>Looking at the following fictitious data showing the <code>PSS_Score</code> for 10 participants, let’s look at the process to get the <em>z</em>-scores for those <code>PSS_Score</code> values.</p>
-<p><img src="img/RecodingScoresOnPSS4_15.png" /><!-- --></p>
-<p>To follow along with the proceeding commands, you might add the other <code>PSS_Score</code> values in that column (if you created your own data file), or you can go to <a href="https://moodle.stfx.ca/course/view.php?id=29319#section-9">Moodle</a> to download the data file called “Fictitious Data Set - PSS_RecodingAndDataComputations_TenParticipants_RecodedAndComputed,” and then, in JAMOVI, open that data file.</p>
-<p>In JAMOVI, <em>z</em>-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span>. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the <em>z</em>-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.</p>
-<p><img src="img/ZScoresAsComputedVariables.png" /><!-- --></p>
-<p>Remember to click the upward facing arrow to close the Computed Variable panel. <code>Z_PSS_Score</code> in the image below depicts the <em>z</em>-scores for <code>PSS_Score</code>. Notice that computed variables have a black circle to the right of their name near the top of the column.</p>
-<p><img src="img/ZScoresAsComputedVariables_1.png" /><!-- --></p>
+<p>Let’s look at the process to get the <em>z</em>-scores for those <code>Stress Composite Score</code> values.</p>
+<p><img src="img/StressScale_Column.png" /><!-- --></p>
+<p>In JAMOVI, <em>z</em>-scores can be obtained by selecting <span style="color:blue">Data</span> and <span style="color:blue">Compute</span> after the variable column is highlighted. As before, you can click on <span style="color:blue">Setup</span> while the column for the new variable is highlighted to fill in the Computed Variable attributes. When entering those attributes, you should also enter the formula for the <em>z</em>-score. The Z is found in the formula editor’s drop-down menu, but it can also be typed in. The variable name is in that drop-down menu, too. Similarly, it can be type instead.</p>
+<p><img src="img/StressScale_ZScoreFormula.png" /><!-- --></p>
+<p>Remember to click the upward facing arrow to close the Computed Variable panel. <code>Standardized Stress Score</code> in the image below depicts the <em>z</em>-scores for <code>Stress Composite Score</code>. Notice that computed variables have a black circle to the right of their name near the top of the column.</p>
+<p><img src="img/StressScale_ZScoreColumn.png" /><!-- --></p>
 </div>
 <div id="homework" class="section level5 hasAnchor" number="0.6.3.2.3">
 <h5><span class="header-section-number">0.6.3.2.3</span> Homework<a href="software.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h5>

@@ -674,7 +674,7 @@ ___
 2. Graph this result (including 1 SEM error bars) as a bar graph. Upload your output file, including the graph, to Moodle.
 
 
-## JAMOVI - Week 9 - March 12th & 13th 
+## JAMOVI - Week 9 - March 19th & 20th 
 
 
 <div class="marginnote">
@@ -698,8 +698,6 @@ We will be working with the Psych 291 data set. This data set is from an online 
 
 The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).
 
-Before you start, please look at the variable `T2_sleep_hours`. Examine the minimum and maximum scores. Do you have concerns about the data? You should. It is not possible to sleep 42 hours per night. Delete this meaningless data from line 13. Then, as you follow along, you should get the same answers as depicted in this chapter/section.
-
 
 ### Performing a Paired-Samples *t*-Test
 
@@ -710,9 +708,9 @@ Imagine you are a researcher who is interested in how midterms impact students' 
 
 First, what is your research question? 
 
-Possible research question: Do the number of hours of sleep change during midterms?
+Possible research question: Do the number of hours of sleep change between the beginning of term and the time during midterms?
 
-Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.
+Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question (the first possible research question) for now.
 
 
 #### Using descriptive statistics to look at the question
@@ -744,7 +742,7 @@ Remember: Each sample is different. If you repeated these surveys with a differe
  
 We use a paired-samples *t*-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples *t*-tests are also known as paired *t*-tests, matched *t*-tests, and dependent *t*-tests. 
  
-First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
+First, we need to set up our null and alternative hypotheses. Remember our research question: Do the number of hours of sleep change between the beginning of term and the time during midterms?
 So, our null hypothesis ($H_0$) is there is no difference in sleep between the two time points: $\mu_{T1}$ = $\mu_{T2}$.
 Our alternative hypothesis ($H_A$ or $H_1$) is there is a difference: $\mu_{T1}$ $\neq$ $\mu_{T2}$.
  
@@ -765,7 +763,7 @@ Move your two variables of interest to "Paired Variables":
 knitr::include_graphics('img/select_vars_pairedttest.png')
 ```
 
-Under **Tests**, "Student's" should be selected (Student was the pseudonym of the person who invented the t-test). Also, make sure Measure 1 $\neq$ Measure 2 under **Hypothesis** (because we have a non-directional hypothesis for this example):
+Under **Tests**, "Student's" should be selected (Student was the pseudonym of the person who invented the *t*-test). Also, make sure Measure 1 $\neq$ Measure 2 under **Hypothesis** (because we have a non-directional hypothesis for this example):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/paired_ttest_params1.png')
@@ -805,7 +803,7 @@ knitr::include_graphics('img/pairedplot.png')
 
 #### Interpreting the Paired Samples *t*-Test output
 
-What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the *p*-value (in this case, 0.009) and the effect size (in this case, 0.308). The *p*-value is the probability of observing a difference as extreme, or more extreme, than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your *p*-value is "low enough"? We typically use a cutoff, called an alpha, of 0.05 or 5%. If the *p*-value is lower than the alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 < 0.05, so we reject the null hypothesis. Note that we **do not accept the alternative hypothesis**!
+What output do you look at to determine the answer to your research question (Do the number of hours of sleep change between the beginning of term and the time during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the *p*-value (in this case, 0.009) and the effect size (in this case, 0.308). The *p*-value is the probability of observing a difference as extreme, or more extreme, than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your *p*-value is "low enough"? We typically use a cutoff, called an alpha, of 0.05 or 5%. If the *p*-value is lower than the alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 < 0.05, so we reject the null hypothesis. Note that we **do not accept the alternative hypothesis**!
 
 In research papers, we often use the phrase "statistically significant" or "significantly different" to mean reject the null hypothesis. For example, we observed significantly different sleep durations at time 1 versus time 2.
 

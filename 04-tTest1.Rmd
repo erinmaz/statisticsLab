@@ -834,10 +834,10 @@ A few notes about APA format:
 
 2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 
-3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009 **not** *p* = 0.009)
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .009, **not** *p* = 0.009)
 
 <div class="marginnote">
-Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
+Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when asked to do so.
 </div>
 
 4. Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it's *t*(76) = 2.70 **not** *t*(76)=2.70. 

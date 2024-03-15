@@ -322,7 +322,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics"><i class="fa fa-check"></i><b>4.4.6</b> Using descriptive statistics to give context to inferential statistics</a></li>
 <li class="chapter" data-level="4.4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6"><i class="fa fa-check"></i><b>4.4.7</b> Lab Homework #6</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-12th-13th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 12th &amp; 13th</a>
+<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-19th-20th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 19th &amp; 20th</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.2</b> Research Context for Data Set</a></li>
@@ -1129,8 +1129,8 @@ During the baseline condition, the mean proportion looking time toward the singe
 </ol>
 </div>
 </div>
-<div id="jamovi---week-9---march-12th-13th" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> JAMOVI - Week 9 - March 12th &amp; 13th<a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-12th-13th" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="jamovi---week-9---march-19th-20th" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> JAMOVI - Week 9 - March 19th &amp; 20th<a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-19th-20th" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="marginnote">
 <p>This lab activity was developed by Erin Mazerolle, Christine Lomore, and Sherry Neville-MacLean.</p>
 </div>
@@ -1148,7 +1148,6 @@ During the baseline condition, the mean proportion looking time toward the singe
 <h3><span class="header-section-number">4.5.2</span> Research Context for Data Set<a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We will be working with the Psych 291 data set. This data set is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. We are using a subset of the data from the survey for this lab.</p>
 <p>The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).</p>
-<p>Before you start, please look at the variable <code>T2_sleep_hours</code>. Examine the minimum and maximum scores. Do you have concerns about the data? You should. It is not possible to sleep 42 hours per night. Delete this meaningless data from line 13. Then, as you follow along, you should get the same answers as depicted in this chapter/section.</p>
 </div>
 <div id="performing-a-paired-samples-t-test-1" class="section level3 hasAnchor" number="4.5.3">
 <h3><span class="header-section-number">4.5.3</span> Performing a Paired-Samples <em>t</em>-Test<a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1156,8 +1155,8 @@ During the baseline condition, the mean proportion looking time toward the singe
 <h4><span class="header-section-number">4.5.3.1</span> Motivation to perform statistical analyses<a href="lab-4-t-test-one-sample-paired-sample.html#motivation-to-perform-statistical-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Imagine you are a researcher who is interested in how midterms impact students’ sleep patterns. You are curious about whether the number of nightly sleep hours changes during midterm time. You plan to use the survey data described above to answer your question.</p>
 <p>First, what is your research question?</p>
-<p>Possible research question: Do the number of hours of sleep change during midterms?</p>
-<p>Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question for now.</p>
+<p>Possible research question: Do the number of hours of sleep change between the beginning of term and the time during midterms?</p>
+<p>Note that this is just one possible research question. You might also ask a directional question. Consider the following example: Do the number of hours of sleep decrease during midterms? We will use the non-directional research question (the first possible research question) for now.</p>
 </div>
 <div id="using-descriptive-statistics-to-look-at-the-question" class="section level4 hasAnchor" number="4.5.3.2">
 <h4><span class="header-section-number">4.5.3.2</span> Using descriptive statistics to look at the question<a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-look-at-the-question" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1173,7 +1172,7 @@ During the baseline condition, the mean proportion looking time toward the singe
 <p>Having looked at the descriptive statistics and graphs, we see differences between the sleep scores at the two time points. It looks like the mean sleep duration is slightly lower during midterms, compared to the beginning of term. But, how confident are we that that the means are truly different? That is, do the differences between these time points represent true differences in the sleep of students between the beginning of term and midterms? Or, could the differences explained by sampling error?</p>
 <p>Remember: Each sample is different. If you repeated these surveys with a different sample, would you expect to get the same results? (Answer: <strong>No.</strong>) Do the differences between time points exist in the population of all students? That is what inferential statistics will help us decide.</p>
 <p>We use a paired-samples <em>t</em>-test in this case because the data are paired. The survey was completed by the same participants at both time points. Paired-samples <em>t</em>-tests are also known as paired <em>t</em>-tests, matched <em>t</em>-tests, and dependent <em>t</em>-tests.</p>
-<p>First, we need to set up our null and alternative hypotheses. Remember our research question: Does sleep change during midterms?
+<p>First, we need to set up our null and alternative hypotheses. Remember our research question: Do the number of hours of sleep change between the beginning of term and the time during midterms?
 So, our null hypothesis (<span class="math inline">\(H_0\)</span>) is there is no difference in sleep between the two time points: <span class="math inline">\(\mu_{T1}\)</span> = <span class="math inline">\(\mu_{T2}\)</span>.
 Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span class="math inline">\(H_1\)</span>) is there is a difference: <span class="math inline">\(\mu_{T1}\)</span> <span class="math inline">\(\neq\)</span> <span class="math inline">\(\mu_{T2}\)</span>.</p>
 <p>Question: Why are our hypotheses about the mean, as opposed to a different measure of central tendency, or the distributions? Answer: <em>t</em>-tests answer questions about means. Other tests can be used for research questions about different statistics.</p>
@@ -1184,7 +1183,7 @@ Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span cl
 <p><img src="img/paired_menu.png" /><!-- --></p>
 <p>Move your two variables of interest to “Paired Variables”:</p>
 <p><img src="img/select_vars_pairedttest.png" /><!-- --></p>
-<p>Under <strong>Tests</strong>, “Student’s” should be selected (Student was the pseudonym of the person who invented the t-test). Also, make sure Measure 1 <span class="math inline">\(\neq\)</span> Measure 2 under <strong>Hypothesis</strong> (because we have a non-directional hypothesis for this example):</p>
+<p>Under <strong>Tests</strong>, “Student’s” should be selected (Student was the pseudonym of the person who invented the <em>t</em>-test). Also, make sure Measure 1 <span class="math inline">\(\neq\)</span> Measure 2 under <strong>Hypothesis</strong> (because we have a non-directional hypothesis for this example):</p>
 <p><img src="img/paired_ttest_params1.png" /><!-- --></p>
 <p>Under <strong>Additional Statistics</strong>, select Mean difference and under that, Confidence Interval. Select Effect size. You can also select Descriptives and Descriptive Plots:</p>
 <p><img src="img/paired_ttest_params2.png" /><!-- --></p>
@@ -1200,7 +1199,7 @@ Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span cl
 </div>
 <div id="interpreting-the-paired-samples-t-test-output" class="section level4 hasAnchor" number="4.5.3.5">
 <h4><span class="header-section-number">4.5.3.5</span> Interpreting the Paired Samples <em>t</em>-Test output<a href="lab-4-t-test-one-sample-paired-sample.html#interpreting-the-paired-samples-t-test-output" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>What output do you look at to determine the answer to your research question (Does sleep change during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the <em>p</em>-value (in this case, 0.009) and the effect size (in this case, 0.308). The <em>p</em>-value is the probability of observing a difference as extreme, or more extreme, than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your <em>p</em>-value is “low enough”? We typically use a cutoff, called an alpha, of 0.05 or 5%. If the <em>p</em>-value is lower than the alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 &lt; 0.05, so we reject the null hypothesis. Note that we <strong>do not accept the alternative hypothesis</strong>!</p>
+<p>What output do you look at to determine the answer to your research question (Do the number of hours of sleep change between the beginning of term and the time during midterms?)? The Paired Samples T-Test table has two particularly important numbers, the <em>p</em>-value (in this case, 0.009) and the effect size (in this case, 0.308). The <em>p</em>-value is the probability of observing a difference as extreme, or more extreme, than the one you observed, assuming the null hypothesis is true (that is, assuming that sleep duration at time is the same as sleep duration at time 2). In this case, the probability is 0.009, or 0.9%, which is very low. How do you decide if your <em>p</em>-value is “low enough”? We typically use a cutoff, called an alpha, of 0.05 or 5%. If the <em>p</em>-value is lower than the alpha value, we conclude that it is very unlikely that the null hypothesis is true. We often call this rejecting the null hypothesis. In this case, 0.009 &lt; 0.05, so we reject the null hypothesis. Note that we <strong>do not accept the alternative hypothesis</strong>!</p>
 <p>In research papers, we often use the phrase “statistically significant” or “significantly different” to mean reject the null hypothesis. For example, we observed significantly different sleep durations at time 1 versus time 2.</p>
 <p>The effect size gives us a sense for how large the difference is. Cohen’s <em>d</em> is the appropriate effect size for a <em>t</em>-test, but you may learn about effect sizes for other tests as you progress in studies of statistics. Cohen’s <em>d</em> tells us how large the mean difference is, in units of standard deviation. In this case, Cohen’s <em>d</em> is 0.308, so the difference in sleep duration between time 1 and time 2 is about 0.3 standard deviations.</p>
 <p>The degrees of freedom (<em>df</em>) for a paired <em>t</em>-test is equal to the number of participants included in the test minus one:
@@ -1221,10 +1220,10 @@ Our alternative hypothesis (<span class="math inline">\(H_A\)</span> or <span cl
 <ol style="list-style-type: decimal">
 <li><p>Always note the name of the test you performed (in this case, paired <em>t</em>-test).</p></li>
 <li><p>We usually round to two decimal places, except for <em>p</em>-values. If you know the exact <em>p</em>-value, you round to two or three decimal places, except if that means it is <em>p</em> = .000. In this case, you would indicate <em>p</em> &lt; .001.</p></li>
-<li><p>Do not include a leading 0 before the decimal for the <em>p</em>-value (<em>p</em> = .009 <strong>not</strong> <em>p</em> = 0.009)</p></li>
+<li><p>Do not include a leading 0 before the decimal for the <em>p</em>-value (<em>p</em> = .009, <strong>not</strong> <em>p</em> = 0.009)</p></li>
 </ol>
 <div class="marginnote">
-<p>Yes, I’m serious. No, I don’t know why. Yes, it does seem a bit silly. Yes, you lose points if you don’t adhere to APA format when requested to do so.</p>
+<p>Yes, I’m serious. No, I don’t know why. Yes, it does seem a bit silly. Yes, you lose points if you don’t adhere to APA format when asked to do so.</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it’s <em>t</em>(76) = 2.70 <strong>not</strong> <em>t</em>(76)=2.70.</p></li>

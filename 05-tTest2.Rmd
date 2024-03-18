@@ -505,7 +505,7 @@ knitr::include_graphics('img/7.4.34.png')
 For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 
-## JAMOVI - Week 10 - March 19th & 20th
+## JAMOVI - Week 10 - March 26th & 27th
 
 
 <div class="marginnote">
@@ -542,10 +542,10 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 #### Download and open the data
 
 
-The dataset described above can be downloaded [here](https://moodle.stfx.ca/course/view.php?id=29319). Do you recall the difference between <span style="color:blue">Import</span>ing and <span style="color:blue">Open</span>ing a file in JAMOVI? Which command do you think should use: IMPORT or OPEN? Have the data file open in JAMOVI **before** the start of your lab session.
+The dataset described above can be downloaded from your [lab Moodle site](https://moodle.stfx.ca). Remember, if double-clicking on the downloaded data file does not result in it opening on your laptop or computer, you should, first, open the JAMOVI program first, and then, from within the program, click the three horizontal lines, click <span style="color:blue">Open</span>, and browse for the downloaded file.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.35.png')
+knitr::include_graphics('img/OpenFileFromWithinJAMOVI.png')
 ```
 
 
@@ -557,7 +557,7 @@ For our analysis, we will focus on only one of the three measures mentioned abov
 Before we run the *t*-test, let's review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Setup</span> button (or using the <span style="color:blue">Variables</span> menu and the <span style="color:blue">Edit</span> button), available at the top of our jamovi spreadsheet window. Check `CONDITION`. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.36.png')
+knitr::include_graphics('img/VariableAttributesForConditionVariable.png')
 ```
 
 When you check `CONDITION`, notice that this <span style="color:blue">Setup</span> button has revealed the values used to signify the Audio and Transcript groups. Take note that these groups are signified by 0s and 1s. This coding helps the program to run our *t*-test. Keep in mind that whether we look at the codes or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change. 
@@ -565,19 +565,19 @@ When you check `CONDITION`, notice that this <span style="color:blue">Setup</spa
 Remember to check `intellect` while considering the information about the study (the context). Is `intellect` a variable measured on a continuous scale? Does it get represented by decimal-type data? (*Hint: Be sure to carefully read the names of the variables during these exercises. Some variable names are similar and can lead to confusion when you select the variables to be included in your analysis.*)
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.37.png')
+knitr::include_graphics('img/VariableAttributesForIntellVariable.png')
 ```
 
 Remember to press the <span style="color:blue">Setup</span> button again (or the <span style="color:blue">Edit</span> button again if you are using the <span style="color:blue">Edit</span> menu) or to press the upward facing arrows to return to a more full version of your data spreadsheet and Results panel:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.38.png')
+knitr::include_graphics('img/ClosingVariableAttributesWindow1.png')
 ```
 
 Or
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.39.png')
+knitr::include_graphics('img/ClosingVariableAttributesWindow2.png')
 ```
 
 Now, we're ready to run the independent-samples *t*-test. Go to <span style="color:blue">Analyses</span>, then <span style="color:blue">T-Tests</span>, then <span style="color:blue">Independent Samples T-test</span>.
@@ -589,22 +589,26 @@ knitr::include_graphics('img/IndependentTTestCommands.png')
 A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using `intellect`, so find this variable in the left-hand list. One way you can find the `intellect` variable by clicking on the search icon, the one that looks like a magnifying glass, and then typing the name of the variable. Another way to find the variable is to use the slider at the right of the list of variables and move down until you see the `intellect` variable. Then, move the variable into the **Dependent Variables** field on the right by highlighting the variable and using the arrow to move it. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.41.png')
+knitr::include_graphics('img/MovingDVInIndependTTest.png')
 ```
 
 For the field labeled **Grouping Variable**, we will specify which variable is our independent variable. That variable is `CONDITION` (we have two conditions: audio and transcript). Move `CONDITION` into the **Grouping Variable** field. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.42.png')
+knitr::include_graphics('img/MovingIVInIndependTTest.png')
 ```
 
 In the Results panel, jamovi will produce an output tables as follows:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.43.png')
+knitr::include_graphics('img/IndependTTestResults.png')
 ```
 
 The *t*-test output share some similarities with the paired *t*-test output we saw in Chapter 4 of this lab manual. The Independent Samples T-Test table contains a *t*-statistic obtained, the degrees of freedom, and a *p*-value. Much like we learned when discussing the paired-samples *t*-test output, we can click on the Independent Samples T-Test table to reveal the <span style="color:blue">Analyses</span> menu again, and click the <span style="color:blue">Descriptives</span> button to request a second table that contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics. We can also request <span style="color:blue">Effect size</span>, the 95% <span style="color:blue">Confidence interval</span>, <span style="color:blue">Welch's</span>, and some **Assumption Checks**. 
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/IndependTTestCommandsInFull.png')
+```
 
 In the case of an independent-samples *t*-test, one assumption made is that there is equality of variances. The groups being compared are assumed to  have roughly equal variances. This test is called the Levene's test. Simply click on <span style="color:blue">Homogeneity test</span>, and the table showing the results will appear between the table depicting the independent-samples *t*-test and the Descriptives table. Conveniently, in jamovi, you can request another test to determine if the assumption of normality is also upheld. This test is called the Shapiro-Wilk test. It, too, is conveniently requested by clicking on <span style="color:blue">Normality test</span>. The results will appear right after the Independent Samples T-Test table.
 
@@ -615,7 +619,7 @@ knitr::include_graphics('img/AssumptionChecks.png')
 Let’s examine the results of these assumption checks.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.44.png')
+knitr::include_graphics('img/NormalityCheck.png')
 ```
 
 When interpreting the second output table, or Shapiro-Wilk test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, which is often the conventional .05, then your data are **not** normally distributed. Is this a problem? It depends. Remember, the normality assumption of the *t*-test refers to the sampling distribution, not the distribution of the sample. If your sample size is reasonably large (N >= 30), you can usually rely on the central limit theorem to assuming your **sampling distribution** is normal. 
@@ -629,16 +633,22 @@ knitr::include_graphics('img/LevenesTest.png')
 When interpreting Levene's test, the rule is as follows: If the *p*-value in the table is smaller than your alpha level, then your variances are **not** equal and you should request <span style="color:blue"> Welch’s</span> *t*-test. If the *p*-value for Levene's test is larger than alpha, then you can use the Student’s *t*-test that is automatically generated when you request an independent *t*-test. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.45.png')
+knitr::include_graphics('img/IndependTTestResults2A.png')
 ```
 
 Some people may recommend that you **always** use Welch’s *t*-test - whether the assumptions are upheld or violated. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.44_Welch.png')
+knitr::include_graphics('img/IndependTTestResults2B.png')
 ```
 
-In this example, the *p*-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The *p*-value associated with the Levene's test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You **could** report the results of the Student *t*-test, but we are still going to use the Welch’s *t*-test for this example. The *t*-statistic for our independent-samples *t*-test is -3.48, the degrees of freedom are adjusted to 33.4, and the *p*-value for the *t*-test is .001. **Note**: Be sure to look at the *p*-value associated with the *t*-test - and not Levene's test - when you are interpreting your *t*-test results. 
+In this example, the *p*-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The *p*-value associated with the Levene's test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You **could** report the results of the Student *t*-test (i.e., we do not need to use the Welch’s *t*-test for this example). The *t*-statistic for our independent-samples *t*-test is -3.53, the degrees of freedom are 37, and the *p*-value for the *t*-test is .001. **Note**: Be sure to look at the *p*-value associated with the *t*-test - and not Levene's test - when you are interpreting your *t*-test results. 
+
+What does the *t*-test tell us about the data? We can put our finding into words to clarify:
+
+Recruiter ratings of candidates' intellect when the recruiters heard audio job pitches (*M* = 6.63, *SD* = 1.61) are higher than recruiters' ratings of candidates' intellect when they read transcripts of pitches (*M* = 4.65, *SD* = 1.91). An independent *t*-test revealed that this difference is significant, *t*(37) = -3.53, *p* = .001, *d* = -1.13 (95% CI [-1.85,-0.39]).
+
+What if you had reported Welch's *t*-test in this case? Well, the *t*-statistic for our independent-samples *t*-test is -3.48, the degrees of freedom are adjusted to 33.4, and the *p*-value for the *t*-test is .001. 
 
 We can also look at the descriptive statistics to better understand what happened in the experiment:
 
@@ -658,7 +668,7 @@ Recruiter ratings of candidates' intellect when the recruiters heard audio job p
 
 2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 
-3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001 not *p* = 0.001, or *p* < .001 **not** *p* < 0.001).
+3. Do not include a leading 0 before the decimal for the *p*-value (*p* = .001, **not** *p* = 0.001; or *p* < .001, **not** *p* < 0.001).
 
 <div class="marginnote">
 Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you lose points if you don't adhere to APA format when requested to do so.
@@ -675,25 +685,25 @@ Yes, I'm serious. No, I don't know why. Yes, it does seem a bit silly. Yes, you 
 `CONDITION` in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.47.png')
+knitr::include_graphics('img/GraphingCommands.png')
 ```
 
 Next, move `intellect` to the “Variables” window by highlighting the variable and using the arrow, and move `CONDITION` to the “Split by” window. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.48.png')
+knitr::include_graphics('img/GraphingVariablesForIndTest.png')
 ```
 
 Click on <span style="color:blue">Plots</span>, and then click <span style="color:blue">Bar plot</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.49.png')
+knitr::include_graphics('img/GraphingCommandsForBarGraph.png')
 ```
 
 jamovi will produce a bar graph of your mean ratings for both audio and transcript conditions. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.50.png')
+knitr::include_graphics('img/BarGraphForIndTTest.png')
 ```
 
 **Note**: It's always a good idea to compare your graph to the descriptive statistics to make sure it looks right. 
@@ -711,10 +721,10 @@ At this point, you've covered everything you need to successfully complete the h
 
 Sometimes you will see groups defined with a non-nominal independent variable. For example, we might talk about defining countries as "overweight" or "not overweight" depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.
 
-A commonly used cut point is the median value (this is called a "median split"). Let's use the example of `age` in the current dataset. You can find the median value of `age` in different ways. Let's go with a familiar path: Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue"> Descriptive Statistics</span>. Move `age` to the “Variables” filed. If the median were not showing in the table visible in the Results panel, we could click <span style="color:blue">Statistics</span> and select <span style="color:blue">Median</span> . The first output table contains the median:
+A commonly used cut point is the median value (this is called a "median split"). Let's use the example of `age` in the current dataset. You can find the median value of `age` in different ways. Let's go with a familiar path: Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue"> Descriptive Statistics</span>. Move `age` to the “Variables” field. If the median were not showing in the table visible in the Results panel, we could click <span style="color:blue">Statistics</span> and select <span style="color:blue">Median</span> . The first output table contains the median:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.51.png')
+knitr::include_graphics('img/DescriptivesTableForAgeVariable.png')
 ```
 
 We can use the median of 29 as the cut point. We'll be running an independent *t*-test to determine whether there is a significant difference in `intellect` between candidates under 29 years old and over 29 years old. 
@@ -722,59 +732,55 @@ We can use the median of 29 as the cut point. We'll be running an independent *t
 First, we will need to transform the `age` variable. Click <span style="color:blue">Data</span>, then <span style="color:blue">Add</span>, and then either <span style="color:blue">Insert</span> or <span style="color:blue">Append</span>. Notice that when you use <span style="color:blue">Insert</span>, the new, transformed variable is added to the left of whichever variable you have highlighted or were last working in (so I highlighted `time`). When you use <span style="color:blue">Append</span>, the new, transformed variable is added to the far right of all the variables. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.52.png')
+knitr::include_graphics('img/InsertTransformedVariableToLeft.png')
 ```
 
 After clicking the commands to get the transformed variable, be sure to name the variable and to write a description. Select the <span style="color:blue">Source variable</span>, by clicking on the drop-down menu and selecting `age`.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.53.png')
+knitr::include_graphics('img/TransformingAgeVariable1.png')
 ```
 
 Then, create a rule for jamovi to follow to populate the new variable column. To do so, click on <span style="color:blue">using transform</span> and <span style="color:blue">Create New Transform</span>. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.54.png')
+knitr::include_graphics('img/TransformingAgeVariable2.png')
 ```
 
 A new panel will pop up and we will enter our transform rule here. First, we should name the transformation; we might use "AgeMedSplit" for the transformation name. Next, we must write the recoding rule. Click on <span style="color:blue">Add recode condition</span>.  
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.55.png')
+knitr::include_graphics('img/TransformingAgeVariable3.png')
 ```
 
 Since our median is 29, we might show that if our source variable has data that is equal to or less than 29, it should be recoded as a 1 which we will consider as a younger age group. The second part of the recoding rule will indicate what code we want to use if the first part of the rule is not true. Let’s use 2 as our other code, for an older age group. We can also indicate that the “Measure type” is nominal; we have younger and older groups. Clarifying the scale of measurement is an important step as you want to use this transformed variable as a grouping variable later.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.56.png')
-```
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.56B.png')
+knitr::include_graphics('img/TransformingAgeVariable4.png')
 ```
 
 Click the downward facing arrow to close the transformation window.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.57.png')
+knitr::include_graphics('img/ClosingTransformationWindow1.png')
 ```
 
 Click the upward facing arrow to close the transformed variable window.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.58.png')
+knitr::include_graphics('img/ClosingTransformationWindow2.png')
 ```
 
-Having split the data by age group, we can now run the *t*-test on `intellect`. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move `intellect` into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable `age_category`. 
+Having split the data by age group, we can now run the *t*-test on `intellect`. (Question: When considering the experimental design, would you say these age groups are manipulated or measured?) Click <span style="color:blue">Analyses</span>, <span style="color:blue">T-Tests</span>, and <span style="color:blue">Independent Samples T-Test</span>. Move `intellect` into the “Dependent Variables” field by highlighting the variable and using the arrow. Move your newly created, the transformed variable, into the “Grouping Variable” field in much the same way. In this image, you will see I named the transformed variable `Age_MedianSplit`. 
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.59.png')
+knitr::include_graphics('img/IndependTTestWithMedSplit.png')
 ```
 
 Remember to click <span style="color:blue">Descriptives</span>, <span style="color:blue">Effect size</span>, and the 95% <span style="color:blue">Confidence interval</span> under “Additional Statistics” to get the Descriptives table and <span style="color:blue">Welch’s</span> so that you can report the *t*-test without worrying whether or not the assumptions of homogeneity of variance and normality have been violated. You can also click to request these tests: <span style="color:blue">Homogeneity test</span> and <span style="color:blue">Normality test</span>.
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/7.4.60.png')
+knitr::include_graphics('img/IndependTTestCommandsInFullForMedSplit.png')
 ```
 
 Practice writing a sentence describing the results, and then compare it to #1 in the "Example answers to optional activities" below.
@@ -795,7 +801,7 @@ Intellect ratings for candidates aged 29 or younger (*M* = 5.65, *SD* = 2.32) we
 ### Lab Homework #7
 
 
-See [Moodle](https://moodle.stfx.ca/course/view.php?id=26030#section-12).
+See [Moodle](https://moodle.stfx.ca).
 
 
 ### Practice Problems

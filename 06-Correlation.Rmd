@@ -573,7 +573,7 @@ knitr::include_graphics('img/corvars.png')
 An output table will be generated in the results panel:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/CorrelationMatrix.png')
+knitr::include_graphics('img/CorrelationMatrixVersionB.png')
 ```
 
 <br>
@@ -595,7 +595,7 @@ knitr::include_graphics('img/corvars2.png')
 Now the output panel has three sets of results:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/CorrelationMatrix2.png')
+knitr::include_graphics('img/CorrelationMatrix2VersionB.png')
 ```
 
 <br>
@@ -607,14 +607,28 @@ Note that some of the correlations are negative, and some are positive. Some are
 Recall the output for the correlation between `T1_sleep_quality_composite` and `T1_anxiety_composite`:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/CorrelationMatrix.png')
+knitr::include_graphics('img/CorrelationMatrixVersionB.png')
 ```
+
+Return to the Analysis panel (by clicking on the correlation matrix in the Results panel) and click to request the "Confidence intervals" under **Additional Statistics**.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/CorrelationAddCIsWithHighlighting.png')
+```
+
+Now, JAMOVI give the confidence intervals for the correlation coefficient, *r*.
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/CorrelationMatrix3VersionB.png')
+```
+
+Ask yourself: Why are the degrees of freedom 86 if we have data from 101 participants in the file? Be prepared to offer your thoughts in lab.
 
 <br>
 
 You could write the results in APA format as follows:
 
->There was significant correlation between sleep quality and anxiety at the beginning of the term, Pearson's *r* = -.42, *p* < .001.
+>There was significant correlation between sleep quality and anxiety at the beginning of the term, Pearson's *r*(86) = -.42 (95% CI [-.23, -.58]), *p* < .001.
 
 <br>
 
@@ -623,14 +637,14 @@ Note that we did not use a leading zero for *r* and we rounded to two decimal pl
 Now consider the example of the correlation between `T1_sleep_hours` and `T1_anxiety_composite`:
 
 ```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/CorrelationMatrix2.png')
+knitr::include_graphics('img/CorrelationMatrix2VersionC.png')
 ```
 
 <br>
 
 To report this result in APA format, you would write something such as:
 
->There was not a significant correlation between sleep duration and anxiety at the beginning of the term, Pearson's *r* = -.13, *p* = .212.
+>There was not a significant correlation between sleep duration and anxiety at the beginning of the term, Pearson's *r*(88) = -.13 (95% CI [.08, -.33]), *p* = .212.
 
 <br>
 

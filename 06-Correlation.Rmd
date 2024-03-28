@@ -628,7 +628,7 @@ Ask yourself: Why are the degrees of freedom 86 if we have data from 101 partici
 
 You could write the results in APA format as follows:
 
->There was significant correlation between sleep quality and anxiety at the beginning of the term, Pearson's *r*(86) = -.42 (95% CI [-.23, -.58]), *p* < .001.
+>There was significant correlation between sleep quality and anxiety at the beginning of the term, Pearson's *r*(86) = -.42 (95% CI [-.58, -.23]), *p* < .001.
 
 <br>
 
@@ -644,7 +644,7 @@ knitr::include_graphics('img/CorrelationMatrix2VersionC.png')
 
 To report this result in APA format, you would write something such as:
 
->There was not a significant correlation between sleep duration and anxiety at the beginning of the term, Pearson's *r*(88) = -.13 (95% CI [.08, -.33]), *p* = .212.
+>There was not a significant correlation between sleep duration and anxiety at the beginning of the term, Pearson's *r*(88) = -.13 (95% CI [-.33, .08]), *p* = .212.
 
 <br>
 

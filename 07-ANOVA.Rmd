@@ -301,7 +301,7 @@ The means are both basically 5, not a big difference!. The p-value is large, sug
 
 Notice, this was a comparison we could make. But, was it an informative one about the goal of the study? Not really. 
 
-#### Control vs. Reactivation+Tetris
+#### Control vs. Reactivation Plus Tetris
 
 What we really want to know is if Reactivation+Tetris cause fewer intrusive memories...but compared to what? Well, if it did something, it should have a smaller mean than the Control group. So, let's do that comparison:
 
@@ -318,7 +318,7 @@ t.test(Days_One_to_Seven_Number_of_Intrusions ~ Condition,
 
 There is a bigger difference now, roughly 5.1 intrusive memories for control, and 1.9 for Reactivation+Tetris. The p-value is quite small, indicating this difference was not likely produced by chance. Now, we have some evidence that Reactivation+Tetris caused something to change, that condition produced fewer intrusive memories than control. 
 
-#### Control vs. Tetris_only
+#### Control vs. Tetris Only
 
 Now we can really start wondering what caused the difference. Was it just playing Tetris? It wasn't just doing the reactivation, we already found out that didn't do anything. Does just playing Tetris reduce the number of intrusive memories during the week? Let's compare that to control:
 
@@ -333,7 +333,7 @@ t.test(Days_One_to_Seven_Number_of_Intrusions ~ Condition,
 
 There's mean difference of about 1, but the p-value isn't very small. This suggests chance produces a difference of this size fairly often. If we claimed that just playing Tetris caused a difference based on this data, we could  easily be making a type I error (claiming the result is real when it is not, a false-positive). Still, the difference was in the right direction wasn't it.
 
-#### Tetris_only vs. Reactivation + Tetris
+#### Tetris Only vs. Reactivation Plus Tetris
 
 Finally, we might ask if the Reactivation+Tetris group had fewer unwanted memories than the Tetris_only group. Did putting the two things together (reactivation AND Tetris) really do something special here, beyond just playing Tetris.
 

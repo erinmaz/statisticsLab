@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Lab 9: Factorial ANOVA | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Lab 9: Factorial ANOVA | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="A lab manual for Psyc 292 at StFX" />
   
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="lab-8-repeated-measures-anova.html"/>
 <link rel="next" href="lab-10-mixed-factorial-anova.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
 <script>
@@ -71,6 +72,7 @@ mattcrump=1;
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -104,7 +106,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -117,7 +119,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -129,6 +131,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="tufte.css" type="text/css" />
@@ -183,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.5.3" data-path="software.html"><a href="software.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
 <li class="chapter" data-level="0.5.4" data-path="software.html"><a href="software.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="software.html"><a href="software.html#jamovi---week-2---january-25-26"><i class="fa fa-check"></i><b>0.6</b> JAMOVI - Week 2 - January 25 &amp; 26</a>
+<li class="chapter" data-level="0.6" data-path="software.html"><a href="software.html#jamovi---week-1---january-9th-10th"><i class="fa fa-check"></i><b>0.6</b> JAMOVI - Week 1 - January 9th &amp; 10th</a>
 <ul>
 <li class="chapter" data-level="0.6.1" data-path="software.html"><a href="software.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
 <li class="chapter" data-level="0.6.2" data-path="software.html"><a href="software.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
@@ -221,16 +228,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-spss-and-the-spss-layout-1"><i class="fa fa-check"></i><b>1.4.1</b> Opening SPSS and the SPSS layout</a></li>
 <li class="chapter" data-level="1.4.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-variable-view-tab-1"><i class="fa fa-check"></i><b>1.4.2</b> Reviewing variable properties and the Variable View tab</a></li>
 <li class="chapter" data-level="1.4.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.4.3</b> Opening a data file and producing different types of graphs</a></li>
-<li class="chapter" data-level="1.4.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework"><i class="fa fa-check"></i><b>1.4.4</b> Homework</a></li>
+<li class="chapter" data-level="1.4.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.4.4</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-3---february-1-2"><i class="fa fa-check"></i><b>1.5</b> JAMOVI - Week 3 - February 1 &amp; 2</a>
+<li class="chapter" data-level="1.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-4---january-30th-31st"><i class="fa fa-check"></i><b>1.5</b> JAMOVI - Week 4 - January 30th &amp; 31st</a>
 <ul>
-<li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.1</b> Opening jamovi and reviewing the jamovi layout</a></li>
-<li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-setup-button"><i class="fa fa-check"></i><b>1.5.2</b> Reviewing variable properties and the Setup button</a></li>
-<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#importing-a-data-file"><i class="fa fa-check"></i><b>1.5.3</b> Importing a data file</a></li>
-<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#graphs"><i class="fa fa-check"></i><b>1.5.4</b> Graphs</a></li>
-<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.5.5</b> Homework</a></li>
-<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.6</b> Thinking about Data - Practice Questions</a></li>
+<li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.1</b> Opening JAMOVI and Reviewing the JAMOVI Layout</a></li>
+<li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-edit-or-setup-button"><i class="fa fa-check"></i><b>1.5.2</b> Reviewing Variable Properties and the Edit or Setup button</a></li>
+<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-through-the-jamovi-software"><i class="fa fa-check"></i><b>1.5.3</b> Opening a Data File (Through the JAMOVI Software)</a></li>
+<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.5.4</b> Producing Different Types of Graphs</a></li>
+<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#tables"><i class="fa fa-check"></i><b>1.5.5</b> Tables</a></li>
+<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-2"><i class="fa fa-check"></i><b>1.5.6</b> Homework</a></li>
+<li class="chapter" data-level="1.5.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.7</b> Thinking about Data - Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics (and more graphs)</a>
@@ -256,18 +264,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.4.2</b> Descriptive Statistics and Histograms</a></li>
 <li class="chapter" data-level="2.4.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs"><i class="fa fa-check"></i><b>2.4.3</b> Editing graphs</a></li>
 <li class="chapter" data-level="2.4.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots"><i class="fa fa-check"></i><b>2.4.4</b> Boxplots</a></li>
-<li class="chapter" data-level="2.4.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-2"><i class="fa fa-check"></i><b>2.4.5</b> Homework</a></li>
+<li class="chapter" data-level="2.4.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3"><i class="fa fa-check"></i><b>2.4.5</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-4---february-8-9"><i class="fa fa-check"></i><b>2.5</b> JAMOVI - Week 4 - February 8 &amp; 9</a>
+<li class="chapter" data-level="2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-3---january-23rd-24th"><i class="fa fa-check"></i><b>2.5</b> JAMOVI - Week 3 - January 23rd &amp; 24th</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#pre-lab-tasks"><i class="fa fa-check"></i><b>2.5.1</b> Pre-lab tasks</a></li>
+<li class="chapter" data-level="2.5.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#getting-ready-for-this-lesson"><i class="fa fa-check"></i><b>2.5.1</b> Getting ready for this lesson</a></li>
 <li class="chapter" data-level="2.5.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics"><i class="fa fa-check"></i><b>2.5.2</b> The basics</a></li>
 <li class="chapter" data-level="2.5.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>2.5.3</b> Calculating Descriptive Statistics</a></li>
 <li class="chapter" data-level="2.5.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs"><i class="fa fa-check"></i><b>2.5.4</b> Descriptive Statistics and Graphs</a></li>
 <li class="chapter" data-level="2.5.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics"><i class="fa fa-check"></i><b>2.5.5</b> Selecting the appropriate descriptive statistics</a></li>
 <li class="chapter" data-level="2.5.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots-1"><i class="fa fa-check"></i><b>2.5.6</b> Boxplots</a></li>
 <li class="chapter" data-level="2.5.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1"><i class="fa fa-check"></i><b>2.5.7</b> Editing graphs</a></li>
-<li class="chapter" data-level="2.5.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3"><i class="fa fa-check"></i><b>2.5.8</b> Homework</a></li>
+<li class="chapter" data-level="2.5.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-4"><i class="fa fa-check"></i><b>2.5.8</b> Homework</a></li>
 <li class="chapter" data-level="2.5.9" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions"><i class="fa fa-check"></i><b>2.5.9</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
@@ -279,7 +287,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#jamovi---week-7---march-8-9"><i class="fa fa-check"></i><b>3.4</b> JAMOVI - Week 7 - March 8 &amp; 9</a>
 <ul>
 <li class="chapter" data-level="3.4.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#learning-objectives"><i class="fa fa-check"></i><b>3.4.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="3.4.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#pre-lab-tasks-1"><i class="fa fa-check"></i><b>3.4.2</b> Pre-lab tasks</a></li>
+<li class="chapter" data-level="3.4.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#pre-lab-tasks"><i class="fa fa-check"></i><b>3.4.2</b> Pre-lab tasks</a></li>
 <li class="chapter" data-level="3.4.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#the-impact-of-sampling-on-research-results"><i class="fa fa-check"></i><b>3.4.3</b> The impact of sampling on research results</a></li>
 <li class="chapter" data-level="3.4.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#other-types-of-filters"><i class="fa fa-check"></i><b>3.4.4</b> Other types of filters</a></li>
 <li class="chapter" data-level="3.4.5" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#homework-problems"><i class="fa fa-check"></i><b>3.4.5</b> Homework Problems</a></li>
@@ -317,16 +325,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics"><i class="fa fa-check"></i><b>4.4.6</b> Using descriptive statistics to give context to inferential statistics</a></li>
 <li class="chapter" data-level="4.4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6"><i class="fa fa-check"></i><b>4.4.7</b> Lab Homework #6</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-8---march-15-16"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 8 - March 15 &amp; 16</a>
+<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-19th-20th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 19th &amp; 20th</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.5.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#pre-lab-tasks-2"><i class="fa fa-check"></i><b>4.5.2</b> Pre-lab Tasks</a></li>
-<li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.3</b> Research Context for Data Set</a></li>
-<li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.4</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.5</b> Writing results in APA format</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.6</b> Performing a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.7</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.8</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.2</b> Research Context for Data Set</a></li>
+<li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.3</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
+<li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.4</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -359,7 +366,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7"><i class="fa fa-check"></i><b>5.6.5</b> Lab Homework #7</a></li>
 <li class="chapter" data-level="5.6.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems"><i class="fa fa-check"></i><b>5.6.6</b> Example answers to practice problems</a></li>
 </ul></li>
-<li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi---week-9---march-22-23"><i class="fa fa-check"></i><b>5.7</b> JAMOVI - Week 9 - March 22 &amp; 23</a>
+<li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi---week-10---march-26th-27th"><i class="fa fa-check"></i><b>5.7</b> JAMOVI - Week 10 - March 26th &amp; 27th</a>
 <ul>
 <li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks"><i class="fa fa-check"></i><b>5.7.1</b> Pre-lab reading and tasks</a></li>
 <li class="chapter" data-level="5.7.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>5.7.2</b> Performing an independent-samples <em>t</em>-test</a></li>
@@ -392,7 +399,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#splitting-a-file"><i class="fa fa-check"></i><b>6.4.4</b> Splitting a File</a></li>
 <li class="chapter" data-level="6.4.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-2"><i class="fa fa-check"></i><b>6.4.5</b> Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi---week-10---march-29-30"><i class="fa fa-check"></i><b>6.5</b> JAMOVI - Week 10 - March 29 &amp; 30</a>
+<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi---week-11---april-2nd-3rd"><i class="fa fa-check"></i><b>6.5</b> JAMOVI - Week 11 - April 2nd &amp; 3rd</a>
 <ul>
 <li class="chapter" data-level="6.5.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-1"><i class="fa fa-check"></i><b>6.5.1</b> Pre-lab reading and tasks</a></li>
 <li class="chapter" data-level="6.5.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data"><i class="fa fa-check"></i><b>6.5.2</b> Correlation Coefficient for Bivariate Data</a></li>
@@ -401,8 +408,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>6.5.5</b> Correlation and Scatterplots</a></li>
 <li class="chapter" data-level="6.5.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-1"><i class="fa fa-check"></i><b>6.5.6</b> Optional activities</a></li>
 <li class="chapter" data-level="6.5.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-1"><i class="fa fa-check"></i><b>6.5.7</b> Example answers to optional activities</a></li>
-<li class="chapter" data-level="6.5.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-4"><i class="fa fa-check"></i><b>6.5.8</b> Homework</a></li>
+<li class="chapter" data-level="6.5.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-5"><i class="fa fa-check"></i><b>6.5.8</b> Homework</a></li>
 <li class="chapter" data-level="6.5.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-3"><i class="fa fa-check"></i><b>6.5.9</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi-correlation-for-psyc-394-students"><i class="fa fa-check"></i><b>6.6</b> JAMOVI – Correlation – FOR PSYC 394 STUDENTS</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-2"><i class="fa fa-check"></i><b>6.6.1</b> Pre-lab reading and tasks</a></li>
+<li class="chapter" data-level="6.6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-1"><i class="fa fa-check"></i><b>6.6.2</b> Correlation Coefficient for Bivariate Data</a></li>
+<li class="chapter" data-level="6.6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-2"><i class="fa fa-check"></i><b>6.6.3</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="6.6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation-1"><i class="fa fa-check"></i><b>6.6.4</b> APA format reporting of a correlation</a></li>
+<li class="chapter" data-level="6.6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-2"><i class="fa fa-check"></i><b>6.6.5</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="6.6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-2"><i class="fa fa-check"></i><b>6.6.6</b> Optional activities</a></li>
+<li class="chapter" data-level="6.6.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-2"><i class="fa fa-check"></i><b>6.6.7</b> Example answers to optional activities</a></li>
+<li class="chapter" data-level="6.6.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-6"><i class="fa fa-check"></i><b>6.6.8</b> Homework</a></li>
+<li class="chapter" data-level="6.6.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-4"><i class="fa fa-check"></i><b>6.6.9</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html"><i class="fa fa-check"></i><b>7</b> Lab 7 One-way ANOVA</a>
@@ -439,7 +458,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#other-commands-used-to-conduct-the-one-way-anova-in-spss-general-linear-model"><i class="fa fa-check"></i><b>7.6.6</b> Other Commands Used to Conduct the One-Way ANOVA in SPSS: General Linear Model</a></li>
 <li class="chapter" data-level="7.6.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#homework-questions-1"><i class="fa fa-check"></i><b>7.6.7</b> Homework questions</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi"><i class="fa fa-check"></i><b>7.7</b> JAMOVI</a></li>
+<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi"><i class="fa fa-check"></i><b>7.7</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.7.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#checking-assumptions"><i class="fa fa-check"></i><b>7.7.2</b> Checking Assumptions</a></li>
+<li class="chapter" data-level="7.7.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><i class="fa fa-check"></i><b>7.7.3</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="7.7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests-1"><i class="fa fa-check"></i><b>7.7.4</b> Follow-Up Tests</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 Repeated Measures ANOVA</a>
 <ul>
@@ -466,13 +491,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-8"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
 <li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-8"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.6.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>8.6.2</b> Produce a frequency histogram and remove outliers</a></li>
 <li class="chapter" data-level="8.6.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>8.6.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
 <li class="chapter" data-level="8.6.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>8.6.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
-<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-4"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="8.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#jamovi-1"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a></li>
+<li class="chapter" data-level="8.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#jamovi-1"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>8.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.7.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#checking-assumptions-1"><i class="fa fa-check"></i><b>8.7.2</b> Checking Assumptions</a></li>
+<li class="chapter" data-level="8.7.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova-1"><i class="fa fa-check"></i><b>8.7.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="8.7.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-follow-up-tests"><i class="fa fa-check"></i><b>8.7.4</b> Conduct follow-up tests</a></li>
+<li class="chapter" data-level="8.7.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#some-apa-formatting-reminders-for-writing-results-sections-2"><i class="fa fa-check"></i><b>8.7.5</b> Some APA formatting reminders for writing results sections</a></li>
+<li class="chapter" data-level="8.7.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#homework-7"><i class="fa fa-check"></i><b>8.7.6</b> Homework</a></li>
+<li class="chapter" data-level="8.7.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.7.7</b> Practice Problems</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9: Factorial ANOVA</a>
 <ul>
@@ -501,12 +535,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-9"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
 <li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-9"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-7"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="9.6.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="9.6.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects"><i class="fa fa-check"></i><b>9.6.3</b> Calculate simple effects</a></li>
 <li class="chapter" data-level="9.6.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="9.6.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects-1"><i class="fa fa-check"></i><b>9.6.5</b> Calculate simple effects</a></li>
-<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="9.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#jamovi-2"><i class="fa fa-check"></i><b>9.7</b> JAMOVI</a></li>
 </ul></li>
@@ -533,10 +567,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-10"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
 <li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-10"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-8"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="10.6.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="10.6.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>10.6.3</b> Calculate simple effects</a></li>
-<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#jamovi-3"><i class="fa fa-check"></i><b>10.7</b> JAMOVI</a></li>
 </ul></li>
@@ -580,8 +614,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
-<div id="lab-9-factorial-anova" class="section level1" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Lab 9: Factorial ANOVA</h1>
+<div id="lab-9-factorial-anova" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Lab 9: Factorial ANOVA<a href="lab-9-factorial-anova.html#lab-9-factorial-anova" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <script>
 $("#coverpic").hide();
 </script>
@@ -589,11 +623,11 @@ $("#coverpic").hide();
 Simplicity is complex. It’s never simple to keep things simple. Simple solutions require the most advanced thinking.
 —Richie Norton
 </span></p>
-<div id="does-standing-up-make-you-focus-more" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Does standing up make you focus more?</h2>
+<div id="does-standing-up-make-you-focus-more" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Does standing up make you focus more?<a href="lab-9-factorial-anova.html#does-standing-up-make-you-focus-more" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This lab activity uses the data from “Stand by your Stroop: Standing up enhances selective attention and cognitive control” (Rosenbaum, Mama, Algom, 2017) to teach the analysis of a 2x2 design using ANOVA. Although the research design is a 2x2 repeated meaures design, we treat the design both as repeated measures, and as a between-subjects design to illustrate how to conduct either type of ANOVA in software.</p>
-<div id="study-description-4" class="section level3" number="9.1.1">
-<h3><span class="header-section-number">9.1.1</span> STUDY DESCRIPTION</h3>
+<div id="study-description-4" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> STUDY DESCRIPTION<a href="lab-9-factorial-anova.html#study-description-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Do you pay more attention when you are sitting or standing? We analyse the data from “Stand by your Stroop: Standing up enhances selective attention and cognitive control” (Rosenbaum, Mama, Algom, 2017). This paper asked whether sitting versus standing would influence a measure of selective attention, the ability to ignore distracting information.</p>
 <p>They used a classic test of selective attention, called the Stroop effect. In a typical Stroop experiment, subjects name the color of words as fast as they can. The trick is that sometimes the color of the word is the same as the name of the word, and sometimes it is not. Here are some examples:</p>
 <p><img src="figures/Stroop.png" /><!-- --></p>
@@ -604,48 +638,48 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p>If we take the size of the Stroop effect as a measure of selective attention, we can then start wondering what sorts of things improve selective attention (e.g., that make the Stroop effect smaller), and what kinds of things impair selective attention (e.g., make the Stroop effect bigger).</p>
 <p>The research question of this study was to ask whether standing up improves selective attention compared to sitting down. They predicted smaller Stroop effects when people were standing up and doing the task, compared to when they were sitting down and doing the task.</p>
 </div>
-<div id="study-methods-2" class="section level3" number="9.1.2">
-<h3><span class="header-section-number">9.1.2</span> Study Methods</h3>
+<div id="study-methods-2" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Study Methods<a href="lab-9-factorial-anova.html#study-methods-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The design of the study was a 2x2 repeated-measures design. The first IV was congruency (congruent vs incongruent). The second IV was posture (sitting vs. standing). The DV was reaction time to name the word. There were 50 participants in the study.</p>
 </div>
 </div>
-<div id="lab-skills-learned-4" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Lab Skills Learned</h2>
+<div id="lab-skills-learned-4" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Lab Skills Learned<a href="lab-9-factorial-anova.html#lab-skills-learned-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Conducting a 2x2 between-subjects ANOVA</li>
 <li>Conducting a 2x2 repeated-measures ANOVA</li>
 </ul>
 </div>
-<div id="important-stuff-4" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Important Stuff</h2>
+<div id="important-stuff-4" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Important Stuff<a href="lab-9-factorial-anova.html#important-stuff-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>citation: Rosenbaum, D., Mama, Y., &amp; Algom, D. (2017). Stand by Your Stroop: Standing Up Enhances Selective Attention and Cognitive Control. Psychological science, 28(12), 1864-1867.</li>
 <li><a href="https://www.researchgate.net/profile/David_Rosenbaum6/publication/320070495_Stand_by_Your_Stroop_Standing_Up_Enhances_Selective_Attention_and_Cognitive_Control/links/5a82b4f10f7e9bda869fac5b/Stand-by-Your-Stroop-Standing-Up-Enhances-Selective-Attention-and-Cognitive-Control.pdf">Link to .pdf of article</a></li>
 <li><a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/stroop_stand.csv" download>Data in .csv format</a></li>
 </ul>
 </div>
-<div id="r-9" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> R</h2>
-<div id="load-the-data-4" class="section level3" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Load the data</h3>
+<div id="r-9" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> R<a href="lab-9-factorial-anova.html#r-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="load-the-data-4" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Load the data<a href="lab-9-factorial-anova.html#load-the-data-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Remember that any line with a # makes a comment and the code does not run. Below is how to load the .csv data from the online repository, or from a local file (you need to change the file path to where the local file is, if you downloaded it). The data contains all of the measures and conditions from Experiment 1 in the paper.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="lab-9-factorial-anova.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb211-2"><a href="lab-9-factorial-anova.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="co">#all_data &lt;- fread(&quot;https://github.com/CrumpLab/statisticsLab/raw/master/stroop_stand.csv&quot;)</span></span>
-<span id="cb211-3"><a href="lab-9-factorial-anova.html#cb211-3" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;data/stroop_stand.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="lab-9-factorial-anova.html#cb211-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb211-2"><a href="lab-9-factorial-anova.html#cb211-2" tabindex="-1"></a><span class="co">#all_data &lt;- fread(&quot;https://github.com/CrumpLab/statisticsLab/raw/master/stroop_stand.csv&quot;)</span></span>
+<span id="cb211-3"><a href="lab-9-factorial-anova.html#cb211-3" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;data/stroop_stand.csv&quot;</span>)</span></code></pre></div>
 </div>
-<div id="inspect-the-dataframe-2" class="section level3" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Inspect the dataframe</h3>
+<div id="inspect-the-dataframe-2" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Inspect the dataframe<a href="lab-9-factorial-anova.html#inspect-the-dataframe-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This will give you a big picture of the data frame. Click the button to view it in your browser, then take a look to see what is in it.</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="lab-9-factorial-anova.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
-<span id="cb212-2"><a href="lab-9-factorial-anova.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(all_data))</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="lab-9-factorial-anova.html#cb212-1" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
+<span id="cb212-2"><a href="lab-9-factorial-anova.html#cb212-2" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(all_data))</span></code></pre></div>
 <p>We see there are four columns of numbers. The column names tell us whether the data is for a congruent or incongruent condition, and whether the participant was sitting or standing. Note, this data is in wide-format, not long-format. Each subject has 4 measures per row. We will need to change this to work with the data in R.</p>
 </div>
-<div id="get-the-data-you-need-2" class="section level3" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Get the data you need</h3>
+<div id="get-the-data-you-need-2" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> Get the data you need<a href="lab-9-factorial-anova.html#get-the-data-you-need-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This data file contains all of the data from Experiment 1 in the paper. So, we don’t need to get rid of any rows.</p>
 </div>
-<div id="get-the-data-into-the-format-you-want" class="section level3" number="9.4.4">
-<h3><span class="header-section-number">9.4.4</span> Get the data into the format you want</h3>
+<div id="get-the-data-into-the-format-you-want" class="section level3 hasAnchor" number="9.4.4">
+<h3><span class="header-section-number">9.4.4</span> Get the data into the format you want<a href="lab-9-factorial-anova.html#get-the-data-into-the-format-you-want" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As mentioned before we need to convert the data from wide to long format. What we want at the end of this conversion is:</p>
 <ol style="list-style-type: decimal">
 <li>A column for the subject variable</li>
@@ -653,25 +687,25 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <li>A column for the posture (sit vs. stand) variable</li>
 <li>A column for the DV ( mean reaction times)</li>
 </ol>
-<p>We look at two ways to do the transformation from wide to long. The first way is to “do it by hand,” which refers to creating every variable individually, and then putting them together in a single data frame. This next bit of code does this, and you can check out <code>stroop_df</code> to see the result.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="lab-9-factorial-anova.html#cb213-1" aria-hidden="true" tabindex="-1"></a>RTs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">1</span>])),</span>
-<span id="cb213-2"><a href="lab-9-factorial-anova.html#cb213-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">2</span>])),</span>
-<span id="cb213-3"><a href="lab-9-factorial-anova.html#cb213-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">3</span>])),</span>
-<span id="cb213-4"><a href="lab-9-factorial-anova.html#cb213-4" aria-hidden="true" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">4</span>]))</span>
-<span id="cb213-5"><a href="lab-9-factorial-anova.html#cb213-5" aria-hidden="true" tabindex="-1"></a>         )</span>
-<span id="cb213-6"><a href="lab-9-factorial-anova.html#cb213-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-7"><a href="lab-9-factorial-anova.html#cb213-7" aria-hidden="true" tabindex="-1"></a>Congruency <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Congruent&quot;</span>,<span class="st">&quot;Incongruent&quot;</span>),<span class="at">each=</span><span class="dv">50</span>),<span class="dv">2</span>)</span>
-<span id="cb213-8"><a href="lab-9-factorial-anova.html#cb213-8" aria-hidden="true" tabindex="-1"></a>Posture <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Stand&quot;</span>,<span class="st">&quot;Sit&quot;</span>),<span class="at">each=</span><span class="dv">100</span>)</span>
-<span id="cb213-9"><a href="lab-9-factorial-anova.html#cb213-9" aria-hidden="true" tabindex="-1"></a>Subject <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>,<span class="dv">4</span>)</span>
-<span id="cb213-10"><a href="lab-9-factorial-anova.html#cb213-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-11"><a href="lab-9-factorial-anova.html#cb213-11" aria-hidden="true" tabindex="-1"></a>stroop_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Subject,Congruency,Posture,RTs)</span></code></pre></div>
+<p>We look at two ways to do the transformation from wide to long. The first way is to “do it by hand”, which refers to creating every variable individually, and then putting them together in a single data frame. This next bit of code does this, and you can check out <code>stroop_df</code> to see the result.</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="lab-9-factorial-anova.html#cb213-1" tabindex="-1"></a>RTs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">1</span>])),</span>
+<span id="cb213-2"><a href="lab-9-factorial-anova.html#cb213-2" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">2</span>])),</span>
+<span id="cb213-3"><a href="lab-9-factorial-anova.html#cb213-3" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">3</span>])),</span>
+<span id="cb213-4"><a href="lab-9-factorial-anova.html#cb213-4" tabindex="-1"></a>         <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(all_data[,<span class="dv">4</span>]))</span>
+<span id="cb213-5"><a href="lab-9-factorial-anova.html#cb213-5" tabindex="-1"></a>         )</span>
+<span id="cb213-6"><a href="lab-9-factorial-anova.html#cb213-6" tabindex="-1"></a></span>
+<span id="cb213-7"><a href="lab-9-factorial-anova.html#cb213-7" tabindex="-1"></a>Congruency <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Congruent&quot;</span>,<span class="st">&quot;Incongruent&quot;</span>),<span class="at">each=</span><span class="dv">50</span>),<span class="dv">2</span>)</span>
+<span id="cb213-8"><a href="lab-9-factorial-anova.html#cb213-8" tabindex="-1"></a>Posture <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Stand&quot;</span>,<span class="st">&quot;Sit&quot;</span>),<span class="at">each=</span><span class="dv">100</span>)</span>
+<span id="cb213-9"><a href="lab-9-factorial-anova.html#cb213-9" tabindex="-1"></a>Subject <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>,<span class="dv">4</span>)</span>
+<span id="cb213-10"><a href="lab-9-factorial-anova.html#cb213-10" tabindex="-1"></a></span>
+<span id="cb213-11"><a href="lab-9-factorial-anova.html#cb213-11" tabindex="-1"></a>stroop_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Subject,Congruency,Posture,RTs)</span></code></pre></div>
 <p>Another way to transform between long and wide is to use R functions that were designed to do this job. For example there are the <code>spread</code> and <code>gather</code> functions from the <code>tidyr</code> package, and the <code>melt</code> and <code>cast</code> functions, which also do some data frame transforming. The transformation from wide to long can be complicated depending on the structure of the data, and you may often find it helpful to google these functions to look for more examples of their use.</p>
 <p>Let’s use the <code>tidyr</code> <code>gather</code> function to change our data from wide to long</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="lab-9-factorial-anova.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb214-2"><a href="lab-9-factorial-anova.html#cb214-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb214-3"><a href="lab-9-factorial-anova.html#cb214-3" aria-hidden="true" tabindex="-1"></a>stroop_long<span class="ot">&lt;-</span> <span class="fu">gather</span>(all_data, <span class="at">key=</span>Condition, <span class="at">value=</span>RTs, </span>
-<span id="cb214-4"><a href="lab-9-factorial-anova.html#cb214-4" aria-hidden="true" tabindex="-1"></a>                     congruent_stand, incongruent_stand,</span>
-<span id="cb214-5"><a href="lab-9-factorial-anova.html#cb214-5" aria-hidden="true" tabindex="-1"></a>                     congruent_sit, incongruent_sit)</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="lab-9-factorial-anova.html#cb214-1" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb214-2"><a href="lab-9-factorial-anova.html#cb214-2" tabindex="-1"></a></span>
+<span id="cb214-3"><a href="lab-9-factorial-anova.html#cb214-3" tabindex="-1"></a>stroop_long<span class="ot">&lt;-</span> <span class="fu">gather</span>(all_data, <span class="at">key=</span>Condition, <span class="at">value=</span>RTs, </span>
+<span id="cb214-4"><a href="lab-9-factorial-anova.html#cb214-4" tabindex="-1"></a>                     congruent_stand, incongruent_stand,</span>
+<span id="cb214-5"><a href="lab-9-factorial-anova.html#cb214-5" tabindex="-1"></a>                     congruent_sit, incongruent_sit)</span></code></pre></div>
 <p>Take a moment to look at <code>stroop_long</code>. It is almost what we need. It is certainly in long format. There is a column for Subjects, and a column for the RTs, but there is only one column for both IVs, that’s no good. There are two IVs, we need two columns. Fortunately, the levels in the new Condition column are coded with a specific and consistent structure:</p>
 <ol style="list-style-type: decimal">
 <li>congruent_stand</li>
@@ -679,60 +713,60 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <li>congruent_sit</li>
 <li>incongruent_sit</li>
 </ol>
-<p>If only we could split these by the "_" (underscore), then we would have two columns for the congruency and the posture variable. We can do this using <code>tstrsplit</code> from the <code>data.table</code> package</p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="lab-9-factorial-anova.html#cb215-1" aria-hidden="true" tabindex="-1"></a>new_columns <span class="ot">&lt;-</span> <span class="fu">tstrsplit</span>(stroop_long<span class="sc">$</span>Condition, <span class="st">&quot;_&quot;</span>, <span class="at">names=</span><span class="fu">c</span>(<span class="st">&quot;Congruency&quot;</span>,<span class="st">&quot;Posture&quot;</span>))</span></code></pre></div>
+<p>If only we could split these by the “_” (underscore), then we would have two columns for the congruency and the posture variable. We can do this using <code>tstrsplit</code> from the <code>data.table</code> package</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="lab-9-factorial-anova.html#cb215-1" tabindex="-1"></a>new_columns <span class="ot">&lt;-</span> <span class="fu">tstrsplit</span>(stroop_long<span class="sc">$</span>Condition, <span class="st">&quot;_&quot;</span>, <span class="at">names=</span><span class="fu">c</span>(<span class="st">&quot;Congruency&quot;</span>,<span class="st">&quot;Posture&quot;</span>))</span></code></pre></div>
 <p>You can look inside <code>new_columns</code> to see that we succesfully made the split. Now, we just need to add them on to the <code>stroop_long data</code> frame.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="lab-9-factorial-anova.html#cb216-1" aria-hidden="true" tabindex="-1"></a>stroop_long <span class="ot">&lt;-</span> <span class="fu">cbind</span>(stroop_long,new_columns)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="lab-9-factorial-anova.html#cb216-1" tabindex="-1"></a>stroop_long <span class="ot">&lt;-</span> <span class="fu">cbind</span>(stroop_long,new_columns)</span></code></pre></div>
 <p>Look at the <code>stroop_long</code> data frame and you will find that we have added two new columns, one that codes for Congruency, and the other that codes for posture.</p>
 <p>Using this method we still haven’t added a column for subjects. We can do that like this:</p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="lab-9-factorial-anova.html#cb217-1" aria-hidden="true" tabindex="-1"></a>stroop_long <span class="ot">&lt;-</span> <span class="fu">cbind</span>(stroop_long,<span class="at">Subject=</span><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>,<span class="dv">4</span>))</span></code></pre></div>
-<div id="the-independent-variables" class="section level4" number="9.4.4.1">
-<h4><span class="header-section-number">9.4.4.1</span> The independent variables</h4>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="lab-9-factorial-anova.html#cb217-1" tabindex="-1"></a>stroop_long <span class="ot">&lt;-</span> <span class="fu">cbind</span>(stroop_long,<span class="at">Subject=</span><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>,<span class="dv">4</span>))</span></code></pre></div>
+<div id="the-independent-variables" class="section level4 hasAnchor" number="9.4.4.1">
+<h4><span class="header-section-number">9.4.4.1</span> The independent variables<a href="lab-9-factorial-anova.html#the-independent-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>After all of this data transformation you should be familiar with the IVs.</p>
 <ol style="list-style-type: decimal">
 <li>Congruency: congruent vs. incongruent</li>
 <li>Posture: stand vs. sit</li>
 </ol>
 </div>
-<div id="the-dependent-variables-1" class="section level4" number="9.4.4.2">
-<h4><span class="header-section-number">9.4.4.2</span> The dependent variables</h4>
+<div id="the-dependent-variables-1" class="section level4 hasAnchor" number="9.4.4.2">
+<h4><span class="header-section-number">9.4.4.2</span> The dependent variables<a href="lab-9-factorial-anova.html#the-dependent-variables-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>There is only one DV that we look at, that is the mean reaction time to name the color.</p>
 </div>
 </div>
-<div id="look-at-the-data-4" class="section level3" number="9.4.5">
-<h3><span class="header-section-number">9.4.5</span> Look at the data</h3>
-<p>Remember before we do any analysis, we always want to “look” at the data. This first pass let’s us know if the data “look right.” For example, the data file could be messed up and maybe there aren’t any numbers there, or maybe the numbers are just too weird.</p>
+<div id="look-at-the-data-4" class="section level3 hasAnchor" number="9.4.5">
+<h3><span class="header-section-number">9.4.5</span> Look at the data<a href="lab-9-factorial-anova.html#look-at-the-data-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Remember before we do any analysis, we always want to “look” at the data. This first pass let’s us know if the data “look right”. For example, the data file could be messed up and maybe there aren’t any numbers there, or maybe the numbers are just too weird.</p>
 <p>Let’s make a quick histogram of all of the RT data, like this:</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="lab-9-factorial-anova.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(stroop_long<span class="sc">$</span>RTs)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-422-1.png" width="672" /></p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="lab-9-factorial-anova.html#cb218-1" tabindex="-1"></a><span class="fu">hist</span>(stroop_long<span class="sc">$</span>RTs)</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-555-1.png" width="672" /></p>
 <p>This looks pretty good, there are no super huge numbers here.</p>
 </div>
-<div id="look-at-the-means-1" class="section level3" number="9.4.6">
-<h3><span class="header-section-number">9.4.6</span> Look at the means</h3>
+<div id="look-at-the-means-1" class="section level3 hasAnchor" number="9.4.6">
+<h3><span class="header-section-number">9.4.6</span> Look at the means<a href="lab-9-factorial-anova.html#look-at-the-means-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As part of looking at the data, we might as well make a figure that shows the mean reaction times in each condition, and some error bars to look at the spread in each condition. The following code takes two important steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Get the means for each condition, by averaging over the means for each subject. These are put into the data frame called <code>plot_means</code>.</p></li>
 <li><p>Make a graph with the <code>plot_means</code> data frame using ggplot2.</p></li>
 </ol>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="lab-9-factorial-anova.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb219-2"><a href="lab-9-factorial-anova.html#cb219-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb219-3"><a href="lab-9-factorial-anova.html#cb219-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb219-4"><a href="lab-9-factorial-anova.html#cb219-4" aria-hidden="true" tabindex="-1"></a>plot_means <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
-<span id="cb219-5"><a href="lab-9-factorial-anova.html#cb219-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">group_by</span>(Congruency,Posture) <span class="sc">%&gt;%</span></span>
-<span id="cb219-6"><a href="lab-9-factorial-anova.html#cb219-6" aria-hidden="true" tabindex="-1"></a>            <span class="fu">summarise</span>(<span class="at">mean_RT =</span> <span class="fu">mean</span>(RTs),</span>
-<span id="cb219-7"><a href="lab-9-factorial-anova.html#cb219-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">SEM =</span> <span class="fu">sd</span>(RTs)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(RTs)))</span>
-<span id="cb219-8"><a href="lab-9-factorial-anova.html#cb219-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb219-9"><a href="lab-9-factorial-anova.html#cb219-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_means, <span class="fu">aes</span>(<span class="at">x=</span>Posture, <span class="at">y=</span>mean_RT, <span class="at">group=</span>Congruency, <span class="at">fill=</span>Congruency))<span class="sc">+</span></span>
-<span id="cb219-10"><a href="lab-9-factorial-anova.html#cb219-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)<span class="sc">+</span></span>
-<span id="cb219-11"><a href="lab-9-factorial-anova.html#cb219-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>mean_RT<span class="sc">-</span>SEM, <span class="at">ymax=</span>mean_RT<span class="sc">+</span>SEM), </span>
-<span id="cb219-12"><a href="lab-9-factorial-anova.html#cb219-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.9</span>),</span>
-<span id="cb219-13"><a href="lab-9-factorial-anova.html#cb219-13" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
-<span id="cb219-14"><a href="lab-9-factorial-anova.html#cb219-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
-<span id="cb219-15"><a href="lab-9-factorial-anova.html#cb219-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">700</span>,<span class="dv">1000</span>))</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-423-1.png" width="672" /></p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="lab-9-factorial-anova.html#cb219-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb219-2"><a href="lab-9-factorial-anova.html#cb219-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb219-3"><a href="lab-9-factorial-anova.html#cb219-3" tabindex="-1"></a></span>
+<span id="cb219-4"><a href="lab-9-factorial-anova.html#cb219-4" tabindex="-1"></a>plot_means <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
+<span id="cb219-5"><a href="lab-9-factorial-anova.html#cb219-5" tabindex="-1"></a>            <span class="fu">group_by</span>(Congruency,Posture) <span class="sc">%&gt;%</span></span>
+<span id="cb219-6"><a href="lab-9-factorial-anova.html#cb219-6" tabindex="-1"></a>            <span class="fu">summarise</span>(<span class="at">mean_RT =</span> <span class="fu">mean</span>(RTs),</span>
+<span id="cb219-7"><a href="lab-9-factorial-anova.html#cb219-7" tabindex="-1"></a>                      <span class="at">SEM =</span> <span class="fu">sd</span>(RTs)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(RTs)))</span>
+<span id="cb219-8"><a href="lab-9-factorial-anova.html#cb219-8" tabindex="-1"></a></span>
+<span id="cb219-9"><a href="lab-9-factorial-anova.html#cb219-9" tabindex="-1"></a><span class="fu">ggplot</span>(plot_means, <span class="fu">aes</span>(<span class="at">x=</span>Posture, <span class="at">y=</span>mean_RT, <span class="at">group=</span>Congruency, <span class="at">fill=</span>Congruency))<span class="sc">+</span></span>
+<span id="cb219-10"><a href="lab-9-factorial-anova.html#cb219-10" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)<span class="sc">+</span></span>
+<span id="cb219-11"><a href="lab-9-factorial-anova.html#cb219-11" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>mean_RT<span class="sc">-</span>SEM, <span class="at">ymax=</span>mean_RT<span class="sc">+</span>SEM), </span>
+<span id="cb219-12"><a href="lab-9-factorial-anova.html#cb219-12" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.9</span>),</span>
+<span id="cb219-13"><a href="lab-9-factorial-anova.html#cb219-13" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb219-14"><a href="lab-9-factorial-anova.html#cb219-14" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb219-15"><a href="lab-9-factorial-anova.html#cb219-15" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">700</span>,<span class="dv">1000</span>))</span></code></pre></div>
+<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-556-1.png" width="672" /></p>
 </div>
-<div id="conduct-the-anova-1" class="section level3" number="9.4.7">
-<h3><span class="header-section-number">9.4.7</span> Conduct the ANOVA</h3>
+<div id="conduct-the-anova-1" class="section level3 hasAnchor" number="9.4.7">
+<h3><span class="header-section-number">9.4.7</span> Conduct the ANOVA<a href="lab-9-factorial-anova.html#conduct-the-anova-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this lab we will show you how to conduct ANOVAs for factorial designs that are for:</p>
 <ol style="list-style-type: decimal">
 <li>fully between-subjects designs (both IVs are between-subjects IVs)</li>
@@ -741,8 +775,8 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p>The data we are looking at right now is fully repeated measures.</p>
 <p>However, in this lab we are first going to pretend that the experiment was not repeated measures. We are going to pretend it was fully between-subjects. Then we are going to conduct a between-subjects ANOVA. After that, we will conduct a repeated-measures ANOVA, which is what would be most appropriate for this data set. The overall point is to show you how to both of them, and the discuss how to interpret them and write them both up.</p>
 </div>
-<div id="between-subjects-anova" class="section level3" number="9.4.8">
-<h3><span class="header-section-number">9.4.8</span> Between Subjects ANOVA</h3>
+<div id="between-subjects-anova" class="section level3 hasAnchor" number="9.4.8">
+<h3><span class="header-section-number">9.4.8</span> Between Subjects ANOVA<a href="lab-9-factorial-anova.html#between-subjects-anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can always conduct a between-subjects version of the ANOVA on repeated-measures data if we wanted to. In this case we wouldn’t really want to do this. But, we will do this for educational purposes to show you how to do it in R.</p>
 <p>The syntax is very similar to what we do for one-way ANOVAs, remember the syntax was:</p>
 <p><code>aov(DV ~ IV, dataframe)</code></p>
@@ -752,14 +786,22 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p>Our formula will look like this:</p>
 <p><code>aov(RTs ~ Congruency*Posture, stroop_long)</code></p>
 <p>In plain language, this formula means, analyze RTs by the Congruency and Posture Variables. R will automatically produce the main effects for Congruency and Posture, as well as the interaction (Congruency X Posture). Also, remember, that in the following code, we use a few other functions so that we can print out the results nicely.</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="lab-9-factorial-anova.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
-<span id="cb220-2"><a href="lab-9-factorial-anova.html#cb220-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-3"><a href="lab-9-factorial-anova.html#cb220-3" aria-hidden="true" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(RTs <span class="sc">~</span> Congruency<span class="sc">*</span>Posture, stroop_long)</span>
-<span id="cb220-4"><a href="lab-9-factorial-anova.html#cb220-4" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
-<span id="cb220-5"><a href="lab-9-factorial-anova.html#cb220-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-6"><a href="lab-9-factorial-anova.html#cb220-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
-<span id="cb220-7"><a href="lab-9-factorial-anova.html#cb220-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="lab-9-factorial-anova.html#cb220-1" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
+<span id="cb220-2"><a href="lab-9-factorial-anova.html#cb220-2" tabindex="-1"></a></span>
+<span id="cb220-3"><a href="lab-9-factorial-anova.html#cb220-3" tabindex="-1"></a>aov_out<span class="ot">&lt;-</span><span class="fu">aov</span>(RTs <span class="sc">~</span> Congruency<span class="sc">*</span>Posture, stroop_long)</span>
+<span id="cb220-4"><a href="lab-9-factorial-anova.html#cb220-4" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">summary</span>(aov_out)</span>
+<span id="cb220-5"><a href="lab-9-factorial-anova.html#cb220-5" tabindex="-1"></a></span>
+<span id="cb220-6"><a href="lab-9-factorial-anova.html#cb220-6" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
+<span id="cb220-7"><a href="lab-9-factorial-anova.html#cb220-7" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
 <table>
+<colgroup>
+<col width="28%" />
+<col width="5%" />
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -806,7 +848,7 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 </tbody>
 </table>
 <p>We can also have R print out the Grand Mean, the means for each level of each main effect, and the means for the interaction term. This is the same print out you would get in the console for R. It is admittedly not very pretty. There’s probably a way to make the means provided by <code>model.tables()</code> more pretty. If we find a way we will update this section, if you find a way, please let us know.</p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="lab-9-factorial-anova.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">model.tables</span>(aov_out,<span class="st">&quot;means&quot;</span>), <span class="at">format=</span><span class="st">&quot;markdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="lab-9-factorial-anova.html#cb221-1" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">model.tables</span>(aov_out,<span class="st">&quot;means&quot;</span>), <span class="at">format=</span><span class="st">&quot;markdown&quot;</span>)</span></code></pre></div>
 <pre><code>## Tables of means
 ## Grand mean
 ##          
@@ -827,8 +869,8 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 ## Congruency    sit   stand
 ##   congruent   821.9 808.0
 ##   incongruent 940.8 903.9</code></pre>
-<div id="anova-write-up" class="section level4" number="9.4.8.1">
-<h4><span class="header-section-number">9.4.8.1</span> ANOVA write-up</h4>
+<div id="anova-write-up" class="section level4 hasAnchor" number="9.4.8.1">
+<h4><span class="header-section-number">9.4.8.1</span> ANOVA write-up<a href="lab-9-factorial-anova.html#anova-write-up" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Here are the steps for writing up the results of an ANOVA:</p>
 <ol style="list-style-type: decimal">
 <li>Say what means you analyzed</li>
@@ -846,14 +888,14 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <hr />
 <p>For every F-value, we report F (df1, df2) = F-value, MSE = MSE for the error term, and p = x.xxx.</p>
 <p>In R, the df1, for the df in the numerator is always listed beside the name for a particular effect. For example, Congruency has 1 degree of freedom (there are two condition, and 2-1 =1). Similarly, the relevant F and p-value are listed in the same row as the effect of interest.</p>
-<p>However, the error term used to calculate the F-value is listed at the bottom, in R this is called “Residuals.” Df2, the df for the denominator is listed beside “Residuals,” in our case it was 196. The important bit is the MSE, which was 13189.185. Notice, that in the write up for each main effect and interaction we always reported the same MSE. That’s because in this between-subjects version of the ANOVA, we divide by same very same error term. Also notice that we don’t report the sums of squares of the MSE for the effect.</p>
+<p>However, the error term used to calculate the F-value is listed at the bottom, in R this is called “Residuals”. Df2, the df for the denominator is listed beside “Residuals”, in our case it was 196. The important bit is the MSE, which was 13189.185. Notice, that in the write up for each main effect and interaction we always reported the same MSE. That’s because in this between-subjects version of the ANOVA, we divide by same very same error term. Also notice that we don’t report the sums of squares of the MSE for the effect.</p>
 <p>Why not? The main reason why not is that you can reconstruct those missing numbers just by knowing the dfs, the MSE for the error, and the f-value.</p>
 <p>For example, you can get the MSE for the effect by multiplying the F-value by the MSE for the error. Now you have both MSEs. You can get both Sums of Squares by multiplying by their associated dfs. That’s just working backwards from the F-value.</p>
 <p>You can always check if you are reporting the correct MSE for the error term. If the MSE for your effect (numerator) divided by the MSE you are using for the error term does not equal the F-value, then you must be using the wrong terms!</p>
 </div>
 </div>
-<div id="repeated-measures-anova" class="section level3" number="9.4.9">
-<h3><span class="header-section-number">9.4.9</span> Repeated measures ANOVA</h3>
+<div id="repeated-measures-anova" class="section level3 hasAnchor" number="9.4.9">
+<h3><span class="header-section-number">9.4.9</span> Repeated measures ANOVA<a href="lab-9-factorial-anova.html#repeated-measures-anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Of course, the design for this experiment was not between-subjects, it was fully within-subjects. Every participant completed both congruent and incongruent trials, while they were standing or sitting. For this reason, we should conduct a repeated measures ANOVA. This way we will be able capitilize on the major benefit provided by the repeated measures design. We can remove the variance due to individual subjects from the error terms we use to calculate F-values for each main effect and interaction.</p>
 <p>Rember the formula for the one-factor repeated-measures ANOVA, we’ll remind you:</p>
 <p><code>aov( DV ~ IV + Error(Subject/IV), dataframe)</code></p>
@@ -870,13 +912,21 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p><code>aov(RTs ~ Congruency*Posture + Error(Subject/(Congruency*Posture)), stroop_long)</code></p>
 <p>The main thing you need to watch out for when running this analysis in R, is that all your factors need to be <code>factors</code> in R. Often times people will use numbers rather than words or letters to code the levels for specific factors. This can be very often done for the subjects factor, using number 1 for subject one, and number 2 for subject 2. If you want your column variable to be treated as a factor, then you may need to convert it to a factor. We do this below for the Subject variable, which happens to be coded as numbers. If we do not do this, the repeated-measures ANOVA will return incorrect results.</p>
 <p>For example, if you look at the <code>stroop_long</code> data frame, and click the little circle with an arrow on in it in the environment panel, you should see that Subject is an <code>int</code>. That stands for integer. You should also see that Congruency and Posture are <code>Factor</code>, that’s good. We need to turn Subject into <code>Factor</code>.</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="lab-9-factorial-anova.html#cb223-1" aria-hidden="true" tabindex="-1"></a>stroop_long<span class="sc">$</span>Subject <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(stroop_long<span class="sc">$</span>Subject) <span class="co">#convert subject to factor</span></span>
-<span id="cb223-2"><a href="lab-9-factorial-anova.html#cb223-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb223-3"><a href="lab-9-factorial-anova.html#cb223-3" aria-hidden="true" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">aov</span>(RTs <span class="sc">~</span> Congruency<span class="sc">*</span>Posture <span class="sc">+</span> <span class="fu">Error</span>(Subject<span class="sc">/</span>(Congruency<span class="sc">*</span>Posture)), stroop_long)</span>
-<span id="cb223-4"><a href="lab-9-factorial-anova.html#cb223-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb223-5"><a href="lab-9-factorial-anova.html#cb223-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
-<span id="cb223-6"><a href="lab-9-factorial-anova.html#cb223-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="lab-9-factorial-anova.html#cb223-1" tabindex="-1"></a>stroop_long<span class="sc">$</span>Subject <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(stroop_long<span class="sc">$</span>Subject) <span class="co">#convert subject to factor</span></span>
+<span id="cb223-2"><a href="lab-9-factorial-anova.html#cb223-2" tabindex="-1"></a></span>
+<span id="cb223-3"><a href="lab-9-factorial-anova.html#cb223-3" tabindex="-1"></a>summary_out<span class="ot">&lt;-</span><span class="fu">aov</span>(RTs <span class="sc">~</span> Congruency<span class="sc">*</span>Posture <span class="sc">+</span> <span class="fu">Error</span>(Subject<span class="sc">/</span>(Congruency<span class="sc">*</span>Posture)), stroop_long)</span>
+<span id="cb223-4"><a href="lab-9-factorial-anova.html#cb223-4" tabindex="-1"></a></span>
+<span id="cb223-5"><a href="lab-9-factorial-anova.html#cb223-5" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
+<span id="cb223-6"><a href="lab-9-factorial-anova.html#cb223-6" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">xtable</span>(summary_out))</span></code></pre></div>
 <table>
+<colgroup>
+<col width="28%" />
+<col width="4%" />
+<col width="17%" />
+<col width="17%" />
+<col width="16%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -946,7 +996,7 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="lab-9-factorial-anova.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">model.tables</span>(aov_out,<span class="st">&quot;means&quot;</span>), <span class="at">format=</span><span class="st">&quot;markdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="lab-9-factorial-anova.html#cb224-1" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">model.tables</span>(aov_out,<span class="st">&quot;means&quot;</span>), <span class="at">format=</span><span class="st">&quot;markdown&quot;</span>)</span></code></pre></div>
 <pre><code>## Tables of means
 ## Grand mean
 ##          
@@ -967,10 +1017,10 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 ## Congruency    sit   stand
 ##   congruent   821.9 808.0
 ##   incongruent 940.8 903.9</code></pre>
-<p>What’s different here? Are any of the means different now that we have conducted a repeated-meaures version of the ANOVA, instead of the between-subjects ANOVA? NO! The grand mean is still the grand mean. The means for the congruency conditions are still the same, the means for the Posture conditions are still the same, and the means for the interaction effect are still the same. The only thing that has changed is the ANOVA table. Now that we have removed the variance associated with individual subjects, our F-values are different, and so are the-pvalues. Using an alpha of 0.05, all of the effects are “statistically significant.”</p>
+<p>What’s different here? Are any of the means different now that we have conducted a repeated-meaures version of the ANOVA, instead of the between-subjects ANOVA? NO! The grand mean is still the grand mean. The means for the congruency conditions are still the same, the means for the Posture conditions are still the same, and the means for the interaction effect are still the same. The only thing that has changed is the ANOVA table. Now that we have removed the variance associated with individual subjects, our F-values are different, and so are the-pvalues. Using an alpha of 0.05, all of the effects are “statistically significant”.</p>
 <p>Each main effect and the one interaction all have their own error term. In the table below, R lists each effect in one row, and then immediately below lists the error term for that effect.</p>
-<div id="anova-write-up-1" class="section level4" number="9.4.9.1">
-<h4><span class="header-section-number">9.4.9.1</span> ANOVA write-up</h4>
+<div id="anova-write-up-1" class="section level4 hasAnchor" number="9.4.9.1">
+<h4><span class="header-section-number">9.4.9.1</span> ANOVA write-up<a href="lab-9-factorial-anova.html#anova-write-up-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Here is what a write-up would look like.</p>
 <hr />
 <p><strong>Example write-up</strong></p>
@@ -981,8 +1031,8 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <hr />
 </div>
 </div>
-<div id="follow-up-comparisons-1" class="section level3" number="9.4.10">
-<h3><span class="header-section-number">9.4.10</span> Follow-up comparisons</h3>
+<div id="follow-up-comparisons-1" class="section level3 hasAnchor" number="9.4.10">
+<h3><span class="header-section-number">9.4.10</span> Follow-up comparisons<a href="lab-9-factorial-anova.html#follow-up-comparisons-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In a 2x2 ANOVA there are some follow-up comparisons you may be interested in making that are not done for you with the ANOVA. If an IV only have 2 levels, then you do not have to do any follow-up tests for the main effects of those IVs (that’s what the main effect from the ANOVA tells you). So, we don’t have to do follow-up comparisons for the main effects of congruency or posture. What about the interaction?</p>
 <p>Notice the interaction is composed of four means. The mean RT for congruent and incongruent for both sitting and standing.</p>
 <p>Also notice that we only got one F-value and one p-value from the ANOVA for the interaction term. So, what comparison was the ANOVA making? And what comparisons was it not making? It has already made one comparison, so you do not need a follow-up test for that…which one is it?</p>
@@ -1002,45 +1052,45 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <li><p>Was the Stroop effect only for the standing condition statistically signficant. In other words, was the difference in mean RT between the incongruent and congruent conditions unlikely under the null (or unlikely to be produced by chance)</p></li>
 </ol>
 <p>We can answer both of the questions using paired sample t-tests comparing the means in question</p>
-<div id="sitting-stroop" class="section level4" number="9.4.10.1">
-<h4><span class="header-section-number">9.4.10.1</span> Sitting Stroop</h4>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="lab-9-factorial-anova.html#cb226-1" aria-hidden="true" tabindex="-1"></a>means_to_compare <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
-<span id="cb226-2"><a href="lab-9-factorial-anova.html#cb226-2" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">filter</span>(Posture<span class="sc">==</span><span class="st">&quot;sit&quot;</span>)</span>
-<span id="cb226-3"><a href="lab-9-factorial-anova.html#cb226-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-4"><a href="lab-9-factorial-anova.html#cb226-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(RTs<span class="sc">~</span>Congruency, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">var.equal=</span><span class="cn">TRUE</span>, <span class="at">data=</span>means_to_compare)</span></code></pre></div>
+<div id="sitting-stroop" class="section level4 hasAnchor" number="9.4.10.1">
+<h4><span class="header-section-number">9.4.10.1</span> Sitting Stroop<a href="lab-9-factorial-anova.html#sitting-stroop" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="lab-9-factorial-anova.html#cb226-1" tabindex="-1"></a>means_to_compare <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
+<span id="cb226-2"><a href="lab-9-factorial-anova.html#cb226-2" tabindex="-1"></a>                      <span class="fu">filter</span>(Posture<span class="sc">==</span><span class="st">&quot;sit&quot;</span>)</span>
+<span id="cb226-3"><a href="lab-9-factorial-anova.html#cb226-3" tabindex="-1"></a></span>
+<span id="cb226-4"><a href="lab-9-factorial-anova.html#cb226-4" tabindex="-1"></a><span class="fu">t.test</span>(RTs<span class="sc">~</span>Congruency, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">var.equal=</span><span class="cn">TRUE</span>, <span class="at">data=</span>means_to_compare)</span></code></pre></div>
 <pre><code>## 
 ##  Paired t-test
 ## 
 ## data:  RTs by Congruency
 ## t = -16.516, df = 49, p-value &lt; 2.2e-16
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true mean difference is not equal to 0
 ## 95 percent confidence interval:
 ##  -133.3250 -104.3997
 ## sample estimates:
-## mean of the differences 
-##               -118.8623</code></pre>
+## mean difference 
+##       -118.8623</code></pre>
 </div>
-<div id="standing-stroop" class="section level4" number="9.4.10.2">
-<h4><span class="header-section-number">9.4.10.2</span> Standing Stroop</h4>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="lab-9-factorial-anova.html#cb228-1" aria-hidden="true" tabindex="-1"></a>means_to_compare <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
-<span id="cb228-2"><a href="lab-9-factorial-anova.html#cb228-2" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">filter</span>(Posture<span class="sc">==</span><span class="st">&quot;stand&quot;</span>)</span>
-<span id="cb228-3"><a href="lab-9-factorial-anova.html#cb228-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb228-4"><a href="lab-9-factorial-anova.html#cb228-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(RTs<span class="sc">~</span>Congruency, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">var.equal=</span><span class="cn">TRUE</span>, <span class="at">data=</span>means_to_compare)</span></code></pre></div>
+<div id="standing-stroop" class="section level4 hasAnchor" number="9.4.10.2">
+<h4><span class="header-section-number">9.4.10.2</span> Standing Stroop<a href="lab-9-factorial-anova.html#standing-stroop" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="lab-9-factorial-anova.html#cb228-1" tabindex="-1"></a>means_to_compare <span class="ot">&lt;-</span> stroop_long <span class="sc">%&gt;%</span></span>
+<span id="cb228-2"><a href="lab-9-factorial-anova.html#cb228-2" tabindex="-1"></a>                      <span class="fu">filter</span>(Posture<span class="sc">==</span><span class="st">&quot;stand&quot;</span>)</span>
+<span id="cb228-3"><a href="lab-9-factorial-anova.html#cb228-3" tabindex="-1"></a></span>
+<span id="cb228-4"><a href="lab-9-factorial-anova.html#cb228-4" tabindex="-1"></a><span class="fu">t.test</span>(RTs<span class="sc">~</span>Congruency, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">var.equal=</span><span class="cn">TRUE</span>, <span class="at">data=</span>means_to_compare)</span></code></pre></div>
 <pre><code>## 
 ##  Paired t-test
 ## 
 ## data:  RTs by Congruency
 ## t = -14.327, df = 49, p-value &lt; 2.2e-16
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true mean difference is not equal to 0
 ## 95 percent confidence interval:
 ##  -109.41185  -82.49462
 ## sample estimates:
-## mean of the differences 
-##               -95.95323</code></pre>
+## mean difference 
+##       -95.95323</code></pre>
 </div>
 </div>
-<div id="generalization-exercise-7" class="section level3" number="9.4.11">
-<h3><span class="header-section-number">9.4.11</span> Generalization Exercise</h3>
+<div id="generalization-exercise-7" class="section level3 hasAnchor" number="9.4.11">
+<h3><span class="header-section-number">9.4.11</span> Generalization Exercise<a href="lab-9-factorial-anova.html#generalization-exercise-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Here are some means for four conditions in a 2x2 Design:</p>
 <table>
 <thead>
@@ -1077,8 +1127,8 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p>B. Compute the mean difference for the main effect of IV2</p>
 <p>C. Compute the mean difference for the interaction</p>
 </div>
-<div id="writing-asignment" class="section level3" number="9.4.12">
-<h3><span class="header-section-number">9.4.12</span> Writing asignment</h3>
+<div id="writing-asignment" class="section level3 hasAnchor" number="9.4.12">
+<h3><span class="header-section-number">9.4.12</span> Writing asignment<a href="lab-9-factorial-anova.html#writing-asignment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>(2 points - Graded)</p>
 <p>Factorial designs have main effects and interactions.</p>
 <ol style="list-style-type: decimal">
@@ -1094,12 +1144,12 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 </ul>
 </div>
 </div>
-<div id="excel-9" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Excel</h2>
+<div id="excel-9" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Excel<a href="lab-9-factorial-anova.html#excel-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>How to do it in Excel</p>
 </div>
-<div id="spss-9" class="section level2" number="9.6">
-<h2><span class="header-section-number">9.6</span> SPSS</h2>
+<div id="spss-9" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> SPSS<a href="lab-9-factorial-anova.html#spss-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this lab, we will use SPSS to:</p>
 <ol style="list-style-type: decimal">
 <li>Conduct and graph a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</li>
@@ -1107,15 +1157,15 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <li>Conduct and graph a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</li>
 <li>Calculate simple effects</li>
 </ol>
-<div id="experiment-background-5" class="section level3" number="9.6.1">
-<h3><span class="header-section-number">9.6.1</span> Experiment Background</h3>
+<div id="experiment-background-7" class="section level3 hasAnchor" number="9.6.1">
+<h3><span class="header-section-number">9.6.1</span> Experiment Background<a href="lab-9-factorial-anova.html#experiment-background-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p>The Rosenbaum, Mama, and Algom (2017) paper asked whether sitting versus standing would influence a measure of selective attention, the ability to ignore distracting information. Selective attention here is measured as performance on the Stroop task.</p>
 <p>In a typical Stroop experiment, subjects name the color of words as fast as they can. The trick is that sometimes the color of the word is the same as the name of the word, and sometimes it is not.</p>
 <p>The design of the study was a 2x2 design. The first IV was <code>congruency</code> (congruent vs incongruent). The second IV was <code>posture</code> (sitting vs. standing). The DV was reaction time (<code>RT</code>)to name the word.</p>
 </div>
-<div id="conduct-a-between-subjects-two-factor-analysis-of-variance-anova" class="section level3" number="9.6.2">
-<h3><span class="header-section-number">9.6.2</span> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</h3>
+<div id="conduct-a-between-subjects-two-factor-analysis-of-variance-anova" class="section level3 hasAnchor" number="9.6.2">
+<h3><span class="header-section-number">9.6.2</span> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)<a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p><a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/stroopsit.sav">Here</a> is a link to our data file. It is named stroopsit.sav. Your data should look like this:</p>
 <p><img src="img/10.4.11.png" /><!-- --></p>
@@ -1130,7 +1180,7 @@ Simplicity is complex. It’s never simple to keep things simple. Simple solutio
 <p><img src="img/10.4.12.png" /><!-- --></p>
 <p>A window will appear asking for you to specify your variables. Place <code>RT</code> into the “Dependent Variable” field, and put both “posture” and “congruency” into the “Fixed Factors” field.</p>
 <p><img src="img/10.4.13.png" /><!-- --></p>
-<p>Now, before pressing anything else, click on <span style="color:blue">Plots…</span> (this will allow us to create a plot of means right along with our SPSS output). In the plots window, you must place the <code>congruency</code> and <code>posture</code> variables into the fields labeled “Horizontal Axis”" and “Separate Lines.” You can place either variable in either field, and the graph will still make sense. However, for this example, I will be putting <code>congruency</code> into the “Separate Lines”" field, and <code>posture</code> in “Horizontal Axis”:</p>
+<p>Now, before pressing anything else, click on <span style="color:blue">Plots…</span> (this will allow us to create a plot of means right along with our SPSS output). In the plots window, you must place the <code>congruency</code> and <code>posture</code> variables into the fields labeled “Horizontal Axis”” and “Separate Lines”. You can place either variable in either field, and the graph will still make sense. However, for this example, I will be putting <code>congruency</code> into the “Separate Lines”” field, and <code>posture</code> in “Horizontal Axis”:</p>
 <p><img src="img/10.4.14.png" /><!-- -->
 You must click <span style="color:blue">Add</span> for this table to be included in your SPSS output. After you do this, Your window should look like this:</p>
 <p><img src="img/10.4.15.png" /><!-- -->
@@ -1144,8 +1194,8 @@ You can see from this output that:</p>
 <li>There is no interaction between posture and congruency, F(1, 196)=.497, p=NS</li>
 </ol>
 </div>
-<div id="calculate-simple-effects" class="section level3" number="9.6.3">
-<h3><span class="header-section-number">9.6.3</span> Calculate simple effects</h3>
+<div id="calculate-simple-effects" class="section level3 hasAnchor" number="9.6.3">
+<h3><span class="header-section-number">9.6.3</span> Calculate simple effects<a href="lab-9-factorial-anova.html#calculate-simple-effects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p>In previous ANOVAs, we have conducted both planned and unplanned comparisons to locate the significant differences. In the case of a two-factor ANOVA, there are many comparisons that can be made. However, the comparisons you choose will depend on the results of your ANOVA. In this case, we found only a significant main effect of congruency. So, we can explore this effect more by asking:</p>
 <ol style="list-style-type: decimal">
@@ -1178,8 +1228,8 @@ You can see from this output that:</p>
 <li>In the standing condition, the congruent and incongruent conditions are significantly different (p&lt;.05).</li>
 </ol>
 </div>
-<div id="conduct-a-repeated-measures-two-factor-analysis-of-variance-anova" class="section level3" number="9.6.4">
-<h3><span class="header-section-number">9.6.4</span> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</h3>
+<div id="conduct-a-repeated-measures-two-factor-analysis-of-variance-anova" class="section level3 hasAnchor" number="9.6.4">
+<h3><span class="header-section-number">9.6.4</span> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)<a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p>Next, we will use this same data but treat it as a repeated measures (within-subjects) design (just as in the original experiment). This means each person in the study experienced ALL 4 conditions.</p>
 <p>To start, we need a new data file. <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/stroopsit_RM.sav">Here</a> is link. This data file is called stroopsit_RM.sav. I have set it up so that the data is arranged for a repeated-measures design. Notice that each person is represented by a single row, and the columns correspond to the 4 conditions:</p>
@@ -1197,7 +1247,7 @@ You can see from this output that:</p>
 <p>Remember, you must click <span style="color:blue">Add</span> to process this graph!</p>
 <p><img src="img/10.4.29.png" /><!-- --></p>
 <p>Now, click <span style="color:blue">Continue</span>, then <span style="color:blue">OK</span>.</p>
-<p>SPSS will produce several tables of output, along with a graph. The Fs for our ANOVA are located in the table labeled “Tests of Within-Subjects Effects,” and the plot we requested is found below:</p>
+<p>SPSS will produce several tables of output, along with a graph. The Fs for our ANOVA are located in the table labeled “Tests of Within-Subjects Effects”, and the plot we requested is found below:</p>
 <p><img src="img/10.4.30.png" /><!-- --></p>
 <p><img src="img/10.4.31.png" /><!-- --></p>
 <p>According to this output:
@@ -1206,8 +1256,8 @@ You can see from this output that:</p>
 3. There is an interaction effect between congruency and posture, F(1, 49)=8.96, p&lt;.05.</p>
 <p>From the plot we can see that incongruent words produced longer RTs than congruent words. We also see that sitting produced longer RTs than standing. As for the interaction, you can see that the difference between congruent and incongruent is more pronounced (larger) in the sitting condition than in the standing condition.</p>
 </div>
-<div id="calculate-simple-effects-1" class="section level3" number="9.6.5">
-<h3><span class="header-section-number">9.6.5</span> Calculate simple effects</h3>
+<div id="calculate-simple-effects-1" class="section level3 hasAnchor" number="9.6.5">
+<h3><span class="header-section-number">9.6.5</span> Calculate simple effects<a href="lab-9-factorial-anova.html#calculate-simple-effects-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p>We may want to dissect these effects similarly to the way did in the previous example. This time, because all 3 effects were significant, we will ask SPSS to conduct simple effects for both <code>congruency</code> and <code>posture</code>. To begin, go to <span style="color:blue">Analyze</span>, <span style="color:blue">General Linear Model</span>, and <span style="color:blue">Repeated Measures…</span></p>
 <p><img src="img/10.4.32.png" /><!-- --></p>
@@ -1239,11 +1289,17 @@ You can see from this output that:</p>
 3. For congruent words only, standing and sitting RTs are not significantly different (p=NS).
 4. For incongruent words only, standing and sitting are significantly different (p&lt;.05).</p>
 </div>
-<div id="practice-problems-5" class="section level3" number="9.6.6">
-<h3><span class="header-section-number">9.6.6</span> Practice Problems</h3>
+<div id="practice-problems-7" class="section level3 hasAnchor" number="9.6.6">
+<h3><span class="header-section-number">9.6.6</span> Practice Problems<a href="lab-9-factorial-anova.html#practice-problems-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <hr />
 <p>Below is fictitious data representing the number of milliimeters a plant has grown under several water/sunlight combinations:</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Water &amp; Sunlight</th>
@@ -1285,8 +1341,8 @@ You can see from this output that:</p>
 </ol>
 </div>
 </div>
-<div id="jamovi-2" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> JAMOVI</h2>
+<div id="jamovi-2" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> JAMOVI<a href="lab-9-factorial-anova.html#jamovi-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>How to do it in JAMOVI</p>
 
 </div>
@@ -1301,7 +1357,6 @@ You can see from this output that:</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1320,6 +1375,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1340,6 +1396,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Statistics_Lab.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -1353,7 +1413,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

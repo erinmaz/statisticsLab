@@ -377,7 +377,7 @@ Here, you can edit the name of your variables, and specify their properties. Var
 2. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
 
 
-## JAMOVI - Week 1 - January 9th & 10th 
+## JAMOVI - Week 1 - January 7th, 8th, & 9th 
 
 
 In our lab sessions, we will be using jamovi to help us with the analyses about which we are learning in classes. Throughout each lab, we will show you how to use jamovi to solve specific problems, and then you will use the examples to solve in-lab assignments, homework, and the analysis for your team project.

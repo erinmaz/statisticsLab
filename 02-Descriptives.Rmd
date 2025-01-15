@@ -697,7 +697,9 @@ knitr::include_graphics('img/r_sleephistogram.png')
 
 Now that the *x*-axis stops at 23 instead of 8e+6, we can see the shape of the distribution much better. The tallest bar is somewhere around 7. Almost all of the responses are between 4 and 10. 
 
-You often have to write sentences to report your descriptive statistics. For sleep, you might write: The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.05 (1.30).
+You often have to write sentences to report your descriptive statistics. For sleep, you might write: Nova Scotians who participated in the study reported a mean of 7.05 hours of sleep per day (*M* = 7.05, *SD* = 1.30). 
+Or like this...
+The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.05 (1.30).
 
 
 #### Example 2: Volunteering

@@ -526,7 +526,7 @@ ___
 
 3. Use the information on your .spv file and the CCHS .sav file to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
 
-## JAMOVI - Week 3 - January 23rd & 24th 
+## JAMOVI - Week 3 - January 21st, 22nd, & 23rd
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#spss-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
@@ -535,14 +535,15 @@ This section is  copied almost verbatim, with some editorial changes, from [Answ
 
 In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will learn to:
 
-1. Select and calculate descriptive statistics
-2. Create and interpret a boxplot (We will skip this information for PSYC 292 labs in Winter 2024.)
+1. Navigate between data set and data dictionary to determine scales of measurement for variables of interest
+2. Select and calculate descriptive statistics
+3. Create and interpret a boxplot (if lab time permits)
 
 
 ### Getting ready for this lesson
 
 
-<b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to virtual help hours if you run into any trouble. 
+<b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to help hours if you run into any trouble. 
 
 You will need access to the EngageNS dataset for this lesson. Be sure you completed the Terms of Use quiz in Moodle and download the data set before lab.
 
@@ -578,7 +579,7 @@ Read over the remainder of Chapter 2.5 of this lab manual.
 
 Now, you are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.
 
-<b>Come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
+<b>To be clear, you should come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
 
 
 ### The basics
@@ -607,7 +608,7 @@ From here, go to the top menu, click on <span style="color:blue">Analyses</span>
 knitr::include_graphics('img/2.5.2.png')
 ```
 
-As soon as you select the variable of interest, `X`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results pane. By default, jamovi will show you the sample size, number of missing case measurements, mean, median, standard deviation, minimum, and maximum. 
+As soon as you select the variable of interest, `X`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results pane. By default, jamovi will show you the sample size, number of cases with missing measurements, mean, median, standard deviation, minimum, and maximum. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.5.3.png')
@@ -772,7 +773,7 @@ If the measurement scale is nominal, we usually look at the mode for information
 
 The `SLEEP` variable is an example of how a skewed distribution and/or outliers can impact the mean. 
 
-Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean. **(For 292 labs in the Winter of 2024, you are asked to consider *Likert scales that have reasonably equal intervals* as interval scales.)**
+Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean. **(For 292 labs in the Winter of 2025, you are asked to consider *Likert scales that have reasonably equal intervals* as interval scales. Based on what you read in the data dictionary about how the data for this variable were measured and what you know about the scales of measurement, determine if the variable attributes, specifically "Measure type", should be changed in your JAMOVI file or the current attribute is correct.)**
 
 If, however, we look at `PA_VIGOROUS`, we see that the variable asks participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed or there are outliers, we would likely report the mean. You can see that the answer to a research question about Nova Scotians' exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
 
@@ -796,7 +797,7 @@ As you read more psychology research articles, you might notice it's unusual to 
 
 Participants were also asked about their sense of belonging to the community. As you will see in the data dictionary, their answers could range from 1 = very weak, to 7 = very strong. While it is not explicitly shown, a 4 would be neutral.
 
-Thinking about scales of measurement, this could arguably be perceived as an example of an ordinal variable. Let's look at the `BELONGING` variable in the dataset. Select the variable (remember you can search in the <span style="color:blue">Variables</span> tab first to find it faster) and click <span style="color:blue">Setup</span>.
+Thinking about scales of measurement, this could **arguably** be perceived as an example of an ordinal variable. Let's look at the `BELONGING` variable in the dataset. Select the variable (remember you can search in the <span style="color:blue">Variables</span> tab first to find it faster) and click <span style="color:blue">Setup</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belongingsetup.png')
@@ -814,15 +815,19 @@ Let's look at how Nova Scotians rated their sense of belonging. As before, click
 knitr::include_graphics('img/belongingordinaloutput.png')
 ```
 
-You could write a sentence to report these results like this: Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.
+You could write a sentence to report these results like this: Participants reported a sense of belonging corresponding to somewhere between neutral and very strong (*Med* = 5.00) with a discrepancy of 2 (*IQR* = 2.00).
+Or like this...
+Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.
 
-Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. (Remember: This is the default choice in 292 Labs for the Winter of 2024.)
+Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. (Remember: This is the default choice in 292 Labs for the Winter of 2025.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belongingquasioutput.png')
 ```
 
-Now, you might describe your results with a sentence such as: Participants reported a mean (SD) sense of belonging of 4.61 (1.68), corresponding to a sense of belonging between neutral and very strong.
+Now, you might describe your results with a sentence such as: Participants reported a mean sense of belong between neutral and very strong (*M* = 4.61, *SD* = 1.68).
+Or like this...
+Participants reported a mean (SD) sense of belonging of 4.61 (1.68), corresponding to a sense of belonging between neutral and very strong.
 
 Finally, you might want to look at the data graphically. A histogram would be appropriate whether you are considering `BELONGING` to be ordinal or quasi-interval.
 

@@ -711,7 +711,7 @@ Let's look at another variable. If you simply select another variable as you did
 knitr::include_graphics('img/CloseAnalysesBeforeNewOnes.png')
 ```
 
-The `VOLUNTEER` variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn't. (**Notice this coding has been recorded in the variable attributes. This may not be the case for all variables you use this term. You will be responsible for adding variable attributes based on what you find in the data dictionary.**) Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?
+The `VOLUNTEER` variable represents whether participants volunteered in the past year. A 1 means they did, and a 2 means they didn't. (**Notice the variable description and/or coding may need to be updated based on what you find in the data dictionary.**) Take a moment and make a prediction: What percentage of participants do you expect have volunteered in the past year?
 
 Back in the <span style="color:blue">Variables</span> tab, search for VOLUNTEER. Select it by clicking so the check box is visible, and then click the <span style="color:blue">Data</span> tab. Click <span style="color:blue">Setup</span>. The measurement type is nominal, which is correct: the `VOLUNTEER` variable does not have order, equal spacing between intervals, or a true 0. We don't need to fix anything here. 
 

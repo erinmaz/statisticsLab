@@ -491,3 +491,5 @@ control-vs-reactivationtetris
 tetris_only-vs-reactivationtetris
 jamovi---week-3---january-21st-22nd-23rd
 jamovi---week-4---february-4th-5th-6th
+fig:unnamed-chunk-9
+fig:unnamed-chunk-23

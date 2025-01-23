@@ -697,9 +697,9 @@ knitr::include_graphics('img/r_sleephistogram.png')
 
 Now that the *x*-axis stops at 23 instead of 8e+6, we can see the shape of the distribution much better. The tallest bar is somewhere around 7. Almost all of the responses are between 4 and 10. 
 
-You often have to write sentences to report your descriptive statistics. For sleep, you might write: Nova Scotians who participated in the study reported a mean of 7.05 hours of sleep per day (*M* = 7.05, *SD* = 1.30). 
+You often have to write sentences to report your descriptive statistics. For sleep, you might write: Nova Scotians who participated in the study reported a mean of 7.04 hours of sleep per day (*M* = 7.04, *SD* = 1.30). 
 Or like this...
-The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.05 (1.30).
+The mean (standard deviation) hours of sleep per day reported by Nova Scotians was 7.04 (1.30).
 
 
 #### Example 2: Volunteering
@@ -827,7 +827,7 @@ Let's say you felt that the `BELONGING` variable had equal spacing between inter
 knitr::include_graphics('img/belongingquasioutput.png')
 ```
 
-Now, you might describe your results with a sentence such as: Participants reported a mean sense of belong between neutral and very strong (*M* = 4.61, *SD* = 1.68).
+Now, you might describe your results with a sentence such as: Participants reported a mean sense of belonging between neutral and very strong (*M* = 4.61, *SD* = 1.68).
 Or like this...
 Participants reported a mean (SD) sense of belonging of 4.61 (1.68), corresponding to a sense of belonging between neutral and very strong.
 

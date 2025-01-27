@@ -799,6 +799,14 @@ In this lab, it is hoped you will become more acquainted with the jamovi softwar
 3. Opening a data file and producing different types of graphs 
 
 
+### Getting ready for this lesson
+
+Please complete all of these tasks before your lab starts. Do these tasks as soon as possible and post to the Q&A forum or come to Help Hours if you run into any problem.s
+
+You will need to use the EngageNS data set and data dictionary during this lab. Be sure to have the data set (in its original state; without analyses) opened in JAMOVI and the data dictionary opened in Preview or Adobe.
+
+Read over all of Sections 1.5.4 and 1.5.5.
+
 ### Opening JAMOVI and Reviewing the JAMOVI Layout
 
 
@@ -886,7 +894,7 @@ Bar graphs and histograms are different types of graphs. Bar graphs are used for
 
 Histograms are used for continuous variables (interval or ratio scales of measurement). The *y*-axis is always frequency. Sometimes they are labeled "count" or "density," but they always represent the number of times certain values appear in the data.
 
-Are ordinal variables continuous? No. However, many ordinal variables can be conceptualized as quasi-interval. Likert scales are often quasi-interval. For the scale to be quasi-interval, we generally require at least five options on the scale. In addition, it should be reasonable to assume equal spacing between options on the scale. For example, a scale with the following options might be considered quasi-interval, because there are five options and they all seem equally spaced from one another:
+Are ordinal variables continuous? No. However, many ordinal variables can be conceptualized as quasi-interval. Likert scales are often quasi-interval. For the scale to be quasi-interval, we generally require at least five options or levels on the scale. In addition, it should be reasonable to assume equal spacing between options on the scale. For example, a scale with the following options might be considered quasi-interval, because there are five options and they all seem equally spaced from one another:
 Strongly disagree, somewhat disagree, neither agree or disagree, somewhat agree, strongly agree
 
 A quirk of JAMOVI is that histograms do not include numbers across all of the *y*-axis, which makes them difficult to read. However, bar graphs do include numbers below each bar on the *y*-axis in JAMOVI. For small, quasi-interval scales, you **could** (*See note that follows this paragraph.*) approximate a histogram with a bar graph. The biggest difference is that usually histograms do not have any space between the bars, whereas bar graphs do have space between the bars, but this is not problematic for small, quasi-interval scales. (**Remember: In 292, you will treat Likert scales that are quasi-interval with *reasonably equal intervals* as interval scales. Therefore, you will use histograms when graphing these quasi-interval scales.**)
@@ -904,7 +912,7 @@ knitr::include_graphics('img/PARSPORTinDataDictionary.png')
 ```
 
 
-If this information is not in your current EngageNS file, please add it to the variable attributes. Then, in the analysis panel (the view to the left in JAMOVI), select the variable of interest for the graph by highlighting `PARSPORT` and using the right-facing arrow to move it to that Variables field on the right. 
+If this information is not in your current EngageNS file (and it should not be in the Starting File you are using), please add it to the variable attributes. Then, in the analysis panel (the view to the left in JAMOVI), select the variable of interest for the graph by highlighting `PARSPORT` and using the right-facing arrow to move it to that Variables field on the right. 
 
 
 ```{r , echo=FALSE,dev='png'}
@@ -961,10 +969,124 @@ JAMOVI will produce, in the Results panel, the distribution of scores for respon
 knitr::include_graphics('img/MNTLHLTHHistogram.png')
 ```
 
-### Tables
+### APA-formatting of Figures
+
+In the **desktop app** for Microsoft Excel, create the figure of your choice. For our lab example, let’s add these values into an Excel spreadsheet and create a bar graph from them.
+
+```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.APAFigValues.png')
+```
+
+When you set up your data, resize the chart data range to only include the means that you want to be included. In the next column, input the standard deviations to be used. Highlight the levels of the variable (or the group names) and the means. 
+ 
+Then, click Insert, Insert Column or Bar Chart, 2-D Column, and Clustered Column:
+
+```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.APAFigChartType.png')
+```
+ 
+Then, follow these steps to make the figure following the APA formatting requested for this lab.
+
+Step 1 - Remove the Border from the Outside of the Figure
+-	Right-click on the empty space of your graph and select “Format Chart Area.”
+-	Under the Paint Bucket icon on the right of your screen, select Border, and select “No Line.”
+	
+Step 2 - Change all Font to Times New Roman (size 12).
+-	Click on your graph so that the whole area is selected and then in the Home menu up above change the Font to Times New Roman.
+
+Step 3 - Review/Edit your Axis Titles and Legend Contents
+-	If you do not see axis titles, click on the Chart Elements (little plus sign in right corner), and select Axis Titles. You can enter the titles by clicking on the box and typing.
+-	Be sure that all Axis Titles and Legend Contents are spelled correctly and appear in Title Case. 
+-	Click on each Axis Title, and change the font to Bold (can be found right below where you went to change the font style).
+-	Note: If you included a legend, its contents can be edited by changing the text from where the legend is taken in your Excel data file.
+
+Step 4 - Delete the Chart Title
+-	Select the box that contains the Chart Title above your graph, and hit Delete, or Cut.
+
+Step 5 - Delete the Gridlines
+	Click on Chart Elements (little plus sign in right corner) and deselect Gridlines.
+
+Step 6 - Include a y-Axis Line
+-	Click on the axis scale (the numbers on the y-axis), and a Format Axis menu will appear to the right.
+-	Under the paint bucket, select Solid line and adjust the Color just below to a grey matching the other axis.
+
+Step 7 - Check that the x-Axis Scale Reads Appropriately
+-	Click on the x-axis scale and a menu will appear to the right
+-	Select the option that shows the three bars
+-	Under “bounds” - minimum – type “0” and maximum can be left at 3.75 (adjust if yours did not produce this as a max)
+-	Adjust the scale so that minimum and maximum make sense based on the range of the data
+
+Step 8 - Format the Legend (if one is included) and Drag It within the Borders of Figure
+-	In Chart Elements (little plus sign in right corner), let your mouse hover over the word “Legend” and click the arrow that appears next to it. Then, select “More Options.” This opens options to format your legend. 
+-	Under Legend Options:
+a)	Under the Paint Bucket icon, select “Solid Line” for the Border. 
+b)	Under the Bar Graph icon, select “Right” as the Legend Position. 
+-	Reposition the legend so that it falls within the borders of the graph. You may want to drag on a corner of your graph to resize it; a slightly larger area will make it easier to fit the legend inside your graph without hiding any of the other elements. Click on your legend, pick it up and drag it somewhere within the graph, but where it is not hiding any graph content. 
+
+Step 9 - Include Error Bars (Unless otherwise instructed, use Standard Deviation for error bars in your Psych 292 lab assignments.)
+-	In Chart Elements (little plus sign in right corner), let your mouse hover over the words “Error Bars” and click the arrow that appears next to it. Then, select “More Options.” This opens options to format the error bars.
+-	Under the Bar Graph icon, select Custom. Then, the button reading “Specify Value” will be active. Click that button. 
+ 
+ ```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.APAFig_ErrorBars.png')
+```
+
+-	A pop-up window will appear, and you will indicate from which cells Excel can get the information about the standard deviations (SDs) by clicking on the upward-facing arrows and highlighting all the cells under “SD” in the spreadsheet. Click enter. Do this for both the “Positive Error Value” field and the “Negative Error Value” field.
+
+ ```{r , fig.cap="Empty SPSS spreadsheet", echo=FALSE,dev='png'}
+knitr::include_graphics('img/1.5.APAFig_ErrorBarSelection.png')
+```
+ 
+-	Click “Ok.”
+
+Step 10 - Change Color to Grayscale (While you could simply Print in Grayscale, this fix doesn’t help you when you are submitting electronic copies. Furthermore, the coloured graph may appear in a different grey/black than the remainder of your text.)
+-	Click Chart Styles (the paint brush symbol to the right of your graph).
+-	Select “Color” and then click on a Grey color pallet. 
+
+Step 11 - Review your Figure and Be Sure All Elements are Legible and Clear
+-	You may need to click on and drag your Axis Titles away from the axes slightly so that they are easier to read. In the process of editing, they may have become overlapped with the borders of your graph. Make sure your Legend contents are all visible (again, may need to resize). 
+
+Step 12 - Copy your Figure and Paste into Microsoft Word
+-	Select your Figure in Excel, right-click, and Copy (or click Control/Command + C). Move to a Word doc, and paste (Control/Command + V). 
+-	You should be able to reposition and resize your Figure so that it takes up about half of the page. There should not be a big empty space above your graph, and it should be centered as much as possible.
+
+Step 13 - Directly above your Figure, Include Figure # (Figure 1.1.) and Title and below your Figure, Provide a Note if Necessary
+-	Move your cursor to the line above the graph and enter Figure + number of the figure (ex. Figure 1). Be sure to make this font bolded.
+-	On the next line, include a title for your graph. Title should be brief but descriptive about what is being displayed in the figure. Be sure to make this font italicized.
+-	Move your cursor to beneath the graph and enter any notes the reader may need (ex. units of measurement, what error bars represent, etc.). The word Note should be in italics and followed by a period. The text of the note is not in italics.
+-	See the Sample Figure Page below for the formatting and an example of the type of information included. 
+-	Figure #, Title and Note should all be in Times New Roman 12 for this course.
+
+This figure can be moved into your Microsoft Word document. 
+
+Figures contain many of the same elements as and follow similar formatting rules to tables (a list of rules follows in the next section). Include the word “Figure” and the figure number – both in bold font, return, and then include a figure title that is descriptive – using italicized font. Next, you will include the image. An image might include a graph, chart, drawing, map, or photograph – anything that is not a table, but is a visual representation of information. *In lab, We will practice creating a graph since you will include at least one in your final term paper (Part 2 of the Term Project).* Finally, you will include a note if necessary. One feature unique to the figure (not included in tables) is that you might also have a legend which should appear inside the borders of the figure and should explain any symbols used.
+<div class="marginnote">
+This section is adapted, with some verbatim content and some editorial changes, from "Publication Manual of the American Psychology Association, 7th ed.", (2020), and [APA Style: Figure Setup](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures), (2023), according to copyright licenses. The information is used here for educational purposes in our Psychology labs. 
+</div>
 
 
-Please see the lab Moodle site for a handout of what you are expected to know about APA-formatted tables.
+### APA-formatting of Tables
+
+
+While JAMOVI does produce tables that mimic APA-formatted tables, you should be aware that you need to add or edit items. Also, please know that copying the tables produced into your word processing program (Microsoft Word or Google Docs) may result in images that have poor resolution. 
+
+For the sake of lab assignments, you should construct your tables inside your word processing program (ex. Microsoft Word or Google Docs). The following instructions will help with the use of Microsoft Word, a program you all have access to through Outlook (the program used by the university for your email accounts). 
+
+The following information about table formatting comes from the Publication Manual of the American Psychological Association, 7th edition (2020) and APA Style: Table Setup (2023):
+<div class="marginnote">
+This section is adapted, with some verbatim content and some editorial changes, from "Publication Manual of the American Psychology Association, 7th ed.", (2020), and [APA Style: Table Setup](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables), (2023), according to copyright licenses. The information is used here for educational purposes in our Psychology labs. 
+</div>
+
+1.	Ask yourself if the table is necessary. If you can easily communicate the information in a sentence or two, a table may not be necessary. If, however, you think many sentences would be required and those sentences might be too cumbersome a reading task for your reader, a table may be necessary.
+2.	The font used in a table should be the same as the font used in the rest of your paper.
+3.	Note that tables are numbered and that the capitalized word “Table” and the corresponding number appear above the table title. This “Table #” text should be in bold font. (Note: There are no quotation marks around this text in your paper.)
+4.	The table title is placed after “Table #” and above the table. The title should be descriptive – generally informing your reader about the table's contents. Use title case (ex. Demographic Characteristics of Participants; Correlations among Parenting Styles, Attachment Types, and Bonding in Adult Relationships). This text – the table title – should be italicized.
+5.	The table comes next. Notice that no vertical lines are used. There are only horizontal lines. 
+6.	All tables include column headings and a stub heading. The table will include as many rows and columns as necessary to depict the information. 
+7.	Generally, information in each cell within the body will be centered, but alignment can be used to improve readability. The table body text (the information in the cells) can be single spaced, one-and-a-half spaced, or double spaced.
+8.	If necessary, one of three types of notes can be included below the last horizontal line outlining the table. Notes defining abbreviations, attributing copyright, or explaining asterisks used to indicate p-values may be included. In most other cases, no note is required.
+
+If helpful, view the [sample table with notes] (https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables), or these [sample tables] (https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables).
 
 
 ### Homework

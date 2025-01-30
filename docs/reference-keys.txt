@@ -499,3 +499,4 @@ fig:unnamed-chunk-41
 apa-formatting-of-figures
 apa-formatting-of-tables
 getting-ready-for-this-lesson-1
+using-excel-to-format-figures

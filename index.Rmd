@@ -476,11 +476,11 @@ The variable editor can be opened by selecting `Setup` from the data tab or by d
 
 New variables can be inserted or appended to the data set using the `Add` button from the data ribbon. The `Add` button also allows the addition of computed variables.
 
-#### Computed Variables - Week 5 - February 6th & 7th
+#### Computed Variables - Week 5 - February 11th, 12th, & 13th
 
 Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, *z*-scores, sum-scores, negative scoring, and means.
 
-One way computed variables can be added to the data set with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu in which you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading "Computed Variable," the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think "Appendix"). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appearing to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:
+One way computed variables can be added to the data set is with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu in which you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading "Computed Variable," the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think "Appendix"). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appearing to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:
 
 A + B 
 
@@ -503,7 +503,9 @@ knitr::include_graphics('img/computedvariable.png')
 \caption{A newly computed variable, the z-score of `dose'.}
 
 
+
 *V-functions*.  
+
 Several functions are already available in jamovi and available from the drop down box labelled *f~x~*. A number of functions appear in pairs, one prefixed with a V and the other not. V functions perform their calculation on a variable as a whole whereas non-V functions perform their calculation row by row. For example, MEAN(A, B) will produce the mean of A and B for each row whereas VMEAN(A) gives the mean of all the values in A.
 
 ##### Rationale for Recoding
@@ -518,7 +520,7 @@ As you may recall from classes about research methods, one problem researchers u
 
 As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. Imagine an example where the researcher is using a scale on which “extremely agree” indicates participants score high on the construct being measured (ex. gratitude). Consider this survey statement: “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude. The researcher may reword some statements in the questionnaire so that “extremely agree” indicates the participants score low on the construct. After rewording, another statement on the gratitude questionnaire might read like this: “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude. 
 
-To be able to look at individual survey respondents' score across all questions, their overall score on the gratitude scale, the researcher often, first, must recode some "negatively" worded items' scores. In the above example, the second answer would need to be recoded before being considered with the answer to the first item, the "positively" worded statement.
+To be able to look at individual survey respondents' score across all questions, their overall score on the gratitude scale, often, the researcher must first recode some "negatively" worded items' scores. (You should consider "negatively" worded items to be worded oppositely to the construct being measured.) In the above example, the second answer would need to be recoded before being considered with the answer to the first item, the "positively" worded statement.
 
 ###### An Example of Recoding and Computing a New Variable
 
@@ -580,13 +582,19 @@ Check your answers:
 If you answered that scoring a 4 on questions 1, 2, 3, 6, 9, and 10 would indicate stress, you are correct.
 If you answered that scoring a 4 on questions 4, 5, 7, and 8 would indicate lack of stress, you are correct!
 
-Notice that the "Stress" scale in the PSYC 291 Survey data dictionary is adapted from the PSS. In the PSYC 291 Survey, respondents were asked about these items, but for the past week, not the past month. The levels of the response options were the same as the PSS. For some reason, however, the data in the data set range from 1 to 5. It seems reasonable that 1 represents "never" and 5 represents "very often," and we will proceed using this idea of the scale anchors.
+Notice that the "Stress" scale in the PSYC 291 Survey data dictionary is adapted from the PSS. In the PSYC 291 Survey, respondents were asked about these items, but for the past week, not the past month. The levels of the response options shown in the data dictionary were the same as the PSS (Responses: 0 = never; 1 = almost never; 2 = sometimes; 3 = fairly often; 4 = very often). For some reason, however, the data in the JAMOVI data file you have range from 1 to 5. Again, this demonstrates another good reason for you to always check the data set you have been given against the data dictionary. It seems reasonable that a score of 1 in the JAMOVI file represents "never" and 5 represents "very often," and we will proceed using this idea of the scale anchors. In other words, where you see a value of 1 in the JAMOVI file, it would correspond to a value of 0 (never) on the scale given in the data dictionary. Values of 2 in the JAMOVI file will correspond to a value of 1 (almost never) in the data dictionary. Values of 3 in the JAMOVI file will correspond to a value of 2 (sometimes) in the data dictionary. Values of 4 in the JAMOVI file will correspond to a value of 3 (fairly often) in the data dictionary. Values of 5 in the JAMOVI file will correspond to a value of 4 (very often) in the data dictionary. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/StressScaleFromPSYC291Survey.png')
 ```
 
-Let’s work through the process of computing a new variable (a composite variable) using the Stress items for T1 in the PSYC 291 Survey data file. As you can see in the data dictionary, T1 is "during the first week of classes in September." The first step to computing the new variable is recoding. We need to recode items 4, 5, 7, and 8 before we can compute a composite score for all Stress items. 
+Let’s work through the process of computing a new variable (a composite variable) using the Stress items for T1 in the PSYC 291 Survey data file. As you can see in the second row of the data dictionary table defining variables (the one just below the table about demographic variables), on page 1, Time 1 is "...during the first week of classes in September." All variables measured at Time 1 have "T1_" at the beginning of their variable names (ex. `T1_anxiety1` and `T1_stress10`).
+
+```{r , echo=FALSE,dev='png'}
+knitr::include_graphics('img/0.6.3.T1VsT2_Highlighted.png')
+```
+
+The first step to computing the new variable is recoding. We need to recode items 4, 5, 7, and 8 before we can compute a composite score for all Stress items. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/StressScale_ShowingVariablesToRecode.png')
@@ -660,7 +668,7 @@ Repeat the steps to recode `T1_stress5`, `T1_stress7`, and `T1_stress8`. For the
 knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_8.png')
 ```
 
-Now, you can see all 4 recoded values. Notice the transformed variables are noted with red circles by their names at the top of the columns.
+Now, you can see all 4 recoded values. Notice the transformed variables, here in the <span style="color:blue">Variables</span>  menu tab, are noted with red circles to the left of their names. (If you look for that red circle by the variable name, in the <span style="color:blue">Data</span> menu tab, it appears to the right of those variable names at the top of the columns.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/StressScale_TransformationToRecodeT1Stress4_9.png')
@@ -679,7 +687,7 @@ If the Computed Variable panel does not drop down for you, click on <span style=
 knitr::include_graphics('img/StressScale_ComputationCommands_2.png')
 ```
 
-Let’s fill in the variable attributes and enter the formula for JAMOVI to follow to compute the sum. Remember, we want to include the recoded values for items 4, 5, 7, and 8. We do not want to include the original values for those items. One way to calculate the sum is by using the SUM command in the formula editor and placing all variable names you want included in the sum in the brackets behind the word SUM with commas between the variable names. Alternatively, you could select each variable name and use plus signs between them.
+Let’s fill in the variable attributes and enter the formula for JAMOVI to follow to compute the sum. Remember, we want to include the recoded values for items 4, 5, 7, and 8. We do not want to include the original values for those items. One way to calculate the sum is by using the SUM command in the formula editor (the button which looks like *f~x~*) and placing all variable names you want included in the sum in the brackets behind the word SUM with commas between the variable names. Alternatively, you could select each variable name and use plus signs between them.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/StressScale_ComputationFormula1.png')
@@ -690,7 +698,7 @@ knitr::include_graphics('img/StressScale_ComputationFormula2.png')
 ```
 
 As you did with the Transformed Variable panel, you can close the Computed Variable panel by clicking the upward facing arrow.
-This may seem like a lot of work to do for a score on one variable; however, you can imagine these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set or recoding and/or computations of many variables.
+This may seem like a lot of work to do for a score on one variable; however, you can imagine these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set or recoding and/or performing computations with many variables.
 
 #####  Z-scores (as a Type of Computed Variable in JAMOVI)
 
@@ -714,7 +722,7 @@ In JAMOVI, *z*-scores can be obtained by selecting <span style="color:blue">Data
 knitr::include_graphics('img/StressScale_ZScoreFormula.png')
 ```
 
-Remember to click the upward facing arrow to close the Computed Variable panel. `Standardized Stress Score` in the image below depicts the *z*-scores for `Stress Composite Score`. Notice that computed variables have a black circle to the right of their name near the top of the column.
+Remember to click the upward facing arrow to close the Computed Variable panel. `Standardized Stress Score` in the image below depicts the *z*-scores for `Stress Composite Score`. Notice that computed variables have a black circle to the right of their name near the top of the column in the <span style="color:blue">Data</span>.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/StressScale_ZScoreColumn.png')

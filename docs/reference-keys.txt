@@ -501,3 +501,4 @@ apa-formatting-of-tables
 getting-ready-for-this-lesson-1
 using-excel-to-format-figures
 computed-variables---week-5---february-11th-12th-13th
+jamovi---week-9---march-11th-12th-13th

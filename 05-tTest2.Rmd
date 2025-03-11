@@ -505,7 +505,7 @@ knitr::include_graphics('img/7.4.34.png')
 For `impression` and `intellect`, a correlation of *r* = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.
 
 
-## JAMOVI - Week 10 - March 26th & 27th
+## JAMOVI - Week 10 - March 18th, 19th, & 20th
 
 
 <div class="marginnote">
@@ -542,7 +542,7 @@ So, what happened? Did the recruiters think job applicants were smarter when the
 #### Download and open the data
 
 
-The dataset described above can be downloaded from your [lab Moodle site](https://moodle.stfx.ca). Remember, if double-clicking on the downloaded data file does not result in it opening on your laptop or computer, you should, first, open the JAMOVI program first, and then, from within the program, click the three horizontal lines, click <span style="color:blue">Open</span>, and browse for the downloaded file.
+The dataset described above can be downloaded from your [lab Moodle site](https://moodle.stfx.ca). Look under the grid section called "Data Sets." Remember, if double-clicking on the downloaded data file does not result in it opening on your laptop or computer, you should, first, open the JAMOVI program first, and then, from within the program, click the three horizontal lines, click <span style="color:blue">Open</span>, and browse for the downloaded file.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/OpenFileFromWithinJAMOVI.png')

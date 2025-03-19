@@ -503,3 +503,4 @@ using-excel-to-format-figures
 computed-variables---week-5---february-11th-12th-13th
 jamovi---week-9---march-11th-12th-13th
 jamovi---week-10---march-18th-19th-20th
+jamovi---week-12---april-1st-2nd-3rd---for-psyc-292-students

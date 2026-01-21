@@ -377,7 +377,7 @@ Here, you can edit the name of your variables, and specify their properties. Var
 2. A data file has been provided for you in Moodle. Open that file and answer the questions in the Moodle quiz entitled “Reading an SPSS Data File.”
 
 
-## JAMOVI - Week 1 - January 7th, 8th, & 9th 
+## JAMOVI - Week 1 - January 6th, 7th, & 8th
 
 
 In our lab sessions, we will be using jamovi to help us with the analyses about which we are learning in classes. Throughout each lab, we will show you how to use jamovi to solve specific problems, and then you will use the examples to solve in-lab assignments, homework, and the analysis for your team project.
@@ -476,7 +476,7 @@ The variable editor can be opened by selecting `Setup` from the data tab or by d
 
 New variables can be inserted or appended to the data set using the `Add` button from the data ribbon. The `Add` button also allows the addition of computed variables.
 
-#### Computed Variables - Week 5 - February 11th, 12th, & 13th
+#### Computed Variables - Week 5 - February 10th, 11th, & 12th
 
 Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, *z*-scores, sum-scores, negative scoring, and means.
 

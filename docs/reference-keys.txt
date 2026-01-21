@@ -504,3 +504,5 @@ computed-variables---week-5---february-11th-12th-13th
 jamovi---week-9---march-11th-12th-13th
 jamovi---week-10---march-18th-19th-20th
 jamovi---week-12---april-1st-2nd-3rd---for-psyc-292-students
+jamovi---week-1---january-6th-7th-8th
+computed-variables---week-5---february-10th-11th-12th

@@ -41,7 +41,7 @@ Please complete all of these tasks before your lab starts. Do these tasks as soo
 
 You will need to use the EngageNS data set and data dictionary during this lab. Be sure to have the data set (in its original state; without analyses) opened in JAMOVI and the data dictionary opened in Preview or Adobe.
 
-Read over all of Sections 1.5.4 through 1.5.7.**NOTE:** You can skip over Sections 1.5.2 and 1.5.3 if you feel comfortable with those ideas already.
+Read over all of Sections 1.2.4 through 1.2.7.**NOTE:** You can skip over Sections 1.2.2 and 1.2.3 if you feel comfortable with those ideas already.
 
 ### Opening JAMOVI and Reviewing the JAMOVI Layout
 

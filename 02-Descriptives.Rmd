@@ -20,520 +20,15 @@ The purpose of this lab is to show you how to compute basic descriptive statisti
 2. Compute measures of variation using software
 3. Ask some questions of a data set using descriptive statistics
 
-### Important info
 
-We will be using data from the gapminder project. You can download a small snippet of the data in .csv format from this link (note this dataset was copied from the gapminder library for R) <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/gapminder.csv" download>gapminder.csv</a>. If you are using R, then you can install the gapminder package. This method is described later in the R section.
-
-
-
-## R
-
-### Descriptives basics in R
-
-We learned in lecture and from the textbook that data we want to use ask and answer questions often comes with loads of numbers. Too many numbers to look at all at once. That's one reason we use descriptive statistics. To reduce the big set of numbers to one or two summary numbers that tell use something about all of the numbers. R can produce descriptive statistics for you in many ways. There are base functions for most of the ones that you want. We'll go over some R basics for descriptive statistics, and then use our new found skills to ask some questions about real data.
-
-#### Making numbers in R
-
-In order to do descriptive statistics we need to put some numbers in a variable. You can also do this using the `c()` command, which stands for combine
-
-```{r}
-my_numbers <- c(1,2,3,4)
-```
-
-There a few other handy ways to make numbers. We can use `seq()` to make a sequence. Here's making the numbers from 1 to 100
-
-```{r}
-one_to_one_hundred <- seq(1,100,1)
-```
-
-We can repeat things, using rep. Here's making 10 5s, and 25 1s:
-
-```{r}
-rep(10,5)
-rep(1,25)
-all_together_now <- c(rep(10,5),rep(1,25)) 
-```
-
-#### Sum
-
-Let's play with the number 1 to 100. First, let's use the `sum()` function to add them up
-
-```{r}
-one_to_one_hundred <- seq(1,100,1)
-sum(one_to_one_hundred)
-```
-
-#### Length
-
-We put 100 numbers into the variable `one_to_one_hundred`. We know how many numbers there are in there. How can we get R to tell us? We use `length()` for that. 
-
-```{r}
-length(one_to_one_hundred)
-```
-
-### Central Tendency
-
-#### Mean
-
-Remember the mean of some numbers is their sum, divided by the number of numbers. We can compute the mean like this:
-
-```{r}
-sum(one_to_one_hundred)/length(one_to_one_hundred)
-```
-
-Or, we could just use the `mean()` function like this:
-
-```{r}
-mean(one_to_one_hundred)
-```
-
-#### Median
-
-The median is the number in the exact middle of the numbers ordered from smallest to largest. If there are an even number of numbers (no number in the middle), then we take the number in between the two (decimal .5). Use the `median` function. There's only 3 numbers here. The middle one is 2, that should be the median
-
-```{r}
-median(c(1,2,3))
-```
-
-#### Mode
-
-R does not a base function for the Mode. You would have to write one for yourself. Here is an example of writing your own mode function, and then using it. Note I searched how to do this on Google, and am using the mode defined by [this answer on stack overflow](https://stackoverflow.com/questions/2547402/is-there-a-built-in-function-for-finding-the-mode)
-
-Remember, the mode is the most frequently occurring number in the set. Below 1 occurs the most, so the mode will be one.
-
-```{r}
-
-my_mode <- function(x) {
-  ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
-}
-
-my_mode(c(1,1,1,1,1,1,1,2,3,4))
-
-
-```
-
-### Variation
-
-We often want to know how variable the numbers are. We are going to look at descriptive statistics to describe this such as the **range**, **variance**, the **standard deviation**, and a few others.
-
-First, let's remind ourselves what variation looks like (it's when the numbers are different). We will sample 100 numbers from a normal distribution (don't worry about this yet), with a mean of 10, and a standard deviation of 5, and then make a histogram so we can see the variation around 10..
-
-```{r}
-sample_numbers <- rnorm(100,10,5)
-hist(sample_numbers)
-```
-
-#### range
-
-The range is the minimum and maximum values in the set, we use the `range` function.
-
-```{r}
-range(sample_numbers)
-```
-
-#### var = variance
-
-We can find the sample variance using `var`. Note, divides by (n-1)
-
-```{r}
-var(sample_numbers)
-
-```
-
-#### sd = standard deviation
-
-We find the sample standard deviation us SD. Note, divides by (n-1)
-
-```{r}
-sd(sample_numbers)
-```
-
-Remember that the standard deviation is just the square root of the variance, see:
-
-```{r}
-sqrt(var(sample_numbers))
-```
-
-#### All Descriptives
-
-Let's put all of the descriptives and other functions so far in one place:
-
-```{r}
-sample_numbers <- rnorm(100,10,5)
-
-sum(sample_numbers)
-length(sample_numbers)
-mean(sample_numbers)
-median(sample_numbers)
-my_mode(sample_numbers)
-range(sample_numbers)
-var(sample_numbers)
-sd(sample_numbers)
-
-```
-
-### Descriptives by conditions
-
-Sometimes you will have a single variable with some numbers, and you can use the above functions to find the descriptives for that variable. Other times (most often in this course), you will have a big data frame of numbers, with different numbers in different conditions. You will want to find descriptive statistics for each the sets of numbers inside each of the conditions. Fortunately, this is where R really shines, it does it all for you in one go. 
-
-Let's illustrate the problem. Here I make a date frame with 10 numbers in each condition. There are 10 conditions, each labelled, A, B, C, D, E, F, G, H, I, J.
-
-```{r}
-scores <- rnorm(100,10,5)
-conditions <- rep(c("A","B","C","D","E","F","G","H","I","J"), each =10)
-my_df <- data.frame(conditions,scores)
-```
-
-If you look at the `my_df` data frame, you will see it has 100 rows, there are 10 rows for each condition with a label in the `conditions` column, and 10 scores for each condition in the `scores` column. What if you wanted to know the mean of the scores in each condition? You would want to find 10 means.
-
-The slow way to do it would be like this:
-
-```{r}
-mean(my_df[my_df$conditions=="A",]$scores)
-mean(my_df[my_df$conditions=="B",]$scores)
-mean(my_df[my_df$conditions=="C",]$scores)
-# and then keep going
-```
-
-Nobody wants to do that! Not, me I stopped doing it that way, you should to.
-
-#### group_by and summarise
-
-We can easily do everything all at once using the `group_by` and `summarise` function from the `dplyr` package. Just watch
-
-```{r}
-library(dplyr)
-
-my_df %>%
-  group_by(conditions) %>%
-  summarise(means = mean(scores))
-
-```
-
-A couple things now. First, the print out of this was ugly. Let's fix that. we put the results of our code into a new variable, then we use `knitr::kable` to print it out nicely when we `knit` the document
-
-
-```{r}
-
-summary_df <- my_df %>%
-               group_by(conditions) %>%
-               summarise(means = mean(scores))
-
-knitr::kable(summary_df)
-
-```
-
-#### multiple descriptives
-
-The best thing about the `dplyr` method, is that we can add more than one function, and we'll get more than one summary returned, all in a nice format, let's add the standard deviation:
-
-```{r}
-
-summary_df <- my_df %>%
-               group_by(conditions) %>%
-               summarise(means = mean(scores),
-                         sds = sd(scores))
-
-knitr::kable(summary_df)
-
-```
-
-We'll add the min and the max too:
-
-```{r}
-
-summary_df <- my_df %>%
-               group_by(conditions) %>%
-               summarise(means = mean(scores),
-                         sds = sd(scores),
-                         min = min(scores),
-                         max = max(scores))
-
-knitr::kable(summary_df)
-
-```
-
-### Describing gapminder
-
-Now that we know how to get descriptive statistics from R, we cam do this will some real data. Let's quickly ask a few question about the gapminder data. 
-
-```{r}
-library(gapminder)
-gapminder_df <- gapminder
-```
-
-Note: The above code will only work if you have installed the gapminder package. Make sure you are connected to the internet, then choose the Packages tab from the bottom right panel, and choose install. Thens search for gapminder, choose it, and install it. 
-
-#### What are some descriptive for Life expectancy by continent?
-
-Copy the code from the last part of descriptives using `dplyr`, then change the names like this:
-
-```{r}
-
-summary_df <- gapminder_df %>%
-               group_by(continent) %>%
-               summarise(means = mean(lifeExp),
-                         sds = sd(lifeExp),
-                         min = min(lifeExp),
-                         max = max(lifeExp))
-
-knitr::kable(summary_df)
-
-```
-
-### Generalization Exercise
-
-(1 point - Pass/Fail)
-
-Complete the generalization exercise described in your R Markdown document for this lab.
-
-1. What is the mean, standard deviation, minimum and maximum life expectancy for all the gapminder data (across all the years and countries). Hint: do not use `group_by`
-
-2. What is the mean, standard deviation, minimum and maximum life expectancy for all of the continents in 2007, the most recent year in the dataset. Hint: add another pipe using `filter(year==2007) %>%`
-
-### Writing assignment
-
-(2 points - Graded)
-
-Complete the writing assignment described in your R Markdown document for this lab. When you have finished everything. Knit the document and hand in your stuff (you can submit your .RMD file to blackboard if it does not knit.)
-
-Your writing assignment is to answer these questions in full sentences using simple plain langauge:
-
-1. Define the mode.
-2. Explain what would need to happen in order for a set of numbers to have two modes
-3. Define the median
-4. Define the mean
-5. Define the range
-6. When calculating the standard deviation, explain what the difference scores represent
-7. Explain why the difference scores are squared when calculating the standard deviation
-8. If one set of numbers had a standard deviation of 5, and another had a standard deviation of 10, which set of numbers would have greater variance, explain why.
-
-**Rubric**
-
-General grading. 
-
-- You will receive 0 points for missing answers (say, if you do not answer question c, then you will receive 0 out .25 points for that question)
-- You must write in complete sentences. Point form sentences will be given 0 points.
-- Completely incorrect answers will receive 0 points. 
-- If your answer is generally correct but very difficult to understand and unclear you may receive half points for the question
-
-
-## Excel
-
-How to do it in Excel
-
-## SPSS
-
-In this lab, we will use SPSS to calculate a variety of descriptive statistics. SPSS allows us to specify which statistics we would like calculated and produce them all in one output table. Here, we will learn to:
-
-1. Calculate descriptive statistics
-2. Graph data using a histogram
-3. Edit graphs
-4. Create and interpret a boxplot
-
-Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
-
-Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the SPSS spreadsheet. There are 7 measurements, so we will need 7 rows of data (I have also changed the name of this variable in Variable View to `x`:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.11.png')
-```
-
-### Calculating Descriptive Statistics
-
-
-
-From here, go to the top menu and choose <span style="color:blue">Analyze</span>, then <span style="color:blue">Descriptive Statistics</span> and then <span style="color:blue">Frequencies</span>:
-
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.12.png')
-```
-
-A new window will ask you to specify for which variables you want descriptives statistics calculated. Use the arrow to move the `x` variable from the left-hand to the right-hand field. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.13.png')
-```
-
-Now, click the <span style="color:blue">Statistics</span> button. This will open a new window containing a list of statistics. You can choose as many as you want to be calculated. We will choose <span style="color:blue">mean, median, mode, range, standard deviation, and variance</span>. SPSS will not create a table with the inter-quartile range (IQR); however, we will select <span style="color:blue">quartiles</blue> which will allow us to calculate IQR ourselves (recall that IQR = Q3 - Q1).
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.14.png')
-```
-
-
-Then click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>. SPSS will produce a set of two output tables: one containing the descriptive statistics we have chosen, and the other a frequency table--a list of all the possible values in our data set and their corresponding frequencies.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.15.png')
-```
-
-### Descriptive Statistics and Histograms
-
-
-
-
-Now let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the life_expectancy.sav you downloaded from Section 0.2.3 (the same file we used for our lab session on graphing last week). 
-
-Suppose we wanted to know about life expectancy (around the world) in 2018. This will include calculating descriptive statistics, as well as graphing a histogram to examine the distribution of our data. While the last section of the lab manual showed how to use the <span style="color:blue">Graphs</span> menu to accomplish this task, SPSS often has neat shortcuts to graph data within other menu options. In other words, there is sometimes more than one way to get SPSS to do what we want it to do. For example, in the process of asking SPSS to produce a table of descriptive statistics, we can also add a histogram to the output without having to go to the <span style="color:blue">Graphs</span> menu. 
-
-First, we go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Descriptive Statistics</span>, then <span style="color:blue">Frequencies</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.16.png')
-```
-
-A window will appear asking us to indicate which variable to use. We will scroll all the way down in the list of variables on the left, choose `2018 [V220]`, and then move it into the field on the right using the arrow. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.17.png')
-```
-
-As in the previous example, we will click the <span style="color:blue">Statistics</span> button next, and choose our measures of central tendency <span style="color:blue">(mean, median, mode)</span> as well as variability <span style="color:blue">(range, quartiles, standard deviation, variance)</span>. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.18.png')
-```
-
-Once we click continue, we are back to the previous window. Here, we can conveniently ask SPSS to insert a histogram. Let's click on the <span style="color:blue">Charts</span> button:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.19.png')
-```
-
-This will open a new window that asks us to specify the type of chart we would like. Let's select <span style="color:blue">Histogram</span>, and check off <span style="color:blue">Show normal curve on histogram</span>:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.20.png')
-```
-
-Click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>.
-
-SPSS will produce a table of the requested descriptive statistics, a frequency table (we will ignore this for now because it is long and not relevant to this exercise), and finally, a histogram showing the distribution of life expectancy (in years) with a normal distribution superimposed for comparison. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.21.png')
-```
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.22.png')
-```
-
-Something to think about: What do the mean, median, and mode indicate about the shape of the distribution? Is it confirmed when we look at the histogram? How does the shape of this distribution compare to the symmetrical normal distribution which is superimposed over it? 
-
-### Editing graphs
-
-
-It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs are the same.
-
-#### Editing the axes
-
-To modify the scale of an axis in a graph, first <span style="color:blue">double-click</span> on the graph itself in the output window. A Chart Editor should pop up. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.23.png')
-```
-
-Now, hover your mouse over one of the values on the x-axis, and click down once. You will see all the x-axis values suddenly highlight:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.24.png')
-```
-
-Now that you know how to select the entire axis, <span style="color:blue">double click</span> on it. A properties window will pop up:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.25.png')
-```
-
-Notice that in the default tab, you can change the fill color of components of your graph. For now, we will select the <span style="color:blue">Scale</span> tab instead:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.26.png')
-```
-
-Notice in this tab, we can change the minimum, maximum, and increments of our scale. Let's change the major increment to 5:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.27.png')
-```
-
-
-Click <span style="color:blue">Apply</span>. 
-
-#### Editing the bin width
-
-Another important aspect of a histogram's appearance is the bin width. You can change the bin width in the Chart Editor. Double click on one of the bars to bring the Properties window up. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.28.png')
-```
-
-The default tab, <span style="color:blue">Binning</span>, will allow you to change the properties of the bins. You can set the bin width or the number of bins in this tab. For example, to set the bin width, select <span style="color:blue">Custom</span> (in the X Axis box, about halfway down the Properties window). Then select <span style="color:blue">Interval width</span>, input your chosen bin width (in this example, <span style="color:blue">10</span>), and hit <span style="color:blue">Apply</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.29.png')
-```
-
-Then <span style="color:blue">Close</span>. Click the x to close the Chart Editor window. The SPSS output window will now contain your edited graph:
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.30.png')
-```
-
-
-### Boxplots
-
-Another useful graph is the boxplot. A boxplot, or box plot, gives us a visual representation of a data set in terms of its quartiles.You might think about the data in terms of four groups, each with 25% of the total set. Inside the box are the two middle groups. The line inside the box is the median, which is the same as the second quartile. The two ends of the box mark the first (or lower) quartile and the third (or upper) quartile. The difference between the first and third quartile is known as the interquartile range (IQR). 
-
-Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we will get to what those are later) and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
-
-Using the life_expectancy.sav data file, we can create a boxplot to visually inspect the distribution of the data for the variable: `1934 [v136]`. To create the boxplot, go to <span style="color:blue">Analyze</span> in the menu toolbar, then <span style="color:blue">Descriptives</span>, then <span style="color:blue">Explore</span>.
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.31.png')
-```
-
-If you click on <span style="color:blue">Plots</span>, you will notice that SPSS has, by default, settings that will provide both a Boxplot and a Stem-and-Leaf graph. You can deselect <span style="color:blue">Stem-and-Leaf</span>. 
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.32.png')
-```
-
-Next, click <span style="color:blue">Continue</span> and <span style="color:blue">OK</span>.  
- 
-SPSS will produce output containing a boxplot. What do you notice about the relative sizes of the second and third quartiles? Are the whiskers the same size? If not, how might you explain the difference?
-
-```{r , echo=FALSE,dev='png'}
-knitr::include_graphics('img/2.4.33.png')
-```
-
-Notice the circles with numbers next to them in the boxplot. These circle represent outliers, and the numbers correspond to the case/participant/subject number that is being recorded. Sometimes, you will see asterisks with numbers next to them in the boxplot. These asterisks represent extreme outliers. You can imagine that the identification of these outliers gives you reason to go investigate your data more closely.
-
-### Homework
-
-___
-
-1. Create a single SPSS output file (.spv) and upload it to Moodle. The file should contain the following:
-
-1a. Using the life expectancy data set, produce a table of output showing the descriptive statistics (measures of central tendency and variability - don't forget to include quartiles so you can calculate IQR) for both years 1800 and 1934 (during the Great Depression). Note: We are looking for a single table that contains the descriptives for both years. 
-
-1b. Plot histograms of life expectancy for both 1800 and 1934. How are these distributions different? Note: We are looking for two histograms, one for each year. (Hint: Make sure the axes and bins of both graphs are the same, so the histograms are comparable).
-
-2. Download the CCHS Annual 2017 2018 (SPSS sav file) from the "Team Project" section at the bottom of our lab Moodle page. 
-
-3. Use the information on your .spv file and the CCHS .sav file to answer the questions in the homework “quiz” on Moodle. Note that you can attempt the quiz as many times as you like before the due date and only your highest mark will be counted.
-
-## JAMOVI - Week 3 - January 21st, 22nd, & 23rd
+## JAMOVI - Week 5 - February 3rd, 4th, & 5th
 
 <div class="marginnote">
 This section is  copied almost verbatim, with some editorial changes, from [Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 2, Section 2.4, SPSS](https://www.erinmazerolle.com/statisticsLab/lab-2-descriptive-statistics-and-more-graphs.html#spss-2), according to its [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.ast). Thank you to Crump, Krishnan, Volz, &   Chavarga (2018). 
 </div>
 
 
-In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will learn to:
+In this lab, we will use JAMOVI to calculate a variety of descriptive statistics. JAMOVI allows us to specify which statistics we would like calculated and produces them all in one output table. Here, we will practice and learn how to:
 
 1. Navigate between data set and data dictionary to determine scales of measurement for variables of interest
 2. Select and calculate descriptive statistics
@@ -545,9 +40,9 @@ In this lab, we will use jamovi to calculate a variety of descriptive statistics
 
 <b>Please complete all of these tasks before your lab starts.</b> Do these tasks as soon as possible and post to the Q&A forum or come to help hours if you run into any trouble. 
 
-You will need access to the EngageNS dataset for this lesson. Be sure you completed the Terms of Use quiz in Moodle and download the data set before lab.
+You will need access to the EngageNS dataset for this lesson. Be sure you completed the Terms of Use quiz in Moodle and downloaded the data set before lab. Check for the "StartingFile" version you saved in your OneDrive folder.
 
-You should also download the data dictionary. It is the pdf file in the OneDrive directory from which you just downloaded the .omv file. The data dictionary contains important information about what the data mean.
+You should also have downloaded the data dictionary. It is the pdf file in the OneDrive directory from which you  downloaded the .omv file. The data dictionary contains important information about what the data mean.
 
 Open JAMOVI. It might be slow to open.
 
@@ -559,7 +54,7 @@ knitr::include_graphics('img/3lines.png')
 
 Click <span style="color:blue">Open</span> and then <span style="color:blue">Browse</span>.
 
-Find the EngageNS .omv data file you just downloaded. Select it and click open. It may take a few minutes to open.
+Find the EngageNS .omv data file you downloaded. Select it and click open. It may take a few minutes to open.
 
 When it has finished opening, your JAMOVI window should look something like this:
 
@@ -567,7 +62,7 @@ When it has finished opening, your JAMOVI window should look something like this
 knitr::include_graphics('img/engagens_orig_data.png')
 ```
 
-Now, you are going to save the JAMOVI (.omv) file. Click the three horizontal lines, then click <span style="color:blue">Save As</span>. Input a sensible file name (perhaps with the term "StartingFile" or "Original_Data") and make sure your file type is set to `jamovi file (.omv)` (red circle below). 
+Now, you are going to be sure you save(d) the JAMOVI (.omv) file. Click the three horizontal lines, then click <span style="color:blue">Save As</span>. Input a sensible file name (perhaps with the term "StartingFile" or "Original_Data") and make sure your file type is set to `jamovi file (.omv)` (red circle below). 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/saveasjamovi.png')
@@ -575,11 +70,10 @@ knitr::include_graphics('img/saveasjamovi.png')
 
 Browse to your PSYC 292 lab folder, and click save.
 
-Read over the remainder of Chapter 2.5 of this lab manual. 
+Read over the remainder of Chapter 2.2 of this lab manual. 
 
-Now, you are all ready for lab! You can close everything for now, but before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.
+Now, you are all ready for lab! You can close everything for now, but <b>before your lab session begins, open your .omv file in JAMOVI and your data dictionary pdf in a pdf viewer such as Preview or Adobe.</b>
 
-<b>To be clear, you should come to your lab session with your .omv file open in JAMOVI and your data dictionary pdf open in a pdf viewer such as Preview or Adobe.</b>
 
 
 ### The basics
@@ -590,7 +84,7 @@ In JAMOVI, click the three horizontal lines and then click <span style="color:bl
 
 Let's begin with a short data set {x = 1, 1, 4, 1, 2, 5, 7}
 
-Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into our new jamovi spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In <span style="color:blue">Setup</span>, I have also changed the name of this variable to `X` and changed the scale to continuous.):
+Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into our new JAMOVI spreadsheet. There are 7 measurements (1 measurement from each of 7 individual cases), so we will need 7 **rows** of data (In <span style="color:blue">Setup</span>, I have also changed the name of this variable to `X` and changed the scale to continuous.):
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.5.1.png')
@@ -608,7 +102,7 @@ From here, go to the top menu, click on <span style="color:blue">Analyses</span>
 knitr::include_graphics('img/2.5.2.png')
 ```
 
-As soon as you select the variable of interest, `X`, and use the arrow to move it to the “Variables” window, you will notice that jamovi produces a Descriptives table in the Results pane. By default, jamovi will show you the sample size, number of cases with missing measurements, mean, median, standard deviation, minimum, and maximum. 
+As soon as you select the variable of interest, `X`, and use the arrow to move it to the “Variables” window, you will notice that JAMOVI produces a Descriptives table in the Results pane. By default, JAMOVI will show you the sample size, number of cases with missing measurements, mean, median, standard deviation, minimum, and maximum. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/2.5.3.png')
@@ -635,7 +129,7 @@ knitr::include_graphics('img/2.5.5.png')
 
 Now, let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution. We want to relate the visualization back to the descriptive statistics. Use the EngageNS data. Remember, you should have already opened your .omv (JAMOVI file) of the EngageNS data on your computer. 
 
-Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting <span style="color:blue">Save As</span>. Give the file a new name. A file name related to the date and or the lab lesson might be helpful. Now, as you generate output by following the instructions below, you can continue to save this file. **When you are ready to start your homework, you can open the original file, save a copy with a new name, and create your homework output in that new file.**
+Because .omv files contain both the data and the output, we want to save a new file before each analysis. So, before you start following along, save a new copy of your .omv file by clicking on the three lines and selecting <span style="color:blue">Save As</span>. Give the file a new name (for example, Lab5_DescStats_LabDemo). A file name related to the date and or the lab lesson might be helpful. Now, as you generate output by following the instructions below, you can continue to save this file. **When you are ready to start your homework, you can open the *original* or *starting* file, save a copy with a new name (for example, Lab5_DescStats_Homework), and create your homework output in that new file.**
 
 Suppose we wanted to know about Nova Scotians' sleep duration. We can use both descriptive statistics and graphs such as histograms to explore a variable such as sleep duration. 
 
@@ -651,13 +145,13 @@ According to the data dictionary, `SLEEP` is the number of hours participants’
 knitr::include_graphics('img/sleepsearch.png')
 ```
 
-You will notice that there are two variables with similar names, `SLEEP` and `R_SLEEP`. In the EngageNS data, variables that start with `R_` are revised variables. This means they have been cleaned in some way. Not all variables needed cleaning, so they do not have a `R_` version. Always use the `R_` variable if it is there. We will see why in a minute!
+You will notice that there are two variables with similar names, `SLEEP` and `R_SLEEP`. As we mentioned in the last lab, in the EngageNS data, variables that start with `R_` are revised variables. This means they have been cleaned in some way. Not all variables needed cleaning, so they do not have a `R_` version. Always use the `R_` variable if it is there. We will see why in a minute!
 
 For our purposes right now, select `SLEEP` from the list by checking the box. When you click back to the Data tab (next to the Variables tab), you will be on the `SLEEP` variable.
 
-While `SLEEP` is highlighted, click on the <span style="color:blue">Setup</span> button. Consider including a variable description based on the information in the EngageNS data dictionary. Also, ensure that the information jamovi included for the variable attributes is correct based on your interpretation of this variable. `SLEEP` is measured in number of hours. It has equal intervals and a true zero (you can't have negative sleep). So, our `SLEEP` variable is a ratio scale. The measure type is set to continuous, so we are good to go. 
+While `SLEEP` is highlighted, click on the <span style="color:blue">Setup</span> or <span style="color:blue">Edit</span> button depending on which menu you are in: <span style="color:blue">Data</span> or <span style="color:blue">Variables</span>, respectively. Let's include a variable description based on the information in the EngageNS data dictionary. Also, ensure that the information JAMOVI included for the variable attributes is correct based on your interpretation of this variable. `SLEEP` is measured in number of hours. It has equal intervals and a true zero (you can't have negative sleep). So, our `SLEEP` variable is a ratio scale. The measure type is set to continuous, so we are good to go. 
 
-After you have considered the variable attributes, click on <span style="color:blue">Descriptives</span> again, or click on the up arrow to close the Setup panel. As you will recall, to get jamovi to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Click on the magnifying glass icon at the top of the list of variables to search. Select `SLEEP` and use the right arrow to move it to the “Variable” window at the right. 
+After you have considered the variable attributes, click on <span style="color:blue">Edit</span> (or <span style="color:blue">Setup</span>) again, or click on the up arrow to close the Setup panel. As you will recall, to get JAMOVI to produce a table of descriptive statistics, we begin in the top menu by selecting <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>. Click on the magnifying glass icon at the top of the list of variables to search. Select `SLEEP` and use the right arrow to move it to the “Variable” window at the right. 
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/movesleep.png')
@@ -775,7 +269,7 @@ If the measurement scale is nominal, we usually look at the mode for information
 
 The `SLEEP` variable is an example of how a skewed distribution and/or outliers can impact the mean. 
 
-Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean. **(For 292 labs in the Winter of 2025, you are asked to consider *Likert scales that have reasonably equal intervals* as interval scales. Based on what you read in the data dictionary about how the data for this variable were measured and what you know about the scales of measurement, determine if the variable attributes, specifically "Measure type", should be changed in your JAMOVI file or the current attribute is correct.)**
+Some concepts can be measured at multiple scales of measurement. Consider, for example, exercise behaviour of Nova Scotians. The descriptive statistics you choose to calculate usually depend on the scale of measurement. While browsing through the data dictionary, if we look at `HB_EXERCISE`, we see that the variable asks participants to indicate their agreement with the following statement: “In the past week, I regularly engaged in good quality exercise.” Participants’ agreement is indicated using a Likert scale, ranging from 1 to 7, wherein 1 = very strongly disagree and 7 = very strongly agree. Likert scales such as this one are ordinal; however, we often treat them as interval. In this case, we call it a quasi-interval scale. If we consider the scale ordinal, we would probably report the median. If we consider the scale quasi-interval, we would most likely report the mean. **(For 292 labs in the Winter of 2026, you are asked to consider *Likert scales with four or more levels that have reasonably equal intervals* as interval scales. Based on what you read in the data dictionary about how the data for this variable were measured and what you know about the scales of measurement, determine if the variable attributes, specifically "Measure type", should be changed in your JAMOVI file or the current attribute is correct.)**
 
 If, however, we look at `PA_VIGOROUS`, we see that the variable asks participants to indicate their physical activity participation in the previous month. Participants were instructed to enter the number of times they engaged in a a vigorous activity in the past month. This variable is measured on a ratio scale. Unless the data are skewed or there are outliers, we would likely report the mean. You can see that the answer to a research question about Nova Scotians' exercise, as well as the statistics you consider to formulate that answer, will depend upon the variable at which you look.  
 
@@ -819,9 +313,9 @@ knitr::include_graphics('img/belongingordinaloutput.png')
 
 You could write a sentence to report these results like this: Participants reported a sense of belonging corresponding to somewhere between neutral and very strong (*Med* = 5.00) with a discrepancy of 2 (*IQR* = 2.00).
 Or like this...
-Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and very strong.
+Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and somewhat strong.
 
-Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. (Remember: This is the default choice in 292 Labs for the Winter of 2025.)
+Let's say you felt that the `BELONGING` variable had equal spacing between intervals, so that you could consider it a quasi-interval variable. In that case, you might wish to report the mean and standard deviation. (Remember: This is the default choice in 292 Labs for the Winter of 2026.)
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belongingquasioutput.png')
@@ -831,7 +325,7 @@ Now, you might describe your results with a sentence such as: Participants repor
 Or like this...
 Participants reported a mean (SD) sense of belonging of 4.61 (1.68), corresponding to a sense of belonging between neutral and very strong.
 
-Finally, you might want to look at the data graphically. A histogram would be appropriate whether you are considering `BELONGING` to be ordinal or quasi-interval.
+Finally, you might want to look at the data graphically. A histogram would be appropriate if you are considering `BELONGING` to be quasi-interval or interval.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/belonginghistogram.png')
@@ -844,7 +338,7 @@ Let us look at another useful graph: the boxplot. A boxplot, or box plot, gives 
 
 Outside the box are two whiskers. The end of the lower whisker is the minimum score (excluding any outliers - we’ll get to what those are later), and the end of the higher/upper whisker is the maximum score (again, excluding any outliers). Note that boxplots can be presented horizontally or vertically. These graphs allow us to visualize the median, quartiles, interquartile range, range, and any potential outliers.
 
-Using the `SLEEP` and `R_SLEEP` variables, we can create boxplots. You should now feel comfortable accessing descriptive statistics and graphs in the jamovi menus (Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>). Move both variables into the Variables box. Under <span style="color:blue">Plots</span>, select Box plot. In the Results panel, jamovi will produce output containing two boxplots.
+Using the `SLEEP` and `R_SLEEP` variables, we can create boxplots. You should now feel comfortable accessing descriptive statistics and graphs in the JAMOVI menus (Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Descriptives</span>). Move both variables into the Variables box. Under <span style="color:blue">Plots</span>, select Box plot. In the Results panel, JAMOVI will produce output containing two boxplots.
 
 ```{r , echo=FALSE,dev='png'}
 knitr::include_graphics('img/sleepboxplots.png')
@@ -852,13 +346,13 @@ knitr::include_graphics('img/sleepboxplots.png')
 
 Just like when we looked at the histograms, looking at the boxplot for the `SLEEP` variable isn't very helpful. The garbage data (participants reporting 8e+06 or 8 million hours of sleep per day) squishes the boxplot, making the individual features impossible to see. The boxplot for `R_SLEEP` is more helpful. We can clearly see the median, IQR, whiskers (min/max excluding outliers), and outliers (black dots).
 
-Remember to save your file before closing jamovi by clicking on the three lines near the top left and selecting the appropriate command. You might have saved the .omv file you created as a newly named file as you began reading and following along in this section. If not, you might want to use <span style="color:blue">Save As</span> now and give the file a new name. The .omv file will have both data and the results of analyses you conducted. To save just your output, after clicking the three lines, select <span style="color:blue">Export</span>. This will allow you to save a pdf. 
+Remember to save your file before closing JAMOVI by clicking on the three lines near the top left and selecting the appropriate command. You might have saved the .omv file you created as a newly named file as you began reading and following along in this section. If not, you might want to use <span style="color:blue">Save As</span> now and give the file a new name. The .omv file will have both data and the results of analyses you conducted. Reminder: To save just your output, after clicking the three lines, select <span style="color:blue">Export</span>. This will allow you to save a pdf. 
 
 
 ### Editing graphs
 
 
-It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in jamovi. I might suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.
+It is helpful to know how to manipulate not just the superficial, cosmetic appearance of data visualizations, but also the components of graphs that communicate important information. For example, when you are trying to compare multiple graphs, it is very helpful if all of the features of the graphs, such as the axis scales and the bin widths, are the same. Unfortunately, this is not easy to accomplish in JAMOVI. We suggest using Excel to quickly chart your graphs, edit them, and compare/contrast them.
 
 
 ### Homework

@@ -311,7 +311,7 @@ Let's look at how Nova Scotians rated their sense of belonging. As before, click
 knitr::include_graphics('img/belongingordinaloutput.png')
 ```
 
-You could write a sentence to report these results like this: Participants reported a sense of belonging corresponding to somewhere between neutral and very strong (*Med* = 5.00) with a discrepancy of 2 (*IQR* = 2.00).
+You could write a sentence to report these results like this: Participants reported a sense of belonging corresponding to somewhere between neutral and somewhat strong (*Med* = 5.00) with a discrepancy of 2 (*IQR* = 2.00).
 Or like this...
 Participants reported a median (IQR) sense of belonging of 5 (2), corresponding to a sense of belonging between neutral and somewhat strong.
 

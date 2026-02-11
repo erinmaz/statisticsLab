@@ -514,3 +514,6 @@ fig:unnamed-chunk-20
 jamovi---week-4---january-27th-28th-29th
 thinking-about-data-practice-questions
 jamovi---week-5---february-3rd-4th-5th
+research-context-for-data-set-1
+intro-material-for-activities
+jamovi---week-9---march-10th-11th-12th

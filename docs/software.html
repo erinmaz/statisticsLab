@@ -203,7 +203,7 @@ mattcrump=1;
 <li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-11th-12th-13th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 11th, 12th, &amp; 13th</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.5.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.2</b> Research Context for Data Set</a></li>
+<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set-1"><i class="fa fa-check"></i><b>4.5.2</b> Research Context for Data Set</a></li>
 <li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.3</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
 <li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.4</b> Writing results in APA format</a></li>
 <li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Performing a one-sample <em>t</em>-test</a></li>
@@ -594,16 +594,21 @@ Okay, enough with the sales pitch. Let’s get started. Just as with any piece o
 <img src="img/computedvariable.png" alt="" width="75%" />
 <p><em>V-functions</em>.</p>
 <p>Several functions are already available in jamovi and available from the drop down box labelled <em>f<sub>x</sub></em>. A number of functions appear in pairs, one prefixed with a V and the other not. V functions perform their calculation on a variable as a whole whereas non-V functions perform their calculation row by row. For example, MEAN(A, B) will produce the mean of A and B for each row whereas VMEAN(A) gives the mean of all the values in A.</p>
-<div id="rationale-for-recoding" class="section level5 hasAnchor" number="0.3.3.2.1">
-<h5><span class="header-section-number">0.3.3.2.1</span> Rationale for Recoding<a href="software.html#rationale-for-recoding" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="research-context-for-data-set" class="section level5 hasAnchor" number="0.3.3.2.1">
+<h5><span class="header-section-number">0.3.3.2.1</span> Research Context for Data Set<a href="software.html#research-context-for-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We will be working with the Psych 291 data set. This data set is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. We are using a subset of the data from the survey for this lab.</p>
+<p>The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).</p>
+</div>
+<div id="rationale-for-recoding" class="section level5 hasAnchor" number="0.3.3.2.2">
+<h5><span class="header-section-number">0.3.3.2.2</span> Rationale for Recoding<a href="software.html#rationale-for-recoding" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <div class="marginnote">
 <p>This section and its subsections were developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
 <p>As you may recall from classes about research methods, one problem researchers using surveys face is response bias on the part of their participants. There are different kinds of response bias. For our purposes, consider participants who tire of answering survey questions and decide to select all extreme responses. These data are not useful.</p>
 <p>As one way to catch extreme responses, the researcher can word some of survey questions in the opposite way. Imagine an example where the researcher is using a scale on which “extremely agree” indicates participants score high on the construct being measured (ex. gratitude). Consider this survey statement: “On most days, I feel I have things in my life for which I am grateful.” A response of “extremely agree” indicates gratitude. The researcher may reword some statements in the questionnaire so that “extremely agree” indicates the participants score low on the construct. After rewording, another statement on the gratitude questionnaire might read like this: “I wish I were as fortunate as other people in my life who often come by success and/or material things more easily than I do.” A response of “extremely agree” indicates lack of gratitude.</p>
 <p>To be able to look at individual survey respondents’ score across all questions, their overall score on the gratitude scale, often, the researcher must first recode some “negatively” worded items’ scores. (You should consider “negatively” worded items to be worded oppositely to the construct being measured.) In the above example, the second answer would need to be recoded before being considered with the answer to the first item, the “positively” worded statement.</p>
-<div id="an-example-of-recoding-and-computing-a-new-variable" class="section level6 hasAnchor" number="0.3.3.2.1.1">
-<h6><span class="header-section-number">0.3.3.2.1.1</span> An Example of Recoding and Computing a New Variable<a href="software.html#an-example-of-recoding-and-computing-a-new-variable" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<div id="an-example-of-recoding-and-computing-a-new-variable" class="section level6 hasAnchor" number="0.3.3.2.2.1">
+<h6><span class="header-section-number">0.3.3.2.2.1</span> An Example of Recoding and Computing a New Variable<a href="software.html#an-example-of-recoding-and-computing-a-new-variable" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <div class="marginnote">
 <p>The following demonstration of how to recode data and compute a new variable is done using the example of the Perceived Stress Scale. This measurement tool is from Cohen, S., &amp; Williamson, G. (1988). Psychological stress in a probability sample of the United States. In S. Spacapan &amp; S. Oskamp (Eds.), <em>The social psychology of health: Claremont Symposium on Applied Social Psychology</em> (pp. 31–67). Newbury Park, CA: Sage. <strong>This material is being used for educational purposes. Please be sure to follow copyright laws if you plan to reuse this material.</strong></p>
 </div>
@@ -678,8 +683,8 @@ Move to the column for <code>T1_stress10</code>, highlight that column, and sele
 This may seem like a lot of work to do for a score on one variable; however, you can imagine these commands and having JAMOVI do this recoding and computation work is a mega timesaver when you are working with a large data set or recoding and/or performing computations with many variables.</p>
 </div>
 </div>
-<div id="z-scores-as-a-type-of-computed-variable-in-jamovi" class="section level5 hasAnchor" number="0.3.3.2.2">
-<h5><span class="header-section-number">0.3.3.2.2</span> Z-scores (as a Type of Computed Variable in JAMOVI)<a href="software.html#z-scores-as-a-type-of-computed-variable-in-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="z-scores-as-a-type-of-computed-variable-in-jamovi" class="section level5 hasAnchor" number="0.3.3.2.3">
+<h5><span class="header-section-number">0.3.3.2.3</span> Z-scores (as a Type of Computed Variable in JAMOVI)<a href="software.html#z-scores-as-a-type-of-computed-variable-in-jamovi" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <div class="marginnote">
 <p>This section was developed by Sherry Neville-MacLean. This content is added to what was presented by Navarro &amp; Foxcroft (2019) for the purposes of a lab lesson.</p>
 </div>
@@ -691,16 +696,16 @@ This may seem like a lot of work to do for a score on one variable; however, you
 <p>Remember to click the upward facing arrow to close the Computed Variable panel. <code>Standardized Stress Score</code> in the image below depicts the <em>z</em>-scores for <code>Stress Composite Score</code>. Notice that computed variables have a black circle to the right of their name near the top of the column in the <span style="color:blue">Data</span>.</p>
 <p><img src="img/StressScale_ZScoreColumn.png" /><!-- --></p>
 </div>
-<div id="homework" class="section level5 hasAnchor" number="0.3.3.2.3">
-<h5><span class="header-section-number">0.3.3.2.3</span> Homework<a href="software.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="homework" class="section level5 hasAnchor" number="0.3.3.2.4">
+<h5><span class="header-section-number">0.3.3.2.4</span> Homework<a href="software.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>See <a href="https://moodle.stfx.ca/course/view.php?id=29319">Moodle</a> for homework questions.</p>
 </div>
-<div id="copy-and-paste" class="section level5 hasAnchor" number="0.3.3.2.4">
-<h5><span class="header-section-number">0.3.3.2.4</span> Copy and Paste<a href="software.html#copy-and-paste" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="copy-and-paste" class="section level5 hasAnchor" number="0.3.3.2.5">
+<h5><span class="header-section-number">0.3.3.2.5</span> Copy and Paste<a href="software.html#copy-and-paste" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>jamovi produces nicely formatted tables and attractive plots. It is often useful to be able to copy and paste these, perhaps into a Word document, or into an email to a colleague. To copy results, right click on the object of interest, and from the menu, select exactly what you want to copy. The menu allows you to choose to copy only the image or the entire analysis. Selecting <code>copy</code> copies the content to the clipboard, and this content can be pasted into other programs in the usual way. You can practice this later on when we do some analyses.</p>
 </div>
-<div id="syntax-mode" class="section level5 hasAnchor" number="0.3.3.2.5">
-<h5><span class="header-section-number">0.3.3.2.5</span> Syntax Mode<a href="software.html#syntax-mode" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="syntax-mode" class="section level5 hasAnchor" number="0.3.3.2.6">
+<h5><span class="header-section-number">0.3.3.2.6</span> Syntax Mode<a href="software.html#syntax-mode" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>jamovi also provides an “R Syntax Mode”. In this mode, jamovi produces equivalent R code for each analysis. To change to syntax mode, select the Application menu to the top right of jamovi (a button with three vertical dots) and click the “Syntax mode” checkbox there. You can turn off syntax mode by clicking this a second time.</p>
 <p>In syntax mode, analyses continue to operate as before, but now they produce R syntax and <em>ascii output</em> like an R session. Like all results objects in jamovi, you can right click on these items (including the R syntax) and copy and paste them, for example into an R session. At present, the provided R syntax does not include the data import step and so this must be performed manually in R. There are many resources explaining how to import data into R and if you are interested we recommend you take a look at these; just search on the interweb.</p>
 </div>

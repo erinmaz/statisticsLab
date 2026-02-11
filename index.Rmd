@@ -224,6 +224,7 @@ New variables can be inserted or appended to the data set using the `Add` button
 
 #### Computed Variables - Week 5 - February 10th, 11th, & 12th
 
+
 Computed Variables are those which take their value by performing a computation on other variables. Computed Variables can be used for a range of purposes, including log transforms, *z*-scores, sum-scores, negative scoring, and means.
 
 One way computed variables can be added to the data set is with the <span style="color:blue">Add</span> button available on the <span style="color:blue">Data</span> tab. This will produce a drop-down menu in which you select where you want the variable to be placed. If you select <span style="color:blue">Insert</span> under the heading "Computed Variable," the new computed variable appears to the left of the currently highlighted variable. If you select <span style="color:blue">Append</span>, the variable goes to the far right of all variables currently included (think "Appendix"). Alternatively, under the <span style="color:blue">Data</span> menu tab, you could select <span style="color:blue">Compute</span>. This command will lead to the newly computed variable appearing to the right of your currently highlighted variable. After making your selection, a formula box where you can specify the formula will appear. The usual arithmetic operators are available. Some examples of formulas are:
@@ -253,6 +254,12 @@ knitr::include_graphics('img/computedvariable.png')
 *V-functions*.  
 
 Several functions are already available in jamovi and available from the drop down box labelled *f~x~*. A number of functions appear in pairs, one prefixed with a V and the other not. V functions perform their calculation on a variable as a whole whereas non-V functions perform their calculation row by row. For example, MEAN(A, B) will produce the mean of A and B for each row whereas VMEAN(A) gives the mean of all the values in A.
+
+##### Research Context for Data Set
+
+We will be working with the Psych 291 data set. This data set is from an online survey. Participants were students in a 200-level, Research Methods in Psychology course. They responded to questions about anxiety, stress, sleep, self-care, and substance use. We are using a subset of the data from the survey for this lab.
+
+The survey was delivered to the same class of students twice during the semester - once early in the term and once immediately after the course midterm. The person who constructed the data file used T1_ and T2_ before variable names to denote whether the data came from the beginning of the term (T1) or immediately after the midterm (T2).
 
 ##### Rationale for Recoding
 

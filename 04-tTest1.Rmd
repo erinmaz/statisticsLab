@@ -45,7 +45,7 @@ Following this 1-2 week exposure period, the parents and their infant returned t
 - [Data in SPSS format](https://drive.google.com/open?id=0Bz-rhZ21ShvOa3c4X3hqOWxwcUU)
 
 
-## JAMOVI - Week 9 - March 10th, 11th, & 12th
+## JAMOVI - Week 10 - March 17th, 18th, & 19th
 
 
 <div class="marginnote">
@@ -204,7 +204,7 @@ Can you find where all the numbers in the sentence came from in the two tables?
 
 A few notes about APA format:
 
-1. Always note the name of the test you performed (in this case, paired *t*-test). 
+1. Always note the name of the test you performed (in this case, paired *t*-test) and whether the result is significant or non-significant (*Note: We do not use the word insignificant.*). 
 
 2. We usually round to two decimal places, except for *p*-values. If you know the exact *p*-value, you round to two or three decimal places, except if that means it is *p* = .000. In this case, you would indicate *p* < .001.
 

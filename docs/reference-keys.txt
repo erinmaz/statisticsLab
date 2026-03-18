@@ -517,3 +517,5 @@ jamovi---week-5---february-3rd-4th-5th
 research-context-for-data-set-1
 intro-material-for-activities
 jamovi---week-9---march-10th-11th-12th
+jamovi---week-10---march-17th-18th-19th
+jamovi---week-11---march-24th-25th-26th

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Lab 5: t-test (Independent Sample) | Answering questions with data: Lab Manual</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Lab 5: t-test (Independent Sample) | Answering questions with data: Lab Manual" />
   <meta property="og:type" content="book" />
@@ -68,70 +68,6 @@ mattcrump=1;
 </script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -170,119 +106,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.2.2" data-path="index.html"><a href="index.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
 <li class="chapter" data-level="0.2.3" data-path="index.html"><a href="index.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
 </ul></li>
-<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#r"><i class="fa fa-check"></i><b>0.3</b> R</a>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#jamovi---week-1---january-6th-7th-8th"><i class="fa fa-check"></i><b>0.3</b> JAMOVI - Week 1 - January 6th, 7th, &amp; 8th</a>
 <ul>
-<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#why-r"><i class="fa fa-check"></i><b>0.3.1</b> Why R?</a></li>
-<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>0.3.2</b> Installing R and R Studio</a></li>
-<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>0.3.3</b> R studio notes and tips</a></li>
-<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>0.3.4</b> How to complete the R Labs</a></li>
-<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#screencast-tutorial"><i class="fa fa-check"></i><b>0.3.5</b> Screencast tutorial</a></li>
-<li class="chapter" data-level="0.3.6" data-path="index.html"><a href="index.html#r-studio-cloud"><i class="fa fa-check"></i><b>0.3.6</b> R-studio Cloud</a></li>
-</ul></li>
-<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#excel"><i class="fa fa-check"></i><b>0.4</b> Excel</a></li>
-<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#spss"><i class="fa fa-check"></i><b>0.5</b> SPSS</a>
-<ul>
-<li class="chapter" data-level="0.5.1" data-path="index.html"><a href="index.html#installing-spss"><i class="fa fa-check"></i><b>0.5.1</b> Installing SPSS</a></li>
-<li class="chapter" data-level="0.5.2" data-path="index.html"><a href="index.html#notes-and-tips"><i class="fa fa-check"></i><b>0.5.2</b> Notes and Tips</a></li>
-<li class="chapter" data-level="0.5.3" data-path="index.html"><a href="index.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>0.5.3</b> Opening SPSS and the SPSS layout</a></li>
-<li class="chapter" data-level="0.5.4" data-path="index.html"><a href="index.html#practice-problems"><i class="fa fa-check"></i><b>0.5.4</b> Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#jamovi---week-1---january-7th-8th-9th"><i class="fa fa-check"></i><b>0.6</b> JAMOVI - Week 1 - January 7th, 8th, &amp; 9th</a>
-<ul>
-<li class="chapter" data-level="0.6.1" data-path="index.html"><a href="index.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.6.1</b> Getting Started with jamovi</a></li>
-<li class="chapter" data-level="0.6.2" data-path="index.html"><a href="index.html#analyses"><i class="fa fa-check"></i><b>0.6.2</b> Analyses</a></li>
-<li class="chapter" data-level="0.6.3" data-path="index.html"><a href="index.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.6.3</b> The Spreadsheet</a></li>
-<li class="chapter" data-level="0.6.4" data-path="index.html"><a href="index.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.6.4</b> Loading Data in jamovi</a></li>
-<li class="chapter" data-level="0.6.5" data-path="index.html"><a href="index.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.6.5</b> Importing Unusual Data Files</a></li>
-<li class="chapter" data-level="0.6.6" data-path="index.html"><a href="index.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.6.6</b> Changing Data from One Level to Another</a></li>
-<li class="chapter" data-level="0.6.7" data-path="index.html"><a href="index.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.6.7</b> Installing Add-on Modules into jamovi</a></li>
-<li class="chapter" data-level="0.6.8" data-path="index.html"><a href="index.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.6.8</b> Quitting jamovi</a></li>
-<li class="chapter" data-level="0.6.9" data-path="index.html"><a href="index.html#summary"><i class="fa fa-check"></i><b>0.6.9</b> Summary</a></li>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#getting-started-with-jamovi"><i class="fa fa-check"></i><b>0.3.1</b> Getting Started with jamovi</a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#analyses"><i class="fa fa-check"></i><b>0.3.2</b> Analyses</a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#the-spreadsheet"><i class="fa fa-check"></i><b>0.3.3</b> The Spreadsheet</a></li>
+<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#loading-data-in-jamovi"><i class="fa fa-check"></i><b>0.3.4</b> Loading Data in jamovi</a></li>
+<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#importing-unusual-data-files"><i class="fa fa-check"></i><b>0.3.5</b> Importing Unusual Data Files</a></li>
+<li class="chapter" data-level="0.3.6" data-path="index.html"><a href="index.html#changing-data-from-one-level-to-another"><i class="fa fa-check"></i><b>0.3.6</b> Changing Data from One Level to Another</a></li>
+<li class="chapter" data-level="0.3.7" data-path="index.html"><a href="index.html#installing-add-on-modules-into-jamovi"><i class="fa fa-check"></i><b>0.3.7</b> Installing Add-on Modules into jamovi</a></li>
+<li class="chapter" data-level="0.3.8" data-path="index.html"><a href="index.html#quitting-jamovi"><i class="fa fa-check"></i><b>0.3.8</b> Quitting jamovi</a></li>
+<li class="chapter" data-level="0.3.9" data-path="index.html"><a href="index.html#summary"><i class="fa fa-check"></i><b>0.3.9</b> Summary</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a></li>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-4---january-27th-28th-29th"><i class="fa fa-check"></i><b>1.2</b> JAMOVI - Week 4 - January 27th, 28th, &amp; 29th</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#r-1"><i class="fa fa-check"></i><b>1.2</b> R</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#download-the-lab-templates"><i class="fa fa-check"></i><b>1.2.1</b> Download the lab templates</a></li>
-<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#get-some-data"><i class="fa fa-check"></i><b>1.2.2</b> Get some data</a></li>
-<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#look-at-the-data"><i class="fa fa-check"></i><b>1.2.3</b> Look at the data</a></li>
-<li class="chapter" data-level="1.2.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#make-plots-to-answer-questions"><i class="fa fa-check"></i><b>1.2.4</b> Make Plots to answer questions</a></li>
-<li class="chapter" data-level="1.2.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#ggplot2-basics"><i class="fa fa-check"></i><b>1.2.5</b> ggplot2 basics</a></li>
-<li class="chapter" data-level="1.2.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#more-questions-about-nyc-films"><i class="fa fa-check"></i><b>1.2.6</b> More questions about NYC films</a></li>
-<li class="chapter" data-level="1.2.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#gapminder-data"><i class="fa fa-check"></i><b>1.2.7</b> Gapminder Data</a></li>
-<li class="chapter" data-level="1.2.8" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#asking-questions-with-the-gap-minder-data"><i class="fa fa-check"></i><b>1.2.8</b> Asking Questions with the gap minder data</a></li>
-<li class="chapter" data-level="1.2.9" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#generalization-exercise"><i class="fa fa-check"></i><b>1.2.9</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="1.2.10" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#writing-assignment"><i class="fa fa-check"></i><b>1.2.10</b> Writing assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#excel-1"><i class="fa fa-check"></i><b>1.3</b> Excel</a></li>
-<li class="chapter" data-level="1.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#spss-1"><i class="fa fa-check"></i><b>1.4</b> SPSS</a>
-<ul>
-<li class="chapter" data-level="1.4.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-spss-and-the-spss-layout-1"><i class="fa fa-check"></i><b>1.4.1</b> Opening SPSS and the SPSS layout</a></li>
-<li class="chapter" data-level="1.4.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-variable-view-tab-1"><i class="fa fa-check"></i><b>1.4.2</b> Reviewing variable properties and the Variable View tab</a></li>
-<li class="chapter" data-level="1.4.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-and-producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.4.3</b> Opening a data file and producing different types of graphs</a></li>
-<li class="chapter" data-level="1.4.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.4.4</b> Homework</a></li>
-</ul></li>
-<li class="chapter" data-level="1.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi---week-4---february-4th-5th-6th"><i class="fa fa-check"></i><b>1.5</b> JAMOVI - Week 4 - February 4th, 5th, &amp; 6th</a>
-<ul>
-<li class="chapter" data-level="1.5.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#getting-ready-for-this-lesson"><i class="fa fa-check"></i><b>1.5.1</b> Getting ready for this lesson</a></li>
-<li class="chapter" data-level="1.5.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.5.2</b> Opening JAMOVI and Reviewing the JAMOVI Layout</a></li>
-<li class="chapter" data-level="1.5.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-edit-or-setup-button"><i class="fa fa-check"></i><b>1.5.3</b> Reviewing Variable Properties and the Edit or Setup button</a></li>
-<li class="chapter" data-level="1.5.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-through-the-jamovi-software"><i class="fa fa-check"></i><b>1.5.4</b> Opening a Data File (Through the JAMOVI Software)</a></li>
-<li class="chapter" data-level="1.5.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.5.5</b> Producing Different Types of Graphs</a></li>
-<li class="chapter" data-level="1.5.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#apa-formatting-of-figures"><i class="fa fa-check"></i><b>1.5.6</b> APA-formatting of Figures</a></li>
-<li class="chapter" data-level="1.5.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#apa-formatting-of-tables"><i class="fa fa-check"></i><b>1.5.7</b> APA-formatting of Tables</a></li>
-<li class="chapter" data-level="1.5.8" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-2"><i class="fa fa-check"></i><b>1.5.8</b> Homework</a></li>
-<li class="chapter" data-level="1.5.9" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data---practice-questions"><i class="fa fa-check"></i><b>1.5.9</b> Thinking about Data - Practice Questions</a></li>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#getting-ready-for-this-lesson"><i class="fa fa-check"></i><b>1.2.1</b> Getting ready for this lesson</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-jamovi-and-reviewing-the-jamovi-layout"><i class="fa fa-check"></i><b>1.2.2</b> Opening JAMOVI and Reviewing the JAMOVI Layout</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#reviewing-variable-properties-and-the-edit-or-setup-button"><i class="fa fa-check"></i><b>1.2.3</b> Reviewing Variable Properties and the Edit or Setup button</a></li>
+<li class="chapter" data-level="1.2.4" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#opening-a-data-file-through-the-jamovi-software"><i class="fa fa-check"></i><b>1.2.4</b> Opening a Data File (Through the JAMOVI Software)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#producing-different-types-of-graphs"><i class="fa fa-check"></i><b>1.2.5</b> Producing Different Types of Graphs</a></li>
+<li class="chapter" data-level="1.2.6" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#apa-formatting-of-figures"><i class="fa fa-check"></i><b>1.2.6</b> APA-formatting of Figures</a></li>
+<li class="chapter" data-level="1.2.7" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#apa-formatting-of-tables"><i class="fa fa-check"></i><b>1.2.7</b> APA-formatting of Tables</a></li>
+<li class="chapter" data-level="1.2.8" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#homework-1"><i class="fa fa-check"></i><b>1.2.8</b> Homework</a></li>
+<li class="chapter" data-level="1.2.9" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#thinking-about-data-practice-questions"><i class="fa fa-check"></i><b>1.2.9</b> Thinking about Data: Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics (and more graphs)</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a></li>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-5---february-3rd-4th-5th"><i class="fa fa-check"></i><b>2.2</b> JAMOVI - Week 5 - February 3rd, 4th, &amp; 5th</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#r-2"><i class="fa fa-check"></i><b>2.2</b> R</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-basics-in-r"><i class="fa fa-check"></i><b>2.2.1</b> Descriptives basics in R</a></li>
-<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#central-tendency"><i class="fa fa-check"></i><b>2.2.2</b> Central Tendency</a></li>
-<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#variation"><i class="fa fa-check"></i><b>2.2.3</b> Variation</a></li>
-<li class="chapter" data-level="2.2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptives-by-conditions"><i class="fa fa-check"></i><b>2.2.4</b> Descriptives by conditions</a></li>
-<li class="chapter" data-level="2.2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#describing-gapminder"><i class="fa fa-check"></i><b>2.2.5</b> Describing gapminder</a></li>
-<li class="chapter" data-level="2.2.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#generalization-exercise-1"><i class="fa fa-check"></i><b>2.2.6</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="2.2.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#writing-assignment-1"><i class="fa fa-check"></i><b>2.2.7</b> Writing assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#excel-2"><i class="fa fa-check"></i><b>2.3</b> Excel</a></li>
-<li class="chapter" data-level="2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#spss-2"><i class="fa fa-check"></i><b>2.4</b> SPSS</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics"><i class="fa fa-check"></i><b>2.4.1</b> Calculating Descriptive Statistics</a></li>
-<li class="chapter" data-level="2.4.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.4.2</b> Descriptive Statistics and Histograms</a></li>
-<li class="chapter" data-level="2.4.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs"><i class="fa fa-check"></i><b>2.4.3</b> Editing graphs</a></li>
-<li class="chapter" data-level="2.4.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots"><i class="fa fa-check"></i><b>2.4.4</b> Boxplots</a></li>
-<li class="chapter" data-level="2.4.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-3"><i class="fa fa-check"></i><b>2.4.5</b> Homework</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#jamovi---week-3---january-21st-22nd-23rd"><i class="fa fa-check"></i><b>2.5</b> JAMOVI - Week 3 - January 21st, 22nd, &amp; 23rd</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#getting-ready-for-this-lesson-1"><i class="fa fa-check"></i><b>2.5.1</b> Getting ready for this lesson</a></li>
-<li class="chapter" data-level="2.5.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics"><i class="fa fa-check"></i><b>2.5.2</b> The basics</a></li>
-<li class="chapter" data-level="2.5.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>2.5.3</b> Calculating Descriptive Statistics</a></li>
-<li class="chapter" data-level="2.5.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs"><i class="fa fa-check"></i><b>2.5.4</b> Descriptive Statistics and Graphs</a></li>
-<li class="chapter" data-level="2.5.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics"><i class="fa fa-check"></i><b>2.5.5</b> Selecting the appropriate descriptive statistics</a></li>
-<li class="chapter" data-level="2.5.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots-1"><i class="fa fa-check"></i><b>2.5.6</b> Boxplots</a></li>
-<li class="chapter" data-level="2.5.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs-1"><i class="fa fa-check"></i><b>2.5.7</b> Editing graphs</a></li>
-<li class="chapter" data-level="2.5.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-4"><i class="fa fa-check"></i><b>2.5.8</b> Homework</a></li>
-<li class="chapter" data-level="2.5.9" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions"><i class="fa fa-check"></i><b>2.5.9</b> Practice Questions</a></li>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#getting-ready-for-this-lesson-1"><i class="fa fa-check"></i><b>2.2.1</b> Getting ready for this lesson</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#the-basics"><i class="fa fa-check"></i><b>2.2.2</b> The basics</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#calculating-descriptive-statistics"><i class="fa fa-check"></i><b>2.2.3</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.2.4" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#descriptive-statistics-and-graphs"><i class="fa fa-check"></i><b>2.2.4</b> Descriptive Statistics and Graphs</a></li>
+<li class="chapter" data-level="2.2.5" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#selecting-the-appropriate-descriptive-statistics"><i class="fa fa-check"></i><b>2.2.5</b> Selecting the appropriate descriptive statistics</a></li>
+<li class="chapter" data-level="2.2.6" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#boxplots"><i class="fa fa-check"></i><b>2.2.6</b> Boxplots</a></li>
+<li class="chapter" data-level="2.2.7" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#editing-graphs"><i class="fa fa-check"></i><b>2.2.7</b> Editing graphs</a></li>
+<li class="chapter" data-level="2.2.8" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#homework-2"><i class="fa fa-check"></i><b>2.2.8</b> Homework</a></li>
+<li class="chapter" data-level="2.2.9" data-path="lab-2-descriptive-statistics-and-more-graphs.html"><a href="lab-2-descriptive-statistics-and-more-graphs.html#practice-questions"><i class="fa fa-check"></i><b>2.2.9</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Sampling and Sampling Distributions</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#r-3"><i class="fa fa-check"></i><b>3.1</b> R</a></li>
-<li class="chapter" data-level="3.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#excel-3"><i class="fa fa-check"></i><b>3.2</b> Excel</a></li>
-<li class="chapter" data-level="3.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#spss-3"><i class="fa fa-check"></i><b>3.3</b> SPSS</a></li>
+<li class="chapter" data-level="3.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#r"><i class="fa fa-check"></i><b>3.1</b> R</a></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#excel"><i class="fa fa-check"></i><b>3.2</b> Excel</a></li>
+<li class="chapter" data-level="3.3" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#spss"><i class="fa fa-check"></i><b>3.3</b> SPSS</a></li>
 <li class="chapter" data-level="3.4" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#jamovi---week-7---march-8-9"><i class="fa fa-check"></i><b>3.4</b> JAMOVI - Week 7 - March 8 &amp; 9</a>
 <ul>
 <li class="chapter" data-level="3.4.1" data-path="lab-3-sampling-and-sampling-distributions.html"><a href="lab-3-sampling-and-sampling-distributions.html#learning-objectives"><i class="fa fa-check"></i><b>3.4.1</b> Learning Objectives</a></li>
@@ -294,45 +167,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>4</b> Lab 4: t-Test (one-sample, paired sample)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#intro-material-for-r-and-spss-activities"><i class="fa fa-check"></i><b>4.1</b> Intro material for R and SPSS activities</a>
+<li class="chapter" data-level="4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#intro-material-for-activities"><i class="fa fa-check"></i><b>4.1</b> Intro material for activities</a>
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>4.1.1</b> Does Music Convey Social Information to Infants?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>4.1.2</b> Lab skills learned</a></li>
 <li class="chapter" data-level="4.1.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>4.1.3</b> Important Stuff</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#r-4"><i class="fa fa-check"></i><b>4.2</b> R</a>
+<li class="chapter" data-level="4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-10---march-17th-18th-19th"><i class="fa fa-check"></i><b>4.2</b> JAMOVI - Week 10 - March 17th, 18th, &amp; 19th</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#loading-the-data"><i class="fa fa-check"></i><b>4.2.1</b> Loading the data</a></li>
-<li class="chapter" data-level="4.2.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#inspect-the-data-frame"><i class="fa fa-check"></i><b>4.2.2</b> Inspect the data frame</a></li>
-<li class="chapter" data-level="4.2.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#get-the-data-for-experiment-one"><i class="fa fa-check"></i><b>4.2.3</b> Get the data for Experiment one</a></li>
-<li class="chapter" data-level="4.2.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.2.4</b> Baseline phase: Conduct a one sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.2.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>4.2.5</b> Test phase</a></li>
-<li class="chapter" data-level="4.2.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>4.2.6</b> Paired-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.2.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-the-findings"><i class="fa fa-check"></i><b>4.2.7</b> Graphing the findings</a></li>
-<li class="chapter" data-level="4.2.8" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#data-simulation"><i class="fa fa-check"></i><b>4.2.8</b> Data-simulation</a></li>
-<li class="chapter" data-level="4.2.9" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#generalization-exercise-2"><i class="fa fa-check"></i><b>4.2.9</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="4.2.10" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-assignment-2"><i class="fa fa-check"></i><b>4.2.10</b> Writing assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#excel-4"><i class="fa fa-check"></i><b>4.3</b> Excel</a></li>
-<li class="chapter" data-level="4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#spss-4"><i class="fa fa-check"></i><b>4.4</b> SPSS</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#experiment-background"><i class="fa fa-check"></i><b>4.4.1</b> Experiment Background</a></li>
-<li class="chapter" data-level="4.4.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.4.2</b> OPTIONAL: Performing a one sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.4.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test"><i class="fa fa-check"></i><b>4.4.3</b> Performing a paired-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.4.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#graphing-your-results"><i class="fa fa-check"></i><b>4.4.4</b> Graphing your results</a></li>
-<li class="chapter" data-level="4.4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#optional-the-relationship-between-the-one-sample-and-the-paired-samples-t-test"><i class="fa fa-check"></i><b>4.4.5</b> OPTIONAL: The relationship between the one-sample and the paired-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.4.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#using-descriptive-statistics-to-give-context-to-inferential-statistics"><i class="fa fa-check"></i><b>4.4.6</b> Using descriptive statistics to give context to inferential statistics</a></li>
-<li class="chapter" data-level="4.4.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#lab-homework-6"><i class="fa fa-check"></i><b>4.4.7</b> Lab Homework #6</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#jamovi---week-9---march-11th-12th-13th"><i class="fa fa-check"></i><b>4.5</b> JAMOVI - Week 9 - March 11th, 12th, &amp; 13th</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.5.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.5.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set"><i class="fa fa-check"></i><b>4.5.2</b> Research Context for Data Set</a></li>
-<li class="chapter" data-level="4.5.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test-1"><i class="fa fa-check"></i><b>4.5.3</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
-<li class="chapter" data-level="4.5.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.5.4</b> Writing results in APA format</a></li>
-<li class="chapter" data-level="4.5.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.5.5</b> Performing a one-sample <em>t</em>-test</a></li>
-<li class="chapter" data-level="4.5.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.5.6</b> Homework Questions</a></li>
-<li class="chapter" data-level="4.5.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.5.7</b> Practice Questions</a></li>
+<li class="chapter" data-level="4.2.1" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#learning-objectives-1"><i class="fa fa-check"></i><b>4.2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#research-context-for-data-set-1"><i class="fa fa-check"></i><b>4.2.2</b> Research Context for Data Set</a></li>
+<li class="chapter" data-level="4.2.3" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-paired-samples-t-test"><i class="fa fa-check"></i><b>4.2.3</b> Performing a Paired-Samples <em>t</em>-Test</a></li>
+<li class="chapter" data-level="4.2.4" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#writing-results-in-apa-format"><i class="fa fa-check"></i><b>4.2.4</b> Writing results in APA format</a></li>
+<li class="chapter" data-level="4.2.5" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>4.2.5</b> Performing a one-sample <em>t</em>-test</a></li>
+<li class="chapter" data-level="4.2.6" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#homework-questions"><i class="fa fa-check"></i><b>4.2.6</b> Homework Questions</a></li>
+<li class="chapter" data-level="4.2.7" data-path="lab-4-t-test-one-sample-paired-sample.html"><a href="lab-4-t-test-one-sample-paired-sample.html#practice-questions-1"><i class="fa fa-check"></i><b>4.2.7</b> Practice Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html"><i class="fa fa-check"></i><b>5</b> Lab 5: <em>t</em>-test (Independent Sample)</a>
@@ -343,72 +192,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>5.2</b> Lab skills learned</a></li>
 <li class="chapter" data-level="5.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>5.3</b> Important Stuff</a></li>
-<li class="chapter" data-level="5.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#r-5"><i class="fa fa-check"></i><b>5.4</b> R</a>
+<li class="chapter" data-level="5.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi---week-11---march-24th-25th-26th"><i class="fa fa-check"></i><b>5.4</b> JAMOVI - Week 11 - March 24th, 25th, &amp; 26th</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#load-the-data"><i class="fa fa-check"></i><b>5.4.1</b> Load the data</a></li>
-<li class="chapter" data-level="5.4.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#inspect-data-frame"><i class="fa fa-check"></i><b>5.4.2</b> Inspect data frame</a></li>
-<li class="chapter" data-level="5.4.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#find-the-data-you-need"><i class="fa fa-check"></i><b>5.4.3</b> Find the data you need</a></li>
-<li class="chapter" data-level="5.4.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#look-at-the-dependent-variable."><i class="fa fa-check"></i><b>5.4.4</b> Look at the dependent variable.</a></li>
-<li class="chapter" data-level="5.4.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#conduct-independent-samples-t-test"><i class="fa fa-check"></i><b>5.4.5</b> Conduct Independent samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="5.4.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#remaining-ratings"><i class="fa fa-check"></i><b>5.4.6</b> Remaining ratings</a></li>
-<li class="chapter" data-level="5.4.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#reconstructing-the-graph-from-the-paper"><i class="fa fa-check"></i><b>5.4.7</b> Reconstructing the graph from the paper</a></li>
-<li class="chapter" data-level="5.4.8" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#generalization-exercise-3"><i class="fa fa-check"></i><b>5.4.8</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="5.4.9" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#writing-assignment-3"><i class="fa fa-check"></i><b>5.4.9</b> Writing assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#excel-5"><i class="fa fa-check"></i><b>5.5</b> Excel</a></li>
-<li class="chapter" data-level="5.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#spss-5"><i class="fa fa-check"></i><b>5.6</b> SPSS</a>
-<ul>
-<li class="chapter" data-level="5.6.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>5.6.1</b> Experiment Background</a></li>
-<li class="chapter" data-level="5.6.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>5.6.2</b> Performing an independent-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="5.6.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data"><i class="fa fa-check"></i><b>5.6.3</b> Graphing your data</a></li>
-<li class="chapter" data-level="5.6.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-activities"><i class="fa fa-check"></i><b>5.6.4</b> Optional activities</a></li>
-<li class="chapter" data-level="5.6.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7"><i class="fa fa-check"></i><b>5.6.5</b> Lab Homework #7</a></li>
-<li class="chapter" data-level="5.6.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems"><i class="fa fa-check"></i><b>5.6.6</b> Example answers to practice problems</a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#jamovi---week-10---march-18th-19th-20th"><i class="fa fa-check"></i><b>5.7</b> JAMOVI - Week 10 - March 18th, 19th, &amp; 20th</a>
-<ul>
-<li class="chapter" data-level="5.7.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks"><i class="fa fa-check"></i><b>5.7.1</b> Pre-lab reading and tasks</a></li>
-<li class="chapter" data-level="5.7.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>5.7.2</b> Performing an independent-samples <em>t</em>-test</a></li>
-<li class="chapter" data-level="5.7.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections"><i class="fa fa-check"></i><b>5.7.3</b> Some APA formatting reminders for writing results sections</a></li>
-<li class="chapter" data-level="5.7.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data-1"><i class="fa fa-check"></i><b>5.7.4</b> Graphing your data</a></li>
-<li class="chapter" data-level="5.7.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises"><i class="fa fa-check"></i><b>5.7.5</b> Optional exercises</a></li>
-<li class="chapter" data-level="5.7.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7-1"><i class="fa fa-check"></i><b>5.7.6</b> Lab Homework #7</a></li>
-<li class="chapter" data-level="5.7.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#practice-problems-1"><i class="fa fa-check"></i><b>5.7.7</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.4.1" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks"><i class="fa fa-check"></i><b>5.4.1</b> Pre-lab reading and tasks</a></li>
+<li class="chapter" data-level="5.4.2" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>5.4.2</b> Performing an independent-samples <em>t</em>-test</a></li>
+<li class="chapter" data-level="5.4.3" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections"><i class="fa fa-check"></i><b>5.4.3</b> Some APA formatting reminders for writing results sections</a></li>
+<li class="chapter" data-level="5.4.4" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#graphing-your-data"><i class="fa fa-check"></i><b>5.4.4</b> Graphing your data</a></li>
+<li class="chapter" data-level="5.4.5" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#optional-exercises"><i class="fa fa-check"></i><b>5.4.5</b> Optional exercises</a></li>
+<li class="chapter" data-level="5.4.6" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#lab-homework-7"><i class="fa fa-check"></i><b>5.4.6</b> Lab Homework #7</a></li>
+<li class="chapter" data-level="5.4.7" data-path="lab-5-t-test-independent-sample.html"><a href="lab-5-t-test-independent-sample.html#practice-problems"><i class="fa fa-check"></i><b>5.4.7</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html"><i class="fa fa-check"></i><b>6</b> Lab 6: Correlation</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>6.1</b> General Goals</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#important-info-2"><i class="fa fa-check"></i><b>6.1.1</b> Important Info</a></li>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#important-info"><i class="fa fa-check"></i><b>6.1.1</b> Important Info</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#r-6"><i class="fa fa-check"></i><b>6.2</b> R</a>
+<li class="chapter" data-level="6.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#r-1"><i class="fa fa-check"></i><b>6.2</b> R</a>
 <ul>
 <li class="chapter" data-level="6.2.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#cor-for-correlation"><i class="fa fa-check"></i><b>6.2.1</b> cor for correlation</a></li>
 <li class="chapter" data-level="6.2.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#world-happiness-report"><i class="fa fa-check"></i><b>6.2.2</b> World Happiness Report</a></li>
-<li class="chapter" data-level="6.2.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#generalization-exercise-4"><i class="fa fa-check"></i><b>6.2.3</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="6.2.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#writing-assignment-4"><i class="fa fa-check"></i><b>6.2.4</b> Writing assignment</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#generalization-exercise"><i class="fa fa-check"></i><b>6.2.3</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="6.2.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#writing-assignment"><i class="fa fa-check"></i><b>6.2.4</b> Writing assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#excel-6"><i class="fa fa-check"></i><b>6.3</b> Excel</a></li>
-<li class="chapter" data-level="6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#spss-6"><i class="fa fa-check"></i><b>6.4</b> SPSS</a>
+<li class="chapter" data-level="6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#excel-1"><i class="fa fa-check"></i><b>6.3</b> Excel</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#spss-1"><i class="fa fa-check"></i><b>6.4</b> SPSS</a>
 <ul>
 <li class="chapter" data-level="6.4.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>6.4.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
 <li class="chapter" data-level="6.4.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix"><i class="fa fa-check"></i><b>6.4.2</b> Correlation Matrix</a></li>
 <li class="chapter" data-level="6.4.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>6.4.3</b> Correlation and Scatterplots</a></li>
 <li class="chapter" data-level="6.4.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#splitting-a-file"><i class="fa fa-check"></i><b>6.4.4</b> Splitting a File</a></li>
-<li class="chapter" data-level="6.4.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-2"><i class="fa fa-check"></i><b>6.4.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.4.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-1"><i class="fa fa-check"></i><b>6.4.5</b> Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi---week-11---april-2nd-3rd"><i class="fa fa-check"></i><b>6.5</b> JAMOVI - Week 11 - April 2nd &amp; 3rd</a>
+<li class="chapter" data-level="6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi---week-12---april-1st-2nd-3rd---for-psyc-292-students"><i class="fa fa-check"></i><b>6.5</b> JAMOVI - Week 12 - April 1st, 2nd, &amp; 3rd - For PSYC 292 Students</a>
 <ul>
 <li class="chapter" data-level="6.5.1" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#pre-lab-reading-and-tasks-1"><i class="fa fa-check"></i><b>6.5.1</b> Pre-lab reading and tasks</a></li>
 <li class="chapter" data-level="6.5.2" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-coefficient-for-bivariate-data"><i class="fa fa-check"></i><b>6.5.2</b> Correlation Coefficient for Bivariate Data</a></li>
 <li class="chapter" data-level="6.5.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-1"><i class="fa fa-check"></i><b>6.5.3</b> Correlation Matrix</a></li>
 <li class="chapter" data-level="6.5.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation"><i class="fa fa-check"></i><b>6.5.4</b> APA format reporting of a correlation</a></li>
 <li class="chapter" data-level="6.5.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>6.5.5</b> Correlation and Scatterplots</a></li>
-<li class="chapter" data-level="6.5.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-1"><i class="fa fa-check"></i><b>6.5.6</b> Optional activities</a></li>
+<li class="chapter" data-level="6.5.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities"><i class="fa fa-check"></i><b>6.5.6</b> Optional activities</a></li>
 <li class="chapter" data-level="6.5.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-1"><i class="fa fa-check"></i><b>6.5.7</b> Example answers to optional activities</a></li>
-<li class="chapter" data-level="6.5.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-5"><i class="fa fa-check"></i><b>6.5.8</b> Homework</a></li>
-<li class="chapter" data-level="6.5.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-3"><i class="fa fa-check"></i><b>6.5.9</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-3"><i class="fa fa-check"></i><b>6.5.8</b> Homework</a></li>
+<li class="chapter" data-level="6.5.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-2"><i class="fa fa-check"></i><b>6.5.9</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#jamovi-correlation-for-psyc-394-students"><i class="fa fa-check"></i><b>6.6</b> JAMOVI – Correlation – FOR PSYC 394 STUDENTS</a>
 <ul>
@@ -417,10 +244,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.6.3" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-matrix-2"><i class="fa fa-check"></i><b>6.6.3</b> Correlation Matrix</a></li>
 <li class="chapter" data-level="6.6.4" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#apa-format-reporting-of-a-correlation-1"><i class="fa fa-check"></i><b>6.6.4</b> APA format reporting of a correlation</a></li>
 <li class="chapter" data-level="6.6.5" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#correlation-and-scatterplots-2"><i class="fa fa-check"></i><b>6.6.5</b> Correlation and Scatterplots</a></li>
-<li class="chapter" data-level="6.6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-2"><i class="fa fa-check"></i><b>6.6.6</b> Optional activities</a></li>
+<li class="chapter" data-level="6.6.6" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#optional-activities-1"><i class="fa fa-check"></i><b>6.6.6</b> Optional activities</a></li>
 <li class="chapter" data-level="6.6.7" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#example-answers-to-optional-activities-2"><i class="fa fa-check"></i><b>6.6.7</b> Example answers to optional activities</a></li>
-<li class="chapter" data-level="6.6.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-6"><i class="fa fa-check"></i><b>6.6.8</b> Homework</a></li>
-<li class="chapter" data-level="6.6.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-4"><i class="fa fa-check"></i><b>6.6.9</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.6.8" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#homework-4"><i class="fa fa-check"></i><b>6.6.8</b> Homework</a></li>
+<li class="chapter" data-level="6.6.9" data-path="lab-6-correlation.html"><a href="lab-6-correlation.html#practice-problems-3"><i class="fa fa-check"></i><b>6.6.9</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html"><i class="fa fa-check"></i><b>7</b> Lab 7 One-way ANOVA</a>
@@ -432,12 +259,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>7.2</b> Lab Skills Learned</a></li>
 <li class="chapter" data-level="7.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
-<li class="chapter" data-level="7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#r-7"><i class="fa fa-check"></i><b>7.4</b> R</a>
+<li class="chapter" data-level="7.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#r-2"><i class="fa fa-check"></i><b>7.4</b> R</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#load-the-data-2"><i class="fa fa-check"></i><b>7.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#load-the-data-1"><i class="fa fa-check"></i><b>7.4.1</b> Load the data</a></li>
 <li class="chapter" data-level="7.4.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#inspect-the-dataframe"><i class="fa fa-check"></i><b>7.4.2</b> Inspect the dataframe</a></li>
 <li class="chapter" data-level="7.4.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#get-the-data-you-need"><i class="fa fa-check"></i><b>7.4.3</b> Get the data you need</a></li>
-<li class="chapter" data-level="7.4.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#look-at-the-data-2"><i class="fa fa-check"></i><b>7.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="7.4.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#look-at-the-data-1"><i class="fa fa-check"></i><b>7.4.4</b> Look at the data</a></li>
 <li class="chapter" data-level="7.4.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#conduct-the-anova"><i class="fa fa-check"></i><b>7.4.5</b> Conduct the ANOVA</a></li>
 <li class="chapter" data-level="7.4.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#reporting-the-anova-results"><i class="fa fa-check"></i><b>7.4.6</b> Reporting the ANOVA results</a></li>
 <li class="chapter" data-level="7.4.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#individual-comparisons"><i class="fa fa-check"></i><b>7.4.7</b> Individual comparisons</a></li>
@@ -447,13 +274,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#control-vs-reactivationtetris"><i class="fa fa-check"></i><b>7.5</b> control vs reactivation+Tetris</a></li>
 <li class="chapter" data-level="7.6" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#tetris_only-vs-reactivationtetris"><i class="fa fa-check"></i><b>7.6</b> Tetris_only vs reactivation+Tetris</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#generalization-exercise-5"><i class="fa fa-check"></i><b>7.6.1</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="7.6.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-assignment-5"><i class="fa fa-check"></i><b>7.6.2</b> Writing assignment</a></li>
+<li class="chapter" data-level="7.6.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#generalization-exercise-1"><i class="fa fa-check"></i><b>7.6.1</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="7.6.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#writing-assignment-1"><i class="fa fa-check"></i><b>7.6.2</b> Writing assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#excel-7"><i class="fa fa-check"></i><b>7.7</b> Excel</a></li>
-<li class="chapter" data-level="7.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#spss-7"><i class="fa fa-check"></i><b>7.8</b> SPSS</a>
+<li class="chapter" data-level="7.7" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#excel-2"><i class="fa fa-check"></i><b>7.7</b> Excel</a></li>
+<li class="chapter" data-level="7.8" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#spss-2"><i class="fa fa-check"></i><b>7.8</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="7.8.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>7.8.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.8.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-1"><i class="fa fa-check"></i><b>7.8.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="7.8.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>7.8.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
 <li class="chapter" data-level="7.8.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests"><i class="fa fa-check"></i><b>7.8.3</b> Follow-Up Tests</a></li>
 <li class="chapter" data-level="7.8.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#planned-comparisons-t-contrasts"><i class="fa fa-check"></i><b>7.8.4</b> Planned Comparisons: T-Contrasts</a></li>
@@ -463,7 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.9" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#jamovi"><i class="fa fa-check"></i><b>7.9</b> JAMOVI</a>
 <ul>
-<li class="chapter" data-level="7.9.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>7.9.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.9.1" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#experiment-background-2"><i class="fa fa-check"></i><b>7.9.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="7.9.2" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#checking-assumptions"><i class="fa fa-check"></i><b>7.9.2</b> Checking Assumptions</a></li>
 <li class="chapter" data-level="7.9.3" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><i class="fa fa-check"></i><b>7.9.3</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
 <li class="chapter" data-level="7.9.4" data-path="lab-7-one-way-anova.html"><a href="lab-7-one-way-anova.html#follow-up-tests-1"><i class="fa fa-check"></i><b>7.9.4</b> Follow-Up Tests</a></li>
@@ -478,37 +305,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
 <li class="chapter" data-level="8.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
-<li class="chapter" data-level="8.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#r-8"><i class="fa fa-check"></i><b>8.4</b> R</a>
+<li class="chapter" data-level="8.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#r-3"><i class="fa fa-check"></i><b>8.4</b> R</a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#load-the-data-3"><i class="fa fa-check"></i><b>8.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#load-the-data-2"><i class="fa fa-check"></i><b>8.4.1</b> Load the data</a></li>
 <li class="chapter" data-level="8.4.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#inspect-the-dataframe-1"><i class="fa fa-check"></i><b>8.4.2</b> Inspect the dataframe</a></li>
 <li class="chapter" data-level="8.4.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#get-the-data-you-need-1"><i class="fa fa-check"></i><b>8.4.3</b> Get the data you need</a></li>
-<li class="chapter" data-level="8.4.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-data-3"><i class="fa fa-check"></i><b>8.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-data-2"><i class="fa fa-check"></i><b>8.4.4</b> Look at the data</a></li>
 <li class="chapter" data-level="8.4.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#look-at-the-means"><i class="fa fa-check"></i><b>8.4.5</b> Look at the means</a></li>
 <li class="chapter" data-level="8.4.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-the-repeated-measures-anova"><i class="fa fa-check"></i><b>8.4.6</b> Conduct the repeated Measures ANOVA</a></li>
 <li class="chapter" data-level="8.4.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#follow-up-comparisons"><i class="fa fa-check"></i><b>8.4.7</b> Follow-up comparisons</a></li>
 <li class="chapter" data-level="8.4.8" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#reporting-everything"><i class="fa fa-check"></i><b>8.4.8</b> Reporting everything</a></li>
-<li class="chapter" data-level="8.4.9" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#generalization-exercise-6"><i class="fa fa-check"></i><b>8.4.9</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="8.4.10" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#writing-assignment-6"><i class="fa fa-check"></i><b>8.4.10</b> Writing assignment</a></li>
+<li class="chapter" data-level="8.4.9" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#generalization-exercise-2"><i class="fa fa-check"></i><b>8.4.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="8.4.10" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#writing-assignment-2"><i class="fa fa-check"></i><b>8.4.10</b> Writing assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-8"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
-<li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-8"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
+<li class="chapter" data-level="8.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#excel-3"><i class="fa fa-check"></i><b>8.5</b> Excel</a></li>
+<li class="chapter" data-level="8.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#spss-3"><i class="fa fa-check"></i><b>8.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.6.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>8.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.6.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>8.6.2</b> Produce a frequency histogram and remove outliers</a></li>
 <li class="chapter" data-level="8.6.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>8.6.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
 <li class="chapter" data-level="8.6.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>8.6.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
-<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.6.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-4"><i class="fa fa-check"></i><b>8.6.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="8.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#jamovi-1"><i class="fa fa-check"></i><b>8.7</b> JAMOVI</a>
 <ul>
-<li class="chapter" data-level="8.7.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>8.7.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.7.1" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>8.7.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="8.7.2" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#checking-assumptions-1"><i class="fa fa-check"></i><b>8.7.2</b> Checking Assumptions</a></li>
 <li class="chapter" data-level="8.7.3" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-and-graph-one-factor-repeated-measures-anova-1"><i class="fa fa-check"></i><b>8.7.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
 <li class="chapter" data-level="8.7.4" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#conduct-follow-up-tests"><i class="fa fa-check"></i><b>8.7.4</b> Conduct follow-up tests</a></li>
 <li class="chapter" data-level="8.7.5" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#some-apa-formatting-reminders-for-writing-results-sections-2"><i class="fa fa-check"></i><b>8.7.5</b> Some APA formatting reminders for writing results sections</a></li>
-<li class="chapter" data-level="8.7.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#homework-7"><i class="fa fa-check"></i><b>8.7.6</b> Homework</a></li>
-<li class="chapter" data-level="8.7.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.7.7</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.7.6" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#homework-5"><i class="fa fa-check"></i><b>8.7.6</b> Homework</a></li>
+<li class="chapter" data-level="8.7.7" data-path="lab-8-repeated-measures-anova.html"><a href="lab-8-repeated-measures-anova.html#practice-problems-5"><i class="fa fa-check"></i><b>8.7.7</b> Practice Problems</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9: Factorial ANOVA</a>
@@ -520,30 +347,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
 <li class="chapter" data-level="9.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
-<li class="chapter" data-level="9.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#r-9"><i class="fa fa-check"></i><b>9.4</b> R</a>
+<li class="chapter" data-level="9.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#r-4"><i class="fa fa-check"></i><b>9.4</b> R</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#load-the-data-4"><i class="fa fa-check"></i><b>9.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#load-the-data-3"><i class="fa fa-check"></i><b>9.4.1</b> Load the data</a></li>
 <li class="chapter" data-level="9.4.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#inspect-the-dataframe-2"><i class="fa fa-check"></i><b>9.4.2</b> Inspect the dataframe</a></li>
 <li class="chapter" data-level="9.4.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-you-need-2"><i class="fa fa-check"></i><b>9.4.3</b> Get the data you need</a></li>
 <li class="chapter" data-level="9.4.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#get-the-data-into-the-format-you-want"><i class="fa fa-check"></i><b>9.4.4</b> Get the data into the format you want</a></li>
-<li class="chapter" data-level="9.4.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-data-4"><i class="fa fa-check"></i><b>9.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="9.4.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-data-3"><i class="fa fa-check"></i><b>9.4.5</b> Look at the data</a></li>
 <li class="chapter" data-level="9.4.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#look-at-the-means-1"><i class="fa fa-check"></i><b>9.4.6</b> Look at the means</a></li>
 <li class="chapter" data-level="9.4.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-the-anova-1"><i class="fa fa-check"></i><b>9.4.7</b> Conduct the ANOVA</a></li>
 <li class="chapter" data-level="9.4.8" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#between-subjects-anova"><i class="fa fa-check"></i><b>9.4.8</b> Between Subjects ANOVA</a></li>
 <li class="chapter" data-level="9.4.9" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.9</b> Repeated measures ANOVA</a></li>
 <li class="chapter" data-level="9.4.10" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#follow-up-comparisons-1"><i class="fa fa-check"></i><b>9.4.10</b> Follow-up comparisons</a></li>
-<li class="chapter" data-level="9.4.11" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#generalization-exercise-7"><i class="fa fa-check"></i><b>9.4.11</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="9.4.11" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#generalization-exercise-3"><i class="fa fa-check"></i><b>9.4.11</b> Generalization Exercise</a></li>
 <li class="chapter" data-level="9.4.12" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#writing-asignment"><i class="fa fa-check"></i><b>9.4.12</b> Writing asignment</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-9"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
-<li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-9"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
+<li class="chapter" data-level="9.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#excel-4"><i class="fa fa-check"></i><b>9.5</b> Excel</a></li>
+<li class="chapter" data-level="9.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#spss-4"><i class="fa fa-check"></i><b>9.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-7"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.6.1" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>9.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="9.6.2" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="9.6.3" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects"><i class="fa fa-check"></i><b>9.6.3</b> Calculate simple effects</a></li>
 <li class="chapter" data-level="9.6.4" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="9.6.5" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#calculate-simple-effects-1"><i class="fa fa-check"></i><b>9.6.5</b> Calculate simple effects</a></li>
-<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.6.6" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>9.6.6</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="9.7" data-path="lab-9-factorial-anova.html"><a href="lab-9-factorial-anova.html#jamovi-2"><i class="fa fa-check"></i><b>9.7</b> JAMOVI</a></li>
 </ul></li>
@@ -555,25 +382,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
 <li class="chapter" data-level="10.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
-<li class="chapter" data-level="10.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#r-10"><i class="fa fa-check"></i><b>10.4</b> R</a>
+<li class="chapter" data-level="10.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#r-5"><i class="fa fa-check"></i><b>10.4</b> R</a>
 <ul>
-<li class="chapter" data-level="10.4.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#load-the-data-5"><i class="fa fa-check"></i><b>10.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#load-the-data-4"><i class="fa fa-check"></i><b>10.4.1</b> Load the data</a></li>
 <li class="chapter" data-level="10.4.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#inspect-the-dataframe-3"><i class="fa fa-check"></i><b>10.4.2</b> Inspect the dataframe</a></li>
 <li class="chapter" data-level="10.4.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-you-need-3"><i class="fa fa-check"></i><b>10.4.3</b> Get the data you need</a></li>
 <li class="chapter" data-level="10.4.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#get-the-data-into-the-format-you-want-1"><i class="fa fa-check"></i><b>10.4.4</b> Get the data into the format you want</a></li>
-<li class="chapter" data-level="10.4.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-data-5"><i class="fa fa-check"></i><b>10.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="10.4.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-data-4"><i class="fa fa-check"></i><b>10.4.5</b> Look at the data</a></li>
 <li class="chapter" data-level="10.4.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#look-at-the-means-2"><i class="fa fa-check"></i><b>10.4.6</b> Look at the means</a></li>
 <li class="chapter" data-level="10.4.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-the-anova-2"><i class="fa fa-check"></i><b>10.4.7</b> Conduct the ANOVA</a></li>
-<li class="chapter" data-level="10.4.8" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#generalization-exercise-8"><i class="fa fa-check"></i><b>10.4.8</b> Generalization Exercise</a></li>
-<li class="chapter" data-level="10.4.9" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#writing-assignment-7"><i class="fa fa-check"></i><b>10.4.9</b> Writing assignment</a></li>
+<li class="chapter" data-level="10.4.8" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#generalization-exercise-4"><i class="fa fa-check"></i><b>10.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="10.4.9" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#writing-assignment-3"><i class="fa fa-check"></i><b>10.4.9</b> Writing assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-10"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
-<li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-10"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
+<li class="chapter" data-level="10.5" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#excel-5"><i class="fa fa-check"></i><b>10.5</b> Excel</a></li>
+<li class="chapter" data-level="10.6" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#spss-5"><i class="fa fa-check"></i><b>10.6</b> SPSS</a>
 <ul>
-<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-8"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.6.1" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#experiment-background-6"><i class="fa fa-check"></i><b>10.6.1</b> Experiment Background</a></li>
 <li class="chapter" data-level="10.6.2" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
 <li class="chapter" data-level="10.6.3" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>10.6.3</b> Calculate simple effects</a></li>
-<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.6.4" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>10.6.4</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10.7" data-path="lab-10-mixed-factorial-anova.html"><a href="lab-10-mixed-factorial-anova.html#jamovi-3"><i class="fa fa-check"></i><b>10.7</b> JAMOVI</a></li>
 </ul></li>
@@ -587,7 +414,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test"><i class="fa fa-check"></i><b>11.2.3</b> Independent <em>t</em>-test</a></li>
 <li class="chapter" data-level="11.2.4" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#mann-whitney-u-test"><i class="fa fa-check"></i><b>11.2.4</b> Mann-Whitney <em>U</em>-test</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spss-11"><i class="fa fa-check"></i><b>11.3</b> SPSS</a>
+<li class="chapter" data-level="11.3" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#spss-6"><i class="fa fa-check"></i><b>11.3</b> SPSS</a>
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#pearson-and-spearman-correlation"><i class="fa fa-check"></i><b>11.3.1</b> Pearson and Spearman Correlation</a></li>
 <li class="chapter" data-level="11.3.2" data-path="lab-11-choosing-an-appropriate-statistical-test.html"><a href="lab-11-choosing-an-appropriate-statistical-test.html#independent-t-test-1"><i class="fa fa-check"></i><b>11.3.2</b> Independent <em>t</em>-test</a></li>
@@ -657,340 +484,8 @@ most of it came from Gosset.
 <li><a href="https://drive.google.com/open?id=0Bz-rhZ21ShvOVXlDMjEzQU1oY1k">Data in SPSS format</a></li>
 </ul>
 </div>
-<div id="r-5" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> R<a href="lab-5-t-test-independent-sample.html#r-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="load-the-data" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Load the data<a href="lab-5-t-test-independent-sample.html#load-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Remember that any line with a # makes a comment and the code does not run. Below is how to load the .csv data from the online repository, or from a local file (you need to change the file path to where the local file is, if you downloaded it). The data contains all of the measures and conditions from Experiment 4.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab-5-t-test-independent-sample.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb1-2"><a href="lab-5-t-test-independent-sample.html#cb1-2" tabindex="-1"></a><span class="co"># load from github repo</span></span>
-<span id="cb1-3"><a href="lab-5-t-test-independent-sample.html#cb1-3" tabindex="-1"></a><span class="co">#all_data &lt;- fread(&quot;https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/SchroederEpley2015data.csv&quot;)</span></span>
-<span id="cb1-4"><a href="lab-5-t-test-independent-sample.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="lab-5-t-test-independent-sample.html#cb1-5" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;data/SchroederEpley2015data.csv&quot;</span>) <span class="co"># load from file on computer</span></span></code></pre></div>
-</div>
-<div id="inspect-data-frame" class="section level3 hasAnchor" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> Inspect data frame<a href="lab-5-t-test-independent-sample.html#inspect-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This will give you a big picture of the data frame. Click the button to view it in your browser, then take a look to see what is in it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab-5-t-test-independent-sample.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span>
-<span id="cb2-2"><a href="lab-5-t-test-independent-sample.html#cb2-2" tabindex="-1"></a><span class="fu">view</span>(<span class="fu">dfSummary</span>(all_data))</span></code></pre></div>
-</div>
-<div id="find-the-data-you-need" class="section level3 hasAnchor" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Find the data you need<a href="lab-5-t-test-independent-sample.html#find-the-data-you-need" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This time the data comes pre-filtered for us. The authors ran lots of experiments, but we only have the data from Experiment 4. This is great, we don’t need to subset the data frame to find all of the data that we need. But, we do still need to understand what data we want to analyze. Let’s start with identify the column that codes the experimental conditions for whether or not the evaluator read a transcript or heard the interview.</p>
-<div id="condition-variable" class="section level4 hasAnchor" number="5.4.3.1">
-<h4><span class="header-section-number">5.4.3.1</span> Condition variable<a href="lab-5-t-test-independent-sample.html#condition-variable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Lucky for us, the condition variable is called <code>CONDITION</code>! Let’s take a look. We printed it out just by writing down <code>all_data$CONDITION</code>. There 0s and 1s for each condition (audio vs. transcript). But which one is which? This isn’t clear from the data, and it isn’t clear from the paper, or from the repository. We have to do some guess work. I went ahead and computed the means for the Intellect_rating between each condition, and then compared those to the graph in the paper for E4. It looks like 1 = audio condition, and 0 = transcript condition.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab-5-t-test-independent-sample.html#cb3-1" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION</span></code></pre></div>
-<pre><code>##  [1] 1 1 1 0 0 0 1 0 1 0 0 1 1 0 0 1 1 1 0 0 0 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1 0 1
-## [39] 1</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="lab-5-t-test-independent-sample.html#cb5-1" tabindex="-1"></a><span class="fu">aggregate</span>(Intellect_Rating<span class="sc">~</span>CONDITION,all_data,mean)</span></code></pre></div>
-<pre><code>##   CONDITION Intellect_Rating
-## 1         0         3.648148
-## 2         1         5.634921</code></pre>
-<p>Let’s use words instead of 0s and 1s to refer to our experimental conditions. To do this, we will chance the values of 0 and 1, to the words <code>transcript</code> and <code>audio</code>. We can do this in two steps. First we convert the CONDITION column to a factor. This will automatically turn the 0s and 1s into strings (not numbers, text). Factors have an internal variable for the names of the levels, which will be 0 and 1. We can simply change the level names to transcript and audio.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="lab-5-t-test-independent-sample.html#cb7-1" tabindex="-1"></a>all_data<span class="sc">$</span>CONDITION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all_data<span class="sc">$</span>CONDITION)</span>
-<span id="cb7-2"><a href="lab-5-t-test-independent-sample.html#cb7-2" tabindex="-1"></a><span class="fu">levels</span>(all_data<span class="sc">$</span>CONDITION) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;transcript&quot;</span>,<span class="st">&quot;audio&quot;</span>)</span></code></pre></div>
-<p>Now if you look at the <code>all_data</code> variable, you will see the words transcript and audio, where 0s and 1s used to be.</p>
-</div>
-<div id="dependent-measures" class="section level4 hasAnchor" number="5.4.3.2">
-<h4><span class="header-section-number">5.4.3.2</span> Dependent Measures<a href="lab-5-t-test-independent-sample.html#dependent-measures" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Next it’s time to find the dependent measure columns. The graph from the paper shows three different measures in each condition. These included <code>Intellect</code>, <code>General Impression</code>, and <code>Hiring Likelihood</code>. Every evaluator (either given a transcript or audio recording of the interview) gave ratings on a scale of 1 to 10 for each of those concepts. It’s not immediately clear which columns in <code>all_data</code> correspond to those three measures. There are lots of different measures that could be the ones they reported. It turns out the relevant ones are called</p>
-<ol style="list-style-type: decimal">
-<li><code>Intellect_Rating</code></li>
-<li><code>Impression_Rating</code></li>
-<li><code>Hire_Rating</code></li>
-</ol>
-<p>In this tutorial we are going to walk through doing an independent samples <em>t</em>-test for the first measure, <code>Intellect_Rating</code>. You can follow these same steps to complete the same kind of <em>t</em>-test for the other two variables.</p>
-</div>
-</div>
-<div id="look-at-the-dependent-variable." class="section level3 hasAnchor" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> Look at the dependent variable.<a href="lab-5-t-test-independent-sample.html#look-at-the-dependent-variable." class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="marginnote">
-<p><strong>Question:</strong> Why do we always want to look at the data?</p>
-</div>
-<p>What is the first thing we do before even considering an inferential test? Look at the data. Always look at the data. We could make a dot plot or histogram of the data from the <code>Intellect_ratings</code>. But, from our last lab we already learned how to make graphs showing most of the information we would want to look at. For example, we could make a bar graph that has the means for each condition (transcript vs. audio), standard errors of the mean and the actual scores as little dots. This would be great to look at it. Not only will it tell us if there are really weird numbers in the data (who knows maybe the data file is corrupted, you need to look), it will also give us strong intuitions about what to expect for the <em>t</em>-test.</p>
-<p>We can plot each score as a dot using the <code>all_data</code> data frame. If we want to add on a layer for the sample means, and for the sample standard errors, we have to compute those and put them in a new data frame first. Then we use both data frames with ggplot to plot all of the information.</p>
-<p>We will use <code>dplyr</code> to quickly get the means and the standard errors and put them in a new data frame called <code>decriptive_df</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="lab-5-t-test-independent-sample.html#cb8-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:data.table&#39;:
-## 
-##     between, first, last</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="lab-5-t-test-independent-sample.html#cb13-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-2"><a href="lab-5-t-test-independent-sample.html#cb13-2" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="lab-5-t-test-independent-sample.html#cb13-3" tabindex="-1"></a><span class="co"># get means and SEs</span></span>
-<span id="cb13-4"><a href="lab-5-t-test-independent-sample.html#cb13-4" tabindex="-1"></a>descriptive_df <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span> </span>
-<span id="cb13-5"><a href="lab-5-t-test-independent-sample.html#cb13-5" tabindex="-1"></a>                    <span class="fu">group_by</span>(CONDITION) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-6"><a href="lab-5-t-test-independent-sample.html#cb13-6" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(Intellect_Rating),</span>
-<span id="cb13-7"><a href="lab-5-t-test-independent-sample.html#cb13-7" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(Intellect_Rating)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(Intellect_Rating)))</span>
-<span id="cb13-8"><a href="lab-5-t-test-independent-sample.html#cb13-8" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="lab-5-t-test-independent-sample.html#cb13-9" tabindex="-1"></a><span class="co"># Make the plot</span></span>
-<span id="cb13-10"><a href="lab-5-t-test-independent-sample.html#cb13-10" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_df, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>means))<span class="sc">+</span> </span>
-<span id="cb13-11"><a href="lab-5-t-test-independent-sample.html#cb13-11" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>CONDITION))<span class="sc">+</span> <span class="co"># add means</span></span>
-<span id="cb13-12"><a href="lab-5-t-test-independent-sample.html#cb13-12" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               <span class="co"># add error bars</span></span>
-<span id="cb13-13"><a href="lab-5-t-test-independent-sample.html#cb13-13" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), <span class="at">width=</span>.<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb13-14"><a href="lab-5-t-test-independent-sample.html#cb13-14" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>all_data, <span class="fu">aes</span>(<span class="at">x=</span>CONDITION, <span class="at">y=</span>Intellect_Rating), <span class="at">alpha=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb13-15"><a href="lab-5-t-test-independent-sample.html#cb13-15" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb13-16"><a href="lab-5-t-test-independent-sample.html#cb13-16" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>This plot is very useful. First, we can see the numbers in our dependent measure are behaving sensibly. We know that the numbers have to be between 1-10, because those were the only options in the scale. If we found numbers bigger or smaller, we would know something was wrong. Checking for things that are obviously wrong in the data is one reason why we always look at first. We are checking for obvious errors. There are other ways to check to, but looking is fast and easy.</p>
-<div class="marginnote">
-<p><strong>Question:</strong> Why are the standard errors of each sample an appropriate thing to use for error bars?</p>
-</div>
-<p>Now that you can see the patterns in the data, you should form an intuition about how the independent samples <em>t</em>-test will turn out. You can see how big the error bars (+1/-1 standard error of each sample man). The <em>t</em>-test will tell us whether the observed difference (or greater) is likely due to chance. Should we find a big <em>t</em>-value or a small <em>t</em>-value? Should we find a big <em>p</em>-value or a small <em>t</em>-value. If you understand how <em>t</em>-values and <em>p</em>-values work, the answer should be very clear from the graph. You should already know how the <em>t</em>-test will turn out before you run it. Running it will confirm what you already suspect to be true.</p>
-</div>
-<div id="conduct-independent-samples-t-test" class="section level3 hasAnchor" number="5.4.5">
-<h3><span class="header-section-number">5.4.5</span> Conduct Independent samples <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#conduct-independent-samples-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="marginnote">
-<p><strong>Question:</strong> Why are we conducting an independent samples <em>t</em>-test, and not a one-sample or paired samples <em>t</em>-test?</p>
-</div>
-<p>We use the very same <code>t.test</code> function that we used last time to conduct a <em>t</em>-test. The only difference is that we don’t tell the R to use a paired sample <em>t</em>-test. We leave the <code>paired=TRUE</code> statement out, and R automatically knows we want to do an independent samples <em>t</em>-test. Remember to set the <code>var.equal=TRUE</code>, otherwise R will compute a different version of the <em>t</em>-test.</p>
-<p>You can use different syntax to run the <em>t</em>-test. Because our data is already in a data frame we can use this syntax.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="lab-5-t-test-independent-sample.html#cb14-1" tabindex="-1"></a><span class="fu">t.test</span>(Intellect_Rating<span class="sc">~</span>CONDITION, <span class="at">data=</span>all_data, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## 
-##  Two Sample t-test
-## 
-## data:  Intellect_Rating by CONDITION
-## t = -3.5259, df = 37, p-value = 0.001144
-## alternative hypothesis: true difference in means between group transcript and group audio is not equal to 0
-## 95 percent confidence interval:
-##  -3.1284798 -0.8450652
-## sample estimates:
-## mean in group transcript      mean in group audio 
-##                 3.648148                 5.634921</code></pre>
-<p>The <code>t.test</code> function also will work on two variables, not in a data frame. For example, the following does the same thing. But, it’s harder to read, and the means are described in terms of X and Y, not terms of <code>transcript</code> and <code>audio</code>, like the report above.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="lab-5-t-test-independent-sample.html#cb16-1" tabindex="-1"></a><span class="fu">t.test</span>(all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;transcript&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb16-2"><a href="lab-5-t-test-independent-sample.html#cb16-2" tabindex="-1"></a>       all_data[all_data<span class="sc">$</span>CONDITION<span class="sc">==</span><span class="st">&#39;audio&#39;</span>,]<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb16-3"><a href="lab-5-t-test-independent-sample.html#cb16-3" tabindex="-1"></a>       <span class="at">var.equal=</span>T)</span></code></pre></div>
-<pre><code>## 
-##  Two Sample t-test
-## 
-## data:  all_data[all_data$CONDITION == &quot;transcript&quot;, ]$Intellect_Rating and all_data[all_data$CONDITION == &quot;audio&quot;, ]$Intellect_Rating
-## t = -3.5259, df = 37, p-value = 0.001144
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  -3.1284798 -0.8450652
-## sample estimates:
-## mean of x mean of y 
-##  3.648148  5.634921</code></pre>
-<div class="marginnote">
-<p><strong>Question:</strong> What conclusions do we draw from the <em>t</em>-test? Based on these results, if you were being evaluated for a job interview, would you rather have the evaluator read a transcript of your interview or listen to an audio recording?</p>
-</div>
-<p>So, now we have the <em>t</em>-test. It shows the <em>t</em>-value, the <em>p</em>-value, and the means for each group. You can double-check with the paper to see if we found the same results as reported by the authors.</p>
-</div>
-<div id="remaining-ratings" class="section level3 hasAnchor" number="5.4.6">
-<h3><span class="header-section-number">5.4.6</span> Remaining ratings<a href="lab-5-t-test-independent-sample.html#remaining-ratings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now, you should use what you have learned to analyse the last two ratings for the dependent variables <code>Impression_Rating</code>, and <code>Hire_Rating</code>. This is your task for the generalization exercise. Remember to plot the data for each, and conduct a <em>t</em>-test for each. Then compare what you found to the original article. What did you find, and what do the results mean?</p>
-</div>
-<div id="reconstructing-the-graph-from-the-paper" class="section level3 hasAnchor" number="5.4.7">
-<h3><span class="header-section-number">5.4.7</span> Reconstructing the graph from the paper<a href="lab-5-t-test-independent-sample.html#reconstructing-the-graph-from-the-paper" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The results from Experiment 4 in the paper plot the means and error bars (+1 / -1 SEM) for all three dependent measures, for both experimental conditions. We can do this in ggplot using the data. We will have to make a couple changes to the data frame. But, it won’t be too hard. What we need to do is make a fully long form data frame. Remember a long form data frame has one row per dependent measure.</p>
-<p>The <code>all_data</code> frame is partly long and partly wide. If we are only interested in one dependent measure, then it is a long data frame for that measure. For example, example if we are only interested in plotting <code>Intellect_Rating</code>, then we already have one observation of that dependent measure for each row. But, in the other columns, the dependent measures for <code>Impression_Rating</code> and <code>Hire_Rating</code> are in the same rows.</p>
-<p>Before continuing, it is very much worth mentioning that this part of data analysis happens a lot, and it is kind of annoying. I call it the rubix cube problem, because we need to “rotate” and transform the format of the data to accomplish different kinds of analysis goals. It’s good to be able to know how to do this. This problem occurs all of the time, and can occur for any software package. It’s a good thing you are learning R, because we can do these things easily in R. They are not often so easy to do without a computer programming language like R. The worst thing to do is transform the data by hand. That really sucks. Believe me you don’t want to do it. Why? Because you will make mistakes, and you will mess up the data, then you will mess up your analysis. And, you won’t be able to find your mistakes, and it will take you ages to correct them. That sucks.</p>
-<p>There’s more than one way to transform data in R. For example the <code>cast</code> and <code>melt</code> functions do this kind of thing. You can look those up. In this example we will not use those functions. Instead we will show some steps to build the required data frame one step at a time.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="lab-5-t-test-independent-sample.html#cb18-1" tabindex="-1"></a><span class="co"># repeat CONDITION column three times</span></span>
-<span id="cb18-2"><a href="lab-5-t-test-independent-sample.html#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="lab-5-t-test-independent-sample.html#cb18-3" tabindex="-1"></a>condition <span class="ot">&lt;-</span> <span class="fu">rep</span>(all_data<span class="sc">$</span>CONDITION,<span class="dv">3</span>)</span>
-<span id="cb18-4"><a href="lab-5-t-test-independent-sample.html#cb18-4" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="lab-5-t-test-independent-sample.html#cb18-5" tabindex="-1"></a><span class="co"># make a ratings variable with all three ratings in one variable</span></span>
-<span id="cb18-6"><a href="lab-5-t-test-independent-sample.html#cb18-6" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="lab-5-t-test-independent-sample.html#cb18-7" tabindex="-1"></a>ratings <span class="ot">&lt;-</span> <span class="fu">c</span>(all_data<span class="sc">$</span>Intellect_Rating,</span>
-<span id="cb18-8"><a href="lab-5-t-test-independent-sample.html#cb18-8" tabindex="-1"></a>             all_data<span class="sc">$</span>Impression_Rating,</span>
-<span id="cb18-9"><a href="lab-5-t-test-independent-sample.html#cb18-9" tabindex="-1"></a>             all_data<span class="sc">$</span>Hire_Rating)</span>
-<span id="cb18-10"><a href="lab-5-t-test-independent-sample.html#cb18-10" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="lab-5-t-test-independent-sample.html#cb18-11" tabindex="-1"></a><span class="co"># make a new factor variable with the names of the ratings</span></span>
-<span id="cb18-12"><a href="lab-5-t-test-independent-sample.html#cb18-12" tabindex="-1"></a><span class="co"># need to repeat each level name the appropriate number of times</span></span>
-<span id="cb18-13"><a href="lab-5-t-test-independent-sample.html#cb18-13" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="lab-5-t-test-independent-sample.html#cb18-14" tabindex="-1"></a>num_to_repeat <span class="ot">&lt;-</span> <span class="fu">length</span>(all_data<span class="sc">$</span>CONDITION)</span>
-<span id="cb18-15"><a href="lab-5-t-test-independent-sample.html#cb18-15" tabindex="-1"></a></span>
-<span id="cb18-16"><a href="lab-5-t-test-independent-sample.html#cb18-16" tabindex="-1"></a>rating_type <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Intellect&quot;</span>,<span class="st">&quot;Impression&quot;</span>,<span class="st">&quot;Hire&quot;</span>),num_to_repeat)</span>
-<span id="cb18-17"><a href="lab-5-t-test-independent-sample.html#cb18-17" tabindex="-1"></a></span>
-<span id="cb18-18"><a href="lab-5-t-test-independent-sample.html#cb18-18" tabindex="-1"></a><span class="co"># put the new variables into a data frame</span></span>
-<span id="cb18-19"><a href="lab-5-t-test-independent-sample.html#cb18-19" tabindex="-1"></a></span>
-<span id="cb18-20"><a href="lab-5-t-test-independent-sample.html#cb18-20" tabindex="-1"></a>plot_all <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(condition,rating_type,ratings)</span>
-<span id="cb18-21"><a href="lab-5-t-test-independent-sample.html#cb18-21" tabindex="-1"></a></span>
-<span id="cb18-22"><a href="lab-5-t-test-independent-sample.html#cb18-22" tabindex="-1"></a><span class="co"># Get the means and standard errors for each rating by condition</span></span>
-<span id="cb18-23"><a href="lab-5-t-test-independent-sample.html#cb18-23" tabindex="-1"></a></span>
-<span id="cb18-24"><a href="lab-5-t-test-independent-sample.html#cb18-24" tabindex="-1"></a>descriptive_all <span class="ot">&lt;-</span> plot_all <span class="sc">%&gt;%</span> </span>
-<span id="cb18-25"><a href="lab-5-t-test-independent-sample.html#cb18-25" tabindex="-1"></a>                    <span class="fu">group_by</span>(condition,rating_type) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-26"><a href="lab-5-t-test-independent-sample.html#cb18-26" tabindex="-1"></a>                    <span class="fu">summarise</span>(<span class="at">means=</span> <span class="fu">mean</span>(ratings),</span>
-<span id="cb18-27"><a href="lab-5-t-test-independent-sample.html#cb18-27" tabindex="-1"></a>                              <span class="at">SEs =</span> <span class="fu">sd</span>(ratings)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(ratings)))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;condition&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="lab-5-t-test-independent-sample.html#cb20-1" tabindex="-1"></a><span class="co"># Make the plot</span></span>
-<span id="cb20-2"><a href="lab-5-t-test-independent-sample.html#cb20-2" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="lab-5-t-test-independent-sample.html#cb20-3" tabindex="-1"></a><span class="fu">ggplot</span>(descriptive_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, <span class="at">y=</span>means, <span class="at">group=</span>condition))<span class="sc">+</span> </span>
-<span id="cb20-4"><a href="lab-5-t-test-independent-sample.html#cb20-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">fill=</span>condition), <span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)<span class="sc">+</span> </span>
-<span id="cb20-5"><a href="lab-5-t-test-independent-sample.html#cb20-5" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>means<span class="sc">-</span>SEs,               </span>
-<span id="cb20-6"><a href="lab-5-t-test-independent-sample.html#cb20-6" tabindex="-1"></a>                    <span class="at">ymax=</span>means<span class="sc">+</span>SEs), </span>
-<span id="cb20-7"><a href="lab-5-t-test-independent-sample.html#cb20-7" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">1</span>, </span>
-<span id="cb20-8"><a href="lab-5-t-test-independent-sample.html#cb20-8" tabindex="-1"></a>                <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
-<span id="cb20-9"><a href="lab-5-t-test-independent-sample.html#cb20-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>plot_all, <span class="fu">aes</span>(<span class="at">x=</span>rating_type, </span>
-<span id="cb20-10"><a href="lab-5-t-test-independent-sample.html#cb20-10" tabindex="-1"></a>                                <span class="at">y=</span>ratings, </span>
-<span id="cb20-11"><a href="lab-5-t-test-independent-sample.html#cb20-11" tabindex="-1"></a>                                <span class="at">group=</span>condition), </span>
-<span id="cb20-12"><a href="lab-5-t-test-independent-sample.html#cb20-12" tabindex="-1"></a>             <span class="at">alpha=</span>.<span class="dv">25</span>, </span>
-<span id="cb20-13"><a href="lab-5-t-test-independent-sample.html#cb20-13" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>))<span class="sc">+</span></span>
-<span id="cb20-14"><a href="lab-5-t-test-independent-sample.html#cb20-14" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">25</span>)<span class="sc">+</span></span>
-<span id="cb20-15"><a href="lab-5-t-test-independent-sample.html#cb20-15" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Rating&quot;</span>)</span></code></pre></div>
-<p><img src="Statistics_Lab_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>Well, we didn’t make the exact graph. We have the bars, the error bars, and we added the individual scores because they are useful to look at. Otherwise, it’s the same graph (except the the ordering of bars is determined alphabetically here. We change that in ggplot, but we won’t do that today.)</p>
-</div>
-<div id="generalization-exercise-3" class="section level3 hasAnchor" number="5.4.8">
-<h3><span class="header-section-number">5.4.8</span> Generalization Exercise<a href="lab-5-t-test-independent-sample.html#generalization-exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>(1 point - Pass/Fail)</p>
-<p>Complete the generalization exercise described in your R Markdown document for this lab.</p>
-<p>Now, you should use what you have learned to analyse the last two ratings for the dependent variables <code>Impression_Rating</code>, and <code>Hire_Rating</code>. Report the <em>t</em>-tests and means for each.</p>
-</div>
-<div id="writing-assignment-3" class="section level3 hasAnchor" number="5.4.9">
-<h3><span class="header-section-number">5.4.9</span> Writing assignment<a href="lab-5-t-test-independent-sample.html#writing-assignment-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>(2 points - Graded)</p>
-<p>Complete the writing assignment described in your R Markdown document for this lab. When you have finished everything. Knit the document and hand in your stuff (you can submit your .RMD file to blackboard if it does not knit.)</p>
-<ol style="list-style-type: decimal">
-<li>Answer the following questions</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li><p>Explain the difference between a paired-samples <em>t</em>-test and an independent samples <em>t</em>-test. ( 1 point )</p></li>
-<li><p>Imagine you were to conduct a between-subjects experiment with two groups, where the manipulation had no effect whatsoever. If you repeated this experiment (that doesn’t work) 100 times and computed a <em>t</em>-test each time, approximately how many of the experiments out of 100 would you expect find the associated <em>p</em>-value is .05 or smaller? Explain (1 point)</p></li>
-</ol>
-<p>General grading.</p>
-<ul>
-<li>You will receive 0 points for missing answers</li>
-<li>You must write in complete sentences. Point form sentences will be given 0 points.</li>
-<li>Completely incorrect answers will receive 0 points.</li>
-<li>If your answer is generally correct but very difficult to understand and unclear you may receive half points for the question</li>
-</ul>
-</div>
-</div>
-<div id="excel-5" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Excel<a href="lab-5-t-test-independent-sample.html#excel-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>How to do it in Excel</p>
-</div>
-<div id="spss-5" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> SPSS<a href="lab-5-t-test-independent-sample.html#spss-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this lab, we will use SPSS to:</p>
-<ol style="list-style-type: decimal">
-<li>Perform an independent-samples <em>t</em>-test</li>
-<li>Graph the data</li>
-</ol>
-<div id="experiment-background-1" class="section level3 hasAnchor" number="5.6.1">
-<h3><span class="header-section-number">5.6.1</span> Experiment Background<a href="lab-5-t-test-independent-sample.html#experiment-background-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).</p>
-<p>To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness. These ratings were then averaged to create a single measure of the job candidate’s intellect, with higher scores indicating the recruiters rated the candidates as higher in intellect. The participants also rated their overall impression of the job candidate (a composite of two items measuring positive and negative impressions). Finally, the participants indicated how likely they would be to recommend hiring the job candidate (0 - not at all likely, 10 - extremely likely).</p>
-<p>So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts, or when the heard the applicants speak? We have the data, and we can find out.</p>
-</div>
-<div id="performing-an-independent-samples-t-test" class="section level3 hasAnchor" number="5.6.2">
-<h3><span class="header-section-number">5.6.2</span> Performing an independent-samples <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>First, let’s open the relevant data file in SPSS. You should have already downloaded this data file from section 0.2.3 of the lab manual - we used it when we worked through the exercises in Chapter 12 of the lab manual. The file we are working with in this lesson is called “SchroederEpley2015_Study4_data.sav”. Your data should look like this:</p>
-<p><img src="img/7.4.11.png" /><!-- --></p>
-<p>For our analysis, we will focus on only one of the three measures mentioned above: <code>intellect</code>. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch).</p>
-<p>Before we run the <em>t</em>-test, let’s review a button at the top of our SPSS spreadsheet window. This will be important for identifying the values assigned to groups later on. The button I refer to here is highlighted below; it has two boxes, one with an A and one with a 1 on it, with arrows in-between.</p>
-<p><img src="img/7.4.12.png" /><!-- --></p>
-<p>Press this button and see what happens to your data spreadsheet:</p>
-<p><img src="img/7.4.13.png" /><!-- --></p>
-<p>Notice that this button has revealed the values used to signify the Audio and Transcript groups. We will need to know that these groups are signified by 0s and 1s when we come to running our <em>t</em>-test. If you click the button again, the cells will go back to displaying their labels. Keep in mind that revealing the values or labels does not change anything about the data itself or any subsequent analyses; it is merely a cosmetic change.</p>
-<p>Now, we’re ready to run the independent-samples <em>t</em>-test. Go to <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">Independent Samples <em>t</em>-test…</span></p>
-<p><img src="img/7.4.14.png" /><!-- --></p>
-<p>A window will appear asking you to specify which variable to use in this analysis. Remember, we are only using <code>intellect</code>, so find this variable in the lef<em>t</em>-hand list and move it into the “Test Variable(s)” field on the right using the arrow. For the field labeled “Grouping Variable”, we will specify which variable is our independent variable. That variable is <code>CONDITION</code> (we have two conditions: audio and transcript). Move <code>CONDITION</code> into the “Grouping Variable” field. Notice that next to the variable name there are two question marks and the OK button is disabled:</p>
-<p><img src="img/7.4.15.png" /><!-- --></p>
-<p>Here, SPSS wants to know the values used to signify these conditions (remember the 0s and 1s?). So, click <span style="color:blue">Define Groups</span>, and place 0 and 1 in the fields that ask for Values for Group 1 and Group 2.</p>
-<p><img src="img/7.4.16.png" /><!-- --></p>
-<p>Click <span style="color:blue">Continue</span>, and then <span style="color:blue">OK</span>. SPSS will produce output tables as follows:</p>
-<p><img src="img/7.4.17.png" /><!-- --></p>
-<p>The <em>t</em>-test output has similarities with the paired <em>t</em>-test output we saw in Chapter 6 of this lab manual. Like the paired <em>t</em>-test output, the first table contains useful descriptive statistics that help us understand the pattern of results and contextualize our inferential statistics.</p>
-<p>In the case of an independent-samples <em>t</em>-test, there is one special consideration to be made: the equality of variances. One of the assumptions of a <em>t</em>-test is that the groups being compared have roughly equal variances. Conveniently, the independent-samples <em>t</em>-test in SPSS performs another test automatically to determine if the variances are equal or not: this test is called the Levene’s test.</p>
-<p>In the second output table, there is a section dedicated to Levene’s test. The rule is as follows: If the Sig. value under the Levene’s test heading is smaller than your alpha level, then your variances are <strong>not</strong> equal and you must refer to the values in the second row of the table, labeled “Equal variances not assumed.” If the Sig. value for Levene’s test is larger than alpha, then you can use the top row labeled “Equal variances assumed.” However, I recommend that you <strong>always</strong> use the “Equal variances not assumed” row.</p>
-<p>In this case, the Sig. value associated with the Levene’s test is .35, which is greater than the conventional alpha level of .05, so you might use the “Equal variances assumed” row, but we are still going to use the “Equal variances not assumed” row. The <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.48, the degrees of freedom are adjusted to 33.43, and the <em>p</em>-value for the <em>t</em>-test is .001. <strong>Note</strong>: Be sure to look at the <em>p</em>-value associated with the <em>t</em>-test and not Levene’s test when you are interpreting your <em>t</em>-test results.</p>
-<p>What does the <em>t</em>-test tell us about the data? We can put our finding into words to clarify:</p>
-<p>Recruiter ratings for audio job pitches (M = 6.63, SD = 1.61) are higher than ratings for transcripts of pitches (M = 4.65, SD = 1.91). This difference is significant, <em>t</em>(33.43) = -3.48, <em>p</em> &lt; .05.</p>
-<p>The default SPSS output also includes effect sizes in the third table. You can include Cohen’s <em>d</em> in your results sentence as well. Find it in the <code>Independent Samples Effect Sizes</code> table in the first row, in the <code>Point Estimate</code> column. For example:</p>
-<p>Recruiter ratings for audio job pitches (M = 6.63, SD = 1.61) are higher than ratings for transcripts of pitches (M = 4.65, SD = 1.91). This difference is significant according to an independent samples <em>t</em>-test, <em>t</em>(33.43) = -3.48, <em>p</em> &lt; .05, <em>d</em> = 1.13.</p>
-<p><strong>Some formatting guidelines for writing results sections: </strong></p>
-<p>All of the numbers are rounded to two decimal places, but if your <em>p</em>-value was .0001, it would be OK to write <em>p</em> &lt; .001.</p>
-<p>Italicize symbols such as <em>p</em> and <em>t</em>.</p>
-<p>There are spaces on either side of =, &gt;, or &lt; symbols.</p>
-</div>
-<div id="graphing-your-data" class="section level3 hasAnchor" number="5.6.3">
-<h3><span class="header-section-number">5.6.3</span> Graphing your data<a href="lab-5-t-test-independent-sample.html#graphing-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><code>CONDITION</code> in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Graphs</span>, then <span style="color:blue">Legacy Dialogs</span>, then <span style="color:blue">Bar…</span></p>
-<p><img src="img/7.4.18.png" /><!-- --></p>
-<p>Next, choose <span style="color:blue">Simple</span> in the window that appears, then click <span style="color:blue">Define</span>.</p>
-<p><img src="img/7.4.19.png" /><!-- --></p>
-<p>In the next window, make sure that under “Bars Represent”, you have chosen <span style="color:blue">Other statistic</span>. Move your variable of interest (<code>intellect</code>) into the field labeled “Variable.” Then, move <code>CONDITION</code> to the “category axis” field.</p>
-<p><img src="img/7.4.20.png" /><!-- --></p>
-<p>Next, click <span style="color:blue">Options</span>. Then choose <span style="color:blue">Display Error Bars</span>, and have them represent <span style="color:blue">Standard Error</span> with a <span style="color:blue">multiplier of 1</span>.</p>
-<p><img src="img/7.4.21.png" /><!-- --></p>
-<p>Click <span style="color:blue">Continue</span>, then <span style="color:blue">OK</span>.</p>
-<p>SPSS will produce a bar graph of your mean ratings for both audio and transcript conditions.</p>
-<p><img src="img/7.4.22.png" /><!-- --></p>
-<p><strong>Note</strong>: It’s always a good idea to compare your graph to the descriptive statistics to make sure it looks right.</p>
-</div>
-<div id="optional-activities" class="section level3 hasAnchor" number="5.6.4">
-<h3><span class="header-section-number">5.6.4</span> Optional activities<a href="lab-5-t-test-independent-sample.html#optional-activities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>At this point, you’ve covered everything you need to successfully complete the homework assignment below. However, there are a number of different analyses we can practice with this dataset. This section walks you through some optional analyses to consolidate what we’ve already covered as well as add breadth. If you’re running out of time, skip down to the Homework now. You can return to these exercises later (i.e., when studying).</p>
-<div id="using-a-cut-point-to-define-groups-for-an-independent-t-test" class="section level4 hasAnchor" number="5.6.4.1">
-<h4><span class="header-section-number">5.6.4.1</span> Using a cut point to define groups for an independent <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#using-a-cut-point-to-define-groups-for-an-independent-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Sometimes you will see groups defined with a non-nominal independent variable. For example, in class we talked about defining countries as “overweight” or “not overweight” depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.</p>
-<p>A commonly used cut point is the median value (this is called a “median split”). Let’s use the example of <code>age</code> in the current dataset. You can find the median value of <code>age</code> via many menus. Let’s go <span style="color:blue">Analyze</span>, then <span style="color:blue">Descriptive Statistics</span>, then <span style="color:blue">Frequencies…</span>. Move <code>age</code> to the <code>Variable(s)</code> box and then click <span style="color:blue">Statistics</span>. Select <code>Median</code>, then click <span style="color:blue">Continue</span> and then <span style="color:blue">OK</span>. The first output table contains the median:</p>
-<p><img src="img/7.4.23.png" /><!-- --></p>
-<p>We can use the median of 29 as the cut point. We’ll be running an independent <em>t</em>-test to determine whether there is a significant difference in <code>intellect</code> between candidates under 29 years old and over 29 years old.</p>
-<p>Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Compare Means</span>, then <span style="color:blue">Independent Samples <em>t</em>-test…</span></p>
-<p>It’s likely that <code>intellect</code> is already selected as your <code>Test Variable(s)</code>, but do so if not. Then, move <code>age</code> to the <code>Grouping Variable</code> (you may need to move <code>CONDIITION</code> out first). Then click <span style="color:blue">Define Groups…</span> Select <span style="color:blue">Cut point</span> and input 29 as follows:</p>
-<p><img src="img/7.4.24.png" /><!-- --></p>
-<p>Click <span style="color:blue">Continue</span> and then <span style="color:blue">OK</span>. You should get the following output tables:</p>
-<p><img src="img/7.4.25.png" /><!-- --></p>
-<p>Practice writing a sentence describing the results, and then compare it to #1 in the “Example answers to optional activities” below.</p>
-<p>Let’s say you had a different research question: Is the age of the candidate correlated with intellect ratings? You could answer this question with the same variables analyzed in the section above, but using correlation instead of an independent <em>t</em>-test. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlation</span>, then <span style="color:blue">Bivariate…</span> and move <code>age</code> and <code>intellect</code> into the <code>Variables</code> box:</p>
-<p><img src="img/7.4.26.png" /><!-- --></p>
-<p>Click <span style="color:blue">OK</span>. The output table should look as follows:</p>
-<p><img src="img/7.4.27.png" /><!-- --></p>
-<p>As we noted in the previous lab session on correlations, some of the information in this output table is redundant or not useful. We can clean that up by changing some of the options in the <code>Bivariate Correlations</code> dialog. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlation</span>, then <span style="color:blue">Bivariate…</span>, but this time, select <span style="color:blue">Show only the lower triangle</span> and unselect <span style="color:blue">Show diagonal</span> (both found near the bottom). Click <span style="color:blue">OK</span>. Now the output is tidier:</p>
-<p><img src="img/7.4.28.png" /><!-- --></p>
-<p>Write a sentence describing the results of this test. Compare your answer to #2 in the “Example answers to practice problems” below.</p>
-<p>Now, assume you are in the mood to do some exploratory data analysis. We can run multiple bivariate correlations at the same time in the same dialog. Click <span style="color:blue">Analyze</span>, then <span style="color:blue">Correlation</span>, then <span style="color:blue">Bivariate…</span> again. To the <code>Variables</code> box, add <code>wordcount</code>, <code>time</code>, and <code>impression</code>, in addition to <code>age</code> and <code>intellect</code>:</p>
-<p><img src="img/7.4.29.png" /><!-- --></p>
-<p>Click <span style="color:blue">OK</span>. Now our output table contains the <em>r</em>- and <em>p</em>-values for each possible pair of the five variables:</p>
-<p><img src="img/7.4.30.png" /><!-- --></p>
-<p>SPSS flags significant correlations for us with an <code>*</code> or <code>**</code>. In this case, we see a <code>**</code> next to the correlation between <code>impression</code> and <code>intellect</code>. The note at the bottom of the table indicates that the correlation is significant at the 0.01 level. SPSS automatically indicates whether correlations are significant at .05 or .01. If your Sig. (<em>p</em>-value) is between .05 and .01, SPSS will flag it as * (significant at the 0.05 level) and if your Sig. (<em>p</em>-value) is less than .01, SPSS will flag it as ** (significant at the 0.01 level).</p>
-<p>Let’s pick a few pairs of variables and make scatterplots. We have a good range of different correlations in this table, so we can use these data to practice identifying correlations of different strengths. Click <span style="color:blue">Graphs</span>, <span style="color:blue">Legacy Dialogs</span>, and then <span style="color:blue">Scatter/Dot…</span>. Then click <span style="color:blue">Simple Scatter</span> and then <span style="color:blue">Define</span>. Move <code>intellect</code> into the <code>Y axis</code> and <code>age</code> into the <code>X axis</code>. Click <span style="color:blue">OK</span>. This should produce a scatterplot in the output file. Repeat for all correlations with <code>intellect</code>, using <code>intellect</code> on the <code>Y axis</code> each time to make it easier to compare to the example answers below (#3). Compare the pattern of dots in each scatterplot to the <em>r</em>-values reported in the tables. Can you see the differences between the plots? Can you tell from the scatterplots whether we have violated any of the assumptions of Pearson’s <em>r</em> (i.e., linearity, no outliers)?</p>
-</div>
-</div>
-<div id="lab-homework-7" class="section level3 hasAnchor" number="5.6.5">
-<h3><span class="header-section-number">5.6.5</span> Lab Homework #7<a href="lab-5-t-test-independent-sample.html#lab-homework-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<hr />
-<ol style="list-style-type: decimal">
-<li><p>Use the same data file from this lab’s tutorial to test whether <code>intellect</code> ratings were different between the <code>gender</code> categories (use alpha = .05). Which <code>gender</code> category had higher <code>intellect</code> ratings? Was this difference significant? What was the effect size? Report your result in a sentence or two, using the example and guidelines above to help with the format and structure. Be sure to submit your writing on Moodle.</p></li>
-<li><p>Graph this result (including 1 SEM error bars) as a bar graph. Submit the .spv file containing your independent <em>t</em>-test and graph on Moodle.</p></li>
-</ol>
-<p>Grading: TBD</p>
-</div>
-<div id="example-answers-to-practice-problems" class="section level3 hasAnchor" number="5.6.6">
-<h3><span class="header-section-number">5.6.6</span> Example answers to practice problems<a href="lab-5-t-test-independent-sample.html#example-answers-to-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<hr />
-<ol style="list-style-type: decimal">
-<li><p>Intellect ratings for candidates aged 29 or younger (M = 5.33, SD = 1.94) were not significantly different from intellect ratings for candidates over age 29 (M = 5.88, SD = 2.28), as demonstrated by an independent <em>t</em>-test [<em>t</em>(29.70) = -0.74, <em>p</em> &gt; .05].
-<strong>Note</strong>: If you included Cohen’s <em>d</em>, the value was -0.26, but we often don’t report effect size if the effect was not significant.</p></li>
-<li><p>Intellect ratings were not significantly correlated with the age of the candidates, <em>r</em> = .05, <em>p</em> &gt; .05.</p></li>
-<li><p>You should have created four scatterplots. They are included below as well as some notes about each.</p></li>
-</ol>
-<p><img src="img/7.4.31.png" /><!-- -->
-For the correlation between <code>age</code> and <code>intellect</code>, we found <em>r</em> was very close to 0, at .05. This is reflected in the pattern of dots, which are spread fairly uniformly across the entire plot. There are no concerns with violating the assumption of linearity on this plot. There are also no outliers.</p>
-<p><img src="img/7.4.32.png" /><!-- -->
-For the correlation between <code>time</code> and <code>intellect</code>, we found <em>r</em> was also close to 0 but negative, at -.07. It is harder to link the <em>r</em> with the plot in this case because of the two dots far to the right in the plot. These might be outliers and could be investigated further, but how to do so is not covered in PSYC 292.</p>
-<p><img src="img/7.4.33.png" /><!-- -->
-The correlation between <code>wordcount</code> and <code>intellect</code> was <em>r</em> = -.24. This is a fairly weak correlation but if you focus on the cluster of dots on the left, you can get the impression that there are more dots in the top left and bottom right than the other two quadrants. The dot to the far right might be an outlier and could be investigated further, but how to do so is not covered in PSYC 292.</p>
-<p><img src="img/7.4.34.png" /><!-- -->
-For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</em> = .83 was observed. In the scatterplot, you can see the dots cluster around an imaginary line that goes from the bottom left corner to the top left corner. There are no concerns that the assumption of linearity has been violated. There is also no evidence of outliers.</p>
-</div>
-</div>
-<div id="jamovi---week-10---march-18th-19th-20th" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> JAMOVI - Week 10 - March 18th, 19th, &amp; 20th<a href="lab-5-t-test-independent-sample.html#jamovi---week-10---march-18th-19th-20th" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="jamovi---week-11---march-24th-25th-26th" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> JAMOVI - Week 11 - March 24th, 25th, &amp; 26th<a href="lab-5-t-test-independent-sample.html#jamovi---week-11---march-24th-25th-26th" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="marginnote">
 <p>This section is copied almost verbatim, with some editorial changes, from <a href="https://www.crumplab.com/statisticsLab/lab-7-t-test-independent-sample.html#spss-7">Answering questions with data: The lab manual for R, Excel, SPSS and JAMOVI, Lab 7, Section 7.6, SPSS</a>, according to its <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ast">CC license</a>. Thank you to Crump, Krishnan, Volz, &amp; Chavarga (2018).</p>
 </div>
@@ -1000,28 +495,28 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <li>Graph the data</li>
 <li>Report the results of an independent-samples <em>t</em>-test</li>
 </ol>
-<div id="pre-lab-reading-and-tasks" class="section level3 hasAnchor" number="5.7.1">
-<h3><span class="header-section-number">5.7.1</span> Pre-lab reading and tasks<a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="pre-lab-reading-and-tasks" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Pre-lab reading and tasks<a href="lab-5-t-test-independent-sample.html#pre-lab-reading-and-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Read the following section about an experiment performed by Schroeder and Epley.</li>
 <li>Download the data set (instructions are below).</li>
 <li>Have the data set opened in JAMOVI before lab begins.</li>
 </ol>
-<div id="experiment-background-2" class="section level4 hasAnchor" number="5.7.1.1">
-<h4><span class="header-section-number">5.7.1.1</span> Experiment Background<a href="lab-5-t-test-independent-sample.html#experiment-background-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="experiment-background" class="section level4 hasAnchor" number="5.4.1.1">
+<h4><span class="header-section-number">5.4.1.1</span> Experiment Background<a href="lab-5-t-test-independent-sample.html#experiment-background" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Schroeder and Epley (2015) conducted an experiment to determine whether a person’s speech (i.e., vocal tone, cadence, and pitch) communicates information about their intellect better than their written words (even if they are the same words as in the speech).</p>
 <p>To conduct this study, the authors randomly assigned 39 professional recruiters for Fortune 500 companies to one of two conditions. In the audio condition, participants listened to audio recordings of a job candidate’s spoken job pitch. In the transcript condition, participants read a transcription of the job candidate’s pitch. After hearing or reading the pitch, the participants rated the job candidates on three dimensions: intelligence, competence, and thoughtfulness. These ratings were then averaged to create a single measure of the job candidate’s intellect, with higher scores indicating the recruiters rated the candidates as higher in intellect. The participants also rated their overall impression of the job candidate (a composite of two items measuring positive and negative impressions). Finally, the participants indicated how likely they would be to recommend hiring the job candidate (0 - not at all likely, 10 - extremely likely).</p>
 <p>So, what happened? Did the recruiters think job applicants were smarter when they read the transcripts or when they heard the applicants speak? We have the data, and we can find out.</p>
 <p><strong>Note</strong>: This dataset includes variables that have very similar names. Be careful to select the correct variable as you complete the exercises.</p>
 </div>
-<div id="download-and-open-the-data" class="section level4 hasAnchor" number="5.7.1.2">
-<h4><span class="header-section-number">5.7.1.2</span> Download and open the data<a href="lab-5-t-test-independent-sample.html#download-and-open-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="download-and-open-the-data" class="section level4 hasAnchor" number="5.4.1.2">
+<h4><span class="header-section-number">5.4.1.2</span> Download and open the data<a href="lab-5-t-test-independent-sample.html#download-and-open-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The dataset described above can be downloaded from your <a href="https://moodle.stfx.ca">lab Moodle site</a>. Look under the grid section called “Data Sets.” Remember, if double-clicking on the downloaded data file does not result in it opening on your laptop or computer, you should, first, open the JAMOVI program first, and then, from within the program, click the three horizontal lines, click <span style="color:blue">Open</span>, and browse for the downloaded file.</p>
 <p><img src="img/OpenFileFromWithinJAMOVI.png" /><!-- --></p>
 </div>
 </div>
-<div id="performing-an-independent-samples-t-test-1" class="section level3 hasAnchor" number="5.7.2">
-<h3><span class="header-section-number">5.7.2</span> Performing an independent-samples <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="performing-an-independent-samples-t-test" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Performing an independent-samples <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#performing-an-independent-samples-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For our analysis, we will focus on only one of the three measures mentioned above: <code>intellect</code>. We want to know if perceived intellect is different in the audio condition (where recruiters listened to a job pitch) than in the transcript condition (where recruiters read a transcript of a job pitch).</p>
 <p>Before we run the <em>t</em>-test, let’s review the variable attributes by using the <span style="color:blue">Data</span> menu and the <span style="color:blue">Setup</span> button (or using the <span style="color:blue">Variables</span> menu and the <span style="color:blue">Edit</span> button), available at the top of our jamovi spreadsheet window. Check <code>CONDITION</code>.</p>
 <p><img src="img/VariableAttributesForConditionVariable.png" /><!-- --></p>
@@ -1050,20 +545,20 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <p>The next output table is Levene’s test, which checks the assumption of homogeneity of variance.</p>
 <p><img src="img/LevenesTest.png" /><!-- --></p>
 <p>When interpreting Levene’s test, the rule is as follows: If the <em>p</em>-value in the table is smaller than your alpha level, then your variances are <strong>not</strong> equal and you should request <span style="color:blue"> Welch’s</span> <em>t</em>-test. If the <em>p</em>-value for Levene’s test is larger than alpha, then you can use the Student’s <em>t</em>-test that is automatically generated when you request an independent <em>t</em>-test.</p>
-<p><img src="img/IndependTTestResults2A.png" /><!-- --></p>
-<p>Some people may recommend that you <strong>always</strong> use Welch’s <em>t</em>-test - whether the assumptions are upheld or violated.</p>
-<p><img src="img/IndependTTestResults2B.png" /><!-- --></p>
-<p>In this example, the <em>p</em>-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The <em>p</em>-value associated with the Levene’s test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You <strong>could</strong> report the results of the Student <em>t</em>-test (i.e., we do not need to use the Welch’s <em>t</em>-test for this example). The <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.53, the degrees of freedom are 37, and the <em>p</em>-value for the <em>t</em>-test is .001. <strong>Note</strong>: Be sure to look at the <em>p</em>-value associated with the <em>t</em>-test - and not Levene’s test - when you are interpreting your <em>t</em>-test results.</p>
+<p><img src="img/Independent_SchroederEpley_TtestTable_Student.png" /><!-- --></p>
+<p>Some people may recommend that you <strong>always</strong> use <span style="color:blue"> Welch’s</span> <em>t</em>-test (referred to as a <em>t</em>-test with Welch’s adjustment) - whether the assumptions are upheld or violated.</p>
+<p><img src="img/Independent_SchroederEpley_TtestTable_Welch.png" /><!-- --></p>
+<p>In this example, the <em>p</em>-value associated with the Shapiro-Wilk test is .12, which is greater than the conventional alpha level of .05, so the assumption of normality is upheld. The <em>p</em>-value associated with the Levene’s test is .35, which is greater than the conventional alpha level of .05, so the assumption of homogeneity is upheld. You <strong>could</strong> report the results of the Student <em>t</em>-test (i.e., we do not need to use the <em>t</em>-test with Welch’s adjustment for this example). The <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.53, the degrees of freedom are 37, and the <em>p</em>-value for the <em>t</em>-test is .001. <strong>Note</strong>: Be sure to look at the <em>p</em>-value associated with the <em>t</em>-test - and not Levene’s test - when you are interpreting your <em>t</em>-test results.</p>
 <p>What does the <em>t</em>-test tell us about the data? We can put our finding into words to clarify:</p>
-<p>Recruiter ratings of candidates’ intellect when the recruiters heard audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than recruiters’ ratings of candidates’ intellect when they read transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). An independent <em>t</em>-test revealed that this difference is significant, <em>t</em>(37) = -3.53, <em>p</em> = .001, <em>d</em> = -1.13 (95% CI [-1.85,-0.39]).</p>
-<p>What if you had reported Welch’s <em>t</em>-test in this case? Well, the <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.48, the degrees of freedom are adjusted to 33.4, and the <em>p</em>-value for the <em>t</em>-test is .001.</p>
+<p>Recruiter ratings of candidates’ intellect when the recruiters heard audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than recruiters’ ratings of candidates’ intellect when they read transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). An independent <em>t</em>-test revealed that this difference is significant, <em>t</em>(37) = -3.53, <em>p</em> = .001, <em>d</em> = -1.13, 95% CI [-1.81,-0.45].</p>
+<p>What if you had reported the <em>t</em>-test with Welch’s adjustment in this case? Well, the <em>t</em>-statistic for our independent-samples <em>t</em>-test is -3.48, the degrees of freedom are adjusted to 33.43, and the <em>p</em>-value for the <em>t</em>-test is .001.</p>
 <p>We can also look at the descriptive statistics to better understand what happened in the experiment:</p>
 <p><img src="img/indttestdesc.png" /><!-- --></p>
 <p>What does the <em>t</em>-test tell us about the data? We can put our finding into words to clarify:</p>
-<p>Recruiter ratings of candidates’ intellect when the recruiters heard audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than their ratings of candidates’ intellect when they read transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). An independent <em>t</em>-test revealed that this difference is significant, <em>t</em>(33.43) = -3.48, <em>p</em> = .001, <em>d</em> = -1.12 (95% CI [-1.85,-0.39]).</p>
+<p>Recruiter ratings of candidates’ intellect when the recruiters heard audio job pitches (<em>M</em> = 6.63, <em>SD</em> = 1.61) are higher than their ratings of candidates’ intellect when they read transcripts of pitches (<em>M</em> = 4.65, <em>SD</em> = 1.91). An independent <em>t</em>-test with Welch’s adjustment revealed that this difference is significant, <em>t</em>(33.43) = -3.48, <em>p</em> = .001, <em>d</em> = -1.12, 95% CI [-1.81,-0.45].</p>
 </div>
-<div id="some-apa-formatting-reminders-for-writing-results-sections" class="section level3 hasAnchor" number="5.7.3">
-<h3><span class="header-section-number">5.7.3</span> Some APA formatting reminders for writing results sections<a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="some-apa-formatting-reminders-for-writing-results-sections" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Some APA formatting reminders for writing results sections<a href="lab-5-t-test-independent-sample.html#some-apa-formatting-reminders-for-writing-results-sections" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Always note the name of the test you performed (in this case, independent <em>t</em>-test, or independent-samples <em>t</em>-test) and whether the result is significant or non-significant (<em>Note: We do not use the word insignificant.</em>).</p></li>
 <li><p>We usually round to two decimal places, except for <em>p</em>-values. If you know the exact <em>p</em>-value, you round to two or three decimal places, except if that means it is <em>p</em> = .000. In this case, you would indicate <em>p</em> &lt; .001.</p></li>
@@ -1073,12 +568,12 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <p>Yes, I’m serious. No, I don’t know why. Yes, it does seem a bit silly. Yes, you lose points if you don’t adhere to APA format when requested to do so.</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it’s <em>t</em>(33.4) = -3.48 <strong>not</strong> <em>t</em>(33.4)=-3.48. There are spaces on either side of =, &gt;, or &lt; symbols.</p></li>
+<li><p>Pay attention to spaces, parentheses, etc. APA is very picky about that. For example, it’s <em>t</em>(33.43) = -3.48 <strong>not</strong> <em>t</em>(33.43)=-3.48. There are spaces on either side of =, &gt;, or &lt; symbols.</p></li>
 <li><p>Italicize symbols such as <em>M</em>, <em>SD</em>, <em>p</em>, <em>t</em>, and <em>d</em>.</p></li>
 </ol>
 </div>
-<div id="graphing-your-data-1" class="section level3 hasAnchor" number="5.7.4">
-<h3><span class="header-section-number">5.7.4</span> Graphing your data<a href="lab-5-t-test-independent-sample.html#graphing-your-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="graphing-your-data" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Graphing your data<a href="lab-5-t-test-independent-sample.html#graphing-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>CONDITION</code> in this experiment represents a discrete, categorical variable. Therefore, we will be using a bar chart to visualize this data. To begin, go to <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue">Descriptives</span>.</p>
 <p><img src="img/GraphingCommands.png" /><!-- --></p>
 <p>Next, move <code>intellect</code> to the “Variables” window by highlighting the variable and using the arrow, and move <code>CONDITION</code> to the “Split by” window.</p>
@@ -1090,11 +585,11 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <p><strong>Note</strong>: It’s always a good idea to compare your graph to the descriptive statistics to make sure it looks right.
 <strong>Another Important Note</strong>: Unfortunately, you cannot simply copy and paste the graph from jamovi into a paper that requires APA formatting. Be sure to use/model the other resources provided to you so as to create properly formatted graphs for your course assignments.</p>
 </div>
-<div id="optional-exercises" class="section level3 hasAnchor" number="5.7.5">
-<h3><span class="header-section-number">5.7.5</span> Optional exercises<a href="lab-5-t-test-independent-sample.html#optional-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="optional-exercises" class="section level3 hasAnchor" number="5.4.5">
+<h3><span class="header-section-number">5.4.5</span> Optional exercises<a href="lab-5-t-test-independent-sample.html#optional-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At this point, you’ve covered everything you need to successfully complete the homework assignment below. However, there are a number of different analyses we can practice with this dataset. This section walks you through some optional analyses to consolidate what we’ve already covered as well as add breadth. If you’re running out of time, skip down to the Homework now. You can return to these exercises later (i.e., when studying).</p>
-<div id="using-a-cut-point-to-define-groups-for-an-independent-t-test-1" class="section level4 hasAnchor" number="5.7.5.1">
-<h4><span class="header-section-number">5.7.5.1</span> Using a cut point to define groups for an independent <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#using-a-cut-point-to-define-groups-for-an-independent-t-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="using-a-cut-point-to-define-groups-for-an-independent-t-test" class="section level4 hasAnchor" number="5.4.5.1">
+<h4><span class="header-section-number">5.4.5.1</span> Using a cut point to define groups for an independent <em>t</em>-test<a href="lab-5-t-test-independent-sample.html#using-a-cut-point-to-define-groups-for-an-independent-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Sometimes you will see groups defined with a non-nominal independent variable. For example, we might talk about defining countries as “overweight” or “not overweight” depending on whether 50% of their population was classified as overweight. The rate of overweight is known for each country, but we can divide the countries into two groups at an arbitrary cut point (in this case, a rate of 50%). Aside: This is a good example of how an ordinal, interval, or ratio variable might be considered to have distinct categories - you have to define the boundaries of the categories yourself first.</p>
 <p>A commonly used cut point is the median value (this is called a “median split”). Let’s use the example of <code>age</code> in the current dataset. You can find the median value of <code>age</code> in different ways. Let’s go with a familiar path: Click <span style="color:blue">Analyses</span>, then <span style="color:blue">Exploration</span>, and then <span style="color:blue"> Descriptive Statistics</span>. Move <code>age</code> to the “Variables” field. If the median were not showing in the table visible in the Results panel, we could click <span style="color:blue">Statistics</span> and select <span style="color:blue">Median</span> . The first output table contains the median:</p>
 <p><img src="img/DescriptivesTableForAgeVariable.png" /><!-- --></p>
@@ -1119,20 +614,20 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <p><img src="img/IndependTTestCommandsInFullForMedSplit.png" /><!-- --></p>
 <p>Practice writing a sentence describing the results, and then compare it to #1 in the “Example answers to optional activities” below.</p>
 </div>
-<div id="example-answers-to-optional-activities" class="section level4 hasAnchor" number="5.7.5.2">
-<h4><span class="header-section-number">5.7.5.2</span> Example answers to optional activities<a href="lab-5-t-test-independent-sample.html#example-answers-to-optional-activities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-answers-to-optional-activities" class="section level4 hasAnchor" number="5.4.5.2">
+<h4><span class="header-section-number">5.4.5.2</span> Example answers to optional activities<a href="lab-5-t-test-independent-sample.html#example-answers-to-optional-activities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Intellect ratings for candidates aged 29 or younger (<em>M</em> = 5.65, <em>SD</em> = 2.32) were not significantly different from intellect ratings for candidates over age 29 (<em>M</em> = 5.51, <em>SD</em> = 1.83), as demonstrated by an independent <em>t</em>-test [<em>t</em>(32) = 0.19, <em>p</em> &gt; .05].
 <strong>Note</strong>: If you included Cohen’s <em>d</em>, the value was 0.07, but we often don’t report effect size if the effect was not significant.</p>
 <p>or if you reported the statistics adding the Welch’s adjustment…</p>
 <p>Intellect ratings for candidates aged 29 or younger (<em>M</em> = 5.65, <em>SD</em> = 2.32) were not significantly different from intellect ratings for candidates over age 29 (<em>M</em> = 5.51, <em>SD</em> = 1.83), as demonstrated by an independent <em>t</em>-test with Welch’s adjustment [<em>t</em>(32) = 0.19, <em>p</em> &gt; .05].</p>
 </div>
 </div>
-<div id="lab-homework-7-1" class="section level3 hasAnchor" number="5.7.6">
-<h3><span class="header-section-number">5.7.6</span> Lab Homework #7<a href="lab-5-t-test-independent-sample.html#lab-homework-7-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lab-homework-7" class="section level3 hasAnchor" number="5.4.6">
+<h3><span class="header-section-number">5.4.6</span> Lab Homework #7<a href="lab-5-t-test-independent-sample.html#lab-homework-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>See <a href="https://moodle.stfx.ca">Moodle</a>.</p>
 </div>
-<div id="practice-problems-1" class="section level3 hasAnchor" number="5.7.7">
-<h3><span class="header-section-number">5.7.7</span> Practice Problems<a href="lab-5-t-test-independent-sample.html#practice-problems-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="practice-problems" class="section level3 hasAnchor" number="5.4.7">
+<h3><span class="header-section-number">5.4.7</span> Practice Problems<a href="lab-5-t-test-independent-sample.html#practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Using the data collected in PSYC 291, perform a median split on the Time 2 alcohol consumption variable. Do people who are higher consumers of alcohol report different sleep durations at Time 2 (i.e., during midterms) compared to lower consumers of alcohol? Conduct the appropriate <em>t</em>-test. What can you conclude? Write your answers in APA format, including the 95% confidence interval and effect size (Cohen’s <em>d</em>). Graph the results.</p></li>
 <li><p>Using the EngageNS data, run an independent-samples <em>t</em>-test to examine whether people who volunteer in their community (variable name = VOLUNTEER; 1 = yes, 2 = no) report feeling higher perceptions of belonging in the community (variable name = BELONGING). Run a second independent-samples <em>t</em>-test to examine whether volunteers report feeling more satisfied with their well-being (CIW_WELLB). What can you conclude from each <em>t</em>-test? Write your answers in APA format, including the 95% confidence intervals and effect sizes (Cohen’s <em>d</em>). Graph the data (Note that you will need to make separate graphs to report the result of each of the <em>t</em>-tests).</p></li>
@@ -1163,42 +658,42 @@ For <code>impression</code> and <code>intellect</code>, a correlation of <em>r</
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/CrumpLab/statisticsLab/blob/master/05-tTest2.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Statistics_Lab.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/CrumpLab/statisticsLab/blob/master/05-tTest2.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Statistics_Lab.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>

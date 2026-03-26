@@ -519,3 +519,13 @@ intro-material-for-activities
 jamovi---week-9---march-10th-11th-12th
 jamovi---week-10---march-17th-18th-19th
 jamovi---week-11---march-24th-25th-26th
+linear-regression
+what-is-the-difference-beteween-correlation-and-regression
+background
+assumptions-of-linear-regression
+context-of-data
+checking-one-assumption-before-conducting-the-analysis
+conducting-the-analysis
+developing-the-regression-model-from-the-statistics
+reporting-the-results
+lab-skills-learned-6

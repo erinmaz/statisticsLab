@@ -1,4 +1,4 @@
-# Lab 10: Mixed Factorial ANOVA
+# Lab 11: Mixed Factorial ANOVA
 
 <script>
 $("#coverpic").hide();

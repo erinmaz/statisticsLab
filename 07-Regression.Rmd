@@ -3,7 +3,7 @@ title: "06B-Regression"
 output: html_document
 ---
 
-# Linear Regression
+# Lab 7: Linear Regression
 
 ```{=html}
 <script>

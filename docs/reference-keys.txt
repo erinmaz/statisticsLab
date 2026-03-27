@@ -529,3 +529,8 @@ conducting-the-analysis
 developing-the-regression-model-from-the-statistics
 reporting-the-results
 lab-skills-learned-6
+lab-7-linear-regression
+lab-8-one-way-anova
+lab-10-factorial-anova
+lab-11-mixed-factorial-anova
+lab-12-choosing-an-appropriate-statistical-test

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | 06B-Regression</title>
+  <title>Chapter 7 Lab 7: Linear Regression | 06B-Regression</title>
   <meta name="description" content="A lab manual for Psyc 292 at StFX" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | 06B-Regression" />
+  <meta property="og:title" content="Chapter 7 Lab 7: Linear Regression | 06B-Regression" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A lab manual for Psyc 292 at StFX" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | 06B-Regression" />
+  <meta name="twitter:title" content="Chapter 7 Lab 7: Linear Regression | 06B-Regression" />
   
   <meta name="twitter:description" content="A lab manual for Psyc 292 at StFX" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="lab-6-correlation.html"/>
+<link rel="next" href="lab-8-one-way-anova.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -440,19 +440,95 @@ mattcrump=1;
 
             <section class="normal" id="section-">
 <img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="lab-7-linear-regression" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Lab 7: Linear Regression<a href="lab-7-linear-regression.html#lab-7-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+$("#coverpic").hide();
+</script>
+<div id="what-is-the-difference-beteween-correlation-and-regression" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> What is the difference beteween correlation and regression?<a href="lab-7-linear-regression.html#what-is-the-difference-beteween-correlation-and-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="img/6.1.png" /><!-- --></p>
+</div>
+<div id="lab-skills-learned-2" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Lab Skills Learned<a href="lab-7-linear-regression.html#lab-skills-learned-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this lab, we will use JAMOVI to conduct a simple linear regression. We will learn how to:</p>
+<ol style="list-style-type: decimal">
+<li>Request the statistical information for building a model to predict an outcome variable</li>
+<li>Read the results to interpret if the model is more helpful than knowing the mean</li>
+<li>Build the model with those statistics if appropriate</li>
+</ol>
+</div>
+<div id="background" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Background<a href="lab-7-linear-regression.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assumptions-of-linear-regression" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Assumptions of linear regression<a href="lab-7-linear-regression.html#assumptions-of-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As linear regression is a parametric analysis, there are assumptions which must be met for the results of the analysis to make sense. The assumptions of linear regression include:</p>
+<p><strong>1. Linearity:</strong> Outcome variable should be linearly related to the predictor variable. (<em>Question</em>: Based on what you have learned thus far, how do you believe we can check this assumption?)</p>
+<p><strong>2. Independent Errors:</strong> For any 2 observations, the residual terms should be uncorrelated.</p>
+<p><strong>3. Homoscedasticity (AKA homogeneity of variance):</strong> The variability in the outcome variable around the regression line should be the same for all values of the predictor variable.</p>
+<p><strong>4. Normally Distributed Errors:</strong> The residuals in the model are normally distributed with a mean of 0.</p>
+</div>
+<div id="context-of-data" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Context of data<a href="lab-7-linear-regression.html#context-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For this week’s lab demonstration, let’s return to the a version of the PSYC 291 survey data that contains “composite” scores (Version 2) to see if sleep quality scores at the beginning of the semester could be used to predict anxiety at that time. To clarify, this is the research question: <em>Can we predict anxiety scores with sleep quality scores?</em></p>
+</div>
+</div>
+<div id="checking-one-assumption-before-conducting-the-analysis" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Checking one assumption before conducting the analysis<a href="lab-7-linear-regression.html#checking-one-assumption-before-conducting-the-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before we conduct the analysis, we can check the first assumption using a scatterplot. Click <span style="color:blue">Analyses</span>, <span style="color:blue">Exploration</span>, and <span style="color:blue">Scatterplot</span>. Move one variable to Y-Axis field and the other variable to X-Axis field.</p>
+<p><img src="img/6.2.292.png" /><!-- --></p>
+<p>Remember: At this point, you can look at the scatterplot with either variable on the <em>x</em>-axis, but typically, as we progress and talk about predictor variables and outcome variables, we would place the predictor variable on the <em>x</em>-axis and the outcome variable on the <em>y</em>-axis. Also, you can add the line of best fit if you select Linear under Regression Line in the Analysis panel.</p>
+<p><img src="img/6.2B.292.png" /><!-- --></p>
+<p>Looking at the resulting graph (depicted above), do you feel the assumption of linearity is met or violated?</p>
+<p>We can consider whether the data meet the other assumptions while conducting the analysis in JAMOVI.</p>
+</div>
+<div id="conducting-the-analysis" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Conducting the analysis<a href="lab-7-linear-regression.html#conducting-the-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To request linear regression, click <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Linear Regression</span>. Move the outcome variable to the Dependent Variable field. In our example, <code>T1_anxiety_composite</code> is the outcome variable. Move the predictor variable to the to the Covariates window if the variable is measured on at least an interval scale or to the Factors window if the variable is measured on an ordinal or nominal scale).. In our example, <code>T1_sleep_quality_composite</code> is the predictor variable, it is measured at least at the interval scale, and we will place it in the Covariates window.</p>
+<p><img src="img/6.3.292.png" /><!-- --></p>
+<p>Before we start interpreting the model, we should return to checking assumptions. Under the Assumption Checks ribbon, click to select the Autocorrelation test, the Q-Q Plot, and the Residuals plot.</p>
+<p><img src="img/6.4.png" /><!-- --></p>
+<p>Recall that for the independence of error assumption, we indicated, for any two observations, the residual terms should be uncorrelated (or independent). When we selected Autocorrelation test, the Durbin-Watson test was conducted, and its results are displayed in the Results panel. When interpreting these results, know a value for the “DW Statistic” (as it is labeled in the table) close to 2 would indicate the assumption is upheld. Values less than 1 or greater than 3 are problematic and indicate we are violating this assumption. We also look at the <em>p</em>-value. A <em>p</em>-value representing a significant result (<em>p</em> &lt; .05) indicates a violation of the assumption.</p>
+<p><img src="img/6.5.292.png" /><!-- --></p>
+<p><em>Question</em>: Given the DW statistic value is 1.76 and the <em>p</em>-value is .276, is the assumption of independent errors met or violated?</p>
+<p>For the assumption of homoscedasticity to be upheld, the variance of the residual terms should be constant at each level of the predictor vatriance. We will look to the Residuals plot. Notice that JAMOVI provides one plot of the overall model (Fitted) and one for each of your variables (predictor and outcomes). We will focus on the fitted plot. To meet the assumption, the residuals should appear as a random scattering of dots – evenly dispersed around 0 on the <em>y</em>-axis. Residuals appearing to be distributed in a funnel shape – with a wide spread on one end of the <em>x</em>-axis and a narrow spread on the other end of that axis – suggests a violation to the assumption of homoscedasticity.</p>
+<p><img src="img/6.6.292.png" /><!-- --></p>
+<p><em>Question</em>: Given given the distribution of the residuals, is the assumption of homoscedasticity met or violated?</p>
+<p>To determine whether the residuals are normally distributed, we can look at the Q-Q plot of the residuals. You may recall from earlier lessons about checking your data that the more closely the data (in this case the residual terms) hover around the line in a Q-Q plot, the more confidence we have that they are normally distributed.</p>
+<p><img src="img/6.7.292.png" /><!-- --></p>
+<p><em>Question</em>: Considering where the residual terms are located in relation to the line, is the assumption of normality of the residual terms met or violated?</p>
+<p>If we feel confident about meeting the assumptions, we can continue with the linear regression analysis. Having used the <span style="color:blue">Analyses</span>, <span style="color:blue">Regression</span>, and <span style="color:blue">Linear Regression</span> commands, two tables were generated in the Results panel.</p>
+<p><img src="img/6.8.292.png" /><!-- --></p>
+<p>The <em>R<sup>2</sup></em> term in the first table tells us what percentage of the variance of the outcome variable can be accounted for by the model. According to our results, this linear regression model based on impression would account for 18% of the variance of anxiety at the beginning of the term The second table tells us about the slope of our regression line. We see that the <em>p</em>-value for the slope is significantly different from zero when we read the line for <code>T1_sleep_quality_composite</code>, where <em>p</em> &lt; .001.</p>
+<p>We also want to be sure that this model is better than simply knowing and using the mean to make our predictions. As such, under the Model Coefficients ribbon, select the ANOVA test under Omnibus Test. The following table should appear in your Results panel:</p>
+<p><img src="img/6.9.292.png" /><!-- --></p>
+<p>Looking at the <em>p</em>-value, we see a significant result. As such, we have reason to believe this model has more predictive power than simply knowing the mean.</p>
+</div>
+<div id="developing-the-regression-model-from-the-statistics" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Developing the regression model from the statistics<a href="lab-7-linear-regression.html#developing-the-regression-model-from-the-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You likely remember the linear equation from previous education: y = mx + b. The regression model (or equation) is derived from the linear equation, where <em>b<sub>0</sub></em> represents the intercept of the line, <em>b<sub>1</sub></em> represents the slope of the line, and <em>Ɛ<sub>i</sub></em> represents the error in the model.</p>
+<p>Ŷ<sub>i</sub> = (b<sub>0</sub> + b<sub>1</sub>X<sub>i</sub>) + Ɛ<sub>i</sub></p>
+<p>Estimate of Outcome Variable = b<sub>0</sub> + b<sub>1</sub>(Predictor Variable) + Ɛ<sub>i</sub></p>
+<p>Estimate of anxiety = 3.41 - 0.21(sleep quality) + Ɛ<sub>i</sub></p>
+</div>
+<div id="reporting-the-results" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Reporting the Results<a href="lab-7-linear-regression.html#reporting-the-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A regression model was created and is significant [<em>F</em>(1, 86) = 18.97, <em>p</em> &lt; .001].<br />
+This model can account for approximately 18% of the variability in Intellect scores (<em>R<sup>2</sup></em> = .18). The slope of the regression line was significantly different from zero (B = -0.21, <em>t</em>(86) = -4.36, <em>p</em> &lt; .001).</p>
+</div>
+<div id="homework-5" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Homework<a href="lab-7-linear-regression.html#homework-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>See <a href="https://moodle.stfx.ca/">Moodle</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="lab-6-correlation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-8-one-way-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -483,7 +559,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/CrumpLab/statisticsLab/blob/master/%s",
+    "link": "https://github.com/CrumpLab/statisticsLab/blob/master/07-Regression.Rmd",
     "text": "Edit"
   },
   "history": {

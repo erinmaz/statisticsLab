@@ -1,4 +1,4 @@
-# Lab 11: Choosing an appropriate statistical test
+# Lab 12: Choosing an appropriate statistical test
 
 <script>
 $("#coverpic").hide();

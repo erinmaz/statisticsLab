@@ -1,4 +1,4 @@
-# Lab 9: Factorial ANOVA
+# Lab 10: Factorial ANOVA
 
 <script>
 $("#coverpic").hide();

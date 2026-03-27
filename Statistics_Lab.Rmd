@@ -1,10 +1,255 @@
+--- 
+title: "Answering questions with data: Lab Manual"
+author: 
+- "Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga"
+- "Adapted for PSYC 292, St. Francis Xavier University, by Erin L. Mazerolle, Sherry Neville-MacLean, Christine D. Lomore, and Margaret Vail. "
+date: "Last Compiled `r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    includes:
+      in_header: includeme.html
+      before_body: testpic.html
+    css: [tufte.css, style.css]
+    fontsettings:
+      theme: white
+      family: sans
+      size: 1
+documentclass: book
+bibliography: [book.bib, packages.bib, MyLibrary.bib]
+biblio-style: apalike
+link-citations: yes
+#github-repo: rstudio/bookdown-demo
+description: "A lab manual for Psyc 292 at StFX"
+---
+
+# Preface {-}
+
+Placeholder
+
+
+## Important notes
+### Attributions and Versions
+### CC BY-SA 4.0 license
+### Copying the lab manual
+### Acknowledgments
+## Data
+### Data Repository
+### CSV format
+### SPSS format
+## JAMOVI - Week 1 - January 6th, 7th, & 8th
+### Getting Started with jamovi
+#### Installing jamovi
+#### Starting jamovi up
+### Analyses 
+### The Spreadsheet
+#### Variables
+#### Computed Variables - Week 5 - February 10th, 11th, & 12th
+##### Research Context for Data Set
+##### Rationale for Recoding
+###### An Example of Recoding and Computing a New Variable
+#####  Z-scores (as a Type of Computed Variable in JAMOVI)
+##### Homework
+##### Copy and Paste
+##### Syntax Mode
+### Loading Data in jamovi
+#### Importing Data from CSV Files
+### Importing Unusual Data Files
+#### Loading Data from Text Files
+##### Loading Data from SPSS (and other statistics packages)
+##### Loading Excel Files 
+### Changing Data from One Level to Another
+### Installing Add-on Modules into jamovi 
+### Quitting jamovi 
+### Summary
+
+<!--chapter:end:index.Rmd-->
+
+
+# Lab 1: Graphing Data
+
+Placeholder
+
+
+## General Goals
+## JAMOVI - Week 4 - January 27th, 28th, & 29th
+### Getting ready for this lesson
+### Opening JAMOVI and Reviewing the JAMOVI Layout
+### Reviewing Variable Properties and the Edit or Setup button
+### Opening a Data File (Through the JAMOVI Software)
+### Producing Different Types of Graphs
+#### Bar Graphs and Histograms
+#### Bar Graphs
+#### Histograms
+### APA-formatting of Figures
+#### Using Excel to format figures
+### APA-formatting of Tables
+### Homework
+### Thinking about Data: Practice Questions
+
+<!--chapter:end:01-Graphing.Rmd-->
+
+
+# Lab 2: Descriptive Statistics (and more graphs)
+
+Placeholder
+
+
+## General Goals
+## JAMOVI - Week 5 - February 3rd, 4th, & 5th
+### Getting ready for this lesson
+### The basics
+### Calculating Descriptive Statistics
+### Descriptive Statistics and Graphs
+#### Example 1: Sleep
+#### Example 2: Volunteering
+### Selecting the appropriate descriptive statistics
+#### Selecting the central tendency measure
+#### Selecting the variation measure
+#### Example: Sense of belonging
+### Boxplots
+### Editing graphs
+### Homework
+### Practice Questions
+
+<!--chapter:end:02-Descriptives.Rmd-->
+
+
+# Lab 3: Sampling and Sampling Distributions
+
+Placeholder
+
+
+## R
+## Excel
+## SPSS
+## JAMOVI - Week 7 - March 8 & 9
+### Learning Objectives
+### Pre-lab tasks
+### The impact of sampling on research results
+### Other types of filters
+### Homework Problems 
+
+<!--chapter:end:03-SamplingandSamplingDistributions.Rmd-->
+
+
+# Lab 4: t-Test (one-sample, paired sample)
+
+Placeholder
+
+
+## Intro material for activities
+### Does Music Convey Social Information to Infants?
+#### Study description
+### Lab skills learned
+### Important Stuff
+## JAMOVI - Week 10 - March 17th, 18th, & 19th
+### Learning Objectives
+### Research Context for Data Set
+### Performing a Paired-Samples *t*-Test
+#### Motivation to perform statistical analyses
+#### Using descriptive statistics to look at the question
+#### Motivation to perform inferential statistics
+#### Using JAMOVI to request the paired-samples *t*-test
+#### Interpreting the Paired Samples *t*-Test output
+### Writing results in APA format
+### Performing a one-sample *t*-test
+### Homework Questions
+### Practice Questions
+
+<!--chapter:end:04-tTest1.Rmd-->
+
+
+# Lab 5: *t*-test (Independent Sample)
+
+Placeholder
+
+
+## Do you come across as smarter when people read what you say or hear what you say?
+### STUDY DESCRIPTION
+## Lab skills learned
+## Important Stuff
+## JAMOVI - Week 11 - March 24th, 25th, & 26th
+### Pre-lab reading and tasks
+#### Experiment Background
+#### Download and open the data
+### Performing an independent-samples *t*-test
+### Some APA formatting reminders for writing results sections
+### Graphing your data
+### Optional exercises 
+#### Using a cut point to define groups for an independent *t*-test
+#### Example answers to optional activities
+### Lab Homework #7
+### Practice Problems
+
+<!--chapter:end:05-tTest2.Rmd-->
+
+
+# Lab 6: Correlation
+
+Placeholder
+
+
+## General Goals
+## JAMOVI - Week 12 - April 1st, 2nd, & 3rd - For PSYC 292 Students
+### Pre-lab reading and tasks
+#### Assumptions of correlation
+#### Download and open data
+### Correlation Coefficient for Bivariate Data
+### Correlation Matrix
+### APA format reporting of a correlation
+### Correlation and Scatterplots
+#### Adding the Scatterplot module to jamovi
+#### Getting a visual of the correlation
+### Optional activities
+#### Applying a Filter
+#### Removing the Filter
+### Example answers to optional activities
+### Homework
+### Practice Problems
+## JAMOVI – Correlation – FOR PSYC 394 STUDENTS
+### Pre-lab reading and tasks
+#### Assumptions of correlation
+#### Download and open data 
+#### Install scatr module if required
+### Correlation Coefficient for Bivariate Data
+### Correlation Matrix
+### APA format reporting of a correlation
+### Correlation and Scatterplots
+#### Getting a visual of the correlation
+### Optional activities
+### Example answers to optional activities
+### Homework
+### Practice Problems
+
+<!--chapter:end:06-Correlation.Rmd-->
+
+
+# Lab 7: Linear Regression
+
+Placeholder
+
+
+## What is the difference beteween correlation and regression?
+## Lab Skills Learned
+## Background
+### Assumptions of linear regression
+### Context of data
+## Checking one assumption before conducting the analysis
+## Conducting the analysis 
+## Developing the regression model from the statistics 
+## Reporting the Results 
+## Homework 
+
+<!--chapter:end:07-Regression.Rmd-->
+
 ---
 output:
   pdf_document: default
   html_document: default
   word_document: default
 ---
-# Lab 7 One-way ANOVA
+# Lab 8 One-way ANOVA
 
 <script>
 $("#coverpic").hide();
@@ -1311,4 +1556,155 @@ Remember: It is a good idea to check your data set before deciding whether a men
 
 
 
+
+
+<!--chapter:end:08-ANOVA.Rmd-->
+
+
+# Lab 8 Repeated Measures ANOVA
+
+Placeholder
+
+
+## Betcha can't type JHDBZKCO very fast on your first try
+### STUDY DESCRIPTION
+### Study Methods
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+#### The independent variable
+#### The dependent variables
+### Look at the data
+### Look at the means
+### Conduct the repeated Measures ANOVA
+#### Report the means too
+### Follow-up comparisons
+#### Normal vs Bigrams
+####  Bigrams vs Random
+### Reporting everything
+#### First way
+#### Second way
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### Produce a frequency histogram and remove outliers
+### Conduct and graph One-Factor Repeated Measures ANOVA
+### Conduct planned comparisons using a paired-samples t-test
+### Practice Problems
+## JAMOVI
+### Experiment Background
+### Checking Assumptions
+### Conduct and graph One-Factor Repeated Measures ANOVA
+### Conduct follow-up tests
+#### Planned comparisons
+#### *Post-hoc* tests
+### Some APA formatting reminders for writing results sections
+### Homework
+### Practice Problems
+
+<!--chapter:end:09-RMANOVA.Rmd-->
+
+
+# Lab 10: Factorial ANOVA
+
+Placeholder
+
+
+## Does standing up make you focus more?
+### STUDY DESCRIPTION
+### Study Methods
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+### Get the data into the format you want
+#### The independent variables
+#### The dependent variables
+### Look at the data
+### Look at the means
+### Conduct the ANOVA
+### Between Subjects ANOVA
+#### ANOVA write-up
+### Repeated measures ANOVA
+#### ANOVA write-up
+### Follow-up comparisons
+#### Sitting Stroop
+#### Standing Stroop
+### Generalization Exercise
+### Writing asignment
+## Excel
+## SPSS
+### Experiment Background
+### Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Practice Problems
+## JAMOVI
+
+<!--chapter:end:10-Factorial.Rmd-->
+
+
+# Lab 11: Mixed Factorial ANOVA
+
+Placeholder
+
+
+## Do you remember things better when you take pictures of them?
+### Study description
+## Lab Skills Learned
+## Important Stuff
+## R
+### Load the data
+### Inspect the dataframe
+### Get the data you need
+### Get the data into the format you want
+#### The independent variables
+#### The dependent variable
+#### Transforming the data
+### Look at the data
+### Look at the means
+### Conduct the ANOVA
+### Generalization Exercise
+### Writing assignment
+## Excel
+## SPSS
+### Experiment Background
+### Conduct a Mixed-Factorial Analysis of Variance (ANOVA)
+### Calculate simple effects
+### Practice Problems
+## JAMOVI
+
+<!--chapter:end:11-Factorial2.Rmd-->
+
+
+# Lab 12: Choosing an appropriate statistical test
+
+Placeholder
+
+
+## General Goals
+## Summary of the tests
+### Pearson's *r* correlation coefficient
+### Spearman's *r* correlation coefficient
+### Independent *t*-test
+### Mann-Whitney *U*-test
+## SPSS
+### Pearson and Spearman Correlation
+#### Interpreting and reporting the results
+### Independent *t*-test
+#### Interpreting and reporting the results
+### Mann-Whitney *U*-test
+#### Interpreting and reporting the results
+## Homework (Mar 9 and 10, 2021)
+## Homework (Feb 23 and 24, 2021) 
+
+<!--chapter:end:12-ChoosingTest.Rmd-->
 

@@ -1,6 +1,9 @@
 ---
-title: "06B-Regression"
-output: html_document
+title: "07-Regression"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
 ---
 
 # Lab 7: Linear Regression

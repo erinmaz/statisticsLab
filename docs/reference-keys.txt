@@ -534,3 +534,15 @@ lab-8-one-way-anova
 lab-10-factorial-anova
 lab-11-mixed-factorial-anova
 lab-12-choosing-an-appropriate-statistical-test
+lab-6-correlation-regression
+correlation
+lab-7-linear-regression-1
+what-is-the-difference-beteween-correlation-and-regression-1
+background-1
+assumptions-of-linear-regression-1
+context-of-data-1
+checking-one-assumption-before-conducting-the-analysis-1
+conducting-the-analysis-1
+developing-the-regression-model-from-the-statistics-1
+reporting-the-results-1
+lab-skills-learned-7
